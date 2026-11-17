@@ -76,7 +76,8 @@ function useClimbAnimation(from: number, to: number, duration: number, play: boo
 
 /**
  * The mountain illustration. The climber walks up the trail from `from` to `altitude`.
- * Camps light up as they are reached, and mock exam gates show a lock until they are passed.
+ * Camps light up as they are reached. Mock exam gates show a lock until their requirement is met ("Unlocked"),
+ * and say "Passed" once the climber is above them.
  */
 export function Mountain({
   altitude,
@@ -263,7 +264,9 @@ export function Mountain({
             {!compact && (
               <text x={left ? -20 : 20} y="5" textAnchor={left ? "end" : "start"} fontSize="12.5" fill={g.met ? "var(--c-correct)" : "var(--c-body)"} stroke="var(--c-bg)" strokeWidth="4" paintOrder="stroke">
                 {g.met
-                  ? "Passed"
+                  ? altitude >= g.height
+                    ? "Passed"
+                    : "Unlocked"
                   : g.kind === "mockTaken"
                     ? "Take a mock exam"
                     : `${g.track === "amc10" ? "AMC 10 " : g.track === "amc12" ? "AMC 12 " : ""}mock ${g.min}+${g.times ? ` (${g.times} of ${g.ofLast})` : ""}`}
