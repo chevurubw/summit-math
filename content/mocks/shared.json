@@ -8461,5 +8461,1013 @@
    "Set up a recursion or a geometric series over rounds."
   ],
   "solution": "**What we need:** the chance the token stops on $12$ at some point, rather than jumping over it.\n\n**Key idea:** let $p_k$ be the chance of ever landing on $k$. To land on $k$, the token must land on $k - 1$ and then flip heads, or land on $k - 2$ and then flip tails.\n\n**Step 1.** So $p_k = \\frac{1}{2}p_{k-1} + \\frac{1}{2}p_{k-2}$, with $p_0 = 1$ and $p_1 = \\frac{1}{2}$.\n\n**Step 2.** Build the table: $p_{2} = \\frac{3}{4}$, $p_{3} = \\frac{5}{8}$, $p_{4} = \\frac{11}{16}$, $p_{5} = \\frac{21}{32}$, $p_{6} = \\frac{43}{64}$, $p_{7} = \\frac{85}{128}$, $p_{8} = \\frac{171}{256}$, $p_{9} = \\frac{341}{512}$, $p_{10} = \\frac{683}{1024}$, $p_{11} = \\frac{1365}{2048}$, $p_{12} = \\frac{2731}{4096}$.\n\n**Step 3.** (The values approach $\\frac{2}{3}$, alternating above and below it.)\n\n**Answer:** $\\frac{2731}{4096}$. **(D)**\n\n**Common mistake:** using $\\frac{2}{3}$, which is only the long run value."
+ },
+ {
+  "id": "mock_l7_alg_floor_values_1",
+  "family": "l7_alg_floor_values",
+  "difficulty": 7,
+  "topic": "algebra",
+  "skillId": "alg_functions",
+  "track": "both",
+  "prompt": "How many different values does $f(x) = \\lfloor 3x \\rfloor + \\lfloor 4x \\rfloor$ take as $x$ ranges over all real numbers with $0 \\le x \\le 5$?",
+  "choices": {
+   "A": "$21$",
+   "B": "$30$",
+   "C": "$31$",
+   "D": "$36$",
+   "E": "$37$"
+  },
+  "answer": "C",
+  "hints": [
+   "$f$ only changes where some term jumps. Count those points, being careful when two terms jump at the same place."
+  ],
+  "solution": "**What we need:** how many distinct outputs $f$ has on $[0, 5]$.\n\n**Key idea:** a step function that never decreases takes one new value at each jump, so count the jump points.\n\n**Step 1.** $f$ never decreases, and it jumps up exactly when one of the terms jumps, at a number of the form $\\tfrac{k}{3}$, $\\tfrac{k}{4}$. Between jumps it is constant. So the number of values is the number of jump points in $[0, 5]$, counting $x = 0$.\n\n**Step 2.** Multiples of $\\tfrac{1}{a}$ in $[0, 5]$: there are $5a + 1$ of them. A number is a multiple of both $\\tfrac{1}{a}$ and $\\tfrac{1}{b}$ exactly when it is a multiple of $\\tfrac{1}{\\gcd(a, b)}$.\n\n**Step 3.** Inclusion and exclusion: add $16$ for $a = 3$; add $21$ for $a = 4$; subtract $6$ for the overlap of 3, 4 (multiples of $\\tfrac{1}{1}$).\n\n**Step 4.** Total: $31$.\n\n**Answer:** $31$. **(C)**\n\n**Common mistake:** assuming every integer from $0$ to $f(5) = 35$ is reached. Several terms can jump at the same point, so many integers are skipped."
+ },
+ {
+  "id": "mock_l7_alg_floor_values_2",
+  "family": "l7_alg_floor_values",
+  "difficulty": 7,
+  "topic": "algebra",
+  "skillId": "alg_functions",
+  "track": "both",
+  "prompt": "How many different values does $f(x) = \\lfloor x \\rfloor + \\lfloor 2x \\rfloor + \\lfloor 3x \\rfloor$ take as $x$ ranges over all real numbers with $0 \\le x \\le 9$?",
+  "choices": {
+   "A": "$36$",
+   "B": "$37$",
+   "C": "$46$",
+   "D": "$55$",
+   "E": "$57$"
+  },
+  "answer": "B",
+  "hints": [
+   "$f$ only changes where some term jumps. Count those points, being careful when two terms jump at the same place."
+  ],
+  "solution": "**What we need:** how many distinct outputs $f$ has on $[0, 9]$.\n\n**Key idea:** a step function that never decreases takes one new value at each jump, so count the jump points.\n\n**Step 1.** $f$ never decreases, and it jumps up exactly when one of the terms jumps, at a number of the form $\\tfrac{k}{1}$, $\\tfrac{k}{2}$, $\\tfrac{k}{3}$. Between jumps it is constant. So the number of values is the number of jump points in $[0, 9]$, counting $x = 0$.\n\n**Step 2.** Multiples of $\\tfrac{1}{a}$ in $[0, 9]$: there are $9a + 1$ of them. A number is a multiple of both $\\tfrac{1}{a}$ and $\\tfrac{1}{b}$ exactly when it is a multiple of $\\tfrac{1}{\\gcd(a, b)}$.\n\n**Step 3.** Inclusion and exclusion: add $10$ for $a = 1$; add $19$ for $a = 2$; add $28$ for $a = 3$; subtract $10$ for the overlap of 1, 2 (multiples of $\\tfrac{1}{1}$); subtract $10$ for the overlap of 1, 3 (multiples of $\\tfrac{1}{1}$); subtract $10$ for the overlap of 2, 3 (multiples of $\\tfrac{1}{1}$); add $10$ for the overlap of 1, 2, 3 (multiples of $\\tfrac{1}{1}$).\n\n**Step 4.** Total: $37$.\n\n**Answer:** $37$. **(B)**\n\n**Common mistake:** assuming every integer from $0$ to $f(9) = 54$ is reached. Several terms can jump at the same point, so many integers are skipped."
+ },
+ {
+  "id": "mock_l7_alg_floor_values_3",
+  "family": "l7_alg_floor_values",
+  "difficulty": 7,
+  "topic": "algebra",
+  "skillId": "alg_functions",
+  "track": "both",
+  "prompt": "How many different values does $f(x) = \\lfloor 2x \\rfloor + \\lfloor 3x \\rfloor + \\lfloor 4x \\rfloor$ take as $x$ ranges over all real numbers with $0 \\le x \\le 9$?",
+  "choices": {
+   "A": "$54$",
+   "B": "$55$",
+   "C": "$64$",
+   "D": "$82$",
+   "E": "$84$"
+  },
+  "answer": "B",
+  "hints": [
+   "$f$ only changes where some term jumps. Count those points, being careful when two terms jump at the same place."
+  ],
+  "solution": "**What we need:** how many distinct outputs $f$ has on $[0, 9]$.\n\n**Key idea:** a step function that never decreases takes one new value at each jump, so count the jump points.\n\n**Step 1.** $f$ never decreases, and it jumps up exactly when one of the terms jumps, at a number of the form $\\tfrac{k}{2}$, $\\tfrac{k}{3}$, $\\tfrac{k}{4}$. Between jumps it is constant. So the number of values is the number of jump points in $[0, 9]$, counting $x = 0$.\n\n**Step 2.** Multiples of $\\tfrac{1}{a}$ in $[0, 9]$: there are $9a + 1$ of them. A number is a multiple of both $\\tfrac{1}{a}$ and $\\tfrac{1}{b}$ exactly when it is a multiple of $\\tfrac{1}{\\gcd(a, b)}$.\n\n**Step 3.** Inclusion and exclusion: add $19$ for $a = 2$; add $28$ for $a = 3$; add $37$ for $a = 4$; subtract $10$ for the overlap of 2, 3 (multiples of $\\tfrac{1}{1}$); subtract $19$ for the overlap of 2, 4 (multiples of $\\tfrac{1}{2}$); subtract $10$ for the overlap of 3, 4 (multiples of $\\tfrac{1}{1}$); add $10$ for the overlap of 2, 3, 4 (multiples of $\\tfrac{1}{1}$).\n\n**Step 4.** Total: $55$.\n\n**Answer:** $55$. **(B)**\n\n**Common mistake:** assuming every integer from $0$ to $f(9) = 81$ is reached. Several terms can jump at the same point, so many integers are skipped."
+ },
+ {
+  "id": "mock_l7_alg_floor_values_4",
+  "family": "l7_alg_floor_values",
+  "difficulty": 7,
+  "topic": "algebra",
+  "skillId": "alg_functions",
+  "track": "both",
+  "prompt": "How many different values does $f(x) = \\lfloor 2x \\rfloor + \\lfloor 3x \\rfloor$ take as $x$ ranges over all real numbers with $0 \\le x \\le 10$?",
+  "choices": {
+   "A": "$31$",
+   "B": "$40$",
+   "C": "$41$",
+   "D": "$51$",
+   "E": "$52$"
+  },
+  "answer": "C",
+  "hints": [
+   "$f$ only changes where some term jumps. Count those points, being careful when two terms jump at the same place."
+  ],
+  "solution": "**What we need:** how many distinct outputs $f$ has on $[0, 10]$.\n\n**Key idea:** a step function that never decreases takes one new value at each jump, so count the jump points.\n\n**Step 1.** $f$ never decreases, and it jumps up exactly when one of the terms jumps, at a number of the form $\\tfrac{k}{2}$, $\\tfrac{k}{3}$. Between jumps it is constant. So the number of values is the number of jump points in $[0, 10]$, counting $x = 0$.\n\n**Step 2.** Multiples of $\\tfrac{1}{a}$ in $[0, 10]$: there are $10a + 1$ of them. A number is a multiple of both $\\tfrac{1}{a}$ and $\\tfrac{1}{b}$ exactly when it is a multiple of $\\tfrac{1}{\\gcd(a, b)}$.\n\n**Step 3.** Inclusion and exclusion: add $21$ for $a = 2$; add $31$ for $a = 3$; subtract $11$ for the overlap of 2, 3 (multiples of $\\tfrac{1}{1}$).\n\n**Step 4.** Total: $41$.\n\n**Answer:** $41$. **(C)**\n\n**Common mistake:** assuming every integer from $0$ to $f(10) = 50$ is reached. Several terms can jump at the same point, so many integers are skipped."
+ },
+ {
+  "id": "mock_l7_alg_floor_values_5",
+  "family": "l7_alg_floor_values",
+  "difficulty": 7,
+  "topic": "algebra",
+  "skillId": "alg_functions",
+  "track": "both",
+  "prompt": "How many different values does $f(x) = \\lfloor 2x \\rfloor + \\lfloor 4x \\rfloor + \\lfloor 6x \\rfloor$ take as $x$ ranges over all real numbers with $0 \\le x \\le 3$?",
+  "choices": {
+   "A": "$24$",
+   "B": "$25$",
+   "C": "$28$",
+   "D": "$37$",
+   "E": "$39$"
+  },
+  "answer": "B",
+  "hints": [
+   "$f$ only changes where some term jumps. Count those points, being careful when two terms jump at the same place."
+  ],
+  "solution": "**What we need:** how many distinct outputs $f$ has on $[0, 3]$.\n\n**Key idea:** a step function that never decreases takes one new value at each jump, so count the jump points.\n\n**Step 1.** $f$ never decreases, and it jumps up exactly when one of the terms jumps, at a number of the form $\\tfrac{k}{2}$, $\\tfrac{k}{4}$, $\\tfrac{k}{6}$. Between jumps it is constant. So the number of values is the number of jump points in $[0, 3]$, counting $x = 0$.\n\n**Step 2.** Multiples of $\\tfrac{1}{a}$ in $[0, 3]$: there are $3a + 1$ of them. A number is a multiple of both $\\tfrac{1}{a}$ and $\\tfrac{1}{b}$ exactly when it is a multiple of $\\tfrac{1}{\\gcd(a, b)}$.\n\n**Step 3.** Inclusion and exclusion: add $7$ for $a = 2$; add $13$ for $a = 4$; add $19$ for $a = 6$; subtract $7$ for the overlap of 2, 4 (multiples of $\\tfrac{1}{2}$); subtract $7$ for the overlap of 2, 6 (multiples of $\\tfrac{1}{2}$); subtract $7$ for the overlap of 4, 6 (multiples of $\\tfrac{1}{2}$); add $7$ for the overlap of 2, 4, 6 (multiples of $\\tfrac{1}{2}$).\n\n**Step 4.** Total: $25$.\n\n**Answer:** $25$. **(B)**\n\n**Common mistake:** assuming every integer from $0$ to $f(3) = 36$ is reached. Several terms can jump at the same point, so many integers are skipped."
+ },
+ {
+  "id": "mock_l7_alg_floor_values_6",
+  "family": "l7_alg_floor_values",
+  "difficulty": 7,
+  "topic": "algebra",
+  "skillId": "alg_functions",
+  "track": "both",
+  "prompt": "How many different values does $f(x) = \\lfloor 2x \\rfloor + \\lfloor 4x \\rfloor + \\lfloor 6x \\rfloor$ take as $x$ ranges over all real numbers with $0 \\le x \\le 6$?",
+  "choices": {
+   "A": "$48$",
+   "B": "$49$",
+   "C": "$55$",
+   "D": "$73$",
+   "E": "$75$"
+  },
+  "answer": "B",
+  "hints": [
+   "$f$ only changes where some term jumps. Count those points, being careful when two terms jump at the same place."
+  ],
+  "solution": "**What we need:** how many distinct outputs $f$ has on $[0, 6]$.\n\n**Key idea:** a step function that never decreases takes one new value at each jump, so count the jump points.\n\n**Step 1.** $f$ never decreases, and it jumps up exactly when one of the terms jumps, at a number of the form $\\tfrac{k}{2}$, $\\tfrac{k}{4}$, $\\tfrac{k}{6}$. Between jumps it is constant. So the number of values is the number of jump points in $[0, 6]$, counting $x = 0$.\n\n**Step 2.** Multiples of $\\tfrac{1}{a}$ in $[0, 6]$: there are $6a + 1$ of them. A number is a multiple of both $\\tfrac{1}{a}$ and $\\tfrac{1}{b}$ exactly when it is a multiple of $\\tfrac{1}{\\gcd(a, b)}$.\n\n**Step 3.** Inclusion and exclusion: add $13$ for $a = 2$; add $25$ for $a = 4$; add $37$ for $a = 6$; subtract $13$ for the overlap of 2, 4 (multiples of $\\tfrac{1}{2}$); subtract $13$ for the overlap of 2, 6 (multiples of $\\tfrac{1}{2}$); subtract $13$ for the overlap of 4, 6 (multiples of $\\tfrac{1}{2}$); add $13$ for the overlap of 2, 4, 6 (multiples of $\\tfrac{1}{2}$).\n\n**Step 4.** Total: $49$.\n\n**Answer:** $49$. **(B)**\n\n**Common mistake:** assuming every integer from $0$ to $f(6) = 72$ is reached. Several terms can jump at the same point, so many integers are skipped."
+ },
+ {
+  "id": "mock_l7_alg_hex_norm_1",
+  "family": "l7_alg_hex_norm",
+  "difficulty": 7,
+  "topic": "algebra",
+  "skillId": "alg_quadratics",
+  "track": "both",
+  "prompt": "How many ordered pairs of integers $(x, y)$ satisfy $x^2 + xy + y^2 = 61$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$6$",
+   "C": "$12$",
+   "D": "$18$",
+   "E": "$24$"
+  },
+  "answer": "C",
+  "hints": [
+   "Multiply by $4$ and complete the square in $x$: $(2x + y)^2 + 3y^2 = 4N$."
+  ],
+  "solution": "**What we need:** every integer solution, counting $(x, y)$ and $(y, x)$ and sign changes separately.\n\n**Key idea:** complete the square: multiply by $4$ to get $(2x + y)^2 + 3y^2 = 244$. Now $y$ is trapped in a small range, and for each $y$ the rest must be a perfect square.\n\n**Step 1.** Since $3y^2 \\le 244$, we need $|y| \\le 9$.\n\n**Step 2.** Checking $y \\ge 0$: $y = 4$: $(2x + 4)^2 = 196$, so $2x + 4 = \\pm 14$ and $x = -9, 5$; $y = 5$: $(2x + 5)^2 = 169$, so $2x + 5 = \\pm 13$ and $x = -9, 4$; $y = 9$: $(2x + 9)^2 = 1$, so $2x + 9 = \\pm 1$ and $x = -5, -4$.\n\n**Step 3.** Each solution with $y > 0$ has a partner $(-x, -y)$. Collecting every pair gives $12$ solutions: $(-9, 4)$, $(-9, 5)$, $(-5, -4)$, $(-5, 9)$, $(-4, -5)$, $(-4, 9)$, $(4, -9)$, $(4, 5)$, $(5, -9)$, $(5, 4)$, $(9, -5)$, $(9, -4)$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** counting only positive solutions, or forgetting that $(x, y) \\to (-x, -y)$ and $(x, y) \\to (y, x)$ give new ordered pairs."
+ },
+ {
+  "id": "mock_l7_alg_hex_norm_2",
+  "family": "l7_alg_hex_norm",
+  "difficulty": 7,
+  "topic": "algebra",
+  "skillId": "alg_quadratics",
+  "track": "both",
+  "prompt": "How many ordered pairs of integers $(x, y)$ satisfy $x^2 + xy + y^2 = 49$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$9$",
+   "C": "$12$",
+   "D": "$18$",
+   "E": "$24$"
+  },
+  "answer": "D",
+  "hints": [
+   "Multiply by $4$ and complete the square in $x$: $(2x + y)^2 + 3y^2 = 4N$."
+  ],
+  "solution": "**What we need:** every integer solution, counting $(x, y)$ and $(y, x)$ and sign changes separately.\n\n**Key idea:** complete the square: multiply by $4$ to get $(2x + y)^2 + 3y^2 = 196$. Now $y$ is trapped in a small range, and for each $y$ the rest must be a perfect square.\n\n**Step 1.** Since $3y^2 \\le 196$, we need $|y| \\le 8$.\n\n**Step 2.** Checking $y \\ge 0$: $y = 0$: $(2x + 0)^2 = 196$, so $2x + 0 = \\pm 14$ and $x = -7, 7$; $y = 3$: $(2x + 3)^2 = 169$, so $2x + 3 = \\pm 13$ and $x = -8, 5$; $y = 5$: $(2x + 5)^2 = 121$, so $2x + 5 = \\pm 11$ and $x = -8, 3$; $y = 7$: $(2x + 7)^2 = 49$, so $2x + 7 = \\pm 7$ and $x = -7, 0$; $y = 8$: $(2x + 8)^2 = 4$, so $2x + 8 = \\pm 2$ and $x = -5, -3$.\n\n**Step 3.** Each solution with $y > 0$ has a partner $(-x, -y)$. Collecting every pair gives $18$ solutions: $(-8, 3)$, $(-8, 5)$, $(-7, 0)$, $(-7, 7)$, $(-5, -3)$, $(-5, 8)$, $(-3, -5)$, $(-3, 8)$, $(0, -7)$, $(0, 7)$, $(3, -8)$, $(3, 5)$, $(5, -8)$, $(5, 3)$, $(7, -7)$, $(7, 0)$, $(8, -5)$, $(8, -3)$.\n\n**Answer:** $18$. **(D)**\n\n**Common mistake:** counting only positive solutions, or forgetting that $(x, y) \\to (-x, -y)$ and $(x, y) \\to (y, x)$ give new ordered pairs."
+ },
+ {
+  "id": "mock_l7_alg_hex_norm_3",
+  "family": "l7_alg_hex_norm",
+  "difficulty": 7,
+  "topic": "algebra",
+  "skillId": "alg_quadratics",
+  "track": "both",
+  "prompt": "How many ordered pairs of integers $(x, y)$ satisfy $x^2 + xy + y^2 = 91$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$12$",
+   "C": "$18$",
+   "D": "$24$",
+   "E": "$30$"
+  },
+  "answer": "D",
+  "hints": [
+   "Multiply by $4$ and complete the square in $x$: $(2x + y)^2 + 3y^2 = 4N$."
+  ],
+  "solution": "**What we need:** every integer solution, counting $(x, y)$ and $(y, x)$ and sign changes separately.\n\n**Key idea:** complete the square: multiply by $4$ to get $(2x + y)^2 + 3y^2 = 364$. Now $y$ is trapped in a small range, and for each $y$ the rest must be a perfect square.\n\n**Step 1.** Since $3y^2 \\le 364$, we need $|y| \\le 11$.\n\n**Step 2.** Checking $y \\ge 0$: $y = 1$: $(2x + 1)^2 = 361$, so $2x + 1 = \\pm 19$ and $x = -10, 9$; $y = 5$: $(2x + 5)^2 = 289$, so $2x + 5 = \\pm 17$ and $x = -11, 6$; $y = 6$: $(2x + 6)^2 = 256$, so $2x + 6 = \\pm 16$ and $x = -11, 5$; $y = 9$: $(2x + 9)^2 = 121$, so $2x + 9 = \\pm 11$ and $x = -10, 1$; $y = 10$: $(2x + 10)^2 = 64$, so $2x + 10 = \\pm 8$ and $x = -9, -1$; $y = 11$: $(2x + 11)^2 = 1$, so $2x + 11 = \\pm 1$ and $x = -6, -5$.\n\n**Step 3.** Each solution with $y > 0$ has a partner $(-x, -y)$. Collecting every pair gives $24$ solutions: $(-11, 5)$, $(-11, 6)$, $(-10, 1)$, $(-10, 9)$, $(-9, -1)$, $(-9, 10)$, $(-6, -5)$, $(-6, 11)$, $(-5, -6)$, $(-5, 11)$, $(-1, -9)$, $(-1, 10)$, $(1, -10)$, $(1, 9)$, $(5, -11)$, $(5, 6)$, $(6, -11)$, $(6, 5)$, $(9, -10)$, $(9, 1)$, $(10, -9)$, $(10, -1)$, $(11, -6)$, $(11, -5)$.\n\n**Answer:** $24$. **(D)**\n\n**Common mistake:** counting only positive solutions, or forgetting that $(x, y) \\to (-x, -y)$ and $(x, y) \\to (y, x)$ give new ordered pairs."
+ },
+ {
+  "id": "mock_l7_alg_hex_norm_4",
+  "family": "l7_alg_hex_norm",
+  "difficulty": 7,
+  "topic": "algebra",
+  "skillId": "alg_quadratics",
+  "track": "both",
+  "prompt": "How many ordered pairs of integers $(x, y)$ satisfy $x^2 + xy + y^2 = 37$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$6$",
+   "C": "$12$",
+   "D": "$18$",
+   "E": "$24$"
+  },
+  "answer": "C",
+  "hints": [
+   "Multiply by $4$ and complete the square in $x$: $(2x + y)^2 + 3y^2 = 4N$."
+  ],
+  "solution": "**What we need:** every integer solution, counting $(x, y)$ and $(y, x)$ and sign changes separately.\n\n**Key idea:** complete the square: multiply by $4$ to get $(2x + y)^2 + 3y^2 = 148$. Now $y$ is trapped in a small range, and for each $y$ the rest must be a perfect square.\n\n**Step 1.** Since $3y^2 \\le 148$, we need $|y| \\le 7$.\n\n**Step 2.** Checking $y \\ge 0$: $y = 3$: $(2x + 3)^2 = 121$, so $2x + 3 = \\pm 11$ and $x = -7, 4$; $y = 4$: $(2x + 4)^2 = 100$, so $2x + 4 = \\pm 10$ and $x = -7, 3$; $y = 7$: $(2x + 7)^2 = 1$, so $2x + 7 = \\pm 1$ and $x = -4, -3$.\n\n**Step 3.** Each solution with $y > 0$ has a partner $(-x, -y)$. Collecting every pair gives $12$ solutions: $(-7, 3)$, $(-7, 4)$, $(-4, -3)$, $(-4, 7)$, $(-3, -4)$, $(-3, 7)$, $(3, -7)$, $(3, 4)$, $(4, -7)$, $(4, 3)$, $(7, -4)$, $(7, -3)$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** counting only positive solutions, or forgetting that $(x, y) \\to (-x, -y)$ and $(x, y) \\to (y, x)$ give new ordered pairs."
+ },
+ {
+  "id": "mock_l7_alg_hex_norm_5",
+  "family": "l7_alg_hex_norm",
+  "difficulty": 7,
+  "topic": "algebra",
+  "skillId": "alg_quadratics",
+  "track": "both",
+  "prompt": "How many ordered pairs of integers $(x, y)$ satisfy $x^2 + xy + y^2 = 21$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$6$",
+   "C": "$12$",
+   "D": "$18$",
+   "E": "$24$"
+  },
+  "answer": "C",
+  "hints": [
+   "Multiply by $4$ and complete the square in $x$: $(2x + y)^2 + 3y^2 = 4N$."
+  ],
+  "solution": "**What we need:** every integer solution, counting $(x, y)$ and $(y, x)$ and sign changes separately.\n\n**Key idea:** complete the square: multiply by $4$ to get $(2x + y)^2 + 3y^2 = 84$. Now $y$ is trapped in a small range, and for each $y$ the rest must be a perfect square.\n\n**Step 1.** Since $3y^2 \\le 84$, we need $|y| \\le 5$.\n\n**Step 2.** Checking $y \\ge 0$: $y = 1$: $(2x + 1)^2 = 81$, so $2x + 1 = \\pm 9$ and $x = -5, 4$; $y = 4$: $(2x + 4)^2 = 36$, so $2x + 4 = \\pm 6$ and $x = -5, 1$; $y = 5$: $(2x + 5)^2 = 9$, so $2x + 5 = \\pm 3$ and $x = -4, -1$.\n\n**Step 3.** Each solution with $y > 0$ has a partner $(-x, -y)$. Collecting every pair gives $12$ solutions: $(-5, 1)$, $(-5, 4)$, $(-4, -1)$, $(-4, 5)$, $(-1, -4)$, $(-1, 5)$, $(1, -5)$, $(1, 4)$, $(4, -5)$, $(4, 1)$, $(5, -4)$, $(5, -1)$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** counting only positive solutions, or forgetting that $(x, y) \\to (-x, -y)$ and $(x, y) \\to (y, x)$ give new ordered pairs."
+ },
+ {
+  "id": "mock_l7_alg_hex_norm_6",
+  "family": "l7_alg_hex_norm",
+  "difficulty": 7,
+  "topic": "algebra",
+  "skillId": "alg_quadratics",
+  "track": "both",
+  "prompt": "How many ordered pairs of integers $(x, y)$ satisfy $x^2 + xy + y^2 = 19$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$6$",
+   "C": "$12$",
+   "D": "$18$",
+   "E": "$24$"
+  },
+  "answer": "C",
+  "hints": [
+   "Multiply by $4$ and complete the square in $x$: $(2x + y)^2 + 3y^2 = 4N$."
+  ],
+  "solution": "**What we need:** every integer solution, counting $(x, y)$ and $(y, x)$ and sign changes separately.\n\n**Key idea:** complete the square: multiply by $4$ to get $(2x + y)^2 + 3y^2 = 76$. Now $y$ is trapped in a small range, and for each $y$ the rest must be a perfect square.\n\n**Step 1.** Since $3y^2 \\le 76$, we need $|y| \\le 5$.\n\n**Step 2.** Checking $y \\ge 0$: $y = 2$: $(2x + 2)^2 = 64$, so $2x + 2 = \\pm 8$ and $x = -5, 3$; $y = 3$: $(2x + 3)^2 = 49$, so $2x + 3 = \\pm 7$ and $x = -5, 2$; $y = 5$: $(2x + 5)^2 = 1$, so $2x + 5 = \\pm 1$ and $x = -3, -2$.\n\n**Step 3.** Each solution with $y > 0$ has a partner $(-x, -y)$. Collecting every pair gives $12$ solutions: $(-5, 2)$, $(-5, 3)$, $(-3, -2)$, $(-3, 5)$, $(-2, -3)$, $(-2, 5)$, $(2, -5)$, $(2, 3)$, $(3, -5)$, $(3, 2)$, $(5, -3)$, $(5, -2)$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** counting only positive solutions, or forgetting that $(x, y) \\to (-x, -y)$ and $(x, y) \\to (y, x)$ give new ordered pairs."
+ },
+ {
+  "id": "mock_l7_geo_euler_oi_1",
+  "family": "l7_geo_euler_oi",
+  "difficulty": 7,
+  "topic": "geometry",
+  "skillId": "geo_circles",
+  "track": "both",
+  "prompt": "A triangle has side lengths $11$, $13$, and $20$. What is the distance between the center of its inscribed circle and the center of its circumscribed circle?",
+  "choices": {
+   "A": "$\\frac{29}{6}$",
+   "B": "$\\frac{\\sqrt{1885}}{6}$",
+   "C": "$\\frac{47}{6}$",
+   "D": "$\\frac{\\sqrt{3901}}{6}$",
+   "E": "$\\frac{\\sqrt{6565}}{6}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Euler's formula: $OI^2 = R(R - 2r)$. Find the area first, then $r = K/s$ and $R = abc/(4K)$."
+  ],
+  "solution": "**What we need:** the distance $OI$ between the circumcenter $O$ and the incenter $I$.\n\n**Key idea:** Euler's formula $OI^2 = R(R - 2r)$ turns this into finding the two radii, and both come from the area.\n\n**Step 1.** Heron: $s = 22$ and the area is $K = \\sqrt{22 \\cdot 11 \\cdot 9 \\cdot 2} = 66$.\n\n**Step 2.** Inradius $r = \\frac{K}{s} = 3$. Circumradius $R = \\frac{abc}{4K} = \\frac{2860}{264} = \\frac{65}{6}$.\n\n**Step 3.** $OI^2 = R(R - 2r) = \\frac{65}{6}\\left(\\frac{65}{6} - 6\\right) = \\frac{1885}{36}$.\n\n**Step 4.** $OI = \\frac{\\sqrt{1885}}{6}$.\n\n**Answer:** $\\frac{\\sqrt{1885}}{6}$. **(B)**\n\n**Common mistake:** using $R - r$ or $R - 2r$ as the distance. Those are lengths, but not the distance between the centers."
+ },
+ {
+  "id": "mock_l7_geo_euler_oi_2",
+  "family": "l7_geo_euler_oi",
+  "difficulty": 7,
+  "topic": "geometry",
+  "skillId": "geo_circles",
+  "track": "both",
+  "prompt": "A triangle has side lengths $7$, $15$, and $20$. What is the distance between the center of its inscribed circle and the center of its circumscribed circle?",
+  "choices": {
+   "A": "$\\frac{17}{2}$",
+   "B": "$\\frac{5\\sqrt{17}}{2}$",
+   "C": "$\\frac{21}{2}$",
+   "D": "$\\frac{\\sqrt{609}}{2}$",
+   "E": "$\\frac{5\\sqrt{33}}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Euler's formula: $OI^2 = R(R - 2r)$. Find the area first, then $r = K/s$ and $R = abc/(4K)$."
+  ],
+  "solution": "**What we need:** the distance $OI$ between the circumcenter $O$ and the incenter $I$.\n\n**Key idea:** Euler's formula $OI^2 = R(R - 2r)$ turns this into finding the two radii, and both come from the area.\n\n**Step 1.** Heron: $s = 21$ and the area is $K = \\sqrt{21 \\cdot 14 \\cdot 6 \\cdot 1} = 42$.\n\n**Step 2.** Inradius $r = \\frac{K}{s} = 2$. Circumradius $R = \\frac{abc}{4K} = \\frac{2100}{168} = \\frac{25}{2}$.\n\n**Step 3.** $OI^2 = R(R - 2r) = \\frac{25}{2}\\left(\\frac{25}{2} - 4\\right) = \\frac{425}{4}$.\n\n**Step 4.** $OI = \\frac{5\\sqrt{17}}{2}$.\n\n**Answer:** $\\frac{5\\sqrt{17}}{2}$. **(B)**\n\n**Common mistake:** using $R - r$ or $R - 2r$ as the distance. Those are lengths, but not the distance between the centers."
+ },
+ {
+  "id": "mock_l7_geo_euler_oi_3",
+  "family": "l7_geo_euler_oi",
+  "difficulty": 7,
+  "topic": "geometry",
+  "skillId": "geo_circles",
+  "track": "both",
+  "prompt": "A triangle has side lengths $13$, $14$, and $15$. What is the distance between the center of its inscribed circle and the center of its circumscribed circle?",
+  "choices": {
+   "A": "$\\frac{1}{8}$",
+   "B": "$\\frac{\\sqrt{65}}{8}$",
+   "C": "$\\frac{33}{8}$",
+   "D": "$\\frac{\\sqrt{3201}}{8}$",
+   "E": "$\\frac{\\sqrt{8385}}{8}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Euler's formula: $OI^2 = R(R - 2r)$. Find the area first, then $r = K/s$ and $R = abc/(4K)$."
+  ],
+  "solution": "**What we need:** the distance $OI$ between the circumcenter $O$ and the incenter $I$.\n\n**Key idea:** Euler's formula $OI^2 = R(R - 2r)$ turns this into finding the two radii, and both come from the area.\n\n**Step 1.** Heron: $s = 21$ and the area is $K = \\sqrt{21 \\cdot 8 \\cdot 7 \\cdot 6} = 84$.\n\n**Step 2.** Inradius $r = \\frac{K}{s} = 4$. Circumradius $R = \\frac{abc}{4K} = \\frac{2730}{336} = \\frac{65}{8}$.\n\n**Step 3.** $OI^2 = R(R - 2r) = \\frac{65}{8}\\left(\\frac{65}{8} - 8\\right) = \\frac{65}{64}$.\n\n**Step 4.** $OI = \\frac{\\sqrt{65}}{8}$.\n\n**Answer:** $\\frac{\\sqrt{65}}{8}$. **(B)**\n\n**Common mistake:** using $R - r$ or $R - 2r$ as the distance. Those are lengths, but not the distance between the centers."
+ },
+ {
+  "id": "mock_l7_geo_euler_oi_4",
+  "family": "l7_geo_euler_oi",
+  "difficulty": 7,
+  "topic": "geometry",
+  "skillId": "geo_circles",
+  "track": "both",
+  "prompt": "A triangle has side lengths $9$, $10$, and $17$. What is the distance between the center of its inscribed circle and the center of its circumscribed circle?",
+  "choices": {
+   "A": "$\\frac{53}{8}$",
+   "B": "$\\frac{\\sqrt{4505}}{8}$",
+   "C": "$\\frac{69}{8}$",
+   "D": "$\\frac{\\sqrt{6969}}{8}$",
+   "E": "$\\frac{3\\sqrt{1105}}{8}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Euler's formula: $OI^2 = R(R - 2r)$. Find the area first, then $r = K/s$ and $R = abc/(4K)$."
+  ],
+  "solution": "**What we need:** the distance $OI$ between the circumcenter $O$ and the incenter $I$.\n\n**Key idea:** Euler's formula $OI^2 = R(R - 2r)$ turns this into finding the two radii, and both come from the area.\n\n**Step 1.** Heron: $s = 18$ and the area is $K = \\sqrt{18 \\cdot 9 \\cdot 8 \\cdot 1} = 36$.\n\n**Step 2.** Inradius $r = \\frac{K}{s} = 2$. Circumradius $R = \\frac{abc}{4K} = \\frac{1530}{144} = \\frac{85}{8}$.\n\n**Step 3.** $OI^2 = R(R - 2r) = \\frac{85}{8}\\left(\\frac{85}{8} - 4\\right) = \\frac{4505}{64}$.\n\n**Step 4.** $OI = \\frac{\\sqrt{4505}}{8}$.\n\n**Answer:** $\\frac{\\sqrt{4505}}{8}$. **(B)**\n\n**Common mistake:** using $R - r$ or $R - 2r$ as the distance. Those are lengths, but not the distance between the centers."
+ },
+ {
+  "id": "mock_l7_geo_euler_oi_5",
+  "family": "l7_geo_euler_oi",
+  "difficulty": 7,
+  "topic": "geometry",
+  "skillId": "geo_circles",
+  "track": "both",
+  "prompt": "A triangle has side lengths $10$, $17$, and $21$. What is the distance between the center of its inscribed circle and the center of its circumscribed circle?",
+  "choices": {
+   "A": "$\\frac{29}{8}$",
+   "B": "$\\frac{\\sqrt{2465}}{8}$",
+   "C": "$\\frac{57}{8}$",
+   "D": "$\\frac{\\sqrt{6441}}{8}$",
+   "E": "$\\frac{\\sqrt{11985}}{8}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Euler's formula: $OI^2 = R(R - 2r)$. Find the area first, then $r = K/s$ and $R = abc/(4K)$."
+  ],
+  "solution": "**What we need:** the distance $OI$ between the circumcenter $O$ and the incenter $I$.\n\n**Key idea:** Euler's formula $OI^2 = R(R - 2r)$ turns this into finding the two radii, and both come from the area.\n\n**Step 1.** Heron: $s = 24$ and the area is $K = \\sqrt{24 \\cdot 14 \\cdot 7 \\cdot 3} = 84$.\n\n**Step 2.** Inradius $r = \\frac{K}{s} = \\frac{7}{2}$. Circumradius $R = \\frac{abc}{4K} = \\frac{3570}{336} = \\frac{85}{8}$.\n\n**Step 3.** $OI^2 = R(R - 2r) = \\frac{85}{8}\\left(\\frac{85}{8} - 7\\right) = \\frac{2465}{64}$.\n\n**Step 4.** $OI = \\frac{\\sqrt{2465}}{8}$.\n\n**Answer:** $\\frac{\\sqrt{2465}}{8}$. **(B)**\n\n**Common mistake:** using $R - r$ or $R - 2r$ as the distance. Those are lengths, but not the distance between the centers."
+ },
+ {
+  "id": "mock_l7_geo_euler_oi_6",
+  "family": "l7_geo_euler_oi",
+  "difficulty": 7,
+  "topic": "geometry",
+  "skillId": "geo_circles",
+  "track": "both",
+  "prompt": "A triangle has side lengths $5$, $5$, and $6$. What is the distance between the center of its inscribed circle and the center of its circumscribed circle?",
+  "choices": {
+   "A": "$\\frac{1}{8}$",
+   "B": "$\\frac{5}{8}$",
+   "C": "$\\frac{13}{8}$",
+   "D": "$\\frac{\\sqrt{481}}{8}$",
+   "E": "$\\frac{35}{8}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Euler's formula: $OI^2 = R(R - 2r)$. Find the area first, then $r = K/s$ and $R = abc/(4K)$."
+  ],
+  "solution": "**What we need:** the distance $OI$ between the circumcenter $O$ and the incenter $I$.\n\n**Key idea:** Euler's formula $OI^2 = R(R - 2r)$ turns this into finding the two radii, and both come from the area.\n\n**Step 1.** Heron: $s = 8$ and the area is $K = \\sqrt{8 \\cdot 3 \\cdot 3 \\cdot 2} = 12$.\n\n**Step 2.** Inradius $r = \\frac{K}{s} = \\frac{3}{2}$. Circumradius $R = \\frac{abc}{4K} = \\frac{150}{48} = \\frac{25}{8}$.\n\n**Step 3.** $OI^2 = R(R - 2r) = \\frac{25}{8}\\left(\\frac{25}{8} - 3\\right) = \\frac{25}{64}$.\n\n**Step 4.** $OI = \\frac{5}{8}$.\n\n**Answer:** $\\frac{5}{8}$. **(B)**\n\n**Common mistake:** using $R - r$ or $R - 2r$ as the distance. Those are lengths, but not the distance between the centers."
+ },
+ {
+  "id": "mock_l7_geo_three_tangent_1",
+  "family": "l7_geo_three_tangent",
+  "difficulty": 7,
+  "topic": "geometry",
+  "skillId": "geo_circles",
+  "track": "both",
+  "prompt": "Two circles with radii $1$ and $25$ are tangent to each other and to a line $\\ell$, on the same side of $\\ell$. A third circle fits in the gap between them: it is tangent to $\\ell$ and to both circles. What is its radius?",
+  "choices": {
+   "A": "$\\frac{25}{36}$",
+   "B": "$\\frac{5}{6}$",
+   "C": "$\\frac{25}{26}$",
+   "D": "$\\frac{25}{18}$",
+   "E": "$4$"
+  },
+  "answer": "A",
+  "hints": [
+   "Two circles that touch each other and a line touch the line $2\\sqrt{Rr}$ apart. Write the gap two ways."
+  ],
+  "solution": "**What we need:** the radius $x$ of the small circle squeezed between the two big ones and the line.\n\n**Key idea:** for two circles of radii $R$ and $S$ that touch each other and the same line, the points where they touch the line are $2\\sqrt{RS}$ apart (a right triangle with hypotenuse $R + S$ and leg $R - S$).\n\n**Step 1.** The big circles touch $\\ell$ at points $2\\sqrt{1 \\cdot 25} = 10$ apart.\n\n**Step 2.** The small circle touches $\\ell$ between them, $2\\sqrt{1x} = 2\\sqrt{x}$ from the first point and $2\\sqrt{25x} = 10\\sqrt{x}$ from the second.\n\n**Step 3.** So $2\\sqrt{x} + 10\\sqrt{x} = 10$, giving $\\sqrt{x} = \\frac{5}{6}$.\n\n**Step 4.** $x = \\frac{25}{36}$.\n\n**Answer:** $\\frac{25}{36}$. **(A)**\n\n**Common mistake:** stopping at $\\sqrt{x}$ and forgetting to square."
+ },
+ {
+  "id": "mock_l7_geo_three_tangent_2",
+  "family": "l7_geo_three_tangent",
+  "difficulty": 7,
+  "topic": "geometry",
+  "skillId": "geo_circles",
+  "track": "both",
+  "prompt": "Two circles with radii $9$ and $25$ are tangent to each other and to a line $\\ell$, on the same side of $\\ell$. A third circle fits in the gap between them: it is tangent to $\\ell$ and to both circles. What is its radius?",
+  "choices": {
+   "A": "$1$",
+   "B": "$\\frac{15}{8}$",
+   "C": "$\\frac{225}{64}$",
+   "D": "$\\frac{225}{34}$",
+   "E": "$\\frac{225}{32}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Two circles that touch each other and a line touch the line $2\\sqrt{Rr}$ apart. Write the gap two ways."
+  ],
+  "solution": "**What we need:** the radius $x$ of the small circle squeezed between the two big ones and the line.\n\n**Key idea:** for two circles of radii $R$ and $S$ that touch each other and the same line, the points where they touch the line are $2\\sqrt{RS}$ apart (a right triangle with hypotenuse $R + S$ and leg $R - S$).\n\n**Step 1.** The big circles touch $\\ell$ at points $2\\sqrt{9 \\cdot 25} = 30$ apart.\n\n**Step 2.** The small circle touches $\\ell$ between them, $2\\sqrt{9x} = 6\\sqrt{x}$ from the first point and $2\\sqrt{25x} = 10\\sqrt{x}$ from the second.\n\n**Step 3.** So $6\\sqrt{x} + 10\\sqrt{x} = 30$, giving $\\sqrt{x} = \\frac{15}{8}$.\n\n**Step 4.** $x = \\frac{225}{64}$.\n\n**Answer:** $\\frac{225}{64}$. **(C)**\n\n**Common mistake:** stopping at $\\sqrt{x}$ and forgetting to square."
+ },
+ {
+  "id": "mock_l7_geo_three_tangent_3",
+  "family": "l7_geo_three_tangent",
+  "difficulty": 7,
+  "topic": "geometry",
+  "skillId": "geo_circles",
+  "track": "both",
+  "prompt": "Two circles with radii $16$ and $25$ are tangent to each other and to a line $\\ell$, on the same side of $\\ell$. A third circle fits in the gap between them: it is tangent to $\\ell$ and to both circles. What is its radius?",
+  "choices": {
+   "A": "$\\frac{1}{4}$",
+   "B": "$\\frac{20}{9}$",
+   "C": "$\\frac{400}{81}$",
+   "D": "$\\frac{400}{41}$",
+   "E": "$\\frac{800}{81}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Two circles that touch each other and a line touch the line $2\\sqrt{Rr}$ apart. Write the gap two ways."
+  ],
+  "solution": "**What we need:** the radius $x$ of the small circle squeezed between the two big ones and the line.\n\n**Key idea:** for two circles of radii $R$ and $S$ that touch each other and the same line, the points where they touch the line are $2\\sqrt{RS}$ apart (a right triangle with hypotenuse $R + S$ and leg $R - S$).\n\n**Step 1.** The big circles touch $\\ell$ at points $2\\sqrt{16 \\cdot 25} = 40$ apart.\n\n**Step 2.** The small circle touches $\\ell$ between them, $2\\sqrt{16x} = 8\\sqrt{x}$ from the first point and $2\\sqrt{25x} = 10\\sqrt{x}$ from the second.\n\n**Step 3.** So $8\\sqrt{x} + 10\\sqrt{x} = 40$, giving $\\sqrt{x} = \\frac{20}{9}$.\n\n**Step 4.** $x = \\frac{400}{81}$.\n\n**Answer:** $\\frac{400}{81}$. **(C)**\n\n**Common mistake:** stopping at $\\sqrt{x}$ and forgetting to square."
+ },
+ {
+  "id": "mock_l7_geo_three_tangent_4",
+  "family": "l7_geo_three_tangent",
+  "difficulty": 7,
+  "topic": "geometry",
+  "skillId": "geo_circles",
+  "track": "both",
+  "prompt": "Two circles with radii $4$ and $36$ are tangent to each other and to a line $\\ell$, on the same side of $\\ell$. A third circle fits in the gap between them: it is tangent to $\\ell$ and to both circles. What is its radius?",
+  "choices": {
+   "A": "$\\frac{3}{2}$",
+   "B": "$\\frac{9}{4}$",
+   "C": "$\\frac{18}{5}$",
+   "D": "$4$",
+   "E": "$\\frac{9}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Two circles that touch each other and a line touch the line $2\\sqrt{Rr}$ apart. Write the gap two ways."
+  ],
+  "solution": "**What we need:** the radius $x$ of the small circle squeezed between the two big ones and the line.\n\n**Key idea:** for two circles of radii $R$ and $S$ that touch each other and the same line, the points where they touch the line are $2\\sqrt{RS}$ apart (a right triangle with hypotenuse $R + S$ and leg $R - S$).\n\n**Step 1.** The big circles touch $\\ell$ at points $2\\sqrt{4 \\cdot 36} = 24$ apart.\n\n**Step 2.** The small circle touches $\\ell$ between them, $2\\sqrt{4x} = 4\\sqrt{x}$ from the first point and $2\\sqrt{36x} = 12\\sqrt{x}$ from the second.\n\n**Step 3.** So $4\\sqrt{x} + 12\\sqrt{x} = 24$, giving $\\sqrt{x} = \\frac{12}{8}$.\n\n**Step 4.** $x = \\frac{9}{4}$.\n\n**Answer:** $\\frac{9}{4}$. **(B)**\n\n**Common mistake:** stopping at $\\sqrt{x}$ and forgetting to square."
+ },
+ {
+  "id": "mock_l7_geo_three_tangent_5",
+  "family": "l7_geo_three_tangent",
+  "difficulty": 7,
+  "topic": "geometry",
+  "skillId": "geo_circles",
+  "track": "both",
+  "prompt": "Two circles with radii $4$ and $25$ are tangent to each other and to a line $\\ell$, on the same side of $\\ell$. A third circle fits in the gap between them: it is tangent to $\\ell$ and to both circles. What is its radius?",
+  "choices": {
+   "A": "$\\frac{10}{7}$",
+   "B": "$\\frac{100}{49}$",
+   "C": "$\\frac{9}{4}$",
+   "D": "$\\frac{100}{29}$",
+   "E": "$\\frac{200}{49}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Two circles that touch each other and a line touch the line $2\\sqrt{Rr}$ apart. Write the gap two ways."
+  ],
+  "solution": "**What we need:** the radius $x$ of the small circle squeezed between the two big ones and the line.\n\n**Key idea:** for two circles of radii $R$ and $S$ that touch each other and the same line, the points where they touch the line are $2\\sqrt{RS}$ apart (a right triangle with hypotenuse $R + S$ and leg $R - S$).\n\n**Step 1.** The big circles touch $\\ell$ at points $2\\sqrt{4 \\cdot 25} = 20$ apart.\n\n**Step 2.** The small circle touches $\\ell$ between them, $2\\sqrt{4x} = 4\\sqrt{x}$ from the first point and $2\\sqrt{25x} = 10\\sqrt{x}$ from the second.\n\n**Step 3.** So $4\\sqrt{x} + 10\\sqrt{x} = 20$, giving $\\sqrt{x} = \\frac{10}{7}$.\n\n**Step 4.** $x = \\frac{100}{49}$.\n\n**Answer:** $\\frac{100}{49}$. **(B)**\n\n**Common mistake:** stopping at $\\sqrt{x}$ and forgetting to square."
+ },
+ {
+  "id": "mock_l7_geo_three_tangent_6",
+  "family": "l7_geo_three_tangent",
+  "difficulty": 7,
+  "topic": "geometry",
+  "skillId": "geo_circles",
+  "track": "both",
+  "prompt": "Two circles with radii $1$ and $4$ are tangent to each other and to a line $\\ell$, on the same side of $\\ell$. A third circle fits in the gap between them: it is tangent to $\\ell$ and to both circles. What is its radius?",
+  "choices": {
+   "A": "$\\frac{1}{4}$",
+   "B": "$\\frac{4}{9}$",
+   "C": "$\\frac{2}{3}$",
+   "D": "$\\frac{4}{5}$",
+   "E": "$\\frac{8}{9}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Two circles that touch each other and a line touch the line $2\\sqrt{Rr}$ apart. Write the gap two ways."
+  ],
+  "solution": "**What we need:** the radius $x$ of the small circle squeezed between the two big ones and the line.\n\n**Key idea:** for two circles of radii $R$ and $S$ that touch each other and the same line, the points where they touch the line are $2\\sqrt{RS}$ apart (a right triangle with hypotenuse $R + S$ and leg $R - S$).\n\n**Step 1.** The big circles touch $\\ell$ at points $2\\sqrt{1 \\cdot 4} = 4$ apart.\n\n**Step 2.** The small circle touches $\\ell$ between them, $2\\sqrt{1x} = 2\\sqrt{x}$ from the first point and $2\\sqrt{4x} = 4\\sqrt{x}$ from the second.\n\n**Step 3.** So $2\\sqrt{x} + 4\\sqrt{x} = 4$, giving $\\sqrt{x} = \\frac{2}{3}$.\n\n**Step 4.** $x = \\frac{4}{9}$.\n\n**Answer:** $\\frac{4}{9}$. **(B)**\n\n**Common mistake:** stopping at $\\sqrt{x}$ and forgetting to square."
+ },
+ {
+  "id": "mock_l7_nt_trailing_base_1",
+  "family": "l7_nt_trailing_base",
+  "difficulty": 7,
+  "topic": "number_theory",
+  "skillId": "nt_factorials",
+  "track": "both",
+  "prompt": "When $82!$ is written in base $72$, how many zeros does it end with?",
+  "choices": {
+   "A": "$19$",
+   "B": "$20$",
+   "C": "$21$",
+   "D": "$26$",
+   "E": "$40$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor the base into primes. For each prime, count how many times it divides $n!$, then divide by its exponent in the base."
+  ],
+  "solution": "**What we need:** the largest $k$ with $72^k$ dividing $82!$.\n\n**Key idea:** each trailing zero in base $72$ is one factor of $72 = 2^{3} \\cdot 3^{2}$. Count each prime in $82!$ (Legendre's formula), then see which one runs out first.\n\n**Step 1.** Prime $2$: $82!$ has $79$ factors of $2$, enough for $\\lfloor 79/3 \\rfloor = 26$ copies of $2^{3}$.\n\n**Step 2.** Prime $3$: $82!$ has $40$ factors of $3$, enough for $\\lfloor 40/2 \\rfloor = 20$ copies of $3^{2}$.\n\n**Step 3.** The smallest of these limits is $20$.\n\n**Answer:** $20$. **(B)**\n\n**Common mistake:** using the count for the largest prime, or forgetting to divide by the exponent when a prime appears squared or cubed in the base."
+ },
+ {
+  "id": "mock_l7_nt_trailing_base_2",
+  "family": "l7_nt_trailing_base",
+  "difficulty": 7,
+  "topic": "number_theory",
+  "skillId": "nt_factorials",
+  "track": "both",
+  "prompt": "When $78!$ is written in base $18$, how many zeros does it end with?",
+  "choices": {
+   "A": "$17$",
+   "B": "$18$",
+   "C": "$19$",
+   "D": "$36$",
+   "E": "$74$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor the base into primes. For each prime, count how many times it divides $n!$, then divide by its exponent in the base."
+  ],
+  "solution": "**What we need:** the largest $k$ with $18^k$ dividing $78!$.\n\n**Key idea:** each trailing zero in base $18$ is one factor of $18 = 2 \\cdot 3^{2}$. Count each prime in $78!$ (Legendre's formula), then see which one runs out first.\n\n**Step 1.** Prime $2$: $78!$ has $74$ factors of $2$.\n\n**Step 2.** Prime $3$: $78!$ has $36$ factors of $3$, enough for $\\lfloor 36/2 \\rfloor = 18$ copies of $3^{2}$.\n\n**Step 3.** The smallest of these limits is $18$.\n\n**Answer:** $18$. **(B)**\n\n**Common mistake:** using the count for the largest prime, or forgetting to divide by the exponent when a prime appears squared or cubed in the base."
+ },
+ {
+  "id": "mock_l7_nt_trailing_base_3",
+  "family": "l7_nt_trailing_base",
+  "difficulty": 7,
+  "topic": "number_theory",
+  "skillId": "nt_factorials",
+  "track": "both",
+  "prompt": "When $82!$ is written in base $12$, how many zeros does it end with?",
+  "choices": {
+   "A": "$19$",
+   "B": "$38$",
+   "C": "$39$",
+   "D": "$40$",
+   "E": "$41$"
+  },
+  "answer": "C",
+  "hints": [
+   "Factor the base into primes. For each prime, count how many times it divides $n!$, then divide by its exponent in the base."
+  ],
+  "solution": "**What we need:** the largest $k$ with $12^k$ dividing $82!$.\n\n**Key idea:** each trailing zero in base $12$ is one factor of $12 = 2^{2} \\cdot 3$. Count each prime in $82!$ (Legendre's formula), then see which one runs out first.\n\n**Step 1.** Prime $2$: $82!$ has $79$ factors of $2$, enough for $\\lfloor 79/2 \\rfloor = 39$ copies of $2^{2}$.\n\n**Step 2.** Prime $3$: $82!$ has $40$ factors of $3$.\n\n**Step 3.** The smallest of these limits is $39$.\n\n**Answer:** $39$. **(C)**\n\n**Common mistake:** using the count for the largest prime, or forgetting to divide by the exponent when a prime appears squared or cubed in the base."
+ },
+ {
+  "id": "mock_l7_nt_trailing_base_4",
+  "family": "l7_nt_trailing_base",
+  "difficulty": 7,
+  "topic": "number_theory",
+  "skillId": "nt_factorials",
+  "track": "both",
+  "prompt": "When $72!$ is written in base $20$, how many zeros does it end with?",
+  "choices": {
+   "A": "$15$",
+   "B": "$16$",
+   "C": "$17$",
+   "D": "$18$",
+   "E": "$35$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor the base into primes. For each prime, count how many times it divides $n!$, then divide by its exponent in the base."
+  ],
+  "solution": "**What we need:** the largest $k$ with $20^k$ dividing $72!$.\n\n**Key idea:** each trailing zero in base $20$ is one factor of $20 = 2^{2} \\cdot 5$. Count each prime in $72!$ (Legendre's formula), then see which one runs out first.\n\n**Step 1.** Prime $2$: $72!$ has $70$ factors of $2$, enough for $\\lfloor 70/2 \\rfloor = 35$ copies of $2^{2}$.\n\n**Step 2.** Prime $5$: $72!$ has $16$ factors of $5$.\n\n**Step 3.** The smallest of these limits is $16$.\n\n**Answer:** $16$. **(B)**\n\n**Common mistake:** using the count for the largest prime, or forgetting to divide by the exponent when a prime appears squared or cubed in the base."
+ },
+ {
+  "id": "mock_l7_nt_trailing_base_5",
+  "family": "l7_nt_trailing_base",
+  "difficulty": 7,
+  "topic": "number_theory",
+  "skillId": "nt_factorials",
+  "track": "both",
+  "prompt": "When $74!$ is written in base $20$, how many zeros does it end with?",
+  "choices": {
+   "A": "$15$",
+   "B": "$16$",
+   "C": "$17$",
+   "D": "$18$",
+   "E": "$35$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor the base into primes. For each prime, count how many times it divides $n!$, then divide by its exponent in the base."
+  ],
+  "solution": "**What we need:** the largest $k$ with $20^k$ dividing $74!$.\n\n**Key idea:** each trailing zero in base $20$ is one factor of $20 = 2^{2} \\cdot 5$. Count each prime in $74!$ (Legendre's formula), then see which one runs out first.\n\n**Step 1.** Prime $2$: $74!$ has $71$ factors of $2$, enough for $\\lfloor 71/2 \\rfloor = 35$ copies of $2^{2}$.\n\n**Step 2.** Prime $5$: $74!$ has $16$ factors of $5$.\n\n**Step 3.** The smallest of these limits is $16$.\n\n**Answer:** $16$. **(B)**\n\n**Common mistake:** using the count for the largest prime, or forgetting to divide by the exponent when a prime appears squared or cubed in the base."
+ },
+ {
+  "id": "mock_l7_nt_trailing_base_6",
+  "family": "l7_nt_trailing_base",
+  "difficulty": 7,
+  "topic": "number_theory",
+  "skillId": "nt_factorials",
+  "track": "both",
+  "prompt": "When $90!$ is written in base $18$, how many zeros does it end with?",
+  "choices": {
+   "A": "$21$",
+   "B": "$22$",
+   "C": "$23$",
+   "D": "$44$",
+   "E": "$86$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor the base into primes. For each prime, count how many times it divides $n!$, then divide by its exponent in the base."
+  ],
+  "solution": "**What we need:** the largest $k$ with $18^k$ dividing $90!$.\n\n**Key idea:** each trailing zero in base $18$ is one factor of $18 = 2 \\cdot 3^{2}$. Count each prime in $90!$ (Legendre's formula), then see which one runs out first.\n\n**Step 1.** Prime $2$: $90!$ has $86$ factors of $2$.\n\n**Step 2.** Prime $3$: $90!$ has $44$ factors of $3$, enough for $\\lfloor 44/2 \\rfloor = 22$ copies of $3^{2}$.\n\n**Step 3.** The smallest of these limits is $22$.\n\n**Answer:** $22$. **(B)**\n\n**Common mistake:** using the count for the largest prime, or forgetting to divide by the exponent when a prime appears squared or cubed in the base."
+ },
+ {
+  "id": "mock_l7_nt_square_divisors_1",
+  "family": "l7_nt_square_divisors",
+  "difficulty": 7,
+  "topic": "number_theory",
+  "skillId": "nt_divisors",
+  "track": "both",
+  "prompt": "How many positive divisors of $40^2$ are less than $40$ but do not divide $40$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$10$",
+   "E": "$13$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair each divisor $d$ of $N^2$ with $N^2/d$. Exactly one of each pair is below $N$."
+  ],
+  "solution": "**What we need:** divisors $d$ of $40^2$ with $d < 40$ and $d \\nmid 40$.\n\n**Key idea:** divisors of $40^2$ pair up as $d \\leftrightarrow \\frac{40^2}{d}$, one below $40$ and one above, with $40$ paired with itself. Then remove the ones that divide $40$.\n\n**Step 1.** $40 = 2^{3} \\cdot 5$, so $40^2$ has $21$ divisors and $40$ has $8$.\n\n**Step 2.** Leaving out $40$ itself, the other $20$ divisors of $40^2$ split evenly: $10$ are less than $40$.\n\n**Step 3.** Every divisor of $40$ except $40$ is less than $40$: that is $7$ of them, and they must be removed.\n\n**Step 4.** $10 - 7 = 3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** forgetting that $N$ pairs with itself, or subtracting all of $N$'s divisors including $N$."
+ },
+ {
+  "id": "mock_l7_nt_square_divisors_2",
+  "family": "l7_nt_square_divisors",
+  "difficulty": 7,
+  "topic": "number_theory",
+  "skillId": "nt_divisors",
+  "track": "both",
+  "prompt": "How many positive divisors of $36^2$ are less than $36$ but do not divide $36$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$12$",
+   "E": "$16$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair each divisor $d$ of $N^2$ with $N^2/d$. Exactly one of each pair is below $N$."
+  ],
+  "solution": "**What we need:** divisors $d$ of $36^2$ with $d < 36$ and $d \\nmid 36$.\n\n**Key idea:** divisors of $36^2$ pair up as $d \\leftrightarrow \\frac{36^2}{d}$, one below $36$ and one above, with $36$ paired with itself. Then remove the ones that divide $36$.\n\n**Step 1.** $36 = 2^{2} \\cdot 3^{2}$, so $36^2$ has $25$ divisors and $36$ has $9$.\n\n**Step 2.** Leaving out $36$ itself, the other $24$ divisors of $36^2$ split evenly: $12$ are less than $36$.\n\n**Step 3.** Every divisor of $36$ except $36$ is less than $36$: that is $8$ of them, and they must be removed.\n\n**Step 4.** $12 - 8 = 4$.\n\n**Answer:** $4$. **(B)**\n\n**Common mistake:** forgetting that $N$ pairs with itself, or subtracting all of $N$'s divisors including $N$."
+ },
+ {
+  "id": "mock_l7_nt_square_divisors_3",
+  "family": "l7_nt_square_divisors",
+  "difficulty": 7,
+  "topic": "number_theory",
+  "skillId": "nt_divisors",
+  "track": "both",
+  "prompt": "How many positive divisors of $60^2$ are less than $60$ but do not divide $60$?",
+  "choices": {
+   "A": "$10$",
+   "B": "$11$",
+   "C": "$12$",
+   "D": "$22$",
+   "E": "$33$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair each divisor $d$ of $N^2$ with $N^2/d$. Exactly one of each pair is below $N$."
+  ],
+  "solution": "**What we need:** divisors $d$ of $60^2$ with $d < 60$ and $d \\nmid 60$.\n\n**Key idea:** divisors of $60^2$ pair up as $d \\leftrightarrow \\frac{60^2}{d}$, one below $60$ and one above, with $60$ paired with itself. Then remove the ones that divide $60$.\n\n**Step 1.** $60 = 2^{2} \\cdot 5 \\cdot 3$, so $60^2$ has $45$ divisors and $60$ has $12$.\n\n**Step 2.** Leaving out $60$ itself, the other $44$ divisors of $60^2$ split evenly: $22$ are less than $60$.\n\n**Step 3.** Every divisor of $60$ except $60$ is less than $60$: that is $11$ of them, and they must be removed.\n\n**Step 4.** $22 - 11 = 11$.\n\n**Answer:** $11$. **(B)**\n\n**Common mistake:** forgetting that $N$ pairs with itself, or subtracting all of $N$'s divisors including $N$."
+ },
+ {
+  "id": "mock_l7_nt_square_divisors_4",
+  "family": "l7_nt_square_divisors",
+  "difficulty": 7,
+  "topic": "number_theory",
+  "skillId": "nt_divisors",
+  "track": "both",
+  "prompt": "How many positive divisors of $270^2$ are less than $270$ but do not divide $270$?",
+  "choices": {
+   "A": "$15$",
+   "B": "$16$",
+   "C": "$17$",
+   "D": "$31$",
+   "E": "$47$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair each divisor $d$ of $N^2$ with $N^2/d$. Exactly one of each pair is below $N$."
+  ],
+  "solution": "**What we need:** divisors $d$ of $270^2$ with $d < 270$ and $d \\nmid 270$.\n\n**Key idea:** divisors of $270^2$ pair up as $d \\leftrightarrow \\frac{270^2}{d}$, one below $270$ and one above, with $270$ paired with itself. Then remove the ones that divide $270$.\n\n**Step 1.** $270 = 3^{3} \\cdot 2 \\cdot 5$, so $270^2$ has $63$ divisors and $270$ has $16$.\n\n**Step 2.** Leaving out $270$ itself, the other $62$ divisors of $270^2$ split evenly: $31$ are less than $270$.\n\n**Step 3.** Every divisor of $270$ except $270$ is less than $270$: that is $15$ of them, and they must be removed.\n\n**Step 4.** $31 - 15 = 16$.\n\n**Answer:** $16$. **(B)**\n\n**Common mistake:** forgetting that $N$ pairs with itself, or subtracting all of $N$'s divisors including $N$."
+ },
+ {
+  "id": "mock_l7_nt_square_divisors_5",
+  "family": "l7_nt_square_divisors",
+  "difficulty": 7,
+  "topic": "number_theory",
+  "skillId": "nt_divisors",
+  "track": "both",
+  "prompt": "How many positive divisors of $72^2$ are less than $72$ but do not divide $72$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$17$",
+   "E": "$23$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair each divisor $d$ of $N^2$ with $N^2/d$. Exactly one of each pair is below $N$."
+  ],
+  "solution": "**What we need:** divisors $d$ of $72^2$ with $d < 72$ and $d \\nmid 72$.\n\n**Key idea:** divisors of $72^2$ pair up as $d \\leftrightarrow \\frac{72^2}{d}$, one below $72$ and one above, with $72$ paired with itself. Then remove the ones that divide $72$.\n\n**Step 1.** $72 = 2^{3} \\cdot 3^{2}$, so $72^2$ has $35$ divisors and $72$ has $12$.\n\n**Step 2.** Leaving out $72$ itself, the other $34$ divisors of $72^2$ split evenly: $17$ are less than $72$.\n\n**Step 3.** Every divisor of $72$ except $72$ is less than $72$: that is $11$ of them, and they must be removed.\n\n**Step 4.** $17 - 11 = 6$.\n\n**Answer:** $6$. **(B)**\n\n**Common mistake:** forgetting that $N$ pairs with itself, or subtracting all of $N$'s divisors including $N$."
+ },
+ {
+  "id": "mock_l7_nt_square_divisors_6",
+  "family": "l7_nt_square_divisors",
+  "difficulty": 7,
+  "topic": "number_theory",
+  "skillId": "nt_divisors",
+  "track": "both",
+  "prompt": "How many positive divisors of $288^2$ are less than $288$ but do not divide $288$?",
+  "choices": {
+   "A": "$9$",
+   "B": "$10$",
+   "C": "$11$",
+   "D": "$27$",
+   "E": "$37$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair each divisor $d$ of $N^2$ with $N^2/d$. Exactly one of each pair is below $N$."
+  ],
+  "solution": "**What we need:** divisors $d$ of $288^2$ with $d < 288$ and $d \\nmid 288$.\n\n**Key idea:** divisors of $288^2$ pair up as $d \\leftrightarrow \\frac{288^2}{d}$, one below $288$ and one above, with $288$ paired with itself. Then remove the ones that divide $288$.\n\n**Step 1.** $288 = 2^{5} \\cdot 3^{2}$, so $288^2$ has $55$ divisors and $288$ has $18$.\n\n**Step 2.** Leaving out $288$ itself, the other $54$ divisors of $288^2$ split evenly: $27$ are less than $288$.\n\n**Step 3.** Every divisor of $288$ except $288$ is less than $288$: that is $17$ of them, and they must be removed.\n\n**Step 4.** $27 - 17 = 10$.\n\n**Answer:** $10$. **(B)**\n\n**Common mistake:** forgetting that $N$ pairs with itself, or subtracting all of $N$'s divisors including $N$."
+ },
+ {
+  "id": "mock_l7_cp_runs_1",
+  "family": "l7_cp_runs",
+  "difficulty": 7,
+  "topic": "counting_probability",
+  "skillId": "cp_casework",
+  "track": "both",
+  "prompt": "How many strings of $11$ letters, each $A$ or $B$, have the property that every run of consecutive A's has even length and every run of consecutive B's has odd length? (For example, AABAA works and ABB does not.)",
+  "choices": {
+   "A": "$22$",
+   "B": "$27$",
+   "C": "$32$",
+   "D": "$49$",
+   "E": "$65$"
+  },
+  "answer": "D",
+  "hints": [
+   "Track two counts: strings ending in each letter. Then add a run of the right length at the end."
+  ],
+  "solution": "**What we need:** the number of valid strings of length 11.\n\n**Key idea:** build the strings from the end. Let $e_k$ count valid strings of length $k$ ending in A and $o_k$ those ending in B.\n\n**Step 1.** A string ending in A ends with a run of even length: either the last two letters start that run (so the first $k - 2$ letters form any valid string ending in B), or they extend a valid string that already ended in A. So $e_k = e_{k-2} + o_{k-2}$.\n\n**Step 2.** A string ending in B either ends with a single B after a string ending in A, or adds two more B's to a string ending in B. So $o_k = e_{k-1} + o_{k-2}$.\n\n**Step 3.** Start with $(e_1, o_1) = (0, 1)$ and $(e_2, o_2) = (1, 0)$. The pairs $(e_k, o_k)$ for $k = 1$ to $11$ are $(0, 1)$, $(1, 0)$, $(1, 2)$, $(1, 1)$, $(3, 3)$, $(2, 4)$, $(6, 5)$, $(6, 10)$, $(11, 11)$, $(16, 21)$, $(22, 27)$.\n\n**Step 4.** Total for length $11$: $22 + 27 = 49$.\n\n**Answer:** $49$. **(D)**\n\n**Common mistake:** a recursion that only tracks the total, which loses which letter the string ends with."
+ },
+ {
+  "id": "mock_l7_cp_runs_2",
+  "family": "l7_cp_runs",
+  "difficulty": 7,
+  "topic": "counting_probability",
+  "skillId": "cp_casework",
+  "track": "both",
+  "prompt": "How many strings of $10$ letters, each $A$ or $B$, have the property that every run of consecutive B's has even length and every run of consecutive A's has odd length? (For example, BBABB works and BAA does not.)",
+  "choices": {
+   "A": "$16$",
+   "B": "$21$",
+   "C": "$32$",
+   "D": "$37$",
+   "E": "$48$"
+  },
+  "answer": "D",
+  "hints": [
+   "Track two counts: strings ending in each letter. Then add a run of the right length at the end."
+  ],
+  "solution": "**What we need:** the number of valid strings of length 10.\n\n**Key idea:** build the strings from the end. Let $e_k$ count valid strings of length $k$ ending in B and $o_k$ those ending in A.\n\n**Step 1.** A string ending in B ends with a run of even length: either the last two letters start that run (so the first $k - 2$ letters form any valid string ending in A), or they extend a valid string that already ended in B. So $e_k = e_{k-2} + o_{k-2}$.\n\n**Step 2.** A string ending in A either ends with a single A after a string ending in B, or adds two more A's to a string ending in A. So $o_k = e_{k-1} + o_{k-2}$.\n\n**Step 3.** Start with $(e_1, o_1) = (0, 1)$ and $(e_2, o_2) = (1, 0)$. The pairs $(e_k, o_k)$ for $k = 1$ to $10$ are $(0, 1)$, $(1, 0)$, $(1, 2)$, $(1, 1)$, $(3, 3)$, $(2, 4)$, $(6, 5)$, $(6, 10)$, $(11, 11)$, $(16, 21)$.\n\n**Step 4.** Total for length $10$: $16 + 21 = 37$.\n\n**Answer:** $37$. **(D)**\n\n**Common mistake:** a recursion that only tracks the total, which loses which letter the string ends with."
+ },
+ {
+  "id": "mock_l7_cp_runs_3",
+  "family": "l7_cp_runs",
+  "difficulty": 7,
+  "topic": "counting_probability",
+  "skillId": "cp_casework",
+  "track": "both",
+  "prompt": "How many strings of $12$ letters, each $A$ or $B$, have the property that every run of consecutive A's has even length and every run of consecutive B's has odd length? (For example, AABAA works and ABB does not.)",
+  "choices": {
+   "A": "$37$",
+   "B": "$43$",
+   "C": "$64$",
+   "D": "$80$",
+   "E": "$102$"
+  },
+  "answer": "D",
+  "hints": [
+   "Track two counts: strings ending in each letter. Then add a run of the right length at the end."
+  ],
+  "solution": "**What we need:** the number of valid strings of length 12.\n\n**Key idea:** build the strings from the end. Let $e_k$ count valid strings of length $k$ ending in A and $o_k$ those ending in B.\n\n**Step 1.** A string ending in A ends with a run of even length: either the last two letters start that run (so the first $k - 2$ letters form any valid string ending in B), or they extend a valid string that already ended in A. So $e_k = e_{k-2} + o_{k-2}$.\n\n**Step 2.** A string ending in B either ends with a single B after a string ending in A, or adds two more B's to a string ending in B. So $o_k = e_{k-1} + o_{k-2}$.\n\n**Step 3.** Start with $(e_1, o_1) = (0, 1)$ and $(e_2, o_2) = (1, 0)$. The pairs $(e_k, o_k)$ for $k = 1$ to $12$ are $(0, 1)$, $(1, 0)$, $(1, 2)$, $(1, 1)$, $(3, 3)$, $(2, 4)$, $(6, 5)$, $(6, 10)$, $(11, 11)$, $(16, 21)$, $(22, 27)$, $(37, 43)$.\n\n**Step 4.** Total for length $12$: $37 + 43 = 80$.\n\n**Answer:** $80$. **(D)**\n\n**Common mistake:** a recursion that only tracks the total, which loses which letter the string ends with."
+ },
+ {
+  "id": "mock_l7_cp_runs_4",
+  "family": "l7_cp_runs",
+  "difficulty": 7,
+  "topic": "counting_probability",
+  "skillId": "cp_casework",
+  "track": "both",
+  "prompt": "How many strings of $14$ letters, each $A$ or $B$, have the property that every run of consecutive A's has even length and every run of consecutive B's has odd length? (For example, AABAA works and ABB does not.)",
+  "choices": {
+   "A": "$80$",
+   "B": "$92$",
+   "C": "$128$",
+   "D": "$172$",
+   "E": "$221$"
+  },
+  "answer": "D",
+  "hints": [
+   "Track two counts: strings ending in each letter. Then add a run of the right length at the end."
+  ],
+  "solution": "**What we need:** the number of valid strings of length 14.\n\n**Key idea:** build the strings from the end. Let $e_k$ count valid strings of length $k$ ending in A and $o_k$ those ending in B.\n\n**Step 1.** A string ending in A ends with a run of even length: either the last two letters start that run (so the first $k - 2$ letters form any valid string ending in B), or they extend a valid string that already ended in A. So $e_k = e_{k-2} + o_{k-2}$.\n\n**Step 2.** A string ending in B either ends with a single B after a string ending in A, or adds two more B's to a string ending in B. So $o_k = e_{k-1} + o_{k-2}$.\n\n**Step 3.** Start with $(e_1, o_1) = (0, 1)$ and $(e_2, o_2) = (1, 0)$. The pairs $(e_k, o_k)$ for $k = 1$ to $14$ are $(0, 1)$, $(1, 0)$, $(1, 2)$, $(1, 1)$, $(3, 3)$, $(2, 4)$, $(6, 5)$, $(6, 10)$, $(11, 11)$, $(16, 21)$, $(22, 27)$, $(37, 43)$, $(49, 64)$, $(80, 92)$.\n\n**Step 4.** Total for length $14$: $80 + 92 = 172$.\n\n**Answer:** $172$. **(D)**\n\n**Common mistake:** a recursion that only tracks the total, which loses which letter the string ends with."
+ },
+ {
+  "id": "mock_l7_cp_runs_5",
+  "family": "l7_cp_runs",
+  "difficulty": 7,
+  "topic": "counting_probability",
+  "skillId": "cp_casework",
+  "track": "both",
+  "prompt": "How many strings of $9$ letters, each $A$ or $B$, have the property that every run of consecutive A's has even length and every run of consecutive B's has odd length? (For example, AABAA works and ABB does not.)",
+  "choices": {
+   "A": "$11$",
+   "B": "$12$",
+   "C": "$16$",
+   "D": "$22$",
+   "E": "$28$"
+  },
+  "answer": "D",
+  "hints": [
+   "Track two counts: strings ending in each letter. Then add a run of the right length at the end."
+  ],
+  "solution": "**What we need:** the number of valid strings of length 9.\n\n**Key idea:** build the strings from the end. Let $e_k$ count valid strings of length $k$ ending in A and $o_k$ those ending in B.\n\n**Step 1.** A string ending in A ends with a run of even length: either the last two letters start that run (so the first $k - 2$ letters form any valid string ending in B), or they extend a valid string that already ended in A. So $e_k = e_{k-2} + o_{k-2}$.\n\n**Step 2.** A string ending in B either ends with a single B after a string ending in A, or adds two more B's to a string ending in B. So $o_k = e_{k-1} + o_{k-2}$.\n\n**Step 3.** Start with $(e_1, o_1) = (0, 1)$ and $(e_2, o_2) = (1, 0)$. The pairs $(e_k, o_k)$ for $k = 1$ to $9$ are $(0, 1)$, $(1, 0)$, $(1, 2)$, $(1, 1)$, $(3, 3)$, $(2, 4)$, $(6, 5)$, $(6, 10)$, $(11, 11)$.\n\n**Step 4.** Total for length $9$: $11 + 11 = 22$.\n\n**Answer:** $22$. **(D)**\n\n**Common mistake:** a recursion that only tracks the total, which loses which letter the string ends with."
+ },
+ {
+  "id": "mock_l7_cp_runs_6",
+  "family": "l7_cp_runs",
+  "difficulty": 7,
+  "topic": "counting_probability",
+  "skillId": "cp_casework",
+  "track": "both",
+  "prompt": "How many strings of $11$ letters, each $A$ or $B$, have the property that every run of consecutive B's has even length and every run of consecutive A's has odd length? (For example, BBABB works and BAA does not.)",
+  "choices": {
+   "A": "$22$",
+   "B": "$27$",
+   "C": "$32$",
+   "D": "$49$",
+   "E": "$65$"
+  },
+  "answer": "D",
+  "hints": [
+   "Track two counts: strings ending in each letter. Then add a run of the right length at the end."
+  ],
+  "solution": "**What we need:** the number of valid strings of length 11.\n\n**Key idea:** build the strings from the end. Let $e_k$ count valid strings of length $k$ ending in B and $o_k$ those ending in A.\n\n**Step 1.** A string ending in B ends with a run of even length: either the last two letters start that run (so the first $k - 2$ letters form any valid string ending in A), or they extend a valid string that already ended in B. So $e_k = e_{k-2} + o_{k-2}$.\n\n**Step 2.** A string ending in A either ends with a single A after a string ending in B, or adds two more A's to a string ending in A. So $o_k = e_{k-1} + o_{k-2}$.\n\n**Step 3.** Start with $(e_1, o_1) = (0, 1)$ and $(e_2, o_2) = (1, 0)$. The pairs $(e_k, o_k)$ for $k = 1$ to $11$ are $(0, 1)$, $(1, 0)$, $(1, 2)$, $(1, 1)$, $(3, 3)$, $(2, 4)$, $(6, 5)$, $(6, 10)$, $(11, 11)$, $(16, 21)$, $(22, 27)$.\n\n**Step 4.** Total for length $11$: $22 + 27 = 49$.\n\n**Answer:** $49$. **(D)**\n\n**Common mistake:** a recursion that only tracks the total, which loses which letter the string ends with."
+ },
+ {
+  "id": "mock_l7_cp_obtuse_ngon_1",
+  "family": "l7_cp_obtuse_ngon",
+  "difficulty": 7,
+  "topic": "counting_probability",
+  "skillId": "cp_probability",
+  "track": "both",
+  "prompt": "Three different vertices of a regular $11$-gon are chosen at random. What is the probability that they form an obtuse triangle?",
+  "choices": {
+   "A": "$\\frac{1}{3}$",
+   "B": "$\\frac{1}{2}$",
+   "C": "$\\frac{5}{8}$",
+   "D": "$\\frac{2}{3}$",
+   "E": "$\\frac{3}{4}$"
+  },
+  "answer": "D",
+  "hints": [
+   "An inscribed triangle is obtuse exactly when all three vertices fit inside an arc smaller than a semicircle."
+  ],
+  "solution": "**What we need:** the fraction of the $\\binom{11}{3} = 165$ vertex triples that make an obtuse triangle.\n\n**Key idea:** the triangle is inscribed in the circle, and an inscribed angle is obtuse exactly when the arc opposite it is more than half the circle. So the triangle is obtuse exactly when all three vertices lie within an arc shorter than a semicircle.\n\n**Step 1.** Go around the circle and let $P$ be the first of the three vertices (counterclockwise) in that short arc. The other two must be among the next $5$ vertices, since those are the ones less than halfway around from $P$.\n\n**Step 2.** So each of the $11$ choices of $P$ gives $\\binom{5}{2} = 10$ obtuse triangles, and each obtuse triangle is counted once: $11 \\cdot 10 = 110$.\n\n**Step 3.** (With $11$ odd, no triangle is a right triangle, because no two vertices are opposite each other.)\n\n**Step 4.** Probability: $\\frac{110}{165} = \\frac{2}{3}$.\n\n**Answer:** $\\frac{2}{3}$. **(D)**\n\n**Common mistake:** counting right triangles as obtuse, or counting each obtuse triangle once for every vertex instead of once."
+ },
+ {
+  "id": "mock_l7_cp_obtuse_ngon_2",
+  "family": "l7_cp_obtuse_ngon",
+  "difficulty": 7,
+  "topic": "counting_probability",
+  "skillId": "cp_probability",
+  "track": "both",
+  "prompt": "Three different vertices of a regular $12$-gon are chosen at random. What is the probability that they form an obtuse triangle?",
+  "choices": {
+   "A": "$\\frac{5}{11}$",
+   "B": "$\\frac{1}{2}$",
+   "C": "$\\frac{6}{11}$",
+   "D": "$\\frac{3}{4}$",
+   "E": "$\\frac{9}{11}$"
+  },
+  "answer": "C",
+  "hints": [
+   "An inscribed triangle is obtuse exactly when all three vertices fit inside an arc smaller than a semicircle."
+  ],
+  "solution": "**What we need:** the fraction of the $\\binom{12}{3} = 220$ vertex triples that make an obtuse triangle.\n\n**Key idea:** the triangle is inscribed in the circle, and an inscribed angle is obtuse exactly when the arc opposite it is more than half the circle. So the triangle is obtuse exactly when all three vertices lie within an arc shorter than a semicircle.\n\n**Step 1.** Go around the circle and let $P$ be the first of the three vertices (counterclockwise) in that short arc. The other two must be among the next $5$ vertices, since those are the ones less than halfway around from $P$.\n\n**Step 2.** So each of the $12$ choices of $P$ gives $\\binom{5}{2} = 10$ obtuse triangles, and each obtuse triangle is counted once: $12 \\cdot 10 = 120$.\n\n**Step 3.** (With $12$ even, the $60$ triangles that use a diameter are right, not obtuse, so they are not counted.)\n\n**Step 4.** Probability: $\\frac{120}{220} = \\frac{6}{11}$.\n\n**Answer:** $\\frac{6}{11}$. **(C)**\n\n**Common mistake:** counting right triangles as obtuse, or counting each obtuse triangle once for every vertex instead of once."
+ },
+ {
+  "id": "mock_l7_cp_obtuse_ngon_3",
+  "family": "l7_cp_obtuse_ngon",
+  "difficulty": 7,
+  "topic": "counting_probability",
+  "skillId": "cp_probability",
+  "track": "both",
+  "prompt": "Three different vertices of a regular $8$-gon are chosen at random. What is the probability that they form an obtuse triangle?",
+  "choices": {
+   "A": "$\\frac{3}{7}$",
+   "B": "$\\frac{1}{2}$",
+   "C": "$\\frac{4}{7}$",
+   "D": "$\\frac{3}{4}$",
+   "E": "$\\frac{6}{7}$"
+  },
+  "answer": "A",
+  "hints": [
+   "An inscribed triangle is obtuse exactly when all three vertices fit inside an arc smaller than a semicircle."
+  ],
+  "solution": "**What we need:** the fraction of the $\\binom{8}{3} = 56$ vertex triples that make an obtuse triangle.\n\n**Key idea:** the triangle is inscribed in the circle, and an inscribed angle is obtuse exactly when the arc opposite it is more than half the circle. So the triangle is obtuse exactly when all three vertices lie within an arc shorter than a semicircle.\n\n**Step 1.** Go around the circle and let $P$ be the first of the three vertices (counterclockwise) in that short arc. The other two must be among the next $3$ vertices, since those are the ones less than halfway around from $P$.\n\n**Step 2.** So each of the $8$ choices of $P$ gives $\\binom{3}{2} = 3$ obtuse triangles, and each obtuse triangle is counted once: $8 \\cdot 3 = 24$.\n\n**Step 3.** (With $8$ even, the $24$ triangles that use a diameter are right, not obtuse, so they are not counted.)\n\n**Step 4.** Probability: $\\frac{24}{56} = \\frac{3}{7}$.\n\n**Answer:** $\\frac{3}{7}$. **(A)**\n\n**Common mistake:** counting right triangles as obtuse, or counting each obtuse triangle once for every vertex instead of once."
+ },
+ {
+  "id": "mock_l7_cp_obtuse_ngon_4",
+  "family": "l7_cp_obtuse_ngon",
+  "difficulty": 7,
+  "topic": "counting_probability",
+  "skillId": "cp_probability",
+  "track": "both",
+  "prompt": "Three different vertices of a regular $14$-gon are chosen at random. What is the probability that they form an obtuse triangle?",
+  "choices": {
+   "A": "$\\frac{11}{26}$",
+   "B": "$\\frac{1}{2}$",
+   "C": "$\\frac{15}{26}$",
+   "D": "$\\frac{3}{4}$",
+   "E": "$\\frac{21}{26}$"
+  },
+  "answer": "C",
+  "hints": [
+   "An inscribed triangle is obtuse exactly when all three vertices fit inside an arc smaller than a semicircle."
+  ],
+  "solution": "**What we need:** the fraction of the $\\binom{14}{3} = 364$ vertex triples that make an obtuse triangle.\n\n**Key idea:** the triangle is inscribed in the circle, and an inscribed angle is obtuse exactly when the arc opposite it is more than half the circle. So the triangle is obtuse exactly when all three vertices lie within an arc shorter than a semicircle.\n\n**Step 1.** Go around the circle and let $P$ be the first of the three vertices (counterclockwise) in that short arc. The other two must be among the next $6$ vertices, since those are the ones less than halfway around from $P$.\n\n**Step 2.** So each of the $14$ choices of $P$ gives $\\binom{6}{2} = 15$ obtuse triangles, and each obtuse triangle is counted once: $14 \\cdot 15 = 210$.\n\n**Step 3.** (With $14$ even, the $84$ triangles that use a diameter are right, not obtuse, so they are not counted.)\n\n**Step 4.** Probability: $\\frac{210}{364} = \\frac{15}{26}$.\n\n**Answer:** $\\frac{15}{26}$. **(C)**\n\n**Common mistake:** counting right triangles as obtuse, or counting each obtuse triangle once for every vertex instead of once."
+ },
+ {
+  "id": "mock_l7_cp_obtuse_ngon_5",
+  "family": "l7_cp_obtuse_ngon",
+  "difficulty": 7,
+  "topic": "counting_probability",
+  "skillId": "cp_probability",
+  "track": "both",
+  "prompt": "Three different vertices of a regular $10$-gon are chosen at random. What is the probability that they form an obtuse triangle?",
+  "choices": {
+   "A": "$\\frac{1}{3}$",
+   "B": "$\\frac{6}{13}$",
+   "C": "$\\frac{1}{2}$",
+   "D": "$\\frac{3}{4}$",
+   "E": "$\\frac{5}{6}$"
+  },
+  "answer": "C",
+  "hints": [
+   "An inscribed triangle is obtuse exactly when all three vertices fit inside an arc smaller than a semicircle."
+  ],
+  "solution": "**What we need:** the fraction of the $\\binom{10}{3} = 120$ vertex triples that make an obtuse triangle.\n\n**Key idea:** the triangle is inscribed in the circle, and an inscribed angle is obtuse exactly when the arc opposite it is more than half the circle. So the triangle is obtuse exactly when all three vertices lie within an arc shorter than a semicircle.\n\n**Step 1.** Go around the circle and let $P$ be the first of the three vertices (counterclockwise) in that short arc. The other two must be among the next $4$ vertices, since those are the ones less than halfway around from $P$.\n\n**Step 2.** So each of the $10$ choices of $P$ gives $\\binom{4}{2} = 6$ obtuse triangles, and each obtuse triangle is counted once: $10 \\cdot 6 = 60$.\n\n**Step 3.** (With $10$ even, the $40$ triangles that use a diameter are right, not obtuse, so they are not counted.)\n\n**Step 4.** Probability: $\\frac{60}{120} = \\frac{1}{2}$.\n\n**Answer:** $\\frac{1}{2}$. **(C)**\n\n**Common mistake:** counting right triangles as obtuse, or counting each obtuse triangle once for every vertex instead of once."
+ },
+ {
+  "id": "mock_l7_cp_obtuse_ngon_6",
+  "family": "l7_cp_obtuse_ngon",
+  "difficulty": 7,
+  "topic": "counting_probability",
+  "skillId": "cp_probability",
+  "track": "both",
+  "prompt": "Three different vertices of a regular $9$-gon are chosen at random. What is the probability that they form an obtuse triangle?",
+  "choices": {
+   "A": "$\\frac{5}{14}$",
+   "B": "$\\frac{1}{2}$",
+   "C": "$\\frac{18}{31}$",
+   "D": "$\\frac{9}{14}$",
+   "E": "$\\frac{3}{4}$"
+  },
+  "answer": "D",
+  "hints": [
+   "An inscribed triangle is obtuse exactly when all three vertices fit inside an arc smaller than a semicircle."
+  ],
+  "solution": "**What we need:** the fraction of the $\\binom{9}{3} = 84$ vertex triples that make an obtuse triangle.\n\n**Key idea:** the triangle is inscribed in the circle, and an inscribed angle is obtuse exactly when the arc opposite it is more than half the circle. So the triangle is obtuse exactly when all three vertices lie within an arc shorter than a semicircle.\n\n**Step 1.** Go around the circle and let $P$ be the first of the three vertices (counterclockwise) in that short arc. The other two must be among the next $4$ vertices, since those are the ones less than halfway around from $P$.\n\n**Step 2.** So each of the $9$ choices of $P$ gives $\\binom{4}{2} = 6$ obtuse triangles, and each obtuse triangle is counted once: $9 \\cdot 6 = 54$.\n\n**Step 3.** (With $9$ odd, no triangle is a right triangle, because no two vertices are opposite each other.)\n\n**Step 4.** Probability: $\\frac{54}{84} = \\frac{9}{14}$.\n\n**Answer:** $\\frac{9}{14}$. **(D)**\n\n**Common mistake:** counting right triangles as obtuse, or counting each obtuse triangle once for every vertex instead of once."
  }
 ]

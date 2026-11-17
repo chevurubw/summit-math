@@ -5,10 +5,13 @@ import type { MockExamRecord } from "@/lib/store/types";
 /**
  * Builds one mock exam: 25 problems in five sections of five, getting harder like the real test.
  *
- * Difficulty levels follow the AoPS competition ratings. The AMC 12 runs about one section
- * harder than the AMC 10, so:
- *   AMC 10 sections use levels 1, 2, 3, 4, 5
- *   AMC 12 sections use levels 2, 3, 4, 5, 6, with two AMC 12 only topics in each section
+ * Difficulty levels (see scripts/problems/mock_common.py):
+ *   1 to 4  warmups through solid middle problems
+ *   5       single idea problems from the middle of the test
+ *   6       harder problems from the 16 to 22 range
+ *   7       true end of exam problems that chain two or three ideas
+ * The AMC 12 starts a step higher than the AMC 10 and puts two AMC 12 only topics in each section.
+ * Problems within a section are ordered by level, so the test ramps steadily.
  *
  * Rules, in order of importance:
  *   1. Nothing from the student's previous mock: no problem, and no problem family
@@ -18,9 +21,22 @@ import type { MockExamRecord } from "@/lib/store/types";
  *   4. Within a family, problems the student has never seen in a mock come first.
  */
 
-export const mockSections: Record<Track, number[]> = {
-  amc10: [1, 2, 3, 4, 5],
-  amc12: [2, 3, 4, 5, 6],
+/** The level of each of the five questions in each section. */
+export const mockSections: Record<Track, number[][]> = {
+  amc10: [
+    [1, 1, 1, 1, 1],
+    [2, 2, 2, 2, 2],
+    [3, 3, 4, 4, 4],
+    [5, 5, 5, 6, 6],
+    [6, 7, 7, 7, 7],
+  ],
+  amc12: [
+    [2, 2, 2, 3, 3],
+    [3, 3, 4, 4, 4],
+    [5, 5, 5, 5, 5],
+    [6, 6, 6, 6, 6],
+    [7, 7, 7, 7, 7],
+  ],
 };
 
 /** How many AMC 12 only problems go in each AMC 12 section. */
@@ -32,7 +48,6 @@ const topicTargets: Record<Track, Record<string, number>> = {
   amc12: { algebra: 4, geometry: 5, number_theory: 3, counting_probability: 3 },
 };
 
-const PER_SECTION = 5;
 
 export type MockSection = { level: number; problems: MockProblem[] };
 
@@ -104,24 +119,32 @@ export function buildMock(
     return ranked[0].p;
   };
 
-  return mockSections[track].map((level) => {
-    const slots: boolean[] = [];
+  // Look for a family at this level first, then nearby levels if the bank runs short
+  const pickNear = (level: number, amc12Only: boolean): string | null => {
+    for (const lv of [level, level - 1, level + 1, level - 2]) {
+      const f = pickFamily(lv, amc12Only) ?? pickFamily(lv, !amc12Only);
+      if (f) return f;
+    }
+    return null;
+  };
+
+  return mockSections[track].map((levels) => {
     const nOnly = track === "amc12" ? AMC12_ONLY_PER_SECTION : 0;
-    for (let i = 0; i < PER_SECTION; i++) slots.push(i < nOnly);
     const problems: MockProblem[] = [];
-    for (const amc12Only of slots) {
-      const f = pickFamily(level, amc12Only) ?? pickFamily(level, !amc12Only);
-      if (!f) continue;
+    levels.forEach((level, slot) => {
+      const f = pickNear(level, slot < nOnly);
+      if (!f) return;
       chosenFamilies.add(f);
       const p = pickProblem(f);
       topicCount.set(p.topic, (topicCount.get(p.topic) ?? 0) + 1);
       problems.push(p);
-    }
-    // Mix the order inside a section so AMC 12 topics are not always first
+    });
+    // Mix the order so AMC 12 topics are not always first, then keep it rising by level
     for (let i = problems.length - 1; i > 0; i--) {
       const j = Math.floor(random() * (i + 1));
       [problems[i], problems[j]] = [problems[j], problems[i]];
     }
-    return { level, problems };
+    problems.sort((a, b) => a.difficulty - b.difficulty);
+    return { level: Math.max(...levels), problems };
   });
 }

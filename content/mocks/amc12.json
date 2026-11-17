@@ -3106,5 +3106,635 @@
    "Start from the geometric series and differentiate, or telescope."
   ],
   "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** start from the geometric series or a telescoping split, depending on the form.\n\n**Step 1.** Split: $\\sum \\frac{n}{5^n} + 2\\sum \\frac{1}{5^n}$.\n\n**Step 2.** Geometric part: $\\sum_{n \\ge 1} \\frac{1}{5^n} = \\frac{1/5}{1 - 1/5} = \\frac{1}{4}$, so $2$ times it is $\\frac{1}{2}$.\n\n**Step 3.** For $S = \\sum \\frac{n}{5^n}$: $S - \\frac{S}{5} = \\sum \\frac{1}{5^n} = \\frac{1}{4}$, so $S \\cdot \\frac{4}{5} = \\frac{1}{4}$ and $S = \\frac{5}{16}$.\n\n**Step 4.** Total: $\\frac{5}{16} + \\frac{1}{2} = \\frac{13}{16}$.\n\n**Answer:** $\\frac{13}{16}$. **(C)**\n\n**Common mistake:** treating the whole thing as one geometric series. The $n$ in the numerator breaks the constant ratio."
+ },
+ {
+  "id": "mock_l7_trig_products_1",
+  "family": "l7_trig_products",
+  "difficulty": 7,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "What is $\\sin\\frac{\\pi}{13} \\sin\\frac{2\\pi}{13} \\sin\\frac{3\\pi}{13} \\sin\\frac{4\\pi}{13} \\sin\\frac{5\\pi}{13} \\sin\\frac{6\\pi}{13}$?",
+  "choices": {
+   "A": "$\\frac{13}{4096}$",
+   "B": "$\\frac{1}{64}$",
+   "C": "$\\frac{\\sqrt{6}}{64}$",
+   "D": "$\\frac{\\sqrt{13}}{64}$",
+   "E": "$\\frac{\\sqrt{13}}{32}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Pair the product with roots of unity or with the double angle formula $\\sin 2x = 2\\sin x\\cos x$."
+  ],
+  "solution": "**What we need:** the value of the product of $6$ sinines.\n\n**Key idea:** connect the sines to the $13$th roots of unity, whose distances from $1$ are $2\\sin\\frac{k\\pi}{13}$.\n\n**Step 1.** Let $\\omega = \\cos\\frac{2\\pi}{13} + i\\sin\\frac{2\\pi}{13}$. The numbers $\\omega^k$ for $k = 1, \\ldots, 12$ are the roots of $\\frac{z^{13} - 1}{z - 1} = 1 + z + \\cdots + z^{12}$, so $\\prod_{k=1}^{12} (1 - \\omega^k) = 13$ (plug in $z = 1$).\n\n**Step 2.** Each factor has size $|1 - \\omega^k| = 2\\sin\\frac{k\\pi}{13}$, so $\\prod_{k=1}^{12} 2\\sin\\frac{k\\pi}{13} = 13$.\n\n**Step 3.** Since $\\sin\\frac{k\\pi}{13} = \\sin\\frac{(13 - k)\\pi}{13}$, that product is the square of ours times $2^{12}$: $2^{12} P^2 = 13$.\n\n**Step 4.** $P = \\frac{\\sqrt{13}}{2^{6}} = \\frac{\\sqrt{13}}{64}$.\n\n**Answer:** $\\frac{\\sqrt{13}}{64}$. **(D)**\n\n**Common mistake:** trying to multiply decimal approximations; the exact value needs the symmetry argument."
+ },
+ {
+  "id": "mock_l7_trig_products_2",
+  "family": "l7_trig_products",
+  "difficulty": 7,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "What is $\\cos\\frac{\\pi}{5} \\cos\\frac{2\\pi}{5}$?",
+  "choices": {
+   "A": "$\\frac{1}{8}$",
+   "B": "$\\frac{1}{4}$",
+   "C": "$\\frac{5}{16}$",
+   "D": "$\\frac{1}{2}$",
+   "E": "$\\frac{\\sqrt{5}}{4}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair the product with roots of unity or with the double angle formula $\\sin 2x = 2\\sin x\\cos x$."
+  ],
+  "solution": "**What we need:** the value of the product of $2$ cosines.\n\n**Key idea:** multiply by the matching product of sines and use the double angle formula, then notice the sines come back in a different order.\n\n**Step 1.** Call the product $P$ and let $S = \\prod_{k=1}^{2} \\sin\\frac{k\\pi}{5}$, which is not zero.\n\n**Step 2.** Using $2\\sin x\\cos x = \\sin 2x$ on each factor: $2^{2} S P = \\prod_{k=1}^{2} \\sin\\frac{2k\\pi}{5}$.\n\n**Step 3.** The angles $\\frac{2k\\pi}{5}$ are $\\frac{2\\pi}{5}, \\frac{4\\pi}{5}, \\ldots$; replacing any angle above $\\frac{\\pi}{2}$ by $\\pi$ minus it (same sine) gives exactly the angles $\\frac{\\pi}{5}, \\ldots, \\frac{2\\pi}{5}$ again. So the right side equals $S$.\n\n**Step 4.** $2^{2} S P = S$, so $P = \\frac{1}{4}$.\n\n**Answer:** $\\frac{1}{4}$. **(B)**\n\n**Common mistake:** trying to multiply decimal approximations; the exact value needs the symmetry argument."
+ },
+ {
+  "id": "mock_l7_trig_products_3",
+  "family": "l7_trig_products",
+  "difficulty": 7,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "What is $\\sin\\frac{\\pi}{11} \\sin\\frac{2\\pi}{11} \\sin\\frac{3\\pi}{11} \\sin\\frac{4\\pi}{11} \\sin\\frac{5\\pi}{11}$?",
+  "choices": {
+   "A": "$\\frac{11}{1024}$",
+   "B": "$\\frac{1}{32}$",
+   "C": "$\\frac{\\sqrt{5}}{32}$",
+   "D": "$\\frac{\\sqrt{11}}{32}$",
+   "E": "$\\frac{\\sqrt{11}}{16}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Pair the product with roots of unity or with the double angle formula $\\sin 2x = 2\\sin x\\cos x$."
+  ],
+  "solution": "**What we need:** the value of the product of $5$ sinines.\n\n**Key idea:** connect the sines to the $11$th roots of unity, whose distances from $1$ are $2\\sin\\frac{k\\pi}{11}$.\n\n**Step 1.** Let $\\omega = \\cos\\frac{2\\pi}{11} + i\\sin\\frac{2\\pi}{11}$. The numbers $\\omega^k$ for $k = 1, \\ldots, 10$ are the roots of $\\frac{z^{11} - 1}{z - 1} = 1 + z + \\cdots + z^{10}$, so $\\prod_{k=1}^{10} (1 - \\omega^k) = 11$ (plug in $z = 1$).\n\n**Step 2.** Each factor has size $|1 - \\omega^k| = 2\\sin\\frac{k\\pi}{11}$, so $\\prod_{k=1}^{10} 2\\sin\\frac{k\\pi}{11} = 11$.\n\n**Step 3.** Since $\\sin\\frac{k\\pi}{11} = \\sin\\frac{(11 - k)\\pi}{11}$, that product is the square of ours times $2^{10}$: $2^{10} P^2 = 11$.\n\n**Step 4.** $P = \\frac{\\sqrt{11}}{2^{5}} = \\frac{\\sqrt{11}}{32}$.\n\n**Answer:** $\\frac{\\sqrt{11}}{32}$. **(D)**\n\n**Common mistake:** trying to multiply decimal approximations; the exact value needs the symmetry argument."
+ },
+ {
+  "id": "mock_l7_trig_products_4",
+  "family": "l7_trig_products",
+  "difficulty": 7,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "What is $\\sin\\frac{\\pi}{7} \\sin\\frac{2\\pi}{7} \\sin\\frac{3\\pi}{7}$?",
+  "choices": {
+   "A": "$\\frac{7}{64}$",
+   "B": "$\\frac{1}{8}$",
+   "C": "$\\frac{\\sqrt{3}}{8}$",
+   "D": "$\\frac{\\sqrt{7}}{8}$",
+   "E": "$\\frac{\\sqrt{7}}{4}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Pair the product with roots of unity or with the double angle formula $\\sin 2x = 2\\sin x\\cos x$."
+  ],
+  "solution": "**What we need:** the value of the product of $3$ sinines.\n\n**Key idea:** connect the sines to the $7$th roots of unity, whose distances from $1$ are $2\\sin\\frac{k\\pi}{7}$.\n\n**Step 1.** Let $\\omega = \\cos\\frac{2\\pi}{7} + i\\sin\\frac{2\\pi}{7}$. The numbers $\\omega^k$ for $k = 1, \\ldots, 6$ are the roots of $\\frac{z^{7} - 1}{z - 1} = 1 + z + \\cdots + z^{6}$, so $\\prod_{k=1}^{6} (1 - \\omega^k) = 7$ (plug in $z = 1$).\n\n**Step 2.** Each factor has size $|1 - \\omega^k| = 2\\sin\\frac{k\\pi}{7}$, so $\\prod_{k=1}^{6} 2\\sin\\frac{k\\pi}{7} = 7$.\n\n**Step 3.** Since $\\sin\\frac{k\\pi}{7} = \\sin\\frac{(7 - k)\\pi}{7}$, that product is the square of ours times $2^{6}$: $2^{6} P^2 = 7$.\n\n**Step 4.** $P = \\frac{\\sqrt{7}}{2^{3}} = \\frac{\\sqrt{7}}{8}$.\n\n**Answer:** $\\frac{\\sqrt{7}}{8}$. **(D)**\n\n**Common mistake:** trying to multiply decimal approximations; the exact value needs the symmetry argument."
+ },
+ {
+  "id": "mock_l7_trig_products_5",
+  "family": "l7_trig_products",
+  "difficulty": 7,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "What is $\\cos\\frac{\\pi}{11} \\cos\\frac{2\\pi}{11} \\cos\\frac{3\\pi}{11} \\cos\\frac{4\\pi}{11} \\cos\\frac{5\\pi}{11}$?",
+  "choices": {
+   "A": "$\\frac{11}{1024}$",
+   "B": "$\\frac{1}{64}$",
+   "C": "$\\frac{1}{32}$",
+   "D": "$\\frac{1}{16}$",
+   "E": "$\\frac{\\sqrt{11}}{32}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Pair the product with roots of unity or with the double angle formula $\\sin 2x = 2\\sin x\\cos x$."
+  ],
+  "solution": "**What we need:** the value of the product of $5$ cosines.\n\n**Key idea:** multiply by the matching product of sines and use the double angle formula, then notice the sines come back in a different order.\n\n**Step 1.** Call the product $P$ and let $S = \\prod_{k=1}^{5} \\sin\\frac{k\\pi}{11}$, which is not zero.\n\n**Step 2.** Using $2\\sin x\\cos x = \\sin 2x$ on each factor: $2^{5} S P = \\prod_{k=1}^{5} \\sin\\frac{2k\\pi}{11}$.\n\n**Step 3.** The angles $\\frac{2k\\pi}{11}$ are $\\frac{2\\pi}{11}, \\frac{4\\pi}{11}, \\ldots$; replacing any angle above $\\frac{\\pi}{2}$ by $\\pi$ minus it (same sine) gives exactly the angles $\\frac{\\pi}{11}, \\ldots, \\frac{5\\pi}{11}$ again. So the right side equals $S$.\n\n**Step 4.** $2^{5} S P = S$, so $P = \\frac{1}{32}$.\n\n**Answer:** $\\frac{1}{32}$. **(C)**\n\n**Common mistake:** trying to multiply decimal approximations; the exact value needs the symmetry argument."
+ },
+ {
+  "id": "mock_l7_trig_products_6",
+  "family": "l7_trig_products",
+  "difficulty": 7,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "What is $\\sin\\frac{\\pi}{9} \\sin\\frac{2\\pi}{9} \\sin\\frac{3\\pi}{9} \\sin\\frac{4\\pi}{9}$?",
+  "choices": {
+   "A": "$\\frac{9}{256}$",
+   "B": "$\\frac{1}{16}$",
+   "C": "$\\frac{1}{8}$",
+   "D": "$\\frac{3}{16}$",
+   "E": "$\\frac{3}{8}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Pair the product with roots of unity or with the double angle formula $\\sin 2x = 2\\sin x\\cos x$."
+  ],
+  "solution": "**What we need:** the value of the product of $4$ sinines.\n\n**Key idea:** connect the sines to the $9$th roots of unity, whose distances from $1$ are $2\\sin\\frac{k\\pi}{9}$.\n\n**Step 1.** Let $\\omega = \\cos\\frac{2\\pi}{9} + i\\sin\\frac{2\\pi}{9}$. The numbers $\\omega^k$ for $k = 1, \\ldots, 8$ are the roots of $\\frac{z^{9} - 1}{z - 1} = 1 + z + \\cdots + z^{8}$, so $\\prod_{k=1}^{8} (1 - \\omega^k) = 9$ (plug in $z = 1$).\n\n**Step 2.** Each factor has size $|1 - \\omega^k| = 2\\sin\\frac{k\\pi}{9}$, so $\\prod_{k=1}^{8} 2\\sin\\frac{k\\pi}{9} = 9$.\n\n**Step 3.** Since $\\sin\\frac{k\\pi}{9} = \\sin\\frac{(9 - k)\\pi}{9}$, that product is the square of ours times $2^{8}$: $2^{8} P^2 = 9$.\n\n**Step 4.** $P = \\frac{\\sqrt{9}}{2^{4}} = \\frac{3}{16}$.\n\n**Answer:** $\\frac{3}{16}$. **(D)**\n\n**Common mistake:** trying to multiply decimal approximations; the exact value needs the symmetry argument."
+ },
+ {
+  "id": "mock_l7_log_sum_squares_1",
+  "family": "l7_log_sum_squares",
+  "difficulty": 7,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "Positive real numbers $x$, $y$, and $z$ satisfy $xyz = 10^{14}$ and $(\\log x)(\\log yz) + (\\log y)(\\log z) = 42$, where $\\log$ is base $10$. What is $\\sqrt{(\\log x)^2 + (\\log y)^2 + (\\log z)^2}$?",
+  "choices": {
+   "A": "$2\\sqrt{7}$",
+   "B": "$4\\sqrt{7}$",
+   "C": "$\\sqrt{154}$",
+   "D": "$14$",
+   "E": "$2\\sqrt{70}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $a = \\log x$, $b = \\log y$, $c = \\log z$. Rewrite both conditions in $a$, $b$, $c$."
+  ],
+  "solution": "**What we need:** a symmetric expression in three logs.\n\n**Key idea:** name the logs $a = \\log x$, $b = \\log y$, $c = \\log z$. Both conditions become statements about $a + b + c$ and $ab + bc + ca$.\n\n**Step 1.** $\\log(xyz) = a + b + c = 14$.\n\n**Step 2.** $\\log yz = b + c$, so the second condition is $a(b + c) + bc = ab + bc + ca = 42$.\n\n**Step 3.** $a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab + bc + ca) = 196 - 84 = 112$.\n\n**Step 4.** The square root is $4\\sqrt{7}$.\n\n**Answer:** $4\\sqrt{7}$. **(B)**\n\n**Common mistake:** expanding $(a + b + c)^2$ but forgetting the factor $2$ on the cross terms."
+ },
+ {
+  "id": "mock_l7_log_sum_squares_2",
+  "family": "l7_log_sum_squares",
+  "difficulty": 7,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "Positive real numbers $x$, $y$, and $z$ satisfy $xyz = 10^{5}$ and $(\\log x)(\\log yz) + (\\log y)(\\log z) = 7$, where $\\log$ is base $10$. What is $\\sqrt{(\\log x)^2 + (\\log y)^2 + (\\log z)^2}$?",
+  "choices": {
+   "A": "$\\sqrt{3}$",
+   "B": "$\\sqrt{11}$",
+   "C": "$3\\sqrt{2}$",
+   "D": "$5$",
+   "E": "$\\sqrt{39}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $a = \\log x$, $b = \\log y$, $c = \\log z$. Rewrite both conditions in $a$, $b$, $c$."
+  ],
+  "solution": "**What we need:** a symmetric expression in three logs.\n\n**Key idea:** name the logs $a = \\log x$, $b = \\log y$, $c = \\log z$. Both conditions become statements about $a + b + c$ and $ab + bc + ca$.\n\n**Step 1.** $\\log(xyz) = a + b + c = 5$.\n\n**Step 2.** $\\log yz = b + c$, so the second condition is $a(b + c) + bc = ab + bc + ca = 7$.\n\n**Step 3.** $a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab + bc + ca) = 25 - 14 = 11$.\n\n**Step 4.** The square root is $\\sqrt{11}$.\n\n**Answer:** $\\sqrt{11}$. **(B)**\n\n**Common mistake:** expanding $(a + b + c)^2$ but forgetting the factor $2$ on the cross terms."
+ },
+ {
+  "id": "mock_l7_log_sum_squares_3",
+  "family": "l7_log_sum_squares",
+  "difficulty": 7,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "Positive real numbers $x$, $y$, and $z$ satisfy $xyz = 10^{7}$ and $(\\log x)(\\log yz) + (\\log y)(\\log z) = 2$, where $\\log$ is base $10$. What is $\\sqrt{(\\log x)^2 + (\\log y)^2 + (\\log z)^2}$?",
+  "choices": {
+   "A": "$\\sqrt{41}$",
+   "B": "$3\\sqrt{5}$",
+   "C": "$\\sqrt{47}$",
+   "D": "$7$",
+   "E": "$\\sqrt{53}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $a = \\log x$, $b = \\log y$, $c = \\log z$. Rewrite both conditions in $a$, $b$, $c$."
+  ],
+  "solution": "**What we need:** a symmetric expression in three logs.\n\n**Key idea:** name the logs $a = \\log x$, $b = \\log y$, $c = \\log z$. Both conditions become statements about $a + b + c$ and $ab + bc + ca$.\n\n**Step 1.** $\\log(xyz) = a + b + c = 7$.\n\n**Step 2.** $\\log yz = b + c$, so the second condition is $a(b + c) + bc = ab + bc + ca = 2$.\n\n**Step 3.** $a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab + bc + ca) = 49 - 4 = 45$.\n\n**Step 4.** The square root is $3\\sqrt{5}$.\n\n**Answer:** $3\\sqrt{5}$. **(B)**\n\n**Common mistake:** expanding $(a + b + c)^2$ but forgetting the factor $2$ on the cross terms."
+ },
+ {
+  "id": "mock_l7_log_sum_squares_4",
+  "family": "l7_log_sum_squares",
+  "difficulty": 7,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "Positive real numbers $x$, $y$, and $z$ satisfy $xyz = 10^{13}$ and $(\\log x)(\\log yz) + (\\log y)(\\log z) = 12$, where $\\log$ is base $10$. What is $\\sqrt{(\\log x)^2 + (\\log y)^2 + (\\log z)^2}$?",
+  "choices": {
+   "A": "$11$",
+   "B": "$\\sqrt{145}$",
+   "C": "$\\sqrt{157}$",
+   "D": "$13$",
+   "E": "$\\sqrt{193}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $a = \\log x$, $b = \\log y$, $c = \\log z$. Rewrite both conditions in $a$, $b$, $c$."
+  ],
+  "solution": "**What we need:** a symmetric expression in three logs.\n\n**Key idea:** name the logs $a = \\log x$, $b = \\log y$, $c = \\log z$. Both conditions become statements about $a + b + c$ and $ab + bc + ca$.\n\n**Step 1.** $\\log(xyz) = a + b + c = 13$.\n\n**Step 2.** $\\log yz = b + c$, so the second condition is $a(b + c) + bc = ab + bc + ca = 12$.\n\n**Step 3.** $a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab + bc + ca) = 169 - 24 = 145$.\n\n**Step 4.** The square root is $\\sqrt{145}$.\n\n**Answer:** $\\sqrt{145}$. **(B)**\n\n**Common mistake:** expanding $(a + b + c)^2$ but forgetting the factor $2$ on the cross terms."
+ },
+ {
+  "id": "mock_l7_log_sum_squares_5",
+  "family": "l7_log_sum_squares",
+  "difficulty": 7,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "Positive real numbers $x$, $y$, and $z$ satisfy $xyz = 10^{6}$ and $(\\log x)(\\log yz) + (\\log y)(\\log z) = 3$, where $\\log$ is base $10$. What is $\\sqrt{(\\log x)^2 + (\\log y)^2 + (\\log z)^2}$?",
+  "choices": {
+   "A": "$2\\sqrt{6}$",
+   "B": "$\\sqrt{30}$",
+   "C": "$\\sqrt{33}$",
+   "D": "$6$",
+   "E": "$\\sqrt{42}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $a = \\log x$, $b = \\log y$, $c = \\log z$. Rewrite both conditions in $a$, $b$, $c$."
+  ],
+  "solution": "**What we need:** a symmetric expression in three logs.\n\n**Key idea:** name the logs $a = \\log x$, $b = \\log y$, $c = \\log z$. Both conditions become statements about $a + b + c$ and $ab + bc + ca$.\n\n**Step 1.** $\\log(xyz) = a + b + c = 6$.\n\n**Step 2.** $\\log yz = b + c$, so the second condition is $a(b + c) + bc = ab + bc + ca = 3$.\n\n**Step 3.** $a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab + bc + ca) = 36 - 6 = 30$.\n\n**Step 4.** The square root is $\\sqrt{30}$.\n\n**Answer:** $\\sqrt{30}$. **(B)**\n\n**Common mistake:** expanding $(a + b + c)^2$ but forgetting the factor $2$ on the cross terms."
+ },
+ {
+  "id": "mock_l7_log_sum_squares_6",
+  "family": "l7_log_sum_squares",
+  "difficulty": 7,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "Positive real numbers $x$, $y$, and $z$ satisfy $xyz = 10^{11}$ and $(\\log x)(\\log yz) + (\\log y)(\\log z) = 6$, where $\\log$ is base $10$. What is $\\sqrt{(\\log x)^2 + (\\log y)^2 + (\\log z)^2}$?",
+  "choices": {
+   "A": "$\\sqrt{97}$",
+   "B": "$\\sqrt{109}$",
+   "C": "$\\sqrt{115}$",
+   "D": "$11$",
+   "E": "$\\sqrt{133}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $a = \\log x$, $b = \\log y$, $c = \\log z$. Rewrite both conditions in $a$, $b$, $c$."
+  ],
+  "solution": "**What we need:** a symmetric expression in three logs.\n\n**Key idea:** name the logs $a = \\log x$, $b = \\log y$, $c = \\log z$. Both conditions become statements about $a + b + c$ and $ab + bc + ca$.\n\n**Step 1.** $\\log(xyz) = a + b + c = 11$.\n\n**Step 2.** $\\log yz = b + c$, so the second condition is $a(b + c) + bc = ab + bc + ca = 6$.\n\n**Step 3.** $a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab + bc + ca) = 121 - 12 = 109$.\n\n**Step 4.** The square root is $\\sqrt{109}$.\n\n**Answer:** $\\sqrt{109}$. **(B)**\n\n**Common mistake:** expanding $(a + b + c)^2$ but forgetting the factor $2$ on the cross terms."
+ },
+ {
+  "id": "mock_l7_cx_reciprocal_sum_1",
+  "family": "l7_cx_reciprocal_sum",
+  "difficulty": 7,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{4} + i\\sin\\frac{2\\pi}{4}$. What is $\\displaystyle\\sum_{k=0}^{3} \\frac{1}{2 - \\omega^k}$?",
+  "choices": {
+   "A": "$\\frac{8}{15}$",
+   "B": "$2$",
+   "C": "$\\frac{32}{15}$",
+   "D": "$4$",
+   "E": "$\\frac{64}{15}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $\\frac{P'(x)}{P(x)} = \\sum \\frac{1}{x - r_k}$ for $P(x) = x^n - 1$."
+  ],
+  "solution": "**What we need:** a sum over all 4th roots of unity.\n\n**Key idea:** the roots of unity are the roots of $P(z) = z^{4} - 1$. For any polynomial with roots $r_k$, $\\sum \\frac{1}{x - r_k} = \\frac{P'(x)}{P(x)}$ (take the log of $P(x) = \\prod (x - r_k)$ and differentiate).\n\n**Step 1.** Here $P(x) = x^{4} - 1$ and $P'(x) = 4x^{3}$.\n\n**Step 2.** At $x = 2$: $\\frac{4 \\cdot 2^{3}}{2^{4} - 1} = \\frac{32}{15}$.\n\n**Step 3.** Simplified: $\\frac{32}{15}$.\n\n**Answer:** $\\frac{32}{15}$. **(C)**\n\n**Common mistake:** treating every $\\omega^k$ as $1$, which gives $\\frac{4}{2 - 1}$."
+ },
+ {
+  "id": "mock_l7_cx_reciprocal_sum_2",
+  "family": "l7_cx_reciprocal_sum",
+  "difficulty": 7,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{7} + i\\sin\\frac{2\\pi}{7}$. What is $\\displaystyle\\sum_{k=0}^{6} \\frac{1}{3 - \\omega^k}$?",
+  "choices": {
+   "A": "$\\frac{729}{2186}$",
+   "B": "$\\frac{7}{3}$",
+   "C": "$\\frac{5103}{2186}$",
+   "D": "$\\frac{7}{2}$",
+   "E": "$\\frac{15309}{2186}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $\\frac{P'(x)}{P(x)} = \\sum \\frac{1}{x - r_k}$ for $P(x) = x^n - 1$."
+  ],
+  "solution": "**What we need:** a sum over all 7th roots of unity.\n\n**Key idea:** the roots of unity are the roots of $P(z) = z^{7} - 1$. For any polynomial with roots $r_k$, $\\sum \\frac{1}{x - r_k} = \\frac{P'(x)}{P(x)}$ (take the log of $P(x) = \\prod (x - r_k)$ and differentiate).\n\n**Step 1.** Here $P(x) = x^{7} - 1$ and $P'(x) = 7x^{6}$.\n\n**Step 2.** At $x = 3$: $\\frac{7 \\cdot 3^{6}}{3^{7} - 1} = \\frac{5103}{2186}$.\n\n**Step 3.** Simplified: $\\frac{5103}{2186}$.\n\n**Answer:** $\\frac{5103}{2186}$. **(C)**\n\n**Common mistake:** treating every $\\omega^k$ as $1$, which gives $\\frac{7}{3 - 1}$."
+ },
+ {
+  "id": "mock_l7_cx_reciprocal_sum_3",
+  "family": "l7_cx_reciprocal_sum",
+  "difficulty": 7,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{5} + i\\sin\\frac{2\\pi}{5}$. What is $\\displaystyle\\sum_{k=0}^{4} \\frac{1}{3 - \\omega^k}$?",
+  "choices": {
+   "A": "$\\frac{81}{242}$",
+   "B": "$\\frac{5}{3}$",
+   "C": "$\\frac{405}{242}$",
+   "D": "$\\frac{5}{2}$",
+   "E": "$\\frac{1215}{242}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $\\frac{P'(x)}{P(x)} = \\sum \\frac{1}{x - r_k}$ for $P(x) = x^n - 1$."
+  ],
+  "solution": "**What we need:** a sum over all 5th roots of unity.\n\n**Key idea:** the roots of unity are the roots of $P(z) = z^{5} - 1$. For any polynomial with roots $r_k$, $\\sum \\frac{1}{x - r_k} = \\frac{P'(x)}{P(x)}$ (take the log of $P(x) = \\prod (x - r_k)$ and differentiate).\n\n**Step 1.** Here $P(x) = x^{5} - 1$ and $P'(x) = 5x^{4}$.\n\n**Step 2.** At $x = 3$: $\\frac{5 \\cdot 3^{4}}{3^{5} - 1} = \\frac{405}{242}$.\n\n**Step 3.** Simplified: $\\frac{405}{242}$.\n\n**Answer:** $\\frac{405}{242}$. **(C)**\n\n**Common mistake:** treating every $\\omega^k$ as $1$, which gives $\\frac{5}{3 - 1}$."
+ },
+ {
+  "id": "mock_l7_cx_reciprocal_sum_4",
+  "family": "l7_cx_reciprocal_sum",
+  "difficulty": 7,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{6} + i\\sin\\frac{2\\pi}{6}$. What is $\\displaystyle\\sum_{k=0}^{5} \\frac{1}{2 - \\omega^k}$?",
+  "choices": {
+   "A": "$\\frac{32}{63}$",
+   "B": "$3$",
+   "C": "$\\frac{64}{21}$",
+   "D": "$6$",
+   "E": "$\\frac{128}{21}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $\\frac{P'(x)}{P(x)} = \\sum \\frac{1}{x - r_k}$ for $P(x) = x^n - 1$."
+  ],
+  "solution": "**What we need:** a sum over all 6th roots of unity.\n\n**Key idea:** the roots of unity are the roots of $P(z) = z^{6} - 1$. For any polynomial with roots $r_k$, $\\sum \\frac{1}{x - r_k} = \\frac{P'(x)}{P(x)}$ (take the log of $P(x) = \\prod (x - r_k)$ and differentiate).\n\n**Step 1.** Here $P(x) = x^{6} - 1$ and $P'(x) = 6x^{5}$.\n\n**Step 2.** At $x = 2$: $\\frac{6 \\cdot 2^{5}}{2^{6} - 1} = \\frac{192}{63}$.\n\n**Step 3.** Simplified: $\\frac{64}{21}$.\n\n**Answer:** $\\frac{64}{21}$. **(C)**\n\n**Common mistake:** treating every $\\omega^k$ as $1$, which gives $\\frac{6}{2 - 1}$."
+ },
+ {
+  "id": "mock_l7_cx_reciprocal_sum_5",
+  "family": "l7_cx_reciprocal_sum",
+  "difficulty": 7,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{3} + i\\sin\\frac{2\\pi}{3}$. What is $\\displaystyle\\sum_{k=0}^{2} \\frac{1}{3 - \\omega^k}$?",
+  "choices": {
+   "A": "$\\frac{9}{26}$",
+   "B": "$1$",
+   "C": "$\\frac{27}{26}$",
+   "D": "$\\frac{3}{2}$",
+   "E": "$\\frac{81}{26}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $\\frac{P'(x)}{P(x)} = \\sum \\frac{1}{x - r_k}$ for $P(x) = x^n - 1$."
+  ],
+  "solution": "**What we need:** a sum over all 3th roots of unity.\n\n**Key idea:** the roots of unity are the roots of $P(z) = z^{3} - 1$. For any polynomial with roots $r_k$, $\\sum \\frac{1}{x - r_k} = \\frac{P'(x)}{P(x)}$ (take the log of $P(x) = \\prod (x - r_k)$ and differentiate).\n\n**Step 1.** Here $P(x) = x^{3} - 1$ and $P'(x) = 3x^{2}$.\n\n**Step 2.** At $x = 3$: $\\frac{3 \\cdot 3^{2}}{3^{3} - 1} = \\frac{27}{26}$.\n\n**Step 3.** Simplified: $\\frac{27}{26}$.\n\n**Answer:** $\\frac{27}{26}$. **(C)**\n\n**Common mistake:** treating every $\\omega^k$ as $1$, which gives $\\frac{3}{3 - 1}$."
+ },
+ {
+  "id": "mock_l7_cx_reciprocal_sum_6",
+  "family": "l7_cx_reciprocal_sum",
+  "difficulty": 7,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{7} + i\\sin\\frac{2\\pi}{7}$. What is $\\displaystyle\\sum_{k=0}^{6} \\frac{1}{2 - \\omega^k}$?",
+  "choices": {
+   "A": "$\\frac{64}{127}$",
+   "B": "$\\frac{7}{2}$",
+   "C": "$\\frac{448}{127}$",
+   "D": "$7$",
+   "E": "$\\frac{896}{127}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $\\frac{P'(x)}{P(x)} = \\sum \\frac{1}{x - r_k}$ for $P(x) = x^n - 1$."
+  ],
+  "solution": "**What we need:** a sum over all 7th roots of unity.\n\n**Key idea:** the roots of unity are the roots of $P(z) = z^{7} - 1$. For any polynomial with roots $r_k$, $\\sum \\frac{1}{x - r_k} = \\frac{P'(x)}{P(x)}$ (take the log of $P(x) = \\prod (x - r_k)$ and differentiate).\n\n**Step 1.** Here $P(x) = x^{7} - 1$ and $P'(x) = 7x^{6}$.\n\n**Step 2.** At $x = 2$: $\\frac{7 \\cdot 2^{6}}{2^{7} - 1} = \\frac{448}{127}$.\n\n**Step 3.** Simplified: $\\frac{448}{127}$.\n\n**Answer:** $\\frac{448}{127}$. **(C)**\n\n**Common mistake:** treating every $\\omega^k$ as $1$, which gives $\\frac{7}{2 - 1}$."
+ },
+ {
+  "id": "mock_l7_poly_lagrange_trick_1",
+  "family": "l7_poly_lagrange_trick",
+  "difficulty": 7,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree $5$ satisfies $P(k) = \\dfrac{k}{k + 1}$ for $k = 0, 1, 2, \\ldots, 5$. What is $P(6)$?",
+  "choices": {
+   "A": "$\\frac{4}{7}$",
+   "B": "$\\frac{5}{7}$",
+   "C": "$\\frac{6}{7}$",
+   "D": "$1$",
+   "E": "$\\frac{8}{7}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Look at $Q(x) = (x + 1)P(x) - x$. Where is it zero?"
+  ],
+  "solution": "**What we need:** one more value of a polynomial pinned down by $6$ values.\n\n**Key idea:** clear the fraction. $Q(x) = (x + 1)P(x) - x$ is a polynomial that is zero at every given point, so it is easy to write down.\n\n**Step 1.** $Q(k) = (k + 1)\\frac{k}{k + 1} - k = 0$ for $k = 0, \\ldots, 5$, and $Q$ has degree $6$. So $Q(x) = a\\,x(x - 1)(x - 2)\\cdots(x - 5)$.\n\n**Step 2.** Find $a$ with $x = -1$: $Q(-1) = 0 \\cdot P(-1) + 1 = 1$, and the product is $(-1)(-2)\\cdots(-6) = (-1)^{6}\\,6!$. So $a = \\frac{(-1)^{6}}{6!}$.\n\n**Step 3.** At $x = 6$: $Q(6) = a \\cdot 6! = (-1)^{6} = +1$.\n\n**Step 4.** $(7)P(6) - 6 = +1$, so $P(6) = \\frac{6 + 1}{7} = 1$.\n\n**Answer:** $1$. **(D)**\n\n**Common mistake:** assuming the pattern continues and answering $\\frac{6}{7}$. A polynomial can't equal $\\frac{x}{x + 1}$ everywhere, so it must break off."
+ },
+ {
+  "id": "mock_l7_poly_lagrange_trick_2",
+  "family": "l7_poly_lagrange_trick",
+  "difficulty": 7,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree $4$ satisfies $P(k) = \\dfrac{k}{k + 1}$ for $k = 0, 1, 2, \\ldots, 4$. What is $P(5)$?",
+  "choices": {
+   "A": "$\\frac{1}{2}$",
+   "B": "$\\frac{2}{3}$",
+   "C": "$\\frac{5}{6}$",
+   "D": "$1$",
+   "E": "$\\frac{7}{6}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Look at $Q(x) = (x + 1)P(x) - x$. Where is it zero?"
+  ],
+  "solution": "**What we need:** one more value of a polynomial pinned down by $5$ values.\n\n**Key idea:** clear the fraction. $Q(x) = (x + 1)P(x) - x$ is a polynomial that is zero at every given point, so it is easy to write down.\n\n**Step 1.** $Q(k) = (k + 1)\\frac{k}{k + 1} - k = 0$ for $k = 0, \\ldots, 4$, and $Q$ has degree $5$. So $Q(x) = a\\,x(x - 1)(x - 2)\\cdots(x - 4)$.\n\n**Step 2.** Find $a$ with $x = -1$: $Q(-1) = 0 \\cdot P(-1) + 1 = 1$, and the product is $(-1)(-2)\\cdots(-5) = (-1)^{5}\\,5!$. So $a = \\frac{(-1)^{5}}{5!}$.\n\n**Step 3.** At $x = 5$: $Q(5) = a \\cdot 5! = (-1)^{5} = -1$.\n\n**Step 4.** $(6)P(5) - 5 = -1$, so $P(5) = \\frac{5 - 1}{6} = \\frac{2}{3}$.\n\n**Answer:** $\\frac{2}{3}$. **(B)**\n\n**Common mistake:** assuming the pattern continues and answering $\\frac{5}{6}$. A polynomial can't equal $\\frac{x}{x + 1}$ everywhere, so it must break off."
+ },
+ {
+  "id": "mock_l7_poly_lagrange_trick_3",
+  "family": "l7_poly_lagrange_trick",
+  "difficulty": 7,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree $8$ satisfies $P(k) = \\dfrac{k}{k + 1}$ for $k = 0, 1, 2, \\ldots, 8$. What is $P(9)$?",
+  "choices": {
+   "A": "$\\frac{7}{10}$",
+   "B": "$\\frac{4}{5}$",
+   "C": "$\\frac{9}{10}$",
+   "D": "$1$",
+   "E": "$\\frac{11}{10}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Look at $Q(x) = (x + 1)P(x) - x$. Where is it zero?"
+  ],
+  "solution": "**What we need:** one more value of a polynomial pinned down by $9$ values.\n\n**Key idea:** clear the fraction. $Q(x) = (x + 1)P(x) - x$ is a polynomial that is zero at every given point, so it is easy to write down.\n\n**Step 1.** $Q(k) = (k + 1)\\frac{k}{k + 1} - k = 0$ for $k = 0, \\ldots, 8$, and $Q$ has degree $9$. So $Q(x) = a\\,x(x - 1)(x - 2)\\cdots(x - 8)$.\n\n**Step 2.** Find $a$ with $x = -1$: $Q(-1) = 0 \\cdot P(-1) + 1 = 1$, and the product is $(-1)(-2)\\cdots(-9) = (-1)^{9}\\,9!$. So $a = \\frac{(-1)^{9}}{9!}$.\n\n**Step 3.** At $x = 9$: $Q(9) = a \\cdot 9! = (-1)^{9} = -1$.\n\n**Step 4.** $(10)P(9) - 9 = -1$, so $P(9) = \\frac{9 - 1}{10} = \\frac{4}{5}$.\n\n**Answer:** $\\frac{4}{5}$. **(B)**\n\n**Common mistake:** assuming the pattern continues and answering $\\frac{9}{10}$. A polynomial can't equal $\\frac{x}{x + 1}$ everywhere, so it must break off."
+ },
+ {
+  "id": "mock_l7_poly_lagrange_trick_4",
+  "family": "l7_poly_lagrange_trick",
+  "difficulty": 7,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree $7$ satisfies $P(k) = \\dfrac{k}{k + 1}$ for $k = 0, 1, 2, \\ldots, 7$. What is $P(8)$?",
+  "choices": {
+   "A": "$\\frac{2}{3}$",
+   "B": "$\\frac{7}{9}$",
+   "C": "$\\frac{8}{9}$",
+   "D": "$1$",
+   "E": "$\\frac{10}{9}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Look at $Q(x) = (x + 1)P(x) - x$. Where is it zero?"
+  ],
+  "solution": "**What we need:** one more value of a polynomial pinned down by $8$ values.\n\n**Key idea:** clear the fraction. $Q(x) = (x + 1)P(x) - x$ is a polynomial that is zero at every given point, so it is easy to write down.\n\n**Step 1.** $Q(k) = (k + 1)\\frac{k}{k + 1} - k = 0$ for $k = 0, \\ldots, 7$, and $Q$ has degree $8$. So $Q(x) = a\\,x(x - 1)(x - 2)\\cdots(x - 7)$.\n\n**Step 2.** Find $a$ with $x = -1$: $Q(-1) = 0 \\cdot P(-1) + 1 = 1$, and the product is $(-1)(-2)\\cdots(-8) = (-1)^{8}\\,8!$. So $a = \\frac{(-1)^{8}}{8!}$.\n\n**Step 3.** At $x = 8$: $Q(8) = a \\cdot 8! = (-1)^{8} = +1$.\n\n**Step 4.** $(9)P(8) - 8 = +1$, so $P(8) = \\frac{8 + 1}{9} = 1$.\n\n**Answer:** $1$. **(D)**\n\n**Common mistake:** assuming the pattern continues and answering $\\frac{8}{9}$. A polynomial can't equal $\\frac{x}{x + 1}$ everywhere, so it must break off."
+ },
+ {
+  "id": "mock_l7_poly_lagrange_trick_5",
+  "family": "l7_poly_lagrange_trick",
+  "difficulty": 7,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree $6$ satisfies $P(k) = \\dfrac{k}{k + 1}$ for $k = 0, 1, 2, \\ldots, 6$. What is $P(7)$?",
+  "choices": {
+   "A": "$\\frac{5}{8}$",
+   "B": "$\\frac{3}{4}$",
+   "C": "$\\frac{7}{8}$",
+   "D": "$1$",
+   "E": "$\\frac{9}{8}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Look at $Q(x) = (x + 1)P(x) - x$. Where is it zero?"
+  ],
+  "solution": "**What we need:** one more value of a polynomial pinned down by $7$ values.\n\n**Key idea:** clear the fraction. $Q(x) = (x + 1)P(x) - x$ is a polynomial that is zero at every given point, so it is easy to write down.\n\n**Step 1.** $Q(k) = (k + 1)\\frac{k}{k + 1} - k = 0$ for $k = 0, \\ldots, 6$, and $Q$ has degree $7$. So $Q(x) = a\\,x(x - 1)(x - 2)\\cdots(x - 6)$.\n\n**Step 2.** Find $a$ with $x = -1$: $Q(-1) = 0 \\cdot P(-1) + 1 = 1$, and the product is $(-1)(-2)\\cdots(-7) = (-1)^{7}\\,7!$. So $a = \\frac{(-1)^{7}}{7!}$.\n\n**Step 3.** At $x = 7$: $Q(7) = a \\cdot 7! = (-1)^{7} = -1$.\n\n**Step 4.** $(8)P(7) - 7 = -1$, so $P(7) = \\frac{7 - 1}{8} = \\frac{3}{4}$.\n\n**Answer:** $\\frac{3}{4}$. **(B)**\n\n**Common mistake:** assuming the pattern continues and answering $\\frac{7}{8}$. A polynomial can't equal $\\frac{x}{x + 1}$ everywhere, so it must break off."
+ },
+ {
+  "id": "mock_l7_poly_lagrange_trick_6",
+  "family": "l7_poly_lagrange_trick",
+  "difficulty": 7,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree $3$ satisfies $P(k) = \\dfrac{k}{k + 1}$ for $k = 0, 1, 2, \\ldots, 3$. What is $P(4)$?",
+  "choices": {
+   "A": "$\\frac{2}{5}$",
+   "B": "$\\frac{3}{5}$",
+   "C": "$\\frac{4}{5}$",
+   "D": "$1$",
+   "E": "$\\frac{6}{5}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Look at $Q(x) = (x + 1)P(x) - x$. Where is it zero?"
+  ],
+  "solution": "**What we need:** one more value of a polynomial pinned down by $4$ values.\n\n**Key idea:** clear the fraction. $Q(x) = (x + 1)P(x) - x$ is a polynomial that is zero at every given point, so it is easy to write down.\n\n**Step 1.** $Q(k) = (k + 1)\\frac{k}{k + 1} - k = 0$ for $k = 0, \\ldots, 3$, and $Q$ has degree $4$. So $Q(x) = a\\,x(x - 1)(x - 2)\\cdots(x - 3)$.\n\n**Step 2.** Find $a$ with $x = -1$: $Q(-1) = 0 \\cdot P(-1) + 1 = 1$, and the product is $(-1)(-2)\\cdots(-4) = (-1)^{4}\\,4!$. So $a = \\frac{(-1)^{4}}{4!}$.\n\n**Step 3.** At $x = 4$: $Q(4) = a \\cdot 4! = (-1)^{4} = +1$.\n\n**Step 4.** $(5)P(4) - 4 = +1$, so $P(4) = \\frac{4 + 1}{5} = 1$.\n\n**Answer:** $1$. **(D)**\n\n**Common mistake:** assuming the pattern continues and answering $\\frac{4}{5}$. A polynomial can't equal $\\frac{x}{x + 1}$ everywhere, so it must break off."
+ },
+ {
+  "id": "mock_l7_ser_weighted_1",
+  "family": "l7_ser_weighted",
+  "difficulty": 7,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{n^2}{2^n}$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "D",
+  "hints": [
+   "Start with $\\sum x^n = \\frac{1}{1 - x}$ and apply \"differentiate, then multiply by $x$\" twice."
+  ],
+  "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** build the sum from the geometric series by repeatedly differentiating and multiplying by $x$.\n\n**Step 1.** Start from $\\sum_{n \\ge 0} x^n = \\frac{1}{1 - x}$. Differentiating and multiplying by $x$ gives $\\sum n x^n = \\frac{x}{(1 - x)^2}$.\n\n**Step 2.** Do it again: $\\sum n^2 x^n = x \\cdot \\frac{d}{dx}\\frac{x}{(1 - x)^2} = \\frac{x(1 + x)}{(1 - x)^3}$.\n\n**Step 3.** Put $x = \\frac{1}{2}$: $\\frac{\\frac{1}{2} \\cdot \\frac{3}{2}}{\\left(\\frac{1}{2}\\right)^3} = \\frac{6}{1}$.\n\n**Answer:** $6$. **(D)**\n\n**Common mistake:** adding many terms and guessing; the sum has an exact value."
+ },
+ {
+  "id": "mock_l7_ser_weighted_2",
+  "family": "l7_ser_weighted",
+  "difficulty": 7,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "The Fibonacci numbers are $F_1 = F_2 = 1$ and $F_{n+2} = F_{n+1} + F_n$. What is $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{F_n}{3^n}$?",
+  "choices": {
+   "A": "$\\frac{1}{5}$",
+   "B": "$\\frac{3}{7}$",
+   "C": "$\\frac{3}{5}$",
+   "D": "$\\frac{3}{4}$",
+   "E": "$\\frac{9}{5}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $F_n = F_{n-1} + F_{n-2}$ inside the sum and solve for the sum."
+  ],
+  "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** use the Fibonacci rule inside the sum, so the sum reappears in terms of itself.\n\n**Step 1.** Call the sum $S$. Write $S = \\frac{F_1}{3} + \\frac{F_2}{3^2} + \\sum_{n \\ge 3} \\frac{F_{n-1} + F_{n-2}}{3^n}$.\n\n**Step 2.** The last part splits into $\\frac{1}{3}\\left(S - \\frac{1}{3}\\right) + \\frac{1}{3^2}S$.\n\n**Step 3.** So $S = \\frac{1}{3} + \\frac{1}{9} + \\frac{S}{3} - \\frac{1}{9} + \\frac{S}{9}$, which gives $S\\left(1 - \\frac{1}{3} - \\frac{1}{9}\\right) = \\frac{1}{3}$.\n\n**Step 4.** $S = \\frac{3}{9 - 3 - 1} = \\frac{3}{5}$.\n\n**Answer:** $\\frac{3}{5}$. **(C)**\n\n**Common mistake:** adding many terms and guessing; the sum has an exact value."
+ },
+ {
+  "id": "mock_l7_ser_weighted_3",
+  "family": "l7_ser_weighted",
+  "difficulty": 7,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "The Fibonacci numbers are $F_1 = F_2 = 1$ and $F_{n+2} = F_{n+1} + F_n$. What is $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{F_n}{4^n}$?",
+  "choices": {
+   "A": "$\\frac{1}{11}$",
+   "B": "$\\frac{4}{13}$",
+   "C": "$\\frac{4}{11}$",
+   "D": "$\\frac{4}{9}$",
+   "E": "$\\frac{16}{11}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $F_n = F_{n-1} + F_{n-2}$ inside the sum and solve for the sum."
+  ],
+  "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** use the Fibonacci rule inside the sum, so the sum reappears in terms of itself.\n\n**Step 1.** Call the sum $S$. Write $S = \\frac{F_1}{4} + \\frac{F_2}{4^2} + \\sum_{n \\ge 3} \\frac{F_{n-1} + F_{n-2}}{4^n}$.\n\n**Step 2.** The last part splits into $\\frac{1}{4}\\left(S - \\frac{1}{4}\\right) + \\frac{1}{4^2}S$.\n\n**Step 3.** So $S = \\frac{1}{4} + \\frac{1}{16} + \\frac{S}{4} - \\frac{1}{16} + \\frac{S}{16}$, which gives $S\\left(1 - \\frac{1}{4} - \\frac{1}{16}\\right) = \\frac{1}{4}$.\n\n**Step 4.** $S = \\frac{4}{16 - 4 - 1} = \\frac{4}{11}$.\n\n**Answer:** $\\frac{4}{11}$. **(C)**\n\n**Common mistake:** adding many terms and guessing; the sum has an exact value."
+ },
+ {
+  "id": "mock_l7_ser_weighted_4",
+  "family": "l7_ser_weighted",
+  "difficulty": 7,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "The Fibonacci numbers are $F_1 = F_2 = 1$ and $F_{n+2} = F_{n+1} + F_n$. What is $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{F_n}{5^n}$?",
+  "choices": {
+   "A": "$\\frac{1}{19}$",
+   "B": "$\\frac{5}{21}$",
+   "C": "$\\frac{5}{19}$",
+   "D": "$\\frac{5}{16}$",
+   "E": "$\\frac{25}{19}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $F_n = F_{n-1} + F_{n-2}$ inside the sum and solve for the sum."
+  ],
+  "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** use the Fibonacci rule inside the sum, so the sum reappears in terms of itself.\n\n**Step 1.** Call the sum $S$. Write $S = \\frac{F_1}{5} + \\frac{F_2}{5^2} + \\sum_{n \\ge 3} \\frac{F_{n-1} + F_{n-2}}{5^n}$.\n\n**Step 2.** The last part splits into $\\frac{1}{5}\\left(S - \\frac{1}{5}\\right) + \\frac{1}{5^2}S$.\n\n**Step 3.** So $S = \\frac{1}{5} + \\frac{1}{25} + \\frac{S}{5} - \\frac{1}{25} + \\frac{S}{25}$, which gives $S\\left(1 - \\frac{1}{5} - \\frac{1}{25}\\right) = \\frac{1}{5}$.\n\n**Step 4.** $S = \\frac{5}{25 - 5 - 1} = \\frac{5}{19}$.\n\n**Answer:** $\\frac{5}{19}$. **(C)**\n\n**Common mistake:** adding many terms and guessing; the sum has an exact value."
+ },
+ {
+  "id": "mock_l7_ser_weighted_5",
+  "family": "l7_ser_weighted",
+  "difficulty": 7,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{n^2}{3^n}$?",
+  "choices": {
+   "A": "$\\frac{3}{4}$",
+   "B": "$\\frac{9}{8}$",
+   "C": "$\\frac{3}{2}$",
+   "D": "$\\frac{5}{2}$",
+   "E": "$3$"
+  },
+  "answer": "C",
+  "hints": [
+   "Start with $\\sum x^n = \\frac{1}{1 - x}$ and apply \"differentiate, then multiply by $x$\" twice."
+  ],
+  "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** build the sum from the geometric series by repeatedly differentiating and multiplying by $x$.\n\n**Step 1.** Start from $\\sum_{n \\ge 0} x^n = \\frac{1}{1 - x}$. Differentiating and multiplying by $x$ gives $\\sum n x^n = \\frac{x}{(1 - x)^2}$.\n\n**Step 2.** Do it again: $\\sum n^2 x^n = x \\cdot \\frac{d}{dx}\\frac{x}{(1 - x)^2} = \\frac{x(1 + x)}{(1 - x)^3}$.\n\n**Step 3.** Put $x = \\frac{1}{3}$: $\\frac{\\frac{1}{3} \\cdot \\frac{4}{3}}{\\left(\\frac{2}{3}\\right)^3} = \\frac{12}{8}$.\n\n**Answer:** $\\frac{3}{2}$. **(C)**\n\n**Common mistake:** adding many terms and guessing; the sum has an exact value."
+ },
+ {
+  "id": "mock_l7_ser_weighted_6",
+  "family": "l7_ser_weighted",
+  "difficulty": 7,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "The Fibonacci numbers are $F_1 = F_2 = 1$ and $F_{n+2} = F_{n+1} + F_n$. What is $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{F_n}{2^n}$?",
+  "choices": {
+   "A": "$\\frac{2}{3}$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$\\frac{5}{2}$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $F_n = F_{n-1} + F_{n-2}$ inside the sum and solve for the sum."
+  ],
+  "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** use the Fibonacci rule inside the sum, so the sum reappears in terms of itself.\n\n**Step 1.** Call the sum $S$. Write $S = \\frac{F_1}{2} + \\frac{F_2}{2^2} + \\sum_{n \\ge 3} \\frac{F_{n-1} + F_{n-2}}{2^n}$.\n\n**Step 2.** The last part splits into $\\frac{1}{2}\\left(S - \\frac{1}{2}\\right) + \\frac{1}{2^2}S$.\n\n**Step 3.** So $S = \\frac{1}{2} + \\frac{1}{4} + \\frac{S}{2} - \\frac{1}{4} + \\frac{S}{4}$, which gives $S\\left(1 - \\frac{1}{2} - \\frac{1}{4}\\right) = \\frac{1}{2}$.\n\n**Step 4.** $S = \\frac{2}{4 - 2 - 1} = 2$.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** adding many terms and guessing; the sum has an exact value."
  }
 ]

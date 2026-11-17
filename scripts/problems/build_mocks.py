@@ -15,6 +15,7 @@ OUT = os.path.join(ROOT, "content", "mocks")
 import mock_amc12  # noqa: E402,F401
 import mock_core_a  # noqa: E402,F401
 import mock_core_b  # noqa: E402,F401
+import mock_hard  # noqa: E402,F401
 from mock_common import FAMILIES, build_family  # noqa: E402
 
 

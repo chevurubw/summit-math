@@ -36,6 +36,7 @@ export function MockHome() {
       </div>
 
       <h2 className="mt-12 text-2xl font-bold">Your past exams</h2>
+      {history.length > 0 && <p className="mt-1 text-sm text-muted">Open any exam to see the questions you missed and what to study for each one.</p>}
       {history.length === 0 ? (
         <p className="mt-4 rounded-lg border border-dashed border-line px-6 py-8 text-center text-muted">
           No mock exams yet. Your scores will show up here after your first one.
@@ -51,11 +52,14 @@ export function MockHome() {
                 <th className="px-5 py-3 font-semibold">Correct</th>
                 <th className="px-5 py-3 font-semibold">Wrong</th>
                 <th className="px-5 py-3 font-semibold">Blank</th>
+                <th className="px-5 py-3 font-semibold">
+                  <span className="sr-only">Review</span>
+                </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-line">
               {history.map((m) => (
-                <tr key={m.id}>
+                <tr key={m.id} className="transition-colors hover:bg-surface-2/60">
                   <td className="px-5 py-3 text-body">{new Date(m.at).toLocaleDateString()}</td>
                   <td className="px-5 py-3 text-body">{TRACK_LABELS[m.track]}</td>
                   <td className="px-5 py-3 font-semibold text-heading tabular-nums">
@@ -64,6 +68,14 @@ export function MockHome() {
                   <td className="px-5 py-3 tabular-nums">{m.correct}</td>
                   <td className="px-5 py-3 tabular-nums">{m.wrong}</td>
                   <td className="px-5 py-3 tabular-nums">{m.blank}</td>
+                  <td className="px-5 py-3 text-right">
+                    <Link
+                      href={`/mock/review?id=${encodeURIComponent(m.id)}`}
+                      className="inline-flex items-center rounded-md border border-line bg-surface-2 px-3 py-1.5 text-sm font-semibold text-body transition-colors hover:border-accent hover:text-heading"
+                    >
+                      Review
+                    </Link>
+                  </td>
                 </tr>
               ))}
             </tbody>

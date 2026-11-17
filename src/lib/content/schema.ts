@@ -49,11 +49,11 @@ export const problemSchema = z.object({
 });
 
 // Mock exam problems live in content/mocks. Each one belongs to a family (one problem idea);
-// difficulty 1 to 6 places it in a section of the exam (see src/lib/mockSelect.ts).
+// difficulty 1 to 7 places it in a section of the exam (see src/lib/mockSelect.ts).
 export const mockProblemSchema = z.object({
   id: z.string().min(1),
   family: z.string().min(1),
-  difficulty: z.number().int().min(1).max(6),
+  difficulty: z.number().int().min(1).max(7),
   topic: z.string().min(1),
   skillId: z.string().min(1),
   track: trackScope,

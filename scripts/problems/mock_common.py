@@ -10,8 +10,12 @@ Difficulty levels follow the AoPS competition ratings:
   2  AMC 10 6 to 10,  AMC 12 1 to 5
   3  AMC 10 11 to 15, AMC 12 6 to 10
   4  AMC 10 16 to 20, AMC 12 11 to 15
-  5  AMC 10 21 to 25, AMC 12 16 to 20
-  6  AMC 12 21 to 25 only
+  5  AMC 10 16 to 20, AMC 12 11 to 15   (solid single idea problems)
+  6  AMC 10 19 to 22, AMC 12 16 to 20
+  7  AMC 10 22 to 25, AMC 12 21 to 25   (two or three ideas chained; see mock_hard.py)
+
+Levels 1 to 4 describe the problems' own difficulty; the exact positions they land
+in are set by mockSections in src/lib/mockSelect.ts.
 """
 import hashlib
 import math

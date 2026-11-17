@@ -10,8 +10,9 @@ import { scoreExam, type ExamAnswer } from "@/lib/scoring";
 import type { MockExamRecord } from "@/lib/store/types";
 import { useApp } from "./AppProvider";
 import { Markdown } from "./Markdown";
+import { MockReview } from "./MockReview";
 import { CountUp } from "./motion";
-import { CHOICE_KEYS, ChoiceButton, SolutionPanel } from "./problem";
+import { CHOICE_KEYS, ChoiceButton } from "./problem";
 import { ProgressBar } from "./progress";
 import { Timer } from "./Timer";
 import { Button, ButtonLink, PlaceholderNote } from "./ui";
@@ -191,45 +192,7 @@ export function MockExam({
           ))}
         </div>
 
-        <h2 className="mt-10 text-xl font-bold">Review every problem</h2>
-        <div className="mt-4 space-y-3">
-          {problems.map((p, n) => {
-            const a = record.answers[p.id];
-            const status = a === null ? "Blank" : a === p.answer ? "Correct" : "Wrong";
-            return (
-              <details key={p.id} className="group rounded-lg border border-line bg-surface">
-                <summary className="flex cursor-pointer list-none items-center gap-3 px-5 py-4">
-                  <span className="font-display font-bold text-heading">{n + 1}.</span>
-                  <span className="flex-1 truncate text-body">
-                    <Markdown inline>{p.prompt.split("\n")[0]}</Markdown>
-                  </span>
-                  <span
-                    className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${
-                      status === "Correct" ? "bg-correct/15 text-correct" : status === "Wrong" ? "bg-wrong/15 text-wrong" : "bg-surface-2 text-muted"
-                    }`}
-                  >
-                    {status}
-                  </span>
-                </summary>
-                <div className="space-y-4 border-t border-line px-5 py-5">
-                  <Markdown className="text-heading">{p.prompt}</Markdown>
-                  <div className="grid gap-2">
-                    {CHOICE_KEYS.map((k) => (
-                      <ChoiceButton
-                        key={k}
-                        letter={k}
-                        content={p.choices[k]}
-                        disabled
-                        state={k === p.answer ? (a === k ? "correct" : "answer") : a === k ? "wrong" : "idle"}
-                      />
-                    ))}
-                  </div>
-                  <SolutionPanel solution={p.solution} />
-                </div>
-              </details>
-            );
-          })}
-        </div>
+        <MockReview problems={problems} answers={record.answers} />
 
         <div className="mt-8 flex flex-wrap gap-3">
           <Button onClick={start}>Take another {label} mock</Button>
