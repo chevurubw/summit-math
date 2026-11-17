@@ -1,0 +1,147 @@
+---
+title: Area
+---
+
+**Area** measures how much flat space a shape covers, in square units. You need only a few formulas, but the AMC rewards knowing **why** they work, because then you can split, slide and subtract shapes to find areas no formula covers directly.
+
+By the end of this lesson you will be able to:
+
+- use the area formulas for triangles and the standard quadrilaterals,
+- choose any side of a triangle as the base,
+- compare areas of triangles that share a height,
+- find the area of strange shapes by adding and subtracting pieces.
+
+## The formulas
+
+| Shape | Area | Why |
+| --- | --- | --- |
+| rectangle | $bh$ | rows times columns of unit squares |
+| parallelogram | $bh$ | slice off a triangle and slide it over to make a rectangle |
+| triangle | $\tfrac{1}{2}bh$ | half of a parallelogram |
+| trapezoid | $\tfrac{1}{2}(b_1 + b_2)h$ | average base times height |
+| rhombus, kite | $\tfrac{1}{2}d_1 d_2$ | half the rectangle around the diagonals |
+| circle | $\pi r^2$ | see the circles lesson |
+
+The **height** is always measured **perpendicular** to the base, not along a slanted side.
+
+## Sliding the top doesn't change the area
+
+Keep the base fixed and slide the top vertex along a line parallel to the base. The height never changes, so the area never changes, even though the triangle looks completely different.
+
+<Figure
+  bounds={[-4, 12, -0.8, 5.2]}
+  axes={false}
+  grid={false}
+  height={290}
+  params={[{ name: "t", min: -3.5, max: 11.5, step: 0.1, value: 2, label: "slide the top", play: true, speed: 7 }]}
+  elements={[
+    { type: "line", a: [0, 4], b: [1, 4], color: "muted", dashed: true, width: 1.2 },
+    { type: "polygon", pts: [[0, 0], [6, 0], ["t", 4]], fill: "accent", color: "accent", width: 2.5 },
+    { type: "segment", a: ["t", 4], b: ["t", 0], color: "amber", dashed: true, width: 1.5 },
+    { type: "line", a: [0, 0], b: [1, 0], color: "muted", width: 1, opacity: 0.4 },
+    { type: "point", x: "t", y: 4, color: "accent" },
+    { type: "text", x: 3, y: -0.5, text: "base 6", size: 14 },
+    { type: "text", x: "t + 0.3", y: 2, text: "height 4", size: 14, color: "amber", anchor: "start" },
+  ]}
+  readouts={["\\text{area} = \\tfrac{1}{2} \\cdot 6 \\cdot 4 = 12 \\text{ always}"]}
+  caption="When the top vertex moves outside the base, the height lands on the extended base line. The area is still $\tfrac{1}{2}bh$."
+/>
+
+<KeyIdea title="Triangles sharing a height">
+Triangles with the same height have areas in the same ratio as their bases. If point $D$ splits side $BC$ into $BD = 2$ and $DC = 5$, then $\triangle ABD$ and $\triangle ADC$ have areas in the ratio $2 : 5$, because they share the height from $A$.
+</KeyIdea>
+
+<Check choices={["$8$", "$10$", "$12$", "$15$", "$20$"]} answer={2} explain="Triangles $ABD$ and $ADC$ share the height from $A$, so their areas are in ratio $BD : DC = 3 : 5$. The total area 32 splits into 8 equal parts of 4, so $\triangle ABD$ has area $3 \cdot 4 = 12$.">
+Point $D$ lies on side $BC$ of triangle $ABC$ with $BD : DC = 3 : 5$. The area of $\triangle ABC$ is 32. What is the area of $\triangle ABD$?
+</Check>
+
+## Any side can be the base
+
+A triangle has three bases and three heights, and $\tfrac{1}{2}bh$ gives the same area for each pair. That gives a powerful trick: **compute the area one way, then use it to find a height you couldn't measure**.
+
+<Steps problem="A triangle has sides 13, 14 and 15. Its area is 84. How long is the altitude to the side of length 14?">
+<Step>
+Use the side 14 as the base: $\tfrac{1}{2} \cdot 14 \cdot h = 84$.
+</Step>
+<Step>
+$h = \dfrac{168}{14} = 12$.
+</Step>
+</Steps>
+
+## Composite shapes: add or subtract
+
+For odd shapes, either **cut them into pieces** you know, or **draw a box around them and subtract** the extra corners.
+
+<Steps problem="Find the area of the triangle with vertices $(1, 1)$, $(7, 3)$ and $(3, 6)$.">
+<Step title="Box it in">
+The smallest rectangle around it goes from $x = 1$ to $7$ and $y = 1$ to $6$: area $6 \times 5 = 30$.
+</Step>
+<Step title="Subtract the three right triangles in the corners">
+Bottom right: legs $6$ and $2$, area $6$. Top right: legs $4$ and $3$, area $6$. Left: legs $2$ and $5$, area $5$.
+</Step>
+<Step title="Subtract">
+$30 - 6 - 6 - 5 = 13$.
+</Step>
+</Steps>
+
+<Figure
+  bounds={[0, 8, 0, 7]}
+  ticks={1}
+  height={330}
+  elements={[
+    { type: "polygon", pts: [[1, 1], [7, 1], [7, 6], [1, 6]], color: "muted", dashed: true, width: 1.5 },
+    { type: "polygon", pts: [[1, 1], [7, 1], [7, 3]], fill: "wrong", color: "wrong", width: 1 },
+    { type: "polygon", pts: [[7, 3], [7, 6], [3, 6]], fill: "wrong", color: "wrong", width: 1 },
+    { type: "polygon", pts: [[1, 1], [3, 6], [1, 6]], fill: "wrong", color: "wrong", width: 1 },
+    { type: "polygon", pts: [[1, 1], [7, 3], [3, 6]], fill: "accent", color: "accent", width: 3 },
+    { type: "text", x: 3.7, y: 3.4, text: "13" },
+  ]}
+  caption="Rectangle minus the three red corner triangles leaves the purple triangle."
+/>
+
+<Formula title="The Shoelace Formula">
+For a polygon with vertices $(x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n)$ listed in order around the shape,
+
+$$
+\text{Area} = \frac{1}{2}\left| x_1 y_2 - x_2 y_1 + x_2 y_3 - x_3 y_2 + \cdots + x_n y_1 - x_1 y_n \right|.
+$$
+
+For the triangle above: $\tfrac{1}{2}|1 \cdot 3 - 7 \cdot 1 + 7 \cdot 6 - 3 \cdot 3 + 3 \cdot 1 - 1 \cdot 6| = \tfrac{1}{2}|26| = 13$ ✓.
+</Formula>
+
+## Two special areas to remember
+
+- **Equilateral triangle** with side $s$: $\dfrac{\sqrt{3}}{4}s^2$.
+- **Regular hexagon** with side $s$: six equilateral triangles, $\dfrac{3\sqrt{3}}{2}s^2$.
+
+<Check choices={["$9\\sqrt{3}$", "$18$", "$18\\sqrt{3}$", "$24\\sqrt{3}$", "$54\\sqrt{3}$"]} answer={4} explain="A regular hexagon is six equilateral triangles of side 6, each with area $\tfrac{\sqrt{3}}{4} \cdot 36 = 9\sqrt{3}$. Six of them make $54\sqrt{3}$.">
+What is the area of a regular hexagon with side length 6?
+</Check>
+
+<Check choices={["$20$", "$24$", "$28$", "$30$", "$36$"]} answer={3} explain="Area $= \tfrac{1}{2}(b_1 + b_2)h = \tfrac{1}{2}(4 + 8)(5) = 30$.">
+A trapezoid has parallel sides 4 and 8 and height 5. What is its area?
+</Check>
+
+<Tip>
+If two triangles in a figure share a vertex and their bases lie on the same line, their areas compare like their bases. AMC area problems often reduce to just this ratio, with no actual lengths needed.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Rhombus with diagonals 6 and 10", back: "$\\tfrac{1}{2} \\cdot 6 \\cdot 10 = 30$" },
+  { front: "Area of an equilateral triangle with side 4", back: "$4\\sqrt{3}$" },
+  { front: "Right triangle legs 7 and 24: area?", back: "$84$" },
+  { front: "Parallelogram base 9, slanted side 5, height 4", back: "$9 \\cdot 4 = 36$ (ignore the slanted side)." },
+]} />
+
+<Recap>
+- Triangle $\tfrac{1}{2}bh$, parallelogram $bh$, trapezoid $\tfrac{1}{2}(b_1 + b_2)h$, kite or rhombus $\tfrac{1}{2}d_1 d_2$.
+- Height is perpendicular to the base. Sliding a vertex parallel to the base keeps the area.
+- Triangles with the same height have areas proportional to their bases.
+- Use one area to find an unknown height.
+- For odd shapes: split, or box and subtract. On a grid, Shoelace works for any polygon.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Area" />, <AoPS q="Shoelace Theorem" /> and <AoPS q="Trapezoid" /> on the AoPS Wiki.
+- Area problems are everywhere in <Archive test="10" />.
+</GoFurther>

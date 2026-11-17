@@ -1,0 +1,120 @@
+---
+title: Start here
+---
+
+New to the AMC? This page explains what the contest is, how it's scored, how to use this site, and how to think on test day. Read it once before your first lesson.
+
+## What the AMC is
+
+The **American Mathematics Competitions** are run by the Mathematical Association of America (the MAA). Two of them are the focus of this site:
+
+| | AMC 10 | AMC 12 |
+|---|---|---|
+| Who can take it | Grade 10 and below | Grade 12 and below |
+| Questions | 25, multiple choice (A to E) | 25, multiple choice (A to E) |
+| Time | 75 minutes | 75 minutes |
+| Calculators | Not allowed | Not allowed |
+| Topics | Algebra, geometry, number theory, counting and probability | All of those, plus trigonometry, logarithms, complex numbers and more |
+
+Each one is offered twice a year, as an **A** and a **B** version on different dates. In 2026 the A contests were on November 5 and the B contests on November 13. Check the <MAA /> for upcoming dates and how to register through a school or testing site.
+
+High scorers are invited to the **AIME**, the next round, which leads toward the USA Mathematical Olympiad.
+
+<KeyIdea>
+The AMC isn't a harder version of school math. It tests **problem solving**: the facts are mostly ones you already know, but the questions combine them in unfamiliar ways. That's a skill you can learn, and that's what these lessons teach.
+</KeyIdea>
+
+## How scoring works
+
+- Correct answer: **6 points**
+- Left blank: **1.5 points**
+- Wrong answer: **0 points**
+
+The maximum is $25 \times 6 = 150$.
+
+<Check choices={["$90$", "$93$", "$96$", "$99$", "$102$"]} answer={2} explain="$15 \times 6 + 4 \times 1.5 + 6 \times 0 = 90 + 6 = 96$.">
+A student gets 15 right, leaves 4 blank and gets 6 wrong. What is the score?
+</Check>
+
+### Should you guess?
+
+A blind guess among 5 choices is right $\tfrac15$ of the time, so on average it's worth $\tfrac15 \times 6 = 1.2$ points. That's **less** than the 1.5 for a blank. But if you can rule out some choices, the guess gets better. Slide to see.
+
+<Figure
+  bounds={[-0.6, 3.6, -0.5, 6.5]}
+  ticks={1}
+  height={300}
+  equal={false}
+  params={[{ name: "e", min: 0, max: 3, step: 1, value: 0, label: "choices you can rule out" }]}
+  elements={[
+    { type: "segment", a: [-0.6, 1.5], b: [3.6, 1.5], color: "amber", dashed: true, width: 2 },
+    { type: "segment", a: [0, 0], b: [0, 1.2], color: "muted", width: 14 },
+    { type: "segment", a: [1, 0], b: [1, 1.5], color: "muted", width: 14 },
+    { type: "segment", a: [2, 0], b: [2, 2], color: "muted", width: 14 },
+    { type: "segment", a: [3, 0], b: [3, 3], color: "muted", width: 14 },
+    { type: "segment", a: ["e", 0], b: ["e", "6/(5 - e)"], color: "accent", width: 14 },
+  ]}
+  readouts={["\\text{guess is worth } \\tfrac{6}{[[5 - e]]} = [[6/(5 - e)]] \\text{ points}", "\\color{#fbbf24}\\text{blank} = 1.5"]}
+  caption="Bars are the average value of a guess after ruling out 0, 1, 2 or 3 choices. The dashed line is a blank. Ruling out two or more makes guessing worth it."
+/>
+
+<Tip>
+Rule of thumb: if you can confidently eliminate **two** answer choices, guess. Otherwise, leave it blank and spend the time on a problem you can actually solve.
+</Tip>
+
+## How this site works
+
+The course is split into **units** (like Algebra or Geometry), and each unit into **skills**. For every skill:
+
+1. **Read the lesson.** Play with every graph and slider; they're there to build intuition. Answer each Check question before moving on.
+2. **Practice basics.** A set of fresh problems on that skill. Finishing it makes the skill *Familiar*.
+3. **Try the challenge set.** Harder, contest level problems. A perfect run makes it *Proficient*.
+4. **Pass the unit test** to make every skill in the unit *Mastered*.
+
+Problems are generated so you almost never see the same type twice in a row, even with different numbers.
+
+### A suggested order
+
+1. Algebra (everything else uses it)
+2. Counting and probability
+3. Number theory
+4. Geometry
+5. For the AMC 12: trigonometry, logarithms, sequences and series, polynomials, complex numbers, conics
+
+Units marked AMC 12 only can be skipped if you're taking the AMC 10.
+
+## How to think on test day
+
+The problems get harder as you go. The first 10 are usually quick; the last 5 are where most of the time goes.
+
+Strategies that work on almost every AMC problem:
+
+1. **Read the answer choices first.** They tell you what form the answer takes (a fraction? a square root?) and sometimes how big it is. Often you can estimate and pick the only reasonable choice.
+2. **Try small cases.** If a problem involves 2026 of something, try 1, 2, 3 and look for the pattern.
+3. **Draw a picture.** For any geometry problem, and for many that aren't, sketch it accurately. A good diagram often shows the answer.
+4. **Work backwards from the choices.** For "which value of $x$ works", plug the choices in. Start with C: if it's too big or too small, you know which way to go.
+5. **Don't get stuck.** 75 minutes for 25 problems is 3 minutes each. If you're stuck after a few minutes, mark it and move on. Come back if time is left.
+
+Here's "try small cases" in action:
+
+<Steps problem="What is the sum of the digits of $10^{20} - 20$?">
+<Step title="Small cases">
+$10^3 - 20 = 980$. $\ 10^4 - 20 = 9980$. $\ 10^5 - 20 = 99980$.
+</Step>
+<Step title="The pattern">
+$10^n - 20$ is $(n - 2)$ nines, then 8, then 0.
+</Step>
+<Step title="Apply it">
+For $n = 20$: eighteen 9s, an 8 and a 0. The digit sum is $18 \times 9 + 8 = 170$.
+</Step>
+</Steps>
+
+<Trap>
+The most common way to lose points isn't hard problems. It's careless mistakes on easy ones. Reread the question before you bubble: did it ask for $x$, or $x^2$, or the sum of all solutions?
+</Trap>
+
+## Going further
+
+- <MAA>The official MAA AMC page</MAA> has rules, dates and registration details.
+- Try <Archive test="10" />, or <Archive test="12" />. Once you finish a unit here, practice on real past problems from that topic.
+- <AoPS q="American Mathematics Competitions">The AoPS Wiki article on the AMC</AoPS> explains the whole path from the AMC to the olympiad.

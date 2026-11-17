@@ -1,0 +1,137 @@
+---
+title: Roots of unity
+---
+
+How many numbers satisfy $z^6 = 1$? Over the real numbers, just $1$ and $-1$. Over the complex numbers there are **six**, and they sit at the corners of a perfect regular hexagon. These **roots of unity** turn up all over the AMC 12, in polynomial, geometry and counting problems.
+
+By the end of this lesson you will be able to:
+
+- find all solutions of $z^n = 1$ and $z^n = c$,
+- picture them as a regular polygon on a circle,
+- use the facts that they add to 0 and that $\omega^2 + \omega + 1 = 0$,
+- simplify big powers of a root of unity.
+
+## Where the roots live
+
+If $z^n = 1$, then $|z|^n = 1$, so $|z| = 1$: every root is on the unit circle. Writing $z = \operatorname{cis}\theta$, De Moivre says $z^n = \operatorname{cis}(n\theta)$, which equals 1 when $n\theta$ is a multiple of $360^\circ$. So
+
+$$
+z = \operatorname{cis}\!\left(\frac{360^\circ k}{n}\right), \qquad k = 0, 1, \dots, n - 1.
+$$
+
+They are $n$ equally spaced points around the circle, starting at 1. Change $n$.
+
+<Figure
+  bounds={[-1.5, 1.5, -1.5, 1.5]}
+  ticks={1}
+  height={380}
+  params={[{ name: "n", min: 2, max: 12, step: 1, value: 6, label: "$n$", play: true, speed: 1 }]}
+  elements={[
+    { type: "circle", c: [0, 0], r: 1, color: "muted", dashed: true, width: 1 },
+    { type: "segment", a: ["cosd(0)", "sind(0)"], b: ["cosd(360/n)", "sind(360/n)"], color: "accent", width: 2 },
+    { type: "segment", a: ["cosd(360/n)", "sind(360/n)"], b: ["cosd(720/n)", "sind(720/n)"], color: "accent", width: 2, show: "n > 2" },
+    { type: "segment", a: ["cosd(720/n)", "sind(720/n)"], b: ["cosd(1080/n)", "sind(1080/n)"], color: "accent", width: 2, show: "n > 2" },
+    { type: "segment", a: ["cosd(1080/n)", "sind(1080/n)"], b: ["cosd(1440/n)", "sind(1440/n)"], color: "accent", width: 2, show: "n > 3" },
+    { type: "segment", a: ["cosd(1440/n)", "sind(1440/n)"], b: ["cosd(1800/n)", "sind(1800/n)"], color: "accent", width: 2, show: "n > 4" },
+    { type: "segment", a: ["cosd(1800/n)", "sind(1800/n)"], b: ["cosd(2160/n)", "sind(2160/n)"], color: "accent", width: 2, show: "n > 5" },
+    { type: "segment", a: ["cosd(2160/n)", "sind(2160/n)"], b: ["cosd(2520/n)", "sind(2520/n)"], color: "accent", width: 2, show: "n > 6" },
+    { type: "segment", a: ["cosd(2520/n)", "sind(2520/n)"], b: ["cosd(2880/n)", "sind(2880/n)"], color: "accent", width: 2, show: "n > 7" },
+    { type: "segment", a: ["cosd(2880/n)", "sind(2880/n)"], b: ["cosd(3240/n)", "sind(3240/n)"], color: "accent", width: 2, show: "n > 8" },
+    { type: "segment", a: ["cosd(3240/n)", "sind(3240/n)"], b: ["cosd(3600/n)", "sind(3600/n)"], color: "accent", width: 2, show: "n > 9" },
+    { type: "segment", a: ["cosd(3600/n)", "sind(3600/n)"], b: ["cosd(3960/n)", "sind(3960/n)"], color: "accent", width: 2, show: "n > 10" },
+    { type: "segment", a: ["cosd(3960/n)", "sind(3960/n)"], b: ["cosd(4320/n)", "sind(4320/n)"], color: "accent", width: 2, show: "n > 11" },
+    { type: "point", x: 1, y: 0, color: "amber", label: "1", labelDir: "e", size: 6 },
+    { type: "point", x: "cosd(360/n)", y: "sind(360/n)", color: "teal", label: "ω", labelDir: "ne", size: 6 },
+    { type: "point", x: "cosd(720/n)", y: "sind(720/n)", color: "heading", show: "n > 2" },
+    { type: "point", x: "cosd(1080/n)", y: "sind(1080/n)", color: "heading", show: "n > 3" },
+    { type: "point", x: "cosd(1440/n)", y: "sind(1440/n)", color: "heading", show: "n > 4" },
+    { type: "point", x: "cosd(1800/n)", y: "sind(1800/n)", color: "heading", show: "n > 5" },
+    { type: "point", x: "cosd(2160/n)", y: "sind(2160/n)", color: "heading", show: "n > 6" },
+    { type: "point", x: "cosd(2520/n)", y: "sind(2520/n)", color: "heading", show: "n > 7" },
+    { type: "point", x: "cosd(2880/n)", y: "sind(2880/n)", color: "heading", show: "n > 8" },
+    { type: "point", x: "cosd(3240/n)", y: "sind(3240/n)", color: "heading", show: "n > 9" },
+    { type: "point", x: "cosd(3600/n)", y: "sind(3600/n)", color: "heading", show: "n > 10" },
+    { type: "point", x: "cosd(3960/n)", y: "sind(3960/n)", color: "heading", show: "n > 11" },
+  ]}
+  readouts={["z^{[[n]]} = 1", "\\text{spacing} = \\tfrac{360^\\circ}{[[n]]} = [[360/n:1]]^\\circ", "\\omega = \\operatorname{cis}[[360/n:1]]^\\circ"]}
+  caption="The $n$th roots of unity form a regular $n$-gon inscribed in the unit circle, with one corner at 1."
+/>
+
+Call the first one after 1 $\omega = \operatorname{cis}\tfrac{360^\circ}{n}$. Then the roots are just $1, \omega, \omega^2, \dots, \omega^{n-1}$: each step around the circle is one more multiplication by $\omega$.
+
+## They add up to zero
+
+For $n \ge 2$,
+
+$$
+1 + \omega + \omega^2 + \cdots + \omega^{n-1} = 0.
+$$
+
+**Picture:** the polygon is perfectly balanced around the origin, so the arrows cancel. **Algebra:** the roots are the solutions of $z^n - 1 = 0$, and by Vieta the sum of the roots is minus the $z^{n-1}$ coefficient, which is 0.
+
+<KeyIdea>
+Factoring $z^n - 1 = (z - 1)(z^{n-1} + z^{n-2} + \cdots + z + 1)$ shows the roots other than 1 solve $z^{n-1} + \cdots + z + 1 = 0$. For $n = 3$: $\omega^2 + \omega + 1 = 0$ and $\omega^3 = 1$. Those two facts crack most cube root of unity problems.
+</KeyIdea>
+
+<Steps problem="Let $\omega \ne 1$ satisfy $\omega^3 = 1$. Compute $\omega^{2026} + \omega^{2027}$.">
+<Step title="Reduce the exponents mod 3">
+$2025$ is divisible by 3, so $\omega^{2026} = \omega$ and $\omega^{2027} = \omega^2$.
+</Step>
+<Step title="Use the key fact">
+$\omega + \omega^2 = -1$, since $1 + \omega + \omega^2 = 0$.
+</Step>
+</Steps>
+
+<Check choices={["$-2$", "$-1$", "$0$", "$1$", "$2$"]} answer={2} explain="$\omega^4 = \omega$ and $\omega^5 = \omega^2$, so the sum is $1 + \omega + \omega^2 = 0$.">
+If $\omega^3 = 1$ and $\omega \ne 1$, what is $\omega^3 + \omega^4 + \omega^5$?
+</Check>
+
+<Check choices={["$0$", "$1$", "$2$", "$3$", "$6$"]} answer={2} explain="The 6th roots of unity are at $0^\circ, 60^\circ, 120^\circ, 180^\circ, 240^\circ, 300^\circ$. Only $60^\circ$ and $120^\circ$ are above the real axis.">
+How many solutions of $z^6 = 1$ have positive imaginary part?
+</Check>
+
+## Solving $z^n = c$
+
+The same idea works for any number on the right. If $c = R\operatorname{cis}\varphi$, the solutions of $z^n = c$ all have length $R^{1/n}$, and they form a regular $n$-gon whose first corner is at angle $\tfrac{\varphi}{n}$.
+
+<Steps problem="Solve $z^4 = -16$.">
+<Step title="Polar form">
+$-16 = 16\operatorname{cis}180^\circ$.
+</Step>
+<Step title="Length">
+$16^{1/4} = 2$.
+</Step>
+<Step title="Angles">
+$\tfrac{180^\circ}{4} = 45^\circ$, then add $90^\circ$ each time: $45^\circ, 135^\circ, 225^\circ, 315^\circ$.
+</Step>
+<Step title="Answer">
+$z = \pm\sqrt{2} \pm \sqrt{2}\,i$, the four corners of a square of side $2\sqrt{2}$.
+</Step>
+</Steps>
+
+<Check choices={["$\\tfrac{3\\sqrt{3}}{4}$", "$\\tfrac{3\\sqrt{3}}{2}$", "$3\\sqrt{3}$", "$6$", "$2\\sqrt{3}$"]} answer={1} explain="The six roots make a regular hexagon with side 1 (the radius). It splits into 6 equilateral triangles of side 1, each with area $\tfrac{\sqrt{3}}{4}$, for a total of $\tfrac{6\sqrt{3}}{4} = \tfrac{3\sqrt{3}}{2}$.">
+What is the area of the polygon whose vertices are the solutions of $z^6 = 1$?
+</Check>
+
+<Trap>
+$z^n = c$ has exactly $n$ complex solutions (for $c \ne 0$), not one or two. If a problem asks how many solutions satisfy some extra condition, list all $n$ angles first.
+</Trap>
+
+<FlipCards cards={[
+  { front: "Cube roots of 1", back: "$1,\\ -\\tfrac{1}{2} \\pm \\tfrac{\\sqrt{3}}{2}i$" },
+  { front: "4th roots of 1", back: "$1, i, -1, -i$" },
+  { front: "Product of all $n$th roots of unity", back: "$(-1)^{n+1}$, by Vieta on $z^n - 1$" },
+  { front: "$\\omega^{100}$ if $\\omega^3 = 1$", back: "$100 = 3 \\cdot 33 + 1$, so $\\omega$." },
+]} />
+
+<Recap>
+- Solutions of $z^n = 1$: $\operatorname{cis}\tfrac{360^\circ k}{n}$, a regular $n$-gon on the unit circle.
+- They are $1, \omega, \dots, \omega^{n-1}$ and add to 0.
+- Cube roots: $\omega^3 = 1$, $\omega^2 + \omega + 1 = 0$; reduce exponents mod 3.
+- $z^n = R\operatorname{cis}\varphi$: radius $R^{1/n}$, first angle $\varphi/n$, then steps of $360^\circ/n$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Root of unity" /> on the AoPS Wiki.
+- Find roots of unity problems in <Archive test="12" />.
+</GoFurther>

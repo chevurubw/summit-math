@@ -1,0 +1,128 @@
+---
+title: GCD and LCM
+---
+
+The **greatest common divisor** $\gcd(a, b)$ is the largest number that divides both $a$ and $b$. The **least common multiple** $\text{lcm}(a, b)$ is the smallest positive number that both divide into. GCD answers "how big can the equal pieces be?" LCM answers "when do things line up again?"
+
+By the end of this lesson you will be able to:
+
+- find GCD and LCM from prime factorizations,
+- find GCD of big numbers with the Euclidean algorithm,
+- use $\gcd(a, b) \cdot \text{lcm}(a, b) = ab$,
+- recognize GCD and LCM in word problems.
+
+## From prime factorizations
+
+Line up the primes. GCD takes the **smaller** exponent of each prime; LCM takes the **larger**.
+
+$$
+\begin{aligned}
+72 &= 2^3 \cdot 3^2 \\
+60 &= 2^2 \cdot 3 \cdot 5 \\
+\gcd &= 2^2 \cdot 3 = 12 \\
+\text{lcm} &= 2^3 \cdot 3^2 \cdot 5 = 360
+\end{aligned}
+$$
+
+Notice that $12 \cdot 360 = 4320 = 72 \cdot 60$. That's always true:
+
+<Formula>
+
+$$
+\gcd(a, b) \cdot \text{lcm}(a, b) = a \cdot b
+$$
+
+Each prime's smaller exponent plus its larger exponent equals the two exponents added together.
+</Formula>
+
+<Check choices={["$2$", "$4$", "$6$", "$8$", "$12$"]} answer={2} explain="$\gcd \cdot \text{lcm} = ab$, so $\gcd = \tfrac{24 \cdot 18}{72} = 6$.">
+Two numbers are 24 and 18, and their LCM is 72. What is their GCD?
+</Check>
+
+## When things line up: LCM
+
+Bus A leaves every $a$ minutes and bus B every $b$ minutes, both starting at time 0. The top row marks bus A, the middle row bus B, and the bottom row the times both leave together. Change the schedules.
+
+<Figure
+  bounds={[0, 61, -0.8, 3]}
+  axes="x"
+  grid={false}
+  ticks={5}
+  height={170}
+  equal={false}
+  params={[
+    { name: "a", min: 2, max: 12, step: 1, value: 4, label: "bus A every" },
+    { name: "b", min: 2, max: 12, step: 1, value: 6, label: "bus B every" },
+  ]}
+  elements={[
+    { type: "region", test: "floor(x) >= 1 && mod(floor(x), a) == 0 && y > 2.1 && y < 2.9", fill: "accent", cells: 61, opacity: 0.85 },
+    { type: "region", test: "floor(x) >= 1 && mod(floor(x), b) == 0 && y > 1.1 && y < 1.9", fill: "blue", cells: 61, opacity: 0.85 },
+    { type: "region", test: "floor(x) >= 1 && mod(floor(x), a) == 0 && mod(floor(x), b) == 0 && y > 0.1 && y < 0.9", fill: "amber", cells: 61, opacity: 0.9 },
+  ]}
+  readouts={["\\text{together every } \\operatorname{lcm}([[a]], [[b]]) = [[a*b/gcd(a,b)]] \\text{ minutes}", "\\gcd([[a]], [[b]]) = [[gcd(a,b)]]"]}
+  caption="Top: multiples of $a$. Middle: multiples of $b$. Bottom (yellow): the common multiples, spaced by the LCM."
+/>
+
+<Steps problem="Two lights blink every 12 and 18 seconds. They blink together at noon. How many times do they blink together in the next 10 minutes (not counting noon)?">
+<Step>
+$\text{lcm}(12, 18) = 36$ seconds between joint blinks.
+</Step>
+<Step>
+Ten minutes is 600 seconds, and $\lfloor 600 / 36 \rfloor = 16$ (since $36 \cdot 16 = 576$).
+</Step>
+</Steps>
+
+## Biggest equal pieces: GCD
+
+Cutting a $48 \times 30$ rectangle into the largest possible equal squares with no waste? The square's side must divide both 48 and 30, and be as big as possible: $\gcd(48, 30) = 6$. You get $8 \times 5 = 40$ squares.
+
+## The Euclidean algorithm
+
+For big numbers, factoring is slow. Use this fact instead: **any common divisor of $a$ and $b$ also divides $a - b$**, and therefore the remainder when $a$ is divided by $b$. So $\gcd(a, b) = \gcd(b, a \bmod b)$.
+
+<Steps problem="Find $\gcd(1071, 462)$.">
+<Step>
+$1071 = 2 \cdot 462 + 147$, so $\gcd(1071, 462) = \gcd(462, 147)$.
+</Step>
+<Step>
+$462 = 3 \cdot 147 + 21$, so it's $\gcd(147, 21)$.
+</Step>
+<Step>
+$147 = 7 \cdot 21 + 0$. The last nonzero remainder is $21$.
+</Step>
+</Steps>
+
+<KeyIdea>
+The trick $\gcd(a, b) = \gcd(a - kb, b)$ also works with algebra. For example $\gcd(n + 7, n + 2) = \gcd(5, n + 2)$, which can only be 1 or 5.
+</KeyIdea>
+
+<Check choices={["$1$", "$2$", "$4$", "$7$", "$14$"]} answer={3} explain="$\gcd(91, 49)$: $91 - 49 = 42$, then $\gcd(49, 42) = \gcd(42, 7) = 7$. Or factor: $91 = 7 \cdot 13$, $49 = 7^2$.">
+What is $\gcd(91, 49)$?
+</Check>
+
+<Check choices={["$1$", "$2$", "$3$", "$6$", "$12$"]} answer={2} explain="Subtract twice the second from the first: $\gcd(2n + 5, n + 1) = \gcd(3, n + 1)$. That can only be 1 or 3, and it equals 3 whenever $n + 1$ is a multiple of 3. For example $n = 2$ gives $\gcd(9, 3) = 3$.">
+As $n$ ranges over positive integers, what is the largest possible value of $\gcd(2n + 5, n + 1)$?
+</Check>
+
+<Trap>
+Two numbers are **relatively prime** when their GCD is 1, even if neither is prime: $\gcd(8, 15) = 1$.
+</Trap>
+
+<FlipCards cards={[
+  { front: "$\\text{lcm}(8, 12)$", back: "$24$" },
+  { front: "$\\gcd(a, b) = 1$. What is $\\text{lcm}(a, b)$?", back: "$ab$" },
+  { front: "$\\gcd(n, n + 1)$", back: "Always 1: consecutive numbers share no factor." },
+  { front: "Largest square tile for a $84 \\times 120$ floor", back: "$\\gcd = 12$" },
+]} />
+
+<Recap>
+- GCD: smaller exponent of each prime. LCM: larger exponent.
+- $\gcd \cdot \text{lcm} = ab$.
+- "Line up again" means LCM. "Largest equal pieces" means GCD.
+- Euclidean algorithm: $\gcd(a, b) = \gcd(b, a \bmod b)$; also works on expressions in $n$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Greatest common divisor" />, <AoPS q="Least common multiple" /> and <AoPS q="Euclidean algorithm" /> on the AoPS Wiki.
+- Practice with number theory problems in <Archive test="10" />.
+</GoFurther>

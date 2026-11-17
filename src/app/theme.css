@@ -1,0 +1,74 @@
+/*
+  THEME FILE
+  Every color on the site comes from this file. Change a value here and it
+  updates everywhere. Tailwind class names are listed next to each color,
+  for example bg-primary, text-accent, border-line.
+*/
+
+:root {
+  /* Backgrounds */
+  --c-bg: #0b0b0f;            /* bg-bg        page background */
+  --c-surface: #16161d;       /* bg-surface   cards and panels */
+  --c-surface-2: #1e1e27;     /* bg-surface-2 raised panels, inputs, hover */
+  --c-line: #2a2a35;          /* border-line  borders and dividers */
+
+  /* Brand */
+  --c-primary: #dc2626;       /* bg-primary   buttons, links, active nav */
+  --c-primary-hover: #b91c1c; /* bg-primary-hover */
+  --c-primary-edge: #7f1d1d;  /* darker edge under primary buttons */
+  --c-accent-edge: #4c1d95;   /* darker edge under accent buttons */
+  --c-accent: #8b5cf6;        /* bg-accent    mastery progress, streaks, badges */
+  --c-accent-soft: #a78bfa;   /* text-accent-soft lighter purple for text on dark */
+
+  /* Text */
+  --c-heading: #ffffff;       /* text-heading */
+  --c-body: #d4d4d8;          /* text-body */
+  --c-muted: #a1a1aa;         /* text-muted   secondary text */
+
+  /* Answer feedback (kept separate from the brand red on purpose) */
+  --c-correct: #22c55e;       /* text-correct, bg-correct */
+  --c-wrong: #f87171;         /* text-wrong, bg-wrong  softer red than the brand red */
+
+  /* Mastery level colors, from lowest to highest */
+  --c-level-0: #3f3f4a;       /* Not Started */
+  --c-level-1: #71717a;       /* Attempted */
+  --c-level-2: #c4b5fd;       /* Familiar */
+  --c-level-3: #a78bfa;       /* Proficient */
+  --c-level-4: #8b5cf6;       /* Mastered */
+}
+
+/*
+  UNLOCKABLE COLOR SCHEMES
+  Students unlock these by climbing (see src/config/climb.ts) and pick one in Settings.
+  Each one only changes the brand and mastery colors; backgrounds and text stay the same.
+*/
+[data-theme="glacier"] {
+  --c-primary: #2563eb; --c-primary-hover: #1d4ed8; --c-primary-edge: #1e3a8a;
+  --c-accent: #06b6d4; --c-accent-soft: #67e8f9; --c-accent-edge: #155e75;
+  --c-level-2: #a5f3fc; --c-level-3: #67e8f9; --c-level-4: #06b6d4;
+}
+[data-theme="alpenglow"] {
+  --c-primary: #ea580c; --c-primary-hover: #c2410c; --c-primary-edge: #7c2d12;
+  --c-accent: #ec4899; --c-accent-soft: #f9a8d4; --c-accent-edge: #831843;
+  --c-level-2: #fbcfe8; --c-level-3: #f9a8d4; --c-level-4: #ec4899;
+}
+[data-theme="pine"] {
+  --c-primary: #0d9488; --c-primary-hover: #0f766e; --c-primary-edge: #134e4a;
+  --c-accent: #f59e0b; --c-accent-soft: #fcd34d; --c-accent-edge: #78350f;
+  --c-level-2: #fde68a; --c-level-3: #fcd34d; --c-level-4: #f59e0b;
+}
+[data-theme="aurora"] {
+  --c-primary: #7c3aed; --c-primary-hover: #6d28d9; --c-primary-edge: #3b0764;
+  --c-accent: #0ea5e9; --c-accent-soft: #7dd3fc; --c-accent-edge: #0c4a6e;
+  --c-level-2: #bae6fd; --c-level-3: #7dd3fc; --c-level-4: #0ea5e9;
+}
+[data-theme="gold"] {
+  --c-primary: #a16207; --c-primary-hover: #854d0e; --c-primary-edge: #422006;
+  --c-accent: #eab308; --c-accent-soft: #fde047; --c-accent-edge: #713f12;
+  --c-level-2: #fef08a; --c-level-3: #fde047; --c-level-4: #eab308;
+}
+
+/* Smooth change when a student switches color scheme */
+html {
+  transition: background-color 300ms ease;
+}

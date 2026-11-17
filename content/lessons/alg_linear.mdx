@@ -1,0 +1,200 @@
+---
+title: Linear equations and systems
+---
+
+A **linear equation** is an equation where the variable is never squared, never under a root and never multiplied by another variable. Things like $3x + 7 = 22$ or $2a - 5b = 1$. They are the most common tool on the whole AMC: almost every word problem turns into one.
+
+By the end of this lesson you will be able to:
+
+- solve any one variable linear equation in a few clean moves,
+- picture a linear equation as a straight line,
+- solve a system of two equations two different ways,
+- spot the shortcuts AMC problems are built around.
+
+## The balance scale
+
+Think of an equation as a balance scale. The left side and the right side weigh exactly the same. You may do **anything you like to one side, as long as you do the same thing to the other side**, and the scale stays balanced.
+
+Your goal is to get the variable alone. You undo what was done to it, in reverse order: first undo adding or subtracting, then undo multiplying or dividing.
+
+<Steps problem="Solve $3(x - 2) + 5 = 2x + 9$.">
+<Step title="Clear the parentheses">
+Distribute the 3: $3x - 6 + 5 = 2x + 9$, which tidies up to $3x - 1 = 2x + 9$.
+</Step>
+<Step title="Gather the variable on one side">
+Subtract $2x$ from both sides: $x - 1 = 9$.
+</Step>
+<Step title="Get the variable alone">
+Add 1 to both sides: $x = 10$.
+</Step>
+<Step title="Check it">
+Left side: $3(10 - 2) + 5 = 29$. Right side: $2(10) + 9 = 29$. They match, so $x = 10$ is right. Checking takes ten seconds and catches most mistakes.
+</Step>
+</Steps>
+
+<KeyIdea>
+Same move, both sides. Undo in reverse order. Plug your answer back in.
+</KeyIdea>
+
+### Fractions? Clear them first
+
+When an equation has fractions, multiply **every term** by a number that every denominator divides into. The fractions disappear.
+
+<Steps problem="Solve $\dfrac{x}{3} + \dfrac{x}{4} = 7$.">
+<Step>
+The denominators are 3 and 4, and both divide 12. Multiply every term by 12: $4x + 3x = 84$.
+</Step>
+<Step>
+Combine: $7x = 84$, so $x = 12$.
+</Step>
+</Steps>
+
+<Check choices={["$2$", "$4$", "$6$", "$8$", "$10$"]} answer={2} explain="Multiply every term by 6: $3x - 2(x - 2) = 6 + 4$, so $3x - 2x + 4 = 10$, giving $x = 6$. Notice the minus sign in front of $2(x - 2)$ flips the sign of the $-2$ inside.">
+Solve $\dfrac{x}{2} - \dfrac{x - 2}{3} = 1 + \dfrac{2}{3}$.
+</Check>
+
+<Trap>
+When you multiply through by a number, multiply **every** term, including the lone numbers on the right side. And a minus sign in front of a parenthesis flips **every** sign inside it: $-(x - 2) = -x + 2$.
+</Trap>
+
+## Seeing a linear equation as a line
+
+An equation with two variables, like $y = 2x + 1$, has infinitely many solutions: $(0, 1)$, $(1, 3)$, $(2, 5)$, and so on. Plot them all and they form a straight line. That is where the word *linear* comes from.
+
+Every non vertical line can be written as $y = mx + b$:
+
+- $m$ is the **slope**: how much $y$ goes up when $x$ goes up by 1.
+- $b$ is the **$y$ intercept**: where the line crosses the $y$ axis.
+
+Drag the sliders and watch what each number does.
+
+<Figure
+  bounds={[-6, 6, -6, 6]}
+  params={[
+    { name: "m", min: -3, max: 3, step: 0.25, value: 1.5, label: "slope $m$" },
+    { name: "b", min: -4, max: 4, step: 0.5, value: 1, label: "intercept $b$" },
+  ]}
+  elements={[
+    { type: "func", f: "m*x + b", color: "accent", width: 3 },
+    { type: "point", x: 0, y: "b", label: "(0, [[b]])", color: "amber", labelDir: "nw" },
+    { type: "segment", a: [1, "m + b"], b: [2, "m + b"], color: "teal", dashed: true },
+    { type: "segment", a: [2, "m + b"], b: [2, "2*m + b"], color: "teal", dashed: true },
+    { type: "text", x: 2.6, y: "1.5*m + b", text: "rise [[m]]", color: "teal", anchor: "start" },
+  ]}
+  readouts={["y = [[m]]x + [[b]]"]}
+  caption="The dashed staircase shows the slope: move 1 to the right, and the line rises by $m$."
+/>
+
+<Formula title="Slope between two points">
+The slope through $(x_1, y_1)$ and $(x_2, y_2)$ is
+
+$$
+m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{\text{rise}}{\text{run}}.
+$$
+
+Parallel lines have equal slopes. Perpendicular lines have slopes that multiply to $-1$, like $2$ and $-\tfrac{1}{2}$.
+</Formula>
+
+## Systems: two equations, two unknowns
+
+A **system** is two equations that must both be true at once. On a graph, each equation is a line, and the solution is the point where the lines cross. Move the second line and watch the crossing point.
+
+<Figure
+  bounds={[-6, 6, -6, 6]}
+  params={[
+    { name: "c", min: -4, max: 6, step: 0.5, value: 4, label: "line 2: $x + y = c$" },
+  ]}
+  elements={[
+    { type: "func", f: "2*x - 1", color: "accent", width: 3 },
+    { type: "func", f: "c - x", color: "blue", width: 3 },
+    { type: "point", x: "(c + 1)/3", y: "2*(c + 1)/3 - 1", label: "([[(c+1)/3]], [[2*(c+1)/3 - 1]])", color: "amber" },
+  ]}
+  readouts={["\\color{#a78bfa} y = 2x - 1", "\\color{#60a5fa} x + y = [[c]]"]}
+  caption="The answer to a system is the one point that sits on both lines."
+/>
+
+There are two ways to find that point without drawing.
+
+**Substitution.** Solve one equation for one variable, then plug that into the other.
+
+**Elimination.** Add or subtract the equations so one variable cancels.
+
+<Steps problem="Solve the system $2x + 3y = 12$ and $4x - y = 10$.">
+<Step title="Choose a plan">
+The second equation has a lone $-y$, so elimination is easy: multiply the second equation by 3 to get $12x - 3y = 30$.
+</Step>
+<Step title="Add the equations">
+$(2x + 3y) + (12x - 3y) = 12 + 30$. The $y$ terms cancel: $14x = 42$, so $x = 3$.
+</Step>
+<Step title="Find the other variable">
+Put $x = 3$ into $4x - y = 10$: $12 - y = 10$, so $y = 2$.
+</Step>
+<Step title="Check both equations">
+$2(3) + 3(2) = 12$ ✓ and $4(3) - 2 = 10$ ✓. The answer is $(3, 2)$.
+</Step>
+</Steps>
+
+### When there is no single answer
+
+Two lines can fail to cross at exactly one point:
+
+| The lines are | Number of solutions | What the algebra looks like |
+| --- | --- | --- |
+| crossing | exactly one | you get $x = $ a number |
+| parallel (same slope, different intercept) | none | you get something false, like $0 = 5$ |
+| the same line | infinitely many | you get something always true, like $0 = 0$ |
+
+<Check choices={["$-6$", "$-3$", "$3$", "$6$", "$9$"]} answer={3} explain="No solution means parallel lines, so the slopes match. The first line has slope 3. Dividing the second by 2 gives $y = \tfrac{k}{2}x - 2$, with slope $\tfrac{k}{2}$. Set $\tfrac{k}{2} = 3$ to get $k = 6$. The intercepts $1$ and $-2$ differ, so the lines really are parallel and not the same line.">
+For what value of $k$ does the system $y = 3x + 1$ and $2y = kx - 4$ have **no** solution?
+</Check>
+
+## AMC moves that save time
+
+AMC problems are written so that the clever path is short. Here are the moves to look for.
+
+**1. Add or subtract the whole equations.** If a problem asks for something like $x + y$, you often never need $x$ and $y$ separately.
+
+<Steps problem="If $3x + 5y = 23$ and $5x + 3y = 17$, what is $x + y$?">
+<Step>
+Notice the coefficients are swapped. Add the two equations: $8x + 8y = 40$.
+</Step>
+<Step>
+Divide by 8: $x + y = 5$. Done, without ever finding $x$ or $y$.
+</Step>
+</Steps>
+
+**2. Name the unknown, then translate word by word.** "Five more than twice a number is 17" becomes $2n + 5 = 17$. Write down what each letter means before you start.
+
+**3. Work backwards from the choices.** The answer is one of five numbers. If setting up the equation is messy, plugging in a choice is a legal and fast way to check it. Start with choice C: if it's too big or too small, that tells you which way to go.
+
+<Tip>
+When a problem asks for an expression like $x + y$ or $2a - b$, try to get that expression directly by adding, subtracting or scaling the given equations. AMC writers love asking for exactly the thing you can get in one move.
+</Tip>
+
+<Check choices={["$2$", "$3$", "$4$", "$5$", "$6$"]} answer={1} explain="Subtract the second equation from the first: $(a + 2b) - (a - b) = 15 - 6$, so $3b = 9$ and $b = 3$. The $a$ cancels immediately.">
+If $a + 2b = 15$ and $a - b = 6$, what is $b$?
+</Check>
+
+## Practice the idea
+
+<FlipCards cards={[
+  { front: "What does a system with **no** solution look like on a graph?", back: "Two parallel lines: same slope, different intercepts." },
+  { front: "Slope of a line perpendicular to $y = \\tfrac{2}{3}x + 1$?", back: "$-\\tfrac{3}{2}$, the negative reciprocal." },
+  { front: "Fastest way to find $x + y$ from $4x + 7y = 30$ and $7x + 4y = 25$?", back: "Add them: $11x + 11y = 55$, so $x + y = 5$." },
+  { front: "What should you do right after you solve an equation?", back: "Plug the answer back in to check it." },
+]} />
+
+<Recap>
+- Do the same thing to both sides; undo operations in reverse order.
+- Clear fractions by multiplying **every** term by a common denominator.
+- $y = mx + b$: $m$ is slope, $b$ is the $y$ intercept. Parallel lines share a slope; perpendicular slopes multiply to $-1$.
+- Solve systems by substitution or elimination. The answer is where the lines cross.
+- Same slope means no solution (or infinitely many if the lines are identical).
+- Look for one move that gives the exact expression the problem asks for.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Linear equation" /> covers more examples and special cases.
+- <AoPS q="System of equations" /> has harder systems with three or more variables.
+- Try early problems (roughly numbers 1 to 10) from <Archive test="10" />. Many are linear equations in disguise.
+</GoFurther>

@@ -1,0 +1,2402 @@
+[
+ {
+  "id": "trig_values_b01",
+  "skillId": "trig_values",
+  "family": "trig_values:tv1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\sin\\left(\\frac{4\\pi}{3}\\right)$?",
+  "choices": {
+   "A": "$-\\frac{\\sqrt{3}}{2}$",
+   "B": "$-\\frac{\\sqrt{2}}{2}$",
+   "C": "$\\frac{1}{2}$",
+   "D": "$\\frac{\\sqrt{2}}{2}$",
+   "E": "$\\frac{\\sqrt{3}}{2}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Find the reference angle, then use the sign for the quadrant."
+  ],
+  "solution": "**What we need:** the exact value of $\\sin\\left(\\frac{4\\pi}{3}\\right)$.\n\n**Key idea:** every angle behaves like its reference angle in the first quadrant; only the sign changes with the quadrant.\n\n**Step 1.** Convert to degrees: $\\frac{4\\pi}{3} = \\frac{4\\pi}{3} \\cdot \\frac{180^\\circ}{\\pi} = 240^\\circ$.\n\n**Step 2.** $240^\\circ$ is in the third quadrant. Its reference angle (distance to the $x$-axis) is $60^\\circ$.\n\n**Step 3.** From the special triangles, $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.\n\n**Step 4.** In the third quadrant, sine is negative (sine is positive in quadrants I and II), so the value is $-\\frac{\\sqrt{3}}{2}$.\n\n**Answer:** $-\\frac{\\sqrt{3}}{2}$. **(A)**\n\n**Common mistake:** getting the size right but the sign wrong for the quadrant."
+ },
+ {
+  "id": "trig_values_b02",
+  "skillId": "trig_values",
+  "family": "trig_values:tv2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\tan 30^\\circ$?",
+  "choices": {
+   "A": "$-\\sqrt{3}$",
+   "B": "$-1$",
+   "C": "$\\frac{\\sqrt{3}}{3}$",
+   "D": "$1$",
+   "E": "$\\sqrt{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$."
+  ],
+  "solution": "**What we need:** $\\tan 30^\\circ$.\n\n**Key idea:** $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$, so find sine and cosine first.\n\n**Step 1.** Reference angle $30^\\circ$, first quadrant.\n\n**Step 2.** $\\sin 30^\\circ = \\frac{1}{2}$ and $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$.\n\n**Step 3.** Divide: $\\tan 30^\\circ = \\dfrac{\\frac{1}{2}}{\\frac{\\sqrt{3}}{2}} = \\frac{\\sqrt{3}}{3}$.\n\n**Answer:** $\\frac{\\sqrt{3}}{3}$. **(C)**\n\n**Common mistake:** dividing cosine by sine, which gives the cotangent."
+ },
+ {
+  "id": "trig_values_b03",
+  "skillId": "trig_values",
+  "family": "trig_values:tv3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $72^\\circ$ in radians?",
+  "choices": {
+   "A": "$\\frac{\\pi}{5}$",
+   "B": "$\\frac{2\\pi}{5}$",
+   "C": "$\\frac{3\\pi}{5}$",
+   "D": "$\\frac{4\\pi}{5}$",
+   "E": "$\\frac{72}{\\pi}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Multiply by $\\frac{\\pi}{180}$."
+  ],
+  "solution": "**What we need:** $72^\\circ$ written in radians.\n\n**Key idea:** a half turn is $180^\\circ = \\pi$ radians, so multiply degrees by $\\frac{\\pi}{180}$.\n\n**Step 1.** $72^\\circ \\cdot \\frac{\\pi}{180^\\circ} = \\frac{72\\pi}{180}$.\n\n**Step 2.** Both $72$ and $180$ are divisible by $36$: $\\frac{72}{180} = \\frac{2}{5}$.\n\n**Step 3.** So $72^\\circ = \\frac{2\\pi}{5}$.\n\n**Answer:** $\\frac{2\\pi}{5}$. **(B)**\n\n**Common mistake:** multiplying by $\\frac{180}{\\pi}$, which goes the other way (radians to degrees)."
+ },
+ {
+  "id": "trig_values_b04",
+  "skillId": "trig_values",
+  "family": "trig_values:tv4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\sin^2 30^\\circ + \\cos^2 60^\\circ$?",
+  "choices": {
+   "A": "$\\frac{1}{4}$",
+   "B": "$\\frac{1}{2}$",
+   "C": "$\\frac{3}{4}$",
+   "D": "$1$",
+   "E": "$\\frac{3}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use the exact values of sine and cosine at special angles."
+  ],
+  "solution": "**What we need:** the sum of two squared trig values at different angles.\n\n**Key idea:** look up each exact value, square it, and add.\n\n**Step 1.** $\\sin 30^\\circ = \\frac{1}{2}$, so $\\sin^2 30^\\circ = \\frac{1}{4}$.\n\n**Step 2.** $\\cos 60^\\circ = \\frac{1}{2}$, so $\\cos^2 60^\\circ = \\frac{1}{4}$.\n\n**Step 3.** Add: $\\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}$.\n\n**Answer:** $\\frac{1}{2}$. **(B)**\n\n**Common mistake:** using $\\sin^2 + \\cos^2 = 1$. That identity needs the same angle in both terms."
+ },
+ {
+  "id": "trig_values_b05",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_cos_deg",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\cos 345^\\circ$?",
+  "choices": {
+   "A": "$\\frac{3}{4}$",
+   "B": "$\\frac{\\sqrt{3}}{2}$",
+   "C": "$\\frac{\\sqrt{6} + \\sqrt{2}}{4}$",
+   "D": "$\\frac{1 + \\sqrt{3}}{2}$",
+   "E": "$\\sqrt{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the reference angle and the sign."
+  ],
+  "solution": "**What we need:** $\\cos 345^\\circ$.\n\n**Key idea:** cosine is positive in quadrants I and IV, negative in II and III.\n\n**Step 1.** Reference angle: $15^\\circ$, so $|\\cos 345^\\circ| = \\cos 15^\\circ = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$.\n\n**Step 2.** Quadrant IV: cosine is positive.\n\n**Step 3.** $\\cos 345^\\circ = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$.\n\n**Answer:** $\\frac{\\sqrt{6} + \\sqrt{2}}{4}$. **(C)**\n\n**Common mistake:** getting the sign wrong."
+ },
+ {
+  "id": "trig_values_b06",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_reciprocal",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\sec 315^\\circ$?",
+  "choices": {
+   "A": "$\\sqrt{6} - \\sqrt{2}$",
+   "B": "$\\frac{\\sqrt{6}}{2}$",
+   "C": "$\\frac{1 + \\sqrt{3}}{2}$",
+   "D": "$\\sqrt{2}$",
+   "E": "$\\sqrt{3}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\sec$ is the reciprocal of $\\cos$."
+  ],
+  "solution": "**What we need:** $\\sec 315^\\circ$.\n\n**Key idea:** $\\sec x = \\frac{1}{\\cos x}$.\n\n**Step 1.** $\\cos 315^\\circ = \\frac{\\sqrt{2}}{2}$.\n\n**Step 2.** Reciprocal: $\\sqrt{2}$.\n\n**Answer:** $\\sqrt{2}$. **(D)**\n\n**Common mistake:** using $\\cos$ itself instead of its reciprocal."
+ },
+ {
+  "id": "trig_values_b07",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_rad_to_deg",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\frac{5\\pi}{4}$ radians in degrees?",
+  "choices": {
+   "A": "$195^\\circ$",
+   "B": "$225^\\circ$",
+   "C": "$255^\\circ$",
+   "D": "$405^\\circ$",
+   "E": "$450^\\circ$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\pi$ radians is $180^\\circ$."
+  ],
+  "solution": "**What we need:** the angle in degrees.\n\n**Key idea:** multiply by $\\frac{180^\\circ}{\\pi}$.\n\n**Step 1.** $\\frac{5\\pi}{4} \\cdot \\frac{180^\\circ}{\\pi} = 225^\\circ$.\n\n**Answer:** $225^\\circ$. **(B)**\n\n**Common mistake:** using $\\pi = 360^\\circ$."
+ },
+ {
+  "id": "trig_values_b08",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_reference",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the reference angle of $95^\\circ$?",
+  "choices": {
+   "A": "$5^\\circ$",
+   "B": "$85^\\circ$",
+   "C": "$95^\\circ$",
+   "D": "$100^\\circ$",
+   "E": "$265^\\circ$"
+  },
+  "answer": "B",
+  "hints": [
+   "The acute angle to the $x$-axis."
+  ],
+  "solution": "**What we need:** the reference angle.\n\n**Key idea:** measure the acute angle between the terminal side and the $x$-axis.\n\n**Step 1.** $95^\\circ$ is in quadrant II.\n\n**Step 2.** Reference angle: $85^\\circ$.\n\n**Answer:** $85^\\circ$. **(B)**\n\n**Common mistake:** measuring to the $y$-axis."
+ },
+ {
+  "id": "trig_values_b09",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_coterminal",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What angle between $0^\\circ$ and $360^\\circ$ is coterminal with $-390^\\circ$?",
+  "choices": {
+   "A": "$0^\\circ$",
+   "B": "$30^\\circ$",
+   "C": "$150^\\circ$",
+   "D": "$240^\\circ$",
+   "E": "$330^\\circ$"
+  },
+  "answer": "E",
+  "hints": [
+   "Add or subtract $360^\\circ$."
+  ],
+  "solution": "**What we need:** the coterminal angle.\n\n**Key idea:** coterminal angles differ by multiples of $360^\\circ$.\n\n**Step 1.** $-390 + 720 = 330$, a multiple of $360$ away.\n\n**Answer:** $330^\\circ$. **(E)**\n\n**Common mistake:** dropping the negative sign."
+ },
+ {
+  "id": "trig_values_b10",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_quadrant",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "An angle $\\theta$ satisfies $\\sin\\theta > 0$ and $\\tan\\theta > 0$. Which quadrant is $\\theta$ in?",
+  "choices": {
+   "A": "$\\text{I}$",
+   "B": "$\\text{II}$",
+   "C": "$\\text{III}$",
+   "D": "$\\text{IV}$",
+   "E": "$\\text{none}$"
+  },
+  "answer": "A",
+  "hints": [
+   "All Students Take Calculus: All, Sine, Tangent, Cosine positive in I, II, III, IV."
+  ],
+  "solution": "**What we need:** the quadrant.\n\n**Key idea:** check the signs: sin is the $y$-coordinate, cos the $x$-coordinate, tan their ratio.\n\n**Step 1.** Quadrant I: $\\sin$ +, $\\cos$ +, $\\tan$ +.\n\n**Step 2.** It matches both conditions.\n\n**Answer:** $\\text{I}$. **(A)**\n\n**Common mistake:** mixing up which function is the $x$-coordinate."
+ },
+ {
+  "id": "trig_values_b11",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_arc",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the length of an arc of a circle of radius $5$ cut off by a central angle of $135^\\circ$?",
+  "choices": {
+   "A": "$\\frac{15}{4}$",
+   "B": "$\\frac{15\\pi}{8}$",
+   "C": "$\\frac{15\\pi}{4}$",
+   "D": "$\\frac{15\\pi}{2}$",
+   "E": "$\\frac{75\\pi}{8}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Arc length $= r\\theta$ with $\\theta$ in radians."
+  ],
+  "solution": "**What we need:** the arc length.\n\n**Key idea:** convert to radians, then multiply by the radius.\n\n**Step 1.** $135^\\circ = \\frac{3\\pi}{4}$.\n\n**Step 2.** $5 \\cdot \\frac{3\\pi}{4} = \\frac{15\\pi}{4}$.\n\n**Answer:** $\\frac{15\\pi}{4}$. **(C)**\n\n**Common mistake:** using the sector area formula."
+ },
+ {
+  "id": "trig_values_b12",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_sector_area",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A sector of a circle of radius $7$ has central angle $\\frac{3\\pi}{4}$ radians. What is its area?",
+  "choices": {
+   "A": "$\\frac{21\\pi}{4}$",
+   "B": "$\\frac{147\\pi}{16}$",
+   "C": "$\\frac{147\\pi}{8}$",
+   "D": "$\\frac{151\\pi}{8}$",
+   "E": "$\\frac{147\\pi}{4}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Area $= \\frac{1}{2} r^2 \\theta$."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** a sector is the fraction $\\frac{\\theta}{2\\pi}$ of the circle.\n\n**Step 1.** $\\frac{1}{2} \\cdot 49 \\cdot \\frac{3\\pi}{4} = \\frac{147\\pi}{8}$.\n\n**Answer:** $\\frac{147\\pi}{8}$. **(C)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$."
+ },
+ {
+  "id": "trig_values_b13",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_negative",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\tan(-330^\\circ)$?",
+  "choices": {
+   "A": "$\\frac{\\sqrt{6} - \\sqrt{2}}{4}$",
+   "B": "$\\frac{\\sqrt{3}}{4}$",
+   "C": "$\\frac{\\sqrt{3}}{3}$",
+   "D": "$\\frac{\\sqrt{2}}{2}$",
+   "E": "$\\frac{3}{4}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Sine and tangent are odd; cosine is even."
+  ],
+  "solution": "**What we need:** $\\tan(-330^\\circ)$.\n\n**Key idea:** $\\tan(-x) = -\\tan x$.\n\n**Step 1.** $\\tan 330^\\circ = -\\frac{\\sqrt{3}}{3}$.\n\n**Step 2.** So $\\tan(-330^\\circ) = \\frac{\\sqrt{3}}{3}$.\n\n**Answer:** $\\frac{\\sqrt{3}}{3}$. **(C)**\n\n**Common mistake:** treating every function as odd (or even)."
+ },
+ {
+  "id": "trig_values_b14",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_tan_from_cos",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "An angle $\\theta$ in quadrant III has $\\cos\\theta = -\\frac{3}{5}$. What is $\\tan\\theta$?",
+  "choices": {
+   "A": "$-\\frac{4}{3}$",
+   "B": "$-\\frac{3}{4}$",
+   "C": "$\\frac{3}{4}$",
+   "D": "$\\frac{4}{5}$",
+   "E": "$\\frac{4}{3}$"
+  },
+  "answer": "E",
+  "hints": [
+   "Find $\\sin\\theta$ with the Pythagorean identity."
+  ],
+  "solution": "**What we need:** $\\tan\\theta$.\n\n**Key idea:** $\\sin^2\\theta = 1 - \\cos^2\\theta$; the quadrant gives the sign.\n\n**Step 1.** $\\sin\\theta = -\\frac{4}{5}$ (quadrant III).\n\n**Step 2.** $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{4}{3}$.\n\n**Answer:** $\\frac{4}{3}$. **(E)**\n\n**Common mistake:** ignoring the quadrant's signs."
+ },
+ {
+  "id": "trig_values_b15",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_point",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The terminal side of angle $\\theta$ passes through $(-8, 15)$. What is $\\sin\\theta$?",
+  "choices": {
+   "A": "$-\\frac{15}{8}$",
+   "B": "$-\\frac{15}{17}$",
+   "C": "$-\\frac{8}{15}$",
+   "D": "$-\\frac{8}{17}$",
+   "E": "$\\frac{15}{17}$"
+  },
+  "answer": "E",
+  "hints": [
+   "Use the distance from the origin."
+  ],
+  "solution": "**What we need:** $\\sin\\theta$.\n\n**Key idea:** $\\sin\\theta = \\frac{y}{r}$, $\\cos\\theta = \\frac{x}{r}$, with $r = \\sqrt{x^2 + y^2}$.\n\n**Step 1.** $r = \\sqrt{64 + 225} = 17$.\n\n**Step 2.** $\\sin\\theta = \\frac{15}{17}$.\n\n**Answer:** $\\frac{15}{17}$. **(E)**\n\n**Common mistake:** swapping $x$ and $y$."
+ },
+ {
+  "id": "trig_values_b16",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_product",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\sin 60^\\circ \\tan 60^\\circ$?",
+  "choices": {
+   "A": "$\\frac{\\sqrt{6}}{2}$",
+   "B": "$\\sqrt{2}$",
+   "C": "$\\frac{3}{2}$",
+   "D": "$\\sqrt{3}$",
+   "E": "$2$"
+  },
+  "answer": "C",
+  "hints": [
+   "Replace each function with its exact value."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** use the $30$-$60$-$90$ and $45$-$45$-$90$ triangles.\n\n**Step 1.** Multiplying the exact values gives $\\frac{3}{2}$.\n\n**Answer:** $\\frac{3}{2}$. **(C)**\n\n**Common mistake:** mixing up $\\sin 30^\\circ$ and $\\sin 60^\\circ$."
+ },
+ {
+  "id": "trig_values_b17",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_inverse",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\arccos\\left(-\\frac{\\sqrt{2}}{2}\\right)$, in degrees?",
+  "choices": {
+   "A": "$-135^\\circ$",
+   "B": "$-45^\\circ$",
+   "C": "$45^\\circ$",
+   "D": "$135^\\circ$",
+   "E": "$225^\\circ$"
+  },
+  "answer": "D",
+  "hints": [
+   "Remember the principal ranges."
+  ],
+  "solution": "**What we need:** the angle.\n\n**Key idea:** $\\arcsin$ and $\\arctan$ give angles from $-90^\\circ$ to $90^\\circ$; $\\arccos$ gives $0^\\circ$ to $180^\\circ$.\n\n**Step 1.** The angle in that range with the right value is $135^\\circ$.\n\n**Answer:** $135^\\circ$. **(D)**\n\n**Common mistake:** giving an angle outside the principal range."
+ },
+ {
+  "id": "trig_values_b18",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_clock",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the smaller angle between the hands of a clock at 7:00, in radians?",
+  "choices": {
+   "A": "$\\frac{5\\pi}{12}$",
+   "B": "$\\frac{5\\pi}{6}$",
+   "C": "$\\frac{11\\pi}{12}$",
+   "D": "$\\pi$",
+   "E": "$\\frac{7\\pi}{6}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Each hour mark is $30^\\circ$."
+  ],
+  "solution": "**What we need:** the angle.\n\n**Key idea:** count hour marks between the hands.\n\n**Step 1.** $5 \\cdot 30^\\circ = 150^\\circ = \\frac{5\\pi}{6}$.\n\n**Answer:** $\\frac{5\\pi}{6}$. **(B)**\n\n**Common mistake:** giving the larger angle."
+ },
+ {
+  "id": "trig_values_b19",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_sin_plus_cos",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\sin 315^\\circ + \\cos 315^\\circ$?",
+  "choices": {
+   "A": "$-\\frac{\\sqrt{6} - \\sqrt{2}}{4}$",
+   "B": "$0$",
+   "C": "$\\frac{1}{8}$",
+   "D": "$\\frac{\\sqrt{6} - \\sqrt{2}}{4}$",
+   "E": "$2 - \\sqrt{3}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find each value, then add."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** use the reference angle and signs for each.\n\n**Step 1.** $\\sin 315^\\circ = -\\frac{\\sqrt{2}}{2}$, $\\cos 315^\\circ = \\frac{\\sqrt{2}}{2}$.\n\n**Step 2.** Sum: $0$.\n\n**Answer:** $0$. **(B)**\n\n**Common mistake:** using the wrong sign for one of them."
+ },
+ {
+  "id": "trig_values_b20",
+  "skillId": "trig_values",
+  "family": "trig_values:tv_tan_deg",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\tan 135^\\circ$?",
+  "choices": {
+   "A": "$-\\sqrt{2}$",
+   "B": "$-\\frac{\\sqrt{6}}{2}$",
+   "C": "$-1$",
+   "D": "$-\\frac{\\sqrt{6} + \\sqrt{2}}{4}$",
+   "E": "$-\\frac{\\sqrt{3}}{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Tangent repeats every $180^\\circ$."
+  ],
+  "solution": "**What we need:** $\\tan 135^\\circ$.\n\n**Key idea:** use the reference angle; tangent is positive in quadrants I and III.\n\n**Step 1.** $\\tan 135^\\circ = \\tan 135^\\circ = -1$.\n\n**Answer:** $-1$. **(C)**\n\n**Common mistake:** getting the sign wrong."
+ },
+ {
+  "id": "trig_values_c01",
+  "skillId": "trig_values",
+  "family": "trig_values:tvc1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\sin^2 18^\\circ + \\sin^2 36^\\circ + \\cdots + \\sin^2 72^\\circ$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$\\frac{5}{2}$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair $\\sin^2\\theta$ with $\\sin^2(90^\\circ - \\theta) = \\cos^2\\theta$."
+  ],
+  "solution": "**What we need:** the sum of many squared sines.\n\n**Key idea:** $\\sin(90^\\circ - \\theta) = \\cos\\theta$, so terms whose angles add to $90^\\circ$ pair up into $\\sin^2\\theta + \\cos^2\\theta = 1$.\n\n**Step 1.** There are $4$ terms, with angles $18^\\circ, 36^\\circ, \\ldots, 72^\\circ$.\n\n**Step 2.** Pair the first and last: $\\sin^2 18^\\circ + \\sin^2 72^\\circ = \\sin^2 18^\\circ + \\cos^2 18^\\circ = 1$. The same works for the next pair inward, and so on.\n\n**Step 3.** That makes $2$ pairs worth $1$ each.\n\n**Step 4.** Total: $2 = 2$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** forgetting the unpaired middle term $\\sin^2 45^\\circ$, or trying to compute each term numerically."
+ },
+ {
+  "id": "trig_values_c02",
+  "skillId": "trig_values",
+  "family": "trig_values:tvc2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\cos 75^\\circ$?",
+  "choices": {
+   "A": "$\\frac{-\\sqrt{6} - \\sqrt{2}}{4}$",
+   "B": "$\\frac{-\\sqrt{6} + \\sqrt{2}}{4}$",
+   "C": "$\\frac{\\sqrt{6} - \\sqrt{2}}{4}$",
+   "D": "$\\frac{\\sqrt{3}}{4}$",
+   "E": "$\\frac{\\sqrt{6} + \\sqrt{2}}{4}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write the angle as a sum or difference of $30^\\circ$, $45^\\circ$, $60^\\circ$, and so on."
+  ],
+  "solution": "**What we need:** the exact value of $\\cos 75^\\circ$.\n\n**Key idea:** $75^\\circ$ is not a special angle, but $75^\\circ = 45^\\circ + 30^\\circ$ is built from special angles. Use the angle sum formula.\n\n**Step 1.** $\\cos(45^\\circ + 30^\\circ) = \\cos 45^\\circ \\cos 30^\\circ - \\sin 45^\\circ \\sin 30^\\circ$.\n\n**Step 2.** Values: $\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$, $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$, $\\sin 30^\\circ = \\frac{1}{2}$, $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$.\n\n**Step 3.** The two products are $\\frac{\\sqrt{6}}{4}$ and $\\frac{\\sqrt{2}}{4}$.\n\n**Step 4.** Combine: $\\frac{\\sqrt{6}}{4} - \\left(\\frac{\\sqrt{2}}{4}\\right) = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$.\n\n**Answer:** $\\frac{\\sqrt{6} - \\sqrt{2}}{4}$. **(C)**\n\n**Common mistake:** splitting the function, as in $\\cos(A + B) = \\cos A + \\cos B$. That is not an identity."
+ },
+ {
+  "id": "trig_values_c03",
+  "skillId": "trig_values",
+  "family": "trig_values:tvc3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "An angle $\\theta$ in the third quadrant has $\\tan\\theta = \\frac{8}{15}$. What is $\\sin\\theta$?",
+  "choices": {
+   "A": "$-\\frac{15}{17}$",
+   "B": "$-\\frac{8}{17}$",
+   "C": "$\\frac{8}{17}$",
+   "D": "$\\frac{8}{15}$",
+   "E": "$\\frac{15}{17}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Draw a right triangle with the right legs, then use the quadrant for signs."
+  ],
+  "solution": "**What we need:** $\\sin\\theta$ from $\\tan\\theta$ and the quadrant.\n\n**Key idea:** think of $\\theta$ as pointing to a point $(x, y)$: $\\tan\\theta = \\frac{y}{x}$, $\\sin\\theta = \\frac{y}{r}$, $\\cos\\theta = \\frac{x}{r}$, where $r = \\sqrt{x^2 + y^2}$.\n\n**Step 1.** In the third quadrant, $x$ is negative and $y$ is negative. With $\\frac{y}{x} = \\frac{8}{15}$, take $x = -15$, $y = -8$.\n\n**Step 2.** $r = \\sqrt{15^2 + 8^2} = 17$ (a $8$, $15$, $17$ right triangle).\n\n**Step 3.** $\\sin\\theta = \\frac{y}{r} = \\frac{-8}{17} = -\\frac{8}{17}$.\n\n**Answer:** $-\\frac{8}{17}$. **(B)**\n\n**Common mistake:** dropping the sign; the quadrant decides whether $x$ and $y$ are negative."
+ },
+ {
+  "id": "trig_values_c04",
+  "skillId": "trig_values",
+  "family": "trig_values:tvc_polygon_area",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A regular $3$-gon is inscribed in a circle of radius $3$. What is its area?",
+  "choices": {
+   "A": "$\\frac{27\\sqrt{3}}{8}$",
+   "B": "$\\frac{31}{4}$",
+   "C": "$\\frac{27\\sqrt{2}}{4}$",
+   "D": "$\\frac{27\\sqrt{3}}{4}$",
+   "E": "$\\frac{27}{2}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Split it into 3 triangles from the center."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** each triangle has two sides $3$ with angle $\\frac{360^\\circ}{3} = 120^\\circ$ between them.\n\n**Step 1.** One triangle: $\\frac{1}{2} \\cdot 3^2 \\sin 120^\\circ$.\n\n**Step 2.** Times $3$: $\\frac{27\\sqrt{3}}{4}$.\n\n**Answer:** $\\frac{27\\sqrt{3}}{4}$. **(D)**\n\n**Common mistake:** using the side length as the radius."
+ },
+ {
+  "id": "trig_values_c05",
+  "skillId": "trig_values",
+  "family": "trig_values:tvc_half_angles",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\tan 105^\\circ$?",
+  "choices": {
+   "A": "$-\\sqrt{6} - \\sqrt{2}$",
+   "B": "$-2 - \\sqrt{3}$",
+   "C": "$-2\\sqrt{2}$",
+   "D": "$-1 - \\sqrt{2}$",
+   "E": "$-\\frac{3}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use $\\tan\\frac{\\theta}{2} = \\frac{1 - \\cos\\theta}{\\sin\\theta}$ or angle sums."
+  ],
+  "solution": "**What we need:** the exact value.\n\n**Key idea:** write the angle as half of, or a sum of, standard angles.\n\n**Step 1.** Working it out gives $-2 - \\sqrt{3}$.\n\n**Answer:** $-2 - \\sqrt{3}$. **(B)**\n\n**Common mistake:** using the reciprocal value."
+ },
+ {
+  "id": "trig_values_c06",
+  "skillId": "trig_values",
+  "family": "trig_values:tvc_sin_sq_sum",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=0}^{11} \\sin^2\\left(\\frac{k\\pi}{12}\\right)$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$\\frac{11}{2}$",
+   "C": "$6$",
+   "D": "$\\frac{13}{2}$",
+   "E": "$12$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the cosines of $\\frac{2k\\pi}{12}$ for $k = 0, \\ldots, 11$ add to $0$ (roots of unity).\n\n**Step 1.** $\\sum \\frac{1 - \\cos(2k\\pi/12)}{2} = \\frac{12}{2} - \\frac{1}{2} \\cdot 0 = 6$.\n\n**Answer:** $6$. **(C)**\n\n**Common mistake:** pairing terms incorrectly."
+ },
+ {
+  "id": "trig_values_c07",
+  "skillId": "trig_values",
+  "family": "trig_values:tvc_count_compare",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many angles $\\theta$ among $0^\\circ, 30^\\circ, 60^\\circ, \\ldots, 330^\\circ$ satisfy $\\sin\\theta > \\cos\\theta$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$12$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the arcs where it holds; watch the endpoints."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $\\sin\\theta > \\cos\\theta$ exactly for $45^\\circ < \\theta < 225^\\circ$.\n\n**Step 1.** Counting the listed angles strictly inside those arcs: $6$.\n\n**Answer:** $6$. **(B)**\n\n**Common mistake:** including the endpoints where equality holds."
+ },
+ {
+  "id": "trig_values_c08",
+  "skillId": "trig_values",
+  "family": "trig_values:tvc_cos_product",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\cos 10^\\circ \\cos 50^\\circ \\cos 70^\\circ$?",
+  "choices": {
+   "A": "$-\\frac{1}{8}$",
+   "B": "$0$",
+   "C": "$\\frac{\\sqrt{3}}{8}$",
+   "D": "$\\frac{\\sqrt{3} - 1}{2}$",
+   "E": "$\\frac{1}{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $\\sin x \\sin(60^\\circ - x)\\sin(60^\\circ + x) = \\frac{1}{4}\\sin 3x$ (and the cosine version), or double angles."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** triple-angle product identities: $\\cos x \\cos(60^\\circ - x)\\cos(60^\\circ + x) = \\frac{1}{4}\\cos 3x$.\n\n**Step 1.** Applying the identity gives $\\frac{\\sqrt{3}}{8}$.\n\n**Answer:** $\\frac{\\sqrt{3}}{8}$. **(C)**\n\n**Common mistake:** multiplying approximate decimals."
+ },
+ {
+  "id": "trig_values_c09",
+  "skillId": "trig_values",
+  "family": "trig_values:tvc_tan_product",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\tan 21^\\circ \\cdot \\tan 22^\\circ \\cdots \\tan 68^\\circ \\cdot \\tan 69^\\circ$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$\\frac{1}{2}$",
+   "C": "$1$",
+   "D": "$2$",
+   "E": "$48$"
+  },
+  "answer": "C",
+  "hints": [
+   "Pair $\\tan x$ with $\\tan(90^\\circ - x)$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $\\tan x \\tan(90^\\circ - x) = \\tan x \\cot x = 1$.\n\n**Step 1.** The angles pair up as $(21, 69)$, $(22, 68)$, ...; the middle one, if any, is $\\tan 45^\\circ = 1$.\n\n**Step 2.** Every pair gives $1$, so the product is $1$.\n\n**Answer:** $1$. **(C)**\n\n**Common mistake:** thinking the product is 0."
+ },
+ {
+  "id": "trig_values_c10",
+  "skillId": "trig_values",
+  "family": "trig_values:tvc_cos_sum_pi",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=1}^{10} \\cos\\left(\\frac{2k\\pi}{10}\\right)$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$5$",
+   "E": "$10$"
+  },
+  "answer": "B",
+  "hints": [
+   "These are real parts of roots of unity."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $e^{2k\\pi i/10}$ for $k = 1$ to $10$ runs over the $10$th roots of unity, which add to $0$ since $1$ is not a multiple of $10$.\n\n**Step 1.** Real part of $0$: $0$.\n\n**Answer:** $0$. **(B)**\n\n**Common mistake:** assuming the sum is $1$."
+ },
+ {
+  "id": "trig_identities_b01",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\sin\\theta = \\frac{7}{25}$ and $\\theta$ is in the first quadrant, what is $\\cos\\theta$?",
+  "choices": {
+   "A": "$-\\frac{24}{25}$",
+   "B": "$\\frac{7}{25}$",
+   "C": "$\\frac{7}{24}$",
+   "D": "$\\frac{18}{25}$",
+   "E": "$\\frac{24}{25}$"
+  },
+  "answer": "E",
+  "hints": [
+   "Use $\\sin^2\\theta + \\cos^2\\theta = 1$."
+  ],
+  "solution": "**What we need:** $\\cos\\theta$ from $\\sin\\theta$.\n\n**Key idea:** the Pythagorean identity $\\sin^2\\theta + \\cos^2\\theta = 1$ gives the size of $\\cos\\theta$; the quadrant gives its sign.\n\n**Step 1.** $\\cos^2\\theta = 1 - \\left(\\frac{7}{25}\\right)^2 = 1 - \\frac{49}{625} = \\frac{576}{625}$.\n\n**Step 2.** So $\\cos\\theta = \\pm\\frac{24}{25}$.\n\n**Step 3.** In the first quadrant cosine is positive, so $\\cos\\theta = \\frac{24}{25}$.\n\n**Answer:** $\\frac{24}{25}$. **(E)**\n\n**Common mistake:** forgetting the sign: cosine is negative in the second quadrant."
+ },
+ {
+  "id": "trig_identities_b02",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\sin\\theta = \\frac{5}{13}$ and $\\cos\\theta = \\frac{12}{13}$, what is $\\cos 2\\theta$?",
+  "choices": {
+   "A": "$-\\frac{119}{169}$",
+   "B": "$\\frac{60}{169}$",
+   "C": "$\\frac{119}{169}$",
+   "D": "$\\frac{10}{13}$",
+   "E": "$\\frac{132}{169}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$ and $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta$."
+  ],
+  "solution": "**What we need:** $\\cos 2\\theta$.\n\n**Key idea:** use the double angle formula, then plug in the given values.\n\n**Step 1.** Double angle formula: $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta$.\n\n**Step 2.** $\\frac{144}{169} - \\frac{25}{169} = \\frac{119}{169} = \\frac{119}{169}$.\n\n**Answer:** $\\frac{119}{169}$. **(C)**\n\n**Common mistake:** subtracting in the wrong order ($\\sin^2 - \\cos^2$), which flips the sign."
+ },
+ {
+  "id": "trig_identities_b03",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\sin x + \\cos x = \\frac{4}{3}$, what is $\\sin x \\cos x$?",
+  "choices": {
+   "A": "$-\\frac{7}{9}$",
+   "B": "$\\frac{7}{18}$",
+   "C": "$\\frac{2}{3}$",
+   "D": "$\\frac{25}{18}$",
+   "E": "$\\frac{16}{9}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Square both sides of the equation."
+  ],
+  "solution": "**What we need:** the product $\\sin x\\cos x$.\n\n**Key idea:** squaring a sum creates the product term, and $\\sin^2 x + \\cos^2 x = 1$ cleans up the rest.\n\n**Step 1.** Square both sides: $\\sin^2 x + 2\\sin x\\cos x + \\cos^2 x = \\frac{16}{9}$.\n\n**Step 2.** Replace $\\sin^2 x + \\cos^2 x$ with $1$: $1 + 2\\sin x\\cos x = \\frac{16}{9}$.\n\n**Step 3.** $2\\sin x\\cos x = \\frac{7}{9}$, so $\\sin x\\cos x = \\frac{7}{18}$.\n\n**Answer:** $\\frac{7}{18}$. **(B)**\n\n**Common mistake:** forgetting the $1$ from $\\sin^2 x + \\cos^2 x$, or forgetting to divide by $2$."
+ },
+ {
+  "id": "trig_identities_b04",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\sin^2 50^\\circ + \\sin^2 40^\\circ$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$\\frac{1}{2}$",
+   "D": "$1$",
+   "E": "$2$"
+  },
+  "answer": "D",
+  "hints": [
+   "Use $\\sin^2 + \\cos^2 = 1$ and the cofunction identities like $\\sin(90^\\circ - x) = \\cos x$."
+  ],
+  "solution": "**What we need:** the value of $\\sin^2 50^\\circ + \\sin^2 40^\\circ$, without a calculator.\n\n**Key idea:** the angle isn't special, so an identity must make the expression collapse.\n\n**Step 1.** The angles add to $90^\\circ$, so $\\sin 40^\\circ = \\sin(90^\\circ - 50^\\circ) = \\cos 50^\\circ$.\n\n**Step 2.** The expression becomes $\\sin^2 50^\\circ + \\cos^2 50^\\circ$, which is $1$.\n\n**Answer:** $1$. **(D)**\n\n**Common mistake:** trying to estimate each trig value numerically."
+ },
+ {
+  "id": "trig_identities_b05",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_sin2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\sin\\theta = \\frac{9}{41}$ and $\\theta$ is acute, what is $\\sin 2\\theta$?",
+  "choices": {
+   "A": "$\\frac{162}{1681}$",
+   "B": "$\\frac{360}{1681}$",
+   "C": "$\\frac{720}{1681}$",
+   "D": "$\\frac{18}{41}$",
+   "E": "$\\frac{1519}{1681}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$."
+  ],
+  "solution": "**What we need:** $\\sin 2\\theta$.\n\n**Key idea:** find $\\cos\\theta$, then use the double-angle formula.\n\n**Step 1.** $\\cos\\theta = \\frac{40}{41}$.\n\n**Step 2.** $2 \\cdot \\frac{9}{41} \\cdot \\frac{40}{41} = \\frac{720}{1681}$.\n\n**Answer:** $\\frac{720}{1681}$. **(C)**\n\n**Common mistake:** doubling $\\sin\\theta$."
+ },
+ {
+  "id": "trig_identities_b06",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_tan2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\tan\\theta = \\frac{2}{7}$, what is $\\tan 2\\theta$?",
+  "choices": {
+   "A": "$-\\frac{28}{45}$",
+   "B": "$\\frac{4}{49}$",
+   "C": "$\\frac{28}{53}$",
+   "D": "$\\frac{4}{7}$",
+   "E": "$\\frac{28}{45}$"
+  },
+  "answer": "E",
+  "hints": [
+   "$\\tan 2\\theta = \\frac{2\\tan\\theta}{1 - \\tan^2\\theta}$."
+  ],
+  "solution": "**What we need:** $\\tan 2\\theta$.\n\n**Key idea:** the double-angle formula for tangent.\n\n**Step 1.** $\\frac{2 \\cdot \\frac{2}{7}}{1 - \\frac{4}{49}} = \\frac{28}{45}$.\n\n**Answer:** $\\frac{28}{45}$. **(E)**\n\n**Common mistake:** doubling the tangent."
+ },
+ {
+  "id": "trig_identities_b07",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_simplify",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Which expression equals $\\dfrac{\\sin\\theta}{\\csc\\theta} + \\dfrac{\\cos\\theta}{\\sec\\theta}$ for all $\\theta$ where it is defined?",
+  "choices": {
+   "A": "$1$",
+   "B": "$\\sin\\theta$",
+   "C": "$\\cos\\theta$",
+   "D": "$\\tan\\theta$",
+   "E": "$\\sin^2\\theta$"
+  },
+  "answer": "A",
+  "hints": [
+   "Rewrite everything in sines and cosines."
+  ],
+  "solution": "**What we need:** the simplified form.\n\n**Key idea:** use $\\sec = \\frac{1}{\\cos}$, $\\csc = \\frac{1}{\\sin}$, $\\tan = \\frac{\\sin}{\\cos}$, and $\\sin^2 + \\cos^2 = 1$.\n\n**Step 1.** Simplifying gives $1$.\n\n**Answer:** $1$. **(A)**\n\n**Common mistake:** canceling terms that aren't factors."
+ },
+ {
+  "id": "trig_identities_b08",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_cos_diff",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Acute angles $A$ and $B$ have $\\sin A = \\frac{8}{17}$ and $\\sin B = \\frac{20}{29}$. What is $\\cos(A + B)$?",
+  "choices": {
+   "A": "$-\\frac{155}{493}$",
+   "B": "$\\frac{155}{493}$",
+   "C": "$\\frac{160}{493}$",
+   "D": "$\\frac{315}{493}$",
+   "E": "$\\frac{475}{493}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the cosines, then use the sum/difference formula."
+  ],
+  "solution": "**What we need:** $\\cos(A + B)$.\n\n**Key idea:** angle addition formulas.\n\n**Step 1.** $\\cos A = \\frac{15}{17}$, $\\cos B = \\frac{21}{29}$.\n\n**Step 2.** $\\cos(A + B) = \\frac{155}{493}$.\n\n**Answer:** $\\frac{155}{493}$. **(B)**\n\n**Common mistake:** using the wrong sign in the formula."
+ },
+ {
+  "id": "trig_identities_b09",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_cos2_from_cos",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\cos\\theta = \\frac{5}{13}$, what is $\\cos 2\\theta$?",
+  "choices": {
+   "A": "$-\\frac{119}{169}$",
+   "B": "$\\frac{25}{169}$",
+   "C": "$\\frac{50}{169}$",
+   "D": "$\\frac{119}{169}$",
+   "E": "$\\frac{10}{13}$"
+  },
+  "answer": "A",
+  "hints": [
+   "$\\cos 2\\theta = 2\\cos^2\\theta - 1$."
+  ],
+  "solution": "**What we need:** $\\cos 2\\theta$.\n\n**Key idea:** double-angle formula in terms of cosine.\n\n**Step 1.** $2 \\cdot \\frac{25}{169} - 1 = -\\frac{119}{169}$.\n\n**Answer:** $-\\frac{119}{169}$. **(A)**\n\n**Common mistake:** doubling $\\cos\\theta$."
+ },
+ {
+  "id": "trig_identities_b10",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_half",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\cos\\theta = -\\frac{7}{25}$, what is $\\cos^2\\frac{\\theta}{2}$?",
+  "choices": {
+   "A": "$-\\frac{7}{50}$",
+   "B": "$\\frac{49}{625}$",
+   "C": "$\\frac{9}{25}$",
+   "D": "$\\frac{16}{25}$",
+   "E": "$\\frac{18}{25}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Half-angle formula."
+  ],
+  "solution": "**What we need:** $\\cos^2\\frac{\\theta}{2}$.\n\n**Key idea:** $\\cos^2\\frac{\\theta}{2} = \\frac{1 + \\cos\\theta}{2}$.\n\n**Step 1.** $\\frac{1 - \\frac{7}{25}}{2} = \\frac{9}{25}$.\n\n**Answer:** $\\frac{9}{25}$. **(C)**\n\n**Common mistake:** using $1 - \\cos\\theta$."
+ },
+ {
+  "id": "trig_identities_b11",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_diff_sq",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\sin x \\cos x = \\frac{1}{5}$, what is $(\\sin x - \\cos x)^2$?",
+  "choices": {
+   "A": "$\\frac{1}{25}$",
+   "B": "$\\frac{2}{5}$",
+   "C": "$\\frac{3}{5}$",
+   "D": "$\\frac{4}{5}$",
+   "E": "$\\frac{7}{5}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Expand the square."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $(\\sin x - \\cos x)^2 = \\sin^2 x + \\cos^2 x - 2\\sin x\\cos x$.\n\n**Step 1.** $1 - 2 \\cdot \\frac{1}{5} = \\frac{3}{5}$.\n\n**Answer:** $\\frac{3}{5}$. **(C)**\n\n**Common mistake:** using $+2\\sin x \\cos x$."
+ },
+ {
+  "id": "trig_identities_b12",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_tan_cot",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\sin x \\cos x = \\frac{1}{10}$, what is $\\tan x + \\cot x$?",
+  "choices": {
+   "A": "$\\frac{1}{10}$",
+   "B": "$\\frac{1}{5}$",
+   "C": "$\\frac{9}{10}$",
+   "D": "$10$",
+   "E": "$20$"
+  },
+  "answer": "D",
+  "hints": [
+   "Combine into one fraction."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $\\tan x + \\cot x = \\frac{\\sin^2 x + \\cos^2 x}{\\sin x \\cos x} = \\frac{1}{\\sin x\\cos x}$.\n\n**Step 1.** $\\frac{1}{\\frac{1}{10}} = 10$.\n\n**Answer:** $10$. **(D)**\n\n**Common mistake:** adding the numerators without a common denominator."
+ },
+ {
+  "id": "trig_identities_b13",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_cos4_sin4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\cos\\theta = \\frac{21}{29}$, what is $\\cos^4\\theta - \\sin^4\\theta$?",
+  "choices": {
+   "A": "$-\\frac{41}{841}$",
+   "B": "$\\frac{41}{841}$",
+   "C": "$\\frac{70}{841}$",
+   "D": "$\\frac{194481}{707281}$",
+   "E": "$1$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor as a difference of squares."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $\\cos^4 - \\sin^4 = (\\cos^2 + \\sin^2)(\\cos^2 - \\sin^2) = \\cos 2\\theta$.\n\n**Step 1.** $\\cos^2\\theta - \\sin^2\\theta = \\frac{441}{841} - \\frac{400}{841} = \\frac{41}{841}$.\n\n**Answer:** $\\frac{41}{841}$. **(B)**\n\n**Common mistake:** computing $\\sin^4$ with the wrong sign."
+ },
+ {
+  "id": "trig_identities_b14",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_sq_range",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the minimum value of $2\\sin^2 x + 6\\cos^2 x - 3$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$3$",
+   "E": "$5$"
+  },
+  "answer": "A",
+  "hints": [
+   "Replace $\\cos^2 x$ with $1 - \\sin^2 x$."
+  ],
+  "solution": "**What we need:** the extreme value.\n\n**Key idea:** the expression is $6 + (2 - 6)\\sin^2 x - 3$, and $\\sin^2 x$ ranges from $0$ to $1$.\n\n**Step 1.** At the extremes: $3$ and $-1$.\n\n**Step 2.** The smaller: $-1$.\n\n**Answer:** $-1$. **(A)**\n\n**Common mistake:** adding both coefficients."
+ },
+ {
+  "id": "trig_identities_b15",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_cofunction",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\sin 11^\\circ = \\cos y^\\circ$ with $0 < y < 90$, what is $y$?",
+  "choices": {
+   "A": "$11$",
+   "B": "$79$",
+   "C": "$101$",
+   "D": "$169$",
+   "E": "$349$"
+  },
+  "answer": "B",
+  "hints": [
+   "Complementary angles."
+  ],
+  "solution": "**What we need:** $y$.\n\n**Key idea:** $\\sin x^\\circ = \\cos(90 - x)^\\circ$.\n\n**Step 1.** $y = 90 - 11 = 79$.\n\n**Answer:** $79$. **(B)**\n\n**Common mistake:** answering $11$."
+ },
+ {
+  "id": "trig_identities_b16",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_sum_product",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\sin 105^\\circ + \\sin 15^\\circ$?",
+  "choices": {
+   "A": "$\\frac{\\sqrt{6} + \\sqrt{2}}{4}$",
+   "B": "$\\sqrt{6} - \\sqrt{2}$",
+   "C": "$\\frac{\\sqrt{6}}{2}$",
+   "D": "$\\sqrt{2}$",
+   "E": "$\\sqrt{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Sum-to-product."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $\\sin A \\pm \\sin B$ and $\\cos A \\pm \\cos B$ turn into products of half-sum and half-difference angles.\n\n**Step 1.** Applying sum-to-product gives $\\frac{\\sqrt{6}}{2}$.\n\n**Answer:** $\\frac{\\sqrt{6}}{2}$. **(C)**\n\n**Common mistake:** adding the angles first."
+ },
+ {
+  "id": "trig_identities_b17",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_tan_diff",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\tan A = 3$ and $\\tan B = \\frac{1}{2}$, what is $\\tan(A - B)$?",
+  "choices": {
+   "A": "$-7$",
+   "B": "$-5$",
+   "C": "$-1$",
+   "D": "$1$",
+   "E": "$\\frac{5}{2}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\tan(A - B) = \\frac{\\tan A - \\tan B}{1 + \\tan A \\tan B}$."
+  ],
+  "solution": "**What we need:** $\\tan(A - B)$.\n\n**Key idea:** the tangent difference formula.\n\n**Step 1.** $\\frac{3 - \\frac{1}{2}}{1 + \\frac{3}{2}} = 1$.\n\n**Answer:** $1$. **(D)**\n\n**Common mistake:** using $1 - \\tan A\\tan B$ in the denominator."
+ },
+ {
+  "id": "trig_identities_b18",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_sin3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\sin\\theta = \\frac{1}{6}$, what is $\\sin 3\\theta$?",
+  "choices": {
+   "A": "$-\\frac{13}{27}$",
+   "B": "$\\frac{1}{216}$",
+   "C": "$\\frac{13}{27}$",
+   "D": "$\\frac{107}{216}$",
+   "E": "$\\frac{1}{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\sin 3\\theta = 3\\sin\\theta - 4\\sin^3\\theta$."
+  ],
+  "solution": "**What we need:** $\\sin 3\\theta$.\n\n**Key idea:** the triple-angle formula.\n\n**Step 1.** $3 \\cdot \\frac{1}{6} - 4 \\cdot \\frac{1}{216} = \\frac{13}{27}$.\n\n**Answer:** $\\frac{13}{27}$. **(C)**\n\n**Common mistake:** tripling $\\sin\\theta$."
+ },
+ {
+  "id": "trig_identities_b19",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_sec_from_tan",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\tan\\theta = \\frac{9}{40}$, what is $\\sec^2\\theta$?",
+  "choices": {
+   "A": "$\\frac{81}{1600}$",
+   "B": "$\\frac{1519}{1600}$",
+   "C": "$\\frac{1600}{1681}$",
+   "D": "$\\frac{41}{40}$",
+   "E": "$\\frac{1681}{1600}$"
+  },
+  "answer": "E",
+  "hints": [
+   "$1 + \\tan^2\\theta = \\sec^2\\theta$."
+  ],
+  "solution": "**What we need:** $\\sec^2\\theta$.\n\n**Key idea:** Pythagorean identity divided by $\\cos^2\\theta$.\n\n**Step 1.** $1 + \\frac{81}{1600} = \\frac{1681}{1600}$.\n\n**Answer:** $\\frac{1681}{1600}$. **(E)**\n\n**Common mistake:** forgetting to add 1."
+ },
+ {
+  "id": "trig_identities_b20",
+  "skillId": "trig_identities",
+  "family": "trig_identities:ti_sin_cos_sum_sq",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\sin x + \\cos x = \\frac{2}{5}$, what is $\\sin 2x$?",
+  "choices": {
+   "A": "$-\\frac{21}{25}$",
+   "B": "$-\\frac{21}{50}$",
+   "C": "$\\frac{4}{25}$",
+   "D": "$\\frac{21}{25}$",
+   "E": "$\\frac{29}{25}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Square both sides."
+  ],
+  "solution": "**What we need:** $\\sin 2x$.\n\n**Key idea:** $(\\sin x + \\cos x)^2 = 1 + 2\\sin x\\cos x = 1 + \\sin 2x$.\n\n**Step 1.** $\\frac{4}{25} = 1 + \\sin 2x$.\n\n**Step 2.** $\\sin 2x = -\\frac{21}{25}$.\n\n**Answer:** $-\\frac{21}{25}$. **(A)**\n\n**Common mistake:** forgetting that $2\\sin x\\cos x$ is already $\\sin 2x$."
+ },
+ {
+  "id": "trig_identities_c01",
+  "skillId": "trig_identities",
+  "family": "trig_identities:tic1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\tan A = \\frac{2}{3}$ and $\\tan B = \\frac{1}{5}$, what is $\\tan(A + B)$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$\\frac{2}{15}$",
+   "C": "$\\frac{7}{17}$",
+   "D": "$\\frac{13}{15}$",
+   "E": "$1$"
+  },
+  "answer": "E",
+  "hints": [
+   "$\\tan(A + B) = \\frac{\\tan A + \\tan B}{1 - \\tan A \\tan B}$."
+  ],
+  "solution": "**What we need:** $\\tan(A + B)$.\n\n**Key idea:** the tangent addition formula $\\tan(A + B) = \\dfrac{\\tan A + \\tan B}{1 - \\tan A\\tan B}$.\n\n**Step 1.** Top: $\\frac{2}{3} + \\frac{1}{5} = \\frac{13}{15}$.\n\n**Step 2.** Bottom: $1 - \\frac{2}{3} \\cdot \\frac{1}{5} = 1 - \\frac{2}{15} = \\frac{13}{15}$.\n\n**Step 3.** Divide: $\\frac{\\frac{13}{15}}{\\frac{13}{15}} = 1$.\n\n**Answer:** $1$. **(E)**\n\n**Common mistake:** using $+$ in the denominator, which is the formula for $\\tan(A - B)$ turned around."
+ },
+ {
+  "id": "trig_identities_c02",
+  "skillId": "trig_identities",
+  "family": "trig_identities:tic2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the minimum value of $5\\sin x + 12\\cos x + 1$?",
+  "choices": {
+   "A": "$-16$",
+   "B": "$-12$",
+   "C": "$-11$",
+   "D": "$12$",
+   "E": "$13$"
+  },
+  "answer": "B",
+  "hints": [
+   "$a\\sin x + b\\cos x$ ranges between $-\\sqrt{a^2 + b^2}$ and $\\sqrt{a^2 + b^2}$."
+  ],
+  "solution": "**What we need:** the smallest value of the expression.\n\n**Key idea:** $a\\sin x + b\\cos x$ can be rewritten as one wave $R\\sin(x + \\varphi)$ with $R = \\sqrt{a^2 + b^2}$, so it swings between $-R$ and $R$.\n\n**Step 1.** $R = \\sqrt{5^2 + 12^2} = \\sqrt{169} = 13$.\n\n**Step 2.** So $5\\sin x + 12\\cos x$ ranges from $-13$ to $13$.\n\n**Step 3.** The min of the whole expression is $-13 + 1 = -12$.\n\n**Answer:** $-12$. **(B)**\n\n**Common mistake:** adding $5 + 12$; sine and cosine can't both equal $1$ at the same $x$."
+ },
+ {
+  "id": "trig_identities_c03",
+  "skillId": "trig_identities",
+  "family": "trig_identities:tic3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\tan 20^\\circ \\tan 40^\\circ \\tan 80^\\circ$?",
+  "choices": {
+   "A": "$\\frac{1}{8}$",
+   "B": "$\\frac{\\sqrt{3}}{3}$",
+   "C": "$\\frac{\\sqrt{3}}{2}$",
+   "D": "$1$",
+   "E": "$\\sqrt{3}$"
+  },
+  "answer": "E",
+  "hints": [
+   "Look for a double angle or product identity that collapses the expression."
+  ],
+  "solution": "**What we need:** the exact value of $\\tan 20^\\circ \\tan 40^\\circ \\tan 80^\\circ$.\n\n**Key idea:** these angles are linked (doubling, or $60^\\circ \\pm \\theta$, or the pentagon angles), so a classic identity collapses the expression.\n\n**Step 1.** Identity: $\\tan\\theta \\tan(60^\\circ - \\theta)\\tan(60^\\circ + \\theta) = \\tan 3\\theta$.\n\n**Step 2.** With $\\theta = 20^\\circ$: $60^\\circ - 20^\\circ = 40^\\circ$ and $60^\\circ + 20^\\circ = 80^\\circ$, exactly our angles.\n\n**Step 3.** So the product is $\\tan 60^\\circ = \\sqrt{3}$.\n\n**Answer:** $\\sqrt{3}$. **(E)**\n\n**Common mistake:** estimating with decimals; the exact value comes from the identity."
+ },
+ {
+  "id": "trig_identities_c04",
+  "skillId": "trig_identities",
+  "family": "trig_identities:tic_tan_pairs",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $(1 + \\tan 11^\\circ)(1 + \\tan 12^\\circ)\\cdots(1 + \\tan 34^\\circ)$?",
+  "choices": {
+   "A": "$24$",
+   "B": "$2048$",
+   "C": "$4096$",
+   "D": "$8192$",
+   "E": "$16777216$"
+  },
+  "answer": "C",
+  "hints": [
+   "Pair angles adding to $45^\\circ$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** if $x + y = 45^\\circ$ then $(1 + \\tan x)(1 + \\tan y) = 2$, since $\\tan x + \\tan y = 1 - \\tan x\\tan y$.\n\n**Step 1.** There are $24$ factors, forming $12$ pairs.\n\n**Step 2.** Product: $2^{12} = 4096$.\n\n**Answer:** $4096$. **(C)**\n\n**Common mistake:** pairing to $90^\\circ$ instead."
+ },
+ {
+  "id": "trig_identities_c05",
+  "skillId": "trig_identities",
+  "family": "trig_identities:tic_fourth",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\sin 2x = \\frac{3}{8}$, what is $\\sin^4 x + \\cos^4 x$?",
+  "choices": {
+   "A": "$\\frac{9}{128}$",
+   "B": "$\\frac{23}{32}$",
+   "C": "$\\frac{13}{16}$",
+   "D": "$\\frac{55}{64}$",
+   "E": "$\\frac{119}{128}$"
+  },
+  "answer": "E",
+  "hints": [
+   "$(\\sin^2 x + \\cos^2 x)^2 = 1$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $\\sin^4 x + \\cos^4 x = 1 - 2\\sin^2 x\\cos^2 x = 1 - \\frac{1}{2}\\sin^2 2x$.\n\n**Step 1.** $1 - \\frac{1}{2} \\cdot \\frac{9}{64} = \\frac{119}{128}$.\n\n**Answer:** $\\frac{119}{128}$. **(E)**\n\n**Common mistake:** using $1 - \\sin^2 2x$."
+ },
+ {
+  "id": "trig_identities_c06",
+  "skillId": "trig_identities",
+  "family": "trig_identities:tic_cos3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\cos\\theta = -\\frac{1}{2}$, what is $\\cos 3\\theta$?",
+  "choices": {
+   "A": "$-2$",
+   "B": "$-\\frac{3}{2}$",
+   "C": "$-1$",
+   "D": "$-\\frac{1}{8}$",
+   "E": "$1$"
+  },
+  "answer": "E",
+  "hints": [
+   "$\\cos 3\\theta = 4\\cos^3\\theta - 3\\cos\\theta$."
+  ],
+  "solution": "**What we need:** $\\cos 3\\theta$.\n\n**Key idea:** the cosine triple-angle formula.\n\n**Step 1.** $4 \\cdot -\\frac{1}{8} - 3 \\cdot -\\frac{1}{2} = 1$.\n\n**Answer:** $1$. **(E)**\n\n**Common mistake:** using the sine version's signs."
+ },
+ {
+  "id": "trig_identities_c07",
+  "skillId": "trig_identities",
+  "family": "trig_identities:tic_triangle_tan",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $\\tan A = \\frac{5}{4}$ and $\\tan B = 1$. What is $\\tan C$?",
+  "choices": {
+   "A": "$-9$",
+   "B": "$1$",
+   "C": "$\\frac{5}{4}$",
+   "D": "$\\frac{9}{4}$",
+   "E": "$9$"
+  },
+  "answer": "E",
+  "hints": [
+   "$C = 180^\\circ - (A + B)$."
+  ],
+  "solution": "**What we need:** $\\tan C$.\n\n**Key idea:** $\\tan C = -\\tan(A + B)$.\n\n**Step 1.** $\\tan(A + B) = \\frac{\\frac{5}{4} + 1}{1 - \\frac{5}{4}} = -9$.\n\n**Step 2.** $\\tan C = 9$.\n\n**Answer:** $9$. **(E)**\n\n**Common mistake:** forgetting the minus sign."
+ },
+ {
+  "id": "trig_identities_c08",
+  "skillId": "trig_identities",
+  "family": "trig_identities:tic_weierstrass",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\tan\\frac{x}{2} = \\frac{2}{5}$, what is $\\sin x$?",
+  "choices": {
+   "A": "$-\\frac{20}{29}$",
+   "B": "$\\frac{20}{29}$",
+   "C": "$\\frac{21}{29}$",
+   "D": "$\\frac{4}{5}$",
+   "E": "$\\frac{20}{21}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use the half-angle tangent substitution."
+  ],
+  "solution": "**What we need:** $\\sin x$.\n\n**Key idea:** with $t = \\tan\\frac{x}{2}$: $\\sin x = \\frac{2t}{1 + t^2}$, $\\cos x = \\frac{1 - t^2}{1 + t^2}$.\n\n**Step 1.** Here $\\sin x = \\frac{20}{29}$.\n\n**Answer:** $\\frac{20}{29}$. **(B)**\n\n**Common mistake:** using $\\tan x$ in place of $\\tan\\frac{x}{2}$."
+ },
+ {
+  "id": "trig_identities_c09",
+  "skillId": "trig_identities",
+  "family": "trig_identities:tic_cos_sq_sum",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\cos^2 23^\\circ + \\cos^2 37^\\circ + \\cos^2 83^\\circ$?",
+  "choices": {
+   "A": "$\\frac{3}{4}$",
+   "B": "$1$",
+   "C": "$\\frac{3}{2}$",
+   "D": "$2$",
+   "E": "$3$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $\\cos^2 t = \\frac{1 + \\cos 2t}{2}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the three cosines $\\cos 46^\\circ$, $\\cos 74^\\circ$, $\\cos 166^\\circ$ add to $0$.\n\n**Step 1.** Sum $= \\frac{3}{2} + \\frac{1}{2}(\\cos 2x + \\cos(120^\\circ - 2x) + \\cos(120^\\circ + 2x)) = \\frac{3}{2} + 0$.\n\n**Answer:** $\\frac{3}{2}$. **(C)**\n\n**Common mistake:** assuming each term is $\\frac{1}{2}$ only by coincidence."
+ },
+ {
+  "id": "trig_identities_c10",
+  "skillId": "trig_identities",
+  "family": "trig_identities:tic_tan_triple",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\tan 5^\\circ \\tan 55^\\circ \\tan 65^\\circ$?",
+  "choices": {
+   "A": "$\\frac{1}{4}$",
+   "B": "$\\frac{\\sqrt{6} - \\sqrt{2}}{4}$",
+   "C": "$2 - \\sqrt{3}$",
+   "D": "$\\frac{\\sqrt{3} - 1}{2}$",
+   "E": "$\\frac{\\sqrt{3}}{4}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\tan x \\tan(60^\\circ - x)\\tan(60^\\circ + x) = \\tan 3x$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** the tangent triple-angle product identity.\n\n**Step 1.** $\\tan 15^\\circ = 2 - \\sqrt{3}$.\n\n**Answer:** $2 - \\sqrt{3}$. **(C)**\n\n**Common mistake:** multiplying the angles."
+ },
+ {
+  "id": "trig_laws_b01",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $a = 12$, $b = 7$, and $\\angle C = 60^\\circ$. What is the length of side $c$?",
+  "choices": {
+   "A": "$\\sqrt{95}$",
+   "B": "$\\sqrt{109}$",
+   "C": "$\\sqrt{193}$",
+   "D": "$\\sqrt{277}$",
+   "E": "$19$"
+  },
+  "answer": "B",
+  "hints": [
+   "Law of Cosines: $c^2 = a^2 + b^2 - 2ab\\cos C$."
+  ],
+  "solution": "**What we need:** side $c$, opposite the known angle $C$.\n\n**Key idea:** two sides and the angle between them: use the Law of Cosines, $c^2 = a^2 + b^2 - 2ab\\cos C$.\n\n**Step 1.** $\\cos 60^\\circ = \\frac{1}{2}$.\n\n**Step 2.** $2ab\\cos C = 2 \\cdot 12 \\cdot 7 \\cdot \\frac{1}{2} = 84$.\n\n**Step 3.** $c^2 = 144 + 49 - (84) = 109$.\n\n**Step 4.** $c = \\sqrt{109} = \\sqrt{109}$.\n\n**Answer:** $\\sqrt{109}$. **(B)**\n\n**Common mistake:** forgetting to take the square root at the end."
+ },
+ {
+  "id": "trig_laws_b02",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the area of a triangle with two sides of lengths $10$ and $7$ that form a $150^\\circ$ angle?",
+  "choices": {
+   "A": "$\\frac{35}{2}$",
+   "B": "$19$",
+   "C": "$\\frac{35\\sqrt{3}}{2}$",
+   "D": "$35$",
+   "E": "$70$"
+  },
+  "answer": "A",
+  "hints": [
+   "Area $= \\frac{1}{2}ab\\sin C$."
+  ],
+  "solution": "**What we need:** the area from two sides and the angle between them.\n\n**Key idea:** Area $= \\frac{1}{2}ab\\sin C$. (The height to side $a$ is $b\\sin C$.)\n\n**Step 1.** $\\sin 150^\\circ = \\frac{1}{2}$.\n\n**Step 2.** Area $= \\frac{1}{2} \\cdot 10 \\cdot 7 \\cdot \\frac{1}{2} = \\frac{35}{2}$.\n\n**Answer:** $\\frac{35}{2}$. **(A)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$, or using $\\cos C$ instead of $\\sin C$."
+ },
+ {
+  "id": "trig_laws_b03",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $\\angle A = 45^\\circ$, $\\angle B = 90^\\circ$, and $BC = 7$. What is $AC$?",
+  "choices": {
+   "A": "$\\frac{7\\sqrt{3}}{2}$",
+   "B": "$7$",
+   "C": "$7\\sqrt{2}$",
+   "D": "$7\\sqrt{3}$",
+   "E": "$14$"
+  },
+  "answer": "C",
+  "hints": [
+   "Law of Sines: $\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$. Side $BC$ is opposite $A$ and $AC$ is opposite $B$."
+  ],
+  "solution": "**What we need:** side $AC$.\n\n**Key idea:** Law of Sines: each side divided by the sine of the opposite angle gives the same number.\n\n**Step 1.** $BC$ is opposite $\\angle A$ and $AC$ is opposite $\\angle B$.\n\n**Step 2.** $\\frac{AC}{\\sin 90^\\circ} = \\frac{7}{\\sin 45^\\circ}$, so $AC = 7 \\cdot \\frac{\\sin 90^\\circ}{\\sin 45^\\circ}$.\n\n**Step 3.** $\\sin 90^\\circ = 1$ and $\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$.\n\n**Step 4.** $AC = 7 \\cdot \\frac{1}{\\frac{\\sqrt{2}}{2}} = 7\\sqrt{2}$.\n\n**Answer:** $7\\sqrt{2}$. **(C)**\n\n**Common mistake:** pairing a side with the wrong angle. Each side goes with the angle across from it."
+ },
+ {
+  "id": "trig_laws_b04",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A triangle has sides $9$, $21$, and $24$. What is the measure, in degrees, of the angle opposite the side of length $24$?",
+  "choices": {
+   "A": "$45$",
+   "B": "$60$",
+   "C": "$90$",
+   "D": "$120$",
+   "E": "$150$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use the Law of Cosines to find $\\cos C$."
+  ],
+  "solution": "**What we need:** the angle opposite the side of length $24$.\n\n**Key idea:** three sides known: solve the Law of Cosines for the cosine, $\\cos C = \\frac{a^2 + b^2 - c^2}{2ab}$.\n\n**Step 1.** Top: $9^2 + 21^2 - 24^2 = 81 + 441 - 576 = -54$.\n\n**Step 2.** Bottom: $2 \\cdot 9 \\cdot 21 = 378$.\n\n**Step 3.** $\\cos C = -\\frac{1}{7}$, and the angle in $(0^\\circ, 180^\\circ)$ with this cosine is $60^\\circ$.\n\n**Answer:** $60^\\circ$. **(B)**\n\n**Common mistake:** dropping the minus sign; a negative cosine means an obtuse angle."
+ },
+ {
+  "id": "trig_laws_b05",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_cos120",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $a = 4$, $b = 9$, and $\\angle C = 120^\\circ$. What is $c$?",
+  "choices": {
+   "A": "$\\sqrt{61}$",
+   "B": "$\\sqrt{97}$",
+   "C": "$2\\sqrt{33}$",
+   "D": "$\\sqrt{133}$",
+   "E": "$13$"
+  },
+  "answer": "D",
+  "hints": [
+   "Law of Cosines with $\\cos 120^\\circ = -\\frac{1}{2}$."
+  ],
+  "solution": "**What we need:** side $c$.\n\n**Key idea:** $c^2 = a^2 + b^2 - 2ab\\cos C$.\n\n**Step 1.** $c^2 = 16 + 81 + 36 = 133$.\n\n**Step 2.** $c = \\sqrt{133}$.\n\n**Answer:** $\\sqrt{133}$. **(D)**\n\n**Common mistake:** using $+\\frac{1}{2}$ for $\\cos 120^\\circ$."
+ },
+ {
+  "id": "trig_laws_b06",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_area_angle",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the area of a triangle with sides $4$ and $2$ and a $30^\\circ$ angle between them?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$2\\sqrt{3}$",
+   "E": "$4$"
+  },
+  "answer": "B",
+  "hints": [
+   "Area $= \\frac{1}{2}ab\\sin C$."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** two sides and the included angle.\n\n**Step 1.** $\\sin 30^\\circ = \\frac{1}{2}$.\n\n**Step 2.** $\\frac{1}{2} \\cdot 4 \\cdot 2 \\cdot \\frac{1}{2} = 2$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$."
+ },
+ {
+  "id": "trig_laws_b07",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_sines",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $\\angle A = 45^\\circ$, $\\angle B = 60^\\circ$, and $a = 10$. What is $b$?",
+  "choices": {
+   "A": "$5\\sqrt{3}$",
+   "B": "$10$",
+   "C": "$5\\sqrt{6}$",
+   "D": "$10\\sqrt{2}$",
+   "E": "$20$"
+  },
+  "answer": "C",
+  "hints": [
+   "Law of Sines."
+  ],
+  "solution": "**What we need:** side $b$.\n\n**Key idea:** $\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$.\n\n**Step 1.** $b = 10 \\cdot \\frac{\\sin 60^\\circ}{\\sin 45^\\circ} = 10 \\cdot \\frac{\\frac{\\sqrt{3}}{2}}{\\frac{\\sqrt{2}}{2}} = 5\\sqrt{6}$.\n\n**Answer:** $5\\sqrt{6}$. **(C)**\n\n**Common mistake:** flipping the ratio."
+ },
+ {
+  "id": "trig_laws_b08",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_circumradius",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $BC = 9$ and $\\angle A = 135^\\circ$. What is the circumradius?",
+  "choices": {
+   "A": "$\\frac{9}{2}$",
+   "B": "$\\frac{9\\sqrt{2}}{2}$",
+   "C": "$9\\sqrt{3}$",
+   "D": "$18$",
+   "E": "$19$"
+  },
+  "answer": "B",
+  "hints": [
+   "Extended Law of Sines."
+  ],
+  "solution": "**What we need:** the circumradius $R$.\n\n**Key idea:** $\\frac{a}{\\sin A} = 2R$.\n\n**Step 1.** $2R = \\frac{9}{\\frac{\\sqrt{2}}{2}}$.\n\n**Step 2.** $R = \\frac{9\\sqrt{2}}{2}$.\n\n**Answer:** $\\frac{9\\sqrt{2}}{2}$. **(B)**\n\n**Common mistake:** forgetting to halve."
+ },
+ {
+  "id": "trig_laws_b09",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_cos_value",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A triangle has sides $4$, $7$, and $8$. What is the cosine of the angle opposite the side of length $8$?",
+  "choices": {
+   "A": "$-\\frac{3}{56}$",
+   "B": "$-\\frac{1}{56}$",
+   "C": "$\\frac{1}{56}$",
+   "D": "$\\frac{1}{28}$",
+   "E": "$\\frac{31}{64}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Law of Cosines, solved for the cosine."
+  ],
+  "solution": "**What we need:** the cosine.\n\n**Key idea:** $\\cos C = \\frac{a^2 + b^2 - c^2}{2ab}$.\n\n**Step 1.** $\\frac{16 + 49 - 64}{2 \\cdot 4 \\cdot 7} = \\frac{1}{56}$.\n\n**Answer:** $\\frac{1}{56}$. **(C)**\n\n**Common mistake:** forgetting the factor of 2."
+ },
+ {
+  "id": "trig_laws_b10",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_parallelogram",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A parallelogram has sides $10$ and $7$ with a $60^\\circ$ angle between them. What is the length of its longer diagonal?",
+  "choices": {
+   "A": "$\\sqrt{79}$",
+   "B": "$\\sqrt{149}$",
+   "C": "$\\sqrt{219}$",
+   "D": "$2\\sqrt{55}$",
+   "E": "$17$"
+  },
+  "answer": "C",
+  "hints": [
+   "The diagonals cut the parallelogram into triangles."
+  ],
+  "solution": "**What we need:** the diagonal.\n\n**Key idea:** the longer diagonal is opposite the $120^\\circ$ angle.\n\n**Step 1.** $d^2 = 100 + 49 - 2 \\cdot 10 \\cdot 7 \\cos 120^\\circ = 219$.\n\n**Step 2.** $d = \\sqrt{219}$.\n\n**Answer:** $\\sqrt{219}$. **(C)**\n\n**Common mistake:** pairing the diagonal with the wrong angle."
+ },
+ {
+  "id": "trig_laws_b11",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_heron",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the area of a triangle with sides $10$, $10$, and $12$?",
+  "choices": {
+   "A": "$24$",
+   "B": "$48$",
+   "C": "$50$",
+   "D": "$96$",
+   "E": "$128$"
+  },
+  "answer": "B",
+  "hints": [
+   "Heron's formula."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** $K = \\sqrt{s(s - a)(s - b)(s - c)}$ with $s$ the semiperimeter.\n\n**Step 1.** $s = 16$.\n\n**Step 2.** $K = \\sqrt{16 \\cdot 6 \\cdot 6 \\cdot 4} = \\sqrt{2304} = 48$.\n\n**Answer:** $48$. **(B)**\n\n**Common mistake:** using the full perimeter for $s$."
+ },
+ {
+  "id": "trig_laws_b12",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_inradius",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the inradius of a triangle with sides $10$, $13$, and $13$?",
+  "choices": {
+   "A": "$\\frac{60}{37}$",
+   "B": "$\\frac{5}{3}$",
+   "C": "$\\frac{10}{3}$",
+   "D": "$\\frac{20}{3}$",
+   "E": "$\\frac{169}{24}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$K = rs$."
+  ],
+  "solution": "**What we need:** the inradius.\n\n**Key idea:** area equals inradius times semiperimeter.\n\n**Step 1.** Area (Heron): $60$. $s = 18$.\n\n**Step 2.** $r = \\frac{60}{18} = \\frac{10}{3}$.\n\n**Answer:** $\\frac{10}{3}$. **(C)**\n\n**Common mistake:** dividing by the full perimeter."
+ },
+ {
+  "id": "trig_laws_b13",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_bisector",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $AB = 9$, $AC = 11$, and $BC = 17$. The bisector of angle $A$ meets $BC$ at $D$. What is $BD$?",
+  "choices": {
+   "A": "$\\frac{9}{2}$",
+   "B": "$\\frac{153}{20}$",
+   "C": "$\\frac{17}{2}$",
+   "D": "$\\frac{173}{20}$",
+   "E": "$\\frac{187}{20}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Angle Bisector Theorem."
+  ],
+  "solution": "**What we need:** $BD$.\n\n**Key idea:** $\\frac{BD}{DC} = \\frac{AB}{AC}$.\n\n**Step 1.** $BD : DC = 9 : 11$.\n\n**Step 2.** $BD = 17 \\cdot \\frac{9}{20} = \\frac{153}{20}$.\n\n**Answer:** $\\frac{153}{20}$. **(B)**\n\n**Common mistake:** matching $BD$ with $AC$."
+ },
+ {
+  "id": "trig_laws_b14",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_ssa",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many non-congruent triangles have $\\angle A = 45^\\circ$, $b = 12$, and $a = 11$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$\\text{infinitely many}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Compare $a$ with the height $b\\sin A$ and with $b$."
+  ],
+  "solution": "**What we need:** the number of triangles.\n\n**Key idea:** the ambiguous case (SSA).\n\n**Step 1.** Height: $b\\sin A = 12 \\cdot \\frac{\\sqrt{2}}{2} \\approx 8.49$.\n\n**Step 2.** Compare with $a = 11$: between the height and $b$, so two triangles.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** assuming SSA always gives one triangle."
+ },
+ {
+  "id": "trig_laws_b15",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_sin_from_area",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A triangle has sides $12$ and $15$ and area $18$. What is the sine of the angle between those sides?",
+  "choices": {
+   "A": "$\\frac{1}{10}$",
+   "B": "$\\frac{1}{5}$",
+   "C": "$\\frac{3}{10}$",
+   "D": "$\\frac{2}{5}$",
+   "E": "$\\frac{4}{5}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Area $= \\frac{1}{2}ab\\sin C$."
+  ],
+  "solution": "**What we need:** $\\sin C$.\n\n**Key idea:** solve the area formula for the sine.\n\n**Step 1.** $\\sin C = \\frac{2K}{ab} = \\frac{36}{180} = \\frac{1}{5}$.\n\n**Answer:** $\\frac{1}{5}$. **(B)**\n\n**Common mistake:** forgetting the factor of 2."
+ },
+ {
+  "id": "trig_laws_b16",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_cos_given",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $a = 4$, $b = 12$, and $\\cos C = \\frac{3}{8}$. What is $c$?",
+  "choices": {
+   "A": "$\\sqrt{123}$",
+   "B": "$2\\sqrt{31}$",
+   "C": "$5\\sqrt{5}$",
+   "D": "$4\\sqrt{10}$",
+   "E": "$14$"
+  },
+  "answer": "B",
+  "hints": [
+   "Law of Cosines."
+  ],
+  "solution": "**What we need:** side $c$.\n\n**Key idea:** $c^2 = a^2 + b^2 - 2ab\\cos C$.\n\n**Step 1.** $c^2 = 16 + 144 - 2 \\cdot 4 \\cdot 12 \\cdot \\frac{3}{8} = 124$.\n\n**Step 2.** $c = 2\\sqrt{31}$.\n\n**Answer:** $2\\sqrt{31}$. **(B)**\n\n**Common mistake:** dropping the minus sign."
+ },
+ {
+  "id": "trig_laws_b17",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_sine_ratio",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $a = 8$, $b = 4$, and $\\sin A = \\frac{2}{5}$. What is $\\sin B$?",
+  "choices": {
+   "A": "$\\frac{1}{10}$",
+   "B": "$\\frac{1}{5}$",
+   "C": "$\\frac{3}{10}$",
+   "D": "$\\frac{2}{5}$",
+   "E": "$\\frac{4}{5}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Law of Sines."
+  ],
+  "solution": "**What we need:** $\\sin B$.\n\n**Key idea:** $\\frac{\\sin A}{a} = \\frac{\\sin B}{b}$.\n\n**Step 1.** $\\sin B = \\frac{2}{5} \\cdot \\frac{4}{8} = \\frac{1}{5}$.\n\n**Answer:** $\\frac{1}{5}$. **(B)**\n\n**Common mistake:** flipping the ratio."
+ },
+ {
+  "id": "trig_laws_b18",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_polygon_side",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A regular square is inscribed in a circle of radius $5$. What is its side length?",
+  "choices": {
+   "A": "$\\frac{5\\sqrt{3}}{2}$",
+   "B": "$5$",
+   "C": "$5\\sqrt{2}$",
+   "D": "$5\\sqrt{3}$",
+   "E": "$10$"
+  },
+  "answer": "C",
+  "hints": [
+   "Each side subtends a central angle of $\\frac{360^\\circ}{n}$."
+  ],
+  "solution": "**What we need:** the side.\n\n**Key idea:** Law of Cosines on the triangle from the center: side $= 2R\\sin\\frac{180^\\circ}{4}$.\n\n**Step 1.** $2 \\cdot 5 \\sin 45^\\circ = 5\\sqrt{2}$.\n\n**Answer:** $5\\sqrt{2}$. **(C)**\n\n**Common mistake:** using the radius as the side."
+ },
+ {
+  "id": "trig_laws_b19",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_elevation",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "From a point $7$ m from the base of a tower on level ground, the angle of elevation to the top is $45^\\circ$. How tall is the tower, in meters?",
+  "choices": {
+   "A": "$\\frac{7\\sqrt{3}}{2}$",
+   "B": "$7$",
+   "C": "$7\\sqrt{2}$",
+   "D": "$7\\sqrt{3}$",
+   "E": "$14$"
+  },
+  "answer": "B",
+  "hints": [
+   "Height $= d\\tan\\theta$."
+  ],
+  "solution": "**What we need:** the height.\n\n**Key idea:** right triangle: opposite over adjacent is the tangent.\n\n**Step 1.** $7 \\tan 45^\\circ = 7$.\n\n**Answer:** $7$. **(B)**\n\n**Common mistake:** using sine instead of tangent."
+ },
+ {
+  "id": "trig_laws_b20",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tl_isosceles_base",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "An isosceles triangle has two sides of length $7$ meeting at a $60^\\circ$ angle. What is the length of the third side?",
+  "choices": {
+   "A": "$\\frac{7\\sqrt{3}}{2}$",
+   "B": "$7$",
+   "C": "$7\\sqrt{2}$",
+   "D": "$14$",
+   "E": "$7\\sqrt{5}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Law of Cosines."
+  ],
+  "solution": "**What we need:** the third side.\n\n**Key idea:** $c^2 = 2 \\cdot 7^2 - 2 \\cdot 7^2 \\cos 60^\\circ$.\n\n**Step 1.** $c^2 = 98 - 98 \\cdot \\frac{1}{2} = 49$.\n\n**Step 2.** $c = 7$.\n\n**Answer:** $7$. **(B)**\n\n**Common mistake:** using the wrong sign of the cosine."
+ },
+ {
+  "id": "trig_laws_c01",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tlc1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Triangle $ABC$ has $AB = 11$, $AC = 5$, and $BC = 12$. What is the length of the median from $A$ to side $BC$?",
+  "choices": {
+   "A": "$\\sqrt{2}$",
+   "B": "$6$",
+   "C": "$\\sqrt{37}$",
+   "D": "$\\sqrt{38}$",
+   "E": "$8$"
+  },
+  "answer": "C",
+  "hints": [
+   "Apollonius: $m_a^2 = \\frac{2b^2 + 2c^2 - a^2}{4}$. Or use the Law of Cosines twice."
+  ],
+  "solution": "**What we need:** the length from $A$ to the midpoint $M$ of $BC$.\n\n**Key idea:** Apollonius's Theorem: $AB^2 + AC^2 = 2AM^2 + 2BM^2$, which rearranges to $AM^2 = \\frac{2b^2 + 2c^2 - a^2}{4}$. (It comes from the Law of Cosines in triangles $ABM$ and $ACM$, whose angles at $M$ add to $180^\\circ$.)\n\n**Step 1.** $BM = \\frac{12}{2}$.\n\n**Step 2.** $AM^2 = \\frac{2 \\cdot 5^2 + 2 \\cdot 11^2 - 12^2}{4} = \\frac{50 + 242 - 144}{4} = 37$.\n\n**Step 3.** $AM = \\sqrt{37} = \\sqrt{37}$.\n\n**Answer:** $\\sqrt{37}$. **(C)**\n\n**Common mistake:** averaging $AB$ and $AC$; a median is not the average of the two sides."
+ },
+ {
+  "id": "trig_laws_c02",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tlc2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $BC = 9$ and $\\angle A = 60^\\circ$. What is the radius of the circle passing through $A$, $B$, and $C$?",
+  "choices": {
+   "A": "$\\frac{9}{2}$",
+   "B": "$3\\sqrt{3}$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$6\\sqrt{3}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Extended Law of Sines: $\\frac{a}{\\sin A} = 2R$."
+  ],
+  "solution": "**What we need:** the circumradius $R$.\n\n**Key idea:** the Extended Law of Sines: $\\frac{a}{\\sin A} = 2R$, where $a = BC$ is the side opposite $A$.\n\n**Step 1.** $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.\n\n**Step 2.** $2R = \\frac{9}{\\frac{\\sqrt{3}}{2}} = 6\\sqrt{3}$.\n\n**Step 3.** $R = 3\\sqrt{3}$.\n\n**Answer:** $3\\sqrt{3}$. **(B)**\n\n**Common mistake:** forgetting the $2$: $\\frac{a}{\\sin A}$ is the diameter, not the radius."
+ },
+ {
+  "id": "trig_laws_c03",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tlc3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A triangle has sides $5$, $5$, and $8$. What is the sine of the angle between the sides of lengths $5$ and $5$?",
+  "choices": {
+   "A": "$\\frac{1}{25}$",
+   "B": "$\\frac{12}{25}$",
+   "C": "$\\frac{3}{5}$",
+   "D": "$\\frac{4}{5}$",
+   "E": "$\\frac{24}{25}$"
+  },
+  "answer": "E",
+  "hints": [
+   "Find the area with Heron's formula, then use area $= \\frac{1}{2}ab\\sin C$."
+  ],
+  "solution": "**What we need:** $\\sin C$, where $C$ is between the sides $5$ and $5$.\n\n**Key idea:** find the area two ways: Heron's formula gives a number, and $\\frac{1}{2}ab\\sin C$ contains the unknown.\n\n**Step 1.** Semiperimeter: $s = \\frac{5 + 5 + 8}{2} = 9$.\n\n**Step 2.** Heron: Area $= \\sqrt{s(s - a)(s - b)(s - c)} = \\sqrt{9 \\cdot 4 \\cdot 4 \\cdot 1} = \\sqrt{144} = 12$.\n\n**Step 3.** Set $\\frac{1}{2} \\cdot 5 \\cdot 5 \\cdot \\sin C = 12$.\n\n**Step 4.** $\\sin C = \\frac{2 \\cdot 12}{25} = \\frac{24}{25}$.\n\n**Answer:** $\\frac{24}{25}$. **(E)**\n\n**Common mistake:** using the wrong pair of sides in $\\frac{1}{2}ab\\sin C$; they must be the two sides that form the angle."
+ },
+ {
+  "id": "trig_laws_c04",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tlc_stewart",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $AB = 11$, $AC = 8$, and $BC = 6$. Point $D$ is on $BC$ with $BD = 2$. What is $AD$?",
+  "choices": {
+   "A": "$\\frac{19}{2}$",
+   "B": "$2\\sqrt{23}$",
+   "C": "$\\sqrt{94}$",
+   "D": "$\\sqrt{95}$",
+   "E": "$\\sqrt{102}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Stewart's Theorem."
+  ],
+  "solution": "**What we need:** $AD$.\n\n**Key idea:** $b^2 m + c^2 n = a(d^2 + mn)$, where $m = BD$, $n = DC$.\n\n**Step 1.** $m = 2$, $n = 4$.\n\n**Step 2.** $64 \\cdot 2 + 121 \\cdot 4 = 6(d^2 + 8)$.\n\n**Step 3.** $d^2 = 94$, $d = \\sqrt{94}$.\n\n**Answer:** $\\sqrt{94}$. **(C)**\n\n**Common mistake:** pairing $b^2$ with $n$ instead of $m$."
+ },
+ {
+  "id": "trig_laws_c05",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tlc_circumradius_heron",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the circumradius of a triangle with sides $10$, $13$, and $13$?",
+  "choices": {
+   "A": "$\\frac{10}{3}$",
+   "B": "$\\frac{13}{2}$",
+   "C": "$\\frac{169}{24}$",
+   "D": "$\\frac{193}{24}$",
+   "E": "$\\frac{169}{12}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$R = \\frac{abc}{4K}$."
+  ],
+  "solution": "**What we need:** the circumradius.\n\n**Key idea:** find the area by Heron's formula, then use $R = \\frac{abc}{4K}$.\n\n**Step 1.** Area: $60$.\n\n**Step 2.** $R = \\frac{10 \\cdot 13 \\cdot 13}{4 \\cdot 60} = \\frac{169}{24}$.\n\n**Answer:** $\\frac{169}{24}$. **(C)**\n\n**Common mistake:** using $\\frac{abc}{2K}$."
+ },
+ {
+  "id": "trig_laws_c06",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tlc_ratio_angle",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $\\sin A : \\sin B : \\sin C = 5 : 7 : 3$. What is angle $B$, in degrees?",
+  "choices": {
+   "A": "$30^\\circ$",
+   "B": "$60^\\circ$",
+   "C": "$120^\\circ$",
+   "D": "$135^\\circ$",
+   "E": "$150^\\circ$"
+  },
+  "answer": "C",
+  "hints": [
+   "The sines are proportional to the sides."
+  ],
+  "solution": "**What we need:** the angle.\n\n**Key idea:** by the Law of Sines, the sides are in ratio $5 : 7 : 3$; take sides $5k$, $7k$, $3k$.\n\n**Step 1.** $\\cos B = \\frac{5^2 + 3^2 - 7^2}{2 \\cdot 5 \\cdot 3} = -\\frac{1}{2}$.\n\n**Step 2.** So $B = 120^\\circ$.\n\n**Answer:** $120^\\circ$. **(C)**\n\n**Common mistake:** treating the ratio as angle measures."
+ },
+ {
+  "id": "trig_laws_c07",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tlc_brahmagupta",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A quadrilateral inscribed in a circle has sides $4$, $8$, $8$, and $4$. What is its area?",
+  "choices": {
+   "A": "$24$",
+   "B": "$31$",
+   "C": "$32$",
+   "D": "$34$",
+   "E": "$64$"
+  },
+  "answer": "C",
+  "hints": [
+   "Brahmagupta's formula."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** $K = \\sqrt{(s - a)(s - b)(s - c)(s - d)}$ for a cyclic quadrilateral.\n\n**Step 1.** $s = 12$.\n\n**Step 2.** $K = \\sqrt{8 \\cdot 4 \\cdot 4 \\cdot 8} = 32$.\n\n**Answer:** $32$. **(C)**\n\n**Common mistake:** using Heron's formula with an extra factor of $s$."
+ },
+ {
+  "id": "trig_laws_c08",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tlc_bisector_length",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "In triangle $ABC$, $AB = 4$, $AC = 6$, $BC = 5$. What is the length of the bisector of angle $A$ (from $A$ to $BC$)?",
+  "choices": {
+   "A": "$4$",
+   "B": "$3\\sqrt{2}$",
+   "C": "$\\sqrt{19}$",
+   "D": "$2\\sqrt{6}$",
+   "E": "$5$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use the bisector length formula or Stewart's Theorem."
+  ],
+  "solution": "**What we need:** the bisector length.\n\n**Key idea:** $t_a^2 = bc\\left(1 - \\frac{a^2}{(b + c)^2}\\right)$.\n\n**Step 1.** $t_a^2 = 24\\left(1 - \\frac{25}{100}\\right) = 18$.\n\n**Step 2.** $t_a = 3\\sqrt{2}$.\n\n**Answer:** $3\\sqrt{2}$. **(B)**\n\n**Common mistake:** using the median formula."
+ },
+ {
+  "id": "trig_laws_c09",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tlc_ships",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Two ships leave port at the same time, one at $9$ km/h and one at $5$ km/h, on straight courses $60^\\circ$ apart. How far apart are they after $2$ hours, in km?",
+  "choices": {
+   "A": "$2\\sqrt{61}$",
+   "B": "$7\\sqrt{5}$",
+   "C": "$2\\sqrt{106}$",
+   "D": "$2\\sqrt{151}$",
+   "E": "$28$"
+  },
+  "answer": "A",
+  "hints": [
+   "Law of Cosines."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** the port and the two ships form a triangle with the given angle at the port.\n\n**Step 1.** Distances: $18$ and $10$.\n\n**Step 2.** $d^2 = 324 + 100 - 2 \\cdot 18 \\cdot 10 \\cos 60^\\circ = 244$.\n\n**Step 3.** $d = 2\\sqrt{61}$.\n\n**Answer:** $2\\sqrt{61}$. **(A)**\n\n**Common mistake:** using the wrong sign for the cosine."
+ },
+ {
+  "id": "trig_laws_c10",
+  "skillId": "trig_laws",
+  "family": "trig_laws:tlc_tan_angle",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A triangle has sides $17$, $21$, and $10$. What is the tangent of the angle opposite the side of length $10$?",
+  "choices": {
+   "A": "$-\\frac{8}{15}$",
+   "B": "$\\frac{4}{15}$",
+   "C": "$\\frac{8}{17}$",
+   "D": "$\\frac{8}{15}$",
+   "E": "$\\frac{15}{17}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find the sine (from the area) and the cosine (from the Law of Cosines)."
+  ],
+  "solution": "**What we need:** $\\tan C$.\n\n**Key idea:** $\\sin C = \\frac{2K}{xy}$ and $\\cos C = \\frac{x^2 + y^2 - z^2}{2xy}$, so $\\tan C = \\frac{4K}{x^2 + y^2 - z^2}$.\n\n**Step 1.** Area: $84$.\n\n**Step 2.** $\\tan C = \\frac{4 \\cdot 84}{630} = \\frac{8}{15}$.\n\n**Answer:** $\\frac{8}{15}$. **(D)**\n\n**Common mistake:** dropping the factor of 2 in the sine."
+ },
+ {
+  "id": "trig_equations_b01",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many solutions does $\\sin(4x) = 0$ have with $0 \\le x < 2\\pi$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$9$",
+   "E": "$16$"
+  },
+  "answer": "C",
+  "hints": [
+   "First count the solutions of $\\sin t = 0$ for one full turn, then $t = 4x$ makes $4$ full turns."
+  ],
+  "solution": "**What we need:** the number of solutions in one full turn of $x$.\n\n**Key idea:** substitute $t = 4x$. As $x$ runs over $[0, 2\\pi)$, $t$ runs over $[0, 8\\pi)$, which is $4$ full turns.\n\n**Step 1.** In one turn, $\\sin t = 0$ at $t = 0$, $t = \\pi$: $2$ solutions.\n\n**Step 2.** Each of the $4$ turns repeats this, so there are $4 \\cdot 2 = 8$ values of $t$, each giving one $x$.\n\n**Answer:** $8$. **(C)**\n\n**Common mistake:** counting only one turn of $t$ ($2$); the $4x$ makes the graph repeat $4$ times."
+ },
+ {
+  "id": "trig_equations_b02",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many solutions does $2\\cos^2 x + 3\\cos x + 1 = 0$ have with $0 \\le x < 2\\pi$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$6$"
+  },
+  "answer": "B",
+  "hints": [
+   "Treat it as a quadratic in $\\sin x$ (or $\\cos x$), then count the angles for each value."
+  ],
+  "solution": "**What we need:** the number of angles in one full turn that solve the equation.\n\n**Key idea:** solve for the trig function first (it's a quadratic in disguise), then count the angles for each value.\n\n**Step 1.** With $c = \\cos x$: $2c^2 + 3c + 1 = (2c + 1)(c + 1) = 0$, so $\\cos x = -\\frac{1}{2}$ or $\\cos x = -1$.\n\n**Step 2.** Angles in $[0, 2\\pi)$: $\\cos x = -\\frac{1}{2}$: $x = \\frac{2\\pi}{3}$, $x = \\frac{4\\pi}{3}$; $\\cos x = -1$: $x = \\pi$.\n\n**Step 3.** Total: $3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** forgetting that values like $\\pm 1$ give only one angle per turn, while other values give two."
+ },
+ {
+  "id": "trig_equations_b03",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the largest angle $x$ in degrees with $0^\\circ \\le x < 360^\\circ$ such that $\\cos x = -\\frac{\\sqrt{3}}{2}$?",
+  "choices": {
+   "A": "$30$",
+   "B": "$150$",
+   "C": "$180$",
+   "D": "$210$",
+   "E": "$240$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find the reference angle, then the quadrants where the value has the right sign."
+  ],
+  "solution": "**What we need:** the largest angle in one turn with $\\cos x = -\\frac{\\sqrt{3}}{2}$.\n\n**Key idea:** find the reference angle from the size of the value, then find every quadrant where the sign matches.\n\n**Step 1.** $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, so the reference angle is $30^\\circ$.\n\n**Step 2.** Cosine is negative in quadrants second and third.\n\n**Step 3.** Solutions: $150^\\circ$ and $210^\\circ$. The largest is $210^\\circ$.\n\n**Answer:** $210^\\circ$. **(D)**\n\n**Common mistake:** stopping at the first solution you find, which is usually the smallest."
+ },
+ {
+  "id": "trig_equations_b04",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the period of $y = \\cos(3x)$?",
+  "choices": {
+   "A": "$\\frac{\\pi}{6}$",
+   "B": "$\\frac{2\\pi}{3}$",
+   "C": "$2\\pi$",
+   "D": "$3\\pi$",
+   "E": "$6\\pi$"
+  },
+  "answer": "B",
+  "hints": [
+   "The period of $\\cos x$ is $2\\pi$. Multiplying $x$ by $3$ divides the period by $3$."
+  ],
+  "solution": "**What we need:** the length of one full cycle of $\\cos(3x)$.\n\n**Key idea:** $\\cos$ repeats every $2\\pi$. Inside, $3x$ moves $3$ times as fast as $x$, so the cycle finishes $3$ times sooner.\n\n**Step 1.** One cycle ends when $3x$ has grown by $2\\pi$.\n\n**Step 2.** That needs $x$ to grow by $\\frac{2\\pi}{3} = \\frac{2\\pi}{3}$.\n\n**Answer:** $\\frac{2\\pi}{3}$. **(B)**\n\n**Common mistake:** multiplying the period by $3$ instead of dividing."
+ },
+ {
+  "id": "trig_equations_b05",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_period_tan",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the period of $y = \\tan\\left(2x\\right)$?",
+  "choices": {
+   "A": "$\\frac{\\pi}{2}$",
+   "B": "$3$",
+   "C": "$\\pi$",
+   "D": "$\\frac{3\\pi}{2}$",
+   "E": "$2\\pi$"
+  },
+  "answer": "A",
+  "hints": [
+   "The period of $\\tan x$ is $\\pi$."
+  ],
+  "solution": "**What we need:** the period.\n\n**Key idea:** $\\tan(kx)$ has period $\\frac{\\pi}{k}$.\n\n**Step 1.** $\\frac{\\pi}{2} = \\frac{\\pi}{2}$.\n\n**Answer:** $\\frac{\\pi}{2}$. **(A)**\n\n**Common mistake:** using $2\\pi$ for tangent."
+ },
+ {
+  "id": "trig_equations_b06",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_max",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the maximum value of $y = -7\\sin(x) - 4$?",
+  "choices": {
+   "A": "$-11$",
+   "B": "$-3$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$7$"
+  },
+  "answer": "C",
+  "hints": [
+   "Sine ranges from $-1$ to $1$."
+  ],
+  "solution": "**What we need:** the extreme value.\n\n**Key idea:** the inner coefficient doesn't change the range; the amplitude is $|-7|$.\n\n**Step 1.** $y$ ranges from $-11$ to $3$.\n\n**Answer:** $3$. **(C)**\n\n**Common mistake:** letting the negative coefficient flip the maximum into the minimum the wrong way."
+ },
+ {
+  "id": "trig_equations_b07",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_count_cos",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many solutions does $\\sin(4x) = 1$ have with $0 \\le x < 2\\pi$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$8$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\sin t = 1$ has 1 solution per period."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** as $x$ runs over $[0, 2\\pi)$, $4x$ runs over $4$ full periods.\n\n**Step 1.** 1 per period times $4$ periods: $4$.\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** counting only one period."
+ },
+ {
+  "id": "trig_equations_b08",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_deg_sum",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum, in degrees, of all solutions of $\\tan x = 1$ with $0^\\circ \\le x < 360^\\circ$?",
+  "choices": {
+   "A": "$45$",
+   "B": "$90$",
+   "C": "$270$",
+   "D": "$360$",
+   "E": "$450$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the two solutions using the reference angle."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** each value is hit twice per full turn.\n\n**Step 1.** Solutions: $45^\\circ$, $225^\\circ$.\n\n**Step 2.** Sum: $270^\\circ$.\n\n**Answer:** $270$. **(C)**\n\n**Common mistake:** missing the second solution."
+ },
+ {
+  "id": "trig_equations_b09",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_tan_count",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many solutions does $\\tan x = 0$ have with $0 \\le x < 5\\pi$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$6$",
+   "D": "$10$",
+   "E": "$20$"
+  },
+  "answer": "B",
+  "hints": [
+   "Tangent has period $\\pi$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $\\tan x = c$ has exactly one solution in each interval of length $\\pi$.\n\n**Step 1.** $5$ periods, one solution each: $5$.\n\n**Answer:** $5$. **(B)**\n\n**Common mistake:** using period $2\\pi$."
+ },
+ {
+  "id": "trig_equations_b10",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_smallest",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the smallest positive $x$, in degrees, with $\\sin(3x) = -1$?",
+  "choices": {
+   "A": "$30$",
+   "B": "$45$",
+   "C": "$90$",
+   "D": "$210$",
+   "E": "$810$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the smallest positive value of the inner angle first."
+  ],
+  "solution": "**What we need:** the smallest $x$.\n\n**Key idea:** the smallest positive $t$ with $\\sin t = -1$ is $270^\\circ$.\n\n**Step 1.** $3x = 270^\\circ$, so $x = 90^\\circ$.\n\n**Answer:** $90$. **(C)**\n\n**Common mistake:** forgetting to divide by $3$."
+ },
+ {
+  "id": "trig_equations_b11",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_factor",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many solutions does $\\tan x(\\tan x - 1) = 0$ have with $0 \\le x < 2\\pi$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$5$"
+  },
+  "answer": "D",
+  "hints": [
+   "Set each factor equal to zero."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** solve each factor separately; watch for shared solutions.\n\n**Step 1.** Listing the solutions of each factor and removing repeats: $4$.\n\n**Answer:** $4$. **(D)**\n\n**Common mistake:** dividing by a factor that can be zero."
+ },
+ {
+  "id": "trig_equations_b12",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_sin_cos_equal",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many solutions does $\\sin x = \\cos x$ have with $0 \\le x < 10\\pi$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$11$",
+   "E": "$20$"
+  },
+  "answer": "C",
+  "hints": [
+   "Divide by $\\cos x$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $\\tan x = 1$: one solution every $\\pi$.\n\n**Step 1.** Interval length $10\\pi$, so $10$ solutions.\n\n**Answer:** $10$. **(C)**\n\n**Common mistake:** counting one per $2\\pi$."
+ },
+ {
+  "id": "trig_equations_b13",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_cos2_eq",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum, in degrees, of all solutions of $\\cos 2x = \\cos x$ with $0^\\circ \\le x < 360^\\circ$?",
+  "choices": {
+   "A": "$120$",
+   "B": "$180$",
+   "C": "$240$",
+   "D": "$360$",
+   "E": "$480$"
+  },
+  "answer": "D",
+  "hints": [
+   "Use $\\cos 2x = 2\\cos^2 x - 1$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $2\\cos^2 x - \\cos x - 1 = 0$ factors as $(2\\cos x + 1)(\\cos x - 1) = 0$.\n\n**Step 1.** $\\cos x = 1$: $x = 0^\\circ$. $\\cos x = -\\frac{1}{2}$: $x = 120^\\circ, 240^\\circ$.\n\n**Step 2.** Answer: $360$.\n\n**Answer:** $360$. **(D)**\n\n**Common mistake:** missing $x = 0$."
+ },
+ {
+  "id": "trig_equations_b14",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_abs_count",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many solutions does $|\\sin x| = \\frac{1}{2}$ have with $0 \\le x < 2\\pi$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$8$"
+  },
+  "answer": "C",
+  "hints": [
+   "$|\\sin x| = c$ means $\\sin x = c$ or $-c$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** solve both signs; each has two solutions per $2\\pi$ (one if $c = 1$, and $0$ is a single equation).\n\n**Step 1.** Per $2\\pi$: $4$ solutions; times $1$: $4$.\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** forgetting the negative case."
+ },
+ {
+  "id": "trig_equations_b15",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_quad_sin",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum, in degrees, of all solutions of $2\\sin^2 x + 3\\sin x + 1 = 0$ with $0^\\circ \\le x < 360^\\circ$?",
+  "choices": {
+   "A": "$330$",
+   "B": "$600$",
+   "C": "$810$",
+   "D": "$900$",
+   "E": "$990$"
+  },
+  "answer": "C",
+  "hints": [
+   "Factor as a quadratic in $\\sin x$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $2\\sin^2 x + 3\\sin x + 1 = (2\\sin x + 1)(\\sin x + 1)$.\n\n**Step 1.** Solutions: $210^\\circ$, $270^\\circ$, $330^\\circ$.\n\n**Step 2.** Sum: $810^\\circ$.\n\n**Answer:** $810$. **(C)**\n\n**Common mistake:** keeping only one root of the quadratic, or an impossible one."
+ },
+ {
+  "id": "trig_equations_b16",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_phase",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the smallest positive $x$, in degrees, where $y = \\sin(x - 15^\\circ)$ reaches its maximum?",
+  "choices": {
+   "A": "$75$",
+   "B": "$90$",
+   "C": "$105$",
+   "D": "$285$",
+   "E": "$465$"
+  },
+  "answer": "C",
+  "hints": [
+   "Shift the usual maximum."
+  ],
+  "solution": "**What we need:** the location of the first maximum.\n\n**Key idea:** $\\sin t$ first peaks at $t = 90^\\circ$ (or $360^\\circ$); set $x - 15 = $ that.\n\n**Step 1.** $x = 105^\\circ$.\n\n**Answer:** $105$. **(C)**\n\n**Common mistake:** shifting in the wrong direction."
+ },
+ {
+  "id": "trig_equations_b17",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_inverse_comp",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\tan\\left(\\arcsin \\frac{8}{17}\\right)$?",
+  "choices": {
+   "A": "$-\\frac{8}{15}$",
+   "B": "$\\frac{8}{17}$",
+   "C": "$\\frac{9}{17}$",
+   "D": "$\\frac{8}{15}$",
+   "E": "$\\frac{15}{8}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Draw the right triangle."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** let $\\theta = \\arcsin \\frac{8}{17}$; build a $8$-$15$-$17$ right triangle.\n\n**Step 1.** Then $\\tan\\theta = \\frac{8}{15}$.\n\n**Answer:** $\\frac{8}{15}$. **(D)**\n\n**Common mistake:** assuming the functions cancel."
+ },
+ {
+  "id": "trig_equations_b18",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_tan_cot",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many solutions does $\\tan x = \\cot x$ have with $0 \\le x < 6\\pi$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$6$",
+   "C": "$12$",
+   "D": "$14$",
+   "E": "$24$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\tan^2 x = 1$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $\\tan x = \\pm 1$: two solutions per $\\pi$.\n\n**Step 1.** $6$ intervals of length $\\pi$, two each: $12$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** solving only $\\tan x = 1$."
+ },
+ {
+  "id": "trig_equations_b19",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_period_sum",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the period of $y = \\sin(3x) + \\cos(4x)$?",
+  "choices": {
+   "A": "$\\frac{\\pi}{6}$",
+   "B": "$\\frac{\\pi}{2}$",
+   "C": "$\\frac{2\\pi}{3}$",
+   "D": "$\\pi$",
+   "E": "$2\\pi$"
+  },
+  "answer": "E",
+  "hints": [
+   "Find the least common multiple of the two periods."
+  ],
+  "solution": "**What we need:** the period.\n\n**Key idea:** periods $\\frac{2\\pi}{3}$ and $\\frac{2\\pi}{4}$; the sum repeats at their least common multiple.\n\n**Step 1.** $\\text{lcm} = \\frac{2\\pi}{\\gcd(3, 4)} = 2\\pi$.\n\n**Answer:** $2\\pi$. **(E)**\n\n**Common mistake:** taking the smaller period."
+ },
+ {
+  "id": "trig_equations_b20",
+  "skillId": "trig_equations",
+  "family": "trig_equations:te_sec",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum, in degrees, of all solutions of $\\cot x = 1$ with $0^\\circ \\le x < 360^\\circ$?",
+  "choices": {
+   "A": "$45$",
+   "B": "$90$",
+   "C": "$270$",
+   "D": "$330$",
+   "E": "$450$"
+  },
+  "answer": "C",
+  "hints": [
+   "Take reciprocals."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** rewrite in terms of $\\sin$, $\\cos$, or $\\tan$.\n\n**Step 1.** Solutions: $45^\\circ$, $225^\\circ$.\n\n**Step 2.** Sum: $270^\\circ$.\n\n**Answer:** $270$. **(C)**\n\n**Common mistake:** solving $\\cos x = 1$ directly."
+ },
+ {
+  "id": "trig_equations_c01",
+  "skillId": "trig_equations",
+  "family": "trig_equations:tec1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the sum of all solutions of $\\sin 2x = \\sin x$ with $0 \\le x < 2\\pi$?",
+  "choices": {
+   "A": "$2\\pi$",
+   "B": "$3\\pi$",
+   "C": "$\\frac{7\\pi}{2}$",
+   "D": "$4\\pi$",
+   "E": "$6\\pi$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use a double angle identity and factor."
+  ],
+  "solution": "**What we need:** the sum of every solution in one turn.\n\n**Key idea:** rewrite with one angle ($x$, not $2x$), move everything to one side, and factor.\n\n**Step 1.** Use $\\sin 2x = 2\\sin x\\cos x$: $2\\sin x\\cos x - \\sin x = \\sin x(2\\cos x - 1) = 0$, so $\\sin x = 0$ or $\\cos x = \\frac{1}{2}$.\n\n**Step 2.** Solutions in $[0, 2\\pi)$: $0$, $\\frac{\\pi}{3}$, $\\pi$, $\\frac{5\\pi}{3}$.\n\n**Step 3.** Add: $0 + \\frac{\\pi}{3} + \\pi + \\frac{5\\pi}{3} = 3\\pi$.\n\n**Answer:** $3\\pi$. **(B)**\n\n**Common mistake:** dividing both sides by $\\sin x$ (or $\\cos x$), which throws away the solutions where it equals $0$."
+ },
+ {
+  "id": "trig_equations_c02",
+  "skillId": "trig_equations",
+  "family": "trig_equations:tec2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the maximum value of $4\\sin x \\cos x$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\sin x\\cos x = \\frac{1}{2}\\sin 2x$."
+  ],
+  "solution": "**What we need:** the largest value of $4\\sin x\\cos x$.\n\n**Key idea:** the double angle formula $\\sin 2x = 2\\sin x\\cos x$ turns the product into a single sine.\n\n**Step 1.** $\\sin x\\cos x = \\frac{1}{2}\\sin 2x$, so $4\\sin x\\cos x = 2\\sin 2x$.\n\n**Step 2.** The largest value of $\\sin 2x$ is $1$ (at $x = 45^\\circ$).\n\n**Step 3.** Maximum: $2$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** answering $4$, as if $\\sin x$ and $\\cos x$ could both be $1$ at once."
+ },
+ {
+  "id": "trig_equations_c03",
+  "skillId": "trig_equations",
+  "family": "trig_equations:tec3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many real solutions does $\\sin x = \\dfrac{x}{8\\pi}$ have?",
+  "choices": {
+   "A": "$9$",
+   "B": "$14$",
+   "C": "$15$",
+   "D": "$16$",
+   "E": "$17$"
+  },
+  "answer": "C",
+  "hints": [
+   "All solutions lie between $-8\\pi$ and $8\\pi$. Count crossings of the line with each hump of the sine curve."
+  ],
+  "solution": "**What we need:** how many times the line $y = \\frac{x}{8\\pi}$ meets the sine curve.\n\n**Key idea:** sketch both graphs. The line is very shallow, so it crosses many humps of the sine wave before it climbs above $1$.\n\n**Step 1.** $|\\sin x| \\le 1$, so any solution needs $\\left|\\frac{x}{8\\pi}\\right| \\le 1$, that is, $-8\\pi \\le x \\le 8\\pi$.\n\n**Step 2.** Both sides are odd functions, so solutions come in pairs $\\pm x$, plus $x = 0$.\n\n**Step 3.** For $x > 0$ the line is positive, so it can only meet the positive humps of sine: $(0, \\pi)$, $(2\\pi, 3\\pi)$, $(4\\pi, 5\\pi)$, ...\n\n**Step 4.** The first hump gives $1$ crossing (sine starts above the line and ends below it). Each later hump that starts before $8\\pi$ gives $2$ crossings (up through the line, then back down). There are $3$ such humps.\n\n**Step 5.** Positive solutions: $1 + 2 \\cdot 3 = 7$. Total: $2 \\cdot 7 + 1 = 15$.\n\n**Answer:** $15$. **(C)**\n\n**Common mistake:** forgetting the solution $x = 0$ or the negative solutions."
+ },
+ {
+  "id": "trig_equations_c04",
+  "skillId": "trig_equations",
+  "family": "trig_equations:tec_sin_plus_cos",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the sum, in degrees, of all solutions of $\\sin x + \\cos x = -1$ with $0^\\circ \\le x < 360^\\circ$?",
+  "choices": {
+   "A": "$180$",
+   "B": "$360$",
+   "C": "$450$",
+   "D": "$540$",
+   "E": "$630$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write $\\sin x + \\cos x = \\sqrt{2}\\sin(x + 45^\\circ)$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** solve $\\sin(x + 45^\\circ) = \\frac{-1}{\\sqrt{2}}$.\n\n**Step 1.** Solutions: $180^\\circ$, $270^\\circ$.\n\n**Step 2.** Sum: $450^\\circ$.\n\n**Answer:** $450$. **(C)**\n\n**Common mistake:** squaring both sides and keeping extraneous roots."
+ },
+ {
+  "id": "trig_equations_c05",
+  "skillId": "trig_equations",
+  "family": "trig_equations:tec_max_mixed",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the maximum value of $\\sin^2 x + 3\\cos x$?",
+  "choices": {
+   "A": "$\\frac{9}{4}$",
+   "B": "$3$",
+   "C": "$\\frac{13}{4}$",
+   "D": "$4$",
+   "E": "$\\frac{11}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write $\\sin^2 x = 1 - \\cos^2 x$ and set $c = \\cos x \\in [-1, 1]$."
+  ],
+  "solution": "**What we need:** the maximum.\n\n**Key idea:** maximize $1 - c^2 + 3c$ over $-1 \\le c \\le 1$.\n\n**Step 1.** The vertex is at $c = \\frac{3}{2}$, outside the interval, so use $c = 1$.\n\n**Step 2.** Maximum: $3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** ignoring that $\\cos x$ is limited to $[-1, 1]$."
+ },
+ {
+  "id": "trig_equations_c06",
+  "skillId": "trig_equations",
+  "family": "trig_equations:tec_tan_kx",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the sum, in degrees, of all solutions of $\\tan(5x) = 1$ with $0^\\circ \\le x < 180^\\circ$?",
+  "choices": {
+   "A": "$9$",
+   "B": "$225$",
+   "C": "$405$",
+   "D": "$450$",
+   "E": "$810$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find all $x$ with $5x = 45^\\circ + 180^\\circ n$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $x = \\frac{45^\\circ + 180^\\circ n}{5}$ for $n = 0, \\ldots, 4$.\n\n**Step 1.** Solutions: $9^\\circ$, $45^\\circ$, $81^\\circ$, $117^\\circ$, $153^\\circ$.\n\n**Step 2.** Sum: $405^\\circ$.\n\n**Answer:** $405$. **(C)**\n\n**Common mistake:** keeping only $n = 0$."
+ },
+ {
+  "id": "trig_equations_c07",
+  "skillId": "trig_equations",
+  "family": "trig_equations:tec_cos_kx_count",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many solutions does $\\cos(6x) = \\frac{1}{2}$ have with $0 \\le x < 2\\pi$?",
+  "choices": {
+   "A": "$11$",
+   "B": "$12$",
+   "C": "$13$",
+   "D": "$24$",
+   "E": "$27$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $t = 6x$; then $0 \\le t < 12\\pi$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** count solutions of $\\cos t = \\frac{1}{2}$ for $0 \\le t < 12\\pi$.\n\n**Step 1.** $\\cos t = \\frac{1}{2}$ at $t = 60^\\circ, 300^\\circ$ plus multiples of $360^\\circ$.\n\n**Step 2.** Those below $2160^\\circ$: $12$.\n\n**Answer:** $12$. **(B)**\n\n**Common mistake:** counting over $2\\pi$ in $x$ instead."
+ },
+ {
+  "id": "trig_equations_c08",
+  "skillId": "trig_equations",
+  "family": "trig_equations:tec_sin_kx_sin_x",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many solutions does $\\sin(4x) = \\sin x$ have with $0 \\le x < 2\\pi$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$9$",
+   "E": "$10$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\sin A = \\sin B$ when $A = B + 2\\pi n$ or $A = \\pi - B + 2\\pi n$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $4x = x + 2\\pi n$ gives $x = \\frac{2\\pi n}{3}$; $4x = \\pi - x + 2\\pi n$ gives $x = \\frac{(2n + 1)\\pi}{5}$.\n\n**Step 1.** First family: $3$ values; second: $5$ values.\n\n**Step 2.** Removing overlaps: $8$.\n\n**Answer:** $8$. **(C)**\n\n**Common mistake:** forgetting the second family."
+ },
+ {
+  "id": "trig_equations_c09",
+  "skillId": "trig_equations",
+  "family": "trig_equations:tec_measure",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the total length of the set of $x$ in $[0, 2\\pi)$ where $\\cos x > 0$?",
+  "choices": {
+   "A": "$\\frac{\\pi}{2}$",
+   "B": "$\\pi$",
+   "C": "$\\frac{4\\pi}{3}$",
+   "D": "$\\frac{3\\pi}{2}$",
+   "E": "$2\\pi$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find where equality holds, then pick the right arcs."
+  ],
+  "solution": "**What we need:** the length.\n\n**Key idea:** on the unit circle, $\\cos x > 0$ is one arc.\n\n**Step 1.** The arc has length $\\pi$.\n\n**Answer:** $\\pi$. **(B)**\n\n**Common mistake:** taking the complementary arc."
+ },
+ {
+  "id": "trig_equations_c10",
+  "skillId": "trig_equations",
+  "family": "trig_equations:tec_double_quad",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the sum, in degrees, of all solutions of $\\cos 2x = \\sin x$ with $0^\\circ \\le x < 360^\\circ$?",
+  "choices": {
+   "A": "$270$",
+   "B": "$420$",
+   "C": "$450$",
+   "D": "$540$",
+   "E": "$630$"
+  },
+  "answer": "C",
+  "hints": [
+   "Rewrite $\\cos 2x$ to get a quadratic in one function."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** use $\\cos 2x = 1 - 2\\sin^2 x$ or $2\\cos^2 x - 1$, then factor.\n\n**Step 1.** The quadratic gives $\\sin x = -1 \\text{ or } \\frac{1}{2}$.\n\n**Step 2.** Solutions: $30^\\circ$, $150^\\circ$, $270^\\circ$.\n\n**Step 3.** Sum: $450^\\circ$.\n\n**Answer:** $450$. **(C)**\n\n**Common mistake:** keeping an impossible root or missing a solution."
+ }
+]

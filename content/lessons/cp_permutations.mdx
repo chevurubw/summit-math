@@ -1,0 +1,128 @@
+---
+title: Permutations
+---
+
+A **permutation** is an arrangement where **order matters**. Lining up students, awarding gold, silver and bronze, or scrambling the letters of a word are all permutations. They're the multiplication principle applied to choices that use things up.
+
+By the end of this lesson you will be able to:
+
+- count arrangements of $n$ objects with $n!$,
+- count arrangements of $k$ objects chosen from $n$,
+- handle repeated letters by dividing,
+- handle "together", "apart" and "around a table" restrictions.
+
+## Arranging everything: $n!$
+
+Arrange 5 books on a shelf. The first spot has 5 choices, the second has 4 (one book is used), then 3, 2, 1:
+
+$$
+5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 5! = 120.
+$$
+
+## Arranging some: $P(n, k)$
+
+Award gold, silver and bronze among 8 runners: $8 \cdot 7 \cdot 6 = 336$ ways. In general, choosing $k$ of $n$ in order:
+
+<Formula>
+
+$$
+P(n, k) = n(n - 1)(n - 2)\cdots(n - k + 1) = \frac{n!}{(n - k)!}
+$$
+
+That's $k$ factors, counting down from $n$.
+</Formula>
+
+<Figure
+  bounds={[0, 10, 0, 2.6]}
+  axes={false}
+  grid={false}
+  height={180}
+  params={[{ name: "n", min: 3, max: 10, step: 1, value: 8, label: "runners $n$" }]}
+  elements={[
+    { type: "polygon", pts: [[0.5, 0.6], [3, 0.6], [3, 2], [0.5, 2]], fill: "amber", color: "amber" },
+    { type: "polygon", pts: [[3.75, 0.6], [6.25, 0.6], [6.25, 2], [3.75, 2]], fill: "muted", color: "muted" },
+    { type: "polygon", pts: [[7, 0.6], [9.5, 0.6], [9.5, 2], [7, 2]], fill: "pink", color: "pink" },
+    { type: "text", x: 1.75, y: 1.15, text: "[[n]]", size: 30 },
+    { type: "text", x: 5, y: 1.15, text: "[[n-1]]", size: 30 },
+    { type: "text", x: 8.25, y: 1.15, text: "[[n-2]]", size: 30 },
+    { type: "text", x: 1.75, y: 0.25, text: "gold", size: 13, color: "muted" },
+    { type: "text", x: 5, y: 0.25, text: "silver", size: 13, color: "muted" },
+    { type: "text", x: 8.25, y: 0.25, text: "bronze", size: 13, color: "muted" },
+    { type: "text", x: 3.37, y: 1.15, text: "×", size: 24, color: "muted" },
+    { type: "text", x: 6.62, y: 1.15, text: "×", size: 24, color: "muted" },
+  ]}
+  readouts={["[[n]] \\times [[n-1]] \\times [[n-2]] = [[n*(n-1)*(n-2)]]"]}
+  caption="Each medal slot has one fewer choice than the slot before it, because a runner can't win twice."
+/>
+
+<Check choices={["$24$", "$56$", "$120$", "$336$", "$512$"]} answer={3} explain="$8 \cdot 7 \cdot 6 = 336$.">
+In how many ways can gold, silver and bronze be awarded among 8 runners?
+</Check>
+
+## Repeated letters: divide out the copies
+
+How many arrangements of **BOOK**? If the two O's were different ($\text{O}_1$, $\text{O}_2$) there would be $4! = 24$. But swapping the two O's gives the same word, so every word was counted twice: $\tfrac{24}{2} = 12$.
+
+<Formula>
+Arrangements of $n$ letters where one letter repeats $a$ times, another $b$ times, and so on:
+
+$$
+\frac{n!}{a!\,b!\cdots}
+$$
+
+</Formula>
+
+<Check choices={["$34{,}650$", "$69{,}300$", "$415{,}800$", "$1{,}663{,}200$", "$39{,}916{,}800$"]} answer={0} explain="MISSISSIPPI has 11 letters: M once, I four times, S four times, P twice. $\tfrac{11!}{4!\,4!\,2!} = 34{,}650$.">
+How many distinct arrangements of the letters in MISSISSIPPI are there?
+</Check>
+
+## Restrictions
+
+**Together:** glue the objects that must stay together into one block, arrange the blocks, then arrange inside the block.
+
+<Steps problem="Five people line up. Ana and Ben insist on standing next to each other. How many lineups?">
+<Step title="Glue them">
+Treat Ana and Ben as one block. Now there are 4 units to arrange: $4! = 24$ ways.
+</Step>
+<Step title="Arrange inside the block">
+Ana then Ben, or Ben then Ana: 2 ways.
+</Step>
+<Step title="Multiply">
+$24 \cdot 2 = 48$.
+</Step>
+</Steps>
+
+**Apart:** count everything, then subtract the "together" count. Ana and Ben **not** adjacent: $120 - 48 = 72$.
+
+**Around a round table:** rotations of the same seating count as the same. Fix one person's seat to remove the rotations, then arrange the rest: $(n - 1)!$.
+
+<Check choices={["$24$", "$60$", "$120$", "$600$", "$720$"]} answer={2} explain="Fix one person's seat to remove rotations; the other 5 can be arranged in $5! = 120$ ways.">
+In how many ways can 6 people sit around a round table, if rotations count as the same seating?
+</Check>
+
+<Trap>
+Before computing, decide: are the objects distinct? Does order matter? Are rotations or reflections the same? A wrong answer to any of these questions changes the count by a big factor.
+</Trap>
+
+<Tip>
+"Not next to each other" problems are almost always fastest by complement: total minus together.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Arrangements of LEVEL", back: "$\\tfrac{5!}{2!\\,2!} = 30$" },
+  { front: "$P(10, 2)$", back: "$90$" },
+  { front: "4 boys and 3 girls in a row, girls all together", back: "Block: $5! \\cdot 3! = 720$" },
+  { front: "Ways to seat 4 people at a round table", back: "$3! = 6$" },
+]} />
+
+<Recap>
+- Order matters: permutations. All $n$: $n!$. Choose $k$ of $n$ in order: $\frac{n!}{(n-k)!}$.
+- Repeated items: divide by the factorial of each repeat count.
+- Together: glue into a block. Apart: total minus together.
+- Round table: $(n - 1)!$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Permutation" /> on the AoPS Wiki.
+- Arrangement problems appear in nearly every <Archive test="10" />.
+</GoFurther>

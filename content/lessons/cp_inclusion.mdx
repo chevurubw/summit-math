@@ -1,0 +1,125 @@
+---
+title: Inclusion and exclusion
+---
+
+When groups overlap, adding their sizes counts the overlap twice. The **Principle of Inclusion and Exclusion** (PIE) fixes this: add the groups, subtract the overlaps, add back the triple overlap, and so on. A Venn diagram makes every step visible.
+
+By the end of this lesson you will be able to:
+
+- count the union of two or three overlapping sets,
+- count "neither" and "exactly one",
+- count numbers divisible by at least one of several numbers,
+- fill in a Venn diagram from the inside out.
+
+## Two sets
+
+In a class of 30, 18 play soccer, 15 play basketball, and 7 play both. Adding $18 + 15 = 33$ counts the 7 two sport players twice, so
+
+$$
+|S \cup B| = |S| + |B| - |S \cap B| = 18 + 15 - 7 = 26.
+$$
+
+Then $30 - 26 = 4$ students play neither. Click the buttons to see each piece.
+
+<Venn
+  labels={["Soccer", "Basketball"]}
+  counts={{ A: 11, AB: 7, B: 8, none: 4 }}
+  views={[
+    { label: "soccer: $11 + 7 = 18$", regions: ["A", "AB"] },
+    { label: "basketball: $7 + 8 = 15$", regions: ["AB", "B"] },
+    { label: "both: $7$", regions: ["AB"] },
+    { label: "at least one: $26$", regions: ["A", "AB", "B"] },
+    { label: "neither: $4$", regions: ["none"] },
+  ]}
+  caption="Fill a Venn diagram from the middle out: put the 7 in the overlap first, then $18 - 7 = 11$ and $15 - 7 = 8$."
+/>
+
+<Check choices={["$2$", "$4$", "$6$", "$9$", "$13$"]} answer={0} explain="At least one: $20 + 15 - 7 = 28$. Neither: $30 - 28 = 2$.">
+Of 30 students, 20 like math, 15 like art, and 7 like both. How many like neither?
+</Check>
+
+## Divisibility: the classic use
+
+<Steps problem="How many integers from 1 to 100 are divisible by 2 or 3?">
+<Step title="Each set">
+Divisible by 2: $\lfloor 100/2 \rfloor = 50$. By 3: $\lfloor 100/3 \rfloor = 33$.
+</Step>
+<Step title="The overlap">
+Divisible by both 2 and 3 means divisible by 6: $\lfloor 100/6 \rfloor = 16$.
+</Step>
+<Step title="Combine">
+$50 + 33 - 16 = 67$.
+</Step>
+</Steps>
+
+<Trap>
+The overlap of "divisible by $a$" and "divisible by $b$" is "divisible by $\text{lcm}(a, b)$", not $ab$. Divisible by 4 and by 6 means divisible by 12, not 24.
+</Trap>
+
+## Three sets
+
+$$
+|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |B \cap C| - |A \cap C| + |A \cap B \cap C|
+$$
+
+Why add the triple overlap back? Someone in all three sets is added 3 times, then subtracted 3 times (once in each pair), leaving 0. Adding $|A \cap B \cap C|$ counts them once.
+
+<Venn
+  labels={["A", "B", "C"]}
+  counts={{ A: 10, B: 9, C: 7, AB: 4, AC: 3, BC: 2, ABC: 3 }}
+  views={[
+    { label: "$|A| = 20$", regions: ["A", "AB", "AC", "ABC"] },
+    { label: "$|A \\cap B| = 7$", regions: ["AB", "ABC"] },
+    { label: "triple overlap $3$", regions: ["ABC"] },
+    { label: "exactly one set: $26$", regions: ["A", "B", "C"] },
+    { label: "union: $38$", regions: ["A", "B", "C", "AB", "AC", "BC", "ABC"] },
+  ]}
+  caption="$|A| = 20$, $|B| = 18$, $|C| = 15$, pair overlaps 7, 5 and 6, triple overlap 3. PIE: $53 - 18 + 3 = 38$."
+/>
+
+<Steps problem="Using the numbers above, fill the Venn diagram.">
+<Step title="Start in the center">
+All three: 3.
+</Step>
+<Step title="Pairs only">
+$A$ and $B$ only: $7 - 3 = 4$. $B$ and $C$ only: $5 - 3 = 2$. $A$ and $C$ only: $6 - 3 = 3$.
+</Step>
+<Step title="Singles only">
+$A$ only: $20 - 4 - 3 - 3 = 10$. $B$ only: $18 - 4 - 2 - 3 = 9$. $C$ only: $15 - 3 - 2 - 3 = 7$.
+</Step>
+<Step title="Add every region">
+$10 + 9 + 7 + 4 + 2 + 3 + 3 = 38$, matching the formula.
+</Step>
+</Steps>
+
+<Check choices={["$14$", "$16$", "$18$", "$20$", "$22$"]} answer={1} explain="Divisible by 2, 3 or 5: $30 + 20 + 12 - 10 - 6 - 4 + 2 = 44$. So $60 - 44 = 16$ are divisible by none of them.">
+How many integers from 1 to 60 are divisible by none of 2, 3 and 5?
+</Check>
+
+<KeyIdea>
+When a problem gives overlap information, **fill the Venn diagram from the innermost region outward**. Then any question (exactly one, exactly two, neither) is just adding the right regions.
+</KeyIdea>
+
+<Tip>
+"How many are in **neither**" and "how many are in **exactly one**" are the two most common twists. Draw the diagram; don't try to remember separate formulas.
+</Tip>
+
+<FlipCards cards={[
+  { front: "1 to 100 divisible by 3 or 5", back: "$33 + 20 - 6 = 47$" },
+  { front: "$|A| = 12$, $|B| = 9$, $|A \\cup B| = 17$. Overlap?", back: "$12 + 9 - 17 = 4$" },
+  { front: "In two sets, \"exactly one\" equals...", back: "$|A| + |B| - 2|A \\cap B|$" },
+  { front: "Overlap of multiples of 6 and multiples of 9", back: "Multiples of $\\text{lcm} = 18$." },
+]} />
+
+<Recap>
+- Two sets: $|A \cup B| = |A| + |B| - |A \cap B|$.
+- Three sets: add singles, subtract pairs, add the triple.
+- "Neither" = total minus union.
+- Divisible by $a$ and $b$ means divisible by $\text{lcm}(a, b)$.
+- Fill Venn diagrams from the center out.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Principle of Inclusion-Exclusion" /> on the AoPS Wiki.
+- PIE appears regularly in <Archive test="10" />.
+</GoFurther>

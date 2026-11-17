@@ -1,0 +1,129 @@
+---
+title: Analytic geometry in 2D and 3D
+---
+
+Analytic geometry means putting a shape on coordinates and letting algebra do the work. Some AMC geometry problems that look hard with pure geometry become routine once you place the figure on a grid. This lesson collects the formulas that make it work, in the plane and in space.
+
+By the end of this lesson you will be able to:
+
+- find the distance from a point to a line,
+- reflect points across lines,
+- compute the area of any polygon from its vertices (the shoelace formula),
+- measure distances and diagonals in 3D,
+- choose coordinates that make a problem easy.
+
+## Distance from a point to a line
+
+For the line $Ax + By + C = 0$ and the point $(x_0, y_0)$:
+
+$$
+d = \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}.
+$$
+
+The shortest path always meets the line at a right angle. Drag the point.
+
+<Figure
+  bounds={[-2, 8, -2, 6]}
+  ticks={1}
+  height={340}
+  params={[
+    { name: "px", min: -1, max: 7, step: 0.5, value: 5, label: "point $x$" },
+    { name: "py", min: -1, max: 5, step: 0.5, value: 4, label: "point $y$" },
+  ]}
+  elements={[
+    { type: "segment", a: [-2, 4.5], b: [6.6667, -2], color: "accent", width: 2.5 },
+    { type: "point", id: "P", x: "px", y: "py", color: "heading", label: "P", labelDir: "ne" },
+    { type: "point", id: "H", x: "px - 3*(3*px + 4*py - 12)/25", y: "py - 4*(3*px + 4*py - 12)/25", color: "amber", size: 4 },
+    { type: "segment", a: "P", b: "H", color: "amber", width: 2.5 },
+    { type: "angle", a: "P", o: "H", b: [0, 3], right: true, color: "amber", r: 14 },
+  ]}
+  readouts={["3x + 4y - 12 = 0", "d = \\dfrac{|3([[px]]) + 4([[py]]) - 12|}{\\sqrt{3^2 + 4^2}} = [[abs(3*px + 4*py - 12)/5:3]]"]}
+  caption="The yellow segment is perpendicular to the line, and its length matches the formula."
+/>
+
+<Check choices={["$1$", "$\\tfrac{8}{5}$", "$2$", "$\\tfrac{12}{5}$", "$3$"]} answer={2} explain="$\dfrac{|3(1) + 4(2) - 1|}{5} = \dfrac{10}{5} = 2$.">
+What is the distance from $(1, 2)$ to the line $3x + 4y - 1 = 0$?
+</Check>
+
+## Reflections
+
+- Across the $x$ axis: $(x, y) \to (x, -y)$.
+- Across the $y$ axis: $(x, y) \to (-x, y)$.
+- Across $y = x$: $(x, y) \to (y, x)$.
+- Across $y = -x$: $(x, y) \to (-y, -x)$.
+
+<Tip>
+Shortest path problems ("walk from $A$ to the river, then to $B$") become straight lines after you reflect one endpoint across the river. The shortest total is the distance from the reflected point to the other endpoint.
+</Tip>
+
+<Check choices={["$\\sqrt{41}$", "$7$", "$\\sqrt{65}$", "$9$", "$\\sqrt{85}$"]} answer={4} explain="Reflect $B = (6, 3)$ across the $x$ axis to $(6, -3)$. The shortest path is the straight line from $A = (0, 4)$ to $(6, -3)$: $\sqrt{6^2 + 7^2} = \sqrt{85}$.">
+A path goes from $A = (0, 4)$ to a point on the $x$ axis and then to $B = (6, 3)$. What is the shortest possible length?
+</Check>
+
+## The shoelace formula
+
+List the vertices $(x_1, y_1), \dots, (x_n, y_n)$ in order around the polygon, then
+
+$$
+\text{Area} = \frac{1}{2}\left|\sum_{i=1}^{n} (x_i y_{i+1} - x_{i+1} y_i)\right|,
+$$
+
+wrapping around so that vertex $n + 1$ is vertex 1. The name comes from the criss-cross pattern of multiplications.
+
+<Steps problem="Find the area of the triangle with vertices $(1, 2)$, $(4, 6)$, $(6, 1)$.">
+<Step title="Cross products">
+$1 \cdot 6 - 4 \cdot 2 = -2$, then $4 \cdot 1 - 6 \cdot 6 = -32$, then $6 \cdot 2 - 1 \cdot 1 = 11$.
+</Step>
+<Step title="Add and halve">
+$-2 - 32 + 11 = -23$, so the area is $\tfrac{23}{2}$.
+</Step>
+</Steps>
+
+<Check choices={["$10$", "$12$", "$14$", "$15$", "$24$"]} answer={1} explain="Cross products: $0 - 0 = 0$, $4 \cdot 3 - 5 \cdot 0 = 12$, $5 \cdot 3 - 1 \cdot 3 = 12$, $1 \cdot 0 - 0 \cdot 3 = 0$. Sum $24$, area $12$. (It's a parallelogram with base 4 and height 3.)">
+What is the area of the quadrilateral with vertices $(0, 0)$, $(4, 0)$, $(5, 3)$, $(1, 3)$ in that order?
+</Check>
+
+## Three dimensions
+
+Distance in space just adds a third square:
+
+$$
+d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}.
+$$
+
+The **space diagonal** of an $a \times b \times c$ box is $\sqrt{a^2 + b^2 + c^2}$. It's two Pythagorean Theorems in a row: across the floor, then up.
+
+<Check choices={["$5$", "$6$", "$7$", "$\\sqrt{11}$", "$11$"]} answer={2} explain="$\sqrt{2^2 + 3^2 + 6^2} = \sqrt{49} = 7$.">
+What is the distance from the origin to $(2, 3, 6)$?
+</Check>
+
+<Check choices={["$12$", "$13$", "$14$", "$15$", "$19$"]} answer={1} explain="$\sqrt{9 + 16 + 144} = \sqrt{169} = 13$.">
+How long is the space diagonal of a $3 \times 4 \times 12$ box?
+</Check>
+
+<KeyIdea>
+Choose coordinates to make the numbers small: put a right angle at the origin, a side along an axis, or a center at $(0, 0)$. A good setup is often half the solution.
+</KeyIdea>
+
+<Trap>
+The shoelace formula needs the vertices **in order** around the shape. Crossed orderings give the wrong area.
+</Trap>
+
+<FlipCards cards={[
+  { front: "Reflect $(3, -7)$ across $y = x$", back: "$(-7, 3)$" },
+  { front: "Distance from $(0, 0)$ to $x + y = 4$", back: "$\\tfrac{4}{\\sqrt{2}} = 2\\sqrt{2}$" },
+  { front: "Midpoint of $(1, 5, -2)$ and $(3, -1, 6)$", back: "$(2, 2, 2)$" },
+  { front: "Diagonal of a unit cube", back: "$\\sqrt{3}$" },
+]} />
+
+<Recap>
+- Point to line: $\dfrac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}$.
+- Reflections swap or negate coordinates; reflect to straighten shortest paths.
+- Shoelace: half the absolute value of the criss-cross sum.
+- 3D distance adds a third square; box diagonal $\sqrt{a^2 + b^2 + c^2}$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Shoelace Theorem" /> on the AoPS Wiki.
+- Practice in <Archive test="12" /> and <Archive test="10" />.
+</GoFurther>

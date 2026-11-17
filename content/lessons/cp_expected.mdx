@@ -1,0 +1,138 @@
+---
+title: Expected value
+---
+
+The **expected value** of a random quantity is its long run average: what you'd get per try if you repeated the experiment many, many times. It's not necessarily a value that can actually happen. The average roll of a die is 3.5, even though no face shows 3.5.
+
+By the end of this lesson you will be able to:
+
+- compute an expected value from a list of outcomes,
+- decide whether a game is fair,
+- use **linearity of expectation**, the AMC's favorite shortcut,
+- find the expected waiting time until something happens.
+
+## The definition
+
+Multiply each value by its probability, and add:
+
+$$
+E[X] = \sum (\text{value}) \times (\text{probability of that value}).
+$$
+
+For one fair die: $E = \tfrac{1}{6}(1 + 2 + 3 + 4 + 5 + 6) = \tfrac{21}{6} = 3.5$.
+
+The expected value is the **balance point** of the distribution. Below is the distribution of the sum of two dice, each with $n$ sides. Change $n$: the shape changes but it always balances at $n + 1$.
+
+<Figure
+  bounds={[1, 21, 0, 10.5]}
+  axes="x"
+  grid={false}
+  ticks={1}
+  height={260}
+  equal={false}
+  params={[{ name: "n", min: 2, max: 10, step: 1, value: 6, label: "sides per die $n$" }]}
+  elements={[
+    { type: "region", test: "abs(x - round(x)) < 0.33 && round(x) >= 2 && round(x) <= 2*n && y < n - abs(round(x) - n - 1)", fill: "accent", cells: 240, opacity: 0.8 },
+    { type: "segment", a: ["n + 1", 0], b: ["n + 1", "n + 0.6"], color: "amber", width: 3 },
+    { type: "text", x: "n + 1", y: "n + 1.1", text: "balance point [[n+1]]", color: "amber", size: 14 },
+  ]}
+  readouts={["E[\\text{sum}] = 2 \\cdot \\tfrac{[[n]] + 1}{2} = [[n+1]]"]}
+  caption="Bar heights count the ways to roll each sum. For two six sided dice the expected sum is 7."
+/>
+
+<Check choices={["$0$ dollars", "$0.40$ dollars", "$0.80$ dollars", "$1.20$ dollars", "$2$ dollars"]} answer={1} explain="$E = \tfrac{1}{5}(10) + \tfrac{4}{5}(-2) = 2 - 1.6 = 0.40$ dollars per play.">
+A game costs nothing to play. With probability $\tfrac{1}{5}$ you win 10 dollars; otherwise you lose 2 dollars. What are your expected winnings per play?
+</Check>
+
+A game is **fair** when the expected winnings are exactly 0.
+
+## Linearity of expectation
+
+<KeyIdea title="The most powerful idea in this lesson">
+The expected value of a **sum** is the sum of the expected values:
+
+$$
+E[X + Y] = E[X] + E[Y].
+$$
+
+This is true **even when $X$ and $Y$ depend on each other**. You never need the full distribution of the sum.
+</KeyIdea>
+
+<Steps problem="A fair die is rolled 12 times. What is the expected number of sixes?">
+<Step title="Split into small pieces">
+Let $X_i = 1$ if roll $i$ is a six and $0$ otherwise. The number of sixes is $X_1 + X_2 + \cdots + X_{12}$.
+</Step>
+<Step title="Each piece is easy">
+$E[X_i] = \tfrac{1}{6}$.
+</Step>
+<Step title="Add them">
+$12 \cdot \tfrac{1}{6} = 2$.
+</Step>
+</Steps>
+
+This "count with 0 or 1 indicators" trick solves problems that look impossible:
+
+<Steps problem="Ten people each put their hat in a pile and take one back at random. What is the expected number of people who get their own hat?">
+<Step>
+Person $i$ gets their own hat with probability $\tfrac{1}{10}$.
+</Step>
+<Step>
+By linearity, the expected number is $10 \cdot \tfrac{1}{10} = 1$, even though the events are not independent.
+</Step>
+</Steps>
+
+<Check choices={["$3$", "$4.5$", "$5$", "$6$", "$7.5$"]} answer={3} explain="Each of the 12 flips is heads with probability $\tfrac{1}{2}$, so by linearity the expected number of heads is $12 \cdot \tfrac{1}{2} = 6$.">
+A fair coin is flipped 12 times. What is the expected number of heads?
+</Check>
+
+## Waiting times
+
+If something happens with probability $p$ on each independent try, the expected number of tries until it first happens is
+
+$$
+\frac{1}{p}.
+$$
+
+Rolling a die until a 6 appears takes 6 rolls on average. Flipping a coin until heads takes 2 flips.
+
+<Steps problem="Why is the waiting time $\tfrac{1}{p}$?">
+<Step>
+Let $E$ be the expected number of tries. You always make one try.
+</Step>
+<Step>
+With probability $1 - p$ it fails, and you're back where you started, needing $E$ more tries on average.
+</Step>
+<Step>
+So $E = 1 + (1 - p)E$, which solves to $pE = 1$, or $E = \tfrac{1}{p}$.
+</Step>
+</Steps>
+
+That "you're back where you started" equation is a general method: write the expected value in terms of itself and solve.
+
+<Check choices={["$2$", "$3$", "$4$", "$5$", "$6$"]} answer={2} explain="Each draw is a heart with probability $\tfrac{1}{4}$, independently, so the expected number of draws is $\tfrac{1}{1/4} = 4$.">
+Cards are drawn one at a time from a well shuffled deck, **replacing** and reshuffling each time. What is the expected number of draws until the first heart?
+</Check>
+
+<Trap>
+Expected value is an **average**, not a prediction. Expecting 2 sixes in 12 rolls doesn't mean you'll usually see exactly 2.
+</Trap>
+
+<FlipCards cards={[
+  { front: "Expected sum of 3 dice", back: "$3 \\cdot 3.5 = 10.5$" },
+  { front: "Expected number of tails in 20 flips", back: "$10$" },
+  { front: "Expected rolls until a 1 or 2 appears", back: "$p = \\tfrac{1}{3}$, so 3." },
+  { front: "Linearity needs independence?", back: "No. It works for any random variables." },
+]} />
+
+<Recap>
+- $E = \sum \text{value} \times \text{probability}$.
+- Fair game: expected winnings 0.
+- Linearity: $E[X + Y] = E[X] + E[Y]$, always. Break counts into 0 or 1 indicators.
+- Waiting for an event with probability $p$: $\frac{1}{p}$ tries on average.
+- Harder waits: write $E$ in terms of itself.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Expected value" /> and <AoPS q="Linearity of expectation" /> on the AoPS Wiki.
+- Expected value problems are a favorite late in <Archive test="12" />.
+</GoFurther>

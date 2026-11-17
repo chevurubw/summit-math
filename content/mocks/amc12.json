@@ -1,0 +1,3110 @@
+[
+ {
+  "id": "mock_x2_trig_double_1",
+  "family": "x2_trig_double",
+  "difficulty": 2,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "If $\\cos 2\\theta = -\\frac{1}{2}$, what is $\\cos^2\\theta$?",
+  "choices": {
+   "A": "$-\\frac{1}{4}$",
+   "B": "$\\frac{1}{4}$",
+   "C": "$\\frac{1}{2}$",
+   "D": "$\\frac{3}{4}$",
+   "E": "$\\frac{3}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\cos 2\\theta = 1 - 2\\sin^2\\theta = 2\\cos^2\\theta - 1$."
+  ],
+  "solution": "**What we need:** $\\cos^2\\theta$ from the value of $\\cos 2\\theta$.\n\n**Key idea:** the double angle formula has a version written only in terms of $\\cos$: $\\cos 2\\theta = 2\\cos^2\\theta - 1$.\n\n**Step 1.** Set it equal to the given value: $2\\cos^2\\theta - 1 = -\\frac{1}{2}$.\n\n**Step 2.** Solve: $2\\cos^2\\theta = 1 + (-\\frac{1}{2}) = \\frac{1}{2}$, so $\\cos^2\\theta = \\frac{1}{4}$.\n\n**Answer:** $\\frac{1}{4}$. **(B)**\n\n**Common mistake:** using the version of the formula with the other function, which gives $1$ minus the right answer."
+ },
+ {
+  "id": "mock_x2_trig_double_2",
+  "family": "x2_trig_double",
+  "difficulty": 2,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "If $\\cos 2\\theta = -\\frac{3}{10}$, what is $\\sin^2\\theta$?",
+  "choices": {
+   "A": "$-\\frac{3}{20}$",
+   "B": "$\\frac{3}{10}$",
+   "C": "$\\frac{7}{20}$",
+   "D": "$\\frac{13}{20}$",
+   "E": "$\\frac{9}{10}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\cos 2\\theta = 1 - 2\\sin^2\\theta = 2\\cos^2\\theta - 1$."
+  ],
+  "solution": "**What we need:** $\\sin^2\\theta$ from the value of $\\cos 2\\theta$.\n\n**Key idea:** the double angle formula has a version written only in terms of $\\sin$: $\\cos 2\\theta = 1 - 2\\sin^2\\theta$.\n\n**Step 1.** Set it equal to the given value: $1 - 2\\sin^2\\theta = -\\frac{3}{10}$.\n\n**Step 2.** Solve: $2\\sin^2\\theta = 1 - (-\\frac{3}{10}) = \\frac{13}{10}$, so $\\sin^2\\theta = \\frac{13}{20}$.\n\n**Answer:** $\\frac{13}{20}$. **(D)**\n\n**Common mistake:** using the version of the formula with the other function, which gives $1$ minus the right answer."
+ },
+ {
+  "id": "mock_x2_trig_double_3",
+  "family": "x2_trig_double",
+  "difficulty": 2,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "If $\\cos 2\\theta = -\\frac{1}{2}$, what is $\\sin^2\\theta$?",
+  "choices": {
+   "A": "$-\\frac{1}{4}$",
+   "B": "$\\frac{1}{4}$",
+   "C": "$\\frac{1}{2}$",
+   "D": "$\\frac{3}{4}$",
+   "E": "$1$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\cos 2\\theta = 1 - 2\\sin^2\\theta = 2\\cos^2\\theta - 1$."
+  ],
+  "solution": "**What we need:** $\\sin^2\\theta$ from the value of $\\cos 2\\theta$.\n\n**Key idea:** the double angle formula has a version written only in terms of $\\sin$: $\\cos 2\\theta = 1 - 2\\sin^2\\theta$.\n\n**Step 1.** Set it equal to the given value: $1 - 2\\sin^2\\theta = -\\frac{1}{2}$.\n\n**Step 2.** Solve: $2\\sin^2\\theta = 1 - (-\\frac{1}{2}) = \\frac{3}{2}$, so $\\sin^2\\theta = \\frac{3}{4}$.\n\n**Answer:** $\\frac{3}{4}$. **(D)**\n\n**Common mistake:** using the version of the formula with the other function, which gives $1$ minus the right answer."
+ },
+ {
+  "id": "mock_x2_trig_double_4",
+  "family": "x2_trig_double",
+  "difficulty": 2,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "If $\\cos 2\\theta = -\\frac{1}{4}$, what is $\\sin^2\\theta$?",
+  "choices": {
+   "A": "$-\\frac{1}{8}$",
+   "B": "$\\frac{1}{4}$",
+   "C": "$\\frac{3}{8}$",
+   "D": "$\\frac{5}{8}$",
+   "E": "$\\frac{7}{8}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\cos 2\\theta = 1 - 2\\sin^2\\theta = 2\\cos^2\\theta - 1$."
+  ],
+  "solution": "**What we need:** $\\sin^2\\theta$ from the value of $\\cos 2\\theta$.\n\n**Key idea:** the double angle formula has a version written only in terms of $\\sin$: $\\cos 2\\theta = 1 - 2\\sin^2\\theta$.\n\n**Step 1.** Set it equal to the given value: $1 - 2\\sin^2\\theta = -\\frac{1}{4}$.\n\n**Step 2.** Solve: $2\\sin^2\\theta = 1 - (-\\frac{1}{4}) = \\frac{5}{4}$, so $\\sin^2\\theta = \\frac{5}{8}$.\n\n**Answer:** $\\frac{5}{8}$. **(D)**\n\n**Common mistake:** using the version of the formula with the other function, which gives $1$ minus the right answer."
+ },
+ {
+  "id": "mock_x2_trig_double_5",
+  "family": "x2_trig_double",
+  "difficulty": 2,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "If $\\cos 2\\theta = -\\frac{2}{5}$, what is $\\cos^2\\theta$?",
+  "choices": {
+   "A": "$-\\frac{1}{5}$",
+   "B": "$\\frac{3}{10}$",
+   "C": "$\\frac{2}{5}$",
+   "D": "$\\frac{11}{20}$",
+   "E": "$\\frac{7}{10}$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\cos 2\\theta = 1 - 2\\sin^2\\theta = 2\\cos^2\\theta - 1$."
+  ],
+  "solution": "**What we need:** $\\cos^2\\theta$ from the value of $\\cos 2\\theta$.\n\n**Key idea:** the double angle formula has a version written only in terms of $\\cos$: $\\cos 2\\theta = 2\\cos^2\\theta - 1$.\n\n**Step 1.** Set it equal to the given value: $2\\cos^2\\theta - 1 = -\\frac{2}{5}$.\n\n**Step 2.** Solve: $2\\cos^2\\theta = 1 + (-\\frac{2}{5}) = \\frac{3}{5}$, so $\\cos^2\\theta = \\frac{3}{10}$.\n\n**Answer:** $\\frac{3}{10}$. **(B)**\n\n**Common mistake:** using the version of the formula with the other function, which gives $1$ minus the right answer."
+ },
+ {
+  "id": "mock_x2_trig_double_6",
+  "family": "x2_trig_double",
+  "difficulty": 2,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "If $\\cos 2\\theta = -\\frac{2}{9}$, what is $\\sin^2\\theta$?",
+  "choices": {
+   "A": "$-\\frac{1}{9}$",
+   "B": "$\\frac{2}{9}$",
+   "C": "$\\frac{7}{18}$",
+   "D": "$\\frac{11}{18}$",
+   "E": "$\\frac{31}{36}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\cos 2\\theta = 1 - 2\\sin^2\\theta = 2\\cos^2\\theta - 1$."
+  ],
+  "solution": "**What we need:** $\\sin^2\\theta$ from the value of $\\cos 2\\theta$.\n\n**Key idea:** the double angle formula has a version written only in terms of $\\sin$: $\\cos 2\\theta = 1 - 2\\sin^2\\theta$.\n\n**Step 1.** Set it equal to the given value: $1 - 2\\sin^2\\theta = -\\frac{2}{9}$.\n\n**Step 2.** Solve: $2\\sin^2\\theta = 1 - (-\\frac{2}{9}) = \\frac{11}{9}$, so $\\sin^2\\theta = \\frac{11}{18}$.\n\n**Answer:** $\\frac{11}{18}$. **(D)**\n\n**Common mistake:** using the version of the formula with the other function, which gives $1$ minus the right answer."
+ },
+ {
+  "id": "mock_x2_log_product_1",
+  "family": "x2_log_product",
+  "difficulty": 2,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "What is $\\log_{2} 4 + \\log_{2} 4 + \\log_{4} 4$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$8$"
+  },
+  "answer": "C",
+  "hints": [
+   "Combine logs with the same base."
+  ],
+  "solution": "**What we need:** the value of three logarithms added together.\n\n**Key idea:** logs with the same base add by multiplying their inputs: $\\log_b x + \\log_b y = \\log_b(xy)$. And $\\log_b b = 1$ for any base.\n\n**Step 1.** Combine the first two: $\\log_{2}(4 \\cdot 4) = \\log_{2} 16$.\n\n**Step 2.** $16 = 2^{4}$, so $\\log_{2} 16 = 4$.\n\n**Step 3.** The last term asks what power of $4$ gives $4$: the answer is $1$.\n\n**Step 4.** Total: $4 + 1 = 5$.\n\n**Answer:** $5$. **(C)**\n\n**Common mistake:** adding the inputs ($4 + 4$) instead of multiplying them."
+ },
+ {
+  "id": "mock_x2_log_product_2",
+  "family": "x2_log_product",
+  "difficulty": 2,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "What is $\\log_{5} 125 + \\log_{5} 5 + \\log_{25} 25$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$6$",
+   "D": "$8$",
+   "E": "$130$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine logs with the same base."
+  ],
+  "solution": "**What we need:** the value of three logarithms added together.\n\n**Key idea:** logs with the same base add by multiplying their inputs: $\\log_b x + \\log_b y = \\log_b(xy)$. And $\\log_b b = 1$ for any base.\n\n**Step 1.** Combine the first two: $\\log_{5}(125 \\cdot 5) = \\log_{5} 625$.\n\n**Step 2.** $625 = 5^{4}$, so $\\log_{5} 625 = 4$.\n\n**Step 3.** The last term asks what power of $25$ gives $25$: the answer is $1$.\n\n**Step 4.** Total: $4 + 1 = 5$.\n\n**Answer:** $5$. **(B)**\n\n**Common mistake:** adding the inputs ($125 + 5$) instead of multiplying them."
+ },
+ {
+  "id": "mock_x2_log_product_3",
+  "family": "x2_log_product",
+  "difficulty": 2,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "What is $\\log_{2} 32 + \\log_{2} 8 + \\log_{4} 4$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$16$",
+   "E": "$40$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine logs with the same base."
+  ],
+  "solution": "**What we need:** the value of three logarithms added together.\n\n**Key idea:** logs with the same base add by multiplying their inputs: $\\log_b x + \\log_b y = \\log_b(xy)$. And $\\log_b b = 1$ for any base.\n\n**Step 1.** Combine the first two: $\\log_{2}(32 \\cdot 8) = \\log_{2} 256$.\n\n**Step 2.** $256 = 2^{8}$, so $\\log_{2} 256 = 8$.\n\n**Step 3.** The last term asks what power of $4$ gives $4$: the answer is $1$.\n\n**Step 4.** Total: $8 + 1 = 9$.\n\n**Answer:** $9$. **(B)**\n\n**Common mistake:** adding the inputs ($32 + 8$) instead of multiplying them."
+ },
+ {
+  "id": "mock_x2_log_product_4",
+  "family": "x2_log_product",
+  "difficulty": 2,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "What is $\\log_{2} 32 + \\log_{2} 4 + \\log_{4} 4$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$14$",
+   "E": "$36$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine logs with the same base."
+  ],
+  "solution": "**What we need:** the value of three logarithms added together.\n\n**Key idea:** logs with the same base add by multiplying their inputs: $\\log_b x + \\log_b y = \\log_b(xy)$. And $\\log_b b = 1$ for any base.\n\n**Step 1.** Combine the first two: $\\log_{2}(32 \\cdot 4) = \\log_{2} 128$.\n\n**Step 2.** $128 = 2^{7}$, so $\\log_{2} 128 = 7$.\n\n**Step 3.** The last term asks what power of $4$ gives $4$: the answer is $1$.\n\n**Step 4.** Total: $7 + 1 = 8$.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** adding the inputs ($32 + 4$) instead of multiplying them."
+ },
+ {
+  "id": "mock_x2_log_product_5",
+  "family": "x2_log_product",
+  "difficulty": 2,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "What is $\\log_{3} 9 + \\log_{3} 729 + \\log_{9} 9$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$16$",
+   "E": "$738$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine logs with the same base."
+  ],
+  "solution": "**What we need:** the value of three logarithms added together.\n\n**Key idea:** logs with the same base add by multiplying their inputs: $\\log_b x + \\log_b y = \\log_b(xy)$. And $\\log_b b = 1$ for any base.\n\n**Step 1.** Combine the first two: $\\log_{3}(9 \\cdot 729) = \\log_{3} 6561$.\n\n**Step 2.** $6561 = 3^{8}$, so $\\log_{3} 6561 = 8$.\n\n**Step 3.** The last term asks what power of $9$ gives $9$: the answer is $1$.\n\n**Step 4.** Total: $8 + 1 = 9$.\n\n**Answer:** $9$. **(B)**\n\n**Common mistake:** adding the inputs ($9 + 729$) instead of multiplying them."
+ },
+ {
+  "id": "mock_x2_log_product_6",
+  "family": "x2_log_product",
+  "difficulty": 2,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "What is $\\log_{5} 25 + \\log_{5} 15625 + \\log_{25} 25$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$16$",
+   "E": "$15650$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine logs with the same base."
+  ],
+  "solution": "**What we need:** the value of three logarithms added together.\n\n**Key idea:** logs with the same base add by multiplying their inputs: $\\log_b x + \\log_b y = \\log_b(xy)$. And $\\log_b b = 1$ for any base.\n\n**Step 1.** Combine the first two: $\\log_{5}(25 \\cdot 15625) = \\log_{5} 390625$.\n\n**Step 2.** $390625 = 5^{8}$, so $\\log_{5} 390625 = 8$.\n\n**Step 3.** The last term asks what power of $25$ gives $25$: the answer is $1$.\n\n**Step 4.** Total: $8 + 1 = 9$.\n\n**Answer:** $9$. **(B)**\n\n**Common mistake:** adding the inputs ($25 + 15625$) instead of multiplying them."
+ },
+ {
+  "id": "mock_x2_cx_power_1",
+  "family": "x2_cx_power",
+  "difficulty": 2,
+  "topic": "complex_numbers",
+  "skillId": "cx_arithmetic",
+  "track": "amc12",
+  "prompt": "What is the real part of $(2 - i)^{3}$?",
+  "choices": {
+   "A": "$-11$",
+   "B": "$-2$",
+   "C": "$2$",
+   "D": "$4$",
+   "E": "$8$"
+  },
+  "answer": "C",
+  "hints": [
+   "Expand step by step, using $i^2 = -1$."
+  ],
+  "solution": "**What we need:** the real part of $(2 - i)^{3}$.\n\n**Key idea:** multiply out step by step, replacing $i^2$ with $-1$ each time.\n\n**Step 1.** Square: $(2 - i)^2 = 4 - 4i + (-1)^2 i^2 = 4 - 4i - 1 = 3 - 4i$.\n\n**Step 2.** Multiply by $2 - i$ again: $(3 - 4i)(2 - i) = 2 - 11i$.\n\n**Step 3.** So $(2 - i)^{3} = 2 - 11i$.\n\n**Answer:** the real part is $2$. **(C)**\n\n**Common mistake:** dropping the $i^2 = -1$ sign change in one of the steps."
+ },
+ {
+  "id": "mock_x2_cx_power_2",
+  "family": "x2_cx_power",
+  "difficulty": 2,
+  "topic": "complex_numbers",
+  "skillId": "cx_arithmetic",
+  "track": "amc12",
+  "prompt": "What is the real part of $(1 - i)^{2}$?",
+  "choices": {
+   "A": "$-2$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$2$",
+   "E": "$3$"
+  },
+  "answer": "B",
+  "hints": [
+   "Expand step by step, using $i^2 = -1$."
+  ],
+  "solution": "**What we need:** the real part of $(1 - i)^{2}$.\n\n**Key idea:** multiply out step by step, replacing $i^2$ with $-1$ each time.\n\n**Step 1.** Square: $(1 - i)^2 = 1 - 2i + (-1)^2 i^2 = 1 - 2i - 1 = 0 - 2i$.\n\n**Step 2.** So $(1 - i)^{2} = 0 - 2i$.\n\n**Answer:** the real part is $0$. **(B)**\n\n**Common mistake:** forgetting that $i^2 = -1$ flips the sign of the $(-1)^2$ term."
+ },
+ {
+  "id": "mock_x2_cx_power_3",
+  "family": "x2_cx_power",
+  "difficulty": 2,
+  "topic": "complex_numbers",
+  "skillId": "cx_arithmetic",
+  "track": "amc12",
+  "prompt": "What is the imaginary part of $(1 + 2i)^{3}$?",
+  "choices": {
+   "A": "$-11$",
+   "B": "$-2$",
+   "C": "$0$",
+   "D": "$1$",
+   "E": "$2$"
+  },
+  "answer": "B",
+  "hints": [
+   "Expand step by step, using $i^2 = -1$."
+  ],
+  "solution": "**What we need:** the imaginary part of $(1 + 2i)^{3}$.\n\n**Key idea:** multiply out step by step, replacing $i^2$ with $-1$ each time.\n\n**Step 1.** Square: $(1 + 2i)^2 = 1 + 4i + (2)^2 i^2 = 1 + 4i - 4 = -3 + 4i$.\n\n**Step 2.** Multiply by $1 + 2i$ again: $(-3 + 4i)(1 + 2i) = -11 - 2i$.\n\n**Step 3.** So $(1 + 2i)^{3} = -11 - 2i$.\n\n**Answer:** the imaginary part is $-2$. **(B)**\n\n**Common mistake:** dropping the $i^2 = -1$ sign change in one of the steps."
+ },
+ {
+  "id": "mock_x2_cx_power_4",
+  "family": "x2_cx_power",
+  "difficulty": 2,
+  "topic": "complex_numbers",
+  "skillId": "cx_arithmetic",
+  "track": "amc12",
+  "prompt": "What is the real part of $(2 - i)^{4}$?",
+  "choices": {
+   "A": "$-24$",
+   "B": "$-7$",
+   "C": "$-5$",
+   "D": "$7$",
+   "E": "$16$"
+  },
+  "answer": "B",
+  "hints": [
+   "Expand step by step, using $i^2 = -1$."
+  ],
+  "solution": "**What we need:** the real part of $(2 - i)^{4}$.\n\n**Key idea:** multiply out step by step, replacing $i^2$ with $-1$ each time.\n\n**Step 1.** Square: $(2 - i)^2 = 4 - 4i + (-1)^2 i^2 = 4 - 4i - 1 = 3 - 4i$.\n\n**Step 2.** Multiply by $2 - i$ again: $(3 - 4i)(2 - i) = 2 - 11i$.\n\n**Step 3.** Multiply by $2 - i$ again: $(2 - 11i)(2 - i) = -7 - 24i$.\n\n**Step 4.** So $(2 - i)^{4} = -7 - 24i$.\n\n**Answer:** the real part is $-7$. **(B)**\n\n**Common mistake:** dropping the $i^2 = -1$ sign change in one of the steps."
+ },
+ {
+  "id": "mock_x2_cx_power_5",
+  "family": "x2_cx_power",
+  "difficulty": 2,
+  "topic": "complex_numbers",
+  "skillId": "cx_arithmetic",
+  "track": "amc12",
+  "prompt": "What is the real part of $(1 + 2i)^{2}$?",
+  "choices": {
+   "A": "$-3$",
+   "B": "$-1$",
+   "C": "$1$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "A",
+  "hints": [
+   "Expand step by step, using $i^2 = -1$."
+  ],
+  "solution": "**What we need:** the real part of $(1 + 2i)^{2}$.\n\n**Key idea:** multiply out step by step, replacing $i^2$ with $-1$ each time.\n\n**Step 1.** Square: $(1 + 2i)^2 = 1 + 4i + (2)^2 i^2 = 1 + 4i - 4 = -3 + 4i$.\n\n**Step 2.** So $(1 + 2i)^{2} = -3 + 4i$.\n\n**Answer:** the real part is $-3$. **(A)**\n\n**Common mistake:** forgetting that $i^2 = -1$ flips the sign of the $(2)^2$ term."
+ },
+ {
+  "id": "mock_x2_cx_power_6",
+  "family": "x2_cx_power",
+  "difficulty": 2,
+  "topic": "complex_numbers",
+  "skillId": "cx_arithmetic",
+  "track": "amc12",
+  "prompt": "What is the imaginary part of $(2 + i)^{3}$?",
+  "choices": {
+   "A": "$-11$",
+   "B": "$2$",
+   "C": "$8$",
+   "D": "$11$",
+   "E": "$13$"
+  },
+  "answer": "D",
+  "hints": [
+   "Expand step by step, using $i^2 = -1$."
+  ],
+  "solution": "**What we need:** the imaginary part of $(2 + i)^{3}$.\n\n**Key idea:** multiply out step by step, replacing $i^2$ with $-1$ each time.\n\n**Step 1.** Square: $(2 + i)^2 = 4 + 4i + (1)^2 i^2 = 4 + 4i - 1 = 3 + 4i$.\n\n**Step 2.** Multiply by $2 + i$ again: $(3 + 4i)(2 + i) = 2 + 11i$.\n\n**Step 3.** So $(2 + i)^{3} = 2 + 11i$.\n\n**Answer:** the imaginary part is $11$. **(D)**\n\n**Common mistake:** dropping the $i^2 = -1$ sign change in one of the steps."
+ },
+ {
+  "id": "mock_x2_poly_remainder_1",
+  "family": "x2_poly_remainder",
+  "difficulty": 2,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "What is the remainder when $x^{4} - 2x^{3} + 4x^{2} - 5x - 6$ is divided by $x - 3$?",
+  "choices": {
+   "A": "$-8$",
+   "B": "$-6$",
+   "C": "$42$",
+   "D": "$43$",
+   "E": "$180$"
+  },
+  "answer": "C",
+  "hints": [
+   "Remainder Theorem: plug in the root of the divisor."
+  ],
+  "solution": "**What we need:** the remainder of a polynomial division, without doing long division.\n\n**Key idea:** Remainder Theorem: dividing $P(x)$ by $x - a$ leaves remainder $P(a)$. Here the divisor is $x - (3)$, so plug in $x = 3$.\n\n**Step 1.** $P(3) = 1 \\cdot (3)^{4} + -2 \\cdot (3)^{3} + 4 \\cdot (3)^{2} + -5 \\cdot (3) + -6$.\n\n**Step 2.** Evaluate: $P(3) = 42$.\n\n**Answer:** the remainder is $42$. **(C)**\n\n**Common mistake:** plugging in $x = -3$ (the number you see in the divisor). Dividing by $x - 3$ means plugging in the root, $x = 3$. That mistake gives $180$."
+ },
+ {
+  "id": "mock_x2_poly_remainder_2",
+  "family": "x2_poly_remainder",
+  "difficulty": 2,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "What is the remainder when $x^{3} + x^{2} + 2$ is divided by $x + 1$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "Remainder Theorem: plug in the root of the divisor."
+  ],
+  "solution": "**What we need:** the remainder of a polynomial division, without doing long division.\n\n**Key idea:** Remainder Theorem: dividing $P(x)$ by $x - a$ leaves remainder $P(a)$. Here the divisor is $x - (-1)$, so plug in $x = -1$.\n\n**Step 1.** $P(-1) = 1 \\cdot (-1)^{3} + 1 \\cdot (-1)^{2} + 2$.\n\n**Step 2.** Evaluate: $P(-1) = 2$.\n\n**Answer:** the remainder is $2$. **(C)**\n\n**Common mistake:** plugging in $x = 1$ (the number you see in the divisor). Dividing by $x + 1$ means plugging in the root, $x = -1$. That mistake gives $4$."
+ },
+ {
+  "id": "mock_x2_poly_remainder_3",
+  "family": "x2_poly_remainder",
+  "difficulty": 2,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "What is the remainder when $3x^{3} - 4x^{2} - x$ is divided by $x + 2$?",
+  "choices": {
+   "A": "$-38$",
+   "B": "$-37$",
+   "C": "$-2$",
+   "D": "$0$",
+   "E": "$6$"
+  },
+  "answer": "A",
+  "hints": [
+   "Remainder Theorem: plug in the root of the divisor."
+  ],
+  "solution": "**What we need:** the remainder of a polynomial division, without doing long division.\n\n**Key idea:** Remainder Theorem: dividing $P(x)$ by $x - a$ leaves remainder $P(a)$. Here the divisor is $x - (-2)$, so plug in $x = -2$.\n\n**Step 1.** $P(-2) = 3 \\cdot (-2)^{3} + -4 \\cdot (-2)^{2} + -1 \\cdot (-2)$.\n\n**Step 2.** Evaluate: $P(-2) = -38$.\n\n**Answer:** the remainder is $-38$. **(A)**\n\n**Common mistake:** plugging in $x = 2$ (the number you see in the divisor). Dividing by $x + 2$ means plugging in the root, $x = -2$. That mistake gives $6$."
+ },
+ {
+  "id": "mock_x2_poly_remainder_4",
+  "family": "x2_poly_remainder",
+  "difficulty": 2,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "What is the remainder when $x^{4} - 4x^{2} - 4x - 1$ is divided by $x - 1$?",
+  "choices": {
+   "A": "$-10$",
+   "B": "$-8$",
+   "C": "$-7$",
+   "D": "$-1$",
+   "E": "$0$"
+  },
+  "answer": "B",
+  "hints": [
+   "Remainder Theorem: plug in the root of the divisor."
+  ],
+  "solution": "**What we need:** the remainder of a polynomial division, without doing long division.\n\n**Key idea:** Remainder Theorem: dividing $P(x)$ by $x - a$ leaves remainder $P(a)$. Here the divisor is $x - (1)$, so plug in $x = 1$.\n\n**Step 1.** $P(1) = 1 \\cdot (1)^{4} + -4 \\cdot (1)^{2} + -4 \\cdot (1) + -1$.\n\n**Step 2.** Evaluate: $P(1) = -8$.\n\n**Answer:** the remainder is $-8$. **(B)**\n\n**Common mistake:** plugging in $x = -1$ (the number you see in the divisor). Dividing by $x - 1$ means plugging in the root, $x = 1$. That mistake gives $0$."
+ },
+ {
+  "id": "mock_x2_poly_remainder_5",
+  "family": "x2_poly_remainder",
+  "difficulty": 2,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "What is the remainder when $3x^{4} - 2x^{3} - 4x^{2} + 2x - 1$ is divided by $x - 2$?",
+  "choices": {
+   "A": "$-2$",
+   "B": "$-1$",
+   "C": "$19$",
+   "D": "$20$",
+   "E": "$43$"
+  },
+  "answer": "C",
+  "hints": [
+   "Remainder Theorem: plug in the root of the divisor."
+  ],
+  "solution": "**What we need:** the remainder of a polynomial division, without doing long division.\n\n**Key idea:** Remainder Theorem: dividing $P(x)$ by $x - a$ leaves remainder $P(a)$. Here the divisor is $x - (2)$, so plug in $x = 2$.\n\n**Step 1.** $P(2) = 3 \\cdot (2)^{4} + -2 \\cdot (2)^{3} + -4 \\cdot (2)^{2} + 2 \\cdot (2) + -1$.\n\n**Step 2.** Evaluate: $P(2) = 19$.\n\n**Answer:** the remainder is $19$. **(C)**\n\n**Common mistake:** plugging in $x = -2$ (the number you see in the divisor). Dividing by $x - 2$ means plugging in the root, $x = 2$. That mistake gives $43$."
+ },
+ {
+  "id": "mock_x2_poly_remainder_6",
+  "family": "x2_poly_remainder",
+  "difficulty": 2,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "What is the remainder when $2x^{4} - 6x^{3} + 1$ is divided by $x - 3$?",
+  "choices": {
+   "A": "$-3$",
+   "B": "$-2$",
+   "C": "$1$",
+   "D": "$2$",
+   "E": "$325$"
+  },
+  "answer": "C",
+  "hints": [
+   "Remainder Theorem: plug in the root of the divisor."
+  ],
+  "solution": "**What we need:** the remainder of a polynomial division, without doing long division.\n\n**Key idea:** Remainder Theorem: dividing $P(x)$ by $x - a$ leaves remainder $P(a)$. Here the divisor is $x - (3)$, so plug in $x = 3$.\n\n**Step 1.** $P(3) = 2 \\cdot (3)^{4} + -6 \\cdot (3)^{3} + 1$.\n\n**Step 2.** Evaluate: $P(3) = 1$.\n\n**Answer:** the remainder is $1$. **(C)**\n\n**Common mistake:** plugging in $x = -3$ (the number you see in the divisor). Dividing by $x - 3$ means plugging in the root, $x = 3$. That mistake gives $325$."
+ },
+ {
+  "id": "mock_x2_ser_geometric_1",
+  "family": "x2_ser_geometric",
+  "difficulty": 2,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "An infinite geometric series has common ratio $\\frac{1}{4}$ and sum $14$. What is its second term?",
+  "choices": {
+   "A": "$\\frac{21}{32}$",
+   "B": "$\\frac{21}{8}$",
+   "C": "$\\frac{7}{2}$",
+   "D": "$\\frac{29}{8}$",
+   "E": "$\\frac{56}{3}$"
+  },
+  "answer": "B",
+  "hints": [
+   "$S = \\frac{a}{1 - r}$."
+  ],
+  "solution": "**What we need:** the second term of the series.\n\n**Key idea:** an infinite geometric series with $|r| < 1$ adds to $S = \\frac{a}{1 - r}$, where $a$ is the first term.\n\n**Step 1.** The sum formula is $S = \\frac{a}{1 - r}$, so $a = S(1 - r)$.\n\n**Step 2.** $a = 14\\left(1 - \\frac{1}{4}\\right) = 14 \\cdot \\frac{3}{4} = \\frac{21}{2}$.\n\n**Step 3.** The second term is $ar = \\frac{21}{2} \\cdot \\frac{1}{4} = \\frac{21}{8}$.\n\n**Answer:** $\\frac{21}{8}$. **(B)**\n\n**Common mistake:** using $1 + r$ instead of $1 - r$, or multiplying $S$ by $r$."
+ },
+ {
+  "id": "mock_x2_ser_geometric_2",
+  "family": "x2_ser_geometric",
+  "difficulty": 2,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "An infinite geometric series has common ratio $\\frac{1}{2}$ and sum $12$. What is its second term?",
+  "choices": {
+   "A": "$\\frac{3}{2}$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$24$"
+  },
+  "answer": "B",
+  "hints": [
+   "$S = \\frac{a}{1 - r}$."
+  ],
+  "solution": "**What we need:** the second term of the series.\n\n**Key idea:** an infinite geometric series with $|r| < 1$ adds to $S = \\frac{a}{1 - r}$, where $a$ is the first term.\n\n**Step 1.** The sum formula is $S = \\frac{a}{1 - r}$, so $a = S(1 - r)$.\n\n**Step 2.** $a = 12\\left(1 - \\frac{1}{2}\\right) = 12 \\cdot \\frac{1}{2} = 6$.\n\n**Step 3.** The second term is $ar = 6 \\cdot \\frac{1}{2} = 3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** using $1 + r$ instead of $1 - r$, or multiplying $S$ by $r$."
+ },
+ {
+  "id": "mock_x2_ser_geometric_3",
+  "family": "x2_ser_geometric",
+  "difficulty": 2,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "An infinite geometric series has common ratio $\\frac{1}{2}$ and sum $22$. What is its second term?",
+  "choices": {
+   "A": "$\\frac{11}{4}$",
+   "B": "$\\frac{11}{2}$",
+   "C": "$\\frac{13}{2}$",
+   "D": "$11$",
+   "E": "$44$"
+  },
+  "answer": "B",
+  "hints": [
+   "$S = \\frac{a}{1 - r}$."
+  ],
+  "solution": "**What we need:** the second term of the series.\n\n**Key idea:** an infinite geometric series with $|r| < 1$ adds to $S = \\frac{a}{1 - r}$, where $a$ is the first term.\n\n**Step 1.** The sum formula is $S = \\frac{a}{1 - r}$, so $a = S(1 - r)$.\n\n**Step 2.** $a = 22\\left(1 - \\frac{1}{2}\\right) = 22 \\cdot \\frac{1}{2} = 11$.\n\n**Step 3.** The second term is $ar = 11 \\cdot \\frac{1}{2} = \\frac{11}{2}$.\n\n**Answer:** $\\frac{11}{2}$. **(B)**\n\n**Common mistake:** using $1 + r$ instead of $1 - r$, or multiplying $S$ by $r$."
+ },
+ {
+  "id": "mock_x2_ser_geometric_4",
+  "family": "x2_ser_geometric",
+  "difficulty": 2,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "An infinite geometric series has common ratio $\\frac{1}{2}$ and sum $3$. What is its first term?",
+  "choices": {
+   "A": "$\\frac{3}{4}$",
+   "B": "$\\frac{3}{2}$",
+   "C": "$\\frac{5}{2}$",
+   "D": "$\\frac{9}{2}$",
+   "E": "$6$"
+  },
+  "answer": "B",
+  "hints": [
+   "$S = \\frac{a}{1 - r}$."
+  ],
+  "solution": "**What we need:** the first term of the series.\n\n**Key idea:** an infinite geometric series with $|r| < 1$ adds to $S = \\frac{a}{1 - r}$, where $a$ is the first term.\n\n**Step 1.** The sum formula is $S = \\frac{a}{1 - r}$, so $a = S(1 - r)$.\n\n**Step 2.** $a = 3\\left(1 - \\frac{1}{2}\\right) = 3 \\cdot \\frac{1}{2} = \\frac{3}{2}$.\n\n**Answer:** $\\frac{3}{2}$. **(B)**\n\n**Common mistake:** using $1 + r$ instead of $1 - r$, or multiplying $S$ by $r$."
+ },
+ {
+  "id": "mock_x2_ser_geometric_5",
+  "family": "x2_ser_geometric",
+  "difficulty": 2,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "An infinite geometric series has common ratio $-\\frac{1}{3}$ and sum $8$. What is its first term?",
+  "choices": {
+   "A": "$-\\frac{32}{9}$",
+   "B": "$-\\frac{8}{3}$",
+   "C": "$6$",
+   "D": "$\\frac{32}{3}$",
+   "E": "$\\frac{35}{3}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$S = \\frac{a}{1 - r}$."
+  ],
+  "solution": "**What we need:** the first term of the series.\n\n**Key idea:** an infinite geometric series with $|r| < 1$ adds to $S = \\frac{a}{1 - r}$, where $a$ is the first term.\n\n**Step 1.** The sum formula is $S = \\frac{a}{1 - r}$, so $a = S(1 - r)$.\n\n**Step 2.** $a = 8\\left(1 - -\\frac{1}{3}\\right) = 8 \\cdot \\frac{4}{3} = \\frac{32}{3}$.\n\n**Answer:** $\\frac{32}{3}$. **(D)**\n\n**Common mistake:** using $1 + r$ instead of $1 - r$, or multiplying $S$ by $r$."
+ },
+ {
+  "id": "mock_x2_ser_geometric_6",
+  "family": "x2_ser_geometric",
+  "difficulty": 2,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "An infinite geometric series has common ratio $\\frac{3}{4}$ and sum $15$. What is its first term?",
+  "choices": {
+   "A": "$\\frac{45}{16}$",
+   "B": "$\\frac{15}{4}$",
+   "C": "$\\frac{19}{4}$",
+   "D": "$\\frac{45}{4}$",
+   "E": "$60$"
+  },
+  "answer": "B",
+  "hints": [
+   "$S = \\frac{a}{1 - r}$."
+  ],
+  "solution": "**What we need:** the first term of the series.\n\n**Key idea:** an infinite geometric series with $|r| < 1$ adds to $S = \\frac{a}{1 - r}$, where $a$ is the first term.\n\n**Step 1.** The sum formula is $S = \\frac{a}{1 - r}$, so $a = S(1 - r)$.\n\n**Step 2.** $a = 15\\left(1 - \\frac{3}{4}\\right) = 15 \\cdot \\frac{1}{4} = \\frac{15}{4}$.\n\n**Answer:** $\\frac{15}{4}$. **(B)**\n\n**Common mistake:** using $1 + r$ instead of $1 - r$, or multiplying $S$ by $r$."
+ },
+ {
+  "id": "mock_x3_trig_cosines_1",
+  "family": "x3_trig_cosines",
+  "difficulty": 3,
+  "topic": "trigonometry",
+  "skillId": "trig_laws",
+  "track": "amc12",
+  "prompt": "Triangle $ABC$ has $AC = 10$, $BC = 8$, and $\\angle C = 120^\\circ$. What is $AB$?",
+  "choices": {
+   "A": "$2\\sqrt{21}$",
+   "B": "$2\\sqrt{41}$",
+   "C": "$2\\sqrt{61}$",
+   "D": "$7\\sqrt{5}$",
+   "E": "$18$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use the Law of Cosines."
+  ],
+  "solution": "**What we need:** the side across from the known angle.\n\n**Key idea:** Law of Cosines: $c^2 = a^2 + b^2 - 2ab\\cos C$, where $c$ is across from angle $C$.\n\n**Step 1.** $\\cos 120^\\circ = -\\frac{1}{2}$.\n\n**Step 2.** $AB^2 = 10^2 + 8^2 - 2 \\cdot 10 \\cdot 8 \\cdot \\left(-\\frac{1}{2}\\right) = 100 + 64 + 80 = 244$.\n\n**Step 3.** $AB = \\sqrt{244} = 2\\sqrt{61}$.\n\n**Answer:** $AB = 2\\sqrt{61}$. **(C)**\n\n**Common mistake:** getting the sign of $\\cos 120^\\circ$ wrong. It is negative, so the side gets longer."
+ },
+ {
+  "id": "mock_x3_trig_cosines_2",
+  "family": "x3_trig_cosines",
+  "difficulty": 3,
+  "topic": "trigonometry",
+  "skillId": "trig_laws",
+  "track": "amc12",
+  "prompt": "Triangle $ABC$ has $AC = 8$, $BC = 8$, and $\\angle C = 60^\\circ$. What is $AB$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$\\sqrt{65}$",
+   "C": "$8\\sqrt{2}$",
+   "D": "$8\\sqrt{3}$",
+   "E": "$16$"
+  },
+  "answer": "A",
+  "hints": [
+   "Use the Law of Cosines."
+  ],
+  "solution": "**What we need:** the side across from the known angle.\n\n**Key idea:** Law of Cosines: $c^2 = a^2 + b^2 - 2ab\\cos C$, where $c$ is across from angle $C$.\n\n**Step 1.** $\\cos 60^\\circ = \\frac{1}{2}$.\n\n**Step 2.** $AB^2 = 8^2 + 8^2 - 2 \\cdot 8 \\cdot 8 \\cdot \\left(\\frac{1}{2}\\right) = 64 + 64 - 64 = 64$.\n\n**Step 3.** $AB = \\sqrt{64} = 8$.\n\n**Answer:** $AB = 8$. **(A)**\n\n**Common mistake:** using the Pythagorean Theorem; the angle is not $90^\\circ$."
+ },
+ {
+  "id": "mock_x3_trig_cosines_3",
+  "family": "x3_trig_cosines",
+  "difficulty": 3,
+  "topic": "trigonometry",
+  "skillId": "trig_laws",
+  "track": "amc12",
+  "prompt": "Triangle $ABC$ has $AC = 11$, $BC = 8$, and $\\angle C = 120^\\circ$. What is $AB$?",
+  "choices": {
+   "A": "$\\sqrt{97}$",
+   "B": "$\\sqrt{185}$",
+   "C": "$\\sqrt{273}$",
+   "D": "$\\sqrt{274}$",
+   "E": "$19$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use the Law of Cosines."
+  ],
+  "solution": "**What we need:** the side across from the known angle.\n\n**Key idea:** Law of Cosines: $c^2 = a^2 + b^2 - 2ab\\cos C$, where $c$ is across from angle $C$.\n\n**Step 1.** $\\cos 120^\\circ = -\\frac{1}{2}$.\n\n**Step 2.** $AB^2 = 11^2 + 8^2 - 2 \\cdot 11 \\cdot 8 \\cdot \\left(-\\frac{1}{2}\\right) = 121 + 64 + 88 = 273$.\n\n**Step 3.** $AB = \\sqrt{273} = \\sqrt{273}$.\n\n**Answer:** $AB = \\sqrt{273}$. **(C)**\n\n**Common mistake:** getting the sign of $\\cos 120^\\circ$ wrong. It is negative, so the side gets longer."
+ },
+ {
+  "id": "mock_x3_trig_cosines_4",
+  "family": "x3_trig_cosines",
+  "difficulty": 3,
+  "topic": "trigonometry",
+  "skillId": "trig_laws",
+  "track": "amc12",
+  "prompt": "Triangle $ABC$ has $AC = 2$, $BC = 2$, and $\\angle C = 120^\\circ$. What is its area?",
+  "choices": {
+   "A": "$\\frac{\\sqrt{3}}{2}$",
+   "B": "$\\sqrt{2}$",
+   "C": "$\\sqrt{3}$",
+   "D": "$2$",
+   "E": "$2\\sqrt{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Area $= \\frac{1}{2}ab\\sin C$."
+  ],
+  "solution": "**What we need:** the area from two sides and the angle between them.\n\n**Key idea:** Area $= \\frac{1}{2}ab\\sin C$, using the two sides that form angle $C$.\n\n**Step 1.** $\\sin 120^\\circ = \\frac{\\sqrt{3}}{2}$ (for both $60^\\circ$ and $120^\\circ$).\n\n**Step 2.** Area $= \\frac{1}{2} \\cdot 2 \\cdot 2 \\cdot \\frac{\\sqrt{3}}{2} = \\sqrt{3}$.\n\n**Answer:** $\\sqrt{3}$. **(C)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$, or using $\\cos$ instead of $\\sin$."
+ },
+ {
+  "id": "mock_x3_trig_cosines_5",
+  "family": "x3_trig_cosines",
+  "difficulty": 3,
+  "topic": "trigonometry",
+  "skillId": "trig_laws",
+  "track": "amc12",
+  "prompt": "Triangle $ABC$ has $AC = 5$, $BC = 10$, and $\\angle C = 120^\\circ$. What is its area?",
+  "choices": {
+   "A": "$\\frac{25\\sqrt{3}}{4}$",
+   "B": "$\\frac{25\\sqrt{2}}{2}$",
+   "C": "$\\frac{25\\sqrt{3}}{2}$",
+   "D": "$25$",
+   "E": "$25\\sqrt{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Area $= \\frac{1}{2}ab\\sin C$."
+  ],
+  "solution": "**What we need:** the area from two sides and the angle between them.\n\n**Key idea:** Area $= \\frac{1}{2}ab\\sin C$, using the two sides that form angle $C$.\n\n**Step 1.** $\\sin 120^\\circ = \\frac{\\sqrt{3}}{2}$ (for both $60^\\circ$ and $120^\\circ$).\n\n**Step 2.** Area $= \\frac{1}{2} \\cdot 5 \\cdot 10 \\cdot \\frac{\\sqrt{3}}{2} = \\frac{25\\sqrt{3}}{2}$.\n\n**Answer:** $\\frac{25\\sqrt{3}}{2}$. **(C)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$, or using $\\cos$ instead of $\\sin$."
+ },
+ {
+  "id": "mock_x3_trig_cosines_6",
+  "family": "x3_trig_cosines",
+  "difficulty": 3,
+  "topic": "trigonometry",
+  "skillId": "trig_laws",
+  "track": "amc12",
+  "prompt": "Triangle $ABC$ has $AC = 3$, $BC = 6$, and $\\angle C = 60^\\circ$. What is its area?",
+  "choices": {
+   "A": "$\\frac{9\\sqrt{3}}{4}$",
+   "B": "$\\frac{9\\sqrt{2}}{2}$",
+   "C": "$\\frac{9\\sqrt{3}}{2}$",
+   "D": "$9$",
+   "E": "$9\\sqrt{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Area $= \\frac{1}{2}ab\\sin C$."
+  ],
+  "solution": "**What we need:** the area from two sides and the angle between them.\n\n**Key idea:** Area $= \\frac{1}{2}ab\\sin C$, using the two sides that form angle $C$.\n\n**Step 1.** $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$ (for both $60^\\circ$ and $120^\\circ$).\n\n**Step 2.** Area $= \\frac{1}{2} \\cdot 3 \\cdot 6 \\cdot \\frac{\\sqrt{3}}{2} = \\frac{9\\sqrt{3}}{2}$.\n\n**Answer:** $\\frac{9\\sqrt{3}}{2}$. **(C)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$, or using $\\cos$ instead of $\\sin$."
+ },
+ {
+  "id": "mock_x3_log_equation_1",
+  "family": "x3_log_equation",
+  "difficulty": 3,
+  "topic": "logarithms",
+  "skillId": "log_equations",
+  "track": "amc12",
+  "prompt": "Solve $\\log_{2} x + \\log_{2}(x + 8) = 7$.",
+  "choices": {
+   "A": "$-16$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$16$",
+   "E": "$64$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine the logs; remember the inputs must be positive."
+  ],
+  "solution": "**What we need:** the value of $x$.\n\n**Key idea:** combine the logs into one, rewrite as an exponential equation, and remember that a log's input must be positive.\n\n**Step 1.** Combine: $\\log_{2}\\big(x(x + 8)\\big) = 7$.\n\n**Step 2.** Rewrite without logs: $x(x + 8) = 2^{7} = 128$, so $x^2 + 8x - 128 = 0$.\n\n**Step 3.** Factor: $(x - 8)(x + 16) = 0$, so $x = 8$ or $x = -16$.\n\n**Step 4.** $x = -16$ is negative, and $\\log_{2}$ of a negative number is undefined. Only $x = 8$ works.\n\n**Answer:** $x = 8$. **(B)**\n\n**Common mistake:** keeping the negative root $-16$."
+ },
+ {
+  "id": "mock_x3_log_equation_2",
+  "family": "x3_log_equation",
+  "difficulty": 3,
+  "topic": "logarithms",
+  "skillId": "log_equations",
+  "track": "amc12",
+  "prompt": "Solve $\\log_{2} x + \\log_{2}(x + 4) = 5$.",
+  "choices": {
+   "A": "$-8$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$8$",
+   "E": "$16$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine the logs; remember the inputs must be positive."
+  ],
+  "solution": "**What we need:** the value of $x$.\n\n**Key idea:** combine the logs into one, rewrite as an exponential equation, and remember that a log's input must be positive.\n\n**Step 1.** Combine: $\\log_{2}\\big(x(x + 4)\\big) = 5$.\n\n**Step 2.** Rewrite without logs: $x(x + 4) = 2^{5} = 32$, so $x^2 + 4x - 32 = 0$.\n\n**Step 3.** Factor: $(x - 4)(x + 8) = 0$, so $x = 4$ or $x = -8$.\n\n**Step 4.** $x = -8$ is negative, and $\\log_{2}$ of a negative number is undefined. Only $x = 4$ works.\n\n**Answer:** $x = 4$. **(B)**\n\n**Common mistake:** keeping the negative root $-8$."
+ },
+ {
+  "id": "mock_x3_log_equation_3",
+  "family": "x3_log_equation",
+  "difficulty": 3,
+  "topic": "logarithms",
+  "skillId": "log_equations",
+  "track": "amc12",
+  "prompt": "Solve $\\log_{6} x + \\log_{6}(x + 1) = 1$.",
+  "choices": {
+   "A": "$-3$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$5$"
+  },
+  "answer": "C",
+  "hints": [
+   "Combine the logs; remember the inputs must be positive."
+  ],
+  "solution": "**What we need:** the value of $x$.\n\n**Key idea:** combine the logs into one, rewrite as an exponential equation, and remember that a log's input must be positive.\n\n**Step 1.** Combine: $\\log_{6}\\big(x(x + 1)\\big) = 1$.\n\n**Step 2.** Rewrite without logs: $x(x + 1) = 6^{1} = 6$, so $x^2 + 1x - 6 = 0$.\n\n**Step 3.** Factor: $(x - 2)(x + 3) = 0$, so $x = 2$ or $x = -3$.\n\n**Step 4.** $x = -3$ is negative, and $\\log_{6}$ of a negative number is undefined. Only $x = 2$ works.\n\n**Answer:** $x = 2$. **(C)**\n\n**Common mistake:** keeping the negative root $-3$."
+ },
+ {
+  "id": "mock_x3_log_equation_4",
+  "family": "x3_log_equation",
+  "difficulty": 3,
+  "topic": "logarithms",
+  "skillId": "log_equations",
+  "track": "amc12",
+  "prompt": "Solve $\\log_{3} x + \\log_{3}(x + 6) = 3$.",
+  "choices": {
+   "A": "$-9$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$9$",
+   "E": "$13$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine the logs; remember the inputs must be positive."
+  ],
+  "solution": "**What we need:** the value of $x$.\n\n**Key idea:** combine the logs into one, rewrite as an exponential equation, and remember that a log's input must be positive.\n\n**Step 1.** Combine: $\\log_{3}\\big(x(x + 6)\\big) = 3$.\n\n**Step 2.** Rewrite without logs: $x(x + 6) = 3^{3} = 27$, so $x^2 + 6x - 27 = 0$.\n\n**Step 3.** Factor: $(x - 3)(x + 9) = 0$, so $x = 3$ or $x = -9$.\n\n**Step 4.** $x = -9$ is negative, and $\\log_{3}$ of a negative number is undefined. Only $x = 3$ works.\n\n**Answer:** $x = 3$. **(B)**\n\n**Common mistake:** keeping the negative root $-9$."
+ },
+ {
+  "id": "mock_x3_log_equation_5",
+  "family": "x3_log_equation",
+  "difficulty": 3,
+  "topic": "logarithms",
+  "skillId": "log_equations",
+  "track": "amc12",
+  "prompt": "Solve $\\log_{2} x + \\log_{2}(x + 6) = 4$.",
+  "choices": {
+   "A": "$-8$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$8$",
+   "E": "$10$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine the logs; remember the inputs must be positive."
+  ],
+  "solution": "**What we need:** the value of $x$.\n\n**Key idea:** combine the logs into one, rewrite as an exponential equation, and remember that a log's input must be positive.\n\n**Step 1.** Combine: $\\log_{2}\\big(x(x + 6)\\big) = 4$.\n\n**Step 2.** Rewrite without logs: $x(x + 6) = 2^{4} = 16$, so $x^2 + 6x - 16 = 0$.\n\n**Step 3.** Factor: $(x - 2)(x + 8) = 0$, so $x = 2$ or $x = -8$.\n\n**Step 4.** $x = -8$ is negative, and $\\log_{2}$ of a negative number is undefined. Only $x = 2$ works.\n\n**Answer:** $x = 2$. **(B)**\n\n**Common mistake:** keeping the negative root $-8$."
+ },
+ {
+  "id": "mock_x3_cx_modulus_eq_1",
+  "family": "x3_cx_modulus_eq",
+  "difficulty": 3,
+  "topic": "complex_numbers",
+  "skillId": "cx_arithmetic",
+  "track": "amc12",
+  "prompt": "A complex number $z$ satisfies $z + |z| = 5 + 12i$. What is the real part of $z$?",
+  "choices": {
+   "A": "$-\\frac{119}{10}$",
+   "B": "$-\\frac{109}{10}$",
+   "C": "$\\frac{119}{10}$",
+   "D": "$\\frac{169}{2}$",
+   "E": "$169$"
+  },
+  "answer": "A",
+  "hints": [
+   "$|z|$ is real, so the imaginary part of $z$ is $12$. Write $z = x + 12i$."
+  ],
+  "solution": "**What we need:** the real part of $z$.\n\n**Key idea:** $|z|$ is a real number, so adding it to $z$ changes only the real part. Write $z = x + yi$ and match real and imaginary parts.\n\n**Step 1.** Imaginary parts: $y = 12$.\n\n**Step 2.** Real parts: $x + \\sqrt{x^2 + 144} = 5$.\n\n**Step 3.** Isolate the root and square: $\\sqrt{x^2 + 144} = 5 - x$, so $x^2 + 144 = 25 - 10x + x^2$.\n\n**Step 4.** The $x^2$ terms cancel: $10x = -119$, so $x = -\\frac{119}{10}$.\n\n**Answer:** $-\\frac{119}{10}$. **(A)**\n\n**Common mistake:** assuming $|z| = \\sqrt{5^2 + 12^2}$. That is the size of $z + |z|$, not of $z$."
+ },
+ {
+  "id": "mock_x3_cx_modulus_eq_2",
+  "family": "x3_cx_modulus_eq",
+  "difficulty": 3,
+  "topic": "complex_numbers",
+  "skillId": "cx_arithmetic",
+  "track": "amc12",
+  "prompt": "A complex number $z$ satisfies $z + |z| = 3 + 3i$. What is $|z|^2$?",
+  "choices": {
+   "A": "$-9$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$18$"
+  },
+  "answer": "C",
+  "hints": [
+   "$|z|$ is real, so the imaginary part of $z$ is $3$. Write $z = x + 3i$."
+  ],
+  "solution": "**What we need:** $|z|^2$.\n\n**Key idea:** $|z|$ is a real number, so adding it to $z$ changes only the real part. Write $z = x + yi$ and match real and imaginary parts.\n\n**Step 1.** Imaginary parts: $y = 3$.\n\n**Step 2.** Real parts: $x + \\sqrt{x^2 + 9} = 3$.\n\n**Step 3.** Isolate the root and square: $\\sqrt{x^2 + 9} = 3 - x$, so $x^2 + 9 = 9 - 6x + x^2$.\n\n**Step 4.** The $x^2$ terms cancel: $6x = 0$, so $x = 0$.\n\n**Step 5.** Then $|z| = 3 - x = 3$ and $|z|^2 = 9$.\n\n**Answer:** $9$. **(C)**\n\n**Common mistake:** assuming $|z| = \\sqrt{3^2 + 3^2}$. That is the size of $z + |z|$, not of $z$."
+ },
+ {
+  "id": "mock_x3_cx_modulus_eq_3",
+  "family": "x3_cx_modulus_eq",
+  "difficulty": 3,
+  "topic": "complex_numbers",
+  "skillId": "cx_arithmetic",
+  "track": "amc12",
+  "prompt": "A complex number $z$ satisfies $z + |z| = 10 + 3i$. What is the real part of $z$?",
+  "choices": {
+   "A": "$-\\frac{91}{20}$",
+   "B": "$\\frac{91}{20}$",
+   "C": "$\\frac{111}{20}$",
+   "D": "$\\frac{109}{2}$",
+   "E": "$109$"
+  },
+  "answer": "B",
+  "hints": [
+   "$|z|$ is real, so the imaginary part of $z$ is $3$. Write $z = x + 3i$."
+  ],
+  "solution": "**What we need:** the real part of $z$.\n\n**Key idea:** $|z|$ is a real number, so adding it to $z$ changes only the real part. Write $z = x + yi$ and match real and imaginary parts.\n\n**Step 1.** Imaginary parts: $y = 3$.\n\n**Step 2.** Real parts: $x + \\sqrt{x^2 + 9} = 10$.\n\n**Step 3.** Isolate the root and square: $\\sqrt{x^2 + 9} = 10 - x$, so $x^2 + 9 = 100 - 20x + x^2$.\n\n**Step 4.** The $x^2$ terms cancel: $20x = 91$, so $x = \\frac{91}{20}$.\n\n**Answer:** $\\frac{91}{20}$. **(B)**\n\n**Common mistake:** assuming $|z| = \\sqrt{10^2 + 3^2}$. That is the size of $z + |z|$, not of $z$."
+ },
+ {
+  "id": "mock_x3_cx_modulus_eq_4",
+  "family": "x3_cx_modulus_eq",
+  "difficulty": 3,
+  "topic": "complex_numbers",
+  "skillId": "cx_arithmetic",
+  "track": "amc12",
+  "prompt": "A complex number $z$ satisfies $z + |z| = 8 + 7i$. What is $|z|^2$?",
+  "choices": {
+   "A": "$-\\frac{12769}{256}$",
+   "B": "$\\frac{12769}{256}$",
+   "C": "$\\frac{13025}{256}$",
+   "D": "$\\frac{113}{2}$",
+   "E": "$113$"
+  },
+  "answer": "B",
+  "hints": [
+   "$|z|$ is real, so the imaginary part of $z$ is $7$. Write $z = x + 7i$."
+  ],
+  "solution": "**What we need:** $|z|^2$.\n\n**Key idea:** $|z|$ is a real number, so adding it to $z$ changes only the real part. Write $z = x + yi$ and match real and imaginary parts.\n\n**Step 1.** Imaginary parts: $y = 7$.\n\n**Step 2.** Real parts: $x + \\sqrt{x^2 + 49} = 8$.\n\n**Step 3.** Isolate the root and square: $\\sqrt{x^2 + 49} = 8 - x$, so $x^2 + 49 = 64 - 16x + x^2$.\n\n**Step 4.** The $x^2$ terms cancel: $16x = 15$, so $x = \\frac{15}{16}$.\n\n**Step 5.** Then $|z| = 8 - x = \\frac{113}{16}$ and $|z|^2 = \\frac{12769}{256}$.\n\n**Answer:** $\\frac{12769}{256}$. **(B)**\n\n**Common mistake:** assuming $|z| = \\sqrt{8^2 + 7^2}$. That is the size of $z + |z|$, not of $z$."
+ },
+ {
+  "id": "mock_x3_cx_modulus_eq_5",
+  "family": "x3_cx_modulus_eq",
+  "difficulty": 3,
+  "topic": "complex_numbers",
+  "skillId": "cx_arithmetic",
+  "track": "amc12",
+  "prompt": "A complex number $z$ satisfies $z + |z| = 3 + 6i$. What is $|z|^2$?",
+  "choices": {
+   "A": "$-\\frac{225}{4}$",
+   "B": "$\\frac{45}{2}$",
+   "C": "$45$",
+   "D": "$\\frac{225}{4}$",
+   "E": "$\\frac{229}{4}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$|z|$ is real, so the imaginary part of $z$ is $6$. Write $z = x + 6i$."
+  ],
+  "solution": "**What we need:** $|z|^2$.\n\n**Key idea:** $|z|$ is a real number, so adding it to $z$ changes only the real part. Write $z = x + yi$ and match real and imaginary parts.\n\n**Step 1.** Imaginary parts: $y = 6$.\n\n**Step 2.** Real parts: $x + \\sqrt{x^2 + 36} = 3$.\n\n**Step 3.** Isolate the root and square: $\\sqrt{x^2 + 36} = 3 - x$, so $x^2 + 36 = 9 - 6x + x^2$.\n\n**Step 4.** The $x^2$ terms cancel: $6x = -27$, so $x = -\\frac{9}{2}$.\n\n**Step 5.** Then $|z| = 3 - x = \\frac{15}{2}$ and $|z|^2 = \\frac{225}{4}$.\n\n**Answer:** $\\frac{225}{4}$. **(D)**\n\n**Common mistake:** assuming $|z| = \\sqrt{3^2 + 6^2}$. That is the size of $z + |z|$, not of $z$."
+ },
+ {
+  "id": "mock_x3_cx_modulus_eq_6",
+  "family": "x3_cx_modulus_eq",
+  "difficulty": 3,
+  "topic": "complex_numbers",
+  "skillId": "cx_arithmetic",
+  "track": "amc12",
+  "prompt": "A complex number $z$ satisfies $z + |z| = 6 + 5i$. What is the real part of $z$?",
+  "choices": {
+   "A": "$-\\frac{11}{12}$",
+   "B": "$\\frac{11}{12}$",
+   "C": "$\\frac{23}{12}$",
+   "D": "$\\frac{61}{2}$",
+   "E": "$61$"
+  },
+  "answer": "B",
+  "hints": [
+   "$|z|$ is real, so the imaginary part of $z$ is $5$. Write $z = x + 5i$."
+  ],
+  "solution": "**What we need:** the real part of $z$.\n\n**Key idea:** $|z|$ is a real number, so adding it to $z$ changes only the real part. Write $z = x + yi$ and match real and imaginary parts.\n\n**Step 1.** Imaginary parts: $y = 5$.\n\n**Step 2.** Real parts: $x + \\sqrt{x^2 + 25} = 6$.\n\n**Step 3.** Isolate the root and square: $\\sqrt{x^2 + 25} = 6 - x$, so $x^2 + 25 = 36 - 12x + x^2$.\n\n**Step 4.** The $x^2$ terms cancel: $12x = 11$, so $x = \\frac{11}{12}$.\n\n**Answer:** $\\frac{11}{12}$. **(B)**\n\n**Common mistake:** assuming $|z| = \\sqrt{6^2 + 5^2}$. That is the size of $z + |z|$, not of $z$."
+ },
+ {
+  "id": "mock_x3_poly_coeffs_1",
+  "family": "x3_poly_coeffs",
+  "difficulty": 3,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "When $(3x - 4)^{8}$ is expanded, what is the sum of all the coefficients?",
+  "choices": {
+   "A": "$-2882400$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$72097$",
+   "E": "$5764801$"
+  },
+  "answer": "B",
+  "hints": [
+   "Plug in $x = 1$ and $x = -1$."
+  ],
+  "solution": "**What we need:** the sum of all the coefficients.\n\n**Key idea:** plugging $x = 1$ or $x = -1$ into a polynomial adds up its coefficients (with signs for $-1$), with no expanding needed.\n\n**Step 1.** Plug in $x = 1$: every power of $x$ becomes $1$, leaving the sum of the coefficients.\n\n**Step 2.** $P(1) = (3 + (-4))^{8} = -1^{8} = 1$.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** expanding term by term, which is slow and error prone."
+ },
+ {
+  "id": "mock_x3_poly_coeffs_2",
+  "family": "x3_poly_coeffs",
+  "difficulty": 3,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "When $(2x - 1)^{4}$ is expanded, what is the sum of the coefficients of the even powers of $x$ (including the constant term)?",
+  "choices": {
+   "A": "$-40$",
+   "B": "$1$",
+   "C": "$17$",
+   "D": "$41$",
+   "E": "$42$"
+  },
+  "answer": "D",
+  "hints": [
+   "Plug in $x = 1$ and $x = -1$."
+  ],
+  "solution": "**What we need:** the sum of the coefficients of the even powers of $x$ (including the constant term).\n\n**Key idea:** plugging $x = 1$ or $x = -1$ into a polynomial adds up its coefficients (with signs for $-1$), with no expanding needed.\n\n**Step 1.** $P(1) = 1^{4} = 1$ adds all coefficients.\n\n**Step 2.** $P(-1) = -3^{4} = 81$ adds even ones and subtracts odd ones.\n\n**Step 3.** Adding these doubles the even coefficients and cancels the odd ones: $\\frac{1 + (81)}{2} = 41$.\n\n**Answer:** $41$. **(D)**\n\n**Common mistake:** expanding term by term, which is slow and error prone."
+ },
+ {
+  "id": "mock_x3_poly_coeffs_3",
+  "family": "x3_poly_coeffs",
+  "difficulty": 3,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "When $(x - 4)^{4}$ is expanded, what is the sum of the coefficients of the even powers of $x$ minus the sum for the odd powers?",
+  "choices": {
+   "A": "$-272$",
+   "B": "$81$",
+   "C": "$257$",
+   "D": "$625$",
+   "E": "$626$"
+  },
+  "answer": "D",
+  "hints": [
+   "Plug in $x = 1$ and $x = -1$."
+  ],
+  "solution": "**What we need:** the sum of the coefficients of the even powers of $x$ minus the sum for the odd powers.\n\n**Key idea:** plugging $x = 1$ or $x = -1$ into a polynomial adds up its coefficients (with signs for $-1$), with no expanding needed.\n\n**Step 1.** Plug in $x = -1$: even powers become $+1$ and odd powers become $-1$.\n\n**Step 2.** $P(-1) = (-1 + (-4))^{4} = -5^{4} = 625$.\n\n**Answer:** $625$. **(D)**\n\n**Common mistake:** expanding term by term, which is slow and error prone."
+ },
+ {
+  "id": "mock_x3_poly_coeffs_4",
+  "family": "x3_poly_coeffs",
+  "difficulty": 3,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "When $(2x - 4)^{8}$ is expanded, what is the sum of all the coefficients?",
+  "choices": {
+   "A": "$-839680$",
+   "B": "$256$",
+   "C": "$257$",
+   "D": "$65792$",
+   "E": "$1679616$"
+  },
+  "answer": "B",
+  "hints": [
+   "Plug in $x = 1$ and $x = -1$."
+  ],
+  "solution": "**What we need:** the sum of all the coefficients.\n\n**Key idea:** plugging $x = 1$ or $x = -1$ into a polynomial adds up its coefficients (with signs for $-1$), with no expanding needed.\n\n**Step 1.** Plug in $x = 1$: every power of $x$ becomes $1$, leaving the sum of the coefficients.\n\n**Step 2.** $P(1) = (2 + (-4))^{8} = -2^{8} = 256$.\n\n**Answer:** $256$. **(B)**\n\n**Common mistake:** expanding term by term, which is slow and error prone."
+ },
+ {
+  "id": "mock_x3_poly_coeffs_5",
+  "family": "x3_poly_coeffs",
+  "difficulty": 3,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "When $(x - 3)^{8}$ is expanded, what is the sum of the coefficients of the even powers of $x$ (including the constant term)?",
+  "choices": {
+   "A": "$-32640$",
+   "B": "$256$",
+   "C": "$6562$",
+   "D": "$32896$",
+   "E": "$32897$"
+  },
+  "answer": "D",
+  "hints": [
+   "Plug in $x = 1$ and $x = -1$."
+  ],
+  "solution": "**What we need:** the sum of the coefficients of the even powers of $x$ (including the constant term).\n\n**Key idea:** plugging $x = 1$ or $x = -1$ into a polynomial adds up its coefficients (with signs for $-1$), with no expanding needed.\n\n**Step 1.** $P(1) = -2^{8} = 256$ adds all coefficients.\n\n**Step 2.** $P(-1) = -4^{8} = 65536$ adds even ones and subtracts odd ones.\n\n**Step 3.** Adding these doubles the even coefficients and cancels the odd ones: $\\frac{256 + (65536)}{2} = 32896$.\n\n**Answer:** $32896$. **(D)**\n\n**Common mistake:** expanding term by term, which is slow and error prone."
+ },
+ {
+  "id": "mock_x3_poly_coeffs_6",
+  "family": "x3_poly_coeffs",
+  "difficulty": 3,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "When $(x + 2)^{5}$ is expanded, what is the sum of all the coefficients?",
+  "choices": {
+   "A": "$1$",
+   "B": "$33$",
+   "C": "$121$",
+   "D": "$243$",
+   "E": "$244$"
+  },
+  "answer": "D",
+  "hints": [
+   "Plug in $x = 1$ and $x = -1$."
+  ],
+  "solution": "**What we need:** the sum of all the coefficients.\n\n**Key idea:** plugging $x = 1$ or $x = -1$ into a polynomial adds up its coefficients (with signs for $-1$), with no expanding needed.\n\n**Step 1.** Plug in $x = 1$: every power of $x$ becomes $1$, leaving the sum of the coefficients.\n\n**Step 2.** $P(1) = (1 + (2))^{5} = 3^{5} = 243$.\n\n**Answer:** $243$. **(D)**\n\n**Common mistake:** expanding term by term, which is slow and error prone."
+ },
+ {
+  "id": "mock_x3_con_circle_centers_1",
+  "family": "x3_con_circle_centers",
+  "difficulty": 3,
+  "topic": "conics",
+  "skillId": "con_parabolas",
+  "track": "amc12",
+  "prompt": "What is the distance between the centers of the circles $x^2 + y^2 - 6x + 6y - 63 = 0$ and $x^2 + y^2 - 6x - 8y + 21 = 0$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$11$",
+   "E": "$49$"
+  },
+  "answer": "A",
+  "hints": [
+   "Complete the square to find each center."
+  ],
+  "solution": "**What we need:** the two centers, then the distance between them.\n\n**Key idea:** completing the square turns $x^2 + y^2 + Dx + Ey + F = 0$ into $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k) = \\left(-\\frac{D}{2}, -\\frac{E}{2}\\right)$.\n\n**Step 1.** First circle: $D = -6$, $E = 6$, so the center is $(3, -3)$.\n\n**Step 2.** Second circle: $D = -6$, $E = -8$, so the center is $(3, 4)$.\n\n**Step 3.** Distance: $\\sqrt{(3 - (3))^2 + (4 - (-3))^2} = \\sqrt{0 + 49} = 7$.\n\n**Answer:** $7$. **(A)**\n\n**Common mistake:** taking the center as $(D, E)$ or $\\left(\\frac{D}{2}, \\frac{E}{2}\\right)$. The signs flip and the numbers halve."
+ },
+ {
+  "id": "mock_x3_con_circle_centers_2",
+  "family": "x3_con_circle_centers",
+  "difficulty": 3,
+  "topic": "conics",
+  "skillId": "con_parabolas",
+  "track": "amc12",
+  "prompt": "What is the distance between the centers of the circles $x^2 + y^2 + 14x - 6y + 33 = 0$ and $x^2 + y^2 + 14x + 10y + 49 = 0$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$64$"
+  },
+  "answer": "B",
+  "hints": [
+   "Complete the square to find each center."
+  ],
+  "solution": "**What we need:** the two centers, then the distance between them.\n\n**Key idea:** completing the square turns $x^2 + y^2 + Dx + Ey + F = 0$ into $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k) = \\left(-\\frac{D}{2}, -\\frac{E}{2}\\right)$.\n\n**Step 1.** First circle: $D = 14$, $E = -6$, so the center is $(-7, 3)$.\n\n**Step 2.** Second circle: $D = 14$, $E = 10$, so the center is $(-7, -5)$.\n\n**Step 3.** Distance: $\\sqrt{(-7 - (-7))^2 + (-5 - (3))^2} = \\sqrt{0 + 64} = 8$.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** taking the center as $(D, E)$ or $\\left(\\frac{D}{2}, \\frac{E}{2}\\right)$. The signs flip and the numbers halve."
+ },
+ {
+  "id": "mock_x3_con_circle_centers_3",
+  "family": "x3_con_circle_centers",
+  "difficulty": 3,
+  "topic": "conics",
+  "skillId": "con_parabolas",
+  "track": "amc12",
+  "prompt": "What is the distance between the centers of the circles $x^2 + y^2 + 6x + 0y - 16 = 0$ and $x^2 + y^2 + 12x - 8y + 43 = 0$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$5$",
+   "C": "$6$",
+   "D": "$7$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "Complete the square to find each center."
+  ],
+  "solution": "**What we need:** the two centers, then the distance between them.\n\n**Key idea:** completing the square turns $x^2 + y^2 + Dx + Ey + F = 0$ into $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k) = \\left(-\\frac{D}{2}, -\\frac{E}{2}\\right)$.\n\n**Step 1.** First circle: $D = 6$, $E = 0$, so the center is $(-3, 0)$.\n\n**Step 2.** Second circle: $D = 12$, $E = -8$, so the center is $(-6, 4)$.\n\n**Step 3.** Distance: $\\sqrt{(-6 - (-3))^2 + (4 - (0))^2} = \\sqrt{9 + 16} = 5$.\n\n**Answer:** $5$. **(B)**\n\n**Common mistake:** taking the center as $(D, E)$ or $\\left(\\frac{D}{2}, \\frac{E}{2}\\right)$. The signs flip and the numbers halve."
+ },
+ {
+  "id": "mock_x3_con_circle_centers_4",
+  "family": "x3_con_circle_centers",
+  "difficulty": 3,
+  "topic": "conics",
+  "skillId": "con_parabolas",
+  "track": "amc12",
+  "prompt": "What is the distance between the centers of the circles $x^2 + y^2 + 4x + 14y + 49 = 0$ and $x^2 + y^2 + 4x - 2y - 4 = 0$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$5$",
+   "C": "$8$",
+   "D": "$9$",
+   "E": "$64$"
+  },
+  "answer": "C",
+  "hints": [
+   "Complete the square to find each center."
+  ],
+  "solution": "**What we need:** the two centers, then the distance between them.\n\n**Key idea:** completing the square turns $x^2 + y^2 + Dx + Ey + F = 0$ into $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k) = \\left(-\\frac{D}{2}, -\\frac{E}{2}\\right)$.\n\n**Step 1.** First circle: $D = 4$, $E = 14$, so the center is $(-2, -7)$.\n\n**Step 2.** Second circle: $D = 4$, $E = -2$, so the center is $(-2, 1)$.\n\n**Step 3.** Distance: $\\sqrt{(-2 - (-2))^2 + (1 - (-7))^2} = \\sqrt{0 + 64} = 8$.\n\n**Answer:** $8$. **(C)**\n\n**Common mistake:** taking the center as $(D, E)$ or $\\left(\\frac{D}{2}, \\frac{E}{2}\\right)$. The signs flip and the numbers halve."
+ },
+ {
+  "id": "mock_x3_con_circle_centers_5",
+  "family": "x3_con_circle_centers",
+  "difficulty": 3,
+  "topic": "conics",
+  "skillId": "con_parabolas",
+  "track": "amc12",
+  "prompt": "What is the distance between the centers of the circles $x^2 + y^2 - 10x + 6y - 2 = 0$ and $x^2 + y^2 + 14x - 4y + 28 = 0$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$11$",
+   "C": "$13$",
+   "D": "$14$",
+   "E": "$17$"
+  },
+  "answer": "C",
+  "hints": [
+   "Complete the square to find each center."
+  ],
+  "solution": "**What we need:** the two centers, then the distance between them.\n\n**Key idea:** completing the square turns $x^2 + y^2 + Dx + Ey + F = 0$ into $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k) = \\left(-\\frac{D}{2}, -\\frac{E}{2}\\right)$.\n\n**Step 1.** First circle: $D = -10$, $E = 6$, so the center is $(5, -3)$.\n\n**Step 2.** Second circle: $D = 14$, $E = -4$, so the center is $(-7, 2)$.\n\n**Step 3.** Distance: $\\sqrt{(-7 - (5))^2 + (2 - (-3))^2} = \\sqrt{144 + 25} = 13$.\n\n**Answer:** $13$. **(C)**\n\n**Common mistake:** taking the center as $(D, E)$ or $\\left(\\frac{D}{2}, \\frac{E}{2}\\right)$. The signs flip and the numbers halve."
+ },
+ {
+  "id": "mock_x3_con_circle_centers_6",
+  "family": "x3_con_circle_centers",
+  "difficulty": 3,
+  "topic": "conics",
+  "skillId": "con_parabolas",
+  "track": "amc12",
+  "prompt": "What is the distance between the centers of the circles $x^2 + y^2 - 14x - 4y + 52 = 0$ and $x^2 + y^2 - 6x - 10y + 9 = 0$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$6$",
+   "D": "$7$",
+   "E": "$25$"
+  },
+  "answer": "B",
+  "hints": [
+   "Complete the square to find each center."
+  ],
+  "solution": "**What we need:** the two centers, then the distance between them.\n\n**Key idea:** completing the square turns $x^2 + y^2 + Dx + Ey + F = 0$ into $(x - h)^2 + (y - k)^2 = r^2$ with center $(h, k) = \\left(-\\frac{D}{2}, -\\frac{E}{2}\\right)$.\n\n**Step 1.** First circle: $D = -14$, $E = -4$, so the center is $(7, 2)$.\n\n**Step 2.** Second circle: $D = -6$, $E = -10$, so the center is $(3, 5)$.\n\n**Step 3.** Distance: $\\sqrt{(3 - (7))^2 + (5 - (2))^2} = \\sqrt{16 + 9} = 5$.\n\n**Answer:** $5$. **(B)**\n\n**Common mistake:** taking the center as $(D, E)$ or $\\left(\\frac{D}{2}, \\frac{E}{2}\\right)$. The signs flip and the numbers halve."
+ },
+ {
+  "id": "mock_x4_trig_count_1",
+  "family": "x4_trig_count",
+  "difficulty": 4,
+  "topic": "trigonometry",
+  "skillId": "trig_equations",
+  "track": "amc12",
+  "prompt": "How many values of $x$ with $0 \\le x < 2\\pi$ satisfy $\\sin(4x) = \\sin x$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$9$",
+   "E": "$10$"
+  },
+  "answer": "C",
+  "hints": [
+   "Solve each case of the identity separately, then remove repeats."
+  ],
+  "solution": "**What we need:** the number of solutions of $\\sin(4x) = \\sin x$ in one full turn.\n\n**Key idea:** $\\sin A = \\sin B$ exactly when $A = B + 2\\pi k$ or $A = \\pi - B + 2\\pi k$ for some integer $k$.\n\n**Step 1.** Case 1, $4x = x + 2\\pi k$: $3x = 2\\pi k$, so $x = \\frac{2\\pi k}{3}$. In range: $0$, $\\frac{2\\pi}{3}$, $\\frac{4\\pi}{3}$ ($3$ values).\n\n**Step 2.** Case 2, $4x = \\pi - x + 2\\pi k$: $5x = \\pi + 2\\pi k$, so $x = \\frac{(2k + 1)\\pi}{5}$. In range: $\\frac{\\pi}{5}$, $\\frac{3\\pi}{5}$, $\\pi$, $\\frac{7\\pi}{5}$, $\\frac{9\\pi}{5}$ ($5$ values).\n\n**Step 3.** No value appears in both lists, so the total is $3 + 5 = 8$.\n\n**Answer:** $8$. **(C)**\n\n**Common mistake:** forgetting the second case, or counting a shared value like $x = 0$ twice."
+ },
+ {
+  "id": "mock_x4_trig_count_2",
+  "family": "x4_trig_count",
+  "difficulty": 4,
+  "topic": "trigonometry",
+  "skillId": "trig_equations",
+  "track": "amc12",
+  "prompt": "How many values of $x$ with $0 \\le x < 2\\pi$ satisfy $\\sin(5x) = \\sin x$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$12$"
+  },
+  "answer": "B",
+  "hints": [
+   "Solve each case of the identity separately, then remove repeats."
+  ],
+  "solution": "**What we need:** the number of solutions of $\\sin(5x) = \\sin x$ in one full turn.\n\n**Key idea:** $\\sin A = \\sin B$ exactly when $A = B + 2\\pi k$ or $A = \\pi - B + 2\\pi k$ for some integer $k$.\n\n**Step 1.** Case 1, $5x = x + 2\\pi k$: $4x = 2\\pi k$, so $x = \\frac{2\\pi k}{4}$. In range: $0$, $\\frac{\\pi}{2}$, $\\pi$, $\\frac{3\\pi}{2}$ ($4$ values).\n\n**Step 2.** Case 2, $5x = \\pi - x + 2\\pi k$: $6x = \\pi + 2\\pi k$, so $x = \\frac{(2k + 1)\\pi}{6}$. In range: $\\frac{\\pi}{6}$, $\\frac{\\pi}{2}$, $\\frac{5\\pi}{6}$, $\\frac{7\\pi}{6}$, $\\frac{3\\pi}{2}$, $\\frac{11\\pi}{6}$ ($6$ values).\n\n**Step 3.** Values in both lists ($\\frac{\\pi}{2}$, $\\frac{3\\pi}{2}$) count once. Total: $4 + 6 - 2 = 8$.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** forgetting the second case, or counting a shared value like $x = 0$ twice."
+ },
+ {
+  "id": "mock_x4_trig_count_3",
+  "family": "x4_trig_count",
+  "difficulty": 4,
+  "topic": "trigonometry",
+  "skillId": "trig_equations",
+  "track": "amc12",
+  "prompt": "How many values of $x$ with $0 \\le x < 2\\pi$ satisfy $\\cos(7x) = \\cos x$?",
+  "choices": {
+   "A": "$11$",
+   "B": "$12$",
+   "C": "$13$",
+   "D": "$14$",
+   "E": "$16$"
+  },
+  "answer": "B",
+  "hints": [
+   "Solve each case of the identity separately, then remove repeats."
+  ],
+  "solution": "**What we need:** the number of solutions of $\\cos(7x) = \\cos x$ in one full turn.\n\n**Key idea:** $\\cos A = \\cos B$ exactly when $A = \\pm B + 2\\pi k$ for some integer $k$.\n\n**Step 1.** Case 1, $7x = x + 2\\pi k$: $x = \\frac{2\\pi k}{6}$. In range: $0$, $\\frac{\\pi}{3}$, $\\frac{2\\pi}{3}$, $\\pi$, $\\frac{4\\pi}{3}$, $\\frac{5\\pi}{3}$ ($6$ values).\n\n**Step 2.** Case 2, $7x = -x + 2\\pi k$: $x = \\frac{2\\pi k}{8}$. In range: $0$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{2}$, $\\frac{3\\pi}{4}$, $\\pi$, $\\frac{5\\pi}{4}$, $\\frac{3\\pi}{2}$, $\\frac{7\\pi}{4}$ ($8$ values).\n\n**Step 3.** Values in both lists ($0$, $\\pi$) count once. Total: $6 + 8 - 2 = 12$.\n\n**Answer:** $12$. **(B)**\n\n**Common mistake:** forgetting the second case, or counting a shared value like $x = 0$ twice."
+ },
+ {
+  "id": "mock_x4_trig_count_4",
+  "family": "x4_trig_count",
+  "difficulty": 4,
+  "topic": "trigonometry",
+  "skillId": "trig_equations",
+  "track": "amc12",
+  "prompt": "How many values of $x$ with $0 \\le x < 2\\pi$ satisfy $\\cos(6x) = \\cos x$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$10$",
+   "C": "$11$",
+   "D": "$12$",
+   "E": "$14$"
+  },
+  "answer": "C",
+  "hints": [
+   "Solve each case of the identity separately, then remove repeats."
+  ],
+  "solution": "**What we need:** the number of solutions of $\\cos(6x) = \\cos x$ in one full turn.\n\n**Key idea:** $\\cos A = \\cos B$ exactly when $A = \\pm B + 2\\pi k$ for some integer $k$.\n\n**Step 1.** Case 1, $6x = x + 2\\pi k$: $x = \\frac{2\\pi k}{5}$. In range: $0$, $\\frac{2\\pi}{5}$, $\\frac{4\\pi}{5}$, $\\frac{6\\pi}{5}$, $\\frac{8\\pi}{5}$ ($5$ values).\n\n**Step 2.** Case 2, $6x = -x + 2\\pi k$: $x = \\frac{2\\pi k}{7}$. In range: $0$, $\\frac{2\\pi}{7}$, $\\frac{4\\pi}{7}$, $\\frac{6\\pi}{7}$, $\\frac{8\\pi}{7}$, $\\frac{10\\pi}{7}$, $\\frac{12\\pi}{7}$ ($7$ values).\n\n**Step 3.** Values in both lists ($0$) count once. Total: $5 + 7 - 1 = 11$.\n\n**Answer:** $11$. **(C)**\n\n**Common mistake:** forgetting the second case, or counting a shared value like $x = 0$ twice."
+ },
+ {
+  "id": "mock_x4_trig_count_5",
+  "family": "x4_trig_count",
+  "difficulty": 4,
+  "topic": "trigonometry",
+  "skillId": "trig_equations",
+  "track": "amc12",
+  "prompt": "How many values of $x$ with $0 \\le x < 2\\pi$ satisfy $\\sin(2x) = \\sin x$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$6$"
+  },
+  "answer": "C",
+  "hints": [
+   "Solve each case of the identity separately, then remove repeats."
+  ],
+  "solution": "**What we need:** the number of solutions of $\\sin(2x) = \\sin x$ in one full turn.\n\n**Key idea:** $\\sin A = \\sin B$ exactly when $A = B + 2\\pi k$ or $A = \\pi - B + 2\\pi k$ for some integer $k$.\n\n**Step 1.** Case 1, $2x = x + 2\\pi k$: $1x = 2\\pi k$, so $x = \\frac{2\\pi k}{1}$. In range: $0$ ($1$ values).\n\n**Step 2.** Case 2, $2x = \\pi - x + 2\\pi k$: $3x = \\pi + 2\\pi k$, so $x = \\frac{(2k + 1)\\pi}{3}$. In range: $\\frac{\\pi}{3}$, $\\pi$, $\\frac{5\\pi}{3}$ ($3$ values).\n\n**Step 3.** No value appears in both lists, so the total is $1 + 3 = 4$.\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** forgetting the second case, or counting a shared value like $x = 0$ twice."
+ },
+ {
+  "id": "mock_x4_trig_count_6",
+  "family": "x4_trig_count",
+  "difficulty": 4,
+  "topic": "trigonometry",
+  "skillId": "trig_equations",
+  "track": "amc12",
+  "prompt": "How many values of $x$ with $0 \\le x < 2\\pi$ satisfy $\\cos(3x) = \\cos x$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "Solve each case of the identity separately, then remove repeats."
+  ],
+  "solution": "**What we need:** the number of solutions of $\\cos(3x) = \\cos x$ in one full turn.\n\n**Key idea:** $\\cos A = \\cos B$ exactly when $A = \\pm B + 2\\pi k$ for some integer $k$.\n\n**Step 1.** Case 1, $3x = x + 2\\pi k$: $x = \\frac{2\\pi k}{2}$. In range: $0$, $\\pi$ ($2$ values).\n\n**Step 2.** Case 2, $3x = -x + 2\\pi k$: $x = \\frac{2\\pi k}{4}$. In range: $0$, $\\frac{\\pi}{2}$, $\\pi$, $\\frac{3\\pi}{2}$ ($4$ values).\n\n**Step 3.** Values in both lists ($0$, $\\pi$) count once. Total: $2 + 4 - 2 = 4$.\n\n**Answer:** $4$. **(B)**\n\n**Common mistake:** forgetting the second case, or counting a shared value like $x = 0$ twice."
+ },
+ {
+  "id": "mock_x4_log_ineq_1",
+  "family": "x4_log_ineq",
+  "difficulty": 4,
+  "topic": "logarithms",
+  "skillId": "log_change_base",
+  "track": "amc12",
+  "prompt": "How many positive integers $n$ satisfy $(\\log_{2} n)^2 - 9\\log_{2} n + 14 < 0$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$123$",
+   "C": "$124$",
+   "D": "$125$",
+   "E": "$126$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor as a quadratic in $\\log_b n$."
+  ],
+  "solution": "**What we need:** the integers $n$ that make this inequality true.\n\n**Key idea:** treat $\\log_{2} n$ as a single unknown $t$. Then it is an ordinary quadratic inequality.\n\n**Step 1.** Let $t = \\log_{2} n$: $t^2 - 9t + 14 < 0$ factors as $(t - 2)(t - 7) < 0$.\n\n**Step 2.** A product of two factors is negative when they have opposite signs, which happens for $2 < t < 7$.\n\n**Step 3.** Undo the log: $2^{2} < n < 2^{7}$, that is $4 < n < 128$.\n\n**Step 4.** Integers strictly between: $128 - 4 - 1 = 123$.\n\n**Answer:** $123$. **(B)**\n\n**Common mistake:** including the endpoints. The inequality is strict, so the endpoints give $0$, not a negative number."
+ },
+ {
+  "id": "mock_x4_log_ineq_2",
+  "family": "x4_log_ineq",
+  "difficulty": 4,
+  "topic": "logarithms",
+  "skillId": "log_change_base",
+  "track": "amc12",
+  "prompt": "How many positive integers $n$ satisfy $(\\log_{2} n)^2 - 8\\log_{2} n + 12 < 0$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$59$",
+   "C": "$60$",
+   "D": "$61$",
+   "E": "$62$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor as a quadratic in $\\log_b n$."
+  ],
+  "solution": "**What we need:** the integers $n$ that make this inequality true.\n\n**Key idea:** treat $\\log_{2} n$ as a single unknown $t$. Then it is an ordinary quadratic inequality.\n\n**Step 1.** Let $t = \\log_{2} n$: $t^2 - 8t + 12 < 0$ factors as $(t - 2)(t - 6) < 0$.\n\n**Step 2.** A product of two factors is negative when they have opposite signs, which happens for $2 < t < 6$.\n\n**Step 3.** Undo the log: $2^{2} < n < 2^{6}$, that is $4 < n < 64$.\n\n**Step 4.** Integers strictly between: $64 - 4 - 1 = 59$.\n\n**Answer:** $59$. **(B)**\n\n**Common mistake:** including the endpoints. The inequality is strict, so the endpoints give $0$, not a negative number."
+ },
+ {
+  "id": "mock_x4_log_ineq_3",
+  "family": "x4_log_ineq",
+  "difficulty": 4,
+  "topic": "logarithms",
+  "skillId": "log_change_base",
+  "track": "amc12",
+  "prompt": "How many positive integers $n$ satisfy $(\\log_{3} n)^2 - 5\\log_{3} n + 4 < 0$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$77$",
+   "C": "$78$",
+   "D": "$79$",
+   "E": "$80$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor as a quadratic in $\\log_b n$."
+  ],
+  "solution": "**What we need:** the integers $n$ that make this inequality true.\n\n**Key idea:** treat $\\log_{3} n$ as a single unknown $t$. Then it is an ordinary quadratic inequality.\n\n**Step 1.** Let $t = \\log_{3} n$: $t^2 - 5t + 4 < 0$ factors as $(t - 1)(t - 4) < 0$.\n\n**Step 2.** A product of two factors is negative when they have opposite signs, which happens for $1 < t < 4$.\n\n**Step 3.** Undo the log: $3^{1} < n < 3^{4}$, that is $3 < n < 81$.\n\n**Step 4.** Integers strictly between: $81 - 3 - 1 = 77$.\n\n**Answer:** $77$. **(B)**\n\n**Common mistake:** including the endpoints. The inequality is strict, so the endpoints give $0$, not a negative number."
+ },
+ {
+  "id": "mock_x4_log_ineq_4",
+  "family": "x4_log_ineq",
+  "difficulty": 4,
+  "topic": "logarithms",
+  "skillId": "log_change_base",
+  "track": "amc12",
+  "prompt": "How many positive integers $n$ satisfy $(\\log_{3} n)^2 - 10\\log_{3} n + 21 < 0$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$2159$",
+   "C": "$2160$",
+   "D": "$2161$",
+   "E": "$2162$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor as a quadratic in $\\log_b n$."
+  ],
+  "solution": "**What we need:** the integers $n$ that make this inequality true.\n\n**Key idea:** treat $\\log_{3} n$ as a single unknown $t$. Then it is an ordinary quadratic inequality.\n\n**Step 1.** Let $t = \\log_{3} n$: $t^2 - 10t + 21 < 0$ factors as $(t - 3)(t - 7) < 0$.\n\n**Step 2.** A product of two factors is negative when they have opposite signs, which happens for $3 < t < 7$.\n\n**Step 3.** Undo the log: $3^{3} < n < 3^{7}$, that is $27 < n < 2187$.\n\n**Step 4.** Integers strictly between: $2187 - 27 - 1 = 2159$.\n\n**Answer:** $2159$. **(B)**\n\n**Common mistake:** including the endpoints. The inequality is strict, so the endpoints give $0$, not a negative number."
+ },
+ {
+  "id": "mock_x4_log_ineq_5",
+  "family": "x4_log_ineq",
+  "difficulty": 4,
+  "topic": "logarithms",
+  "skillId": "log_change_base",
+  "track": "amc12",
+  "prompt": "How many positive integers $n$ satisfy $(\\log_{2} n)^2 - 10\\log_{2} n + 24 < 0$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$47$",
+   "C": "$48$",
+   "D": "$49$",
+   "E": "$50$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor as a quadratic in $\\log_b n$."
+  ],
+  "solution": "**What we need:** the integers $n$ that make this inequality true.\n\n**Key idea:** treat $\\log_{2} n$ as a single unknown $t$. Then it is an ordinary quadratic inequality.\n\n**Step 1.** Let $t = \\log_{2} n$: $t^2 - 10t + 24 < 0$ factors as $(t - 4)(t - 6) < 0$.\n\n**Step 2.** A product of two factors is negative when they have opposite signs, which happens for $4 < t < 6$.\n\n**Step 3.** Undo the log: $2^{4} < n < 2^{6}$, that is $16 < n < 64$.\n\n**Step 4.** Integers strictly between: $64 - 16 - 1 = 47$.\n\n**Answer:** $47$. **(B)**\n\n**Common mistake:** including the endpoints. The inequality is strict, so the endpoints give $0$, not a negative number."
+ },
+ {
+  "id": "mock_x4_log_ineq_6",
+  "family": "x4_log_ineq",
+  "difficulty": 4,
+  "topic": "logarithms",
+  "skillId": "log_change_base",
+  "track": "amc12",
+  "prompt": "How many positive integers $n$ satisfy $(\\log_{3} n)^2 - 9\\log_{3} n + 14 < 0$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$2177$",
+   "C": "$2178$",
+   "D": "$2179$",
+   "E": "$2180$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor as a quadratic in $\\log_b n$."
+  ],
+  "solution": "**What we need:** the integers $n$ that make this inequality true.\n\n**Key idea:** treat $\\log_{3} n$ as a single unknown $t$. Then it is an ordinary quadratic inequality.\n\n**Step 1.** Let $t = \\log_{3} n$: $t^2 - 9t + 14 < 0$ factors as $(t - 2)(t - 7) < 0$.\n\n**Step 2.** A product of two factors is negative when they have opposite signs, which happens for $2 < t < 7$.\n\n**Step 3.** Undo the log: $3^{2} < n < 3^{7}$, that is $9 < n < 2187$.\n\n**Step 4.** Integers strictly between: $2187 - 9 - 1 = 2177$.\n\n**Answer:** $2177$. **(B)**\n\n**Common mistake:** including the endpoints. The inequality is strict, so the endpoints give $0$, not a negative number."
+ },
+ {
+  "id": "mock_x4_cx_polygon_1",
+  "family": "x4_cx_polygon",
+  "difficulty": 4,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "The solutions of $z^{12} = 531441$ are the vertices of a polygon in the complex plane. What is its area?",
+  "choices": {
+   "A": "$\\frac{27\\sqrt{3}}{4}$",
+   "B": "$18$",
+   "C": "$\\frac{27\\sqrt{3}}{2}$",
+   "D": "$27$",
+   "E": "$108$"
+  },
+  "answer": "D",
+  "hints": [
+   "The solutions lie on a circle of radius $3$, equally spaced."
+  ],
+  "solution": "**What we need:** the area of the polygon whose corners are all solutions of the equation.\n\n**Key idea:** the solutions of $z^n = R^n$ all have $|z| = R$ and are spaced evenly around the circle of radius $R$. So they form a regular $n$-gon.\n\n**Step 1.** $531441 = 3^{12}$, so every solution has $|z| = 3$. There are $12$ solutions, $\\frac{360^\\circ}{12}$ apart.\n\n**Step 2.** Split the $12$-gon into $12$ triangles from the center. Each has two sides of length $3$ with angle $\\frac{360^\\circ}{12}$ between them.\n\n**Step 3.** One triangle's area: $\\frac{1}{2} \\cdot 3 \\cdot 3 \\cdot \\sin\\frac{360^\\circ}{12} = \\frac{9}{2} \\cdot \\frac{1}{2}$.\n\n**Step 4.** Multiply by $12$: area $= 27$.\n\n**Answer:** $27$. **(D)**\n\n**Common mistake:** using $531441$ as the radius. The radius is the $12$th root, $3$."
+ },
+ {
+  "id": "mock_x4_cx_polygon_2",
+  "family": "x4_cx_polygon",
+  "difficulty": 4,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "The solutions of $z^{8} = 65536$ are the vertices of a polygon in the complex plane. What is its area?",
+  "choices": {
+   "A": "$12\\sqrt{3}$",
+   "B": "$32$",
+   "C": "$24\\sqrt{3}$",
+   "D": "$32\\sqrt{2}$",
+   "E": "$128$"
+  },
+  "answer": "D",
+  "hints": [
+   "The solutions lie on a circle of radius $4$, equally spaced."
+  ],
+  "solution": "**What we need:** the area of the polygon whose corners are all solutions of the equation.\n\n**Key idea:** the solutions of $z^n = R^n$ all have $|z| = R$ and are spaced evenly around the circle of radius $R$. So they form a regular $n$-gon.\n\n**Step 1.** $65536 = 4^{8}$, so every solution has $|z| = 4$. There are $8$ solutions, $\\frac{360^\\circ}{8}$ apart.\n\n**Step 2.** Split the $8$-gon into $8$ triangles from the center. Each has two sides of length $4$ with angle $\\frac{360^\\circ}{8}$ between them.\n\n**Step 3.** One triangle's area: $\\frac{1}{2} \\cdot 4 \\cdot 4 \\cdot \\sin\\frac{360^\\circ}{8} = \\frac{16}{2} \\cdot \\frac{\\sqrt{2}}{2}$.\n\n**Step 4.** Multiply by $8$: area $= 32\\sqrt{2}$.\n\n**Answer:** $32\\sqrt{2}$. **(D)**\n\n**Common mistake:** using $65536$ as the radius. The radius is the $8$th root, $4$."
+ },
+ {
+  "id": "mock_x4_cx_polygon_3",
+  "family": "x4_cx_polygon",
+  "difficulty": 4,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "The solutions of $z^{6} = 4096$ are the vertices of a polygon in the complex plane. What is its area?",
+  "choices": {
+   "A": "$12\\sqrt{3}$",
+   "B": "$32$",
+   "C": "$24\\sqrt{3}$",
+   "D": "$32\\sqrt{2}$",
+   "E": "$96$"
+  },
+  "answer": "C",
+  "hints": [
+   "The solutions lie on a circle of radius $4$, equally spaced."
+  ],
+  "solution": "**What we need:** the area of the polygon whose corners are all solutions of the equation.\n\n**Key idea:** the solutions of $z^n = R^n$ all have $|z| = R$ and are spaced evenly around the circle of radius $R$. So they form a regular $n$-gon.\n\n**Step 1.** $4096 = 4^{6}$, so every solution has $|z| = 4$. There are $6$ solutions, $\\frac{360^\\circ}{6}$ apart.\n\n**Step 2.** Split the $6$-gon into $6$ triangles from the center. Each has two sides of length $4$ with angle $\\frac{360^\\circ}{6}$ between them.\n\n**Step 3.** One triangle's area: $\\frac{1}{2} \\cdot 4 \\cdot 4 \\cdot \\sin\\frac{360^\\circ}{6} = \\frac{16}{2} \\cdot \\frac{\\sqrt{3}}{2}$.\n\n**Step 4.** Multiply by $6$: area $= 24\\sqrt{3}$.\n\n**Answer:** $24\\sqrt{3}$. **(C)**\n\n**Common mistake:** using $4096$ as the radius. The radius is the $6$th root, $4$."
+ },
+ {
+  "id": "mock_x4_cx_polygon_4",
+  "family": "x4_cx_polygon",
+  "difficulty": 4,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "The solutions of $z^{12} = 16777216$ are the vertices of a polygon in the complex plane. What is its area?",
+  "choices": {
+   "A": "$12\\sqrt{3}$",
+   "B": "$32$",
+   "C": "$24\\sqrt{3}$",
+   "D": "$48$",
+   "E": "$192$"
+  },
+  "answer": "D",
+  "hints": [
+   "The solutions lie on a circle of radius $4$, equally spaced."
+  ],
+  "solution": "**What we need:** the area of the polygon whose corners are all solutions of the equation.\n\n**Key idea:** the solutions of $z^n = R^n$ all have $|z| = R$ and are spaced evenly around the circle of radius $R$. So they form a regular $n$-gon.\n\n**Step 1.** $16777216 = 4^{12}$, so every solution has $|z| = 4$. There are $12$ solutions, $\\frac{360^\\circ}{12}$ apart.\n\n**Step 2.** Split the $12$-gon into $12$ triangles from the center. Each has two sides of length $4$ with angle $\\frac{360^\\circ}{12}$ between them.\n\n**Step 3.** One triangle's area: $\\frac{1}{2} \\cdot 4 \\cdot 4 \\cdot \\sin\\frac{360^\\circ}{12} = \\frac{16}{2} \\cdot \\frac{1}{2}$.\n\n**Step 4.** Multiply by $12$: area $= 48$.\n\n**Answer:** $48$. **(D)**\n\n**Common mistake:** using $16777216$ as the radius. The radius is the $12$th root, $4$."
+ },
+ {
+  "id": "mock_x4_cx_polygon_5",
+  "family": "x4_cx_polygon",
+  "difficulty": 4,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "The solutions of $z^{12} = 244140625$ are the vertices of a polygon in the complex plane. What is its area?",
+  "choices": {
+   "A": "$\\frac{75\\sqrt{3}}{4}$",
+   "B": "$50$",
+   "C": "$\\frac{75\\sqrt{3}}{2}$",
+   "D": "$75$",
+   "E": "$300$"
+  },
+  "answer": "D",
+  "hints": [
+   "The solutions lie on a circle of radius $5$, equally spaced."
+  ],
+  "solution": "**What we need:** the area of the polygon whose corners are all solutions of the equation.\n\n**Key idea:** the solutions of $z^n = R^n$ all have $|z| = R$ and are spaced evenly around the circle of radius $R$. So they form a regular $n$-gon.\n\n**Step 1.** $244140625 = 5^{12}$, so every solution has $|z| = 5$. There are $12$ solutions, $\\frac{360^\\circ}{12}$ apart.\n\n**Step 2.** Split the $12$-gon into $12$ triangles from the center. Each has two sides of length $5$ with angle $\\frac{360^\\circ}{12}$ between them.\n\n**Step 3.** One triangle's area: $\\frac{1}{2} \\cdot 5 \\cdot 5 \\cdot \\sin\\frac{360^\\circ}{12} = \\frac{25}{2} \\cdot \\frac{1}{2}$.\n\n**Step 4.** Multiply by $12$: area $= 75$.\n\n**Answer:** $75$. **(D)**\n\n**Common mistake:** using $244140625$ as the radius. The radius is the $12$th root, $5$."
+ },
+ {
+  "id": "mock_x4_cx_polygon_6",
+  "family": "x4_cx_polygon",
+  "difficulty": 4,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "The solutions of $z^{4} = 625$ are the vertices of a polygon in the complex plane. What is its area?",
+  "choices": {
+   "A": "$\\frac{75\\sqrt{3}}{4}$",
+   "B": "$50$",
+   "C": "$\\frac{75\\sqrt{3}}{2}$",
+   "D": "$50\\sqrt{2}$",
+   "E": "$100$"
+  },
+  "answer": "B",
+  "hints": [
+   "The solutions lie on a circle of radius $5$, equally spaced."
+  ],
+  "solution": "**What we need:** the area of the polygon whose corners are all solutions of the equation.\n\n**Key idea:** the solutions of $z^n = R^n$ all have $|z| = R$ and are spaced evenly around the circle of radius $R$. So they form a regular $n$-gon.\n\n**Step 1.** $625 = 5^{4}$, so every solution has $|z| = 5$. There are $4$ solutions, $\\frac{360^\\circ}{4}$ apart.\n\n**Step 2.** Split the $4$-gon into $4$ triangles from the center. Each has two sides of length $5$ with angle $\\frac{360^\\circ}{4}$ between them.\n\n**Step 3.** One triangle's area: $\\frac{1}{2} \\cdot 5 \\cdot 5 \\cdot \\sin\\frac{360^\\circ}{4} = \\frac{25}{2} \\cdot 1$.\n\n**Step 4.** Multiply by $4$: area $= 50$.\n\n**Answer:** $50$. **(B)**\n\n**Common mistake:** using $625$ as the radius. The radius is the $4$th root, $5$."
+ },
+ {
+  "id": "mock_x4_poly_int_roots_1",
+  "family": "x4_poly_int_roots",
+  "difficulty": 4,
+  "topic": "polynomials",
+  "skillId": "poly_vieta",
+  "track": "amc12",
+  "prompt": "The polynomial $x^3 - 13x^2 + bx - 72$ has three positive integer roots. What is $b$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$53$",
+   "C": "$54$",
+   "D": "$55$",
+   "E": "$56$"
+  },
+  "answer": "C",
+  "hints": [
+   "The roots add to 13 and multiply to 72."
+  ],
+  "solution": "**What we need:** the middle coefficient $b$.\n\n**Key idea:** Vieta's formulas for $x^3 - px^2 + qx - r$: the roots add to $p$, their pairwise products add to $q$, and they multiply to $r$.\n\n**Step 1.** The roots $r_1, r_2, r_3$ satisfy $r_1 + r_2 + r_3 = 13$ and $r_1 r_2 r_3 = 72$.\n\n**Step 2.** List ways to write $72$ as a product of three positive integers and check which one adds to $13$: only $3, 4, 6$ works.\n\n**Step 3.** Then $b = r_1r_2 + r_2r_3 + r_1r_3 = 12 + 24 + 18 = 54$.\n\n**Answer:** $b = 54$. **(C)**\n\n**Common mistake:** mixing up which coefficient goes with which Vieta sum. The $x$ coefficient matches the sum of products of pairs."
+ },
+ {
+  "id": "mock_x4_poly_int_roots_2",
+  "family": "x4_poly_int_roots",
+  "difficulty": 4,
+  "topic": "polynomials",
+  "skillId": "poly_vieta",
+  "track": "amc12",
+  "prompt": "The polynomial $x^3 - 19x^2 + bx - 216$ has three positive integer roots. What is $b$?",
+  "choices": {
+   "A": "$11$",
+   "B": "$113$",
+   "C": "$114$",
+   "D": "$115$",
+   "E": "$120$"
+  },
+  "answer": "C",
+  "hints": [
+   "The roots add to 19 and multiply to 216."
+  ],
+  "solution": "**What we need:** the middle coefficient $b$.\n\n**Key idea:** Vieta's formulas for $x^3 - px^2 + qx - r$: the roots add to $p$, their pairwise products add to $q$, and they multiply to $r$.\n\n**Step 1.** The roots $r_1, r_2, r_3$ satisfy $r_1 + r_2 + r_3 = 19$ and $r_1 r_2 r_3 = 216$.\n\n**Step 2.** List ways to write $216$ as a product of three positive integers and check which one adds to $19$: only $4, 6, 9$ works.\n\n**Step 3.** Then $b = r_1r_2 + r_2r_3 + r_1r_3 = 24 + 54 + 36 = 114$.\n\n**Answer:** $b = 114$. **(C)**\n\n**Common mistake:** mixing up which coefficient goes with which Vieta sum. The $x$ coefficient matches the sum of products of pairs."
+ },
+ {
+  "id": "mock_x4_poly_int_roots_3",
+  "family": "x4_poly_int_roots",
+  "difficulty": 4,
+  "topic": "polynomials",
+  "skillId": "poly_vieta",
+  "track": "amc12",
+  "prompt": "The polynomial $x^3 - 21x^2 + bx - 288$ has three positive integer roots. What is $b$?",
+  "choices": {
+   "A": "$13$",
+   "B": "$139$",
+   "C": "$140$",
+   "D": "$141$",
+   "E": "$147$"
+  },
+  "answer": "C",
+  "hints": [
+   "The roots add to 21 and multiply to 288."
+  ],
+  "solution": "**What we need:** the middle coefficient $b$.\n\n**Key idea:** Vieta's formulas for $x^3 - px^2 + qx - r$: the roots add to $p$, their pairwise products add to $q$, and they multiply to $r$.\n\n**Step 1.** The roots $r_1, r_2, r_3$ satisfy $r_1 + r_2 + r_3 = 21$ and $r_1 r_2 r_3 = 288$.\n\n**Step 2.** List ways to write $288$ as a product of three positive integers and check which one adds to $21$: only $4, 8, 9$ works.\n\n**Step 3.** Then $b = r_1r_2 + r_2r_3 + r_1r_3 = 32 + 72 + 36 = 140$.\n\n**Answer:** $b = 140$. **(C)**\n\n**Common mistake:** mixing up which coefficient goes with which Vieta sum. The $x$ coefficient matches the sum of products of pairs."
+ },
+ {
+  "id": "mock_x4_poly_int_roots_4",
+  "family": "x4_poly_int_roots",
+  "difficulty": 4,
+  "topic": "polynomials",
+  "skillId": "poly_vieta",
+  "track": "amc12",
+  "prompt": "The polynomial $x^3 - 7x^2 + bx - 8$ has three positive integer roots. What is $b$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$13$",
+   "C": "$14$",
+   "D": "$15$",
+   "E": "$16$"
+  },
+  "answer": "C",
+  "hints": [
+   "The roots add to 7 and multiply to 8."
+  ],
+  "solution": "**What we need:** the middle coefficient $b$.\n\n**Key idea:** Vieta's formulas for $x^3 - px^2 + qx - r$: the roots add to $p$, their pairwise products add to $q$, and they multiply to $r$.\n\n**Step 1.** The roots $r_1, r_2, r_3$ satisfy $r_1 + r_2 + r_3 = 7$ and $r_1 r_2 r_3 = 8$.\n\n**Step 2.** List ways to write $8$ as a product of three positive integers and check which one adds to $7$: only $1, 2, 4$ works.\n\n**Step 3.** Then $b = r_1r_2 + r_2r_3 + r_1r_3 = 2 + 8 + 4 = 14$.\n\n**Answer:** $b = 14$. **(C)**\n\n**Common mistake:** mixing up which coefficient goes with which Vieta sum. The $x$ coefficient matches the sum of products of pairs."
+ },
+ {
+  "id": "mock_x4_poly_int_roots_5",
+  "family": "x4_poly_int_roots",
+  "difficulty": 4,
+  "topic": "polynomials",
+  "skillId": "poly_vieta",
+  "track": "amc12",
+  "prompt": "The polynomial $x^3 - 12x^2 + bx - 50$ has three positive integer roots. What is $b$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$44$",
+   "C": "$45$",
+   "D": "$46$",
+   "E": "$48$"
+  },
+  "answer": "C",
+  "hints": [
+   "The roots add to 12 and multiply to 50."
+  ],
+  "solution": "**What we need:** the middle coefficient $b$.\n\n**Key idea:** Vieta's formulas for $x^3 - px^2 + qx - r$: the roots add to $p$, their pairwise products add to $q$, and they multiply to $r$.\n\n**Step 1.** The roots $r_1, r_2, r_3$ satisfy $r_1 + r_2 + r_3 = 12$ and $r_1 r_2 r_3 = 50$.\n\n**Step 2.** List ways to write $50$ as a product of three positive integers and check which one adds to $12$: only $2, 5, 5$ works.\n\n**Step 3.** Then $b = r_1r_2 + r_2r_3 + r_1r_3 = 10 + 25 + 10 = 45$.\n\n**Answer:** $b = 45$. **(C)**\n\n**Common mistake:** mixing up which coefficient goes with which Vieta sum. The $x$ coefficient matches the sum of products of pairs."
+ },
+ {
+  "id": "mock_x4_poly_int_roots_6",
+  "family": "x4_poly_int_roots",
+  "difficulty": 4,
+  "topic": "polynomials",
+  "skillId": "poly_vieta",
+  "track": "amc12",
+  "prompt": "The polynomial $x^3 - 18x^2 + bx - 196$ has three positive integer roots. What is $b$?",
+  "choices": {
+   "A": "$10$",
+   "B": "$104$",
+   "C": "$105$",
+   "D": "$106$",
+   "E": "$108$"
+  },
+  "answer": "C",
+  "hints": [
+   "The roots add to 18 and multiply to 196."
+  ],
+  "solution": "**What we need:** the middle coefficient $b$.\n\n**Key idea:** Vieta's formulas for $x^3 - px^2 + qx - r$: the roots add to $p$, their pairwise products add to $q$, and they multiply to $r$.\n\n**Step 1.** The roots $r_1, r_2, r_3$ satisfy $r_1 + r_2 + r_3 = 18$ and $r_1 r_2 r_3 = 196$.\n\n**Step 2.** List ways to write $196$ as a product of three positive integers and check which one adds to $18$: only $4, 7, 7$ works.\n\n**Step 3.** Then $b = r_1r_2 + r_2r_3 + r_1r_3 = 28 + 49 + 28 = 105$.\n\n**Answer:** $b = 105$. **(C)**\n\n**Common mistake:** mixing up which coefficient goes with which Vieta sum. The $x$ coefficient matches the sum of products of pairs."
+ },
+ {
+  "id": "mock_x4_ser_rationalize_1",
+  "family": "x4_ser_rationalize",
+  "difficulty": 4,
+  "topic": "sequences_series",
+  "skillId": "ser_telescoping",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{15} \\frac{1}{\\sqrt{n} + \\sqrt{n + 1}}$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$6$"
+  },
+  "answer": "B",
+  "hints": [
+   "Rationalize each denominator."
+  ],
+  "solution": "**What we need:** the sum of $15$ fractions with square roots in the denominators.\n\n**Key idea:** rationalize each denominator: multiply top and bottom by the conjugate. The terms then telescope.\n\n**Step 1.** $\\frac{1}{\\sqrt{n} + \\sqrt{n + 1}} \\cdot \\frac{\\sqrt{n + 1} - \\sqrt{n}}{\\sqrt{n + 1} - \\sqrt{n}} = \\frac{\\sqrt{n + 1} - \\sqrt{n}}{(n + 1) - n} = \\sqrt{n + 1} - \\sqrt{n}$.\n\n**Step 2.** The sum becomes $(\\sqrt{2} - \\sqrt{1}) + (\\sqrt{3} - \\sqrt{2}) + \\cdots + (\\sqrt{16} - \\sqrt{15})$.\n\n**Step 3.** Everything cancels except the last and first: $\\sqrt{16} - 1 = 4 - 1 = 3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** forgetting the $-1$ from the first term and answering $4$."
+ },
+ {
+  "id": "mock_x4_ser_rationalize_2",
+  "family": "x4_ser_rationalize",
+  "difficulty": 4,
+  "topic": "sequences_series",
+  "skillId": "ser_telescoping",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{168} \\frac{1}{\\sqrt{n} + \\sqrt{n + 1}}$?",
+  "choices": {
+   "A": "$\\frac{13}{2}$",
+   "B": "$12$",
+   "C": "$13$",
+   "D": "$14$",
+   "E": "$24$"
+  },
+  "answer": "B",
+  "hints": [
+   "Rationalize each denominator."
+  ],
+  "solution": "**What we need:** the sum of $168$ fractions with square roots in the denominators.\n\n**Key idea:** rationalize each denominator: multiply top and bottom by the conjugate. The terms then telescope.\n\n**Step 1.** $\\frac{1}{\\sqrt{n} + \\sqrt{n + 1}} \\cdot \\frac{\\sqrt{n + 1} - \\sqrt{n}}{\\sqrt{n + 1} - \\sqrt{n}} = \\frac{\\sqrt{n + 1} - \\sqrt{n}}{(n + 1) - n} = \\sqrt{n + 1} - \\sqrt{n}$.\n\n**Step 2.** The sum becomes $(\\sqrt{2} - \\sqrt{1}) + (\\sqrt{3} - \\sqrt{2}) + \\cdots + (\\sqrt{169} - \\sqrt{168})$.\n\n**Step 3.** Everything cancels except the last and first: $\\sqrt{169} - 1 = 13 - 1 = 12$.\n\n**Answer:** $12$. **(B)**\n\n**Common mistake:** forgetting the $-1$ from the first term and answering $13$."
+ },
+ {
+  "id": "mock_x4_ser_rationalize_3",
+  "family": "x4_ser_rationalize",
+  "difficulty": 4,
+  "topic": "sequences_series",
+  "skillId": "ser_telescoping",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{675} \\frac{1}{\\sqrt{n} + \\sqrt{n + 1}}$?",
+  "choices": {
+   "A": "$13$",
+   "B": "$25$",
+   "C": "$26$",
+   "D": "$27$",
+   "E": "$50$"
+  },
+  "answer": "B",
+  "hints": [
+   "Rationalize each denominator."
+  ],
+  "solution": "**What we need:** the sum of $675$ fractions with square roots in the denominators.\n\n**Key idea:** rationalize each denominator: multiply top and bottom by the conjugate. The terms then telescope.\n\n**Step 1.** $\\frac{1}{\\sqrt{n} + \\sqrt{n + 1}} \\cdot \\frac{\\sqrt{n + 1} - \\sqrt{n}}{\\sqrt{n + 1} - \\sqrt{n}} = \\frac{\\sqrt{n + 1} - \\sqrt{n}}{(n + 1) - n} = \\sqrt{n + 1} - \\sqrt{n}$.\n\n**Step 2.** The sum becomes $(\\sqrt{2} - \\sqrt{1}) + (\\sqrt{3} - \\sqrt{2}) + \\cdots + (\\sqrt{676} - \\sqrt{675})$.\n\n**Step 3.** Everything cancels except the last and first: $\\sqrt{676} - 1 = 26 - 1 = 25$.\n\n**Answer:** $25$. **(B)**\n\n**Common mistake:** forgetting the $-1$ from the first term and answering $26$."
+ },
+ {
+  "id": "mock_x4_ser_rationalize_4",
+  "family": "x4_ser_rationalize",
+  "difficulty": 4,
+  "topic": "sequences_series",
+  "skillId": "ser_telescoping",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{99} \\frac{1}{\\sqrt{n} + \\sqrt{n + 1}}$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$11$",
+   "E": "$18$"
+  },
+  "answer": "B",
+  "hints": [
+   "Rationalize each denominator."
+  ],
+  "solution": "**What we need:** the sum of $99$ fractions with square roots in the denominators.\n\n**Key idea:** rationalize each denominator: multiply top and bottom by the conjugate. The terms then telescope.\n\n**Step 1.** $\\frac{1}{\\sqrt{n} + \\sqrt{n + 1}} \\cdot \\frac{\\sqrt{n + 1} - \\sqrt{n}}{\\sqrt{n + 1} - \\sqrt{n}} = \\frac{\\sqrt{n + 1} - \\sqrt{n}}{(n + 1) - n} = \\sqrt{n + 1} - \\sqrt{n}$.\n\n**Step 2.** The sum becomes $(\\sqrt{2} - \\sqrt{1}) + (\\sqrt{3} - \\sqrt{2}) + \\cdots + (\\sqrt{100} - \\sqrt{99})$.\n\n**Step 3.** Everything cancels except the last and first: $\\sqrt{100} - 1 = 10 - 1 = 9$.\n\n**Answer:** $9$. **(B)**\n\n**Common mistake:** forgetting the $-1$ from the first term and answering $10$."
+ },
+ {
+  "id": "mock_x4_ser_rationalize_5",
+  "family": "x4_ser_rationalize",
+  "difficulty": 4,
+  "topic": "sequences_series",
+  "skillId": "ser_telescoping",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{360} \\frac{1}{\\sqrt{n} + \\sqrt{n + 1}}$?",
+  "choices": {
+   "A": "$\\frac{19}{2}$",
+   "B": "$18$",
+   "C": "$19$",
+   "D": "$20$",
+   "E": "$36$"
+  },
+  "answer": "B",
+  "hints": [
+   "Rationalize each denominator."
+  ],
+  "solution": "**What we need:** the sum of $360$ fractions with square roots in the denominators.\n\n**Key idea:** rationalize each denominator: multiply top and bottom by the conjugate. The terms then telescope.\n\n**Step 1.** $\\frac{1}{\\sqrt{n} + \\sqrt{n + 1}} \\cdot \\frac{\\sqrt{n + 1} - \\sqrt{n}}{\\sqrt{n + 1} - \\sqrt{n}} = \\frac{\\sqrt{n + 1} - \\sqrt{n}}{(n + 1) - n} = \\sqrt{n + 1} - \\sqrt{n}$.\n\n**Step 2.** The sum becomes $(\\sqrt{2} - \\sqrt{1}) + (\\sqrt{3} - \\sqrt{2}) + \\cdots + (\\sqrt{361} - \\sqrt{360})$.\n\n**Step 3.** Everything cancels except the last and first: $\\sqrt{361} - 1 = 19 - 1 = 18$.\n\n**Answer:** $18$. **(B)**\n\n**Common mistake:** forgetting the $-1$ from the first term and answering $19$."
+ },
+ {
+  "id": "mock_x4_ser_rationalize_6",
+  "family": "x4_ser_rationalize",
+  "difficulty": 4,
+  "topic": "sequences_series",
+  "skillId": "ser_telescoping",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{255} \\frac{1}{\\sqrt{n} + \\sqrt{n + 1}}$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$15$",
+   "C": "$16$",
+   "D": "$17$",
+   "E": "$30$"
+  },
+  "answer": "B",
+  "hints": [
+   "Rationalize each denominator."
+  ],
+  "solution": "**What we need:** the sum of $255$ fractions with square roots in the denominators.\n\n**Key idea:** rationalize each denominator: multiply top and bottom by the conjugate. The terms then telescope.\n\n**Step 1.** $\\frac{1}{\\sqrt{n} + \\sqrt{n + 1}} \\cdot \\frac{\\sqrt{n + 1} - \\sqrt{n}}{\\sqrt{n + 1} - \\sqrt{n}} = \\frac{\\sqrt{n + 1} - \\sqrt{n}}{(n + 1) - n} = \\sqrt{n + 1} - \\sqrt{n}$.\n\n**Step 2.** The sum becomes $(\\sqrt{2} - \\sqrt{1}) + (\\sqrt{3} - \\sqrt{2}) + \\cdots + (\\sqrt{256} - \\sqrt{255})$.\n\n**Step 3.** Everything cancels except the last and first: $\\sqrt{256} - 1 = 16 - 1 = 15$.\n\n**Answer:** $15$. **(B)**\n\n**Common mistake:** forgetting the $-1$ from the first term and answering $16$."
+ },
+ {
+  "id": "mock_x5_trig_power_sum_1",
+  "family": "x5_trig_power_sum",
+  "difficulty": 5,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "If $\\tan x + \\cot x = \\frac{10}{3}$, what is $\\sin^{6} x + \\cos^{6} x$?",
+  "choices": {
+   "A": "$\\frac{3}{10}$",
+   "B": "$\\frac{16}{25}$",
+   "C": "$\\frac{73}{100}$",
+   "D": "$\\frac{41}{50}$",
+   "E": "$\\frac{91}{100}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\tan x + \\cot x = \\frac{1}{\\sin x \\cos x}$."
+  ],
+  "solution": "**What we need:** $\\sin^{6} x + \\cos^{6} x$, without finding $x$.\n\n**Key idea:** both the given and the target can be written using only $\\sin x \\cos x$.\n\n**Step 1.** Combine the given: $\\tan x + \\cot x = \\frac{\\sin x}{\\cos x} + \\frac{\\cos x}{\\sin x} = \\frac{\\sin^2 x + \\cos^2 x}{\\sin x \\cos x} = \\frac{1}{\\sin x\\cos x}$.\n\n**Step 2.** So $\\sin x \\cos x = \\frac{1}{\\frac{10}{3}} = \\frac{3}{10}$.\n\n**Step 3.** $\\sin^6 x + \\cos^6 x = (\\sin^2 x + \\cos^2 x)^3 - 3\\sin^2 x\\cos^2 x(\\sin^2 x + \\cos^2 x) = 1 - 3(\\sin x\\cos x)^2$.\n\n**Step 4.** Plug in: $1 - 3 \\cdot \\left(\\frac{3}{10}\\right)^2 = 1 - \\frac{27}{100} = \\frac{73}{100}$.\n\n**Answer:** $\\frac{73}{100}$. **(C)**\n\n**Common mistake:** using the wrong multiplier: it is $2$ for fourth powers and $3$ for sixth powers."
+ },
+ {
+  "id": "mock_x5_trig_power_sum_2",
+  "family": "x5_trig_power_sum",
+  "difficulty": 5,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "If $\\tan x + \\cot x = 5$, what is $\\sin^{4} x + \\cos^{4} x$?",
+  "choices": {
+   "A": "$\\frac{1}{5}$",
+   "B": "$\\frac{21}{25}$",
+   "C": "$\\frac{22}{25}$",
+   "D": "$\\frac{23}{25}$",
+   "E": "$\\frac{24}{25}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\tan x + \\cot x = \\frac{1}{\\sin x \\cos x}$."
+  ],
+  "solution": "**What we need:** $\\sin^{4} x + \\cos^{4} x$, without finding $x$.\n\n**Key idea:** both the given and the target can be written using only $\\sin x \\cos x$.\n\n**Step 1.** Combine the given: $\\tan x + \\cot x = \\frac{\\sin x}{\\cos x} + \\frac{\\cos x}{\\sin x} = \\frac{\\sin^2 x + \\cos^2 x}{\\sin x \\cos x} = \\frac{1}{\\sin x\\cos x}$.\n\n**Step 2.** So $\\sin x \\cos x = \\frac{1}{5} = \\frac{1}{5}$.\n\n**Step 3.** $\\sin^4 x + \\cos^4 x = (\\sin^2 x + \\cos^2 x)^2 - 2\\sin^2 x\\cos^2 x = 1 - 2(\\sin x\\cos x)^2$.\n\n**Step 4.** Plug in: $1 - 2 \\cdot \\left(\\frac{1}{5}\\right)^2 = 1 - \\frac{2}{25} = \\frac{23}{25}$.\n\n**Answer:** $\\frac{23}{25}$. **(D)**\n\n**Common mistake:** using the wrong multiplier: it is $2$ for fourth powers and $3$ for sixth powers."
+ },
+ {
+  "id": "mock_x5_trig_power_sum_3",
+  "family": "x5_trig_power_sum",
+  "difficulty": 5,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "If $\\tan x + \\cot x = \\frac{7}{3}$, what is $\\sin^{4} x + \\cos^{4} x$?",
+  "choices": {
+   "A": "$\\frac{13}{49}$",
+   "B": "$\\frac{3}{7}$",
+   "C": "$\\frac{22}{49}$",
+   "D": "$\\frac{31}{49}$",
+   "E": "$\\frac{40}{49}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\tan x + \\cot x = \\frac{1}{\\sin x \\cos x}$."
+  ],
+  "solution": "**What we need:** $\\sin^{4} x + \\cos^{4} x$, without finding $x$.\n\n**Key idea:** both the given and the target can be written using only $\\sin x \\cos x$.\n\n**Step 1.** Combine the given: $\\tan x + \\cot x = \\frac{\\sin x}{\\cos x} + \\frac{\\cos x}{\\sin x} = \\frac{\\sin^2 x + \\cos^2 x}{\\sin x \\cos x} = \\frac{1}{\\sin x\\cos x}$.\n\n**Step 2.** So $\\sin x \\cos x = \\frac{1}{\\frac{7}{3}} = \\frac{3}{7}$.\n\n**Step 3.** $\\sin^4 x + \\cos^4 x = (\\sin^2 x + \\cos^2 x)^2 - 2\\sin^2 x\\cos^2 x = 1 - 2(\\sin x\\cos x)^2$.\n\n**Step 4.** Plug in: $1 - 2 \\cdot \\left(\\frac{3}{7}\\right)^2 = 1 - \\frac{18}{49} = \\frac{31}{49}$.\n\n**Answer:** $\\frac{31}{49}$. **(D)**\n\n**Common mistake:** using the wrong multiplier: it is $2$ for fourth powers and $3$ for sixth powers."
+ },
+ {
+  "id": "mock_x5_trig_power_sum_4",
+  "family": "x5_trig_power_sum",
+  "difficulty": 5,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "If $\\tan x + \\cot x = \\frac{7}{3}$, what is $\\sin^{6} x + \\cos^{6} x$?",
+  "choices": {
+   "A": "$\\frac{13}{49}$",
+   "B": "$\\frac{3}{7}$",
+   "C": "$\\frac{22}{49}$",
+   "D": "$\\frac{31}{49}$",
+   "E": "$\\frac{40}{49}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\tan x + \\cot x = \\frac{1}{\\sin x \\cos x}$."
+  ],
+  "solution": "**What we need:** $\\sin^{6} x + \\cos^{6} x$, without finding $x$.\n\n**Key idea:** both the given and the target can be written using only $\\sin x \\cos x$.\n\n**Step 1.** Combine the given: $\\tan x + \\cot x = \\frac{\\sin x}{\\cos x} + \\frac{\\cos x}{\\sin x} = \\frac{\\sin^2 x + \\cos^2 x}{\\sin x \\cos x} = \\frac{1}{\\sin x\\cos x}$.\n\n**Step 2.** So $\\sin x \\cos x = \\frac{1}{\\frac{7}{3}} = \\frac{3}{7}$.\n\n**Step 3.** $\\sin^6 x + \\cos^6 x = (\\sin^2 x + \\cos^2 x)^3 - 3\\sin^2 x\\cos^2 x(\\sin^2 x + \\cos^2 x) = 1 - 3(\\sin x\\cos x)^2$.\n\n**Step 4.** Plug in: $1 - 3 \\cdot \\left(\\frac{3}{7}\\right)^2 = 1 - \\frac{27}{49} = \\frac{22}{49}$.\n\n**Answer:** $\\frac{22}{49}$. **(C)**\n\n**Common mistake:** using the wrong multiplier: it is $2$ for fourth powers and $3$ for sixth powers."
+ },
+ {
+  "id": "mock_x5_trig_power_sum_5",
+  "family": "x5_trig_power_sum",
+  "difficulty": 5,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "If $\\tan x + \\cot x = 6$, what is $\\sin^{4} x + \\cos^{4} x$?",
+  "choices": {
+   "A": "$\\frac{1}{6}$",
+   "B": "$\\frac{8}{9}$",
+   "C": "$\\frac{11}{12}$",
+   "D": "$\\frac{17}{18}$",
+   "E": "$\\frac{35}{36}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\tan x + \\cot x = \\frac{1}{\\sin x \\cos x}$."
+  ],
+  "solution": "**What we need:** $\\sin^{4} x + \\cos^{4} x$, without finding $x$.\n\n**Key idea:** both the given and the target can be written using only $\\sin x \\cos x$.\n\n**Step 1.** Combine the given: $\\tan x + \\cot x = \\frac{\\sin x}{\\cos x} + \\frac{\\cos x}{\\sin x} = \\frac{\\sin^2 x + \\cos^2 x}{\\sin x \\cos x} = \\frac{1}{\\sin x\\cos x}$.\n\n**Step 2.** So $\\sin x \\cos x = \\frac{1}{6} = \\frac{1}{6}$.\n\n**Step 3.** $\\sin^4 x + \\cos^4 x = (\\sin^2 x + \\cos^2 x)^2 - 2\\sin^2 x\\cos^2 x = 1 - 2(\\sin x\\cos x)^2$.\n\n**Step 4.** Plug in: $1 - 2 \\cdot \\left(\\frac{1}{6}\\right)^2 = 1 - \\frac{1}{18} = \\frac{17}{18}$.\n\n**Answer:** $\\frac{17}{18}$. **(D)**\n\n**Common mistake:** using the wrong multiplier: it is $2$ for fourth powers and $3$ for sixth powers."
+ },
+ {
+  "id": "mock_x5_trig_power_sum_6",
+  "family": "x5_trig_power_sum",
+  "difficulty": 5,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "If $\\tan x + \\cot x = \\frac{14}{3}$, what is $\\sin^{6} x + \\cos^{6} x$?",
+  "choices": {
+   "A": "$\\frac{3}{14}$",
+   "B": "$\\frac{40}{49}$",
+   "C": "$\\frac{169}{196}$",
+   "D": "$\\frac{89}{98}$",
+   "E": "$\\frac{187}{196}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\tan x + \\cot x = \\frac{1}{\\sin x \\cos x}$."
+  ],
+  "solution": "**What we need:** $\\sin^{6} x + \\cos^{6} x$, without finding $x$.\n\n**Key idea:** both the given and the target can be written using only $\\sin x \\cos x$.\n\n**Step 1.** Combine the given: $\\tan x + \\cot x = \\frac{\\sin x}{\\cos x} + \\frac{\\cos x}{\\sin x} = \\frac{\\sin^2 x + \\cos^2 x}{\\sin x \\cos x} = \\frac{1}{\\sin x\\cos x}$.\n\n**Step 2.** So $\\sin x \\cos x = \\frac{1}{\\frac{14}{3}} = \\frac{3}{14}$.\n\n**Step 3.** $\\sin^6 x + \\cos^6 x = (\\sin^2 x + \\cos^2 x)^3 - 3\\sin^2 x\\cos^2 x(\\sin^2 x + \\cos^2 x) = 1 - 3(\\sin x\\cos x)^2$.\n\n**Step 4.** Plug in: $1 - 3 \\cdot \\left(\\frac{3}{14}\\right)^2 = 1 - \\frac{27}{196} = \\frac{169}{196}$.\n\n**Answer:** $\\frac{169}{196}$. **(C)**\n\n**Common mistake:** using the wrong multiplier: it is $2$ for fourth powers and $3$ for sixth powers."
+ },
+ {
+  "id": "mock_x5_log_system_1",
+  "family": "x5_log_system",
+  "difficulty": 5,
+  "topic": "logarithms",
+  "skillId": "log_equations",
+  "track": "amc12",
+  "prompt": "Positive real numbers $x$ and $y$ satisfy $\\log_x y + \\log_y x = \\frac{29}{10}$ and $xy = 3^{7}$. What is $x + y$?",
+  "choices": {
+   "A": "$252$",
+   "B": "$255$",
+   "C": "$486$",
+   "D": "$1093$",
+   "E": "$2187$"
+  },
+  "answer": "A",
+  "hints": [
+   "Let $t = \\log_{3} x$ and $u = \\log_{3} y$."
+  ],
+  "solution": "**What we need:** $x + y$, which means finding $x$ and $y$.\n\n**Key idea:** switch to base $3$ logs. Let $t = \\log_{3} x$ and $u = \\log_{3} y$; then both equations become simple equations in $t$ and $u$.\n\n**Step 1.** $xy = 3^{7}$ gives $t + u = 7$.\n\n**Step 2.** Change of base: $\\log_x y = \\frac{u}{t}$ and $\\log_y x = \\frac{t}{u}$. So $\\frac{u}{t} + \\frac{t}{u} = \\frac{29}{10}$, which means $t^2 + u^2 = \\frac{29}{10}\\,tu$.\n\n**Step 3.** Since $t^2 + u^2 = (t + u)^2 - 2tu = 49 - 2tu$, we get $49 = (\\frac{29}{10} + 2)tu$, so $tu = 10$.\n\n**Step 4.** $t$ and $u$ add to $7$ and multiply to $10$: they are $5$ and $2$.\n\n**Step 5.** So $x$ and $y$ are $3^{5} = 243$ and $3^{2} = 9$, and $x + y = 252$.\n\n**Answer:** $252$. **(A)**\n\n**Common mistake:** assuming $x = y$. The first equation would then give $2$, not $\\frac{29}{10}$."
+ },
+ {
+  "id": "mock_x5_log_system_2",
+  "family": "x5_log_system",
+  "difficulty": 5,
+  "topic": "logarithms",
+  "skillId": "log_equations",
+  "track": "amc12",
+  "prompt": "Positive real numbers $x$ and $y$ satisfy $\\log_x y + \\log_y x = \\frac{25}{12}$ and $xy = 3^{7}$. What is $x + y$?",
+  "choices": {
+   "A": "$54$",
+   "B": "$108$",
+   "C": "$111$",
+   "D": "$1093$",
+   "E": "$2187$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $t = \\log_{3} x$ and $u = \\log_{3} y$."
+  ],
+  "solution": "**What we need:** $x + y$, which means finding $x$ and $y$.\n\n**Key idea:** switch to base $3$ logs. Let $t = \\log_{3} x$ and $u = \\log_{3} y$; then both equations become simple equations in $t$ and $u$.\n\n**Step 1.** $xy = 3^{7}$ gives $t + u = 7$.\n\n**Step 2.** Change of base: $\\log_x y = \\frac{u}{t}$ and $\\log_y x = \\frac{t}{u}$. So $\\frac{u}{t} + \\frac{t}{u} = \\frac{25}{12}$, which means $t^2 + u^2 = \\frac{25}{12}\\,tu$.\n\n**Step 3.** Since $t^2 + u^2 = (t + u)^2 - 2tu = 49 - 2tu$, we get $49 = (\\frac{25}{12} + 2)tu$, so $tu = 12$.\n\n**Step 4.** $t$ and $u$ add to $7$ and multiply to $12$: they are $3$ and $4$.\n\n**Step 5.** So $x$ and $y$ are $3^{3} = 27$ and $3^{4} = 81$, and $x + y = 108$.\n\n**Answer:** $108$. **(B)**\n\n**Common mistake:** assuming $x = y$. The first equation would then give $2$, not $\\frac{25}{12}$."
+ },
+ {
+  "id": "mock_x5_log_system_3",
+  "family": "x5_log_system",
+  "difficulty": 5,
+  "topic": "logarithms",
+  "skillId": "log_equations",
+  "track": "amc12",
+  "prompt": "Positive real numbers $x$ and $y$ satisfy $\\log_x y + \\log_y x = \\frac{13}{6}$ and $xy = 3^{5}$. What is $x + y$?",
+  "choices": {
+   "A": "$36$",
+   "B": "$39$",
+   "C": "$54$",
+   "D": "$121$",
+   "E": "$243$"
+  },
+  "answer": "A",
+  "hints": [
+   "Let $t = \\log_{3} x$ and $u = \\log_{3} y$."
+  ],
+  "solution": "**What we need:** $x + y$, which means finding $x$ and $y$.\n\n**Key idea:** switch to base $3$ logs. Let $t = \\log_{3} x$ and $u = \\log_{3} y$; then both equations become simple equations in $t$ and $u$.\n\n**Step 1.** $xy = 3^{5}$ gives $t + u = 5$.\n\n**Step 2.** Change of base: $\\log_x y = \\frac{u}{t}$ and $\\log_y x = \\frac{t}{u}$. So $\\frac{u}{t} + \\frac{t}{u} = \\frac{13}{6}$, which means $t^2 + u^2 = \\frac{13}{6}\\,tu$.\n\n**Step 3.** Since $t^2 + u^2 = (t + u)^2 - 2tu = 25 - 2tu$, we get $25 = (\\frac{13}{6} + 2)tu$, so $tu = 6$.\n\n**Step 4.** $t$ and $u$ add to $5$ and multiply to $6$: they are $3$ and $2$.\n\n**Step 5.** So $x$ and $y$ are $3^{3} = 27$ and $3^{2} = 9$, and $x + y = 36$.\n\n**Answer:** $36$. **(A)**\n\n**Common mistake:** assuming $x = y$. The first equation would then give $2$, not $\\frac{13}{6}$."
+ },
+ {
+  "id": "mock_x5_log_system_4",
+  "family": "x5_log_system",
+  "difficulty": 5,
+  "topic": "logarithms",
+  "skillId": "log_equations",
+  "track": "amc12",
+  "prompt": "Positive real numbers $x$ and $y$ satisfy $\\log_x y + \\log_y x = \\frac{25}{12}$ and $xy = 2^{7}$. What is $x + y$?",
+  "choices": {
+   "A": "$24$",
+   "B": "$26$",
+   "C": "$32$",
+   "D": "$64$",
+   "E": "$128$"
+  },
+  "answer": "A",
+  "hints": [
+   "Let $t = \\log_{2} x$ and $u = \\log_{2} y$."
+  ],
+  "solution": "**What we need:** $x + y$, which means finding $x$ and $y$.\n\n**Key idea:** switch to base $2$ logs. Let $t = \\log_{2} x$ and $u = \\log_{2} y$; then both equations become simple equations in $t$ and $u$.\n\n**Step 1.** $xy = 2^{7}$ gives $t + u = 7$.\n\n**Step 2.** Change of base: $\\log_x y = \\frac{u}{t}$ and $\\log_y x = \\frac{t}{u}$. So $\\frac{u}{t} + \\frac{t}{u} = \\frac{25}{12}$, which means $t^2 + u^2 = \\frac{25}{12}\\,tu$.\n\n**Step 3.** Since $t^2 + u^2 = (t + u)^2 - 2tu = 49 - 2tu$, we get $49 = (\\frac{25}{12} + 2)tu$, so $tu = 12$.\n\n**Step 4.** $t$ and $u$ add to $7$ and multiply to $12$: they are $4$ and $3$.\n\n**Step 5.** So $x$ and $y$ are $2^{4} = 16$ and $2^{3} = 8$, and $x + y = 24$.\n\n**Answer:** $24$. **(A)**\n\n**Common mistake:** assuming $x = y$. The first equation would then give $2$, not $\\frac{25}{12}$."
+ },
+ {
+  "id": "mock_x5_log_system_5",
+  "family": "x5_log_system",
+  "difficulty": 5,
+  "topic": "logarithms",
+  "skillId": "log_equations",
+  "track": "amc12",
+  "prompt": "Positive real numbers $x$ and $y$ satisfy $\\log_x y + \\log_y x = \\frac{10}{3}$ and $xy = 2^{8}$. What is $x + y$?",
+  "choices": {
+   "A": "$32$",
+   "B": "$68$",
+   "C": "$70$",
+   "D": "$128$",
+   "E": "$256$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $t = \\log_{2} x$ and $u = \\log_{2} y$."
+  ],
+  "solution": "**What we need:** $x + y$, which means finding $x$ and $y$.\n\n**Key idea:** switch to base $2$ logs. Let $t = \\log_{2} x$ and $u = \\log_{2} y$; then both equations become simple equations in $t$ and $u$.\n\n**Step 1.** $xy = 2^{8}$ gives $t + u = 8$.\n\n**Step 2.** Change of base: $\\log_x y = \\frac{u}{t}$ and $\\log_y x = \\frac{t}{u}$. So $\\frac{u}{t} + \\frac{t}{u} = \\frac{10}{3}$, which means $t^2 + u^2 = \\frac{10}{3}\\,tu$.\n\n**Step 3.** Since $t^2 + u^2 = (t + u)^2 - 2tu = 64 - 2tu$, we get $64 = (\\frac{10}{3} + 2)tu$, so $tu = 12$.\n\n**Step 4.** $t$ and $u$ add to $8$ and multiply to $12$: they are $6$ and $2$.\n\n**Step 5.** So $x$ and $y$ are $2^{6} = 64$ and $2^{2} = 4$, and $x + y = 68$.\n\n**Answer:** $68$. **(B)**\n\n**Common mistake:** assuming $x = y$. The first equation would then give $2$, not $\\frac{10}{3}$."
+ },
+ {
+  "id": "mock_x5_log_system_6",
+  "family": "x5_log_system",
+  "difficulty": 5,
+  "topic": "logarithms",
+  "skillId": "log_equations",
+  "track": "amc12",
+  "prompt": "Positive real numbers $x$ and $y$ satisfy $\\log_x y + \\log_y x = \\frac{29}{10}$ and $xy = 2^{7}$. What is $x + y$?",
+  "choices": {
+   "A": "$28$",
+   "B": "$36$",
+   "C": "$38$",
+   "D": "$64$",
+   "E": "$128$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $t = \\log_{2} x$ and $u = \\log_{2} y$."
+  ],
+  "solution": "**What we need:** $x + y$, which means finding $x$ and $y$.\n\n**Key idea:** switch to base $2$ logs. Let $t = \\log_{2} x$ and $u = \\log_{2} y$; then both equations become simple equations in $t$ and $u$.\n\n**Step 1.** $xy = 2^{7}$ gives $t + u = 7$.\n\n**Step 2.** Change of base: $\\log_x y = \\frac{u}{t}$ and $\\log_y x = \\frac{t}{u}$. So $\\frac{u}{t} + \\frac{t}{u} = \\frac{29}{10}$, which means $t^2 + u^2 = \\frac{29}{10}\\,tu$.\n\n**Step 3.** Since $t^2 + u^2 = (t + u)^2 - 2tu = 49 - 2tu$, we get $49 = (\\frac{29}{10} + 2)tu$, so $tu = 10$.\n\n**Step 4.** $t$ and $u$ add to $7$ and multiply to $10$: they are $5$ and $2$.\n\n**Step 5.** So $x$ and $y$ are $2^{5} = 32$ and $2^{2} = 4$, and $x + y = 36$.\n\n**Answer:** $36$. **(B)**\n\n**Common mistake:** assuming $x = y$. The first equation would then give $2$, not $\\frac{29}{10}$."
+ },
+ {
+  "id": "mock_x5_cx_chord_sum_1",
+  "family": "x5_cx_chord_sum",
+  "difficulty": 5,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{7} + i\\sin\\frac{2\\pi}{7}$. What is $\\displaystyle\\sum_{k=1}^{6} |1 - \\omega^k|^2$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$12$",
+   "C": "$14$",
+   "D": "$28$",
+   "E": "$49$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\omega^{-k} = \\overline{\\omega^k}$; pairing or Vieta helps."
+  ],
+  "solution": "**What we need:** the sum of the squared distances from $1$ to the other roots of unity.\n\n**Key idea:** for any complex $z$, $|z|^2 = z\\bar{z}$. And on the unit circle, $\\overline{\\omega^k} = \\omega^{-k}$.\n\n**Step 1.** Expand one term: $|1 - \\omega^k|^2 = (1 - \\omega^k)(1 - \\omega^{-k}) = 2 - \\omega^k - \\omega^{-k}$.\n\n**Step 2.** Sum over $k = 1$ to $6$: the $2$s give $2 \\cdot 6 = 12$.\n\n**Step 3.** All $7$ roots of $z^{7} = 1$ add to $0$, so $\\omega + \\omega^2 + \\cdots + \\omega^{6} = -1$. The same holds for the $\\omega^{-k}$ terms.\n\n**Step 4.** Total: $12 - (-1) - (-1) = 14$.\n\n**Answer:** $14$. **(C)**\n\n**Common mistake:** forgetting that the powers of $\\omega$ add to $-1$, not $0$, once $k = 0$ is left out."
+ },
+ {
+  "id": "mock_x5_cx_chord_sum_2",
+  "family": "x5_cx_chord_sum",
+  "difficulty": 5,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{21} + i\\sin\\frac{2\\pi}{21}$. What is $\\displaystyle\\sum_{k=1}^{20} |1 - \\omega^k|^2$?",
+  "choices": {
+   "A": "$21$",
+   "B": "$40$",
+   "C": "$42$",
+   "D": "$84$",
+   "E": "$441$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\omega^{-k} = \\overline{\\omega^k}$; pairing or Vieta helps."
+  ],
+  "solution": "**What we need:** the sum of the squared distances from $1$ to the other roots of unity.\n\n**Key idea:** for any complex $z$, $|z|^2 = z\\bar{z}$. And on the unit circle, $\\overline{\\omega^k} = \\omega^{-k}$.\n\n**Step 1.** Expand one term: $|1 - \\omega^k|^2 = (1 - \\omega^k)(1 - \\omega^{-k}) = 2 - \\omega^k - \\omega^{-k}$.\n\n**Step 2.** Sum over $k = 1$ to $20$: the $2$s give $2 \\cdot 20 = 40$.\n\n**Step 3.** All $21$ roots of $z^{21} = 1$ add to $0$, so $\\omega + \\omega^2 + \\cdots + \\omega^{20} = -1$. The same holds for the $\\omega^{-k}$ terms.\n\n**Step 4.** Total: $40 - (-1) - (-1) = 42$.\n\n**Answer:** $42$. **(C)**\n\n**Common mistake:** forgetting that the powers of $\\omega$ add to $-1$, not $0$, once $k = 0$ is left out."
+ },
+ {
+  "id": "mock_x5_cx_chord_sum_3",
+  "family": "x5_cx_chord_sum",
+  "difficulty": 5,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{8} + i\\sin\\frac{2\\pi}{8}$. What is $\\displaystyle\\sum_{k=1}^{7} \\frac{1}{1 - \\omega^k}$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$\\frac{7}{2}$",
+   "C": "$4$",
+   "D": "$\\frac{9}{2}$",
+   "E": "$7$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\omega^{-k} = \\overline{\\omega^k}$; pairing or Vieta helps."
+  ],
+  "solution": "**What we need:** a sum of complex fractions that turns out to be real.\n\n**Key idea:** pair each term with its partner $k \\leftrightarrow n - k$, since $\\omega^{n - k} = \\omega^{-k}$.\n\n**Step 1.** Pair: $\\frac{1}{1 - \\omega^k} + \\frac{1}{1 - \\omega^{-k}}$. Multiply the second by $\\frac{\\omega^k}{\\omega^k}$: it becomes $\\frac{\\omega^k}{\\omega^k - 1} = -\\frac{\\omega^k}{1 - \\omega^k}$.\n\n**Step 2.** So the pair adds to $\\frac{1 - \\omega^k}{1 - \\omega^k} = 1$.\n\n**Step 3.** Adding all $7$ terms counts each pair twice when we sum over all $k$: $2S = 7$, so $S = \\frac{7}{2}$.\n\n**Answer:** $\\frac{7}{2}$. **(B)**\n\n**Common mistake:** counting each pair once and getting $7$."
+ },
+ {
+  "id": "mock_x5_cx_chord_sum_4",
+  "family": "x5_cx_chord_sum",
+  "difficulty": 5,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{18} + i\\sin\\frac{2\\pi}{18}$. What is $\\displaystyle\\sum_{k=1}^{17} |1 - \\omega^k|^2$?",
+  "choices": {
+   "A": "$18$",
+   "B": "$34$",
+   "C": "$36$",
+   "D": "$72$",
+   "E": "$324$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\omega^{-k} = \\overline{\\omega^k}$; pairing or Vieta helps."
+  ],
+  "solution": "**What we need:** the sum of the squared distances from $1$ to the other roots of unity.\n\n**Key idea:** for any complex $z$, $|z|^2 = z\\bar{z}$. And on the unit circle, $\\overline{\\omega^k} = \\omega^{-k}$.\n\n**Step 1.** Expand one term: $|1 - \\omega^k|^2 = (1 - \\omega^k)(1 - \\omega^{-k}) = 2 - \\omega^k - \\omega^{-k}$.\n\n**Step 2.** Sum over $k = 1$ to $17$: the $2$s give $2 \\cdot 17 = 34$.\n\n**Step 3.** All $18$ roots of $z^{18} = 1$ add to $0$, so $\\omega + \\omega^2 + \\cdots + \\omega^{17} = -1$. The same holds for the $\\omega^{-k}$ terms.\n\n**Step 4.** Total: $34 - (-1) - (-1) = 36$.\n\n**Answer:** $36$. **(C)**\n\n**Common mistake:** forgetting that the powers of $\\omega$ add to $-1$, not $0$, once $k = 0$ is left out."
+ },
+ {
+  "id": "mock_x5_cx_chord_sum_5",
+  "family": "x5_cx_chord_sum",
+  "difficulty": 5,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{26} + i\\sin\\frac{2\\pi}{26}$. What is $\\displaystyle\\sum_{k=1}^{25} \\frac{1}{1 - \\omega^k}$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$\\frac{25}{2}$",
+   "C": "$13$",
+   "D": "$\\frac{27}{2}$",
+   "E": "$25$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\omega^{-k} = \\overline{\\omega^k}$; pairing or Vieta helps."
+  ],
+  "solution": "**What we need:** a sum of complex fractions that turns out to be real.\n\n**Key idea:** pair each term with its partner $k \\leftrightarrow n - k$, since $\\omega^{n - k} = \\omega^{-k}$.\n\n**Step 1.** Pair: $\\frac{1}{1 - \\omega^k} + \\frac{1}{1 - \\omega^{-k}}$. Multiply the second by $\\frac{\\omega^k}{\\omega^k}$: it becomes $\\frac{\\omega^k}{\\omega^k - 1} = -\\frac{\\omega^k}{1 - \\omega^k}$.\n\n**Step 2.** So the pair adds to $\\frac{1 - \\omega^k}{1 - \\omega^k} = 1$.\n\n**Step 3.** Adding all $25$ terms counts each pair twice when we sum over all $k$: $2S = 25$, so $S = \\frac{25}{2}$.\n\n**Answer:** $\\frac{25}{2}$. **(B)**\n\n**Common mistake:** counting each pair once and getting $25$."
+ },
+ {
+  "id": "mock_x5_cx_chord_sum_6",
+  "family": "x5_cx_chord_sum",
+  "difficulty": 5,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{10} + i\\sin\\frac{2\\pi}{10}$. What is $\\displaystyle\\sum_{k=1}^{9} |1 - \\omega^k|^2$?",
+  "choices": {
+   "A": "$10$",
+   "B": "$18$",
+   "C": "$20$",
+   "D": "$40$",
+   "E": "$100$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\omega^{-k} = \\overline{\\omega^k}$; pairing or Vieta helps."
+  ],
+  "solution": "**What we need:** the sum of the squared distances from $1$ to the other roots of unity.\n\n**Key idea:** for any complex $z$, $|z|^2 = z\\bar{z}$. And on the unit circle, $\\overline{\\omega^k} = \\omega^{-k}$.\n\n**Step 1.** Expand one term: $|1 - \\omega^k|^2 = (1 - \\omega^k)(1 - \\omega^{-k}) = 2 - \\omega^k - \\omega^{-k}$.\n\n**Step 2.** Sum over $k = 1$ to $9$: the $2$s give $2 \\cdot 9 = 18$.\n\n**Step 3.** All $10$ roots of $z^{10} = 1$ add to $0$, so $\\omega + \\omega^2 + \\cdots + \\omega^{9} = -1$. The same holds for the $\\omega^{-k}$ terms.\n\n**Step 4.** Total: $18 - (-1) - (-1) = 20$.\n\n**Answer:** $20$. **(C)**\n\n**Common mistake:** forgetting that the powers of $\\omega$ add to $-1$, not $0$, once $k = 0$ is left out."
+ },
+ {
+  "id": "mock_x5_poly_interp_1",
+  "family": "x5_poly_interp",
+  "difficulty": 5,
+  "topic": "polynomials",
+  "skillId": "poly_roots",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree $5$ satisfies $P(k) = \\dfrac{1}{k}$ for $k = 1, 2, \\ldots, 6$. What is $P(0)$?",
+  "choices": {
+   "A": "$-\\frac{49}{20}$",
+   "B": "$\\frac{1}{6}$",
+   "C": "$\\frac{49}{20}$",
+   "D": "$\\frac{69}{20}$",
+   "E": "$6$"
+  },
+  "answer": "C",
+  "hints": [
+   "Look at $Q(x) = xP(x) - 1$: it has degree 6 and known roots."
+  ],
+  "solution": "**What we need:** $P(0)$, where $P$ matches $\\frac{1}{k}$ at $6$ points.\n\n**Key idea:** build a helper polynomial that is zero at all the known points, so it factors completely.\n\n**Step 1.** Let $Q(x) = xP(x) - 1$. It has degree $6$, and $Q(k) = k \\cdot \\frac{1}{k} - 1 = 0$ for $k = 1, \\ldots, 6$. So $$ Q(x) = c(x - 1) (x - 2) (x - 3) (x - 4) (x - 5) (x - 6). $$\n\n**Step 2.** Find $c$ by plugging in $x = 0$: $Q(0) = 0 \\cdot P(0) - 1 = -1$, and the product at $0$ is $(-1)^{6} \\cdot 6! = 720$. So $c = \\frac{-1}{720} = -\\frac{1}{720}$.\n\n**Step 3.** $P(0)$ cannot come from $Q(0)$ directly (it is multiplied by $0$). Instead, $P(0)$ is the $x$ coefficient of $Q$. Expanding, that coefficient is $c \\cdot (-1)^{5} \\cdot 6!\\left(1 + \\frac{1}{2} + \\cdots + \\frac{1}{6}\\right)$, which works out to $1 + \\frac{1}{2} + \\cdots + \\frac{1}{6} = \\frac{49}{20}$.\n\n**Answer:** $\\frac{49}{20}$. **(C)**\n\n**Common mistake:** trying to find every coefficient of $P$, which is slow. The helper polynomial is the shortcut."
+ },
+ {
+  "id": "mock_x5_poly_interp_2",
+  "family": "x5_poly_interp",
+  "difficulty": 5,
+  "topic": "polynomials",
+  "skillId": "poly_roots",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree $4$ satisfies $P(k) = \\dfrac{1}{k}$ for $k = 1, 2, \\ldots, 5$. What is $P(6)$?",
+  "choices": {
+   "A": "$-\\frac{1}{3}$",
+   "B": "$\\frac{1}{6}$",
+   "C": "$\\frac{1}{5}$",
+   "D": "$\\frac{1}{3}$",
+   "E": "$\\frac{4}{3}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Look at $Q(x) = xP(x) - 1$: it has degree 5 and known roots."
+  ],
+  "solution": "**What we need:** $P(6)$, where $P$ matches $\\frac{1}{k}$ at $5$ points.\n\n**Key idea:** build a helper polynomial that is zero at all the known points, so it factors completely.\n\n**Step 1.** Let $Q(x) = xP(x) - 1$. It has degree $5$, and $Q(k) = k \\cdot \\frac{1}{k} - 1 = 0$ for $k = 1, \\ldots, 5$. So $$ Q(x) = c(x - 1) (x - 2) (x - 3) (x - 4) (x - 5). $$\n\n**Step 2.** Find $c$ by plugging in $x = 0$: $Q(0) = 0 \\cdot P(0) - 1 = -1$, and the product at $0$ is $(-1)^{5} \\cdot 5! = -120$. So $c = \\frac{-1}{-120} = \\frac{1}{120}$.\n\n**Step 3.** At $x = 6$: $Q(6) = \\frac{1}{120} \\cdot 120 = 1$.\n\n**Step 4.** So $6P(6) - 1 = 1$, giving $P(6) = \\frac{1 + (1)}{6} = \\frac{1}{3}$.\n\n**Answer:** $\\frac{1}{3}$. **(D)**\n\n**Common mistake:** assuming $P(6) = \\frac{1}{6}$. The polynomial only matches $\\frac{1}{x}$ at the given points."
+ },
+ {
+  "id": "mock_x5_poly_interp_3",
+  "family": "x5_poly_interp",
+  "difficulty": 5,
+  "topic": "polynomials",
+  "skillId": "poly_roots",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree $2$ satisfies $P(k) = \\dfrac{1}{k}$ for $k = 1, 2, \\ldots, 3$. What is $P(0)$?",
+  "choices": {
+   "A": "$-\\frac{11}{6}$",
+   "B": "$\\frac{1}{3}$",
+   "C": "$\\frac{11}{6}$",
+   "D": "$\\frac{17}{6}$",
+   "E": "$3$"
+  },
+  "answer": "C",
+  "hints": [
+   "Look at $Q(x) = xP(x) - 1$: it has degree 3 and known roots."
+  ],
+  "solution": "**What we need:** $P(0)$, where $P$ matches $\\frac{1}{k}$ at $3$ points.\n\n**Key idea:** build a helper polynomial that is zero at all the known points, so it factors completely.\n\n**Step 1.** Let $Q(x) = xP(x) - 1$. It has degree $3$, and $Q(k) = k \\cdot \\frac{1}{k} - 1 = 0$ for $k = 1, \\ldots, 3$. So $$ Q(x) = c(x - 1) (x - 2) (x - 3). $$\n\n**Step 2.** Find $c$ by plugging in $x = 0$: $Q(0) = 0 \\cdot P(0) - 1 = -1$, and the product at $0$ is $(-1)^{3} \\cdot 3! = -6$. So $c = \\frac{-1}{-6} = \\frac{1}{6}$.\n\n**Step 3.** $P(0)$ cannot come from $Q(0)$ directly (it is multiplied by $0$). Instead, $P(0)$ is the $x$ coefficient of $Q$. Expanding, that coefficient is $c \\cdot (-1)^{2} \\cdot 3!\\left(1 + \\frac{1}{2} + \\cdots + \\frac{1}{3}\\right)$, which works out to $1 + \\frac{1}{2} + \\cdots + \\frac{1}{3} = \\frac{11}{6}$.\n\n**Answer:** $\\frac{11}{6}$. **(C)**\n\n**Common mistake:** trying to find every coefficient of $P$, which is slow. The helper polynomial is the shortcut."
+ },
+ {
+  "id": "mock_x5_poly_interp_4",
+  "family": "x5_poly_interp",
+  "difficulty": 5,
+  "topic": "polynomials",
+  "skillId": "poly_roots",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree $4$ satisfies $P(k) = \\dfrac{1}{k}$ for $k = 1, 2, \\ldots, 5$. What is $P(0)$?",
+  "choices": {
+   "A": "$-\\frac{137}{60}$",
+   "B": "$\\frac{1}{5}$",
+   "C": "$\\frac{137}{60}$",
+   "D": "$\\frac{197}{60}$",
+   "E": "$5$"
+  },
+  "answer": "C",
+  "hints": [
+   "Look at $Q(x) = xP(x) - 1$: it has degree 5 and known roots."
+  ],
+  "solution": "**What we need:** $P(0)$, where $P$ matches $\\frac{1}{k}$ at $5$ points.\n\n**Key idea:** build a helper polynomial that is zero at all the known points, so it factors completely.\n\n**Step 1.** Let $Q(x) = xP(x) - 1$. It has degree $5$, and $Q(k) = k \\cdot \\frac{1}{k} - 1 = 0$ for $k = 1, \\ldots, 5$. So $$ Q(x) = c(x - 1) (x - 2) (x - 3) (x - 4) (x - 5). $$\n\n**Step 2.** Find $c$ by plugging in $x = 0$: $Q(0) = 0 \\cdot P(0) - 1 = -1$, and the product at $0$ is $(-1)^{5} \\cdot 5! = -120$. So $c = \\frac{-1}{-120} = \\frac{1}{120}$.\n\n**Step 3.** $P(0)$ cannot come from $Q(0)$ directly (it is multiplied by $0$). Instead, $P(0)$ is the $x$ coefficient of $Q$. Expanding, that coefficient is $c \\cdot (-1)^{4} \\cdot 5!\\left(1 + \\frac{1}{2} + \\cdots + \\frac{1}{5}\\right)$, which works out to $1 + \\frac{1}{2} + \\cdots + \\frac{1}{5} = \\frac{137}{60}$.\n\n**Answer:** $\\frac{137}{60}$. **(C)**\n\n**Common mistake:** trying to find every coefficient of $P$, which is slow. The helper polynomial is the shortcut."
+ },
+ {
+  "id": "mock_x5_poly_interp_5",
+  "family": "x5_poly_interp",
+  "difficulty": 5,
+  "topic": "polynomials",
+  "skillId": "poly_roots",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree $5$ satisfies $P(k) = \\dfrac{1}{k}$ for $k = 1, 2, \\ldots, 6$. What is $P(7)$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$\\frac{1}{7}$",
+   "C": "$\\frac{1}{6}$",
+   "D": "$1$",
+   "E": "$2$"
+  },
+  "answer": "A",
+  "hints": [
+   "Look at $Q(x) = xP(x) - 1$: it has degree 6 and known roots."
+  ],
+  "solution": "**What we need:** $P(7)$, where $P$ matches $\\frac{1}{k}$ at $6$ points.\n\n**Key idea:** build a helper polynomial that is zero at all the known points, so it factors completely.\n\n**Step 1.** Let $Q(x) = xP(x) - 1$. It has degree $6$, and $Q(k) = k \\cdot \\frac{1}{k} - 1 = 0$ for $k = 1, \\ldots, 6$. So $$ Q(x) = c(x - 1) (x - 2) (x - 3) (x - 4) (x - 5) (x - 6). $$\n\n**Step 2.** Find $c$ by plugging in $x = 0$: $Q(0) = 0 \\cdot P(0) - 1 = -1$, and the product at $0$ is $(-1)^{6} \\cdot 6! = 720$. So $c = \\frac{-1}{720} = -\\frac{1}{720}$.\n\n**Step 3.** At $x = 7$: $Q(7) = -\\frac{1}{720} \\cdot 720 = -1$.\n\n**Step 4.** So $7P(7) - 1 = -1$, giving $P(7) = \\frac{1 + (-1)}{7} = 0$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** assuming $P(7) = \\frac{1}{7}$. The polynomial only matches $\\frac{1}{x}$ at the given points."
+ },
+ {
+  "id": "mock_x5_poly_interp_6",
+  "family": "x5_poly_interp",
+  "difficulty": 5,
+  "topic": "polynomials",
+  "skillId": "poly_roots",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree $3$ satisfies $P(k) = \\dfrac{1}{k}$ for $k = 1, 2, \\ldots, 4$. What is $P(0)$?",
+  "choices": {
+   "A": "$-\\frac{25}{12}$",
+   "B": "$\\frac{1}{4}$",
+   "C": "$\\frac{25}{12}$",
+   "D": "$\\frac{37}{12}$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "Look at $Q(x) = xP(x) - 1$: it has degree 4 and known roots."
+  ],
+  "solution": "**What we need:** $P(0)$, where $P$ matches $\\frac{1}{k}$ at $4$ points.\n\n**Key idea:** build a helper polynomial that is zero at all the known points, so it factors completely.\n\n**Step 1.** Let $Q(x) = xP(x) - 1$. It has degree $4$, and $Q(k) = k \\cdot \\frac{1}{k} - 1 = 0$ for $k = 1, \\ldots, 4$. So $$ Q(x) = c(x - 1) (x - 2) (x - 3) (x - 4). $$\n\n**Step 2.** Find $c$ by plugging in $x = 0$: $Q(0) = 0 \\cdot P(0) - 1 = -1$, and the product at $0$ is $(-1)^{4} \\cdot 4! = 24$. So $c = \\frac{-1}{24} = -\\frac{1}{24}$.\n\n**Step 3.** $P(0)$ cannot come from $Q(0)$ directly (it is multiplied by $0$). Instead, $P(0)$ is the $x$ coefficient of $Q$. Expanding, that coefficient is $c \\cdot (-1)^{3} \\cdot 4!\\left(1 + \\frac{1}{2} + \\cdots + \\frac{1}{4}\\right)$, which works out to $1 + \\frac{1}{2} + \\cdots + \\frac{1}{4} = \\frac{25}{12}$.\n\n**Answer:** $\\frac{25}{12}$. **(C)**\n\n**Common mistake:** trying to find every coefficient of $P$, which is slow. The helper polynomial is the shortcut."
+ },
+ {
+  "id": "mock_x5_con_tangent_line_1",
+  "family": "x5_con_tangent_line",
+  "difficulty": 5,
+  "topic": "conics",
+  "skillId": "con_ellipses",
+  "track": "amc12",
+  "prompt": "The line $y = -x + c$ with $c > 0$ is tangent to the ellipse $\\dfrac{x^2}{25} + \\dfrac{y^2}{4} = 1$. What is $c$?",
+  "choices": {
+   "A": "$\\sqrt{21}$",
+   "B": "$5$",
+   "C": "$\\sqrt{29}$",
+   "D": "$7$",
+   "E": "$10$"
+  },
+  "answer": "C",
+  "hints": [
+   "Substitute the line into the ellipse; tangent means the resulting quadratic has discriminant $0$."
+  ],
+  "solution": "**What we need:** the intercept $c$ that makes the line touch the ellipse at exactly one point.\n\n**Key idea:** substitute the line into the ellipse. A tangent line meets the ellipse once, so the resulting quadratic in $x$ has discriminant $0$.\n\n**Step 1.** Substitute $y = -x + c$: $\\frac{x^2}{25} + \\frac{(-x + c)^2}{4} = 1$.\n\n**Step 2.** Multiply by $100$ and collect: $(4 + 25)x^2 + -50c\\,x + 25(c^2 - 4) = 0$.\n\n**Step 3.** Set the discriminant to $0$. After simplifying, it reduces to $c^2 = a^2m^2 + b^2 = 25 \\cdot 1 + 4 = 29$.\n\n**Step 4.** $c = \\sqrt{29}$ (taking the positive root).\n\n**Answer:** $c = \\sqrt{29}$. **(C)**\n\n**Common mistake:** using $c^2 = a^2 + b^2$, which forgets the slope."
+ },
+ {
+  "id": "mock_x5_con_tangent_line_2",
+  "family": "x5_con_tangent_line",
+  "difficulty": 5,
+  "topic": "conics",
+  "skillId": "con_ellipses",
+  "track": "amc12",
+  "prompt": "The line $y = x + c$ with $c > 0$ is tangent to the ellipse $\\dfrac{x^2}{36} + \\dfrac{y^2}{4} = 1$. What is $c$?",
+  "choices": {
+   "A": "$4\\sqrt{2}$",
+   "B": "$6$",
+   "C": "$2\\sqrt{10}$",
+   "D": "$8$",
+   "E": "$12$"
+  },
+  "answer": "C",
+  "hints": [
+   "Substitute the line into the ellipse; tangent means the resulting quadratic has discriminant $0$."
+  ],
+  "solution": "**What we need:** the intercept $c$ that makes the line touch the ellipse at exactly one point.\n\n**Key idea:** substitute the line into the ellipse. A tangent line meets the ellipse once, so the resulting quadratic in $x$ has discriminant $0$.\n\n**Step 1.** Substitute $y = x + c$: $\\frac{x^2}{36} + \\frac{(x + c)^2}{4} = 1$.\n\n**Step 2.** Multiply by $144$ and collect: $(4 + 36)x^2 + 72c\\,x + 36(c^2 - 4) = 0$.\n\n**Step 3.** Set the discriminant to $0$. After simplifying, it reduces to $c^2 = a^2m^2 + b^2 = 36 \\cdot 1 + 4 = 40$.\n\n**Step 4.** $c = 2\\sqrt{10}$ (taking the positive root).\n\n**Answer:** $c = 2\\sqrt{10}$. **(C)**\n\n**Common mistake:** using $c^2 = a^2 + b^2$, which forgets the slope."
+ },
+ {
+  "id": "mock_x5_con_tangent_line_3",
+  "family": "x5_con_tangent_line",
+  "difficulty": 5,
+  "topic": "conics",
+  "skillId": "con_ellipses",
+  "track": "amc12",
+  "prompt": "The line $y = \\frac{1}{2}x + c$ with $c > 0$ is tangent to the ellipse $\\dfrac{x^2}{36} + \\dfrac{y^2}{1} = 1$. What is $c$?",
+  "choices": {
+   "A": "$\\sqrt{10}$",
+   "B": "$\\sqrt{35}$",
+   "C": "$6$",
+   "D": "$\\sqrt{37}$",
+   "E": "$7$"
+  },
+  "answer": "A",
+  "hints": [
+   "Substitute the line into the ellipse; tangent means the resulting quadratic has discriminant $0$."
+  ],
+  "solution": "**What we need:** the intercept $c$ that makes the line touch the ellipse at exactly one point.\n\n**Key idea:** substitute the line into the ellipse. A tangent line meets the ellipse once, so the resulting quadratic in $x$ has discriminant $0$.\n\n**Step 1.** Substitute $y = \\frac{1}{2}x + c$: $\\frac{x^2}{36} + \\frac{(\\frac{1}{2}x + c)^2}{1} = 1$.\n\n**Step 2.** Multiply by $36$ and collect: $(1 + 9)x^2 + 36c\\,x + 36(c^2 - 1) = 0$.\n\n**Step 3.** Set the discriminant to $0$. After simplifying, it reduces to $c^2 = a^2m^2 + b^2 = 36 \\cdot \\frac{1}{4} + 1 = 10$.\n\n**Step 4.** $c = \\sqrt{10}$ (taking the positive root).\n\n**Answer:** $c = \\sqrt{10}$. **(A)**\n\n**Common mistake:** using $c^2 = a^2 + b^2$, which forgets the slope."
+ },
+ {
+  "id": "mock_x5_con_tangent_line_4",
+  "family": "x5_con_tangent_line",
+  "difficulty": 5,
+  "topic": "conics",
+  "skillId": "con_ellipses",
+  "track": "amc12",
+  "prompt": "The line $y = \\frac{1}{2}x + c$ with $c > 0$ is tangent to the ellipse $\\dfrac{x^2}{4} + \\dfrac{y^2}{9} = 1$. What is $c$?",
+  "choices": {
+   "A": "$\\sqrt{5}$",
+   "B": "$3$",
+   "C": "$\\sqrt{10}$",
+   "D": "$\\sqrt{13}$",
+   "E": "$5$"
+  },
+  "answer": "C",
+  "hints": [
+   "Substitute the line into the ellipse; tangent means the resulting quadratic has discriminant $0$."
+  ],
+  "solution": "**What we need:** the intercept $c$ that makes the line touch the ellipse at exactly one point.\n\n**Key idea:** substitute the line into the ellipse. A tangent line meets the ellipse once, so the resulting quadratic in $x$ has discriminant $0$.\n\n**Step 1.** Substitute $y = \\frac{1}{2}x + c$: $\\frac{x^2}{4} + \\frac{(\\frac{1}{2}x + c)^2}{9} = 1$.\n\n**Step 2.** Multiply by $36$ and collect: $(9 + 1)x^2 + 4c\\,x + 4(c^2 - 9) = 0$.\n\n**Step 3.** Set the discriminant to $0$. After simplifying, it reduces to $c^2 = a^2m^2 + b^2 = 4 \\cdot \\frac{1}{4} + 9 = 10$.\n\n**Step 4.** $c = \\sqrt{10}$ (taking the positive root).\n\n**Answer:** $c = \\sqrt{10}$. **(C)**\n\n**Common mistake:** using $c^2 = a^2 + b^2$, which forgets the slope."
+ },
+ {
+  "id": "mock_x5_con_tangent_line_5",
+  "family": "x5_con_tangent_line",
+  "difficulty": 5,
+  "topic": "conics",
+  "skillId": "con_ellipses",
+  "track": "amc12",
+  "prompt": "The line $y = -x + c$ with $c > 0$ is tangent to the ellipse $\\dfrac{x^2}{4} + \\dfrac{y^2}{9} = 1$. What is $c$?",
+  "choices": {
+   "A": "$\\sqrt{5}$",
+   "B": "$3$",
+   "C": "$\\sqrt{13}$",
+   "D": "$5$",
+   "E": "$6$"
+  },
+  "answer": "C",
+  "hints": [
+   "Substitute the line into the ellipse; tangent means the resulting quadratic has discriminant $0$."
+  ],
+  "solution": "**What we need:** the intercept $c$ that makes the line touch the ellipse at exactly one point.\n\n**Key idea:** substitute the line into the ellipse. A tangent line meets the ellipse once, so the resulting quadratic in $x$ has discriminant $0$.\n\n**Step 1.** Substitute $y = -x + c$: $\\frac{x^2}{4} + \\frac{(-x + c)^2}{9} = 1$.\n\n**Step 2.** Multiply by $36$ and collect: $(9 + 4)x^2 + -8c\\,x + 4(c^2 - 9) = 0$.\n\n**Step 3.** Set the discriminant to $0$. After simplifying, it reduces to $c^2 = a^2m^2 + b^2 = 4 \\cdot 1 + 9 = 13$.\n\n**Step 4.** $c = \\sqrt{13}$ (taking the positive root).\n\n**Answer:** $c = \\sqrt{13}$. **(C)**\n\n**Common mistake:** using $c^2 = a^2 + b^2$, which forgets the slope."
+ },
+ {
+  "id": "mock_x5_con_tangent_line_6",
+  "family": "x5_con_tangent_line",
+  "difficulty": 5,
+  "topic": "conics",
+  "skillId": "con_ellipses",
+  "track": "amc12",
+  "prompt": "The line $y = x + c$ with $c > 0$ is tangent to the ellipse $\\dfrac{x^2}{16} + \\dfrac{y^2}{25} = 1$. What is $c$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$5$",
+   "C": "$\\sqrt{41}$",
+   "D": "$9$",
+   "E": "$10$"
+  },
+  "answer": "C",
+  "hints": [
+   "Substitute the line into the ellipse; tangent means the resulting quadratic has discriminant $0$."
+  ],
+  "solution": "**What we need:** the intercept $c$ that makes the line touch the ellipse at exactly one point.\n\n**Key idea:** substitute the line into the ellipse. A tangent line meets the ellipse once, so the resulting quadratic in $x$ has discriminant $0$.\n\n**Step 1.** Substitute $y = x + c$: $\\frac{x^2}{16} + \\frac{(x + c)^2}{25} = 1$.\n\n**Step 2.** Multiply by $400$ and collect: $(25 + 16)x^2 + 32c\\,x + 16(c^2 - 25) = 0$.\n\n**Step 3.** Set the discriminant to $0$. After simplifying, it reduces to $c^2 = a^2m^2 + b^2 = 16 \\cdot 1 + 25 = 41$.\n\n**Step 4.** $c = \\sqrt{41}$ (taking the positive root).\n\n**Answer:** $c = \\sqrt{41}$. **(C)**\n\n**Common mistake:** using $c^2 = a^2 + b^2$, which forgets the slope."
+ },
+ {
+  "id": "mock_x6_trig_tan_squares_1",
+  "family": "x6_trig_tan_squares",
+  "difficulty": 6,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "What is $\\tan^2\\frac{\\pi}{7} + \\tan^2\\frac{2\\pi}{7} + \\cdots + \\tan^2\\frac{3\\pi}{7}$?",
+  "choices": {
+   "A": "$9$",
+   "B": "$18$",
+   "C": "$21$",
+   "D": "$24$",
+   "E": "$49$"
+  },
+  "answer": "C",
+  "hints": [
+   "The numbers $\\tan^2\\frac{k\\pi}{7}$ for $k = 1, \\ldots, 3$ are the roots of one polynomial; use Vieta."
+  ],
+  "solution": "**What we need:** the sum of $3$ squared tangents.\n\n**Key idea:** the numbers $\\tan^2\\frac{k\\pi}{7}$ for $k = 1, \\ldots, 3$ are exactly the roots of one polynomial. Vieta then gives their sum.\n\n**Step 1.** Let $\\theta = \\frac{k\\pi}{7}$. Then $\\tan(7\\theta) = 0$.\n\n**Step 2.** De Moivre writes $\\tan(7\\theta)$ as a fraction in $t = \\tan\\theta$; its top is $\\binom{7}{1}t - \\binom{7}{3}t^3 + \\binom{7}{5}t^5 - \\cdots$, which must be $0$.\n\n**Step 3.** Divide by $t$ and set $u = t^2$: the result is a degree $3$ polynomial in $u$ whose roots are $\\tan^2\\frac{k\\pi}{7}$ for $k = 1, \\ldots, 3$.\n\n**Step 4.** Its top two coefficients (up to sign) are $\\binom{7}{7} = 1$ and $\\binom{7}{5} = 21$, so the roots add to $21$.\n\n**Answer:** $21$. **(C)**\n\n**Common mistake:** trying to approximate each tangent. The values are irrational, but their sum is a whole number."
+ },
+ {
+  "id": "mock_x6_trig_tan_squares_2",
+  "family": "x6_trig_tan_squares",
+  "difficulty": 6,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "What is $\\tan^2\\frac{\\pi}{13} + \\tan^2\\frac{2\\pi}{13} + \\cdots + \\tan^2\\frac{6\\pi}{13}$?",
+  "choices": {
+   "A": "$36$",
+   "B": "$72$",
+   "C": "$78$",
+   "D": "$84$",
+   "E": "$169$"
+  },
+  "answer": "C",
+  "hints": [
+   "The numbers $\\tan^2\\frac{k\\pi}{13}$ for $k = 1, \\ldots, 6$ are the roots of one polynomial; use Vieta."
+  ],
+  "solution": "**What we need:** the sum of $6$ squared tangents.\n\n**Key idea:** the numbers $\\tan^2\\frac{k\\pi}{13}$ for $k = 1, \\ldots, 6$ are exactly the roots of one polynomial. Vieta then gives their sum.\n\n**Step 1.** Let $\\theta = \\frac{k\\pi}{13}$. Then $\\tan(13\\theta) = 0$.\n\n**Step 2.** De Moivre writes $\\tan(13\\theta)$ as a fraction in $t = \\tan\\theta$; its top is $\\binom{13}{1}t - \\binom{13}{3}t^3 + \\binom{13}{5}t^5 - \\cdots$, which must be $0$.\n\n**Step 3.** Divide by $t$ and set $u = t^2$: the result is a degree $6$ polynomial in $u$ whose roots are $\\tan^2\\frac{k\\pi}{13}$ for $k = 1, \\ldots, 6$.\n\n**Step 4.** Its top two coefficients (up to sign) are $\\binom{13}{13} = 1$ and $\\binom{13}{11} = 78$, so the roots add to $78$.\n\n**Answer:** $78$. **(C)**\n\n**Common mistake:** trying to approximate each tangent. The values are irrational, but their sum is a whole number."
+ },
+ {
+  "id": "mock_x6_trig_tan_squares_3",
+  "family": "x6_trig_tan_squares",
+  "difficulty": 6,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "What is $\\tan^2\\frac{\\pi}{11} + \\tan^2\\frac{2\\pi}{11} + \\cdots + \\tan^2\\frac{5\\pi}{11}$?",
+  "choices": {
+   "A": "$25$",
+   "B": "$50$",
+   "C": "$55$",
+   "D": "$60$",
+   "E": "$121$"
+  },
+  "answer": "C",
+  "hints": [
+   "The numbers $\\tan^2\\frac{k\\pi}{11}$ for $k = 1, \\ldots, 5$ are the roots of one polynomial; use Vieta."
+  ],
+  "solution": "**What we need:** the sum of $5$ squared tangents.\n\n**Key idea:** the numbers $\\tan^2\\frac{k\\pi}{11}$ for $k = 1, \\ldots, 5$ are exactly the roots of one polynomial. Vieta then gives their sum.\n\n**Step 1.** Let $\\theta = \\frac{k\\pi}{11}$. Then $\\tan(11\\theta) = 0$.\n\n**Step 2.** De Moivre writes $\\tan(11\\theta)$ as a fraction in $t = \\tan\\theta$; its top is $\\binom{11}{1}t - \\binom{11}{3}t^3 + \\binom{11}{5}t^5 - \\cdots$, which must be $0$.\n\n**Step 3.** Divide by $t$ and set $u = t^2$: the result is a degree $5$ polynomial in $u$ whose roots are $\\tan^2\\frac{k\\pi}{11}$ for $k = 1, \\ldots, 5$.\n\n**Step 4.** Its top two coefficients (up to sign) are $\\binom{11}{11} = 1$ and $\\binom{11}{9} = 55$, so the roots add to $55$.\n\n**Answer:** $55$. **(C)**\n\n**Common mistake:** trying to approximate each tangent. The values are irrational, but their sum is a whole number."
+ },
+ {
+  "id": "mock_x6_trig_tan_squares_4",
+  "family": "x6_trig_tan_squares",
+  "difficulty": 6,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "What is $\\tan^2\\frac{\\pi}{15} + \\tan^2\\frac{2\\pi}{15} + \\cdots + \\tan^2\\frac{7\\pi}{15}$?",
+  "choices": {
+   "A": "$49$",
+   "B": "$98$",
+   "C": "$105$",
+   "D": "$112$",
+   "E": "$225$"
+  },
+  "answer": "C",
+  "hints": [
+   "The numbers $\\tan^2\\frac{k\\pi}{15}$ for $k = 1, \\ldots, 7$ are the roots of one polynomial; use Vieta."
+  ],
+  "solution": "**What we need:** the sum of $7$ squared tangents.\n\n**Key idea:** the numbers $\\tan^2\\frac{k\\pi}{15}$ for $k = 1, \\ldots, 7$ are exactly the roots of one polynomial. Vieta then gives their sum.\n\n**Step 1.** Let $\\theta = \\frac{k\\pi}{15}$. Then $\\tan(15\\theta) = 0$.\n\n**Step 2.** De Moivre writes $\\tan(15\\theta)$ as a fraction in $t = \\tan\\theta$; its top is $\\binom{15}{1}t - \\binom{15}{3}t^3 + \\binom{15}{5}t^5 - \\cdots$, which must be $0$.\n\n**Step 3.** Divide by $t$ and set $u = t^2$: the result is a degree $7$ polynomial in $u$ whose roots are $\\tan^2\\frac{k\\pi}{15}$ for $k = 1, \\ldots, 7$.\n\n**Step 4.** Its top two coefficients (up to sign) are $\\binom{15}{15} = 1$ and $\\binom{15}{13} = 105$, so the roots add to $105$.\n\n**Answer:** $105$. **(C)**\n\n**Common mistake:** trying to approximate each tangent. The values are irrational, but their sum is a whole number."
+ },
+ {
+  "id": "mock_x6_trig_tan_squares_5",
+  "family": "x6_trig_tan_squares",
+  "difficulty": 6,
+  "topic": "trigonometry",
+  "skillId": "trig_identities",
+  "track": "amc12",
+  "prompt": "What is $\\tan^2\\frac{\\pi}{9} + \\tan^2\\frac{2\\pi}{9} + \\cdots + \\tan^2\\frac{4\\pi}{9}$?",
+  "choices": {
+   "A": "$16$",
+   "B": "$32$",
+   "C": "$36$",
+   "D": "$40$",
+   "E": "$81$"
+  },
+  "answer": "C",
+  "hints": [
+   "The numbers $\\tan^2\\frac{k\\pi}{9}$ for $k = 1, \\ldots, 4$ are the roots of one polynomial; use Vieta."
+  ],
+  "solution": "**What we need:** the sum of $4$ squared tangents.\n\n**Key idea:** the numbers $\\tan^2\\frac{k\\pi}{9}$ for $k = 1, \\ldots, 4$ are exactly the roots of one polynomial. Vieta then gives their sum.\n\n**Step 1.** Let $\\theta = \\frac{k\\pi}{9}$. Then $\\tan(9\\theta) = 0$.\n\n**Step 2.** De Moivre writes $\\tan(9\\theta)$ as a fraction in $t = \\tan\\theta$; its top is $\\binom{9}{1}t - \\binom{9}{3}t^3 + \\binom{9}{5}t^5 - \\cdots$, which must be $0$.\n\n**Step 3.** Divide by $t$ and set $u = t^2$: the result is a degree $4$ polynomial in $u$ whose roots are $\\tan^2\\frac{k\\pi}{9}$ for $k = 1, \\ldots, 4$.\n\n**Step 4.** Its top two coefficients (up to sign) are $\\binom{9}{9} = 1$ and $\\binom{9}{7} = 36$, so the roots add to $36$.\n\n**Answer:** $36$. **(C)**\n\n**Common mistake:** trying to approximate each tangent. The values are irrational, but their sum is a whole number."
+ },
+ {
+  "id": "mock_x6_log_integer_pairs_1",
+  "family": "x6_log_integer_pairs",
+  "difficulty": 6,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "How many ordered pairs of integers $(x, y)$ with $2 \\le x \\le 50$ and $1 \\le y \\le 50$ make $\\log_x y$ a positive integer?",
+  "choices": {
+   "A": "$49$",
+   "B": "$58$",
+   "C": "$59$",
+   "D": "$60$",
+   "E": "$66$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\log_x y = k$ means $y = x^k$. Count, for each $x$, the powers of $x$ up to 50."
+  ],
+  "solution": "**What we need:** pairs where $y$ is a positive integer power of $x$.\n\n**Key idea:** $\\log_x y = k$ means $y = x^k$. For each $x$, count the powers $x^1, x^2, \\ldots$ that stay at most 50.\n\n**Step 1.** Bases with more than one power up to $50$: $x = 2$ ($5$ powers), $x = 3$ ($3$ powers), $x = 4$ ($2$ powers), $x = 5$ ($2$ powers), $x = 6$ ($2$ powers), $x = 7$ ($2$ powers). These give $16$ pairs.\n\n**Step 2.** Every other base from $2$ to $50$ has only $x^1 = x$: that is $43$ more bases, $43$ pairs.\n\n**Step 3.** Total: $16 + 43 = 59$.\n\n**Answer:** $59$. **(C)**\n\n**Common mistake:** forgetting $k = 1$ (where $y = x$), or allowing $y = 1$, which gives $\\log_x 1 = 0$, not positive."
+ },
+ {
+  "id": "mock_x6_log_integer_pairs_2",
+  "family": "x6_log_integer_pairs",
+  "difficulty": 6,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "How many ordered pairs of integers $(x, y)$ with $2 \\le x \\le 100$ and $1 \\le y \\le 100$ make $\\log_x y$ a positive integer?",
+  "choices": {
+   "A": "$99$",
+   "B": "$114$",
+   "C": "$115$",
+   "D": "$116$",
+   "E": "$125$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\log_x y = k$ means $y = x^k$. Count, for each $x$, the powers of $x$ up to 100."
+  ],
+  "solution": "**What we need:** pairs where $y$ is a positive integer power of $x$.\n\n**Key idea:** $\\log_x y = k$ means $y = x^k$. For each $x$, count the powers $x^1, x^2, \\ldots$ that stay at most 100.\n\n**Step 1.** Bases with more than one power up to $100$: $x = 2$ ($6$ powers), $x = 3$ ($4$ powers), $x = 4$ ($3$ powers), $x = 5$ ($2$ powers), $x = 6$ ($2$ powers), $x = 7$ ($2$ powers), $x = 8$ ($2$ powers), $x = 9$ ($2$ powers), $x = 10$ ($2$ powers). These give $25$ pairs.\n\n**Step 2.** Every other base from $2$ to $100$ has only $x^1 = x$: that is $90$ more bases, $90$ pairs.\n\n**Step 3.** Total: $25 + 90 = 115$.\n\n**Answer:** $115$. **(C)**\n\n**Common mistake:** forgetting $k = 1$ (where $y = x$), or allowing $y = 1$, which gives $\\log_x 1 = 0$, not positive."
+ },
+ {
+  "id": "mock_x6_log_integer_pairs_3",
+  "family": "x6_log_integer_pairs",
+  "difficulty": 6,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "How many ordered pairs of integers $(x, y)$ with $2 \\le x \\le 243$ and $1 \\le y \\le 243$ make $\\log_x y$ a positive integer?",
+  "choices": {
+   "A": "$242$",
+   "B": "$266$",
+   "C": "$267$",
+   "D": "$268$",
+   "E": "$282$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\log_x y = k$ means $y = x^k$. Count, for each $x$, the powers of $x$ up to 243."
+  ],
+  "solution": "**What we need:** pairs where $y$ is a positive integer power of $x$.\n\n**Key idea:** $\\log_x y = k$ means $y = x^k$. For each $x$, count the powers $x^1, x^2, \\ldots$ that stay at most 243.\n\n**Step 1.** Bases with more than one power up to $243$: $x = 2$ ($7$ powers), $x = 3$ ($5$ powers), $x = 4$ ($3$ powers), $x = 5$ ($3$ powers), $x = 6$ ($3$ powers), $x = 7$ ($2$ powers), $x = 8$ ($2$ powers), $x = 9$ ($2$ powers), $x = 10$ ($2$ powers), $x = 11$ ($2$ powers), $x = 12$ ($2$ powers), $x = 13$ ($2$ powers), $x = 14$ ($2$ powers), $x = 15$ ($2$ powers). These give $39$ pairs.\n\n**Step 2.** Every other base from $2$ to $243$ has only $x^1 = x$: that is $228$ more bases, $228$ pairs.\n\n**Step 3.** Total: $39 + 228 = 267$.\n\n**Answer:** $267$. **(C)**\n\n**Common mistake:** forgetting $k = 1$ (where $y = x$), or allowing $y = 1$, which gives $\\log_x 1 = 0$, not positive."
+ },
+ {
+  "id": "mock_x6_log_integer_pairs_4",
+  "family": "x6_log_integer_pairs",
+  "difficulty": 6,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "How many ordered pairs of integers $(x, y)$ with $2 \\le x \\le 150$ and $1 \\le y \\le 150$ make $\\log_x y$ a positive integer?",
+  "choices": {
+   "A": "$149$",
+   "B": "$168$",
+   "C": "$169$",
+   "D": "$170$",
+   "E": "$181$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\log_x y = k$ means $y = x^k$. Count, for each $x$, the powers of $x$ up to 150."
+  ],
+  "solution": "**What we need:** pairs where $y$ is a positive integer power of $x$.\n\n**Key idea:** $\\log_x y = k$ means $y = x^k$. For each $x$, count the powers $x^1, x^2, \\ldots$ that stay at most 150.\n\n**Step 1.** Bases with more than one power up to $150$: $x = 2$ ($7$ powers), $x = 3$ ($4$ powers), $x = 4$ ($3$ powers), $x = 5$ ($3$ powers), $x = 6$ ($2$ powers), $x = 7$ ($2$ powers), $x = 8$ ($2$ powers), $x = 9$ ($2$ powers), $x = 10$ ($2$ powers), $x = 11$ ($2$ powers), $x = 12$ ($2$ powers). These give $31$ pairs.\n\n**Step 2.** Every other base from $2$ to $150$ has only $x^1 = x$: that is $138$ more bases, $138$ pairs.\n\n**Step 3.** Total: $31 + 138 = 169$.\n\n**Answer:** $169$. **(C)**\n\n**Common mistake:** forgetting $k = 1$ (where $y = x$), or allowing $y = 1$, which gives $\\log_x 1 = 0$, not positive."
+ },
+ {
+  "id": "mock_x6_log_integer_pairs_5",
+  "family": "x6_log_integer_pairs",
+  "difficulty": 6,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "How many ordered pairs of integers $(x, y)$ with $2 \\le x \\le 256$ and $1 \\le y \\le 256$ make $\\log_x y$ a positive integer?",
+  "choices": {
+   "A": "$255$",
+   "B": "$282$",
+   "C": "$283$",
+   "D": "$284$",
+   "E": "$299$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\log_x y = k$ means $y = x^k$. Count, for each $x$, the powers of $x$ up to 256."
+  ],
+  "solution": "**What we need:** pairs where $y$ is a positive integer power of $x$.\n\n**Key idea:** $\\log_x y = k$ means $y = x^k$. For each $x$, count the powers $x^1, x^2, \\ldots$ that stay at most 256.\n\n**Step 1.** Bases with more than one power up to $256$: $x = 2$ ($8$ powers), $x = 3$ ($5$ powers), $x = 4$ ($4$ powers), $x = 5$ ($3$ powers), $x = 6$ ($3$ powers), $x = 7$ ($2$ powers), $x = 8$ ($2$ powers), $x = 9$ ($2$ powers), $x = 10$ ($2$ powers), $x = 11$ ($2$ powers), $x = 12$ ($2$ powers), $x = 13$ ($2$ powers), $x = 14$ ($2$ powers), $x = 15$ ($2$ powers), $x = 16$ ($2$ powers). These give $43$ pairs.\n\n**Step 2.** Every other base from $2$ to $256$ has only $x^1 = x$: that is $240$ more bases, $240$ pairs.\n\n**Step 3.** Total: $43 + 240 = 283$.\n\n**Answer:** $283$. **(C)**\n\n**Common mistake:** forgetting $k = 1$ (where $y = x$), or allowing $y = 1$, which gives $\\log_x 1 = 0$, not positive."
+ },
+ {
+  "id": "mock_x6_log_integer_pairs_6",
+  "family": "x6_log_integer_pairs",
+  "difficulty": 6,
+  "topic": "logarithms",
+  "skillId": "log_rules",
+  "track": "amc12",
+  "prompt": "How many ordered pairs of integers $(x, y)$ with $2 \\le x \\le 81$ and $1 \\le y \\le 81$ make $\\log_x y$ a positive integer?",
+  "choices": {
+   "A": "$80$",
+   "B": "$94$",
+   "C": "$95$",
+   "D": "$96$",
+   "E": "$104$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\log_x y = k$ means $y = x^k$. Count, for each $x$, the powers of $x$ up to 81."
+  ],
+  "solution": "**What we need:** pairs where $y$ is a positive integer power of $x$.\n\n**Key idea:** $\\log_x y = k$ means $y = x^k$. For each $x$, count the powers $x^1, x^2, \\ldots$ that stay at most 81.\n\n**Step 1.** Bases with more than one power up to $81$: $x = 2$ ($6$ powers), $x = 3$ ($4$ powers), $x = 4$ ($3$ powers), $x = 5$ ($2$ powers), $x = 6$ ($2$ powers), $x = 7$ ($2$ powers), $x = 8$ ($2$ powers), $x = 9$ ($2$ powers). These give $23$ pairs.\n\n**Step 2.** Every other base from $2$ to $81$ has only $x^1 = x$: that is $72$ more bases, $72$ pairs.\n\n**Step 3.** Total: $23 + 72 = 95$.\n\n**Answer:** $95$. **(C)**\n\n**Common mistake:** forgetting $k = 1$ (where $y = x$), or allowing $y = 1$, which gives $\\log_x 1 = 0$, not positive."
+ },
+ {
+  "id": "mock_x6_cx_product_1",
+  "family": "x6_cx_product",
+  "difficulty": 6,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{6} + i\\sin\\frac{2\\pi}{6}$. What is $\\displaystyle\\prod_{k=1}^{5} \\left|3 - \\omega^k\\right|^2$?",
+  "choices": {
+   "A": "$364$",
+   "B": "$132496$",
+   "C": "$132497$",
+   "D": "$529984$",
+   "E": "$531441$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\prod_{k=1}^{n-1}(x - \\omega^k) = 1 + x + \\cdots + x^{n-1}$."
+  ],
+  "solution": "**What we need:** a product over all roots of unity except $1$.\n\n**Key idea:** $z^n - 1 = (z - 1)(z - \\omega)(z - \\omega^2)\\cdots(z - \\omega^{n-1})$. Dividing out $(z - 1)$ leaves $1 + z + z^2 + \\cdots + z^{n-1}$.\n\n**Step 1.** So $\\prod_{k=1}^{5}(z - \\omega^k) = 1 + z + \\cdots + z^{5}$. Plug in $z = 3$: $$ \\prod(3 - \\omega^k) = 1 + 3 + \\cdots + 3^{5} = \\frac{3^{6} - 1}{3 - 1} = 364. $$\n\n**Step 2.** $|3 - \\omega^k|^2 = (3 - \\omega^k)\\overline{(3 - \\omega^k)}$. The conjugates $\\overline{\\omega^k} = \\omega^{-k}$ run over the same roots in another order, so the conjugate product is also $364$.\n\n**Step 3.** Multiply: $364 \\cdot 364 = 132496$.\n\n**Answer:** $132496$. **(B)**\n\n**Common mistake:** forgetting the square and answering $364$."
+ },
+ {
+  "id": "mock_x6_cx_product_2",
+  "family": "x6_cx_product",
+  "difficulty": 6,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{3} + i\\sin\\frac{2\\pi}{3}$. What is $\\displaystyle\\prod_{k=1}^{2} \\left|3 - \\omega^k\\right|^2$?",
+  "choices": {
+   "A": "$13$",
+   "B": "$169$",
+   "C": "$170$",
+   "D": "$676$",
+   "E": "$729$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\prod_{k=1}^{n-1}(x - \\omega^k) = 1 + x + \\cdots + x^{n-1}$."
+  ],
+  "solution": "**What we need:** a product over all roots of unity except $1$.\n\n**Key idea:** $z^n - 1 = (z - 1)(z - \\omega)(z - \\omega^2)\\cdots(z - \\omega^{n-1})$. Dividing out $(z - 1)$ leaves $1 + z + z^2 + \\cdots + z^{n-1}$.\n\n**Step 1.** So $\\prod_{k=1}^{2}(z - \\omega^k) = 1 + z + \\cdots + z^{2}$. Plug in $z = 3$: $$ \\prod(3 - \\omega^k) = 1 + 3 + \\cdots + 3^{2} = \\frac{3^{3} - 1}{3 - 1} = 13. $$\n\n**Step 2.** $|3 - \\omega^k|^2 = (3 - \\omega^k)\\overline{(3 - \\omega^k)}$. The conjugates $\\overline{\\omega^k} = \\omega^{-k}$ run over the same roots in another order, so the conjugate product is also $13$.\n\n**Step 3.** Multiply: $13 \\cdot 13 = 169$.\n\n**Answer:** $169$. **(B)**\n\n**Common mistake:** forgetting the square and answering $13$."
+ },
+ {
+  "id": "mock_x6_cx_product_3",
+  "family": "x6_cx_product",
+  "difficulty": 6,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{3} + i\\sin\\frac{2\\pi}{3}$. What is $\\displaystyle\\prod_{k=1}^{2} \\left|2 - \\omega^k\\right|^2$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$14$",
+   "C": "$49$",
+   "D": "$50$",
+   "E": "$64$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\prod_{k=1}^{n-1}(x - \\omega^k) = 1 + x + \\cdots + x^{n-1}$."
+  ],
+  "solution": "**What we need:** a product over all roots of unity except $1$.\n\n**Key idea:** $z^n - 1 = (z - 1)(z - \\omega)(z - \\omega^2)\\cdots(z - \\omega^{n-1})$. Dividing out $(z - 1)$ leaves $1 + z + z^2 + \\cdots + z^{n-1}$.\n\n**Step 1.** So $\\prod_{k=1}^{2}(z - \\omega^k) = 1 + z + \\cdots + z^{2}$. Plug in $z = 2$: $$ \\prod(2 - \\omega^k) = 1 + 2 + \\cdots + 2^{2} = \\frac{2^{3} - 1}{2 - 1} = 7. $$\n\n**Step 2.** $|2 - \\omega^k|^2 = (2 - \\omega^k)\\overline{(2 - \\omega^k)}$. The conjugates $\\overline{\\omega^k} = \\omega^{-k}$ run over the same roots in another order, so the conjugate product is also $7$.\n\n**Step 3.** Multiply: $7 \\cdot 7 = 49$.\n\n**Answer:** $49$. **(C)**\n\n**Common mistake:** forgetting the square and answering $7$."
+ },
+ {
+  "id": "mock_x6_cx_product_4",
+  "family": "x6_cx_product",
+  "difficulty": 6,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{8} + i\\sin\\frac{2\\pi}{8}$. What is $\\displaystyle\\prod_{k=1}^{7} \\left|3 - \\omega^k\\right|^2$?",
+  "choices": {
+   "A": "$3280$",
+   "B": "$10758400$",
+   "C": "$10758401$",
+   "D": "$43033600$",
+   "E": "$43046721$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\prod_{k=1}^{n-1}(x - \\omega^k) = 1 + x + \\cdots + x^{n-1}$."
+  ],
+  "solution": "**What we need:** a product over all roots of unity except $1$.\n\n**Key idea:** $z^n - 1 = (z - 1)(z - \\omega)(z - \\omega^2)\\cdots(z - \\omega^{n-1})$. Dividing out $(z - 1)$ leaves $1 + z + z^2 + \\cdots + z^{n-1}$.\n\n**Step 1.** So $\\prod_{k=1}^{7}(z - \\omega^k) = 1 + z + \\cdots + z^{7}$. Plug in $z = 3$: $$ \\prod(3 - \\omega^k) = 1 + 3 + \\cdots + 3^{7} = \\frac{3^{8} - 1}{3 - 1} = 3280. $$\n\n**Step 2.** $|3 - \\omega^k|^2 = (3 - \\omega^k)\\overline{(3 - \\omega^k)}$. The conjugates $\\overline{\\omega^k} = \\omega^{-k}$ run over the same roots in another order, so the conjugate product is also $3280$.\n\n**Step 3.** Multiply: $3280 \\cdot 3280 = 10758400$.\n\n**Answer:** $10758400$. **(B)**\n\n**Common mistake:** forgetting the square and answering $3280$."
+ },
+ {
+  "id": "mock_x6_cx_product_5",
+  "family": "x6_cx_product",
+  "difficulty": 6,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{5} + i\\sin\\frac{2\\pi}{5}$. What is $\\displaystyle\\prod_{k=1}^{4} \\left|4 - \\omega^k\\right|^2$?",
+  "choices": {
+   "A": "$341$",
+   "B": "$116281$",
+   "C": "$116282$",
+   "D": "$1046529$",
+   "E": "$1048576$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\prod_{k=1}^{n-1}(x - \\omega^k) = 1 + x + \\cdots + x^{n-1}$."
+  ],
+  "solution": "**What we need:** a product over all roots of unity except $1$.\n\n**Key idea:** $z^n - 1 = (z - 1)(z - \\omega)(z - \\omega^2)\\cdots(z - \\omega^{n-1})$. Dividing out $(z - 1)$ leaves $1 + z + z^2 + \\cdots + z^{n-1}$.\n\n**Step 1.** So $\\prod_{k=1}^{4}(z - \\omega^k) = 1 + z + \\cdots + z^{4}$. Plug in $z = 4$: $$ \\prod(4 - \\omega^k) = 1 + 4 + \\cdots + 4^{4} = \\frac{4^{5} - 1}{4 - 1} = 341. $$\n\n**Step 2.** $|4 - \\omega^k|^2 = (4 - \\omega^k)\\overline{(4 - \\omega^k)}$. The conjugates $\\overline{\\omega^k} = \\omega^{-k}$ run over the same roots in another order, so the conjugate product is also $341$.\n\n**Step 3.** Multiply: $341 \\cdot 341 = 116281$.\n\n**Answer:** $116281$. **(B)**\n\n**Common mistake:** forgetting the square and answering $341$."
+ },
+ {
+  "id": "mock_x6_cx_product_6",
+  "family": "x6_cx_product",
+  "difficulty": 6,
+  "topic": "complex_numbers",
+  "skillId": "cx_roots_unity",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{5} + i\\sin\\frac{2\\pi}{5}$. What is $\\displaystyle\\prod_{k=1}^{4} \\left|3 - \\omega^k\\right|^2$?",
+  "choices": {
+   "A": "$121$",
+   "B": "$14641$",
+   "C": "$14642$",
+   "D": "$58564$",
+   "E": "$59049$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\prod_{k=1}^{n-1}(x - \\omega^k) = 1 + x + \\cdots + x^{n-1}$."
+  ],
+  "solution": "**What we need:** a product over all roots of unity except $1$.\n\n**Key idea:** $z^n - 1 = (z - 1)(z - \\omega)(z - \\omega^2)\\cdots(z - \\omega^{n-1})$. Dividing out $(z - 1)$ leaves $1 + z + z^2 + \\cdots + z^{n-1}$.\n\n**Step 1.** So $\\prod_{k=1}^{4}(z - \\omega^k) = 1 + z + \\cdots + z^{4}$. Plug in $z = 3$: $$ \\prod(3 - \\omega^k) = 1 + 3 + \\cdots + 3^{4} = \\frac{3^{5} - 1}{3 - 1} = 121. $$\n\n**Step 2.** $|3 - \\omega^k|^2 = (3 - \\omega^k)\\overline{(3 - \\omega^k)}$. The conjugates $\\overline{\\omega^k} = \\omega^{-k}$ run over the same roots in another order, so the conjugate product is also $121$.\n\n**Step 3.** Multiply: $121 \\cdot 121 = 14641$.\n\n**Answer:** $14641$. **(B)**\n\n**Common mistake:** forgetting the square and answering $121$."
+ },
+ {
+  "id": "mock_x6_poly_quartic_1",
+  "family": "x6_poly_quartic",
+  "difficulty": 6,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "A polynomial $P(x) = x^4 + ax^3 + bx^2 + cx + d$ has $P(1) = 1$, $P(2) = -10$, $P(3) = -6$, and $P(4) = 0$. What is $P(0) + P(5)$?",
+  "choices": {
+   "A": "$19$",
+   "B": "$35$",
+   "C": "$64$",
+   "D": "$83$",
+   "E": "$107$"
+  },
+  "answer": "D",
+  "hints": [
+   "Write $P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + Q(x)$ where $Q$ is a cubic."
+  ],
+  "solution": "**What we need:** $P(0) + P(5)$ without finding all four unknown coefficients.\n\n**Key idea:** split $P$ into a piece that is zero at $1, 2, 3, 4$ plus a cubic $Q$ that carries the given values.\n\n**Step 1.** Write $P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + Q(x)$, where $Q$ has degree at most $3$. (The first part supplies the $x^4$.)\n\n**Step 2.** Then $Q(1) = 1$, $Q(2) = -10$, $Q(3) = -6$, $Q(4) = 0$.\n\n**Step 3.** The quartic part at $0$: $(-1)(-2)(-3)(-4) = 24$. At $5$: $4 \\cdot 3 \\cdot 2 \\cdot 1 = 24$.\n\n**Step 4.** A cubic is determined by four values. Using finite differences on $Q(1), \\ldots, Q(4)$ (the third differences are constant) and extending one step each way gives $Q(0) = 40$ and $Q(5) = -5$.\n\n**Step 5.** $P(0) + P(5) = 24 + (40) + 24 + (-5) = 83$.\n\n**Answer:** $83$. **(D)**\n\n**Common mistake:** forgetting the quartic part (the two $24$s), which every monic quartic contributes."
+ },
+ {
+  "id": "mock_x6_poly_quartic_2",
+  "family": "x6_poly_quartic",
+  "difficulty": 6,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "A polynomial $P(x) = x^4 + ax^3 + bx^2 + cx + d$ has $P(1) = 4$, $P(2) = 4$, $P(3) = 7$, and $P(4) = 1$. What is $P(0) + P(5)$?",
+  "choices": {
+   "A": "$-7$",
+   "B": "$-2$",
+   "C": "$41$",
+   "D": "$43$",
+   "E": "$65$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write $P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + Q(x)$ where $Q$ is a cubic."
+  ],
+  "solution": "**What we need:** $P(0) + P(5)$ without finding all four unknown coefficients.\n\n**Key idea:** split $P$ into a piece that is zero at $1, 2, 3, 4$ plus a cubic $Q$ that carries the given values.\n\n**Step 1.** Write $P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + Q(x)$, where $Q$ has degree at most $3$. (The first part supplies the $x^4$.)\n\n**Step 2.** Then $Q(1) = 4$, $Q(2) = 4$, $Q(3) = 7$, $Q(4) = 1$.\n\n**Step 3.** The quartic part at $0$: $(-1)(-2)(-3)(-4) = 24$. At $5$: $4 \\cdot 3 \\cdot 2 \\cdot 1 = 24$.\n\n**Step 4.** A cubic is determined by four values. Using finite differences on $Q(1), \\ldots, Q(4)$ (the third differences are constant) and extending one step each way gives $Q(0) = 19$ and $Q(5) = -26$.\n\n**Step 5.** $P(0) + P(5) = 24 + (19) + 24 + (-26) = 41$.\n\n**Answer:** $41$. **(C)**\n\n**Common mistake:** forgetting the quartic part (the two $24$s), which every monic quartic contributes."
+ },
+ {
+  "id": "mock_x6_poly_quartic_3",
+  "family": "x6_poly_quartic",
+  "difficulty": 6,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "A polynomial $P(x) = x^4 + ax^3 + bx^2 + cx + d$ has $P(1) = -1$, $P(2) = 6$, $P(3) = 0$, and $P(4) = -10$. What is $P(0) + P(5)$?",
+  "choices": {
+   "A": "$-45$",
+   "B": "$-6$",
+   "C": "$3$",
+   "D": "$9$",
+   "E": "$27$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write $P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + Q(x)$ where $Q$ is a cubic."
+  ],
+  "solution": "**What we need:** $P(0) + P(5)$ without finding all four unknown coefficients.\n\n**Key idea:** split $P$ into a piece that is zero at $1, 2, 3, 4$ plus a cubic $Q$ that carries the given values.\n\n**Step 1.** Write $P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + Q(x)$, where $Q$ has degree at most $3$. (The first part supplies the $x^4$.)\n\n**Step 2.** Then $Q(1) = -1$, $Q(2) = 6$, $Q(3) = 0$, $Q(4) = -10$.\n\n**Step 3.** The quartic part at $0$: $(-1)(-2)(-3)(-4) = 24$. At $5$: $4 \\cdot 3 \\cdot 2 \\cdot 1 = 24$.\n\n**Step 4.** A cubic is determined by four values. Using finite differences on $Q(1), \\ldots, Q(4)$ (the third differences are constant) and extending one step each way gives $Q(0) = -30$ and $Q(5) = -15$.\n\n**Step 5.** $P(0) + P(5) = 24 + (-30) + 24 + (-15) = 3$.\n\n**Answer:** $3$. **(C)**\n\n**Common mistake:** forgetting the quartic part (the two $24$s), which every monic quartic contributes."
+ },
+ {
+  "id": "mock_x6_poly_quartic_4",
+  "family": "x6_poly_quartic",
+  "difficulty": 6,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "A polynomial $P(x) = x^4 + ax^3 + bx^2 + cx + d$ has $P(1) = 10$, $P(2) = -7$, $P(3) = -2$, and $P(4) = 0$. What is $P(0) + P(5)$?",
+  "choices": {
+   "A": "$-2$",
+   "B": "$48$",
+   "C": "$96$",
+   "D": "$98$",
+   "E": "$120$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write $P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + Q(x)$ where $Q$ is a cubic."
+  ],
+  "solution": "**What we need:** $P(0) + P(5)$ without finding all four unknown coefficients.\n\n**Key idea:** split $P$ into a piece that is zero at $1, 2, 3, 4$ plus a cubic $Q$ that carries the given values.\n\n**Step 1.** Write $P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + Q(x)$, where $Q$ has degree at most $3$. (The first part supplies the $x^4$.)\n\n**Step 2.** Then $Q(1) = 10$, $Q(2) = -7$, $Q(3) = -2$, $Q(4) = 0$.\n\n**Step 3.** The quartic part at $0$: $(-1)(-2)(-3)(-4) = 24$. At $5$: $4 \\cdot 3 \\cdot 2 \\cdot 1 = 24$.\n\n**Step 4.** A cubic is determined by four values. Using finite differences on $Q(1), \\ldots, Q(4)$ (the third differences are constant) and extending one step each way gives $Q(0) = 74$ and $Q(5) = -26$.\n\n**Step 5.** $P(0) + P(5) = 24 + (74) + 24 + (-26) = 96$.\n\n**Answer:** $96$. **(C)**\n\n**Common mistake:** forgetting the quartic part (the two $24$s), which every monic quartic contributes."
+ },
+ {
+  "id": "mock_x6_poly_quartic_5",
+  "family": "x6_poly_quartic",
+  "difficulty": 6,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "A polynomial $P(x) = x^4 + ax^3 + bx^2 + cx + d$ has $P(1) = 3$, $P(2) = -3$, $P(3) = 3$, and $P(4) = -1$. What is $P(0) + P(5)$?",
+  "choices": {
+   "A": "$-13$",
+   "B": "$6$",
+   "C": "$54$",
+   "D": "$67$",
+   "E": "$78$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write $P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + Q(x)$ where $Q$ is a cubic."
+  ],
+  "solution": "**What we need:** $P(0) + P(5)$ without finding all four unknown coefficients.\n\n**Key idea:** split $P$ into a piece that is zero at $1, 2, 3, 4$ plus a cubic $Q$ that carries the given values.\n\n**Step 1.** Write $P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + Q(x)$, where $Q$ has degree at most $3$. (The first part supplies the $x^4$.)\n\n**Step 2.** Then $Q(1) = 3$, $Q(2) = -3$, $Q(3) = 3$, $Q(4) = -1$.\n\n**Step 3.** The quartic part at $0$: $(-1)(-2)(-3)(-4) = 24$. At $5$: $4 \\cdot 3 \\cdot 2 \\cdot 1 = 24$.\n\n**Step 4.** A cubic is determined by four values. Using finite differences on $Q(1), \\ldots, Q(4)$ (the third differences are constant) and extending one step each way gives $Q(0) = 43$ and $Q(5) = -37$.\n\n**Step 5.** $P(0) + P(5) = 24 + (43) + 24 + (-37) = 54$.\n\n**Answer:** $54$. **(C)**\n\n**Common mistake:** forgetting the quartic part (the two $24$s), which every monic quartic contributes."
+ },
+ {
+  "id": "mock_x6_poly_quartic_6",
+  "family": "x6_poly_quartic",
+  "difficulty": 6,
+  "topic": "polynomials",
+  "skillId": "poly_remainder",
+  "track": "amc12",
+  "prompt": "A polynomial $P(x) = x^4 + ax^3 + bx^2 + cx + d$ has $P(1) = -8$, $P(2) = 6$, $P(3) = 3$, and $P(4) = 6$. What is $P(0) + P(5)$?",
+  "choices": {
+   "A": "$-38$",
+   "B": "$-24$",
+   "C": "$24$",
+   "D": "$48$",
+   "E": "$62$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write $P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + Q(x)$ where $Q$ is a cubic."
+  ],
+  "solution": "**What we need:** $P(0) + P(5)$ without finding all four unknown coefficients.\n\n**Key idea:** split $P$ into a piece that is zero at $1, 2, 3, 4$ plus a cubic $Q$ that carries the given values.\n\n**Step 1.** Write $P(x) = (x - 1)(x - 2)(x - 3)(x - 4) + Q(x)$, where $Q$ has degree at most $3$. (The first part supplies the $x^4$.)\n\n**Step 2.** Then $Q(1) = -8$, $Q(2) = 6$, $Q(3) = 3$, $Q(4) = 6$.\n\n**Step 3.** The quartic part at $0$: $(-1)(-2)(-3)(-4) = 24$. At $5$: $4 \\cdot 3 \\cdot 2 \\cdot 1 = 24$.\n\n**Step 4.** A cubic is determined by four values. Using finite differences on $Q(1), \\ldots, Q(4)$ (the third differences are constant) and extending one step each way gives $Q(0) = -62$ and $Q(5) = 38$.\n\n**Step 5.** $P(0) + P(5) = 24 + (-62) + 24 + (38) = 24$.\n\n**Answer:** $24$. **(C)**\n\n**Common mistake:** forgetting the quartic part (the two $24$s), which every monic quartic contributes."
+ },
+ {
+  "id": "mock_x6_ser_power_sums_1",
+  "family": "x6_ser_power_sums",
+  "difficulty": 6,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{n + 1}{2^n}$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$\\frac{5}{2}$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$5$"
+  },
+  "answer": "C",
+  "hints": [
+   "Start from the geometric series and differentiate, or telescope."
+  ],
+  "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** start from the geometric series or a telescoping split, depending on the form.\n\n**Step 1.** Split: $\\sum \\frac{n}{2^n} + 1\\sum \\frac{1}{2^n}$.\n\n**Step 2.** Geometric part: $\\sum_{n \\ge 1} \\frac{1}{2^n} = \\frac{1/2}{1 - 1/2} = \\frac{1}{1}$, so $1$ times it is $1$.\n\n**Step 3.** For $S = \\sum \\frac{n}{2^n}$: $S - \\frac{S}{2} = \\sum \\frac{1}{2^n} = \\frac{1}{1}$, so $S \\cdot \\frac{1}{2} = \\frac{1}{1}$ and $S = 2$.\n\n**Step 4.** Total: $2 + 1 = 3$.\n\n**Answer:** $3$. **(C)**\n\n**Common mistake:** treating the whole thing as one geometric series. The $n$ in the numerator breaks the constant ratio."
+ },
+ {
+  "id": "mock_x6_ser_power_sums_2",
+  "family": "x6_ser_power_sums",
+  "difficulty": 6,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{1}{n(n + 1)(n + 2)}$?",
+  "choices": {
+   "A": "$\\frac{1}{8}$",
+   "B": "$\\frac{1}{6}$",
+   "C": "$\\frac{1}{4}$",
+   "D": "$\\frac{1}{3}$",
+   "E": "$\\frac{1}{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Start from the geometric series and differentiate, or telescope."
+  ],
+  "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** start from the geometric series or a telescoping split, depending on the form.\n\n**Step 1.** Partial fractions: $\\frac{1}{n(n + 1)(n + 2)} = \\frac{1}{2}\\left(\\frac{1}{n(n + 1)} - \\frac{1}{(n + 1)(n + 2)}\\right)$. (Check: the difference on the right has numerator $(n + 2) - n = 2$.)\n\n**Step 2.** Write out the sum: $\\frac{1}{2}\\left[\\left(\\frac{1}{1 \\cdot 2} - \\frac{1}{2 \\cdot 3}\\right) + \\left(\\frac{1}{2 \\cdot 3} - \\frac{1}{3 \\cdot 4}\\right) + \\cdots\\right]$.\n\n**Step 3.** Everything cancels except the first piece, $\\frac{1}{1 \\cdot 2} = \\frac{1}{2}$, and the tail goes to $0$.\n\n**Step 4.** Total: $\\frac{1}{2} \\cdot \\frac{1}{2} = \\frac{1}{4}$.\n\n**Answer:** $\\frac{1}{4}$. **(C)**\n\n**Common mistake:** forgetting the factor $\\frac{1}{2}$ from the partial fractions."
+ },
+ {
+  "id": "mock_x6_ser_power_sums_3",
+  "family": "x6_ser_power_sums",
+  "difficulty": 6,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{n + 2}{6^n}$?",
+  "choices": {
+   "A": "$\\frac{6}{25}$",
+   "B": "$\\frac{8}{25}$",
+   "C": "$\\frac{16}{25}$",
+   "D": "$\\frac{41}{25}$",
+   "E": "$\\frac{12}{5}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Start from the geometric series and differentiate, or telescope."
+  ],
+  "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** start from the geometric series or a telescoping split, depending on the form.\n\n**Step 1.** Split: $\\sum \\frac{n}{6^n} + 2\\sum \\frac{1}{6^n}$.\n\n**Step 2.** Geometric part: $\\sum_{n \\ge 1} \\frac{1}{6^n} = \\frac{1/6}{1 - 1/6} = \\frac{1}{5}$, so $2$ times it is $\\frac{2}{5}$.\n\n**Step 3.** For $S = \\sum \\frac{n}{6^n}$: $S - \\frac{S}{6} = \\sum \\frac{1}{6^n} = \\frac{1}{5}$, so $S \\cdot \\frac{5}{6} = \\frac{1}{5}$ and $S = \\frac{6}{25}$.\n\n**Step 4.** Total: $\\frac{6}{25} + \\frac{2}{5} = \\frac{16}{25}$.\n\n**Answer:** $\\frac{16}{25}$. **(C)**\n\n**Common mistake:** treating the whole thing as one geometric series. The $n$ in the numerator breaks the constant ratio."
+ },
+ {
+  "id": "mock_x6_ser_power_sums_4",
+  "family": "x6_ser_power_sums",
+  "difficulty": 6,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{n^2}{7^n}$?",
+  "choices": {
+   "A": "$\\frac{7}{36}$",
+   "B": "$\\frac{2}{9}$",
+   "C": "$\\frac{49}{216}$",
+   "D": "$\\frac{7}{27}$",
+   "E": "$\\frac{34}{27}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Start from the geometric series and differentiate, or telescope."
+  ],
+  "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** start from the geometric series or a telescoping split, depending on the form.\n\n**Step 1.** Start from $\\sum_{n \\ge 0} x^n = \\frac{1}{1 - x}$ for $|x| < 1$.\n\n**Step 2.** Differentiate and multiply by $x$: $\\sum n x^n = \\frac{x}{(1 - x)^2}$.\n\n**Step 3.** Do it again: $\\sum n^2 x^n = \\frac{x(1 + x)}{(1 - x)^3}$.\n\n**Step 4.** Plug in $x = \\frac{1}{7}$: $\\frac{\\frac{1}{7} \\cdot \\frac{8}{7}}{\\left(\\frac{6}{7}\\right)^3} = \\frac{7(8)}{(6)^3} = \\frac{7}{27}$.\n\n**Answer:** $\\frac{7}{27}$. **(D)**\n\n**Common mistake:** stopping after one derivative, which gives the sum of $\\frac{n}{7^n}$."
+ },
+ {
+  "id": "mock_x6_ser_power_sums_5",
+  "family": "x6_ser_power_sums",
+  "difficulty": 6,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{n^2}{4^n}$?",
+  "choices": {
+   "A": "$\\frac{4}{9}$",
+   "B": "$\\frac{5}{9}$",
+   "C": "$\\frac{16}{27}$",
+   "D": "$\\frac{20}{27}$",
+   "E": "$\\frac{47}{27}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Start from the geometric series and differentiate, or telescope."
+  ],
+  "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** start from the geometric series or a telescoping split, depending on the form.\n\n**Step 1.** Start from $\\sum_{n \\ge 0} x^n = \\frac{1}{1 - x}$ for $|x| < 1$.\n\n**Step 2.** Differentiate and multiply by $x$: $\\sum n x^n = \\frac{x}{(1 - x)^2}$.\n\n**Step 3.** Do it again: $\\sum n^2 x^n = \\frac{x(1 + x)}{(1 - x)^3}$.\n\n**Step 4.** Plug in $x = \\frac{1}{4}$: $\\frac{\\frac{1}{4} \\cdot \\frac{5}{4}}{\\left(\\frac{3}{4}\\right)^3} = \\frac{4(5)}{(3)^3} = \\frac{20}{27}$.\n\n**Answer:** $\\frac{20}{27}$. **(D)**\n\n**Common mistake:** stopping after one derivative, which gives the sum of $\\frac{n}{4^n}$."
+ },
+ {
+  "id": "mock_x6_ser_power_sums_6",
+  "family": "x6_ser_power_sums",
+  "difficulty": 6,
+  "topic": "sequences_series",
+  "skillId": "ser_geometric",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{n + 2}{5^n}$?",
+  "choices": {
+   "A": "$\\frac{5}{16}$",
+   "B": "$\\frac{7}{16}$",
+   "C": "$\\frac{13}{16}$",
+   "D": "$\\frac{29}{16}$",
+   "E": "$\\frac{5}{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Start from the geometric series and differentiate, or telescope."
+  ],
+  "solution": "**What we need:** the value of an infinite sum.\n\n**Key idea:** start from the geometric series or a telescoping split, depending on the form.\n\n**Step 1.** Split: $\\sum \\frac{n}{5^n} + 2\\sum \\frac{1}{5^n}$.\n\n**Step 2.** Geometric part: $\\sum_{n \\ge 1} \\frac{1}{5^n} = \\frac{1/5}{1 - 1/5} = \\frac{1}{4}$, so $2$ times it is $\\frac{1}{2}$.\n\n**Step 3.** For $S = \\sum \\frac{n}{5^n}$: $S - \\frac{S}{5} = \\sum \\frac{1}{5^n} = \\frac{1}{4}$, so $S \\cdot \\frac{4}{5} = \\frac{1}{4}$ and $S = \\frac{5}{16}$.\n\n**Step 4.** Total: $\\frac{5}{16} + \\frac{1}{2} = \\frac{13}{16}$.\n\n**Answer:** $\\frac{13}{16}$. **(C)**\n\n**Common mistake:** treating the whole thing as one geometric series. The $n$ in the numerator breaks the constant ratio."
+ }
+]

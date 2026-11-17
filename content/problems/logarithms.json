@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "log_rules_b01",
+  "skillId": "log_rules",
+  "family": "log_rules:lr1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{4} 1$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "A",
+  "hints": [
+   "Ask: what power of the base gives this number?"
+  ],
+  "solution": "**What we need:** the exponent that turns $4$ into $1$.\n\n**Key idea:** a logarithm is an exponent: $\\log_b N = y$ means $b^y = N$.\n\n**Step 1.** Let $y = \\log_{4} 1$. By definition, $4^y = 1$.\n\n**Step 2.** Check: $4^{0} = 1$ (any nonzero number to the $0$ power is $1$). So $y = 0$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** dividing the number by the base, or forgetting that fractions and roots give negative or fractional exponents."
+ },
+ {
+  "id": "log_rules_b02",
+  "skillId": "log_rules",
+  "family": "log_rules:lr2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{6} 12 + \\log_{6} 18$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$30$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\log x + \\log y = \\log(xy)$."
+  ],
+  "solution": "**What we need:** the sum of two logs with the same base.\n\n**Key idea:** Product Rule: $\\log_b x + \\log_b y = \\log_b(xy)$. Neither log is nice alone, but the product is a power of the base.\n\n**Step 1.** Combine: $\\log_{6}(12 \\cdot 18) = \\log_{6} 216$.\n\n**Step 2.** $216 = 6^{3}$, so the value is $3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** adding the inputs, $\\log_{6}(12 + 18)$; the rule multiplies them."
+ },
+ {
+  "id": "log_rules_b03",
+  "skillId": "log_rules",
+  "family": "log_rules:lr3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{2} 7 \\cdot \\log_{7} 3 \\cdot \\log_{3} 2$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$\\frac{1}{2}$",
+   "D": "$1$",
+   "E": "$42$"
+  },
+  "answer": "D",
+  "hints": [
+   "Change of base: $\\log_a b = \\frac{\\ln b}{\\ln a}$. Multiply and cancel."
+  ],
+  "solution": "**What we need:** a product of three logs with mixed bases.\n\n**Key idea:** Change of Base: $\\log_x y = \\frac{\\ln y}{\\ln x}$. Writing every log this way makes the product cancel.\n\n**Step 1.** $\\log_{2} 7 = \\frac{\\ln 7}{\\ln 2}$, $\\log_{7} 3 = \\frac{\\ln 3}{\\ln 7}$, $\\log_{3} 2 = \\frac{\\ln 2}{\\ln 3}$.\n\n**Step 2.** Multiply: $\\frac{\\ln 7}{\\ln 2} \\cdot \\frac{\\ln 3}{\\ln 7} \\cdot \\frac{\\ln 2}{\\ln 3}$. Every top matches a bottom.\n\n**Step 3.** Everything cancels, leaving $1$.\n\n**Answer:** $1$. **(D)**\n\n**Common mistake:** trying to evaluate each log as a decimal; the chain cancels exactly."
+ },
+ {
+  "id": "log_rules_b04",
+  "skillId": "log_rules",
+  "family": "log_rules:lr4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{2} \\left(8^{4}\\right)$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$7$",
+   "D": "$12$",
+   "E": "$32$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\log(x^k) = k\\log x$."
+  ],
+  "solution": "**What we need:** $\\log_{2}$ of a power.\n\n**Key idea:** Power Rule: $\\log_b(x^k) = k\\log_b x$.\n\n**Step 1.** Bring the exponent down: $4\\log_{2} 8$.\n\n**Step 2.** $8 = 2^{3}$, so $\\log_{2} 8 = 3$.\n\n**Step 3.** $4 \\cdot 3 = 12$.\n\n**Answer:** $12$. **(D)**\n\n**Common mistake:** adding the exponents instead of multiplying."
+ },
+ {
+  "id": "log_rules_b05",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_power_eval",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{3} 9$?",
+  "choices": {
+   "A": "$\\frac{2}{3}$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$6$"
+  },
+  "answer": "C",
+  "hints": [
+   "Ask: 3 to what power is 9?"
+  ],
+  "solution": "**What we need:** the logarithm.\n\n**Key idea:** $\\log_b b^k = k$.\n\n**Step 1.** $9 = 3^{2}$.\n\n**Step 2.** So the log is $2$.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** dividing 9 by 3."
+ },
+ {
+  "id": "log_rules_b06",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_reciprocal",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{5} \\frac{1}{25}$?",
+  "choices": {
+   "A": "$-3$",
+   "B": "$-2$",
+   "C": "$-\\frac{1}{2}$",
+   "D": "$\\frac{1}{2}$",
+   "E": "$2$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\frac{1}{b^k} = b^{-k}$."
+  ],
+  "solution": "**What we need:** the logarithm.\n\n**Key idea:** a reciprocal flips the sign of the exponent.\n\n**Step 1.** $\\frac{1}{25} = 5^{-2}$, so the log is $-2$.\n\n**Answer:** $-2$. **(B)**\n\n**Common mistake:** dropping the negative sign."
+ },
+ {
+  "id": "log_rules_b07",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_root",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{5} \\sqrt[4]{5^{3}}$?",
+  "choices": {
+   "A": "$\\frac{3}{5}$",
+   "B": "$\\frac{3}{4}$",
+   "C": "$\\frac{4}{3}$",
+   "D": "$\\frac{7}{4}$",
+   "E": "$12$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write the root as a fractional power."
+  ],
+  "solution": "**What we need:** the logarithm.\n\n**Key idea:** $\\sqrt[n]{b^m} = b^{m/n}$.\n\n**Step 1.** $\\log_{5} 5^{3/4} = \\frac{3}{4}$.\n\n**Answer:** $\\frac{3}{4}$. **(B)**\n\n**Common mistake:** flipping the fraction."
+ },
+ {
+  "id": "log_rules_b08",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_sum",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{12} 8 + \\log_{12} 216$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$\\frac{56}{3}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine into one log."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\log_b x + \\log_b y = \\log_b(xy)$.\n\n**Step 1.** $8 \\cdot 216 = 1728 = 12^{3}$.\n\n**Step 2.** So the sum is $3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** adding 8 and 216 inside the log."
+ },
+ {
+  "id": "log_rules_b09",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_diff",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{5} 21875 - \\log_{5} 7$?",
+  "choices": {
+   "A": "$\\frac{5}{2}$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$\\frac{21868}{5}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Combine into one log."
+  ],
+  "solution": "**What we need:** the difference.\n\n**Key idea:** $\\log_b x - \\log_b y = \\log_b \\frac{x}{y}$.\n\n**Step 1.** $\\frac{21875}{7} = 3125 = 5^{5}$.\n\n**Step 2.** So the answer is $5$.\n\n**Answer:** $5$. **(C)**\n\n**Common mistake:** subtracting inside the log."
+ },
+ {
+  "id": "log_rules_b10",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_power_rule",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $4\\log_2 16 - 2\\log_2 4$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$11$",
+   "C": "$12$",
+   "D": "$13$",
+   "E": "$20$"
+  },
+  "answer": "C",
+  "hints": [
+   "Evaluate each log, then multiply."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $k\\log_b x = \\log_b x^k$.\n\n**Step 1.** $\\log_2 16 = 4$, $\\log_2 4 = 2$.\n\n**Step 2.** $4 \\cdot 4 - 2 \\cdot 2 = 12$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** applying the coefficient to the wrong log."
+ },
+ {
+  "id": "log_rules_b11",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_base_power",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $27^{\\log_{3} 9}$?",
+  "choices": {
+   "A": "$9$",
+   "B": "$27$",
+   "C": "$243$",
+   "D": "$729$",
+   "E": "$730$"
+  },
+  "answer": "D",
+  "hints": [
+   "Write 27 as a power of 3."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $b^{\\log_b x} = x$.\n\n**Step 1.** $27^{\\log_{3} 9} = \\left(3^{\\log_{3} 9}\\right)^{3} = 9^{3} = 729$.\n\n**Answer:** $729$. **(D)**\n\n**Common mistake:** answering 9."
+ },
+ {
+  "id": "log_rules_b12",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_tower_base",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{81} 9$?",
+  "choices": {
+   "A": "$\\frac{2}{5}$",
+   "B": "$\\frac{1}{2}$",
+   "C": "$\\frac{3}{2}$",
+   "D": "$2$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write both as powers of 3."
+  ],
+  "solution": "**What we need:** the logarithm.\n\n**Key idea:** $\\log_{3^4} 3^2 = \\frac{2}{4}$.\n\n**Step 1.** $81 = 3^{4}$ and $9 = 3^{2}$.\n\n**Step 2.** $(3^{4})^x = 3^{2}$ gives $x = \\frac{1}{2}$.\n\n**Answer:** $\\frac{1}{2}$. **(B)**\n\n**Common mistake:** flipping the fraction."
+ },
+ {
+  "id": "log_rules_b13",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_product_powers",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_2 (2 \\cdot 4 \\cdot 8 \\cdots 2^{6})$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$21$",
+   "C": "$27$",
+   "D": "$36$",
+   "E": "$64$"
+  },
+  "answer": "B",
+  "hints": [
+   "The log of a product is the sum of the logs."
+  ],
+  "solution": "**What we need:** the log.\n\n**Key idea:** add the exponents $1 + 2 + \\cdots + 6$.\n\n**Step 1.** $\\frac{6 \\cdot 7}{2} = 21$.\n\n**Answer:** $21$. **(B)**\n\n**Common mistake:** multiplying the exponents."
+ },
+ {
+  "id": "log_rules_b14",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_ten",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{10} 25 + \\log_{10} 40$?",
+  "choices": {
+   "A": "$\\frac{3}{2}$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$\\frac{13}{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Combine the logs."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\log x + \\log y = \\log(xy)$.\n\n**Step 1.** $25 \\cdot 40 = 1000 = 10^{3}$.\n\n**Answer:** $3$. **(C)**\n\n**Common mistake:** adding the numbers."
+ },
+ {
+  "id": "log_rules_b15",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_fraction_base",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{\\frac{1}{3}} \\frac{1}{81}$?",
+  "choices": {
+   "A": "$-4$",
+   "B": "$-\\frac{1}{4}$",
+   "C": "$\\frac{1}{4}$",
+   "D": "$4$",
+   "E": "$5$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\frac{1}{3} = 3^{-1}$."
+  ],
+  "solution": "**What we need:** the logarithm.\n\n**Key idea:** changing the base to its reciprocal flips the sign.\n\n**Step 1.** $\\left(\\frac{1}{3}\\right)^{4} = \\frac{1}{81}$.\n\n**Answer:** $4$. **(D)**\n\n**Common mistake:** ignoring the sign change."
+ },
+ {
+  "id": "log_rules_b16",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_decimal",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{10} 0.1$?",
+  "choices": {
+   "A": "$-3$",
+   "B": "$-2$",
+   "C": "$-1$",
+   "D": "$0$",
+   "E": "$1$"
+  },
+  "answer": "C",
+  "hints": [
+   "Count the decimal places."
+  ],
+  "solution": "**What we need:** the logarithm.\n\n**Key idea:** $0.1 = 10^{-1}$.\n\n**Step 1.** $\\log_{10} 10^{-1} = -1$.\n\n**Answer:** $-1$. **(C)**\n\n**Common mistake:** counting the zeros instead of the decimal places."
+ },
+ {
+  "id": "log_rules_b17",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_nested",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{3}\\left(\\log_{2} 512\\right)$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$9$"
+  },
+  "answer": "B",
+  "hints": [
+   "Work from the inside out."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** evaluate the inner log first.\n\n**Step 1.** $\\log_{2} 512 = 9$.\n\n**Step 2.** $\\log_{3} 9 = 2$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** evaluating the outer log first."
+ },
+ {
+  "id": "log_rules_b18",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_ln",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\ln \\sqrt{e^{2}}$?",
+  "choices": {
+   "A": "$\\frac{1}{2}$",
+   "B": "$\\frac{2}{3}$",
+   "C": "$1$",
+   "D": "$2$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\ln$ is $\\log_e$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $\\ln e^x = x$.\n\n**Step 1.** $\\sqrt{e^{2}} = e^{1}$.\n\n**Step 2.** $\\ln$ of it: $1$.\n\n**Answer:** $1$. **(C)**\n\n**Common mistake:** flipping the fraction."
+ },
+ {
+  "id": "log_rules_b19",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_compare",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\log_{2} N = 5$, what is $\\log_{2} N^{4}$?",
+  "choices": {
+   "A": "$\\frac{5}{4}$",
+   "B": "$9$",
+   "C": "$20$",
+   "D": "$21$",
+   "E": "$625$"
+  },
+  "answer": "C",
+  "hints": [
+   "Power rule."
+  ],
+  "solution": "**What we need:** $\\log_b N^k$.\n\n**Key idea:** $\\log_b N^k = k \\log_b N$.\n\n**Step 1.** $4 \\cdot 5 = 20$.\n\n**Answer:** $20$. **(C)**\n\n**Common mistake:** raising the log to the power."
+ },
+ {
+  "id": "log_rules_b20",
+  "skillId": "log_rules",
+  "family": "log_rules:lr_log_sqrt_mult",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{3}\\left(9\\sqrt{243}\\right)$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$\\frac{7}{2}$",
+   "C": "$\\frac{9}{2}$",
+   "D": "$5$",
+   "E": "$7$"
+  },
+  "answer": "C",
+  "hints": [
+   "Split the product."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $\\log(xy) = \\log x + \\log y$ and $\\sqrt{x} = x^{1/2}$.\n\n**Step 1.** $\\log_{3} 9 = 2$; $\\log_{3} \\sqrt{243} = \\frac{5}{2}$.\n\n**Step 2.** Total: $\\frac{9}{2}$.\n\n**Answer:** $\\frac{9}{2}$. **(C)**\n\n**Common mistake:** forgetting the square root halves the exponent."
+ },
+ {
+  "id": "log_rules_c01",
+  "skillId": "log_rules",
+  "family": "log_rules:lrc1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\log_a x = 6$ and $\\log_b x = 7$, what is $\\log_{ab} x$?",
+  "choices": {
+   "A": "$\\frac{13}{42}$",
+   "B": "$\\frac{42}{13}$",
+   "C": "$\\frac{13}{2}$",
+   "D": "$13$",
+   "E": "$42$"
+  },
+  "answer": "B",
+  "hints": [
+   "Flip each: $\\log_x a = \\frac{1}{6}$ and $\\log_x b = \\frac{1}{7}$."
+  ],
+  "solution": "**What we need:** $\\log_{ab} x$.\n\n**Key idea:** the base $ab$ is a product, and logs turn products into sums only in the input. So flip every log to make $x$ the base: $\\log_u v = \\frac{1}{\\log_v u}$.\n\n**Step 1.** $\\log_x a = \\frac{1}{6}$ and $\\log_x b = \\frac{1}{7}$.\n\n**Step 2.** $\\log_x(ab) = \\log_x a + \\log_x b = \\frac{1}{6} + \\frac{1}{7} = \\frac{13}{42}$.\n\n**Step 3.** Flip back: $\\log_{ab} x = \\frac{1}{\\log_x(ab)} = \\frac{42}{13}$.\n\n**Answer:** $\\frac{42}{13}$. **(B)**\n\n**Common mistake:** adding $6 + 7$; when the base is a product, the logs combine through their reciprocals."
+ },
+ {
+  "id": "log_rules_c02",
+  "skillId": "log_rules",
+  "family": "log_rules:lrc2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\log_{5}\\frac{2}{1} + \\log_{5}\\frac{3}{2} + \\log_{5}\\frac{4}{3} + \\cdots + \\log_{5}\\frac{390625}{390624}$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$390624$",
+   "E": "$390625$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine into one logarithm of a product. The product telescopes."
+  ],
+  "solution": "**What we need:** a long sum of logs.\n\n**Key idea:** add logs by multiplying inputs; the product of the fractions telescopes.\n\n**Step 1.** Combine: $\\log_{5}\\left(\\frac{2}{1} \\cdot \\frac{3}{2} \\cdot \\frac{4}{3} \\cdots \\frac{390625}{390624}\\right)$.\n\n**Step 2.** Each top cancels the next bottom, leaving $\\frac{390625}{1} = 390625$.\n\n**Step 3.** $390625 = 5^{8}$, so the sum is $8$.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** counting the terms ($390624$) instead of combining them."
+ },
+ {
+  "id": "log_rules_c03",
+  "skillId": "log_rules",
+  "family": "log_rules:lrc3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Suppose $2^{a_1} = 3$, $3^{a_2} = 4$, $4^{a_3} = 5$, and so on up to $7^{a_{6}} = 8$. What is $a_1 a_2 \\cdots a_{6}$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write each $a_i$ as a logarithm, then use change of base."
+  ],
+  "solution": "**What we need:** the product of all the exponents.\n\n**Key idea:** each exponent is a log, and a chain of logs telescopes under change of base.\n\n**Step 1.** $a_1 = \\log_2 3$, $a_2 = \\log_3 4$, ..., and in general $a_i = \\log_{i+1}(i + 2)$.\n\n**Step 2.** Change of base: $a_1 a_2 \\cdots = \\frac{\\ln 3}{\\ln 2} \\cdot \\frac{\\ln 4}{\\ln 3} \\cdots \\frac{\\ln 8}{\\ln 7}$.\n\n**Step 3.** Everything cancels except $\\frac{\\ln 8}{\\ln 2} = \\log_2 8 = 3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** trying to find each $a_i$ as a decimal."
+ },
+ {
+  "id": "log_rules_c04",
+  "skillId": "log_rules",
+  "family": "log_rules:lrc_divisors",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the sum of $\\log_{10} d$ over all positive divisors $d$ of $10^{4}$?",
+  "choices": {
+   "A": "$10$",
+   "B": "$25$",
+   "C": "$50$",
+   "D": "$54$",
+   "E": "$100$"
+  },
+  "answer": "C",
+  "hints": [
+   "Pair each divisor $d$ with $\\frac{10^n}{d}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the sum of logs is the log of the product of all divisors.\n\n**Step 1.** $10^{4} = 2^{4}5^{4}$ has $(5)^2 = 25$ divisors.\n\n**Step 2.** Their product is $(10^{4})^{25/2}$.\n\n**Step 3.** Log: $4 \\cdot \\frac{25}{2} = 50$.\n\n**Answer:** $50$. **(C)**\n\n**Common mistake:** forgetting the divisors pair up."
+ },
+ {
+  "id": "log_rules_c05",
+  "skillId": "log_rules",
+  "family": "log_rules:lrc_combo",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\log_x y = 3$, what is $\\log_{x^{3}}\\left(x y^{4}\\right)$?",
+  "choices": {
+   "A": "$\\frac{3}{13}$",
+   "B": "$\\frac{5}{3}$",
+   "C": "$4$",
+   "D": "$\\frac{13}{3}$",
+   "E": "$\\frac{16}{3}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Write everything in base $x$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $\\log_x y = 3$ means $y = x^{3}$.\n\n**Step 1.** The argument is $x^{1 + 4 \\cdot 3} = x^{13}$; the base is $x^{3}$.\n\n**Step 2.** Ratio: $\\frac{13}{3} = \\frac{13}{3}$.\n\n**Answer:** $\\frac{13}{3}$. **(D)**\n\n**Common mistake:** adding exponents without substituting."
+ },
+ {
+  "id": "log_rules_c06",
+  "skillId": "log_rules",
+  "family": "log_rules:lrc_floor_sum",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\lfloor \\log_2 1 \\rfloor + \\lfloor \\log_2 2 \\rfloor + \\lfloor \\log_2 3 \\rfloor + \\cdots + \\lfloor \\log_2 11 \\rfloor$?",
+  "choices": {
+   "A": "$21$",
+   "B": "$22$",
+   "C": "$23$",
+   "D": "$26$",
+   "E": "$33$"
+  },
+  "answer": "B",
+  "hints": [
+   "Group the numbers by the value of the floor."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\lfloor \\log_2 k \\rfloor = j$ for $2^j \\le k < 2^{j+1}$: that's $2^j$ numbers (fewer for the last group).\n\n**Step 1.** Groups: $j = 0$: $1$ numbers, $j = 1$: $2$ numbers, $j = 2$: $4$ numbers, $j = 3$: $4$ numbers.\n\n**Step 2.** Weighted sum: $22$.\n\n**Answer:** $22$. **(B)**\n\n**Common mistake:** making the last group full size."
+ },
+ {
+  "id": "log_rules_c07",
+  "skillId": "log_rules",
+  "family": "log_rules:lrc_chain",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\log_2 3 \\cdot \\log_3 4 \\cdot \\log_4 5 \\cdots \\log_{63} 64$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$32$",
+   "E": "$62$"
+  },
+  "answer": "B",
+  "hints": [
+   "Change of base telescopes."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $\\log_a b \\cdot \\log_b c = \\log_a c$.\n\n**Step 1.** The product collapses to $\\log_2 64 = 6$.\n\n**Answer:** $6$. **(B)**\n\n**Common mistake:** multiplying approximate values."
+ },
+ {
+  "id": "log_rules_c08",
+  "skillId": "log_rules",
+  "family": "log_rules:lrc_reciprocals",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\dfrac{1}{\\log_{2} 10{,}000} + \\dfrac{1}{\\log_{5} 10{,}000}$?",
+  "choices": {
+   "A": "$\\frac{1}{10}$",
+   "B": "$\\frac{1}{5}$",
+   "C": "$\\frac{1}{4}$",
+   "D": "$\\frac{1}{2}$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\frac{1}{\\log_b N} = \\log_N b$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** flip each log, then add.\n\n**Step 1.** Sum $= \\log_{10{,}000}(2 \\cdot 5) = \\log_{10{,}000} 10$.\n\n**Step 2.** $10{,}000 = 10^{4}$, so this is $\\frac{1}{4}$.\n\n**Answer:** $\\frac{1}{4}$. **(C)**\n\n**Common mistake:** adding the bases."
+ },
+ {
+  "id": "log_rules_c09",
+  "skillId": "log_rules",
+  "family": "log_rules:lrc_system",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\log(x^{4}y^{4}) = 1$ and $\\log(x^{3}y^{4}) = 1$, what is $\\log(xy)$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$\\frac{1}{4}$",
+   "C": "$\\frac{4}{15}$",
+   "D": "$1$",
+   "E": "$\\frac{5}{4}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $u = \\log x$, $v = \\log y$."
+  ],
+  "solution": "**What we need:** $\\log(xy)$.\n\n**Key idea:** $4u + 4v = 1$ and $3u + 4v = 1$, a linear system.\n\n**Step 1.** Solving: $u = 0$, $v = \\frac{1}{4}$.\n\n**Step 2.** $\\log(xy) = u + v = \\frac{1}{4}$.\n\n**Answer:** $\\frac{1}{4}$. **(B)**\n\n**Common mistake:** adding the equations without solving."
+ },
+ {
+  "id": "log_rules_c10",
+  "skillId": "log_rules",
+  "family": "log_rules:lrc_count_ineq",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many integers $x$ satisfy $\\log_2 x + \\log_2 (x - 4) < 6$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$10$",
+   "E": "$60$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine, then remember the domain."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** we need $x > 4$ and $x(x - 4) < 2^{6} = 64$.\n\n**Step 1.** Checking integers $x > 4$: 5, 6, 7, 8, 9, 10.\n\n**Step 2.** Count: $6$.\n\n**Answer:** $6$. **(B)**\n\n**Common mistake:** forgetting the domain $x > 4$."
+ },
+ {
+  "id": "log_equations_b01",
+  "skillId": "log_equations",
+  "family": "log_equations:le1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $\\log_{5}(x + 18) = 2$.",
+  "choices": {
+   "A": "$-8$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$25$",
+   "E": "$43$"
+  },
+  "answer": "B",
+  "hints": [
+   "Rewrite in exponential form."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** undo the log by rewriting in exponential form: $\\log_b M = k$ means $M = b^k$.\n\n**Step 1.** $x + 18 = 5^{2} = 25$.\n\n**Step 2.** $x = 25 - 18 = 7$.\n\n**Step 3.** Check: $x + 18 = 25 > 0$, so the log is defined.\n\n**Answer:** $7$. **(B)**\n\n**Common mistake:** computing $5 \\cdot 2$ instead of $5^{2}$."
+ },
+ {
+  "id": "log_equations_b02",
+  "skillId": "log_equations",
+  "family": "log_equations:le2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $2^{x} = 2^{4x + 2}$.",
+  "choices": {
+   "A": "$-\\frac{2}{3}$",
+   "B": "$\\frac{1}{3}$",
+   "C": "$\\frac{2}{5}$",
+   "D": "$\\frac{1}{2}$",
+   "E": "$\\frac{2}{3}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Write $2$ as a power of $2$."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** write both sides as powers of the same base, $2$, then set the exponents equal.\n\n**Step 1.** $2 = 2^{1}$, so $2^x = 2^{1x}$.\n\n**Step 2.** Exponents must match: $1x = 4x + 2$.\n\n**Step 3.** $-3x = 2$, so $x = -\\frac{2}{3}$.\n\n**Answer:** $-\\frac{2}{3}$. **(A)**\n\n**Common mistake:** treating $2^x$ as $2^x$ and forgetting the power of $1$."
+ },
+ {
+  "id": "log_equations_b03",
+  "skillId": "log_equations",
+  "family": "log_equations:le3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $\\log_{3} x + \\log_{3}(x - 3) = \\log_{3} 10$.",
+  "choices": {
+   "A": "$-2$",
+   "B": "$2$",
+   "C": "$5$",
+   "D": "$8$",
+   "E": "$10$"
+  },
+  "answer": "C",
+  "hints": [
+   "Combine the logs, then remember logs need positive inputs."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** combine the logs with the Product Rule, solve the quadratic, and keep only solutions where every log input is positive.\n\n**Step 1.** Combine the left side: $\\log_{3}(x(x - 3)) = \\log_{3} 10$, so $x(x - 3) = 10$.\n\n**Step 2.** $x^2 - 3x - 10 = 0$ factors as $(x - 5)(x + 2) = 0$, so $x = 5$ or $x = -2$.\n\n**Step 3.** $x = -2$ is negative, and $\\log_{3} x$ needs $x > 0$. So reject it.\n\n**Step 4.** $x = 5$ works: $x = 5$ and $x - 3 = 2$ are both positive.\n\n**Answer:** $5$. **(C)**\n\n**Common mistake:** keeping the negative solution of the quadratic."
+ },
+ {
+  "id": "log_equations_b04",
+  "skillId": "log_equations",
+  "family": "log_equations:le4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $2^{x} = 3$, what is $8^{x}$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$9$",
+   "C": "$24$",
+   "D": "$27$",
+   "E": "$81$"
+  },
+  "answer": "D",
+  "hints": [
+   "$8 = 2^{3}$."
+  ],
+  "solution": "**What we need:** $8^x$ without finding $x$.\n\n**Key idea:** $8$ is a power of $2$, so $8^x$ is a power of $2^x$.\n\n**Step 1.** $8 = 2^{3}$, so $8^x = (2^{3})^x = (2^x)^{3}$.\n\n**Step 2.** Substitute $2^x = 3$: $3^{3} = 27$.\n\n**Answer:** $27$. **(D)**\n\n**Common mistake:** multiplying $3 \\cdot 3$ instead of raising to the power $3$."
+ },
+ {
+  "id": "log_equations_b05",
+  "skillId": "log_equations",
+  "family": "log_equations:le_same_base",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $16^x = 8$.",
+  "choices": {
+   "A": "$\\frac{1}{2}$",
+   "B": "$\\frac{3}{5}$",
+   "C": "$\\frac{3}{4}$",
+   "D": "$\\frac{4}{3}$",
+   "E": "$\\frac{7}{4}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write both as powers of 2."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** match the exponents.\n\n**Step 1.** $2^{4x} = 2^{3}$.\n\n**Step 2.** $4x = 3$, $x = \\frac{3}{4}$.\n\n**Answer:** $\\frac{3}{4}$. **(C)**\n\n**Common mistake:** flipping the fraction."
+ },
+ {
+  "id": "log_equations_b06",
+  "skillId": "log_equations",
+  "family": "log_equations:le_diff",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $\\log_{3}(x + 234) - \\log_{3} x = 3$.",
+  "choices": {
+   "A": "$9$",
+   "B": "$10$",
+   "C": "$18$",
+   "D": "$27$",
+   "E": "$234$"
+  },
+  "answer": "A",
+  "hints": [
+   "Combine into one log."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** $\\frac{x + 234}{x} = 27$.\n\n**Step 1.** $x + 234 = 27x$.\n\n**Step 2.** $26x = 234$, $x = 9$.\n\n**Answer:** $9$. **(A)**\n\n**Common mistake:** subtracting inside the log."
+ },
+ {
+  "id": "log_equations_b07",
+  "skillId": "log_equations",
+  "family": "log_equations:le_equal_args",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $\\log_3(5x + 2) = \\log_3(x + 6)$.",
+  "choices": {
+   "A": "$1$",
+   "B": "$\\frac{4}{3}$",
+   "C": "$2$",
+   "D": "$4$",
+   "E": "$5$"
+  },
+  "answer": "A",
+  "hints": [
+   "Equal logs, same base: equal arguments."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** set the arguments equal, then check both are positive.\n\n**Step 1.** $5x + 2 = x + 6$, so $4x = 4$, $x = 1$.\n\n**Step 2.** Both arguments are positive there.\n\n**Answer:** $1$. **(A)**\n\n**Common mistake:** forgetting to check the domain."
+ },
+ {
+  "id": "log_equations_b08",
+  "skillId": "log_equations",
+  "family": "log_equations:le_exp_eq",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $16^{x} = 32^{x - 4}$.",
+  "choices": {
+   "A": "$-20$",
+   "B": "$4$",
+   "C": "$16$",
+   "D": "$20$",
+   "E": "$21$"
+  },
+  "answer": "D",
+  "hints": [
+   "Write both sides with base 2."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** match the exponents.\n\n**Step 1.** $2^{4x} = 2^{5(x - 4)}$.\n\n**Step 2.** $4x = 5x - 20$, so $x = 20$.\n\n**Answer:** $20$. **(D)**\n\n**Common mistake:** forgetting to distribute."
+ },
+ {
+  "id": "log_equations_b09",
+  "skillId": "log_equations",
+  "family": "log_equations:le_base_unknown",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $\\log_x 32 = 5$ for $x > 0$.",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$\\frac{32}{5}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Rewrite in exponential form."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** $x^{5} = 32$.\n\n**Step 1.** $x = \\sqrt[5]{32} = 2$.\n\n**Answer:** $2$. **(A)**\n\n**Common mistake:** dividing 32 by 5."
+ },
+ {
+  "id": "log_equations_b10",
+  "skillId": "log_equations",
+  "family": "log_equations:le_quadratic_log",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the product of the solutions of $(\\log_{3} x)^2 - 7\\log_{3} x + 10 = 0$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$10$",
+   "C": "$252$",
+   "D": "$2187$",
+   "E": "$59049$"
+  },
+  "answer": "D",
+  "hints": [
+   "The two values of $\\log_{3} x$ add to 7."
+  ],
+  "solution": "**What we need:** the product of the $x$ values.\n\n**Key idea:** if $\\log x_1 + \\log x_2 = 7$ then $x_1x_2 = 3^{7}$.\n\n**Step 1.** $\\log_{3} x = 5$ or $2$: $x = 243$ or $9$.\n\n**Step 2.** Product: $2187$.\n\n**Answer:** $2187$. **(D)**\n\n**Common mistake:** multiplying the logs."
+ },
+ {
+  "id": "log_equations_b11",
+  "skillId": "log_equations",
+  "family": "log_equations:le_exp_product",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $2^{2x} \\cdot 4^{2x} = 8^{4}$.",
+  "choices": {
+   "A": "$1$",
+   "B": "$\\frac{3}{2}$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write everything as powers of 2."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** add exponents on the left; match the right side.\n\n**Step 1.** $2^{2x + 4x} = 2^{12}$.\n\n**Step 2.** $6x = 12$, $x = 2$.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** treating $4^x$ as $2^x$."
+ },
+ {
+  "id": "log_equations_b12",
+  "skillId": "log_equations",
+  "family": "log_equations:le_two_log",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $2\\log_5 x = \\log_5 (x + 6)$.",
+  "choices": {
+   "A": "$-2$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$6$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use the power rule on the left."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** $x^2 = x + 6$, keeping only positive $x$.\n\n**Step 1.** $x^2 - x - 6 = 0$ factors as $(x - 3)(x + 2) = 0$.\n\n**Step 2.** $x = 3$ (the other root is negative).\n\n**Answer:** $3$. **(C)**\n\n**Common mistake:** keeping the negative root."
+ },
+ {
+  "id": "log_equations_b13",
+  "skillId": "log_equations",
+  "family": "log_equations:le_base_x",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $\\log_x (x + 2) = 2$.",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "Rewrite in exponential form."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** $x^2 = x + 2$ with $x > 0$, $x \\ne 1$.\n\n**Step 1.** $(x - 2)(x + 1) = 0$, so $x = 2$.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** keeping the negative root."
+ },
+ {
+  "id": "log_equations_b14",
+  "skillId": "log_equations",
+  "family": "log_equations:le_given_exp",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $2^a = 6$, what is $4^{a + 1}$?",
+  "choices": {
+   "A": "$24$",
+   "B": "$49$",
+   "C": "$72$",
+   "D": "$144$",
+   "E": "$288$"
+  },
+  "answer": "D",
+  "hints": [
+   "Rewrite with base 2."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $4^{a + 1} = (2^a)^{2} \\cdot 2^{2}$.\n\n**Step 1.** $6^{2} \\cdot 4 = 144$.\n\n**Answer:** $144$. **(D)**\n\n**Common mistake:** adding instead of multiplying the exponent."
+ },
+ {
+  "id": "log_equations_b15",
+  "skillId": "log_equations",
+  "family": "log_equations:le_frac_exp",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $\\log_{25} x = \\frac{3}{2}$.",
+  "choices": {
+   "A": "$\\frac{75}{2}$",
+   "B": "$75$",
+   "C": "$124$",
+   "D": "$125$",
+   "E": "$625$"
+  },
+  "answer": "D",
+  "hints": [
+   "Exponential form."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** $x = 25^{\\frac{3}{2}}$.\n\n**Step 1.** $25 = 5^{2}$, so $x = 5^{3} = 125$.\n\n**Answer:** $125$. **(D)**\n\n**Common mistake:** multiplying 25 by the exponent."
+ },
+ {
+  "id": "log_equations_b16",
+  "skillId": "log_equations",
+  "family": "log_equations:le_growth",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A population of $200$ doubles every $4$ hours. After how many hours will it reach $1{,}600$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$8$",
+   "C": "$12$",
+   "D": "$13$",
+   "E": "$16$"
+  },
+  "answer": "C",
+  "hints": [
+   "How many doublings?"
+  ],
+  "solution": "**What we need:** the time.\n\n**Key idea:** $P = 200 \\cdot 2^{t/4}$.\n\n**Step 1.** $2^{t/4} = 8$, so $\\frac{t}{4} = 3$.\n\n**Step 2.** $t = 12$ hours.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** dividing the target by the start without taking a log."
+ },
+ {
+  "id": "log_equations_b17",
+  "skillId": "log_equations",
+  "family": "log_equations:le_exp_sum",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $2^{x + 3} + 2^x = 72$.",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$9$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor out $2^x$."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** $2^x(2^{3} + 1) = 72$.\n\n**Step 1.** $2^x \\cdot 9 = 72$, so $2^x = 8$.\n\n**Step 2.** $x = 3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** adding the exponents."
+ },
+ {
+  "id": "log_equations_b18",
+  "skillId": "log_equations",
+  "family": "log_equations:le_nested",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $\\log_{2}(\\log_{5} x) = 2$.",
+  "choices": {
+   "A": "$4$",
+   "B": "$20$",
+   "C": "$25$",
+   "D": "$625$",
+   "E": "$3125$"
+  },
+  "answer": "D",
+  "hints": [
+   "Peel off one log at a time."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** $\\log_{5} x = 2^{2} = 4$.\n\n**Step 1.** $x = 5^{4} = 625$.\n\n**Answer:** $625$. **(D)**\n\n**Common mistake:** solving in the wrong order."
+ },
+ {
+  "id": "log_equations_b19",
+  "skillId": "log_equations",
+  "family": "log_equations:le_halflife",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A substance has a half-life of $4$ years. Starting with $160$ grams, how many grams remain after $8$ years?",
+  "choices": {
+   "A": "$20$",
+   "B": "$40$",
+   "C": "$41$",
+   "D": "$80$",
+   "E": "$152$"
+  },
+  "answer": "B",
+  "hints": [
+   "Count the half-lives."
+  ],
+  "solution": "**What we need:** the remaining mass.\n\n**Key idea:** $8$ years is $2$ half-lives.\n\n**Step 1.** $160 \\cdot \\left(\\frac{1}{2}\\right)^{2} = 40$.\n\n**Answer:** $40$. **(B)**\n\n**Common mistake:** halving only once."
+ },
+ {
+  "id": "log_equations_b20",
+  "skillId": "log_equations",
+  "family": "log_equations:le_e_quad",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of all real solutions of $e^{2x} - 4e^x + 3 = 0$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$\\ln 3$",
+   "C": "$\\ln 4$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $u = e^x$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $u^2 - 4u + 3 = 0$ gives $u = 1$ or $3$.\n\n**Step 1.** $x = \\ln 1$ or $\\ln 3$.\n\n**Step 2.** Sum: $\\ln 1 + \\ln 3 = \\ln 3$.\n\n**Answer:** $\\ln 3$. **(B)**\n\n**Common mistake:** adding $u$ values instead of $x$ values."
+ },
+ {
+  "id": "log_equations_c01",
+  "skillId": "log_equations",
+  "family": "log_equations:lec1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\log_2 x + \\log_4 x + \\log_8 x = 11$, what is $\\log_2 x$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$\\frac{11}{3}$",
+   "C": "$6$",
+   "D": "$7$",
+   "E": "$11$"
+  },
+  "answer": "C",
+  "hints": [
+   "Convert each log to base 2: $\\log_4 x = \\frac{1}{2}\\log_2 x$ and $\\log_8 x = \\frac{1}{3}\\log_2 x$."
+  ],
+  "solution": "**What we need:** $\\log_2 x$.\n\n**Key idea:** put every log in base $2$. Since $4 = 2^2$ and $8 = 2^3$, $\\log_4 x = \\frac{\\log_2 x}{2}$ and $\\log_8 x = \\frac{\\log_2 x}{3}$.\n\n**Step 1.** Let $L = \\log_2 x$. The equation becomes $L + \\frac{L}{2} + \\frac{L}{3} = 11$.\n\n**Step 2.** $1 + \\frac{1}{2} + \\frac{1}{3} = \\frac{11}{6}$, so $\\frac{11}{6}L = 11$.\n\n**Step 3.** $L = 11 \\cdot \\frac{6}{11} = 6$.\n\n**Answer:** $6$. **(C)**\n\n**Common mistake:** using $\\log_4 x = 2\\log_2 x$; the bigger base gives the smaller log."
+ },
+ {
+  "id": "log_equations_c02",
+  "skillId": "log_equations",
+  "family": "log_equations:lec2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the sum of all real solutions of $4^{x} - 18 \\cdot 2^{x} + 32 = 0$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$6$",
+   "D": "$18$",
+   "E": "$32$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $t = 2^x$. Then the product of the two values of $t$ is 32."
+  ],
+  "solution": "**What we need:** the sum of the solutions $x$.\n\n**Key idea:** $4^x = (2^x)^2$, so substituting $t = 2^x$ gives an ordinary quadratic.\n\n**Step 1.** With $t = 2^x$: $t^2 - 18t + 32 = 0$.\n\n**Step 2.** Factor: $(t - 2)(t - 16) = 0$, so $t = 2$ or $t = 16$ (both positive, so both are allowed).\n\n**Step 3.** $2^x = 2$ gives $x = 1$; $2^x = 16$ gives $x = 4$.\n\n**Step 4.** Sum: $1 + 4 = 5$.\n\n**Answer:** $5$. **(B)**\n\n**Common mistake:** adding the $t$ values ($18$) instead of the $x$ values."
+ },
+ {
+  "id": "log_equations_c03",
+  "skillId": "log_equations",
+  "family": "log_equations:lec3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What positive number $x \\ne 1$ satisfies $\\dfrac{\\log_2 x \\cdot \\log_3 x}{\\log_2 x + \\log_3 x} = 3$?",
+  "choices": {
+   "A": "$24$",
+   "B": "$125$",
+   "C": "$216$",
+   "D": "$222$",
+   "E": "$1296$"
+  },
+  "answer": "C",
+  "hints": [
+   "Flip both sides of the equation."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** flipping the fraction splits it into two simple pieces, and $\\frac{1}{\\log_2 x} = \\log_x 2$.\n\n**Step 1.** Flip both sides: $\\frac{\\log_2 x + \\log_3 x}{\\log_2 x \\cdot \\log_3 x} = \\frac{1}{3}$.\n\n**Step 2.** Split: $\\frac{1}{\\log_3 x} + \\frac{1}{\\log_2 x} = \\log_x 3 + \\log_x 2$.\n\n**Step 3.** Combine: $\\log_x 6 = \\frac{1}{3}$, so $x^{1/3} = 6$ and $x = 6^{3} = 216$.\n\n**Answer:** $216$. **(C)**\n\n**Common mistake:** trying to solve with decimals; the flip makes it exact."
+ },
+ {
+  "id": "log_equations_c04",
+  "skillId": "log_equations",
+  "family": "log_equations:lec_system",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\log_2 x + \\log_2 y = 6$ and $\\log_2 x - \\log_2 y = -4$, what is $x + y$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$16$",
+   "C": "$34$",
+   "D": "$35$",
+   "E": "$64$"
+  },
+  "answer": "C",
+  "hints": [
+   "Solve for each log first."
+  ],
+  "solution": "**What we need:** $x + y$.\n\n**Key idea:** add and subtract the equations.\n\n**Step 1.** $\\log_2 x = 1$, $\\log_2 y = 5$.\n\n**Step 2.** $x = 2$, $y = 32$, sum $34$.\n\n**Answer:** $34$. **(C)**\n\n**Common mistake:** adding the logs as if they were $x$ and $y$."
+ },
+ {
+  "id": "log_equations_c05",
+  "skillId": "log_equations",
+  "family": "log_equations:lec_xlogx",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the product of all positive solutions of $x^{\\log_2 x} = 16x^{3}$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$16$",
+   "E": "$\\frac{33}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Take $\\log_2$ of both sides."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** with $t = \\log_2 x$: $t^2 = 4 + 3t$.\n\n**Step 1.** $t^2 - 3t - 4 = 0$ gives $t = 4$ or $-1$.\n\n**Step 2.** $x = 16$ or $\\frac{1}{2}$; product $2^{3} = 8$.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** forgetting the negative value of $t$."
+ },
+ {
+  "id": "log_equations_c06",
+  "skillId": "log_equations",
+  "family": "log_equations:lec_reciprocal",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the sum of the solutions of $\\log_x 2 + \\log_2 x = \\frac{10}{3}$?",
+  "choices": {
+   "A": "$\\frac{10}{3}$",
+   "B": "$8$",
+   "C": "$8 + \\frac{1}{3}$",
+   "D": "$8 + \\sqrt[3]{2}$",
+   "E": "$8 + 3$"
+  },
+  "answer": "D",
+  "hints": [
+   "Let $t = \\log_2 x$; then $\\log_x 2 = \\frac{1}{t}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $t + \\frac{1}{t} = \\frac{10}{3}$ gives $t = 3$ or $\\frac{1}{3}$.\n\n**Step 1.** $x = 2^{3} = 8$ or $x = 2^{1/3} = \\sqrt[3]{2}$.\n\n**Step 2.** Sum: $8 + \\sqrt[3]{2}$.\n\n**Answer:** $8 + \\sqrt[3]{2}$. **(D)**\n\n**Common mistake:** adding the $t$ values."
+ },
+ {
+  "id": "log_equations_c07",
+  "skillId": "log_equations",
+  "family": "log_equations:lec_equal_powers",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $2^x = 5^y = 10^{2}$, what is $\\frac{{1}}{{x}} + \\frac{{1}}{{y}}$?",
+  "choices": {
+   "A": "$\\frac{1}{10}$",
+   "B": "$\\frac{1}{3}$",
+   "C": "$\\frac{1}{2}$",
+   "D": "$1$",
+   "E": "$2$"
+  },
+  "answer": "C",
+  "hints": [
+   "Take logs: $x = 2\\log_{2} 10$."
+  ],
+  "solution": "**What we need:** the sum of reciprocals.\n\n**Key idea:** $\\frac{1}{x} = \\frac{\\log_{10} 2}{2}$ and $\\frac{1}{y} = \\frac{\\log_{10} 5}{2}$.\n\n**Step 1.** Sum: $\\frac{\\log_{10}(2 \\cdot 5)}{2} = \\frac{1}{2}$.\n\n**Answer:** $\\frac{1}{2}$. **(C)**\n\n**Common mistake:** assuming $x = y$."
+ },
+ {
+  "id": "log_equations_c08",
+  "skillId": "log_equations",
+  "family": "log_equations:lec_count",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many integers $x$ satisfy $\\log_2 (x - 8) < 5$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$30$",
+   "C": "$31$",
+   "D": "$32$",
+   "E": "$40$"
+  },
+  "answer": "C",
+  "hints": [
+   "Mind the domain."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** need $0 < x - 8 < 2^{5}$.\n\n**Step 1.** $x$ from $9$ to $39$: $31$ integers.\n\n**Answer:** $31$. **(C)**\n\n**Common mistake:** including the endpoint or forgetting $x - 8 > 0$."
+ },
+ {
+  "id": "log_equations_c09",
+  "skillId": "log_equations",
+  "family": "log_equations:lec_chain_eq",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $(\\log_2 3)(\\log_3 5)(\\log_5 y) = 4$, what is $y$?",
+  "choices": {
+   "A": "$16$",
+   "B": "$17$",
+   "C": "$20$",
+   "D": "$81$",
+   "E": "$625$"
+  },
+  "answer": "A",
+  "hints": [
+   "Change of base telescopes."
+  ],
+  "solution": "**What we need:** $y$.\n\n**Key idea:** the product equals $\\log_2 y$.\n\n**Step 1.** $\\log_2 y = 4$, so $y = 16$.\n\n**Answer:** $16$. **(A)**\n\n**Common mistake:** using base 5."
+ },
+ {
+  "id": "log_equations_c10",
+  "skillId": "log_equations",
+  "family": "log_equations:lec_exp_system",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Real numbers $x$ and $y$ satisfy $2^x + 2^y = 33$ and $2^{x + y} = 32$. What is $x^2 + y^2$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$5$",
+   "C": "$25$",
+   "D": "$26$",
+   "E": "$33$"
+  },
+  "answer": "C",
+  "hints": [
+   "$2^x$ and $2^y$ are roots of a quadratic."
+  ],
+  "solution": "**What we need:** $x^2 + y^2$.\n\n**Key idea:** $2^x$ and $2^y$ have sum $33$ and product $32$.\n\n**Step 1.** They are $1$ and $32$, so $\\{x, y\\} = \\{0, 5\\}$.\n\n**Step 2.** $0^2 + 5^2 = 25$.\n\n**Answer:** $25$. **(C)**\n\n**Common mistake:** squaring the sum."
+ },
+ {
+  "id": "log_change_base_b01",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{9} 81$?",
+  "choices": {
+   "A": "$\\frac{1}{2}$",
+   "B": "$\\frac{2}{3}$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$9$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write both numbers as powers of $3$."
+  ],
+  "solution": "**What we need:** $\\log_{9} 81$.\n\n**Key idea:** both numbers are powers of $3$, so change to base $3$.\n\n**Step 1.** $81 = 3^{4}$ and $9 = 3^{2}$.\n\n**Step 2.** $\\log_{9} 81 = \\frac{\\log_{3} 81}{\\log_{3} 9} = \\frac{4}{2} = 2$.\n\n**Step 3.** Check: $9^{2} = (3^{2})^{2} = 3^{4} = 81$.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** flipping the fraction; the input's exponent goes on top."
+ },
+ {
+  "id": "log_change_base_b02",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Using $\\log_{10} 3 \\approx 0.4771$, how many digits does $3^{116}$ have?",
+  "choices": {
+   "A": "$55$",
+   "B": "$56$",
+   "C": "$57$",
+   "D": "$58$",
+   "E": "$116$"
+  },
+  "answer": "B",
+  "hints": [
+   "A positive integer $N$ has $\\lfloor \\log_{10} N \\rfloor + 1$ digits."
+  ],
+  "solution": "**What we need:** the number of digits of $3^{116}$.\n\n**Key idea:** a number with $d$ digits is between $10^{d-1}$ and $10^d$, so its $\\log_{10}$ is between $d - 1$ and $d$. Digits $= \\lfloor \\log_{10} N \\rfloor + 1$.\n\n**Step 1.** $\\log_{10} 3^{116} = 116\\log_{10} 3 \\approx 116 \\cdot 0.4771 = 55.34$.\n\n**Step 2.** So $10^{55} < 3^{116} < 10^{56}$.\n\n**Step 3.** The number of digits is $55 + 1 = 56$.\n\n**Answer:** $56$. **(B)**\n\n**Common mistake:** forgetting the $+1$; $10^2 = 100$ has $3$ digits, not $2$."
+ },
+ {
+  "id": "log_change_base_b03",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\log_a b = 5$, what is $\\log_{a^2} b^3$?",
+  "choices": {
+   "A": "$-5$",
+   "B": "$\\frac{5}{2}$",
+   "C": "$5$",
+   "D": "$\\frac{15}{2}$",
+   "E": "$10$"
+  },
+  "answer": "D",
+  "hints": [
+   "Use change of base."
+  ],
+  "solution": "**What we need:** a log with the base and input changed.\n\n**Key idea:** rewrite with change of base so the given $\\log_a b$ appears.\n\n**Step 1.** Change to base $a$: $\\log_{a^2} b^3 = \\frac{\\log_a b^3}{\\log_a a^2}$.\n\n**Step 2.** Power Rule: top $= 3\\log_a b$, bottom $= 2$.\n\n**Step 3.** $\\frac{3 \\cdot 5}{2} = \\frac{15}{2}$.\n\n**Answer:** $\\frac{15}{2}$. **(D)**\n\n**Common mistake:** multiplying by $2$ for the base; a power on the base divides."
+ },
+ {
+  "id": "log_change_base_b04",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\log_{10} 2 = a$ and $\\log_{10} 3 = b$, then $\\log_{10} 54 = pa + qb$ for integers $p$ and $q$. What is $p + q$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$9$"
+  },
+  "answer": "C",
+  "hints": [
+   "Factor $54$ into powers of 2 and 3."
+  ],
+  "solution": "**What we need:** $p + q$.\n\n**Key idea:** factor $54$ into $2$s and $3$s, then use the Product and Power Rules.\n\n**Step 1.** $54 = 2^{1} \\cdot 3^{3}$.\n\n**Step 2.** $\\log_{10} 54 = 1\\log_{10} 2 + 3\\log_{10} 3 = 1a + 3b$.\n\n**Step 3.** $p + q = 1 + 3 = 4$.\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** multiplying the exponents instead of adding them."
+ },
+ {
+  "id": "log_change_base_b05",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_express",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\log_{5} 7 = t$, what is $\\log_{25} 343$ in terms of $t$?",
+  "choices": {
+   "A": "$t$",
+   "B": "$\\frac{3t}{2}$",
+   "C": "$\\frac{5t}{2}$",
+   "D": "$5t$",
+   "E": "$6t$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pull the exponents out front."
+  ],
+  "solution": "**What we need:** the expression.\n\n**Key idea:** $\\log_{b^m} x^n = \\frac{n}{m}\\log_b x$.\n\n**Step 1.** $\\log_{25} 343 = \\frac{3}{2}\\log_{5} 7 = \\frac{3t}{2}$.\n\n**Answer:** $\\frac{3t}{2}$. **(B)**\n\n**Common mistake:** flipping $\\frac{n}{m}$."
+ },
+ {
+  "id": "log_change_base_b06",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_product_two",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{5} 8 \\cdot \\log_{2} 125$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$6$",
+   "C": "$8$",
+   "D": "$9$",
+   "E": "$10$"
+  },
+  "answer": "D",
+  "hints": [
+   "Change of base: $\\log_a b \\cdot \\log_b a = 1$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** pull out the exponents.\n\n**Step 1.** $3\\log_{5} 2 \\cdot 3\\log_{2} 5 = 9 \\cdot 1 = 9$.\n\n**Answer:** $9$. **(D)**\n\n**Common mistake:** adding the exponents."
+ },
+ {
+  "id": "log_change_base_b07",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_ratio",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\dfrac{\\log_{5} 729}{\\log_{5} 9}$?",
+  "choices": {
+   "A": "$\\frac{1}{3}$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$81$"
+  },
+  "answer": "C",
+  "hints": [
+   "The ratio is a change of base."
+  ],
+  "solution": "**What we need:** the ratio.\n\n**Key idea:** $\\frac{\\log_b A}{\\log_b B} = \\log_B A$.\n\n**Step 1.** $\\log_{9} 729 = 3$.\n\n**Answer:** $3$. **(C)**\n\n**Common mistake:** dividing inside the logs."
+ },
+ {
+  "id": "log_change_base_b08",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_sqrt_base",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{\\sqrt{2}} 8$?",
+  "choices": {
+   "A": "$\\frac{3}{2}$",
+   "B": "$3$",
+   "C": "$6$",
+   "D": "$7$",
+   "E": "$9$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\sqrt{2} = 2^{1/2}$."
+  ],
+  "solution": "**What we need:** the logarithm.\n\n**Key idea:** a base of $b^{1/2}$ doubles the log.\n\n**Step 1.** $\\left(2^{1/2}\\right)^{6} = 2^{3}$.\n\n**Answer:** $6$. **(C)**\n\n**Common mistake:** halving instead of doubling."
+ },
+ {
+  "id": "log_change_base_b09",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_square_base",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\log_a b = \\frac{9}{2}$, what is $\\log_{a^{2}} b$?",
+  "choices": {
+   "A": "$\\frac{4}{9}$",
+   "B": "$\\frac{9}{4}$",
+   "C": "$\\frac{9}{2}$",
+   "D": "$\\frac{13}{2}$",
+   "E": "$9$"
+  },
+  "answer": "B",
+  "hints": [
+   "Base $a^m$ divides the log by $m$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $\\log_{a^m} b = \\frac{1}{m}\\log_a b$.\n\n**Step 1.** $\\frac{\\frac{9}{2}}{2} = \\frac{9}{4}$.\n\n**Answer:** $\\frac{9}{4}$. **(B)**\n\n**Common mistake:** multiplying by $m$."
+ },
+ {
+  "id": "log_change_base_b10",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_mixed",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{8} 2 + \\log_{16} 8$?",
+  "choices": {
+   "A": "$\\frac{1}{4}$",
+   "B": "$\\frac{13}{12}$",
+   "C": "$\\frac{5}{3}$",
+   "D": "$\\frac{25}{12}$",
+   "E": "$\\frac{13}{3}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write each in a common base."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** convert each log to a power of a smaller base.\n\n**Step 1.** $\\log_{8} 2 = \\frac{1}{3}$, $\\log_{16} 8 = \\frac{3}{4}$.\n\n**Step 2.** Sum: $\\frac{13}{12}$.\n\n**Answer:** $\\frac{13}{12}$. **(B)**\n\n**Common mistake:** flipping one of the fractions."
+ },
+ {
+  "id": "log_change_base_b11",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_ln_ratio",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\dfrac{\\log 125}{\\log 5}$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$15$",
+   "E": "$25$"
+  },
+  "answer": "B",
+  "hints": [
+   "Change of base."
+  ],
+  "solution": "**What we need:** the ratio.\n\n**Key idea:** $\\frac{\\log A}{\\log B} = \\log_B A$.\n\n**Step 1.** $\\log_{5} 125 = 3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** dividing the numbers inside."
+ },
+ {
+  "id": "log_change_base_b12",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_approx",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Using $\\log_{10} 2 \\approx 0.30$, which is closest to $\\log_2 10$?",
+  "choices": {
+   "A": "$0.30$",
+   "B": "$1.30$",
+   "C": "$2.70$",
+   "D": "$3.33$",
+   "E": "$4.33$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\log_b a = \\frac{1}{\\log_a b}$."
+  ],
+  "solution": "**What we need:** the approximation.\n\n**Key idea:** take the reciprocal.\n\n**Step 1.** $\\frac{1}{0.30} \\approx 3.33$.\n\n**Answer:** $3.33$. **(D)**\n\n**Common mistake:** subtracting from 1 instead of taking the reciprocal."
+ },
+ {
+  "id": "log_change_base_b13",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_fraction_base",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{\\frac{4}{5}} \\frac{64}{125}$?",
+  "choices": {
+   "A": "$-3$",
+   "B": "$\\frac{1}{3}$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$\\frac{64}{5}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Is the argument a power of the base?"
+  ],
+  "solution": "**What we need:** the log.\n\n**Key idea:** $\\frac{64}{125} = \\left(\\frac{4}{5}\\right)^{3}$.\n\n**Step 1.** So the log is $3$.\n\n**Answer:** $3$. **(C)**\n\n**Common mistake:** missing the sign when the fraction is flipped."
+ },
+ {
+  "id": "log_change_base_b14",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_exp_log",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $3^{\\log_{9} 5}$?",
+  "choices": {
+   "A": "$\\sqrt{5}$",
+   "B": "$\\frac{5}{2}$",
+   "C": "$5$",
+   "D": "$10$",
+   "E": "$25$"
+  },
+  "answer": "A",
+  "hints": [
+   "Rewrite the log in base 3."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $\\log_{9} 5 = \\frac{1}{2}\\log_{3} 5$.\n\n**Step 1.** $3^{\\frac{1}{2}\\log_{3} 5} = 5^{1/2} = \\sqrt{5}$.\n\n**Answer:** $\\sqrt{5}$. **(A)**\n\n**Common mistake:** answering 5."
+ },
+ {
+  "id": "log_change_base_b15",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_reciprocal_pair",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\dfrac{1}{\\log_{2} 144} + \\dfrac{1}{\\log_{6} 144}$?",
+  "choices": {
+   "A": "$\\frac{1}{8}$",
+   "B": "$\\frac{1}{3}$",
+   "C": "$\\frac{1}{2}$",
+   "D": "$1$",
+   "E": "$2$"
+  },
+  "answer": "C",
+  "hints": [
+   "Flip each log."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\frac{1}{\\log_a N} = \\log_N a$.\n\n**Step 1.** $\\log_{144} 2 + \\log_{144} 6 = \\log_{144} 12 = \\frac{1}{2}$.\n\n**Answer:** $\\frac{1}{2}$. **(C)**\n\n**Common mistake:** multiplying the logs."
+ },
+ {
+  "id": "log_change_base_b16",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_digits_10",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many digits does $5 \\cdot 10^{30}$ have?",
+  "choices": {
+   "A": "$30$",
+   "B": "$31$",
+   "C": "$32$",
+   "D": "$35$",
+   "E": "$150$"
+  },
+  "answer": "B",
+  "hints": [
+   "Count using $\\log_{10}$."
+  ],
+  "solution": "**What we need:** the number of digits.\n\n**Key idea:** a number with $\\lfloor \\log_{10} N \\rfloor = k$ has $k + 1$ digits.\n\n**Step 1.** $\\log_{10}(5 \\cdot 10^{30}) = 30 + \\log_{10} 5$, with floor $30$.\n\n**Step 2.** Digits: $31$.\n\n**Answer:** $31$. **(B)**\n\n**Common mistake:** answering 30."
+ },
+ {
+  "id": "log_change_base_b17",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_between",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The number $\\log_{2} 3259$ lies between which two consecutive integers? Give the smaller one.",
+  "choices": {
+   "A": "$10$",
+   "B": "$11$",
+   "C": "$12$",
+   "D": "$13$",
+   "E": "$1629$"
+  },
+  "answer": "B",
+  "hints": [
+   "Bracket 3259 between powers of 2."
+  ],
+  "solution": "**What we need:** the smaller integer.\n\n**Key idea:** find consecutive powers of the base around the number.\n\n**Step 1.** $2^{11} = 2048 < 3259 < 4096 = 2^{12}$.\n\n**Answer:** $11$. **(B)**\n\n**Common mistake:** picking the upper integer."
+ },
+ {
+  "id": "log_change_base_b18",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_log_of_inverse",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\log_{a} b = \\frac{5}{3}$, what is $\\log_{a} \\frac{1}{b} \\cdot \\log_{b} a \\cdot \\frac{1}{\\log_{a} b}$?",
+  "choices": {
+   "A": "$-\\frac{5}{3}$",
+   "B": "$-1$",
+   "C": "$-\\frac{3}{5}$",
+   "D": "$\\frac{3}{5}$",
+   "E": "$\\frac{5}{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $\\log_b a = \\frac{1}{\\log_a b}$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** rewrite each factor in terms of $t = \\log_{a} b$.\n\n**Step 1.** $\\log_{a} \\frac{1}{b} = -t$, $\\log_{b} a = \\frac{1}{t}$, last factor $\\frac{1}{t}$.\n\n**Step 2.** Product: $-t \\cdot \\frac{1}{t} \\cdot \\frac{1}{t} = -\\frac{1}{t} = -\\frac{3}{5}$.\n\n**Answer:** $-\\frac{3}{5}$. **(C)**\n\n**Common mistake:** dropping the negative sign."
+ },
+ {
+  "id": "log_change_base_b19",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_compare",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{8} x$ if $\\log_{2} x = 9$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$6$",
+   "D": "$9$",
+   "E": "$27$"
+  },
+  "answer": "A",
+  "hints": [
+   "Divide by the exponent of the base."
+  ],
+  "solution": "**What we need:** the log.\n\n**Key idea:** $\\log_{2^3} x = \\frac{\\log_{2} x}{3}$.\n\n**Step 1.** $\\frac{9}{3} = 3$.\n\n**Answer:** $3$. **(A)**\n\n**Common mistake:** multiplying by 3."
+ },
+ {
+  "id": "log_change_base_b20",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcb_power_eq",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $8^x = 4$, what is $x$?",
+  "choices": {
+   "A": "$\\frac{1}{2}$",
+   "B": "$\\frac{2}{3}$",
+   "C": "$\\frac{3}{2}$",
+   "D": "$\\frac{5}{3}$",
+   "E": "$2$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write both as powers of 2."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** $x = \\log_{8} 4$.\n\n**Step 1.** $2^{3x} = 2^{2}$, so $x = \\frac{2}{3}$.\n\n**Answer:** $\\frac{2}{3}$. **(B)**\n\n**Common mistake:** dividing the numbers."
+ },
+ {
+  "id": "log_change_base_c01",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcbc1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\log_a b + \\log_b a = 6$, what is $(\\log_a b)^2 + (\\log_b a)^2$?",
+  "choices": {
+   "A": "$12$",
+   "B": "$33$",
+   "C": "$34$",
+   "D": "$36$",
+   "E": "$38$"
+  },
+  "answer": "C",
+  "hints": [
+   "Let $t = \\log_a b$. Then $\\log_b a = \\frac{1}{t}$."
+  ],
+  "solution": "**What we need:** the sum of squares.\n\n**Key idea:** $\\log_b a = \\frac{1}{\\log_a b}$, so this is the classic $t + \\frac{1}{t}$ setup: square it.\n\n**Step 1.** Let $t = \\log_a b$. Then $t + \\frac{1}{t} = 6$.\n\n**Step 2.** Square: $t^2 + 2 + \\frac{1}{t^2} = 36$ (the middle term is $2 \\cdot t \\cdot \\frac{1}{t} = 2$).\n\n**Step 3.** $t^2 + \\frac{1}{t^2} = 36 - 2 = 34$.\n\n**Answer:** $34$. **(C)**\n\n**Common mistake:** answering $6^2 = 36$ and forgetting the middle term $2$."
+ },
+ {
+  "id": "log_change_base_c02",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcbc2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many positive integers $n$ satisfy $4 \\le \\log_{2} n < 7$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$111$",
+   "C": "$112$",
+   "D": "$113$",
+   "E": "$128$"
+  },
+  "answer": "C",
+  "hints": [
+   "Rewrite the inequality without logarithms."
+  ],
+  "solution": "**What we need:** a count of integers in a log range.\n\n**Key idea:** $\\log_{2}$ is increasing, so raise $2$ to each part of the inequality.\n\n**Step 1.** $2^{4} \\le n < 2^{7}$, that is, $16 \\le n < 128$.\n\n**Step 2.** The integers are $16, 17, \\ldots, 127$.\n\n**Step 3.** Count: $127 - 16 + 1 = 112$.\n\n**Answer:** $112$. **(C)**\n\n**Common mistake:** an off by one error at the ends: the left end is included, the right end is not."
+ },
+ {
+  "id": "log_change_base_c03",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcbc3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the greatest integer less than or equal to $\\log_{3} 30956$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$11$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the largest power of $3$ that is at most $30956$."
+  ],
+  "solution": "**What we need:** $\\lfloor \\log_{3} 30956 \\rfloor$.\n\n**Key idea:** $\\log_{3} 30956$ is between $k$ and $k + 1$ exactly when $30956$ is between $3^k$ and $3^{k+1}$. So find the powers of $3$ around $30956$.\n\n**Step 1.** Powers of $3$: $3^{7} = 2187$, $3^{8} = 6561$, $3^{9} = 19683$, $3^{10} = 59049$.\n\n**Step 2.** $19683 \\le 30956 < 59049$.\n\n**Step 3.** So $9 \\le \\log_{3} 30956 < 10$, and the floor is $9$.\n\n**Answer:** $9$. **(C)**\n\n**Common mistake:** counting the digits of the number, which only works for base $10$."
+ },
+ {
+  "id": "log_change_base_c04",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcbc_two_vars",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\log_N 2 = \\frac{1}{2}$ and $\\log_N 3 = \\frac{1}{5}$, what is $\\log_N 6$?",
+  "choices": {
+   "A": "$\\frac{1}{10}$",
+   "B": "$\\frac{1}{7}$",
+   "C": "$\\frac{2}{7}$",
+   "D": "$\\frac{7}{10}$",
+   "E": "$\\frac{17}{10}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$6 = 2 \\cdot 3$."
+  ],
+  "solution": "**What we need:** $\\log_N 6$.\n\n**Key idea:** the log of a product is the sum of the logs.\n\n**Step 1.** $\\frac{1}{2} + \\frac{1}{5} = \\frac{7}{10}$.\n\n**Answer:** $\\frac{7}{10}$. **(D)**\n\n**Common mistake:** adding denominators."
+ },
+ {
+  "id": "log_change_base_c05",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcbc_digits_power",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Using $\\log_{10} 2 \\approx 0.30103$, how many digits does $2^{34}$ have?",
+  "choices": {
+   "A": "$10$",
+   "B": "$11$",
+   "C": "$12$",
+   "D": "$13$",
+   "E": "$34$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\lfloor \\log_{10} N \\rfloor + 1$ digits."
+  ],
+  "solution": "**What we need:** the digit count.\n\n**Key idea:** compute $\\log_{10} 2^{34} = 34 \\log_{10} 2$.\n\n**Step 1.** $34 \\cdot 0.30103 \\approx 10.235$.\n\n**Step 2.** Floor plus 1: $11$.\n\n**Answer:** $11$. **(B)**\n\n**Common mistake:** forgetting to add 1."
+ },
+ {
+  "id": "log_change_base_c06",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcbc_symmetric",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\log_a b + \\log_b a = 5$, what is $(\\log_a b)^2 + (\\log_b a)^2 - (\\log_a b)(\\log_b a)$?",
+  "choices": {
+   "A": "$21$",
+   "B": "$22$",
+   "C": "$23$",
+   "D": "$24$",
+   "E": "$25$"
+  },
+  "answer": "B",
+  "hints": [
+   "$(\\log_a b)(\\log_b a) = 1$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** with $t + \\frac{1}{t} = 5$: $t^2 + \\frac{1}{t^2} = 5^2 - 2$.\n\n**Step 1.** $t^2 + \\frac{1}{t^2} = 23$; subtract $1$: $22$.\n\n**Answer:** $22$. **(B)**\n\n**Common mistake:** forgetting the product is 1."
+ },
+ {
+  "id": "log_change_base_c07",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcbc_count_range",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many positive integers $n$ satisfy $3 \\le \\log_{3} n \\le 5$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$9$",
+   "C": "$216$",
+   "D": "$217$",
+   "E": "$218$"
+  },
+  "answer": "D",
+  "hints": [
+   "Convert to bounds on $n$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $3^{3} \\le n \\le 3^{5}$.\n\n**Step 1.** $27 \\le n \\le 243$: $243 - 27 + 1 = 217$.\n\n**Answer:** $217$. **(D)**\n\n**Common mistake:** forgetting to include both endpoints."
+ },
+ {
+  "id": "log_change_base_c08",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcbc_log_sum_pairs",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\log_2 3 \\cdot \\log_3 2 + \\log_3 4 \\cdot \\log_4 3 + \\cdots + \\log_{7} 8 \\cdot \\log_{8} 7$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$3$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "D",
+  "hints": [
+   "Each product is $\\log_a b \\cdot \\log_b a$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\log_a b \\cdot \\log_b a = 1$ for each pair.\n\n**Step 1.** There are $6$ terms (from $k = 2$ to $7$), each equal to $1$.\n\n**Step 2.** Sum: $6$.\n\n**Answer:** $6$. **(D)**\n\n**Common mistake:** miscounting the terms."
+ },
+ {
+  "id": "log_change_base_c09",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcbc_abc",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\log_x w = 3$ and $\\log_y w = 5$, what is $\\log_{xy} w$?",
+  "choices": {
+   "A": "$\\frac{8}{15}$",
+   "B": "$\\frac{15}{8}$",
+   "C": "$4$",
+   "D": "$8$",
+   "E": "$15$"
+  },
+  "answer": "B",
+  "hints": [
+   "Flip: $\\log_w x = \\frac{1}{3}$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $\\log_w(xy) = \\frac{1}{3} + \\frac{1}{5}$, then flip back.\n\n**Step 1.** $\\log_w(xy) = \\frac{8}{15}$.\n\n**Step 2.** $\\log_{xy} w = \\frac{15}{8}$.\n\n**Answer:** $\\frac{15}{8}$. **(B)**\n\n**Common mistake:** adding the logs directly."
+ },
+ {
+  "id": "log_change_base_c10",
+  "skillId": "log_change_base",
+  "family": "log_change_base:lcbc_compare_powers",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Which is larger, $3^{120}$ or $5^{80}$? (Use $\\log_{10} 2 \\approx 0.301$, $\\log_{10} 3 \\approx 0.477$, $\\log_{10} 5 \\approx 0.699$, $\\log_{10} 7 \\approx 0.845$.)",
+  "choices": {
+   "A": "$3^{120}$",
+   "B": "$5^{80}$",
+   "C": "$\\text{they are equal}$",
+   "D": "$\\text{can't tell}$",
+   "E": "$\\text{neither}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Compare the logs."
+  ],
+  "solution": "**What we need:** the larger number.\n\n**Key idea:** compare $m\\log a$ with $n\\log b$.\n\n**Step 1.** $120 \\log 3 \\approx 57.3$ and $80 \\log 5 \\approx 55.9$.\n\n**Step 2.** So $3^{120}$ is larger.\n\n**Answer:** $3^{120}$. **(A)**\n\n**Common mistake:** comparing the exponents alone."
+ }
+]

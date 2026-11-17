@@ -1,0 +1,24 @@
+{
+  "id": "logarithms",
+  "title": "Logarithms",
+  "description": "Log rules, exponential and log equations, and change of base.",
+  "track": "amc12",
+  "order": 6,
+  "skills": [
+    {
+      "id": "log_rules",
+      "title": "Logarithm rules",
+      "description": "Evaluate and combine logarithms."
+    },
+    {
+      "id": "log_equations",
+      "title": "Exponential and log equations",
+      "description": "Solve equations with exponents and logs."
+    },
+    {
+      "id": "log_change_base",
+      "title": "Change of base and digits",
+      "description": "Change of base, counting digits and bounding logs."
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+---
+title: Exponents and radicals
+---
+
+An exponent is shorthand for repeated multiplication: $2^5 = 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 32$. Almost every exponent rule comes from simply **counting how many copies** are being multiplied. If you understand that, you never have to memorize the rules.
+
+By the end of this lesson you will be able to:
+
+- use the exponent rules without memorizing them,
+- explain what zero, negative and fractional exponents mean,
+- simplify square roots and clear roots from denominators,
+- compare huge powers like $2^{60}$ and $3^{40}$ without a calculator.
+
+## The rules are just counting
+
+| Rule | Why it's true |
+| --- | --- |
+| $a^m \cdot a^n = a^{m+n}$ | $m$ copies times $n$ more copies is $m + n$ copies |
+| $\dfrac{a^m}{a^n} = a^{m-n}$ | $n$ copies cancel from the top |
+| $(a^m)^n = a^{mn}$ | $n$ groups of $m$ copies each |
+| $(ab)^n = a^n b^n$ | rearrange the $n$ copies of $ab$ |
+
+<Trap>
+$(a + b)^2$ is **not** $a^2 + b^2$. Exponents spread over multiplication, never over addition: $(3 + 4)^2 = 49$ but $3^2 + 4^2 = 25$.
+</Trap>
+
+## Zero, negative and fractional exponents
+
+Look at the powers of 2 going down: $8, 4, 2, \ldots$ Each step left divides by 2. Keep going and the pattern forces the meaning of the strange exponents:
+
+$$
+2^3 = 8,\quad 2^2 = 4,\quad 2^1 = 2,\quad 2^0 = 1,\quad 2^{-1} = \tfrac{1}{2},\quad 2^{-2} = \tfrac{1}{4}.
+$$
+
+So $a^0 = 1$ and $a^{-n} = \dfrac{1}{a^n}$. Slide the base and watch every curve pass through $(0, 1)$.
+
+<Figure
+  bounds={[-3, 3, -0.5, 8]}
+  ticks={1}
+  height={340}
+  params={[{ name: "b", min: 0.25, max: 4, step: 0.25, value: 2, label: "base $b$" }]}
+  elements={[
+    { type: "func", f: "b^x", color: "accent", width: 3 },
+    { type: "point", x: 0, y: 1, color: "amber", label: "(0, 1)", labelDir: "nw" },
+    { type: "point", x: 1, y: "b", color: "teal", label: "(1, [[b]])", labelDir: "e" },
+    { type: "point", x: -1, y: "1/b", color: "pink", label: "(−1, [[1/b]])", labelDir: "w" },
+  ]}
+  readouts={["b^{0} = 1", "b^{1} = [[b]]", "b^{-1} = \\tfrac{1}{b} = [[1/b]]", "b^{1/2} = \\sqrt{b} = [[sqrt(b)]]"]}
+  caption="The graph of $y = b^x$. A negative exponent flips to the reciprocal. A base between 0 and 1 makes the curve fall."
+/>
+
+**Fractional exponents are roots.** Since $(a^{1/2})^2 = a^1 = a$, the number $a^{1/2}$ must be $\sqrt{a}$. In general
+
+$$
+a^{1/n} = \sqrt[n]{a}, \qquad a^{m/n} = \left(\sqrt[n]{a}\right)^m.
+$$
+
+<Tip title="Take the root first">
+For $8^{2/3}$, take the cube root first ($\sqrt[3]{8} = 2$), then square ($2^2 = 4$). Small numbers are easier than squaring 8 first and then finding $\sqrt[3]{64}$.
+</Tip>
+
+<Check choices={["$\\tfrac{1}{4}$", "$1$", "$2$", "$4$", "$16$"]} answer={3} explain="$(2^3)^2 = 2^6$, and $2^6 \cdot 2^{-4} = 2^{6 - 4} = 2^2 = 4$.">
+What is $(2^3)^2 \cdot 2^{-4}$?
+</Check>
+
+<Check choices={["$\\tfrac{1}{8}$", "$\\tfrac{1}{4}$", "$4$", "$8$", "$16$"]} answer={0} explain="$16^{-3/4}$: the fourth root of 16 is 2, cubed is 8, and the negative sign flips it: $\tfrac{1}{8}$.">
+What is $16^{-3/4}$?
+</Check>
+
+## Same base is the master key
+
+Most exponent equations on the AMC become easy once **both sides use the same base**. Rewrite 4, 8, 16, 32 as powers of 2; rewrite 9, 27, 81 as powers of 3.
+
+<Steps problem="Solve $4^{x+1} = 8^{x}$.">
+<Step title="Write both sides with base 2">
+$4 = 2^2$ and $8 = 2^3$, so the equation is $2^{2(x+1)} = 2^{3x}$.
+</Step>
+<Step title="Equal powers of the same base: match the exponents">
+$2x + 2 = 3x$, so $x = 2$.
+</Step>
+<Step title="Check">
+$4^3 = 64$ and $8^2 = 64$ ✓.
+</Step>
+</Steps>
+
+### Comparing giant powers
+
+Which is biggest: $2^{60}$, $3^{40}$, or $5^{20}$? Make the **exponents** match. All three exponents are multiples of 20:
+
+$$
+2^{60} = (2^3)^{20} = 8^{20}, \qquad 3^{40} = (3^2)^{20} = 9^{20}, \qquad 5^{20}.
+$$
+
+Now compare the bases: $9 > 8 > 5$, so $3^{40}$ is the largest.
+
+<Check choices={["$2^{100}$", "$3^{75}$", "$5^{50}$", "$7^{25}$", "$10^{25}$"]} answer={1} explain="Every exponent is a multiple of 25, so rewrite each as something to the 25th power: $2^{100} = 16^{25}$, $3^{75} = 27^{25}$, $5^{50} = 25^{25}$, $7^{25}$ and $10^{25}$. The biggest base is 27, so $3^{75}$ wins.">
+Which of these is the largest?
+</Check>
+
+## Simplifying square roots
+
+Pull out the **largest perfect square factor**:
+
+$$
+\sqrt{72} = \sqrt{36 \cdot 2} = \sqrt{36}\,\sqrt{2} = 6\sqrt{2}.
+$$
+
+Like roots combine like like terms: $3\sqrt{2} + 5\sqrt{2} = 8\sqrt{2}$, but $\sqrt{2} + \sqrt{3}$ cannot be combined.
+
+### Clearing a root from the bottom
+
+To remove a root from a denominator, multiply top and bottom by something that makes the root vanish:
+
+- one root: $\dfrac{6}{\sqrt{3}} = \dfrac{6\sqrt{3}}{3} = 2\sqrt{3}$,
+- a sum or difference: use the **conjugate**, because $(a - b)(a + b) = a^2 - b^2$.
+
+<Steps problem="Simplify $\dfrac{4}{\sqrt{5} - 1}$.">
+<Step>
+Multiply top and bottom by the conjugate $\sqrt{5} + 1$.
+</Step>
+<Step>
+Bottom: $(\sqrt{5} - 1)(\sqrt{5} + 1) = 5 - 1 = 4$. Top: $4(\sqrt{5} + 1)$.
+</Step>
+<Step>
+Cancel the 4: the answer is $\sqrt{5} + 1$.
+</Step>
+</Steps>
+
+<Check choices={["$3\\sqrt{2}$", "$5\\sqrt{2}$", "$7\\sqrt{2}$", "$9\\sqrt{2}$", "$\\sqrt{68}$"]} answer={2} explain="$\sqrt{50} = 5\sqrt{2}$ and $\sqrt{8} = 2\sqrt{2}$, so the sum is $7\sqrt{2}$. You cannot add under the root: $\sqrt{50 + 8} = \sqrt{58}$ is a different number.">
+What is $\sqrt{50} + \sqrt{8}$?
+</Check>
+
+<FlipCards cards={[
+  { front: "$27^{2/3}$", back: "$\\sqrt[3]{27} = 3$, then $3^2 = 9$." },
+  { front: "$5^0$ and $0^5$", back: "$5^0 = 1$ and $0^5 = 0$." },
+  { front: "Solve $9^x = 27$.", back: "$3^{2x} = 3^3$, so $x = \\tfrac{3}{2}$." },
+  { front: "$\\dfrac{1}{\\sqrt{2}}$ without a root below", back: "$\\dfrac{\\sqrt{2}}{2}$" },
+]} />
+
+<Recap>
+- Exponent rules come from counting copies: add when multiplying, subtract when dividing, multiply for a power of a power.
+- $a^0 = 1$, $a^{-n} = \tfrac{1}{a^n}$, $a^{m/n} = (\sqrt[n]{a})^m$.
+- Exponents never spread over addition.
+- To solve exponent equations, rewrite with the same base and match exponents.
+- To compare powers, rewrite with the same exponent and compare bases.
+- Simplify roots by pulling out the largest square factor; rationalize with the conjugate.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Exponent" /> and <AoPS q="Rationalizing the denominator" /> on the AoPS Wiki.
+- Exponent equations and power comparisons appear often in the middle of <Archive test="10" />.
+</GoFurther>

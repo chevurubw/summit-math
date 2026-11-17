@@ -1,0 +1,114 @@
+---
+title: Casework and complements
+---
+
+Two strategies handle most counting problems that don't fit a formula. **Casework** splits the problem into smaller pieces you can count separately. **Complementary counting** counts what you **don't** want and subtracts. Knowing which to use is half the battle.
+
+By the end of this lesson you will be able to:
+
+- split a problem into cases that don't overlap and don't miss anything,
+- choose a good variable to split on,
+- recognize "at least one" as a signal for the complement,
+- check your casework for gaps and double counts.
+
+## Casework
+
+Good cases are **disjoint** (no outcome is in two cases) and **complete** (every outcome is in some case). Then you just add.
+
+<Steps problem="In how many ways can you make 25 cents using pennies, nickels and dimes?">
+<Step title="Split on the biggest coin">
+Dimes can be 0, 1 or 2. Once dimes and nickels are chosen, pennies fill the rest in exactly one way.
+</Step>
+<Step title="0 dimes">
+Nickels: 0 to 5. That's 6 ways.
+</Step>
+<Step title="1 dime">
+15 cents left; nickels 0 to 3. That's 4 ways.
+</Step>
+<Step title="2 dimes">
+5 cents left; nickels 0 or 1. That's 2 ways.
+</Step>
+<Step title="Add">
+$6 + 4 + 2 = 12$.
+</Step>
+</Steps>
+
+<Tip title="Split on the most restrictive thing">
+Case on the variable with the fewest possible values, or the one that makes the rest simplest. In the coin problem, splitting on dimes gives only 3 cases.
+</Tip>
+
+<Check choices={["$4$", "$5$", "$6$", "$9$", "$10$"]} answer={1} explain="Tens digit 1 to 5, and the units digit is forced: 14, 23, 32, 41, 50. That's 5 numbers.">
+How many two digit numbers have digits that add up to 5?
+</Check>
+
+## Complementary counting
+
+$$
+\text{what you want} = \text{everything} - \text{what you don't want}
+$$
+
+This is best when "what you want" has **many** cases and its opposite has **few**. The signal phrase is "**at least one**": its opposite, "none", is a single simple case.
+
+<Steps problem="How many three digit numbers contain at least one 7?">
+<Step title="Count everything">
+There are 900 three digit numbers.
+</Step>
+<Step title="Count the opposite: no 7 at all">
+First digit: 1 to 9 except 7, so 8 choices. Other digits: 0 to 9 except 7, so 9 each. That's $8 \cdot 9 \cdot 9 = 648$.
+</Step>
+<Step title="Subtract">
+$900 - 648 = 252$.
+</Step>
+</Steps>
+
+Directly, you'd need cases for one 7, two 7s and three 7s in different positions. The complement takes one line.
+
+<Check choices={["$5$", "$10$", "$11$", "$12$", "$15$"]} answer={2} explain="16 outcomes in total. The opposite of 'at least two heads' is 'zero or one head': $1 + 4 = 5$ outcomes. So $16 - 5 = 11$.">
+A coin is flipped 4 times. In how many of the 16 outcomes are there at least two heads?
+</Check>
+
+<Figure
+  bounds={[0, 10, 0, 1.6]}
+  axes={false}
+  grid={false}
+  height={140}
+  params={[{ name: "k", min: 0, max: 10, step: 0.5, value: 3, label: "size of the complement" }]}
+  elements={[
+    { type: "polygon", pts: [[0.2, 0.3], [9.8, 0.3], [9.8, 1.2], [0.2, 1.2]], color: "muted", width: 1.5 },
+    { type: "polygon", pts: [[0.2, 0.3], ["0.2 + 0.96*(10 - k)", 0.3], ["0.2 + 0.96*(10 - k)", 1.2], [0.2, 1.2]], fill: "correct", color: "correct" },
+    { type: "polygon", pts: [["0.2 + 0.96*(10 - k)", 0.3], [9.8, 0.3], [9.8, 1.2], ["0.2 + 0.96*(10 - k)", 1.2]], fill: "wrong", color: "wrong" },
+    { type: "text", x: "0.2 + 0.48*(10 - k)", y: 0.65, text: "want", size: 14, show: "k < 9" },
+    { type: "text", x: "9.8 - 0.48*k", y: 0.65, text: "don't", size: 14, show: "k > 1" },
+  ]}
+  caption="Everything (the full bar) is split into what you want and what you don't. When the red part is small and simple, count it and subtract."
+/>
+
+## Casework and complements together
+
+Big problems often mix both: complement first to simplify, then casework on what remains.
+
+<Trap>
+After casework, sanity check: are any outcomes in two cases (double counting)? Did any outcome fall through the cracks? Testing your cases on a small version of the problem catches both.
+</Trap>
+
+<Check choices={["$144$", "$180$", "$200$", "$216$", "$252$"]} answer={2} explain="All three digit numbers with different digits: $9 \cdot 9 \cdot 8 = 648$. Those with no 5: the first digit has 8 choices (1 to 9 except 5), the second has 8 (0 to 9 except 5 and the first digit), the third has 7. That is $448$. So $648 - 448 = 200$.">
+How many three digit numbers with all different digits contain the digit 5?
+</Check>
+
+<FlipCards cards={[
+  { front: "Signal phrase for complementary counting", back: "\"At least one\" (its opposite is \"none\")." },
+  { front: "Outcomes of 3 dice with at least one 6", back: "$216 - 125 = 91$" },
+  { front: "What makes cases valid?", back: "They don't overlap, and together they cover everything." },
+  { front: "Subsets of $\\{1, \\ldots, 5\\}$ containing 1 or 2", back: "$32 - 8 = 24$ (complement: subsets of $\\{3,4,5\\}$)." },
+]} />
+
+<Recap>
+- Casework: split into disjoint, complete cases and add. Split on the most restrictive choice.
+- Complement: everything minus the opposite. Use it when the opposite is simpler, especially for "at least one".
+- Check for overlaps and gaps after casework.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Casework" /> and <AoPS q="Complementary counting" /> on the AoPS Wiki.
+- These two strategies are behind many counting problems in <Archive test="10" />.
+</GoFurther>

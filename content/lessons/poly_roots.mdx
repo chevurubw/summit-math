@@ -1,0 +1,118 @@
+---
+title: Finding and counting roots
+---
+
+A polynomial of degree $n$ has exactly $n$ roots, if you count complex ones and count repeats. This lesson is about tracking them down: guessing rational roots, pairing up conjugates, and reading the graph to count the real ones.
+
+By the end of this lesson you will be able to:
+
+- list every possible rational root with the Rational Root Theorem,
+- use conjugate pairs to find hidden roots,
+- understand repeated roots from the graph,
+- count real roots by checking signs.
+
+## The Rational Root Theorem
+
+If a polynomial with integer coefficients has a rational root $\tfrac{p}{q}$ in lowest terms, then
+
+$$
+p \text{ divides the constant term} \quad\text{and}\quad q \text{ divides the leading coefficient.}
+$$
+
+That gives a short list of candidates to test with the Factor Theorem.
+
+<Steps problem="Find the rational roots of $2x^3 - 3x^2 - 3x + 2$.">
+<Step title="List candidates">
+$p$ divides 2 and $q$ divides 2: $\pm 1, \pm 2, \pm \tfrac{1}{2}$.
+</Step>
+<Step title="Test">
+$P(2) = 16 - 12 - 6 + 2 = 0$ ✓. $P(-1) = -2 - 3 + 3 + 2 = 0$ ✓. $P(\tfrac12) = \tfrac14 - \tfrac34 - \tfrac32 + 2 = 0$ ✓.
+</Step>
+<Step title="Done">
+Three roots for a cubic: $2, -1, \tfrac12$. So $2x^3 - 3x^2 - 3x + 2 = (x - 2)(x + 1)(2x - 1)$.
+</Step>
+</Steps>
+
+<Check choices={["$\\tfrac{3}{2}$", "$\\tfrac{1}{2}$", "$3$", "$-1$", "$\\tfrac{2}{3}$"]} answer={4} explain="Numerators must divide 3 and denominators must divide 2. In $\tfrac{2}{3}$ the numerator 2 doesn't divide 3 (and 3 doesn't divide 2), so it can't be a root.">
+Which of these can **not** be a root of $2x^3 + 5x^2 - x + 3$, according to the Rational Root Theorem?
+</Check>
+
+## Conjugate pairs
+
+If a polynomial has **real** coefficients and $a + bi$ is a root, then so is $a - bi$. If it has **rational** coefficients and $a + \sqrt{b}$ is a root (with $\sqrt b$ irrational), then so is $a - \sqrt{b}$.
+
+Each pair multiplies to a nice quadratic factor:
+
+$$
+\big(x - (a + bi)\big)\big(x - (a - bi)\big) = x^2 - 2ax + (a^2 + b^2).
+$$
+
+<Check choices={["$x^2 + 4x + 5$", "$x^2 - 4x + 3$", "$x^2 - 4x + 5$", "$x^2 + 4x - 5$", "$x^2 - 2x + 5$"]} answer={2} explain="The conjugate $2 - i$ is also a root. Sum $4$, product $(2 + i)(2 - i) = 5$, so the factor is $x^2 - 4x + 5$.">
+A polynomial with real coefficients has $2 + i$ as a root. Which must be a factor?
+</Check>
+
+<Check choices={["$-3$", "$-1$", "$1$", "$3$", "$6$"]} answer={3} explain="$1 - \sqrt{2}$ is also a root. The pair gives $x^2 - 2x - 1$ (sum 2, product $1 - 2 = -1$). So $P(x) = (x^2 - 2x - 1)(x - 3)$ and $P(0) = (-1)(-3) = 3$.">
+$P(x)$ is a monic cubic with rational coefficients, and two of its roots are $1 + \sqrt{2}$ and $3$. What is $P(0)$?
+</Check>
+
+## Repeated roots: bounce or cross
+
+A factor $(x - a)^m$ makes $a$ a root of **multiplicity** $m$. On the graph, an odd multiplicity **crosses** the axis and an even one **bounces** off it. Higher multiplicity flattens the curve near the root.
+
+<Figure
+  bounds={[-3.5, 3, -4, 4]}
+  ticks={1}
+  height={340}
+  equal={false}
+  params={[{ name: "m", min: 1, max: 4, step: 1, value: 2, label: "multiplicity $m$ of the root at 1", play: true, speed: 1 }]}
+  elements={[
+    { type: "func", f: "0.5*(x + 2)*(x - 1)^m", color: "accent", width: 3 },
+    { type: "point", x: -2, y: 0, color: "blue", label: "−2", labelDir: "nw" },
+    { type: "point", x: 1, y: 0, color: "amber", label: "1", labelDir: "se" },
+  ]}
+  readouts={["y = \\tfrac{1}{2}(x + 2)(x - 1)^{[[m]]}"]}
+  caption="Even $m$: the graph touches the axis at 1 and turns back. Odd $m$: it passes through."
+/>
+
+## Counting real roots
+
+Between two inputs where a polynomial has opposite signs, it must cross zero at least once. Check a few values and count sign changes.
+
+<Steps problem="How many real roots does $x^3 - 3x + 1$ have?">
+<Step title="Evaluate">
+$P(-2) = -1$, $P(-1) = 3$, $P(1) = -1$, $P(2) = 3$.
+</Step>
+<Step title="Count sign changes">
+Negative to positive to negative to positive: three changes, so at least three real roots.
+</Step>
+<Step title="Conclude">
+A cubic has at most three roots, so exactly three.
+</Step>
+</Steps>
+
+<Tip>
+Graphs are a counting tool. To count solutions of an equation like $x^3 = 3x - 1$, sketch both sides and count the intersections.
+</Tip>
+
+<Trap>
+Complex roots of real polynomials come in pairs, so a real polynomial of **odd** degree always has at least one real root, and the number of non-real roots is always even.
+</Trap>
+
+<FlipCards cards={[
+  { front: "Candidates for rational roots of $3x^2 + x - 2$", back: "$\\pm 1, \\pm 2, \\pm\\tfrac13, \\pm\\tfrac23$" },
+  { front: "Degree 5, real coefficients, roots $i$ and $2 - 3i$. How many real roots?", back: "Exactly 1 (the other four are $\\pm i$, $2 \\pm 3i$)" },
+  { front: "Multiplicity of 3 in $(x - 3)^4(x + 1)$", back: "4: the graph bounces" },
+  { front: "Total roots of a degree $n$ polynomial", back: "$n$, counting complex and repeated roots" },
+]} />
+
+<Recap>
+- Rational roots $\tfrac{p}{q}$: $p$ divides the constant, $q$ divides the leading coefficient.
+- Real coefficients: complex roots come in conjugate pairs. Rational coefficients: $a \pm \sqrt b$ pairs.
+- Odd multiplicity crosses, even bounces.
+- Sign changes guarantee real roots in between.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Rational Root Theorem" /> on the AoPS Wiki.
+- Practice in <Archive test="12" />.
+</GoFurther>

@@ -1,0 +1,134 @@
+---
+title: 3D solids
+---
+
+A **solid** is a three dimensional shape. For each kind you need two numbers: its **volume** (how much it holds, in cubic units) and its **surface area** (how much paper would wrap it, in square units). The most important skill is not memorizing formulas but **finding a right triangle hidden inside the solid**.
+
+By the end of this lesson you will be able to:
+
+- find volumes and surface areas of prisms, cylinders, pyramids, cones and spheres,
+- find the long diagonal of a box,
+- find a cone's slant height,
+- predict how volume changes when you scale a shape.
+
+## The formulas
+
+| Solid | Volume | Surface area |
+| --- | --- | --- |
+| box $a \times b \times c$ | $abc$ | $2(ab + bc + ca)$ |
+| cube, edge $s$ | $s^3$ | $6s^2$ |
+| prism or cylinder | base area $\times$ height | two bases plus the sides |
+| cylinder, radius $r$, height $h$ | $\pi r^2 h$ | $2\pi r^2 + 2\pi r h$ |
+| pyramid or cone | $\tfrac{1}{3}$ base area $\times$ height | base plus the slanted faces |
+| cone, radius $r$, slant $\ell$ | $\tfrac{1}{3}\pi r^2 h$ | $\pi r^2 + \pi r \ell$ |
+| sphere, radius $r$ | $\tfrac{4}{3}\pi r^3$ | $4\pi r^2$ |
+
+<KeyIdea title="Two ideas cover almost everything">
+1. **Prism rule:** a shape with the same cross section all the way up has volume $=$ base area $\times$ height.
+2. **Pointy rule:** a shape that tapers to a point (pyramid, cone) has exactly $\tfrac{1}{3}$ of that.
+</KeyIdea>
+
+## The space diagonal of a box
+
+The longest straight line inside an $a \times b \times c$ box goes from one corner to the opposite corner. Use Pythagoras **twice**: first across the floor, then up.
+
+<Figure
+  bounds={[-0.5, 9.5, -0.5, 7.5]}
+  axes={false}
+  grid={false}
+  height={360}
+  params={[
+    { name: "a", min: 2, max: 6, step: 1, value: 4, label: "length $a$" },
+    { name: "b", min: 1, max: 4, step: 1, value: 3, label: "depth $b$" },
+    { name: "c", min: 1, max: 5, step: 1, value: 4, label: "height $c$" },
+  ]}
+  elements={[
+    { type: "polygon", pts: [[0, 0], ["a", 0], ["a", "c"], [0, "c"]], color: "muted", width: 2 },
+    { type: "polygon", pts: [["0.6*b", "0.5*b"], ["a + 0.6*b", "0.5*b"], ["a + 0.6*b", "c + 0.5*b"], ["0.6*b", "c + 0.5*b"]], color: "muted", width: 1.2, dashed: true },
+    { type: "segment", a: ["a", 0], b: ["a + 0.6*b", "0.5*b"], color: "muted", width: 2 },
+    { type: "segment", a: ["a", "c"], b: ["a + 0.6*b", "c + 0.5*b"], color: "muted", width: 2 },
+    { type: "segment", a: [0, "c"], b: ["0.6*b", "c + 0.5*b"], color: "muted", width: 2 },
+    { type: "segment", a: [0, 0], b: ["0.6*b", "0.5*b"], color: "muted", width: 1.2, dashed: true },
+    { type: "segment", a: [0, 0], b: ["a + 0.6*b", "0.5*b"], color: "teal", width: 2.5 },
+    { type: "segment", a: ["a + 0.6*b", "0.5*b"], b: ["a + 0.6*b", "c + 0.5*b"], color: "amber", width: 2.5 },
+    { type: "segment", a: [0, 0], b: ["a + 0.6*b", "c + 0.5*b"], color: "accent", width: 3.5 },
+    { type: "text", x: "(a + 0.6*b)/2 + 0.3", y: "0.25*b - 0.4", text: "floor diagonal", color: "teal", size: 13 },
+  ]}
+  readouts={["\\color{#2dd4bf} \\text{floor} = \\sqrt{[[a]]^2 + [[b]]^2} = [[sqrt(a^2+b^2):3]]", "\\color{#a78bfa} \\text{space} = \\sqrt{[[a]]^2 + [[b]]^2 + [[c]]^2} = [[sqrt(a^2+b^2+c^2):3]]"]}
+  caption="The floor diagonal (green) and the height (yellow) are the legs of a right triangle whose hypotenuse is the space diagonal."
+/>
+
+<Formula>
+
+$$
+\text{space diagonal} = \sqrt{a^2 + b^2 + c^2}, \qquad \text{for a cube: } s\sqrt{3}.
+$$
+
+</Formula>
+
+<Check choices={["$\\sqrt{41}$", "$7$", "$5\\sqrt{2}$", "$\\sqrt{61}$", "$13$"]} answer={4} explain="$\sqrt{3^2 + 4^2 + 12^2} = \sqrt{9 + 16 + 144} = \sqrt{169} = 13$.">
+How long is the space diagonal of a $3 \times 4 \times 12$ box?
+</Check>
+
+## Cones: the slant height
+
+A cone's height $h$, its radius $r$ and its **slant height** $\ell$ (from the tip down the side to the rim) form a right triangle:
+
+$$
+r^2 + h^2 = \ell^2.
+$$
+
+Use $h$ for the volume and $\ell$ for the curved surface area. Mixing them up is the classic error.
+
+<Steps problem="A cone has radius 6 and slant height 10. Find its volume.">
+<Step title="Find the height">
+$h = \sqrt{10^2 - 6^2} = 8$.
+</Step>
+<Step title="Volume">
+$\tfrac{1}{3}\pi \cdot 6^2 \cdot 8 = 96\pi$.
+</Step>
+</Steps>
+
+<Trap>
+Volume formulas use the **perpendicular height**, never the slant height. Surface area formulas for cones and pyramids use the **slant height**.
+</Trap>
+
+## Scaling
+
+If every length of a solid is multiplied by $k$, its surface area multiplies by $k^2$ and its volume by $k^3$. Double the radius of a sphere and it holds $2^3 = 8$ times as much.
+
+<Check choices={["$2$", "$4$", "$6$", "$8$", "$16$"]} answer={1} explain="Volume ratio $64 = k^3$ gives $k = 4$, and the radius scales by the length factor $k = 4$.">
+One sphere has 64 times the volume of another. How many times larger is its radius?
+</Check>
+
+## Melting and pouring
+
+When a solid is melted and recast, or water is poured from one container to another, **volume stays the same**. Set the two volume formulas equal.
+
+<Check choices={["$1$", "$2$", "$3$", "$4$", "$6$"]} answer={3} explain="The metal's volume stays the same: $\tfrac{4}{3}\pi \cdot 3^3 = 36\pi$. In the cylinder: $\pi \cdot 3^2 \cdot h = 36\pi$, so $h = 4$.">
+A solid metal ball of radius 3 is melted down and recast as a solid cylinder of radius 3. How tall is the cylinder?
+</Check>
+
+<Tip>
+For surface area of a weird solid, count faces systematically: front and back, left and right, top and bottom. For volume of a weird solid, think "big box minus what's missing".
+</Tip>
+
+<FlipCards cards={[
+  { front: "Volume of a cylinder, radius 2, height 5", back: "$20\\pi$" },
+  { front: "Surface area of a cube with volume 27", back: "Edge 3, so $6 \\cdot 9 = 54$." },
+  { front: "Volume of a square pyramid, base 6 by 6, height 5", back: "$\\tfrac{1}{3} \\cdot 36 \\cdot 5 = 60$" },
+  { front: "Sphere surface area with radius 3", back: "$36\\pi$" },
+]} />
+
+<Recap>
+- Prism or cylinder: base area times height. Pyramid or cone: one third of that.
+- Sphere: $V = \frac{4}{3}\pi r^3$, $S = 4\pi r^2$.
+- Space diagonal $\sqrt{a^2 + b^2 + c^2}$; cone $r^2 + h^2 = \ell^2$.
+- Scale by $k$: area $\times k^2$, volume $\times k^3$.
+- Melting and pouring keep the volume.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Volume" />, <AoPS q="Surface area" /> and <AoPS q="Cone" /> on the AoPS Wiki.
+- 3D problems appear a few times a year in <Archive test="10" />.
+</GoFurther>

@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "ser_recursion_b01",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:rc1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A sequence has $a_1 = 5$, $a_2 = 5$, and $a_n = a_{n-1} + a_{n-2}$ for $n \\ge 3$. What is $a_{8}$?",
+  "choices": {
+   "A": "$65$",
+   "B": "$105$",
+   "C": "$106$",
+   "D": "$145$",
+   "E": "$210$"
+  },
+  "answer": "B",
+  "hints": [
+   "Compute the terms one at a time."
+  ],
+  "solution": "**What we need:** the $8$th term.\n\n**Key idea:** each term is the sum of the two before it. Build the list one term at a time.\n\n**Step 1.** $a_3 = 5 + 5 = 10$, $a_4 = 10 + 5 = 15$, and so on.\n\n**Step 2.** Terms: $a_{1} = 5$, $a_{2} = 5$, $a_{3} = 10$, $a_{4} = 15$, $a_{5} = 25$, $a_{6} = 40$, $a_{7} = 65$, $a_{8} = 105$.\n\n**Answer:** $105$. **(B)**\n\n**Common mistake:** stopping one term early or late; count the index carefully."
+ },
+ {
+  "id": "ser_recursion_b02",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:rc2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $a_1 = 5$ and $a_{n+1} = 2a_n - 2$, what is $a_{6}$?",
+  "choices": {
+   "A": "$50$",
+   "B": "$96$",
+   "C": "$97$",
+   "D": "$98$",
+   "E": "$196$"
+  },
+  "answer": "D",
+  "hints": [
+   "Apply the rule repeatedly."
+  ],
+  "solution": "**What we need:** $a_{6}$.\n\n**Key idea:** apply the rule (multiply by $2$, then subtract $2$) over and over.\n\n**Step 1.** $a_{2} = 2 \\cdot 5 - 2 = 8$\n\n**Step 2.** $a_{3} = 2 \\cdot 8 - 2 = 14$\n\n**Step 3.** $a_{4} = 2 \\cdot 14 - 2 = 26$\n\n**Step 4.** $a_{5} = 2 \\cdot 26 - 2 = 50$\n\n**Step 5.** $a_{6} = 2 \\cdot 50 - 2 = 98$\n\n**Answer:** $98$. **(D)**\n\n**Common mistake:** adding $2$ before multiplying; the order in the rule matters."
+ },
+ {
+  "id": "ser_recursion_b03",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:rc3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A sequence has $a_1 = -2$, $a_2 = 3$, and $a_{n} = a_{n-1} - a_{n-2}$ for $n \\ge 3$. What is $a_{60}$?",
+  "choices": {
+   "A": "$-5$",
+   "B": "$-2$",
+   "C": "$1$",
+   "D": "$3$",
+   "E": "$5$"
+  },
+  "answer": "A",
+  "hints": [
+   "Write out the first eight terms and look for a cycle."
+  ],
+  "solution": "**What we need:** $a_{60}$, far down the sequence.\n\n**Key idea:** a far term almost always means the sequence repeats. Write out terms until you see the start again.\n\n**Step 1.** Terms: $a_{1} = -2$, $a_{2} = 3$, $a_{3} = 5$, $a_{4} = 2$, $a_{5} = -3$, $a_{6} = -5$, $a_{7} = -2$, $a_{8} = 3$.\n\n**Step 2.** $a_7 = a_1$ and $a_8 = a_2$, so the sequence repeats every $6$ terms.\n\n**Step 3.** $60 = 6 \\cdot 9 + 6$, so $a_{60} = a_{6} = -5$.\n\n**Answer:** $-5$. **(A)**\n\n**Common mistake:** an off by one error when matching the remainder to a position."
+ },
+ {
+  "id": "ser_recursion_b04",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:rc4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The sum of the first $n$ terms of a sequence is $S_n = 4n^2 - 1n$ for every $n$. What is the $24$th term?",
+  "choices": {
+   "A": "$186$",
+   "B": "$187$",
+   "C": "$191$",
+   "D": "$195$",
+   "E": "$2280$"
+  },
+  "answer": "B",
+  "hints": [
+   "$a_n = S_n - S_{n-1}$."
+  ],
+  "solution": "**What we need:** the single term $a_{24}$.\n\n**Key idea:** $S_{24}$ and $S_{23}$ contain the same terms except the last one, so $a_n = S_n - S_{n-1}$.\n\n**Step 1.** $S_{24} = 4 \\cdot 24^2 - 1 \\cdot 24 = 2280$.\n\n**Step 2.** $S_{23} = 4 \\cdot 23^2 - 1 \\cdot 23 = 2093$.\n\n**Step 3.** $a_{24} = 2280 - (2093) = 187$.\n\n**Answer:** $187$. **(B)**\n\n**Common mistake:** answering $S_{24}$, which is the sum of all $24$ terms."
+ },
+ {
+  "id": "ser_recursion_b05",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_arith",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "An arithmetic sequence starts $-20, -15, -10, \\ldots$. What is term number $16$?",
+  "choices": {
+   "A": "$-1600$",
+   "B": "$50$",
+   "C": "$55$",
+   "D": "$56$",
+   "E": "$60$"
+  },
+  "answer": "C",
+  "hints": [
+   "$a_n = a_1 + (n - 1)d$."
+  ],
+  "solution": "**What we need:** the term.\n\n**Key idea:** start at $a_1$ and add $d$ a total of $n - 1$ times.\n\n**Step 1.** $d = 5$.\n\n**Step 2.** $-20 + 15 \\cdot 5 = 55$.\n\n**Answer:** $55$. **(C)**\n\n**Common mistake:** using $n$ steps instead of $n - 1$."
+ },
+ {
+  "id": "ser_recursion_b06",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_geo",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A geometric sequence starts $-5, -15, -45, \\ldots$. What is term number $9$?",
+  "choices": {
+   "A": "$-98{,}415$",
+   "B": "$-32{,}805$",
+   "C": "$-32{,}804$",
+   "D": "$-10{,}935$",
+   "E": "$32{,}805$"
+  },
+  "answer": "B",
+  "hints": [
+   "$a_n = a_1 r^{n - 1}$."
+  ],
+  "solution": "**What we need:** the term.\n\n**Key idea:** multiply by the ratio $n - 1$ times.\n\n**Step 1.** $r = 3$.\n\n**Step 2.** $-5 \\cdot (3)^{8} = -32{,}805$.\n\n**Answer:** $-32{,}805$. **(B)**\n\n**Common mistake:** using $n$ factors of $r$."
+ },
+ {
+  "id": "ser_recursion_b07",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_two_terms",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In an arithmetic sequence, $a_{3} = 6$ and $a_{11} = 14$. What is $a_{27}$?",
+  "choices": {
+   "A": "$-10$",
+   "B": "$4$",
+   "C": "$29$",
+   "D": "$30$",
+   "E": "$31$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find the common difference first."
+  ],
+  "solution": "**What we need:** $a_{27}$.\n\n**Key idea:** $d = \\frac{a_{11} - a_{3}}{11 - 3}$.\n\n**Step 1.** $d = \\frac{8}{8} = 1$.\n\n**Step 2.** $a_{27} = 6 + (27 - 3) \\cdot 1 = 30$.\n\n**Answer:** $30$. **(D)**\n\n**Common mistake:** dividing by the wrong gap."
+ },
+ {
+  "id": "ser_recursion_b08",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_alt",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $a_1 = 5$ and $a_{n+1} = -2 - a_n$, what is $a_{58}$?",
+  "choices": {
+   "A": "$-7$",
+   "B": "$-6$",
+   "C": "$-2$",
+   "D": "$5$",
+   "E": "$7$"
+  },
+  "answer": "A",
+  "hints": [
+   "Write out a few terms."
+  ],
+  "solution": "**What we need:** $a_{58}$.\n\n**Key idea:** the sequence alternates between two values.\n\n**Step 1.** $a_1 = 5$, $a_2 = -7$, $a_3 = 5$, ...\n\n**Step 2.** $58$ is even, so $a_{58} = -7$.\n\n**Answer:** $-7$. **(A)**\n\n**Common mistake:** computing the wrong parity."
+ },
+ {
+  "id": "ser_recursion_b09",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_sum_arith",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of the first $40$ terms of the arithmetic sequence $-7, -11, -15, \\ldots$?",
+  "choices": {
+   "A": "$-6{,}520$",
+   "B": "$-3{,}480$",
+   "C": "$-3{,}404$",
+   "D": "$-3{,}400$",
+   "E": "$-3{,}393$"
+  },
+  "answer": "D",
+  "hints": [
+   "Average of first and last, times $n$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $S_n = \\frac{n}{2}(a_1 + a_n)$.\n\n**Step 1.** $a_{40} = -163$.\n\n**Step 2.** $\\frac{40}{2}(-7 - 163) = -3{,}400$.\n\n**Answer:** $-3{,}400$. **(D)**\n\n**Common mistake:** using $a_{n+1}$ as the last term."
+ },
+ {
+  "id": "ser_recursion_b10",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_square_minus",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $a_1 = 2$ and $a_{n+1} = a_n^2 - 1$, what is $a_4$?",
+  "choices": {
+   "A": "$-63$",
+   "B": "$8$",
+   "C": "$63$",
+   "D": "$64$",
+   "E": "$65$"
+  },
+  "answer": "C",
+  "hints": [
+   "Compute step by step."
+  ],
+  "solution": "**What we need:** $a_4$.\n\n**Key idea:** apply the rule three times.\n\n**Step 1.** $a_2 = 3$, $a_3 = 8$, $a_4 = 63$.\n\n**Answer:** $63$. **(C)**\n\n**Common mistake:** stopping at $a_3$."
+ },
+ {
+  "id": "ser_recursion_b11",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_recip",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $a_1 = -\\frac{2}{3}$ and $a_{n+1} = \\dfrac{1}{1 - a_n}$, what is $a_{83}$?",
+  "choices": {
+   "A": "$-\\frac{2}{3}$",
+   "B": "$-\\frac{3}{5}$",
+   "C": "$\\frac{3}{5}$",
+   "D": "$\\frac{8}{5}$",
+   "E": "$\\frac{5}{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Compute a few terms."
+  ],
+  "solution": "**What we need:** $a_{83}$.\n\n**Key idea:** the sequence repeats every 3 terms.\n\n**Step 1.** $a_1 = -\\frac{2}{3}$, $a_2 = \\frac{3}{5}$, $a_3 = \\frac{5}{2}$, $a_4 = -\\frac{2}{3}$, ...\n\n**Step 2.** $83 \\equiv 2 \\pmod 3$, so $a_{83} = \\frac{3}{5}$.\n\n**Answer:** $\\frac{3}{5}$. **(C)**\n\n**Common mistake:** miscounting the cycle position."
+ },
+ {
+  "id": "ser_recursion_b12",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_index",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In the arithmetic sequence $-5, 2, 9, \\ldots$, which term equals $457$?",
+  "choices": {
+   "A": "$\\frac{457}{7}$",
+   "B": "$66$",
+   "C": "$67$",
+   "D": "$68$",
+   "E": "$134$"
+  },
+  "answer": "C",
+  "hints": [
+   "Solve $a_1 + (n - 1)d = 457$."
+  ],
+  "solution": "**What we need:** $n$.\n\n**Key idea:** rearrange the term formula.\n\n**Step 1.** $(n - 1) \\cdot 7 = 462$, $n - 1 = 66$, $n = 67$.\n\n**Answer:** $67$. **(C)**\n\n**Common mistake:** forgetting to add 1."
+ },
+ {
+  "id": "ser_recursion_b13",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_second",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $a_1 = 4$, $a_2 = 6$, and $a_n = 3a_{n-1} - 2a_{n-2}$, what is $a_{5}$?",
+  "choices": {
+   "A": "$18$",
+   "B": "$31$",
+   "C": "$34$",
+   "D": "$35$",
+   "E": "$66$"
+  },
+  "answer": "C",
+  "hints": [
+   "Build up term by term."
+  ],
+  "solution": "**What we need:** $a_{5}$.\n\n**Key idea:** apply the recurrence repeatedly.\n\n**Step 1.** Terms: 4, 6, 10, 18, 34.\n\n**Answer:** $34$. **(C)**\n\n**Common mistake:** mixing up which term gets which coefficient."
+ },
+ {
+  "id": "ser_recursion_b14",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_count",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many terms are in the list $2, 10, 18, \\ldots, 434$?",
+  "choices": {
+   "A": "$54$",
+   "B": "$\\frac{217}{4}$",
+   "C": "$55$",
+   "D": "$56$",
+   "E": "$432$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\frac{\\text{last} - \\text{first}}{d} + 1$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** count the steps, then add one.\n\n**Step 1.** $\\frac{434 - 2}{8} + 1 = 54 + 1 = 55$.\n\n**Answer:** $55$. **(C)**\n\n**Common mistake:** forgetting the $+1$."
+ },
+ {
+  "id": "ser_recursion_b15",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_triangular",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Dots are arranged in triangles: $1$ dot, then $3$, then $6$, then $10$, ... (row $k$ adds $k$ dots). How many dots are in the $29$th triangle?",
+  "choices": {
+   "A": "$406$",
+   "B": "$435$",
+   "C": "$464$",
+   "D": "$841$",
+   "E": "$870$"
+  },
+  "answer": "B",
+  "hints": [
+   "$T_n = 1 + 2 + \\cdots + n$."
+  ],
+  "solution": "**What we need:** $T_n$.\n\n**Key idea:** triangular numbers.\n\n**Step 1.** $\\frac{29 \\cdot 30}{2} = 435$.\n\n**Answer:** $435$. **(B)**\n\n**Common mistake:** using $n^2$."
+ },
+ {
+  "id": "ser_recursion_b16",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_fib_sum",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "With $F_1 = F_2 = 1$ and $F_{k} = F_{k-1} + F_{k-2}$, what is $F_1 + F_2 + \\cdots + F_{7}$?",
+  "choices": {
+   "A": "$20$",
+   "B": "$21$",
+   "C": "$32$",
+   "D": "$33$",
+   "E": "$34$"
+  },
+  "answer": "D",
+  "hints": [
+   "$F_1 + \\cdots + F_n = F_{n+2} - 1$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** each $F_k = F_{k+2} - F_{k+1}$, so the sum telescopes.\n\n**Step 1.** $F_{9} = 34$.\n\n**Step 2.** Sum: $33$.\n\n**Answer:** $33$. **(D)**\n\n**Common mistake:** forgetting the $-1$."
+ },
+ {
+  "id": "ser_recursion_b17",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_geo_mean",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The numbers $10$, $x$, $40$ form a geometric sequence with $x > 0$. What is $x$?",
+  "choices": {
+   "A": "$20$",
+   "B": "$21$",
+   "C": "$25$",
+   "D": "$40$",
+   "E": "$400$"
+  },
+  "answer": "A",
+  "hints": [
+   "$x^2 = 10 \\cdot 40$."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** the middle term of a geometric sequence is the geometric mean.\n\n**Step 1.** $x^2 = 400$, $x = 20$.\n\n**Answer:** $20$. **(A)**\n\n**Common mistake:** taking the arithmetic mean."
+ },
+ {
+  "id": "ser_recursion_b18",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_odd_diff",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $a_1 = -5$ and $a_{n+1} = a_n + 2n + 1$, what is $a_{7}$?",
+  "choices": {
+   "A": "$31$",
+   "B": "$43$",
+   "C": "$44$",
+   "D": "$49$",
+   "E": "$58$"
+  },
+  "answer": "B",
+  "hints": [
+   "The differences are $3, 5, 7, \\ldots$."
+  ],
+  "solution": "**What we need:** $a_{7}$.\n\n**Key idea:** $a_N = a_1 + (3 + 5 + \\cdots + (2N - 1))$.\n\n**Step 1.** $3 + 5 + \\cdots + 13 = 7^2 - 1 = 48$.\n\n**Step 2.** $a_{7} = -5 + 48 = 43$.\n\n**Answer:** $43$. **(B)**\n\n**Common mistake:** forgetting the sum starts at 3."
+ },
+ {
+  "id": "ser_recursion_b19",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_units_fib",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "With $F_1 = F_2 = 1$ and $F_k = F_{k-1} + F_{k-2}$, what is the units digit of $F_{98}$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$2$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$9$"
+  },
+  "answer": "E",
+  "hints": [
+   "Units digits repeat with period 60."
+  ],
+  "solution": "**What we need:** the units digit.\n\n**Key idea:** track the sequence mod 10; it cycles every 60 terms.\n\n**Step 1.** $98 \\bmod 60 = 38$; $F_{38}$ has units digit $9$.\n\n**Answer:** $9$. **(E)**\n\n**Common mistake:** assuming a period of 10."
+ },
+ {
+  "id": "ser_recursion_b20",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srec_product",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $a_1 = 7$ and $a_{n+1} = \\dfrac{n + 1}{n} a_n$, what is $a_{70}$?",
+  "choices": {
+   "A": "$70$",
+   "B": "$77$",
+   "C": "$483$",
+   "D": "$490$",
+   "E": "$497$"
+  },
+  "answer": "D",
+  "hints": [
+   "Multiply the ratios."
+  ],
+  "solution": "**What we need:** $a_{70}$.\n\n**Key idea:** the product $\\frac{2}{1} \\cdot \\frac{3}{2} \\cdots \\frac{N}{N - 1}$ telescopes to $N$.\n\n**Step 1.** $a_{70} = 7 \\cdot 70 = 490$.\n\n**Answer:** $490$. **(D)**\n\n**Common mistake:** off by one in the last factor."
+ },
+ {
+  "id": "ser_recursion_c01",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:rcc1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $a_1 = 10$ and $a_{n+1} = a_n + n$ for $n \\ge 1$, what is $a_{10}$?",
+  "choices": {
+   "A": "$20$",
+   "B": "$46$",
+   "C": "$55$",
+   "D": "$65$",
+   "E": "$100$"
+  },
+  "answer": "C",
+  "hints": [
+   "$a_n = a_1 + (1 + 2 + \\cdots + (n - 1))$."
+  ],
+  "solution": "**What we need:** $a_{10}$.\n\n**Key idea:** each step adds the current index. Stack the steps: $a_n = a_1 + 1 + 2 + \\cdots + (n - 1)$.\n\n**Step 1.** $a_2 = a_1 + 1$, $a_3 = a_2 + 2$, ..., $a_{10} = a_{9} + 9$.\n\n**Step 2.** Adding all these: $a_{10} = 10 + (1 + 2 + \\cdots + 9)$.\n\n**Step 3.** $1 + 2 + \\cdots + 9 = \\frac{9 \\cdot 10}{2} = 45$.\n\n**Step 4.** $a_{10} = 10 + 45 = 55$.\n\n**Answer:** $55$. **(C)**\n\n**Common mistake:** adding up to $10$ instead of $9$."
+ },
+ {
+  "id": "ser_recursion_c02",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:rcc2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $a_1 = 1$ and $a_n = 2a_{n-1} + 1$ for $n \\ge 2$, what is the units digit of $a_{18}$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "D",
+  "hints": [
+   "Track only the units digit, and look for a cycle."
+  ],
+  "solution": "**What we need:** the last digit of $a_{18}$.\n\n**Key idea:** the units digit of $a_n$ depends only on the units digit of $a_{n-1}$, so track only last digits and look for a repeat.\n\n**Step 1.** Units digits of $a_1, a_2, \\ldots$: 1, 3, 7, 5, 1, 3, 7, 5, 1, 3, 7, 5, and so on.\n\n**Step 2.** From $a_2$ on, they repeat every $4$ terms.\n\n**Step 3.** Following the cycle to $n = 18$ gives units digit $3$.\n\n**Answer:** $3$. **(D)**\n\n**Common mistake:** trying to compute $a_{18}$ in full; it has many digits. (In fact $a_n = 2^n - 1$.)"
+ },
+ {
+  "id": "ser_recursion_c03",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:rcc3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A sequence has $a_1 = 5$, $a_2 = 4$, and $a_{n+2} = \\dfrac{a_{n+1} + 1}{a_n}$. What is $a_{300}$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$\\frac{3}{2}$",
+   "C": "$\\frac{5}{2}$",
+   "D": "$4$",
+   "E": "$5$"
+  },
+  "answer": "B",
+  "hints": [
+   "Compute terms until the sequence repeats."
+  ],
+  "solution": "**What we need:** $a_{300}$.\n\n**Key idea:** compute terms until the first two values come back; then the whole sequence repeats.\n\n**Step 1.** Terms: $a_{1} = 5$, $a_{2} = 4$, $a_{3} = 1$, $a_{4} = \\frac{1}{2}$, $a_{5} = \\frac{3}{2}$, $a_{6} = 5$, $a_{7} = 4$.\n\n**Step 2.** $a_6 = a_1$ and $a_7 = a_2$, so the period is $5$.\n\n**Step 3.** $300 = 5 \\cdot 59 + 5$, so $a_{300} = a_{5} = \\frac{3}{2}$.\n\n**Answer:** $\\frac{3}{2}$. **(B)**\n\n**Common mistake:** an arithmetic slip in the fractions; double check each term."
+ },
+ {
+  "id": "ser_recursion_c04",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srecc_recip_add",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $a_1 = \\frac{1}{8}$ and $a_{n+1} = \\dfrac{a_n}{1 + a_n}$, what is $a_{12}$?",
+  "choices": {
+   "A": "$\\frac{1}{96}$",
+   "B": "$\\frac{1}{20}$",
+   "C": "$\\frac{1}{19}$",
+   "D": "$\\frac{1}{12}$",
+   "E": "$\\frac{2}{19}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Look at $\\frac{1}{a_n}$."
+  ],
+  "solution": "**What we need:** $a_{12}$.\n\n**Key idea:** $\\frac{1}{a_{n+1}} = \\frac{1}{a_n} + 1$, so the reciprocals form an arithmetic sequence.\n\n**Step 1.** $\\frac{1}{a_n} = 8 + (n - 1)$.\n\n**Step 2.** $a_{12} = \\frac{1}{19}$.\n\n**Answer:** $\\frac{1}{19}$. **(C)**\n\n**Common mistake:** off by one in the count."
+ },
+ {
+  "id": "ser_recursion_c05",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srecc_sqrt",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $a_1 = 1$ and $a_{n+1} = \\sqrt{a_n^2 + 1}$, what is $a_{18}^2$?",
+  "choices": {
+   "A": "$17$",
+   "B": "$18$",
+   "C": "$19$",
+   "D": "$20$",
+   "E": "$324$"
+  },
+  "answer": "B",
+  "hints": [
+   "Square both sides."
+  ],
+  "solution": "**What we need:** $a_{18}^2$.\n\n**Key idea:** the squares form an arithmetic sequence with difference 1.\n\n**Step 1.** $a_n^2 = 1 + (n - 1) \\cdot 1$.\n\n**Step 2.** $a_{18}^2 = 18$.\n\n**Answer:** $18$. **(B)**\n\n**Common mistake:** adding 1 to $a_n$ instead of $a_n^2$."
+ },
+ {
+  "id": "ser_recursion_c06",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srecc_ratio6",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $a_1 = 5$, $a_2 = 3$, and $a_n = \\dfrac{a_{n-1}}{a_{n-2}}$, what is $a_{120}$?",
+  "choices": {
+   "A": "$\\frac{1}{3}$",
+   "B": "$\\frac{3}{5}$",
+   "C": "$\\frac{5}{3}$",
+   "D": "$3$",
+   "E": "$5$"
+  },
+  "answer": "C",
+  "hints": [
+   "Compute six terms."
+  ],
+  "solution": "**What we need:** $a_{120}$.\n\n**Key idea:** the sequence repeats with period 6.\n\n**Step 1.** Terms: $5$, $3$, $\\frac{3}{5}$, $\\frac{1}{5}$, $\\frac{1}{3}$, $\\frac{5}{3}$, $5$.\n\n**Step 2.** $120 \\equiv 6 \\pmod 6$, so $a_{120} = \\frac{5}{3}$.\n\n**Answer:** $\\frac{5}{3}$. **(C)**\n\n**Common mistake:** assuming period 3."
+ },
+ {
+  "id": "ser_recursion_c07",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srecc_alt_sum",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $-1 + 2 - 3 + 4 - \\cdots + 52$?",
+  "choices": {
+   "A": "$-26$",
+   "B": "$26$",
+   "C": "$27$",
+   "D": "$52$",
+   "E": "$1378$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair up terms."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** each pair $-(2k - 1) + 2k$ equals $1$.\n\n**Step 1.** $26$ pairs give $26$.\n\n**Answer:** $26$. **(B)**\n\n**Common mistake:** missing the unpaired last term."
+ },
+ {
+  "id": "ser_recursion_c08",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srecc_affine",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $a_1 = 4$ and $a_{n+1} = 2a_n - 2$, what is $a_{7}$?",
+  "choices": {
+   "A": "$129$",
+   "B": "$130$",
+   "C": "$194$",
+   "D": "$256$",
+   "E": "$258$"
+  },
+  "answer": "B",
+  "hints": [
+   "Subtract the fixed point."
+  ],
+  "solution": "**What we need:** $a_{7}$.\n\n**Key idea:** the fixed point is $L = 2$ (where $L = 2L - 2$); then $a_n - L$ is geometric with ratio $2$.\n\n**Step 1.** $a_n = (4 - 2) \\cdot 2^{n - 1} + 2$.\n\n**Step 2.** $a_{7} = 130$.\n\n**Answer:** $130$. **(B)**\n\n**Common mistake:** ignoring the constant term."
+ },
+ {
+  "id": "ser_recursion_c09",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srecc_trib",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Carmen climbs a staircase of $15$ steps, taking $1$, $2$, or $3$ steps at a time. In how many ways can Carmen reach the top?",
+  "choices": {
+   "A": "$3136$",
+   "B": "$5768$",
+   "C": "$5769$",
+   "D": "$8904$",
+   "E": "$16384$"
+  },
+  "answer": "B",
+  "hints": [
+   "Count by the last move."
+  ],
+  "solution": "**What we need:** the number of ways.\n\n**Key idea:** $W(n) = W(n - 1) + W(n - 2) + W(n - 3)$ with $W(0) = 1$, $W(1) = 1$, $W(2) = 2$.\n\n**Step 1.** Building up: $W(0) = 1$, $W(1) = 1$, $W(2) = 2$, $W(3) = 4$, $W(4) = 7$, $W(5) = 13$, $W(6) = 24$, $W(7) = 44$, $W(8) = 81$, $W(9) = 149$, $W(10) = 274$, $W(11) = 504$, $W(12) = 927$, $W(13) = 1705$, $W(14) = 3136$, $W(15) = 5768$.\n\n**Answer:** $5768$. **(B)**\n\n**Common mistake:** forgetting the 3-step moves."
+ },
+ {
+  "id": "ser_recursion_c10",
+  "skillId": "ser_recursion",
+  "family": "ser_recursion:srecc_two_power",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $a_1 = a_2 = 1$ and $a_n = a_{n-1} + 2a_{n-2}$, what is $a_{8}$?",
+  "choices": {
+   "A": "$43$",
+   "B": "$85$",
+   "C": "$86$",
+   "D": "$128$",
+   "E": "$170$"
+  },
+  "answer": "B",
+  "hints": [
+   "Closed form: $a_n = \\frac{2^n - (-1)^n}{3}$."
+  ],
+  "solution": "**What we need:** $a_{8}$.\n\n**Key idea:** characteristic roots $2$ and $-1$.\n\n**Step 1.** $\\frac{2^{8} - (1)}{3} = 85$.\n\n**Answer:** $85$. **(B)**\n\n**Common mistake:** using only the $2^n$ part."
+ },
+ {
+  "id": "ser_telescoping_b01",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:tsc1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\dfrac{1}{1 \\cdot 2} + \\dfrac{1}{2 \\cdot 3} + \\cdots + \\dfrac{1}{52 \\cdot 53}$?",
+  "choices": {
+   "A": "$\\frac{1}{53}$",
+   "B": "$\\frac{26}{27}$",
+   "C": "$\\frac{51}{52}$",
+   "D": "$\\frac{52}{53}$",
+   "E": "$\\frac{53}{54}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\frac{1}{k(k + 1)} = \\frac{1}{k} - \\frac{1}{k + 1}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** partial fractions: $\\frac{1}{k(k + 1)} = \\frac{1}{k} - \\frac{1}{k + 1}$. Written this way, neighboring terms cancel.\n\n**Step 1.** Rewrite: $\\left(1 - \\frac{1}{2}\\right) + \\left(\\frac{1}{2} - \\frac{1}{3}\\right) + \\cdots + \\left(\\frac{1}{52} - \\frac{1}{53}\\right)$.\n\n**Step 2.** Each $-\\frac{1}{k}$ cancels the next $+\\frac{1}{k}$.\n\n**Step 3.** Only the first and last pieces survive: $1 - \\frac{1}{53} = \\frac{52}{53}$.\n\n**Answer:** $\\frac{52}{53}$. **(D)**\n\n**Common mistake:** stopping at $\\frac{1}{52}$ instead of $\\frac{1}{53}$."
+ },
+ {
+  "id": "ser_telescoping_b02",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:tsc2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\dfrac{1}{1 \\cdot 3} + \\dfrac{1}{3 \\cdot 5} + \\cdots + \\dfrac{1}{99 \\cdot 101}$?",
+  "choices": {
+   "A": "$\\frac{50}{101}$",
+   "B": "$\\frac{1}{2}$",
+   "C": "$\\frac{51}{101}$",
+   "D": "$\\frac{50}{99}$",
+   "E": "$\\frac{100}{101}$"
+  },
+  "answer": "A",
+  "hints": [
+   "$\\frac{1}{(2k - 1)(2k + 1)} = \\frac{1}{2}\\left(\\frac{1}{2k - 1} - \\frac{1}{2k + 1}\\right)$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** partial fractions with a gap of $2$: $\\frac{1}{(2k - 1)(2k + 1)} = \\frac{1}{2}\\left(\\frac{1}{2k - 1} - \\frac{1}{2k + 1}\\right)$. The $\\frac{1}{2}$ undoes the gap.\n\n**Step 1.** Rewrite: $\\frac{1}{2}\\left[\\left(1 - \\frac{1}{3}\\right) + \\left(\\frac{1}{3} - \\frac{1}{5}\\right) + \\cdots + \\left(\\frac{1}{99} - \\frac{1}{101}\\right)\\right]$.\n\n**Step 2.** Everything in the middle cancels, leaving $\\frac{1}{2}\\left(1 - \\frac{1}{101}\\right)$.\n\n**Step 3.** $= \\frac{1}{2} \\cdot \\frac{100}{101} = \\frac{50}{101}$.\n\n**Answer:** $\\frac{50}{101}$. **(A)**\n\n**Common mistake:** forgetting the factor $\\frac{1}{2}$ in the partial fractions."
+ },
+ {
+  "id": "ser_telescoping_b03",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:tsc3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\left(1 + \\dfrac{1}{1}\\right)\\left(1 + \\dfrac{1}{2}\\right)\\cdots\\left(1 + \\dfrac{1}{86}\\right)$?",
+  "choices": {
+   "A": "$\\frac{87}{2}$",
+   "B": "$86$",
+   "C": "$87$",
+   "D": "$88$",
+   "E": "$172$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write each factor as $\\frac{k + 1}{k}$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** write each factor as a single fraction: $1 + \\frac{1}{k} = \\frac{k + 1}{k}$. Each numerator cancels the next denominator.\n\n**Step 1.** Product: $\\frac{2}{1} \\cdot \\frac{3}{2} \\cdot \\frac{4}{3} \\cdots \\frac{87}{86}$.\n\n**Step 2.** The $2$ on top cancels the $2$ below, the $3$ cancels the $3$, and so on.\n\n**Step 3.** What survives: $\\frac{87}{1} = 87$.\n\n**Answer:** $87$. **(C)**\n\n**Common mistake:** answering $86$; the last numerator is $87$."
+ },
+ {
+  "id": "ser_telescoping_b04",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:tsc4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\left(1 - \\dfrac{1}{2^2}\\right)\\left(1 - \\dfrac{1}{3^2}\\right)\\cdots\\left(1 - \\dfrac{1}{66^2}\\right)$?",
+  "choices": {
+   "A": "$\\frac{1}{66}$",
+   "B": "$\\frac{1}{2}$",
+   "C": "$\\frac{67}{132}$",
+   "D": "$\\frac{65}{66}$",
+   "E": "$\\frac{67}{66}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Factor each term: $1 - \\frac{1}{k^2} = \\frac{(k - 1)(k + 1)}{k \\cdot k}$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** difference of squares: $1 - \\frac{1}{k^2} = \\frac{(k - 1)(k + 1)}{k \\cdot k}$. Split into two products that each telescope.\n\n**Step 1.** Product $= \\left(\\frac{1}{2} \\cdot \\frac{2}{3} \\cdots \\frac{65}{66}\\right) \\cdot \\left(\\frac{3}{2} \\cdot \\frac{4}{3} \\cdots \\frac{67}{66}\\right)$.\n\n**Step 2.** The first part telescopes to $\\frac{1}{66}$; the second to $\\frac{67}{2}$.\n\n**Step 3.** Multiply: $\\frac{1}{66} \\cdot \\frac{67}{2} = \\frac{67}{132}$.\n\n**Answer:** $\\frac{67}{132}$. **(C)**\n\n**Common mistake:** cancelling only one of the two chains and getting $\\frac{1}{n}$ or $\\frac{n + 1}{2}$."
+ },
+ {
+  "id": "ser_telescoping_b05",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_log",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\log_{10}\\frac{2}{1} + \\log_{10}\\frac{3}{2} + \\cdots + \\log_{10}\\frac{1{,}000}{999}$?",
+  "choices": {
+   "A": "$\\frac{3}{2}$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$1000$"
+  },
+  "answer": "C",
+  "hints": [
+   "Combine into one log."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the product inside telescopes.\n\n**Step 1.** $\\frac{2}{1} \\cdot \\frac{3}{2} \\cdots \\frac{1{,}000}{999} = 1{,}000$.\n\n**Step 2.** $\\log_{10} 1{,}000 = 3$.\n\n**Answer:** $3$. **(C)**\n\n**Common mistake:** summing the fractions."
+ },
+ {
+  "id": "ser_telescoping_b06",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_prod2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\frac{3}{1} \\cdot \\frac{4}{2} \\cdot \\frac{5}{3} \\cdots \\frac{56}{54}$?",
+  "choices": {
+   "A": "$28$",
+   "B": "$56$",
+   "C": "$1540$",
+   "D": "$1541$",
+   "E": "$3080$"
+  },
+  "answer": "C",
+  "hints": [
+   "Numerators and denominators overlap."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** everything cancels except two numerators and the first two denominators.\n\n**Step 1.** $\\frac{55 \\cdot 56}{1 \\cdot 2} = 1540$.\n\n**Answer:** $1540$. **(C)**\n\n**Common mistake:** keeping only one leftover factor."
+ },
+ {
+  "id": "ser_telescoping_b07",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_gap3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=1}^{4} \\frac{1}{k(k + 3)}$?",
+  "choices": {
+   "A": "$\\frac{139}{315}$",
+   "B": "$\\frac{4}{7}$",
+   "C": "$\\frac{11}{18}$",
+   "D": "$\\frac{244}{315}$",
+   "E": "$\\frac{139}{105}$"
+  },
+  "answer": "A",
+  "hints": [
+   "$\\frac{1}{k(k + 3)} = \\frac{1}{3}\\left(\\frac{1}{k} - \\frac{1}{k + 3}\\right)$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the gaps of 3 leave three surviving terms at each end.\n\n**Step 1.** $\\frac{1}{3}\\left(1 + \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{5} - \\frac{1}{6} - \\frac{1}{7}\\right) = \\frac{139}{315}$.\n\n**Answer:** $\\frac{139}{315}$. **(A)**\n\n**Common mistake:** forgetting the factor of $\\frac{1}{3}$."
+ },
+ {
+  "id": "ser_telescoping_b08",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_k_fact",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=1}^{3} \\frac{k}{(k + 1)!}$?",
+  "choices": {
+   "A": "$\\frac{3}{4}$",
+   "B": "$\\frac{5}{6}$",
+   "C": "$\\frac{23}{24}$",
+   "D": "$1$",
+   "E": "$\\frac{25}{24}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\frac{k}{(k + 1)!} = \\frac{1}{k!} - \\frac{1}{(k + 1)!}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** it telescopes.\n\n**Step 1.** $\\frac{1}{1!} - \\frac{1}{4!} = 1 - \\frac{1}{24} = \\frac{23}{24}$.\n\n**Answer:** $\\frac{23}{24}$. **(C)**\n\n**Common mistake:** stopping at $\\frac{1}{n!}$."
+ },
+ {
+  "id": "ser_telescoping_b09",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_cubes",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $1^3 + 2^3 + \\cdots + 22^3$?",
+  "choices": {
+   "A": "$253$",
+   "B": "$3{,}795$",
+   "C": "$58{,}564$",
+   "D": "$64{,}009$",
+   "E": "$64{,}031$"
+  },
+  "answer": "D",
+  "hints": [
+   "Sum of cubes is the square of a triangular number."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\sum k^3 = \\left(\\frac{n(n + 1)}{2}\\right)^2$.\n\n**Step 1.** $\\left(\\frac{22 \\cdot 23}{2}\\right)^2 = 253^2 = 64{,}009$.\n\n**Answer:** $64{,}009$. **(D)**\n\n**Common mistake:** using the sum of squares."
+ },
+ {
+  "id": "ser_telescoping_b10",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_alt_sq",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $54^2 - 53^2 + 52^2 - 51^2 + \\cdots - 1^2$?",
+  "choices": {
+   "A": "$54$",
+   "B": "$1485$",
+   "C": "$1539$",
+   "D": "$2916$",
+   "E": "$2970$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair: $k^2 - (k - 1)^2 = 2k - 1$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** each difference of consecutive squares is a sum: $k^2 - (k - 1)^2 = k + (k - 1)$.\n\n**Step 1.** The total is $54 + 53 + \\cdots + 1 = 1485$.\n\n**Answer:** $1485$. **(B)**\n\n**Common mistake:** subtracting instead of adding the pairs."
+ },
+ {
+  "id": "ser_telescoping_b11",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_tri_recip",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\frac{1}{1} + \\frac{1}{1 + 2} + \\frac{1}{1 + 2 + 3} + \\cdots + \\frac{1}{1 + 2 + \\cdots + 34}$?",
+  "choices": {
+   "A": "$\\frac{34}{35}$",
+   "B": "$\\frac{17}{9}$",
+   "C": "$\\frac{68}{35}$",
+   "D": "$2$",
+   "E": "$\\frac{103}{35}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\frac{1}{T_k} = \\frac{2}{k(k + 1)}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $2\\left(\\frac{1}{k} - \\frac{1}{k + 1}\\right)$ telescopes.\n\n**Step 1.** $2\\left(1 - \\frac{1}{35}\\right) = \\frac{68}{35}$.\n\n**Answer:** $\\frac{68}{35}$. **(C)**\n\n**Common mistake:** forgetting the factor of 2."
+ },
+ {
+  "id": "ser_telescoping_b12",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_3k",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\frac{1}{1 \\cdot 4} + \\frac{1}{4 \\cdot 7} + \\cdots + \\frac{1}{46 \\cdot 49}$?",
+  "choices": {
+   "A": "$\\frac{16}{49}$",
+   "B": "$\\frac{8}{23}$",
+   "C": "$\\frac{97}{147}$",
+   "D": "$\\frac{16}{17}$",
+   "E": "$\\frac{48}{49}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Partial fractions with a factor $\\frac{1}{3}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\frac{1}{(3k - 2)(3k + 1)} = \\frac{1}{3}\\left(\\frac{1}{3k - 2} - \\frac{1}{3k + 1}\\right)$.\n\n**Step 1.** $\\frac{1}{3}\\left(1 - \\frac{1}{49}\\right) = \\frac{16}{49}$.\n\n**Answer:** $\\frac{16}{49}$. **(A)**\n\n**Common mistake:** forgetting the factor of $\\frac{1}{3}$."
+ },
+ {
+  "id": "ser_telescoping_b13",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_prod_sq",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\left(1 + \\frac{1}{1 \\cdot 3}\\right)\\left(1 + \\frac{1}{2 \\cdot 4}\\right)\\cdots\\left(1 + \\frac{1}{33 \\cdot 35}\\right)$?",
+  "choices": {
+   "A": "$\\frac{34}{35}$",
+   "B": "$\\frac{33}{17}$",
+   "C": "$\\frac{68}{35}$",
+   "D": "$2$",
+   "E": "$\\frac{103}{35}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$1 + \\frac{1}{k(k + 2)} = \\frac{(k + 1)^2}{k(k + 2)}$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** split into $\\frac{k + 1}{k} \\cdot \\frac{k + 1}{k + 2}$; each part telescopes.\n\n**Step 1.** $\\frac{34}{1} \\cdot \\frac{2}{35} = \\frac{68}{35}$.\n\n**Answer:** $\\frac{68}{35}$. **(C)**\n\n**Common mistake:** telescoping only one of the two parts."
+ },
+ {
+  "id": "ser_telescoping_b14",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_kk1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $1 \\cdot 2 + 2 \\cdot 3 + 3 \\cdot 4 + \\cdots + 13 \\cdot 14$?",
+  "choices": {
+   "A": "$455$",
+   "B": "$819$",
+   "C": "$910$",
+   "D": "$923$",
+   "E": "$1{,}820$"
+  },
+  "answer": "C",
+  "hints": [
+   "$k(k + 1) = \\frac{k(k + 1)(k + 2) - (k - 1)k(k + 1)}{3}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the sum telescopes to $\\frac{n(n + 1)(n + 2)}{3}$.\n\n**Step 1.** $\\frac{13 \\cdot 14 \\cdot 15}{3} = 910$.\n\n**Answer:** $910$. **(C)**\n\n**Common mistake:** using the sum of squares only."
+ },
+ {
+  "id": "ser_telescoping_b15",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_k2m1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=2}^{25} \\frac{1}{k^2 - 1}$?",
+  "choices": {
+   "A": "$\\frac{231}{325}$",
+   "B": "$\\frac{3}{4}$",
+   "C": "$\\frac{244}{325}$",
+   "D": "$\\frac{12}{13}$",
+   "E": "$\\frac{462}{325}$"
+  },
+  "answer": "A",
+  "hints": [
+   "$\\frac{1}{k^2 - 1} = \\frac{1}{2}\\left(\\frac{1}{k - 1} - \\frac{1}{k + 1}\\right)$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** gap of 2: two terms survive at each end.\n\n**Step 1.** $\\frac{1}{2}\\left(1 + \\frac{1}{2} - \\frac{1}{25} - \\frac{1}{26}\\right) = \\frac{231}{325}$.\n\n**Answer:** $\\frac{231}{325}$. **(A)**\n\n**Common mistake:** forgetting the factor of $\\frac{1}{2}$."
+ },
+ {
+  "id": "ser_telescoping_b16",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_binom",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\dfrac{1}{\\binom{2}{2}} + \\dfrac{1}{\\binom{3}{2}} + \\cdots + \\dfrac{1}{\\binom{14}{2}}$?",
+  "choices": {
+   "A": "$\\frac{13}{15}$",
+   "B": "$\\frac{13}{14}$",
+   "C": "$\\frac{13}{7}$",
+   "D": "$2$",
+   "E": "$\\frac{20}{7}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\frac{1}{\\binom{k}{2}} = \\frac{2}{k(k - 1)}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $2\\left(\\frac{1}{k - 1} - \\frac{1}{k}\\right)$ telescopes.\n\n**Step 1.** $2\\left(1 - \\frac{1}{14}\\right) = \\frac{13}{7}$.\n\n**Answer:** $\\frac{13}{7}$. **(C)**\n\n**Common mistake:** forgetting the factor of 2."
+ },
+ {
+  "id": "ser_telescoping_b17",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_pow2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $1 + 2 + 4 + \\cdots + 2^{20}$?",
+  "choices": {
+   "A": "$1{,}048{,}575$",
+   "B": "$1{,}048{,}576$",
+   "C": "$2{,}097{,}151$",
+   "D": "$2{,}097{,}152$",
+   "E": "$2{,}097{,}153$"
+  },
+  "answer": "C",
+  "hints": [
+   "$2^k = 2^{k+1} - 2^k$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** each term is a difference of consecutive powers, so the sum telescopes.\n\n**Step 1.** $2^{21} - 1 = 2{,}097{,}151$.\n\n**Answer:** $2{,}097{,}151$. **(C)**\n\n**Common mistake:** forgetting the $-1$."
+ },
+ {
+  "id": "ser_telescoping_b18",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_k2k",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $1 \\cdot 2 + 2 \\cdot 2^2 + 3 \\cdot 2^3 + \\cdots + 10 \\cdot 2^{10}$?",
+  "choices": {
+   "A": "$9{,}218$",
+   "B": "$18{,}432$",
+   "C": "$18{,}434$",
+   "D": "$19{,}458$",
+   "E": "$20{,}480$"
+  },
+  "answer": "C",
+  "hints": [
+   "Let $S$ be the sum; compute $2S - S$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $2S - S$ shifts the terms, leaving a geometric series.\n\n**Step 1.** $S = 10 \\cdot 2^{11} - (2 + 4 + \\cdots + 2^{10}) = 20480 - 2046 = 18{,}434$.\n\n**Answer:** $18{,}434$. **(C)**\n\n**Common mistake:** forgetting the geometric part."
+ },
+ {
+  "id": "ser_telescoping_b19",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_odd",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $1 + 3 + 5 + \\cdots + 83$?",
+  "choices": {
+   "A": "$1743$",
+   "B": "$1763$",
+   "C": "$1764$",
+   "D": "$1806$",
+   "E": "$3528$"
+  },
+  "answer": "C",
+  "hints": [
+   "$2k - 1 = k^2 - (k - 1)^2$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the odd numbers are differences of consecutive squares, so the sum telescopes to $n^2$.\n\n**Step 1.** There are $42$ terms: $42^2 = 1764$.\n\n**Answer:** $1764$. **(C)**\n\n**Common mistake:** miscounting the terms."
+ },
+ {
+  "id": "ser_telescoping_b20",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stel_one_minus",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\left(1 - \\frac{1}{2}\\right)\\left(1 - \\frac{1}{3}\\right)\\cdots\\left(1 - \\frac{1}{32}\\right)$?",
+  "choices": {
+   "A": "$\\frac{1}{33}$",
+   "B": "$\\frac{1}{32}$",
+   "C": "$\\frac{1}{31}$",
+   "D": "$\\frac{1}{2}$",
+   "E": "$\\frac{31}{32}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Rewrite each factor as a fraction."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $\\frac{1}{2} \\cdot \\frac{2}{3} \\cdots \\frac{n - 1}{n}$ telescopes.\n\n**Step 1.** Everything cancels except $\\frac{1}{32}$.\n\n**Answer:** $\\frac{1}{32}$. **(B)**\n\n**Common mistake:** keeping an extra factor."
+ },
+ {
+  "id": "ser_telescoping_c01",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:tscc1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=1}^{30} \\dfrac{1}{k(k + 2)}$?",
+  "choices": {
+   "A": "$\\frac{31}{64}$",
+   "B": "$\\frac{1425}{1984}$",
+   "C": "$\\frac{3}{4}$",
+   "D": "$\\frac{22367}{29760}$",
+   "E": "$\\frac{15}{16}$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\frac{1}{k(k + 2)} = \\frac{1}{2}\\left(\\frac{1}{k} - \\frac{1}{k + 2}\\right)$. Two terms survive at each end."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** partial fractions: $\\frac{1}{k(k + 2)} = \\frac{1}{2}\\left(\\frac{1}{k} - \\frac{1}{k + 2}\\right)$. With a gap of $2$, terms cancel two places apart, so two survive at each end.\n\n**Step 1.** Write out: $\\frac{1}{2}\\left[\\left(1 - \\frac{1}{3}\\right) + \\left(\\frac{1}{2} - \\frac{1}{4}\\right) + \\left(\\frac{1}{3} - \\frac{1}{5}\\right) + \\cdots + \\left(\\frac{1}{30} - \\frac{1}{32}\\right)\\right]$.\n\n**Step 2.** Surviving: $+1$ and $+\\frac{1}{2}$ at the start; $-\\frac{1}{31}$ and $-\\frac{1}{32}$ at the end.\n\n**Step 3.** $\\frac{1}{2}\\left(1 + \\frac{1}{2} - \\frac{1}{31} - \\frac{1}{32}\\right) = \\frac{1425}{1984}$.\n\n**Answer:** $\\frac{1425}{1984}$. **(B)**\n\n**Common mistake:** keeping only one surviving term at each end; with a gap of $2$ there are two."
+ },
+ {
+  "id": "ser_telescoping_c02",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:tscc2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\dfrac{1}{\\sqrt{1} + \\sqrt{2}} + \\dfrac{1}{\\sqrt{2} + \\sqrt{3}} + \\cdots + \\dfrac{1}{\\sqrt{48} + \\sqrt{49}}$?",
+  "choices": {
+   "A": "$\\frac{7}{2}$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$12$"
+  },
+  "answer": "B",
+  "hints": [
+   "Rationalize each denominator."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** rationalize each term by multiplying by the conjugate. Each term becomes a difference of square roots, and the sum telescopes.\n\n**Step 1.** $\\frac{1}{\\sqrt{k} + \\sqrt{k + 1}} \\cdot \\frac{\\sqrt{k + 1} - \\sqrt{k}}{\\sqrt{k + 1} - \\sqrt{k}} = \\frac{\\sqrt{k + 1} - \\sqrt{k}}{(k + 1) - k} = \\sqrt{k + 1} - \\sqrt{k}$.\n\n**Step 2.** Sum: $(\\sqrt{2} - \\sqrt{1}) + (\\sqrt{3} - \\sqrt{2}) + \\cdots + (\\sqrt{49} - \\sqrt{48})$.\n\n**Step 3.** Everything cancels except $\\sqrt{49} - 1 = 7 - 1 = 6$.\n\n**Answer:** $6$. **(B)**\n\n**Common mistake:** forgetting to subtract the $\\sqrt{1} = 1$ at the start."
+ },
+ {
+  "id": "ser_telescoping_c03",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:tscc3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $1 \\cdot 1! + 2 \\cdot 2! + 3 \\cdot 3! + \\cdots + 5 \\cdot 5!$?",
+  "choices": {
+   "A": "$600$",
+   "B": "$714$",
+   "C": "$719$",
+   "D": "$720$",
+   "E": "$721$"
+  },
+  "answer": "C",
+  "hints": [
+   "$k \\cdot k! = (k + 1)! - k!$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** rewrite each term as a difference of factorials: $k \\cdot k! = (k + 1 - 1)k! = (k + 1)! - k!$.\n\n**Step 1.** Sum: $(2! - 1!) + (3! - 2!) + \\cdots + (6! - 5!)$.\n\n**Step 2.** Everything cancels except $6! - 1!$.\n\n**Step 3.** $6! - 1 = 720 - 1 = 719$.\n\n**Answer:** $719$. **(C)**\n\n**Common mistake:** answering $6!$ and forgetting the $-1$."
+ },
+ {
+  "id": "ser_telescoping_c04",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stelc_three",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=1}^{4} \\frac{1}{k(k + 1)(k + 2)}$?",
+  "choices": {
+   "A": "$\\frac{2}{15}$",
+   "B": "$\\frac{7}{30}$",
+   "C": "$\\frac{1}{4}$",
+   "D": "$\\frac{19}{60}$",
+   "E": "$\\frac{7}{15}$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\frac{1}{k(k + 1)(k + 2)} = \\frac{1}{2}\\left(\\frac{1}{k(k + 1)} - \\frac{1}{(k + 1)(k + 2)}\\right)$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** write it as a difference of consecutive terms.\n\n**Step 1.** $\\frac{1}{2}\\left(\\frac{1}{2} - \\frac{1}{5 \\cdot 6}\\right) = \\frac{7}{30}$.\n\n**Answer:** $\\frac{7}{30}$. **(B)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$."
+ },
+ {
+  "id": "ser_telescoping_c05",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stelc_cubes_prod",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\dfrac{2^3 - 1}{2^3 + 1} \\cdot \\dfrac{3^3 - 1}{3^3 + 1} \\cdots \\dfrac{8^3 - 1}{8^3 + 1}$?",
+  "choices": {
+   "A": "$\\frac{1}{8}$",
+   "B": "$\\frac{73}{216}$",
+   "C": "$\\frac{2}{3}$",
+   "D": "$\\frac{73}{108}$",
+   "E": "$\\frac{419}{540}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Factor $k^3 \\pm 1$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $\\frac{k^3 - 1}{k^3 + 1} = \\frac{k - 1}{k + 1} \\cdot \\frac{k^2 + k + 1}{k^2 - k + 1}$; each part telescopes (note $k^2 - k + 1 = (k - 1)^2 + (k - 1) + 1$).\n\n**Step 1.** First part: $\\frac{1 \\cdot 2}{8 \\cdot 9}$. Second part: $\\frac{73}{3}$.\n\n**Step 2.** Product: $\\frac{73}{108}$.\n\n**Answer:** $\\frac{73}{108}$. **(D)**\n\n**Common mistake:** telescoping only one part."
+ },
+ {
+  "id": "ser_telescoping_c06",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stelc_arctan",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\tan\\left(\\displaystyle\\sum_{k=1}^{23} \\arctan\\frac{1}{k^2 + k + 1}\\right)$?",
+  "choices": {
+   "A": "$\\frac{1}{24}$",
+   "B": "$\\frac{23}{25}$",
+   "C": "$\\frac{23}{24}$",
+   "D": "$\\frac{48}{25}$",
+   "E": "$24$"
+  },
+  "answer": "B",
+  "hints": [
+   "$\\arctan\\frac{1}{k^2 + k + 1} = \\arctan(k + 1) - \\arctan k$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** the sum telescopes to $\\arctan(n + 1) - \\arctan 1$.\n\n**Step 1.** $\\tan(\\arctan 24 - \\arctan 1) = \\frac{24 - 1}{1 + 24} = \\frac{23}{25}$.\n\n**Answer:** $\\frac{23}{25}$. **(B)**\n\n**Common mistake:** stopping at $\\arctan n$."
+ },
+ {
+  "id": "ser_telescoping_c07",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stelc_k4",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=1}^{18} \\frac{k}{k^4 + 4}$?",
+  "choices": {
+   "A": "$\\frac{1}{4}$",
+   "B": "$\\frac{43947}{117650}$",
+   "C": "$\\frac{3}{8}$",
+   "D": "$\\frac{234613}{470600}$",
+   "E": "$\\frac{43947}{58825}$"
+  },
+  "answer": "B",
+  "hints": [
+   "$k^4 + 4 = (k^2 - 2k + 2)(k^2 + 2k + 2)$ (Sophie Germain)."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\frac{k}{k^4 + 4} = \\frac{1}{4}\\left(\\frac{1}{(k - 1)^2 + 1} - \\frac{1}{(k + 1)^2 + 1}\\right)$, a gap-2 telescope.\n\n**Step 1.** $\\frac{1}{4}\\left(1 + \\frac{1}{2} - \\frac{1}{325} - \\frac{1}{362}\\right) = \\frac{43947}{117650}$.\n\n**Answer:** $\\frac{43947}{117650}$. **(B)**\n\n**Common mistake:** keeping only one surviving term at each end."
+ },
+ {
+  "id": "ser_telescoping_c08",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stelc_sq_frac",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=1}^{23} \\frac{2k + 1}{k^2(k + 1)^2}$?",
+  "choices": {
+   "A": "$\\frac{23}{24}$",
+   "B": "$\\frac{528}{529}$",
+   "C": "$\\frac{575}{576}$",
+   "D": "$1$",
+   "E": "$\\frac{577}{576}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\frac{2k + 1}{k^2(k + 1)^2} = \\frac{1}{k^2} - \\frac{1}{(k + 1)^2}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the numerator is $(k + 1)^2 - k^2$.\n\n**Step 1.** $1 - \\frac{1}{576} = \\frac{575}{576}$.\n\n**Answer:** $\\frac{575}{576}$. **(C)**\n\n**Common mistake:** using $\\frac{1}{n^2}$ as the leftover."
+ },
+ {
+  "id": "ser_telescoping_c09",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stelc_fact2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=1}^{5} \\frac{k^2 + k - 1}{(k + 2)!}$?",
+  "choices": {
+   "A": "$\\frac{419}{840}$",
+   "B": "$\\frac{503}{1008}$",
+   "C": "$\\frac{2519}{5040}$",
+   "D": "$\\frac{1}{2}$",
+   "E": "$\\frac{419}{420}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Write it as $\\frac{k}{(k + 1)!} - \\frac{k + 1}{(k + 2)!}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** check: $\\frac{k}{(k + 1)!} - \\frac{k + 1}{(k + 2)!} = \\frac{k(k + 2) - (k + 1)}{(k + 2)!}$.\n\n**Step 1.** Telescoping: $\\frac{1}{2!} - \\frac{6}{7!} = \\frac{419}{840}$.\n\n**Answer:** $\\frac{419}{840}$. **(A)**\n\n**Common mistake:** forgetting the leftover term."
+ },
+ {
+  "id": "ser_telescoping_c10",
+  "skillId": "ser_telescoping",
+  "family": "ser_telescoping:stelc_fib",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "With $F_1 = F_2 = 1$ and $F_k = F_{k-1} + F_{k-2}$, what is $\\displaystyle\\sum_{k=2}^{5} \\frac{F_k}{F_{k-1}F_{k+1}}$?",
+  "choices": {
+   "A": "$\\frac{5}{8}$",
+   "B": "$\\frac{7}{8}$",
+   "C": "$\\frac{67}{40}$",
+   "D": "$\\frac{15}{8}$",
+   "E": "$2$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\frac{F_k}{F_{k-1}F_{k+1}} = \\frac{1}{F_{k-1}} - \\frac{1}{F_{k+1}}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** since $F_{k+1} - F_{k-1} = F_k$, each term splits into a difference with gap 2.\n\n**Step 1.** Survivors: $\\frac{1}{F_1} + \\frac{1}{F_2} - \\frac{1}{F_{5}} - \\frac{1}{F_{6}} = 2 - \\frac{1}{5} - \\frac{1}{8} = \\frac{67}{40}$.\n\n**Answer:** $\\frac{67}{40}$. **(C)**\n\n**Common mistake:** keeping only one term at each end."
+ },
+ {
+  "id": "ser_geometric_b01",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:ig1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of the infinite geometric series $5 + \\frac{5}{4} + \\frac{5}{16} + \\cdots$?",
+  "choices": {
+   "A": "$\\frac{15}{4}$",
+   "B": "$4$",
+   "C": "$\\frac{20}{3}$",
+   "D": "$10$",
+   "E": "$\\frac{35}{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$S = \\frac{a}{1 - r}$ when $|r| < 1$."
+  ],
+  "solution": "**What we need:** the sum of the whole infinite series.\n\n**Key idea:** an infinite geometric series with $|r| < 1$ adds up to $S = \\frac{a}{1 - r}$.\n\n**Step 1.** First term $a = 5$. Ratio: $r = \\frac{\\frac{5}{4}}{5} = \\frac{1}{4}$, and $|r| < 1$.\n\n**Step 2.** $1 - r = 1 - \\left(\\frac{1}{4}\\right) = \\frac{3}{4}$.\n\n**Step 3.** $S = \\frac{5}{\\frac{3}{4}} = \\frac{20}{3}$.\n\n**Answer:** $\\frac{20}{3}$. **(C)**\n\n**Common mistake:** using $1 + r$ in the denominator, especially when $r$ is negative."
+ },
+ {
+  "id": "ser_geometric_b02",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:ig2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The repeating decimal $0.\\overline{245}$ equals a fraction in lowest terms. What is the fraction?",
+  "choices": {
+   "A": "$\\frac{35}{143}$",
+   "B": "$\\frac{49}{200}$",
+   "C": "$\\frac{245}{999}$",
+   "D": "$\\frac{82}{333}$",
+   "E": "$\\frac{490}{999}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Let $x = 0.\\overline{245}$ and multiply by $10^{3}$."
+  ],
+  "solution": "**What we need:** the fraction in lowest terms.\n\n**Key idea:** multiplying by $10^{3}$ shifts the decimal by one full block of the repeat, so subtracting removes the endless tail.\n\n**Step 1.** Let $x = 0.\\overline{245}$. Then $1000x = 245.\\overline{245}$.\n\n**Step 2.** Subtract: $1000x - x = 245$, so $999x = 245$ and $x = \\frac{245}{999}$.\n\n**Step 3.** Reduce (divide by $1$): $\\frac{245}{999}$.\n\n**Answer:** $\\frac{245}{999}$. **(C)**\n\n**Common mistake:** writing $\\frac{245}{1000}$, which is the terminating decimal $0.245$."
+ },
+ {
+  "id": "ser_geometric_b03",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:ig3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "An infinite geometric series has common ratio $\\frac{2}{3}$ and sum $36$. What is its first term?",
+  "choices": {
+   "A": "$12$",
+   "B": "$13$",
+   "C": "$24$",
+   "D": "$36$",
+   "E": "$60$"
+  },
+  "answer": "A",
+  "hints": [
+   "$a = S(1 - r)$."
+  ],
+  "solution": "**What we need:** the first term $a$.\n\n**Key idea:** rearrange $S = \\frac{a}{1 - r}$ to $a = S(1 - r)$.\n\n**Step 1.** $1 - r = 1 - \\left(\\frac{2}{3}\\right) = \\frac{1}{3}$.\n\n**Step 2.** $a = 36 \\cdot \\frac{1}{3} = 12$.\n\n**Answer:** $12$. **(A)**\n\n**Common mistake:** multiplying by $r$ instead of $1 - r$."
+ },
+ {
+  "id": "ser_geometric_b04",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:ig4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A ball is dropped from 36 feet. Each bounce reaches $\\frac{1}{3}$ of the previous height. What total distance does the ball travel before coming to rest?",
+  "choices": {
+   "A": "$36$",
+   "B": "$54$",
+   "C": "$72$",
+   "D": "$73$",
+   "E": "$108$"
+  },
+  "answer": "C",
+  "hints": [
+   "After the first drop, every bounce goes up and comes back down."
+  ],
+  "solution": "**What we need:** the total distance, up and down.\n\n**Key idea:** after the first drop, every bounce height is traveled twice (up, then down). The bounce heights form a geometric series.\n\n**Step 1.** First drop: $36$ feet.\n\n**Step 2.** Bounce heights: $12, 4, \\ldots$, a geometric series with sum $\\frac{12}{1 - \\frac{1}{3}} = 18$.\n\n**Step 3.** Each bounce is up and down: $2 \\cdot 18 = 36$.\n\n**Step 4.** Total: $36 + 36 = 72$.\n\n**Answer:** $72$. **(C)**\n\n**Common mistake:** counting each bounce only once (forgetting the trip back down), or doubling the first drop."
+ },
+ {
+  "id": "ser_geometric_b05",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_ratio",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "An infinite geometric series has first term $14$ and sum $70$. What is the common ratio?",
+  "choices": {
+   "A": "$\\frac{1}{5}$",
+   "B": "$\\frac{2}{5}$",
+   "C": "$\\frac{1}{2}$",
+   "D": "$\\frac{4}{5}$",
+   "E": "$5$"
+  },
+  "answer": "D",
+  "hints": [
+   "$S = \\frac{a}{1 - r}$."
+  ],
+  "solution": "**What we need:** $r$.\n\n**Key idea:** solve for $r$.\n\n**Step 1.** $1 - r = \\frac{14}{70} = \\frac{1}{5}$.\n\n**Step 2.** $r = \\frac{4}{5}$.\n\n**Answer:** $\\frac{4}{5}$. **(D)**\n\n**Common mistake:** giving $1 - r$."
+ },
+ {
+  "id": "ser_geometric_b06",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_neg",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $4 - 2 + 1 - \\frac{1}{2} + \\cdots$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$\\frac{8}{3}$",
+   "C": "$\\frac{11}{3}$",
+   "D": "$4$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "Ratio is negative."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $r = -\\frac{1}{2}$; $S = \\frac{a}{1 - r}$.\n\n**Step 1.** $\\frac{4}{1 + \\frac{1}{2}} = \\frac{8}{3}$.\n\n**Answer:** $\\frac{8}{3}$. **(B)**\n\n**Common mistake:** ignoring the negative ratio."
+ },
+ {
+  "id": "ser_geometric_b07",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_finite",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of the first $8$ terms of $1, 2, 4, \\ldots$?",
+  "choices": {
+   "A": "$128$",
+   "B": "$254$",
+   "C": "$255$",
+   "D": "$256$",
+   "E": "$511$"
+  },
+  "answer": "C",
+  "hints": [
+   "$S_n = a\\frac{r^n - 1}{r - 1}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** finite geometric series formula.\n\n**Step 1.** $1 \\cdot \\frac{2^{8} - 1}{1} = 255$.\n\n**Answer:** $255$. **(C)**\n\n**Common mistake:** using $n + 1$ terms."
+ },
+ {
+  "id": "ser_geometric_b08",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_squares",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "An infinite geometric series has first term $5$ and ratio $\\frac{2}{5}$. What is the sum of the squares of its terms?",
+  "choices": {
+   "A": "$\\frac{125}{21}$",
+   "B": "$\\frac{625}{21}$",
+   "C": "$\\frac{646}{21}$",
+   "D": "$\\frac{125}{3}$",
+   "E": "$\\frac{625}{9}$"
+  },
+  "answer": "B",
+  "hints": [
+   "The squares form a geometric series with ratio $r^2$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** first term $25$, ratio $\\frac{4}{25}$.\n\n**Step 1.** $\\frac{25}{1 - \\frac{4}{25}} = \\frac{625}{21}$.\n\n**Answer:** $\\frac{625}{21}$. **(B)**\n\n**Common mistake:** squaring the original sum."
+ },
+ {
+  "id": "ser_geometric_b09",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_mixed_dec",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $0.7\\overline{1}$ as a fraction in lowest terms?",
+  "choices": {
+   "A": "$\\frac{71}{100}$",
+   "B": "$\\frac{32}{45}$",
+   "C": "$\\frac{71}{99}$",
+   "D": "$\\frac{71}{90}$",
+   "E": "$\\frac{73}{90}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Separate the non-repeating part."
+  ],
+  "solution": "**What we need:** the fraction.\n\n**Key idea:** $0.7\\overline{1} = \\frac{7}{10} + \\frac{1}{90}$.\n\n**Step 1.** $\\frac{63 + 1}{90} = \\frac{32}{45}$.\n\n**Answer:** $\\frac{32}{45}$. **(B)**\n\n**Common mistake:** treating both digits as repeating."
+ },
+ {
+  "id": "ser_geometric_b10",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_term_index",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In the geometric sequence $1, 2, 4, \\ldots$, which term equals $64$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$14$",
+   "E": "$32$"
+  },
+  "answer": "B",
+  "hints": [
+   "Solve $1 \\cdot 2^{n-1} = 64$."
+  ],
+  "solution": "**What we need:** $n$.\n\n**Key idea:** divide by the first term, then find the power.\n\n**Step 1.** $2^{n - 1} = 64$, so $n - 1 = 6$, $n = 7$.\n\n**Answer:** $7$. **(B)**\n\n**Common mistake:** forgetting to add 1."
+ },
+ {
+  "id": "ser_geometric_b11",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_insert",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Two numbers are inserted between $5$ and $40$ so that the four numbers form a geometric sequence. What is the smaller inserted number?",
+  "choices": {
+   "A": "$2$",
+   "B": "$10$",
+   "C": "$11$",
+   "D": "$15$",
+   "E": "$20$"
+  },
+  "answer": "B",
+  "hints": [
+   "The ratio cubed is 8."
+  ],
+  "solution": "**What we need:** the smaller inserted number.\n\n**Key idea:** four terms span three ratio steps.\n\n**Step 1.** $r^3 = \\frac{40}{5} = 8$, so $r = 2$.\n\n**Step 2.** Inserted: $10$ and $20$.\n\n**Answer:** $10$. **(B)**\n\n**Common mistake:** using an arithmetic sequence."
+ },
+ {
+  "id": "ser_geometric_b12",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_solve_x",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "For what $x$ does $1 + x + x^2 + x^3 + \\cdots = \\frac{4}{3}$?",
+  "choices": {
+   "A": "$-\\frac{1}{3}$",
+   "B": "$\\frac{1}{8}$",
+   "C": "$\\frac{1}{4}$",
+   "D": "$\\frac{1}{3}$",
+   "E": "$\\frac{3}{4}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\frac{1}{1 - x} = \\frac{4}{3}$."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** solve the sum formula for $x$.\n\n**Step 1.** $1 - x = \\frac{3}{4}$, $x = \\frac{1}{4}$.\n\n**Answer:** $\\frac{1}{4}$. **(C)**\n\n**Common mistake:** answering $\\frac{1}{S}$."
+ },
+ {
+  "id": "ser_geometric_b13",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_from_second",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\frac{13}{3} + \\frac{13}{9} + \\frac{13}{27} + \\cdots$?",
+  "choices": {
+   "A": "$\\frac{13}{3}$",
+   "B": "$\\frac{13}{2}$",
+   "C": "$\\frac{15}{2}$",
+   "D": "$13$",
+   "E": "$\\frac{39}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "First term \\frac{13}{3}."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** ratio $\\frac{1}{3}$.\n\n**Step 1.** $\\frac{\\frac{13}{3}}{1 - \\frac{1}{3}} = \\frac{13}{2}$.\n\n**Answer:** $\\frac{13}{2}$. **(B)**\n\n**Common mistake:** using the wrong first term."
+ },
+ {
+  "id": "ser_geometric_b14",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_nested_squares",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A square has side $12$. A second square is formed by joining the midpoints of its sides, a third by joining the midpoints of the second, and so on forever. What is the total area of all the squares?",
+  "choices": {
+   "A": "$144$",
+   "B": "$192$",
+   "C": "$216$",
+   "D": "$288$",
+   "E": "$576$"
+  },
+  "answer": "D",
+  "hints": [
+   "Each square has half the area of the one before."
+  ],
+  "solution": "**What we need:** the total area.\n\n**Key idea:** areas $144, 72, 36, \\ldots$ with ratio $\\frac{1}{2}$.\n\n**Step 1.** $\\frac{144}{1 - \\frac{1}{2}} = 288$.\n\n**Answer:** $288$. **(D)**\n\n**Common mistake:** using ratio $\\frac{1}{4}$."
+ },
+ {
+  "id": "ser_geometric_b15",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_even_terms",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In the series $9 + \\frac{27}{5} + \\frac{81}{25} + \\cdots$, what is the sum of the 2nd, 4th, 6th, ... terms?",
+  "choices": {
+   "A": "$\\frac{135}{16}$",
+   "B": "$\\frac{151}{16}$",
+   "C": "$\\frac{45}{4}$",
+   "D": "$\\frac{27}{2}$",
+   "E": "$\\frac{225}{16}$"
+  },
+  "answer": "A",
+  "hints": [
+   "These terms form a geometric series with ratio $r^2$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** first term $\\frac{27}{5}$, ratio $\\frac{9}{25}$.\n\n**Step 1.** $\\frac{\\frac{27}{5}}{1 - \\frac{9}{25}} = \\frac{135}{16}$.\n\n**Answer:** $\\frac{135}{16}$. **(A)**\n\n**Common mistake:** using ratio $r$."
+ },
+ {
+  "id": "ser_geometric_b16",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_alt_base",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $1 - \\frac{1}{3} + \\frac{1}{9} - \\frac{1}{27} + \\cdots$?",
+  "choices": {
+   "A": "$\\frac{1}{4}$",
+   "B": "$\\frac{2}{3}$",
+   "C": "$\\frac{3}{4}$",
+   "D": "$\\frac{13}{12}$",
+   "E": "$\\frac{3}{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Ratio $-\\frac{1}{3}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\frac{1}{1 - r}$ with negative $r$.\n\n**Step 1.** $\\frac{1}{1 + \\frac{1}{3}} = \\frac{3}{4}$.\n\n**Answer:** $\\frac{3}{4}$. **(C)**\n\n**Common mistake:** ignoring the alternating signs."
+ },
+ {
+  "id": "ser_geometric_b17",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_base_rep",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "In base $7$, what is the value of $0.\\overline{3}_{7}$ as a fraction?",
+  "choices": {
+   "A": "$\\frac{1}{6}$",
+   "B": "$\\frac{1}{3}$",
+   "C": "$\\frac{3}{8}$",
+   "D": "$\\frac{3}{7}$",
+   "E": "$\\frac{1}{2}$"
+  },
+  "answer": "E",
+  "hints": [
+   "$\\frac{d}{b} + \\frac{d}{b^2} + \\cdots$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** a geometric series with ratio $\\frac{1}{b}$.\n\n**Step 1.** $\\frac{3/7}{1 - 1/7} = \\frac{3}{6} = \\frac{1}{2}$.\n\n**Answer:** $\\frac{1}{2}$. **(E)**\n\n**Common mistake:** using 9 as in base 10."
+ },
+ {
+  "id": "ser_geometric_b18",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_two_terms",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "An infinite geometric series with positive terms has second term $\\frac{8}{3}$ and fourth term $\\frac{8}{27}$. What is its sum?",
+  "choices": {
+   "A": "$4$",
+   "B": "$8$",
+   "C": "$12$",
+   "D": "$13$",
+   "E": "$24$"
+  },
+  "answer": "C",
+  "hints": [
+   "$r^2 = \\frac{a_4}{a_2}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** find $r$, then the first term.\n\n**Step 1.** $r^2 = \\frac{1}{9}$, $r = \\frac{1}{3}$; $a = 8$.\n\n**Step 2.** Sum: $12$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** using $a_2$ as the first term."
+ },
+ {
+  "id": "ser_geometric_b19",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_double",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=0}^{\\infty} \\left(\\frac{1}{3^k} + \\frac{1}{5^k}\\right)$?",
+  "choices": {
+   "A": "$\\frac{3}{4}$",
+   "B": "$\\frac{8}{7}$",
+   "C": "$\\frac{15}{8}$",
+   "D": "$\\frac{11}{4}$",
+   "E": "$\\frac{15}{4}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Split into two geometric series."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** each starts at $1$ (the $k = 0$ term).\n\n**Step 1.** $\\frac{1}{1 - 1/3} + \\frac{1}{1 - 1/5} = \\frac{3}{2} + \\frac{5}{4} = \\frac{11}{4}$.\n\n**Answer:** $\\frac{11}{4}$. **(D)**\n\n**Common mistake:** starting at $k = 1$."
+ },
+ {
+  "id": "ser_geometric_b20",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeo_tri_perim",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A triangle has perimeter $19$. Joining the midpoints of its sides forms a smaller triangle; repeat forever. What is the total of all the perimeters?",
+  "choices": {
+   "A": "$19$",
+   "B": "$\\frac{76}{3}$",
+   "C": "$\\frac{57}{2}$",
+   "D": "$38$",
+   "E": "$76$"
+  },
+  "answer": "D",
+  "hints": [
+   "Each new perimeter is half the last."
+  ],
+  "solution": "**What we need:** the total.\n\n**Key idea:** ratio $\\frac{1}{2}$ (the midsegment triangle has half the side lengths).\n\n**Step 1.** $\\frac{19}{1 - \\frac{1}{2}} = 38$.\n\n**Answer:** $38$. **(D)**\n\n**Common mistake:** using ratio $\\frac{1}{4}$ (that's for areas)."
+ },
+ {
+  "id": "ser_geometric_c01",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:igc1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=1}^{\\infty} k \\left(\\frac{1}{4}\\right)^k$?",
+  "choices": {
+   "A": "$\\frac{1}{3}$",
+   "B": "$\\frac{4}{9}$",
+   "C": "$\\frac{8}{9}$",
+   "D": "$\\frac{13}{9}$",
+   "E": "$\\frac{16}{9}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $S = \\sum k r^k$. Compute $S - rS$, which is a plain geometric series."
+  ],
+  "solution": "**What we need:** the sum $S = \\sum k r^k$ with $r = \\frac{1}{4}$.\n\n**Key idea:** the coefficients $1, 2, 3, \\ldots$ grow, so this isn't geometric. But $S - rS$ is, because the coefficients line up and differ by $1$.\n\n**Step 1.** $S = r + 2r^2 + 3r^3 + \\cdots$ and $rS = r^2 + 2r^3 + \\cdots$.\n\n**Step 2.** Subtract: $S - rS = r + r^2 + r^3 + \\cdots = \\frac{r}{1 - r}$.\n\n**Step 3.** So $S = \\frac{r}{(1 - r)^2} = \\frac{\\frac{1}{4}}{\\left(\\frac{3}{4}\\right)^2} = \\frac{4}{9}$.\n\n**Answer:** $\\frac{4}{9}$. **(B)**\n\n**Common mistake:** using the plain geometric sum $\\frac{r}{1 - r}$ and ignoring the growing coefficients."
+ },
+ {
+  "id": "ser_geometric_c02",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:igc2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Two infinite geometric series both start with $5$. One has ratio $\\frac{1}{2}$ and the other has ratio $\\frac{1}{3}$. What is the first sum minus the second?",
+  "choices": {
+   "A": "$-\\frac{5}{2}$",
+   "B": "$\\frac{5}{2}$",
+   "C": "$\\frac{7}{2}$",
+   "D": "$\\frac{15}{2}$",
+   "E": "$10$"
+  },
+  "answer": "B",
+  "hints": [
+   "Compute each sum with $\\frac{a}{1 - r}$."
+  ],
+  "solution": "**What we need:** the difference of the two sums.\n\n**Key idea:** find each sum with $S = \\frac{a}{1 - r}$, then subtract.\n\n**Step 1.** First: $\\frac{5}{1 - \\frac{1}{2}} = \\frac{5}{\\frac{1}{2}} = 10$.\n\n**Step 2.** Second: $\\frac{5}{1 - \\frac{1}{3}} = \\frac{5}{\\frac{2}{3}} = \\frac{15}{2}$.\n\n**Step 3.** Difference: $10 - \\frac{15}{2} = \\frac{5}{2}$.\n\n**Answer:** $\\frac{5}{2}$. **(B)**\n\n**Common mistake:** subtracting in the wrong order."
+ },
+ {
+  "id": "ser_geometric_c03",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:igc3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "In the infinite geometric series $16 + 8 + 4 + \\cdots$, what is the sum of the 1st, 3rd, 5th, ... terms?",
+  "choices": {
+   "A": "$\\frac{32}{3}$",
+   "B": "$16$",
+   "C": "$\\frac{64}{3}$",
+   "D": "$\\frac{67}{3}$",
+   "E": "$32$"
+  },
+  "answer": "C",
+  "hints": [
+   "The odd-numbered terms form their own geometric series with ratio $r^2$."
+  ],
+  "solution": "**What we need:** the sum of every other term, starting with the first.\n\n**Key idea:** skipping every other term makes a new geometric series with the same first term and ratio $r^2$.\n\n**Step 1.** Ratio $r = \\frac{1}{2}$. The 1st, 3rd, 5th, ... terms are $16, 4, \\ldots$, with ratio $r^2 = \\frac{1}{4}$.\n\n**Step 2.** Sum: $\\frac{16}{1 - \\frac{1}{4}} = \\frac{16}{\\frac{3}{4}} = \\frac{64}{3}$.\n\n**Answer:** $\\frac{64}{3}$. **(C)**\n\n**Common mistake:** halving the full sum; the odd terms are bigger than the even terms, so they make up more than half."
+ },
+ {
+  "id": "ser_geometric_c04",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeoc_k2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=1}^{\\infty} k^2 \\left(\\frac{1}{2}\\right)^k$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\sum k^2 x^k = \\frac{x(1 + x)}{(1 - x)^3}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** differentiate the geometric series twice (or use the $S - xS$ trick twice).\n\n**Step 1.** $\\frac{\\frac{1}{2} \\cdot \\frac{3}{2}}{\\frac{1}{8}} = 6$.\n\n**Answer:** $6$. **(D)**\n\n**Common mistake:** using the formula for $\\sum kx^k$."
+ },
+ {
+  "id": "ser_geometric_c05",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeoc_grid",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{i=1}^{\\infty} \\sum_{j=1}^{\\infty} \\frac{1}{7^i 3^j}$?",
+  "choices": {
+   "A": "$\\frac{1}{20}$",
+   "B": "$\\frac{1}{12}$",
+   "C": "$\\frac{1}{6}$",
+   "D": "$\\frac{2}{3}$",
+   "E": "$\\frac{7}{4}$"
+  },
+  "answer": "B",
+  "hints": [
+   "The double sum factors."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\left(\\sum \\frac{1}{7^i}\\right)\\left(\\sum \\frac{1}{3^j}\\right)$.\n\n**Step 1.** $\\frac{1}{6} \\cdot \\frac{1}{2} = \\frac{1}{12}$.\n\n**Answer:** $\\frac{1}{12}$. **(B)**\n\n**Common mistake:** adding instead of multiplying."
+ },
+ {
+  "id": "ser_geometric_c06",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeoc_sum_sq",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "An infinite geometric series has sum $12$, and the series of the squares of its terms has sum $\\frac{144}{7}$. What is the common ratio?",
+  "choices": {
+   "A": "$\\frac{1}{4}$",
+   "B": "$\\frac{1}{2}$",
+   "C": "$\\frac{9}{16}$",
+   "D": "$\\frac{3}{4}$",
+   "E": "$\\frac{12}{7}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\frac{T}{S^2} = \\frac{1 - r}{1 + r}$."
+  ],
+  "solution": "**What we need:** $r$.\n\n**Key idea:** divide $\\frac{a^2}{1 - r^2}$ by $\\left(\\frac{a}{1 - r}\\right)^2$.\n\n**Step 1.** $\\frac{1 - r}{1 + r} = \\frac{\\frac{144}{7}}{144} = \\frac{1}{7}$.\n\n**Step 2.** $r = \\frac{3}{4}$.\n\n**Answer:** $\\frac{3}{4}$. **(D)**\n\n**Common mistake:** solving for $a$ first and making an algebra slip."
+ },
+ {
+  "id": "ser_geometric_c07",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeoc_skip",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the sum of $\\frac{1}{3^k}$ over all positive integers $k$ that are not multiples of $4$?",
+  "choices": {
+   "A": "$\\frac{1}{80}$",
+   "B": "$\\frac{3}{8}$",
+   "C": "$\\frac{39}{80}$",
+   "D": "$\\frac{1}{2}$",
+   "E": "$\\frac{47}{80}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Total minus the multiples of 4."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the multiples of $4$ give a geometric series with ratio $\\frac{1}{81}$.\n\n**Step 1.** All $k$: $\\frac{1}{2}$. Multiples of $4$: $\\frac{1}{80}$.\n\n**Step 2.** Difference: $\\frac{39}{80}$.\n\n**Answer:** $\\frac{39}{80}$. **(C)**\n\n**Common mistake:** multiplying by $\\frac{3}{4}$."
+ },
+ {
+  "id": "ser_geometric_c08",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeoc_base2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "In base $5$, what is $0.\\overline{40}_{5}$ as a fraction?",
+  "choices": {
+   "A": "$\\frac{40}{99}$",
+   "B": "$\\frac{5}{12}$",
+   "C": "$\\frac{10}{13}$",
+   "D": "$\\frac{4}{5}$",
+   "E": "$\\frac{5}{6}$"
+  },
+  "answer": "E",
+  "hints": [
+   "Two-digit repeating block: denominator $b^2 - 1$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** the block $40_{5} = 20$ repeats every two places.\n\n**Step 1.** $\\frac{20}{5^2 - 1} = \\frac{5}{6}$.\n\n**Answer:** $\\frac{5}{6}$. **(E)**\n\n**Common mistake:** using $99$ as in base 10."
+ },
+ {
+  "id": "ser_geometric_c09",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeoc_arith_geo",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=0}^{\\infty} (4 + 3k)\\left(\\frac{1}{4}\\right)^k$?",
+  "choices": {
+   "A": "$\\frac{4}{3}$",
+   "B": "$\\frac{16}{3}$",
+   "C": "$\\frac{20}{3}$",
+   "D": "$\\frac{28}{3}$",
+   "E": "$\\frac{29}{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Split: $4\\sum r^k + 3\\sum kr^k$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\sum r^k = \\frac{1}{1 - r}$ and $\\sum kr^k = \\frac{r}{(1 - r)^2}$.\n\n**Step 1.** $4 \\cdot \\frac{4}{3} + 3 \\cdot \\frac{4}{9} = \\frac{20}{3}$.\n\n**Answer:** $\\frac{20}{3}$. **(C)**\n\n**Common mistake:** forgetting the $k$-weighted part."
+ },
+ {
+  "id": "ser_geometric_c10",
+  "skillId": "ser_geometric",
+  "family": "ser_geometric:sgeoc_prod",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\prod_{k=0}^{\\infty} \\left(1 + \\left(\\frac{1}{4}\\right)^{2^k}\\right)$?",
+  "choices": {
+   "A": "$\\frac{16}{15}$",
+   "B": "$\\frac{5}{4}$",
+   "C": "$\\frac{4}{3}$",
+   "D": "$\\frac{7}{3}$",
+   "E": "$\\frac{5}{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Multiply by $(1 - x)$ and watch it telescope."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $(1 - x)(1 + x)(1 + x^2)(1 + x^4)\\cdots = 1$, since each factor pairs to give $1 - x^{2^{k+1}}$.\n\n**Step 1.** Product $= \\frac{1}{1 - \\frac{1}{4}} = \\frac{4}{3}$.\n\n**Answer:** $\\frac{4}{3}$. **(C)**\n\n**Common mistake:** multiplying only the first few terms."
+ }
+]

@@ -1,0 +1,122 @@
+---
+title: Probability
+---
+
+**Probability** measures how likely something is, as a number from 0 (impossible) to 1 (certain). When all outcomes are equally likely, it's simply a counting problem:
+
+$$
+P(\text{event}) = \frac{\text{number of outcomes you want}}{\text{total number of outcomes}}.
+$$
+
+By the end of this lesson you will be able to:
+
+- list equally likely outcomes correctly (the most important step),
+- use the complement for "at least one",
+- multiply probabilities of independent events,
+- handle drawing without replacement.
+
+## Two dice: 36 outcomes, not 11
+
+Rolling two dice, think of one as red and one as blue. Each has 6 faces, so there are $6 \times 6 = 36$ **equally likely** outcomes. The sums 2 through 12 are **not** equally likely: a sum of 7 happens 6 ways, a sum of 2 only one way. Click a rule to highlight its outcomes.
+
+<DiceGrid
+  rules={[
+    { label: "sum is 7", when: "a + b == 7" },
+    { label: "sum is 2", when: "a + b == 2" },
+    { label: "doubles", when: "a == b" },
+    { label: "product is even", when: "mod(a*b, 2) == 0" },
+    { label: "at least one 6", when: "a == 6 || b == 6" },
+    { label: "red beats blue", when: "a > b" },
+  ]}
+  caption="Every cell is equally likely. The probability is the highlighted count over 36."
+/>
+
+<Trap>
+Always count outcomes that are **equally likely**. "The sum is 2, 3, ..., 12, so $P(7) = \tfrac{1}{11}$" is wrong because those 11 sums are not equally likely.
+</Trap>
+
+<Check choices={["$\\tfrac{1}{12}$", "$\\tfrac{1}{11}$", "$\\tfrac{1}{6}$", "$\\tfrac{7}{36}$", "$\\tfrac{1}{4}$"]} answer={2} explain="Six outcomes give 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1). So $\tfrac{6}{36} = \tfrac{1}{6}$.">
+Two fair dice are rolled. What is the probability that the sum is 7?
+</Check>
+
+## The complement
+
+$$
+P(\text{not } E) = 1 - P(E).
+$$
+
+For "at least one", compute the probability of **none** and subtract from 1.
+
+<Steps problem="Three fair coins are flipped. What is the probability of at least one head?">
+<Step>
+The opposite is no heads at all: TTT. Probability $\left(\tfrac{1}{2}\right)^3 = \tfrac{1}{8}$.
+</Step>
+<Step>
+$1 - \tfrac{1}{8} = \tfrac{7}{8}$.
+</Step>
+</Steps>
+
+<Check choices={["$\\tfrac{1}{4}$", "$\\tfrac{1}{2}$", "$\\tfrac{2}{3}$", "$\\tfrac{3}{4}$", "$\\tfrac{5}{6}$"]} answer={3} explain="The product is odd only when both dice are odd: $\tfrac{3}{6} \cdot \tfrac{3}{6} = \tfrac{1}{4}$. So the product is even with probability $1 - \tfrac{1}{4} = \tfrac{3}{4}$. Check it on the grid above.">
+Two dice are rolled. What is the probability that the product of the numbers is even?
+</Check>
+
+## Independent events multiply
+
+Two events are **independent** if one happening doesn't change the chance of the other (separate coin flips, separate dice). Then
+
+$$
+P(A \text{ and } B) = P(A) \cdot P(B).
+$$
+
+Rolling a 6 and then flipping heads: $\tfrac{1}{6} \cdot \tfrac{1}{2} = \tfrac{1}{12}$.
+
+## Without replacement: the numbers change
+
+When you draw marbles and don't put them back, each draw changes what's left. Multiply step by step with the **updated** counts.
+
+<Steps problem="A bag has 3 red and 2 blue marbles. Two are drawn without replacement. What is the probability both are red?">
+<Step title="First draw">
+$P(\text{red}) = \tfrac{3}{5}$.
+</Step>
+<Step title="Second draw, given the first was red">
+Now 2 red out of 4: $\tfrac{2}{4}$.
+</Step>
+<Step title="Multiply">
+$\tfrac{3}{5} \cdot \tfrac{2}{4} = \tfrac{6}{20} = \tfrac{3}{10}$.
+</Step>
+<Step title="Check by counting">
+Pairs of marbles: $\binom{5}{2} = 10$. Red pairs: $\binom{3}{2} = 3$. So $\tfrac{3}{10}$ ✓.
+</Step>
+</Steps>
+
+<KeyIdea title="Two ways, same answer">
+You can either multiply probabilities step by step, or count favorable groups over total groups with combinations. Use whichever is easier, and use the other to check.
+</KeyIdea>
+
+<Check choices={["$\\tfrac{1}{221}$", "$\\tfrac{1}{169}$", "$\\tfrac{1}{26}$", "$\\tfrac{1}{13}$", "$\\tfrac{4}{51}$"]} answer={0} explain="First card an ace: $\tfrac{4}{52}$. Second card an ace, given the first was: $\tfrac{3}{51}$. Product: $\tfrac{12}{2652} = \tfrac{1}{221}$. Counting check: $\binom{4}{2} / \binom{52}{2} = \tfrac{6}{1326} = \tfrac{1}{221}$.">
+Two cards are drawn from a standard 52 card deck without replacement. What is the probability that both are aces?
+</Check>
+
+<Tip>
+Small probability problems are often fastest by listing the sample space outright, as in the dice grid. Don't be afraid to draw a 6 by 6 table on test day.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Probability of rolling doubles with two dice", back: "$\\tfrac{6}{36} = \\tfrac{1}{6}$" },
+  { front: "Probability of exactly 2 heads in 4 flips", back: "$\\tfrac{\\binom{4}{2}}{16} = \\tfrac{6}{16} = \\tfrac{3}{8}$" },
+  { front: "$P(\\text{at least one 6 in 2 rolls})$", back: "$1 - \\tfrac{25}{36} = \\tfrac{11}{36}$" },
+  { front: "Independent means...", back: "One event doesn't change the other's probability, so $P(A \\text{ and } B) = P(A)P(B)$." },
+]} />
+
+<Recap>
+- Equally likely outcomes: probability $=$ favorable over total.
+- Two dice have 36 outcomes; sums are not equally likely.
+- "At least one": $1 - P(\text{none})$.
+- Independent events multiply.
+- Without replacement: update the counts after each draw, or count with combinations.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Probability" /> and <AoPS q="Independent events" /> on the AoPS Wiki.
+- Probability problems appear in every <Archive test="10" />.
+</GoFurther>

@@ -1,0 +1,120 @@
+---
+title: Combinations
+---
+
+A **combination** is a selection where **order does not matter**: a committee, a hand of cards, a pizza's toppings. Choosing Ana, Ben and Cal is the same committee as choosing Cal, Ana and Ben. Combinations are the most used tool in all of AMC counting.
+
+By the end of this lesson you will be able to:
+
+- compute $\binom{n}{k}$ and explain where the formula comes from,
+- count committees with conditions,
+- count paths on a grid,
+- use "stars and bars" to split identical items among people.
+
+## From permutations to combinations
+
+Choose 3 people from 8 **in order**: $8 \cdot 7 \cdot 6 = 336$. But each committee of 3 was counted once for every way to order its members, which is $3! = 6$ times. So the number of committees is $\tfrac{336}{6} = 56$.
+
+<Formula>
+
+$$
+\binom{n}{k} = \frac{n!}{k!\,(n - k)!} = \frac{n(n-1)\cdots(n-k+1)}{k!}
+$$
+
+Read it "$n$ choose $k$". Quick way: multiply $k$ numbers counting down from $n$, then divide by $k!$.
+</Formula>
+
+Two facts that save time:
+
+- **Symmetry:** $\binom{n}{k} = \binom{n}{n-k}$. Choosing 3 to be on the committee is the same as choosing 5 to leave off: $\binom{8}{3} = \binom{8}{5}$.
+- **Pascal's rule:** $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$. Either a particular person is chosen or not.
+
+<Check choices={["$24$", "$56$", "$112$", "$336$", "$512$"]} answer={1} explain="$\binom{8}{3} = \tfrac{8 \cdot 7 \cdot 6}{3 \cdot 2 \cdot 1} = 56$.">
+How many ways can a committee of 3 be chosen from 8 people?
+</Check>
+
+## Committees with conditions
+
+Split the choice into independent parts and multiply.
+
+<Steps problem="A committee of 4 is chosen from 6 boys and 5 girls. How many committees have exactly 2 girls?">
+<Step>
+Choose the girls: $\binom{5}{2} = 10$.
+</Step>
+<Step>
+Choose the boys: $\binom{6}{2} = 15$.
+</Step>
+<Step>
+Multiply: $10 \cdot 15 = 150$.
+</Step>
+</Steps>
+
+For "**at least** one girl", use the complement: all committees minus all boy committees, $\binom{11}{4} - \binom{6}{4} = 330 - 15 = 315$.
+
+<Trap>
+Don't count "at least one girl" as "pick one girl, then any 3 others" ($5 \cdot \binom{10}{3}$). That counts a committee with two girls twice, once for each girl you could have picked first.
+</Trap>
+
+## Paths on a grid
+
+How many shortest paths go from the bottom left to the top right of a grid that is 4 wide and 3 tall? Every path is a string of 4 Rights and 3 Ups, in some order, like RRURUUR. Choose which 3 of the 7 steps are Ups: $\binom{7}{3} = 35$.
+
+The grid below fills in the count at each point. Each point can only be reached from the left or from below, so its count is the **sum of those two**. That's Pascal's triangle, tilted.
+
+<PathGrid m={4} n={3} caption="The number at each point is how many shortest paths reach it. The end shows $\binom{7}{3} = 35$." />
+
+With a blocked point, the same adding rule still works, with 0 at the blocked spot:
+
+<PathGrid m={4} n={3} blocked={[[2, 1]]} caption="The red point is closed. Paths through it: $\binom{3}{1}\binom{4}{2} = 18$, so $35 - 18 = 17$ paths remain." />
+
+<Check choices={["$35$", "$56$", "$70$", "$126$", "$256$"]} answer={2} explain="8 steps, 4 of them up: $\binom{8}{4} = 70$.">
+How many shortest grid paths go from $(0, 0)$ to $(4, 4)$, moving only right or up?
+</Check>
+
+## Stars and bars
+
+How many ways can 10 identical candies be given to 3 kids? Line up the 10 candies (stars) and insert 2 dividers (bars) to split them into 3 groups:
+
+$$
+\star\star\star \mid \star\star\star\star\star \mid \star\star \quad \text{means } 3, 5, 2.
+$$
+
+Every arrangement of 10 stars and 2 bars is one way to split. Choose positions for the 2 bars among 12 spots: $\binom{12}{2} = 66$.
+
+<Formula title="Stars and bars">
+The number of ways to split $n$ identical items among $k$ people (some may get zero) is
+
+$$
+\binom{n + k - 1}{k - 1}.
+$$
+
+If everyone must get **at least one**, hand each person one first, then split the remaining $n - k$.
+</Formula>
+
+<Check choices={["$36$", "$45$", "$55$", "$66$", "$78$"]} answer={0} explain="Give each kid 1 first, leaving 7 to split freely among 3: $\binom{7 + 2}{2} = \binom{9}{2} = 36$.">
+How many ways can 10 identical candies be given to 3 kids so that each kid gets at least one?
+</Check>
+
+<KeyIdea title="Order or not?">
+Ask: if I swap two of my choices, do I get a different outcome? If yes, it's a permutation. If no, it's a combination. Committees, hands and groups are combinations; lineups, rankings and passwords are permutations.
+</KeyIdea>
+
+<FlipCards cards={[
+  { front: "$\\binom{10}{2}$", back: "$45$" },
+  { front: "Handshakes when 12 people each shake hands once", back: "$\\binom{12}{2} = 66$" },
+  { front: "Solutions to $a + b + c + d = 6$ in nonnegative integers", back: "$\\binom{9}{3} = 84$" },
+  { front: "Diagonals of a decagon", back: "$\\binom{10}{2} - 10 = 35$" },
+]} />
+
+<Recap>
+- $\binom{n}{k} = \frac{n!}{k!(n-k)!}$: choices where order doesn't matter.
+- Symmetry $\binom{n}{k} = \binom{n}{n-k}$; Pascal's rule adds neighbors.
+- Conditions: choose each group separately and multiply. "At least one": complement.
+- Grid paths: $\binom{\text{total steps}}{\text{up steps}}$, or add counts point by point.
+- Stars and bars: $\binom{n + k - 1}{k - 1}$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Combination" />, <AoPS q="Pascal's Triangle" /> and <AoPS q="Ball-and-urn" /> (stars and bars) on the AoPS Wiki.
+- Combinations are in almost every year of <Archive test="10" />.
+</GoFurther>

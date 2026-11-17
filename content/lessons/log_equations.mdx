@@ -1,0 +1,116 @@
+---
+title: Exponential and log equations
+---
+
+Equations with a variable in an exponent or inside a log look intimidating, but they fall to three moves: **get the same base**, **convert between log form and exponent form**, and **substitute** to turn them into ordinary equations.
+
+By the end of this lesson you will be able to:
+
+- solve $a^{f(x)} = a^{g(x)}$ by matching exponents,
+- solve log equations by combining logs and converting,
+- reject answers outside the domain,
+- use a substitution to turn an exponential equation into a quadratic.
+
+## Same base, match the exponents
+
+<Steps problem="Solve $3^{x+1} = 81$.">
+<Step>
+$81 = 3^4$, so $3^{x+1} = 3^4$.
+</Step>
+<Step>
+Match exponents: $x + 1 = 4$, so $x = 3$.
+</Step>
+</Steps>
+
+When the bases can't be matched, take a log of both sides: $2^x = 7$ gives $x = \log_2 7$.
+
+<Check choices={["$\\tfrac{1}{2}$", "$1$", "$\\tfrac{3}{2}$", "$2$", "$3$"]} answer={2} explain="$9^x = 3^{2x}$ and $27 = 3^3$, so $2x = 3$ and $x = \tfrac{3}{2}$.">
+Solve $9^x = 27$.
+</Check>
+
+## Log equations: combine, convert, check
+
+<Steps problem="Solve $\log_2(x - 1) = 3$.">
+<Step title="Convert">
+$x - 1 = 2^3 = 8$.
+</Step>
+<Step title="Solve and check">
+$x = 9$, and $9 - 1 > 0$ ✓.
+</Step>
+</Steps>
+
+<Steps problem="Solve $\log x + \log(x - 3) = 1$.">
+<Step title="Combine">
+$\log\big(x(x - 3)\big) = 1$.
+</Step>
+<Step title="Convert">
+$x(x - 3) = 10$, so $x^2 - 3x - 10 = 0$, giving $(x - 5)(x + 2) = 0$.
+</Step>
+<Step title="Check the domain">
+$x = -2$ makes $\log x$ undefined, so reject it. The only solution is $x = 5$.
+</Step>
+</Steps>
+
+<Trap>
+Combining logs can create **fake solutions**. Always plug answers back into the **original** equation and make sure every log's input is positive.
+</Trap>
+
+<Check choices={["$3$", "$4$", "$5$", "$6$", "$8$"]} answer={1} explain="Combine: $\log_2\big(x(x + 4)\big) = 5$, so $x^2 + 4x = 32$, giving $(x + 8)(x - 4) = 0$. Reject $-8$, so $x = 4$. Check: $\log_2 4 + \log_2 8 = 2 + 3 = 5$ ✓.">
+Solve $\log_2 x + \log_2(x + 4) = 5$.
+</Check>
+
+## Substitution turns it into a quadratic
+
+When you see $4^x$ and $2^x$ together, notice that $4^x = (2^x)^2$. Let $u = 2^x$.
+
+<Steps problem="Solve $4^x - 3 \cdot 2^x - 4 = 0$.">
+<Step title="Substitute">
+With $u = 2^x$: $u^2 - 3u - 4 = 0$.
+</Step>
+<Step title="Factor">
+$(u - 4)(u + 1) = 0$, so $u = 4$ or $u = -1$.
+</Step>
+<Step title="Back substitute">
+$2^x = 4$ gives $x = 2$. $2^x = -1$ is impossible, since powers of 2 are always positive.
+</Step>
+</Steps>
+
+The same trick works for logs: in $(\log_2 x)^2 - 5\log_2 x + 6 = 0$, let $u = \log_2 x$, so $u = 2$ or $3$, and $x = 4$ or $8$.
+
+<Figure
+  bounds={[-1, 4, -8, 10]}
+  ticks={1}
+  height={320}
+  equal={false}
+  elements={[
+    { type: "func", f: "4^x - 3*2^x - 4", color: "accent", width: 3 },
+    { type: "point", x: 2, y: 0, color: "amber", label: "x = 2", labelDir: "se" },  ]}
+  caption="The graph of $y = 4^x - 3 \cdot 2^x - 4$ crosses zero only once, at $x = 2$. The other root of the quadratic, $u = -1$, never happens."
+/>
+
+<KeyIdea>
+Look for one expression that appears in disguise several times ($2^x$ inside $4^x$, or $\log x$ inside $\log x^2 = 2\log x$). Name it $u$, solve for $u$, then return to $x$.
+</KeyIdea>
+
+<Check choices={["$1$", "$2$", "$3$", "$4$", "$6$"]} answer={1} explain="Let $u = 3^x$. Then $9^x = u^2$, so $u^2 - 12u + 27 = 0$, giving $u = 3$ or $u = 9$. So $x = 1$ or $x = 2$. The larger is $2$.">
+What is the larger solution of $9^x - 12 \cdot 3^x + 27 = 0$?
+</Check>
+
+<FlipCards cards={[
+  { front: "Solve $2^{x^2} = 16$", back: "$x^2 = 4$, so $x = \\pm 2$." },
+  { front: "Solve $\\log_x 49 = 2$", back: "$x^2 = 49$, $x = 7$ (bases must be positive)." },
+  { front: "Solve $5^{2x} = 5^{x + 3}$", back: "$x = 3$" },
+  { front: "Why can't $2^x = -4$?", back: "Positive bases to any real power are positive." },
+]} />
+
+<Recap>
+- Same base: match exponents. Otherwise take a log.
+- Log equations: combine, convert to exponent form, then **check the domain**.
+- Hidden quadratics: substitute $u = a^x$ or $u = \log x$.
+- Reject impossible values like $a^x < 0$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Logarithm" /> on the AoPS Wiki has worked equations.
+- Practice in <Archive test="12" />.
+</GoFurther>

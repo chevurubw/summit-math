@@ -1,0 +1,154 @@
+---
+title: Circles
+---
+
+A **circle** is every point at one fixed distance, the **radius** $r$, from a center. Circle problems are full of hidden equal lengths (every radius is the same!) and a few beautiful angle facts. Master the five ideas below and most AMC circle problems open up.
+
+By the end of this lesson you will be able to:
+
+- find circumference, area, arc length and sector area,
+- use the Inscribed Angle Theorem,
+- use the facts about tangent lines,
+- use Power of a Point for intersecting chords and secants.
+
+## Vocabulary and the two basic formulas
+
+- A **chord** joins two points on the circle. A **diameter** is a chord through the center, $d = 2r$.
+- An **arc** is a piece of the circle. A **sector** is a pizza slice.
+- A **tangent** line touches the circle at exactly one point.
+
+$$
+\text{circumference} = 2\pi r, \qquad \text{area} = \pi r^2.
+$$
+
+An arc or sector with central angle $\theta$ is the fraction $\dfrac{\theta}{360^\circ}$ of the whole:
+
+$$
+\text{arc length} = \frac{\theta}{360} \cdot 2\pi r, \qquad \text{sector area} = \frac{\theta}{360} \cdot \pi r^2.
+$$
+
+<Check choices={["$3\\pi$", "$6\\pi$", "$9\\pi$", "$12\\pi$", "$18\\pi$"]} answer={1} explain="The sector is $\tfrac{60}{360} = \tfrac{1}{6}$ of the circle, and the whole area is $36\pi$, so the sector has area $6\pi$.">
+What is the area of a $60^\circ$ sector of a circle with radius 6?
+</Check>
+
+## The Inscribed Angle Theorem
+
+An **inscribed angle** has its vertex on the circle. It is always **half** of the central angle that cuts off the same arc. Move point $P$ around the circle and watch: the angle at $P$ never changes.
+
+<Figure
+  bounds={[-5.5, 5.5, -5, 5]}
+  axes={false}
+  grid={false}
+  height={400}
+  params={[
+    { name: "t", min: 25, max: 155, step: 1, value: 90, label: "move $P$", play: true, speed: 6 },
+    { name: "w", min: 30, max: 85, step: 1, value: 70, label: "half the arc $AB$" },
+  ]}
+  elements={[
+    { type: "circle", c: [0, 0], r: 4, color: "muted", width: 2 },
+    { type: "point", id: "O", x: 0, y: 0, label: "O", labelDir: "sw", color: "heading", size: 4 },
+    { type: "point", id: "A", x: "4*cosd(270 - w)", y: "4*sind(270 - w)", label: "A", labelDir: "sw", color: "heading" },
+    { type: "point", id: "B", x: "4*cosd(270 + w)", y: "4*sind(270 + w)", label: "B", labelDir: "se", color: "heading" },
+    { type: "point", id: "P", x: "4*cosd(t)", y: "4*sind(t)", label: "P", labelDir: "n", color: "accent" },
+    { type: "segment", a: "P", b: "A", color: "accent", width: 2.5 },
+    { type: "segment", a: "P", b: "B", color: "accent", width: 2.5 },
+    { type: "segment", a: "O", b: "A", color: "amber", width: 2 },
+    { type: "segment", a: "O", b: "B", color: "amber", width: 2 },
+    { type: "angle", a: "B", o: "O", b: "A", color: "amber", r: 30, label: "[[2*w]]°" },
+    { type: "angle", a: "A", o: "P", b: "B", color: "accent", r: 30, label: "[[w]]°" },
+  ]}
+  readouts={["\\text{central} = [[2*w]]^\\circ", "\\text{inscribed} = \\tfrac{1}{2} \\cdot [[2*w]]^\\circ = [[w]]^\\circ"]}
+  caption="Every inscribed angle that cuts off arc $AB$ equals half the central angle $\angle AOB$. (Keep $P$ on the big arc.)"
+/>
+
+Two consequences you will use constantly:
+
+- **An angle inscribed in a semicircle is a right angle.** If $AB$ is a diameter, the central angle is $180^\circ$, so any $\angle APB = 90^\circ$.
+- **Inscribed angles on the same arc are equal.** That creates equal angles out of nowhere, which leads to similar triangles.
+
+<Check choices={["$35^\\circ$", "$50^\\circ$", "$70^\\circ$", "$110^\\circ$", "$140^\\circ$"]} answer={2} explain="The inscribed angle is half the central angle on the same arc: $\tfrac{140}{2} = 70^\circ$.">
+Points $A$, $B$, $P$ lie on a circle with center $O$, and $\angle AOB = 140^\circ$. Point $P$ is on the major arc. What is $\angle APB$?
+</Check>
+
+## Tangent lines
+
+<KeyIdea title="Two tangent facts">
+1. A tangent line is **perpendicular** to the radius at the point where it touches. That makes a right triangle with the center.
+2. The two tangent segments from an outside point to a circle are **equal** in length.
+</KeyIdea>
+
+<Steps problem="A point $P$ is 13 units from the center of a circle of radius 5. How long is a tangent segment from $P$ to the circle?">
+<Step>
+The radius to the point of tangency $T$ is perpendicular to $PT$, so triangle $OTP$ has a right angle at $T$.
+</Step>
+<Step>
+$PT = \sqrt{13^2 - 5^2} = \sqrt{144} = 12$.
+</Step>
+</Steps>
+
+The equal tangents fact explains why a circle inscribed in a triangle touches each side at a point whose distances to the corners are $s - a$, $s - b$, $s - c$, where $s$ is the semiperimeter. It also gives the **inradius** formula: area $= r \cdot s$.
+
+## Power of a Point
+
+When two chords cross inside a circle at point $P$, the products of the pieces match:
+
+$$
+PA \cdot PB = PC \cdot PD.
+$$
+
+The same is true outside the circle for two secants (measure from $P$ to the near point and to the far point), and for a tangent, where the tangent length gets squared: $PT^2 = PA \cdot PB$.
+
+<Figure
+  bounds={[-5, 5, -4.6, 4.6]}
+  axes={false}
+  grid={false}
+  height={360}
+  params={[
+    { name: "u", min: 100, max: 175, step: 1, value: 150, label: "rotate chord 1" },
+    { name: "v", min: 15, max: 85, step: 1, value: 60, label: "rotate chord 2" },
+  ]}
+  elements={[
+    { type: "circle", c: [0, 0], r: 4, color: "muted", width: 2 },
+    { type: "point", id: "P", x: 1, y: 0.6, color: "amber", label: "P", labelDir: "s" },
+    { type: "point", id: "A", x: "1 + cosd(u)*(-(cosd(u) + 0.6*sind(u)) + sqrt((cosd(u) + 0.6*sind(u))^2 + 14.64))", y: "0.6 + sind(u)*(-(cosd(u) + 0.6*sind(u)) + sqrt((cosd(u) + 0.6*sind(u))^2 + 14.64))", label: "A", labelDir: "nw", color: "accent" },
+    { type: "point", id: "B", x: "1 + cosd(u)*(-(cosd(u) + 0.6*sind(u)) - sqrt((cosd(u) + 0.6*sind(u))^2 + 14.64))", y: "0.6 + sind(u)*(-(cosd(u) + 0.6*sind(u)) - sqrt((cosd(u) + 0.6*sind(u))^2 + 14.64))", label: "B", labelDir: "se", color: "accent" },
+    { type: "point", id: "C", x: "1 + cosd(v)*(-(cosd(v) + 0.6*sind(v)) + sqrt((cosd(v) + 0.6*sind(v))^2 + 14.64))", y: "0.6 + sind(v)*(-(cosd(v) + 0.6*sind(v)) + sqrt((cosd(v) + 0.6*sind(v))^2 + 14.64))", label: "C", labelDir: "ne", color: "blue" },
+    { type: "point", id: "D", x: "1 + cosd(v)*(-(cosd(v) + 0.6*sind(v)) - sqrt((cosd(v) + 0.6*sind(v))^2 + 14.64))", y: "0.6 + sind(v)*(-(cosd(v) + 0.6*sind(v)) - sqrt((cosd(v) + 0.6*sind(v))^2 + 14.64))", label: "D", labelDir: "sw", color: "blue" },
+    { type: "segment", a: "A", b: "B", color: "accent", width: 2.5 },
+    { type: "segment", a: "C", b: "D", color: "blue", width: 2.5 },
+  ]}
+  readouts={["PA \\cdot PB = [[14.64:2]]", "PC \\cdot PD = [[14.64:2]]"]}
+  caption="Both products always equal $r^2 - OP^2 = 16 - 1.36 = 14.64$, however you turn the chords."
+/>
+
+<Check choices={["$4$", "$5$", "$6$", "$8$", "$9$"]} answer={2} explain="Power of a Point: $PA \cdot PB = PC \cdot PD$, so $3 \cdot 8 = 4 \cdot PD$, giving $PD = 6$.">
+Chords $AB$ and $CD$ of a circle meet at $P$. If $PA = 3$, $PB = 8$ and $PC = 4$, what is $PD$?
+</Check>
+
+<Trap>
+For secants from an outside point, use the **whole** distance to the far point, not the part inside the circle: $PA \cdot PB$ where $B$ is the far intersection.
+</Trap>
+
+<Tip>
+In any circle problem, draw every radius you can to the important points. Equal radii make isosceles triangles, and radii to tangent points make right angles.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Arc length of a $90^\\circ$ arc, radius 8", back: "$\\tfrac{1}{4} \\cdot 16\\pi = 4\\pi$" },
+  { front: "Angle in a semicircle", back: "$90^\\circ$ always" },
+  { front: "Tangent from a point 10 away to a circle of radius 6", back: "$\\sqrt{100 - 36} = 8$" },
+  { front: "Tangent length $PT = 6$, secant near point $PA = 4$. Far point $PB$?", back: "$36 = 4 \\cdot PB$, so $PB = 9$." },
+]} />
+
+<Recap>
+- $C = 2\pi r$, $A = \pi r^2$. Arcs and sectors take the fraction $\frac{\theta}{360}$.
+- Inscribed angle $=$ half the central angle on the same arc. Semicircle angles are $90^\circ$.
+- Tangent is perpendicular to the radius. Two tangents from a point are equal.
+- Power of a Point: $PA \cdot PB = PC \cdot PD$, and $PT^2 = PA \cdot PB$ for a tangent.
+- Draw the radii.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Inscribed angle" />, <AoPS q="Power of a point theorem" /> and <AoPS q="Circle" /> on the AoPS Wiki.
+- Circle problems are among the most common geometry questions in <Archive test="10" /> and <Archive test="12" />.
+</GoFurther>

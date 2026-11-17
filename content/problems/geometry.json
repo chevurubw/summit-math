@@ -1,0 +1,4202 @@
+[
+ {
+  "id": "geo_angles_b01",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the measure, in degrees, of each exterior angle of a regular polygon with 12 sides?",
+  "choices": {
+   "A": "$30$",
+   "B": "$150$",
+   "C": "$165$",
+   "D": "$1800$",
+   "E": "$2160$"
+  },
+  "answer": "A",
+  "hints": [
+   "The interior angles of an $n$-gon add to $180(n - 2)$ degrees, and the exterior angles add to $360$."
+  ],
+  "solution": "**What we need:** each exterior angle of a regular $12$-gon.\n\n**Key idea:** interior angles of an $n$-gon add to $180(n - 2)$; exterior angles always add to $360^\\circ$.\n\n**Step 1.** Walking around any convex polygon you turn a full $360^\\circ$, so the exterior angles add to $360^\\circ$.\n\n**Step 2.** In a regular polygon they are equal: $\\frac{360}{12} = 30$ degrees.\n\n**Answer:** $30$. **(A)**\n\n**Common mistake:** using $180n$ for the interior sum, or mixing up interior and exterior angles. They add to $180^\\circ$ at each corner."
+ },
+ {
+  "id": "geo_angles_b02",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "In triangle $ABC$, $\\angle A = 48^\\circ$ and $\\angle B = 38^\\circ$. Side $BC$ is extended past $C$ to point $D$. What is $\\angle ACD$, in degrees?",
+  "choices": {
+   "A": "$10$",
+   "B": "$86$",
+   "C": "$94$",
+   "D": "$132$",
+   "E": "$142$"
+  },
+  "answer": "B",
+  "hints": [
+   "An exterior angle of a triangle equals the sum of the two remote interior angles."
+  ],
+  "solution": "**What we need:** the exterior angle at $C$.\n\n**Key idea:** the exterior angle and the interior angle at $C$ form a straight line, so they add to $180^\\circ$.\n\n**Step 1.** Interior angle at $C$: $180 - 48 - 38 = 94^\\circ$.\n\n**Step 2.** Exterior angle: $180 - 94 = 86^\\circ$.\n\n**Step 3.** Shortcut: an exterior angle always equals the sum of the two far interior angles, $48 + 38 = 86$.\n\n**Answer:** $86^\\circ$. **(B)**\n\n**Common mistake:** giving the interior angle $94^\\circ$ instead of the exterior one."
+ },
+ {
+  "id": "geo_angles_b03",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "An isosceles triangle has a vertex angle (between the two equal sides) of $42^\\circ$. What is the measure of each base angle, in degrees?",
+  "choices": {
+   "A": "$42$",
+   "B": "$69$",
+   "C": "$79$",
+   "D": "$96$",
+   "E": "$138$"
+  },
+  "answer": "B",
+  "hints": [
+   "The two base angles are equal and the three angles add to $180^\\circ$."
+  ],
+  "solution": "**What we need:** the missing angle of the isosceles triangle.\n\n**Key idea:** the angles opposite the equal sides (the base angles) are equal, and all three angles add to $180^\\circ$.\n\n**Step 1.** The two base angles are equal; call each $x$.\n\n**Step 2.** $x + x + 42 = 180$, so $2x = 138$ and $x = 69$.\n\n**Answer:** $69^\\circ$. **(B)**\n\n**Common mistake:** subtracting $42$ from $180$ and forgetting to split the result between two angles."
+ },
+ {
+  "id": "geo_angles_b04",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two parallel lines are cut by a transversal, forming same-side interior angles that measure $(3x + 40)^\\circ$ and $(4x + 42)^\\circ$. What is $x$?",
+  "choices": {
+   "A": "$11$",
+   "B": "$14$",
+   "C": "$16$",
+   "D": "$19$",
+   "E": "$82$"
+  },
+  "answer": "B",
+  "hints": [
+   "Same-side interior angles add to $180^\\circ$."
+  ],
+  "solution": "**What we need:** the value of $x$.\n\n**Key idea:** when a transversal crosses parallel lines, same-side interior angles (between the parallels, on the same side of the transversal) add to $180^\\circ$.\n\n**Step 1.** $(3x + 40) + (4x + 42) = 180$.\n\n**Step 2.** Combine: $7x + 82 = 180$, so $7x = 98$ and $x = 14$.\n\n**Step 3.** Check: the angles are $82^\\circ$ and $98^\\circ$, which add to $180^\\circ$.\n\n**Answer:** $x = 14$. **(B)**\n\n**Common mistake:** setting the two angles equal. Equal angles come from alternate or corresponding pairs, not same-side pairs."
+ },
+ {
+  "id": "geo_angles_b05",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_interior_regular",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the measure of each interior angle of a regular polygon with $8$ sides?",
+  "choices": {
+   "A": "$45^\\circ$",
+   "B": "$125^\\circ$",
+   "C": "$135^\\circ$",
+   "D": "$144^\\circ$",
+   "E": "$1080^\\circ$"
+  },
+  "answer": "C",
+  "hints": [
+   "Each exterior angle is $\\frac{360^\\circ}{n}$."
+  ],
+  "solution": "**What we need:** one interior angle.\n\n**Key idea:** interior and exterior angles at a vertex add to $180^\\circ$, and the exterior angles of any polygon add to $360^\\circ$.\n\n**Step 1.** Exterior angle: $\\frac{360^\\circ}{8} = 45^\\circ$.\n\n**Step 2.** Interior: $180^\\circ - 45^\\circ = 135^\\circ$.\n\n**Answer:** $135^\\circ$. **(C)**\n\n**Common mistake:** answering the exterior angle."
+ },
+ {
+  "id": "geo_angles_b06",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_sum_interior",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of the interior angles of a convex polygon with $12$ sides?",
+  "choices": {
+   "A": "$1620^\\circ$",
+   "B": "$1800^\\circ$",
+   "C": "$1980^\\circ$",
+   "D": "$2160^\\circ$",
+   "E": "$3600^\\circ$"
+  },
+  "answer": "B",
+  "hints": [
+   "Split the polygon into triangles from one vertex."
+  ],
+  "solution": "**What we need:** the angle sum.\n\n**Key idea:** drawing diagonals from one vertex splits an $n$-gon into $n - 2$ triangles, each with $180^\\circ$.\n\n**Step 1.** $12 - 2 = 10$ triangles.\n\n**Step 2.** $10 \\cdot 180^\\circ = 1800^\\circ$.\n\n**Answer:** $1800^\\circ$. **(B)**\n\n**Common mistake:** using $n$ triangles instead of $n - 2$."
+ },
+ {
+  "id": "geo_angles_b07",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_complement",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The complement of an angle is $4$ times the angle. What is the angle?",
+  "choices": {
+   "A": "$18^\\circ$",
+   "B": "$\\frac{45}{2}^\\circ$",
+   "C": "$28^\\circ$",
+   "D": "$36^\\circ$",
+   "E": "$72^\\circ$"
+  },
+  "answer": "A",
+  "hints": [
+   "Complementary angles add to $90^\\circ$."
+  ],
+  "solution": "**What we need:** the angle $x$.\n\n**Key idea:** its complement is $90^\\circ - x$.\n\n**Step 1.** $90 - x = 4x$, so $5x = 90$.\n\n**Step 2.** $x = 18^\\circ$.\n\n**Answer:** $18^\\circ$. **(A)**\n\n**Common mistake:** using $180^\\circ$ (that's for supplements)."
+ },
+ {
+  "id": "geo_angles_b08",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_supplement",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The supplement of an angle is $30^\\circ$ more than $2$ times the angle. What is the angle?",
+  "choices": {
+   "A": "$20^\\circ$",
+   "B": "$50^\\circ$",
+   "C": "$70^\\circ$",
+   "D": "$80^\\circ$",
+   "E": "$130^\\circ$"
+  },
+  "answer": "B",
+  "hints": [
+   "Supplementary angles add to $180^\\circ$."
+  ],
+  "solution": "**What we need:** the angle $x$.\n\n**Key idea:** the supplement is $180^\\circ - x$.\n\n**Step 1.** $180 - x = 2x + 30$.\n\n**Step 2.** $3x = 150$, so $x = 50^\\circ$.\n\n**Answer:** $50^\\circ$. **(B)**\n\n**Common mistake:** answering the supplement."
+ },
+ {
+  "id": "geo_angles_b09",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_vertical",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two lines cross, forming vertical angles of $(8x + 19)^\\circ$ and $(6x + 45)^\\circ$. What is the measure of each of these angles?",
+  "choices": {
+   "A": "$\\frac{58}{7}^\\circ$",
+   "B": "$13^\\circ$",
+   "C": "$57^\\circ$",
+   "D": "$123^\\circ$",
+   "E": "$131^\\circ$"
+  },
+  "answer": "D",
+  "hints": [
+   "Vertical angles are equal."
+  ],
+  "solution": "**What we need:** the angle measure.\n\n**Key idea:** angles opposite each other at a crossing are equal.\n\n**Step 1.** $8x + 19 = 6x + 45$, so $2x = 26$ and $x = 13$.\n\n**Step 2.** Angle: $8 \\cdot 13 + 19 = 123^\\circ$.\n\n**Answer:** $123^\\circ$. **(D)**\n\n**Common mistake:** stopping at $x$."
+ },
+ {
+  "id": "geo_angles_b10",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_ratio_triangle",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The angles of a triangle are in the ratio $2:4:9$. What is the largest angle?",
+  "choices": {
+   "A": "$24^\\circ$",
+   "B": "$48^\\circ$",
+   "C": "$60^\\circ$",
+   "D": "$108^\\circ$",
+   "E": "$216^\\circ$"
+  },
+  "answer": "D",
+  "hints": [
+   "The angles add to $180^\\circ$."
+  ],
+  "solution": "**What we need:** the largest angle.\n\n**Key idea:** split $180^\\circ$ into 15 equal parts.\n\n**Step 1.** One part: $\\frac{180}{15} = 12^\\circ$.\n\n**Step 2.** Largest: $9 \\cdot 12 = 108^\\circ$.\n\n**Answer:** $108^\\circ$. **(D)**\n\n**Common mistake:** using $360^\\circ$ for the triangle's angle sum."
+ },
+ {
+  "id": "geo_angles_b11",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_alternate",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two parallel lines are cut by a transversal. A pair of alternate interior angles measure $(8x + 9)^\\circ$ and $(4x + 25)^\\circ$. What is $x$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$\\frac{73}{6}$",
+   "E": "$41$"
+  },
+  "answer": "B",
+  "hints": [
+   "Alternate interior angles are equal."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** with parallel lines, alternate interior angles are equal (not supplementary).\n\n**Step 1.** $8x + 9 = 4x + 25$.\n\n**Step 2.** $4x = 16$, so $x = 4$.\n\n**Answer:** $4$. **(B)**\n\n**Common mistake:** setting the angles to add to $180^\\circ$."
+ },
+ {
+  "id": "geo_angles_b12",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_sides_from_interior",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Each interior angle of a regular polygon is $108^\\circ$. How many sides does it have?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$6$",
+   "D": "$7$",
+   "E": "$10$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the exterior angle first."
+  ],
+  "solution": "**What we need:** the number of sides.\n\n**Key idea:** exterior angle $= 180^\\circ - $ interior, and $n = \\frac{360^\\circ}{\\text{exterior}}$.\n\n**Step 1.** Exterior: $180 - 108 = 72^\\circ$.\n\n**Step 2.** $n = \\frac{360}{72} = 5$.\n\n**Answer:** $5$. **(B)**\n\n**Common mistake:** dividing $360^\\circ$ by the interior angle."
+ },
+ {
+  "id": "geo_angles_b13",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_around_point",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Four angles around a point measure $(3x + 17)^\\circ$, $(4x + 26)^\\circ$, $(2x + 18)^\\circ$, and $(x + 29)^\\circ$. What is the largest of them?",
+  "choices": {
+   "A": "$27^\\circ$",
+   "B": "$36^\\circ$",
+   "C": "$56^\\circ$",
+   "D": "$129^\\circ$",
+   "E": "$134^\\circ$"
+  },
+  "answer": "E",
+  "hints": [
+   "Angles all the way around a point add to $360^\\circ$."
+  ],
+  "solution": "**What we need:** the largest angle.\n\n**Key idea:** a full turn is $360^\\circ$.\n\n**Step 1.** Sum: $10x + 90 = 360$, so $x = 27$.\n\n**Step 2.** Angles: $98^\\circ$, $134^\\circ$, $72^\\circ$, $56^\\circ$. Largest: $134^\\circ$.\n\n**Answer:** $134^\\circ$. **(E)**\n\n**Common mistake:** using $180^\\circ$ for a full turn."
+ },
+ {
+  "id": "geo_angles_b14",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_right_acute",
+  "level": "basics",
+  "track": "both",
+  "prompt": "In a right triangle, one acute angle is $32^\\circ$ more than the other. What is the smaller acute angle?",
+  "choices": {
+   "A": "$29^\\circ$",
+   "B": "$34^\\circ$",
+   "C": "$58^\\circ$",
+   "D": "$61^\\circ$",
+   "E": "$74^\\circ$"
+  },
+  "answer": "A",
+  "hints": [
+   "The two acute angles add to $90^\\circ$."
+  ],
+  "solution": "**What we need:** the smaller acute angle.\n\n**Key idea:** in a right triangle the two acute angles share the remaining $90^\\circ$.\n\n**Step 1.** $x + (x + 32) = 90$, so $2x = 58$.\n\n**Step 2.** $x = 29^\\circ$.\n\n**Answer:** $29^\\circ$. **(A)**\n\n**Common mistake:** using $180^\\circ$ instead of $90^\\circ$."
+ },
+ {
+  "id": "geo_angles_b15",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_iso_vertex",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Each base angle of an isosceles triangle measures $50^\\circ$. What is the vertex angle?",
+  "choices": {
+   "A": "$40^\\circ$",
+   "B": "$50^\\circ$",
+   "C": "$65^\\circ$",
+   "D": "$80^\\circ$",
+   "E": "$130^\\circ$"
+  },
+  "answer": "D",
+  "hints": [
+   "The two base angles are equal."
+  ],
+  "solution": "**What we need:** the vertex angle.\n\n**Key idea:** the three angles add to $180^\\circ$, and two of them are 50°.\n\n**Step 1.** $180 - 2 \\cdot 50 = 80$.\n\n**Answer:** $80^\\circ$. **(D)**\n\n**Common mistake:** subtracting only one base angle."
+ },
+ {
+  "id": "geo_angles_b16",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_quad_missing",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Three angles of a quadrilateral measure $122^\\circ$, $92^\\circ$, and $108^\\circ$. What is the fourth angle?",
+  "choices": {
+   "A": "$38^\\circ$",
+   "B": "$48^\\circ$",
+   "C": "$58^\\circ$",
+   "D": "$90^\\circ$",
+   "E": "$218^\\circ$"
+  },
+  "answer": "A",
+  "hints": [
+   "A quadrilateral's angles add to $360^\\circ$."
+  ],
+  "solution": "**What we need:** the missing angle.\n\n**Key idea:** any quadrilateral splits into two triangles, so its angles add to $360^\\circ$.\n\n**Step 1.** $122 + 92 + 108 = 322$.\n\n**Step 2.** $360 - 322 = 38^\\circ$.\n\n**Answer:** $38^\\circ$. **(A)**\n\n**Common mistake:** using $180^\\circ$ as the angle sum."
+ },
+ {
+  "id": "geo_angles_b17",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_exterior_missing",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Four exterior angles of a convex pentagon (one at each of four vertices) are $69^\\circ$, $51^\\circ$, $48^\\circ$, and $43^\\circ$. What is the interior angle at the fifth vertex?",
+  "choices": {
+   "A": "$31^\\circ$",
+   "B": "$41^\\circ$",
+   "C": "$108^\\circ$",
+   "D": "$149^\\circ$",
+   "E": "$154^\\circ$"
+  },
+  "answer": "A",
+  "hints": [
+   "Exterior angles of a polygon add to $360^\\circ$."
+  ],
+  "solution": "**What we need:** the fifth interior angle.\n\n**Key idea:** one exterior angle per vertex always adds to $360^\\circ$; then interior $= 180^\\circ -$ exterior.\n\n**Step 1.** Fifth exterior angle: $360 - 211 = 149^\\circ$.\n\n**Step 2.** Interior: $180 - 149 = 31^\\circ$.\n\n**Answer:** $31^\\circ$. **(A)**\n\n**Common mistake:** giving the exterior angle."
+ },
+ {
+  "id": "geo_angles_b18",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_bisector_angle",
+  "level": "basics",
+  "track": "both",
+  "prompt": "In triangle $ABC$, $\\angle A = 77^\\circ$ and $\\angle B = 49^\\circ$. The bisector of $\\angle C$ meets $AB$ at $D$. What is $\\angle ADC$?",
+  "choices": {
+   "A": "$27^\\circ$",
+   "B": "$76^\\circ$",
+   "C": "$81^\\circ$",
+   "D": "$90^\\circ$",
+   "E": "$104^\\circ$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find $\\angle C$, then half of it."
+  ],
+  "solution": "**What we need:** $\\angle ADC$.\n\n**Key idea:** look at triangle $ADC$: it has $\\angle A$, half of $\\angle C$, and $\\angle ADC$.\n\n**Step 1.** $\\angle C = 180 - 77 - 49 = 54^\\circ$, so $\\angle ACD = 27^\\circ$.\n\n**Step 2.** In triangle $ADC$: $\\angle ADC = 180 - 77 - 27 = 76^\\circ$.\n\n**Answer:** $76^\\circ$. **(B)**\n\n**Common mistake:** using triangle $BDC$ instead, which gives $\\angle BDC$."
+ },
+ {
+  "id": "geo_angles_b19",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_arith_triangle",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The angles of a triangle form an arithmetic sequence, and the smallest is $38^\\circ$. What is the largest?",
+  "choices": {
+   "A": "$60^\\circ$",
+   "B": "$72^\\circ$",
+   "C": "$82^\\circ$",
+   "D": "$98^\\circ$",
+   "E": "$104^\\circ$"
+  },
+  "answer": "C",
+  "hints": [
+   "The middle angle of an arithmetic sequence is the average."
+  ],
+  "solution": "**What we need:** the largest angle.\n\n**Key idea:** three angles in arithmetic sequence average to $60^\\circ$, so the middle one is $60^\\circ$.\n\n**Step 1.** Middle: $60^\\circ$. The common difference is $60 - 38 = 22$.\n\n**Step 2.** Largest: $60 + 22 = 82^\\circ$.\n\n**Answer:** $82^\\circ$. **(C)**\n\n**Common mistake:** assuming the middle angle is unknown and getting stuck."
+ },
+ {
+  "id": "geo_angles_b20",
+  "skillId": "geo_angles",
+  "family": "geo_angles:an_linear_pair",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two angles form a linear pair (they make a straight line). One is $(4x - 7)^\\circ$ and the other is $(x + 27)^\\circ$. What is the larger angle?",
+  "choices": {
+   "A": "$32^\\circ$",
+   "B": "$59^\\circ$",
+   "C": "$90^\\circ$",
+   "D": "$121^\\circ$",
+   "E": "$272^\\circ$"
+  },
+  "answer": "D",
+  "hints": [
+   "A straight line is $180^\\circ$."
+  ],
+  "solution": "**What we need:** the larger angle.\n\n**Key idea:** angles on a straight line add to $180^\\circ$.\n\n**Step 1.** $5x + 20 = 180$, so $x = 32$.\n\n**Step 2.** Angles: $121^\\circ$ and $59^\\circ$.\n\n**Answer:** $121^\\circ$. **(D)**\n\n**Common mistake:** setting them equal (that's for vertical angles)."
+ },
+ {
+  "id": "geo_angles_c01",
+  "skillId": "geo_angles",
+  "family": "geo_angles:anc1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "In triangle $ABC$, $\\angle A = 76^\\circ$. The bisectors of angles $B$ and $C$ meet at point $I$. What is $\\angle BIC$, in degrees?",
+  "choices": {
+   "A": "$52$",
+   "B": "$104$",
+   "C": "$128$",
+   "D": "$142$",
+   "E": "$152$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\angle B + \\angle C = 180 - \\angle A$, and $I$ splits each of those angles in half."
+  ],
+  "solution": "**What we need:** the angle at $I$ in triangle $BIC$.\n\n**Key idea:** we don't know $\\angle B$ and $\\angle C$ separately, but we know their sum, and the bisectors take half of each.\n\n**Step 1.** $\\angle B + \\angle C = 180 - 76 = 104$.\n\n**Step 2.** $\\angle IBC + \\angle ICB = \\frac{1}{2}(\\angle B + \\angle C) = 52$.\n\n**Step 3.** In triangle $BIC$: $\\angle BIC = 180 - 52 = 128$.\n\n**Step 4.** (General fact: $\\angle BIC = 90 + \\frac{\\angle A}{2}$.)\n\n**Answer:** $128^\\circ$. **(C)**\n\n**Common mistake:** answering $180 - 76 = 104$, which forgets that the bisectors only take half of each angle."
+ },
+ {
+  "id": "geo_angles_c02",
+  "skillId": "geo_angles",
+  "family": "geo_angles:anc2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Each interior angle of a regular polygon is 4 times as large as each exterior angle. How many sides does the polygon have?",
+  "choices": {
+   "A": "$6$",
+   "B": "$8$",
+   "C": "$10$",
+   "D": "$12$",
+   "E": "$14$"
+  },
+  "answer": "C",
+  "hints": [
+   "Interior plus exterior is $180^\\circ$, and the exterior angles add to $360^\\circ$."
+  ],
+  "solution": "**What we need:** the number of sides.\n\n**Key idea:** at each corner the interior and exterior angles form a straight line ($180^\\circ$), and the exterior angles add to $360^\\circ$.\n\n**Step 1.** Let the exterior angle be $e$. Then the interior angle is $4e$, and $e + 4e = 180$.\n\n**Step 2.** So $5e = 180$ and $e = 36$.\n\n**Step 3.** Number of sides: $\\frac{360}{36} = 10$.\n\n**Answer:** $10$ sides. **(C)**\n\n**Common mistake:** dividing $360$ by the interior angle instead of the exterior angle."
+ },
+ {
+  "id": "geo_angles_c03",
+  "skillId": "geo_angles",
+  "family": "geo_angles:anc3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the smaller angle, in degrees, between the hour hand and the minute hand of a clock at 11:44?",
+  "choices": {
+   "A": "$66$",
+   "B": "$88$",
+   "C": "$93$",
+   "D": "$118$",
+   "E": "$272$"
+  },
+  "answer": "B",
+  "hints": [
+   "The hour hand moves $0.5^\\circ$ per minute and the minute hand moves $6^\\circ$ per minute."
+  ],
+  "solution": "**What we need:** the smaller angle between the hands.\n\n**Key idea:** measure each hand's angle from 12 o'clock. The minute hand moves $6^\\circ$ per minute. The hour hand moves $30^\\circ$ per hour, plus $0.5^\\circ$ per minute.\n\n**Step 1.** Minute hand: $44 \\cdot 6 = 264^\\circ$.\n\n**Step 2.** Hour hand: $11 \\cdot 30 + 44 \\cdot 0.5 = 330 + 22 = 352^\\circ$.\n\n**Step 3.** Difference: $|352 - 264| = 88^\\circ$.\n\n**Answer:** $88^\\circ$. **(B)**\n\n**Common mistake:** keeping the hour hand fixed on the hour mark. It moves as the minutes pass."
+ },
+ {
+  "id": "geo_angles_c04",
+  "skillId": "geo_angles",
+  "family": "geo_angles:anc_pentagon_ap",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "The interior angles of a convex pentagon form an arithmetic sequence with common difference $11^\\circ$. What is the largest angle?",
+  "choices": {
+   "A": "$86^\\circ$",
+   "B": "$108^\\circ$",
+   "C": "$119^\\circ$",
+   "D": "$130^\\circ$",
+   "E": "$152^\\circ$"
+  },
+  "answer": "D",
+  "hints": [
+   "A pentagon's angles add to $540^\\circ$."
+  ],
+  "solution": "**What we need:** the largest angle.\n\n**Key idea:** five angles in arithmetic sequence average to the middle one, which is $\\frac{540}{5} = 108^\\circ$.\n\n**Step 1.** Middle angle: $108^\\circ$. The angles are $108 - 22, 108 - 11, 108, 108 + 11, 108 + 22$.\n\n**Step 2.** Largest: $130^\\circ$.\n\n**Answer:** $130^\\circ$. **(D)**\n\n**Common mistake:** putting $108^\\circ$ as the smallest angle."
+ },
+ {
+  "id": "geo_angles_c05",
+  "skillId": "geo_angles",
+  "family": "geo_angles:anc_two_polygons",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Two regular polygons have $6$ sides difference, and each interior angle of the one with more sides is $3^\\circ$ larger than each interior angle of the other. How many sides does the smaller polygon have?",
+  "choices": {
+   "A": "$23$",
+   "B": "$24$",
+   "C": "$25$",
+   "D": "$30$",
+   "E": "$48$"
+  },
+  "answer": "B",
+  "hints": [
+   "Interior angles differ exactly when exterior angles do (in the other direction)."
+  ],
+  "solution": "**What we need:** the smaller polygon's side count.\n\n**Key idea:** the exterior angles $\\frac{360}{n}$ and $\\frac{360}{n + 6}$ differ by 3°.\n\n**Step 1.** $\\frac{360}{n} - \\frac{360}{n + 6} = 3$.\n\n**Step 2.** Try values: $n = 24$ gives $15 - 12 = 3$. It works.\n\n**Answer:** $24$. **(B)**\n\n**Common mistake:** setting up the difference with interior angles and making an algebra slip; exterior angles are simpler."
+ },
+ {
+  "id": "geo_angles_c06",
+  "skillId": "geo_angles",
+  "family": "geo_angles:anc_bisector_altitude",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "In triangle $ABC$, $\\angle B = 79^\\circ$ and $\\angle C = 63^\\circ$. What is the angle between the altitude from $A$ and the bisector of $\\angle A$?",
+  "choices": {
+   "A": "$8^\\circ$",
+   "B": "$11^\\circ$",
+   "C": "$13^\\circ$",
+   "D": "$16^\\circ$",
+   "E": "$19^\\circ$"
+  },
+  "answer": "A",
+  "hints": [
+   "Find where each line sits relative to side $AB$."
+  ],
+  "solution": "**What we need:** the angle between the altitude and the angle bisector.\n\n**Key idea:** measure both lines from side $AB$: the altitude makes $90^\\circ - \\angle B$ with it, the bisector makes $\\frac{\\angle A}{2}$.\n\n**Step 1.** $\\angle A = 38^\\circ$, so the bisector makes $19^\\circ$ with $AB$.\n\n**Step 2.** The altitude makes $90 - 79 = 11^\\circ$ with $AB$.\n\n**Step 3.** Difference: $|19 - 11| = 8^\\circ$, which is always $\\frac{|\\angle B - \\angle C|}{2}$.\n\n**Answer:** $8^\\circ$. **(A)**\n\n**Common mistake:** subtracting the two base angles without halving."
+ },
+ {
+  "id": "geo_angles_c07",
+  "skillId": "geo_angles",
+  "family": "geo_angles:anc_comp_supp",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "The complement of an angle is $\\frac{2}{5}$ of its supplement. What is the angle?",
+  "choices": {
+   "A": "$30^\\circ$",
+   "B": "$36^\\circ$",
+   "C": "$40^\\circ$",
+   "D": "$60^\\circ$",
+   "E": "$150^\\circ$"
+  },
+  "answer": "A",
+  "hints": [
+   "Write both the complement and the supplement in terms of $x$."
+  ],
+  "solution": "**What we need:** the angle $x$.\n\n**Key idea:** complement $= 90 - x$, supplement $= 180 - x$.\n\n**Step 1.** $90 - x = \\frac{2}{5}(180 - x)$.\n\n**Step 2.** $90 - x = 72 - \\frac{2}{5}x$, so $\\frac{3}{5}x = 18$.\n\n**Step 3.** $x = 30^\\circ$.\n\n**Answer:** $30^\\circ$. **(A)**\n\n**Common mistake:** putting the fraction on the wrong side."
+ },
+ {
+  "id": "geo_angles_c08",
+  "skillId": "geo_angles",
+  "family": "geo_angles:anc_integer_angles",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "For how many integers $n$ with $3 \\le n \\le 63$ does a regular $n$-gon have interior angles that are a whole number of degrees?",
+  "choices": {
+   "A": "$14$",
+   "B": "$16$",
+   "C": "$17$",
+   "D": "$18$",
+   "E": "$61$"
+  },
+  "answer": "C",
+  "hints": [
+   "The interior angle is whole exactly when the exterior angle is."
+  ],
+  "solution": "**What we need:** the count of valid $n$.\n\n**Key idea:** interior $= 180 - \\frac{360}{n}$, so it's a whole number exactly when $n$ divides $360$.\n\n**Step 1.** Divisors of $360$ that are at least $3$ and at most $63$: 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60.\n\n**Step 2.** That's $17$ values.\n\n**Answer:** $17$. **(C)**\n\n**Common mistake:** counting divisors of $180$ instead of $360$."
+ },
+ {
+  "id": "geo_angles_c09",
+  "skillId": "geo_angles",
+  "family": "geo_angles:anc_overlap_time",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "After 3:00, how many minutes pass before the hour and minute hands of a clock first point in exactly the same direction?",
+  "choices": {
+   "A": "$15$",
+   "B": "$\\frac{180}{11}$",
+   "C": "$17$",
+   "D": "$\\frac{191}{11}$",
+   "E": "$18$"
+  },
+  "answer": "B",
+  "hints": [
+   "The minute hand gains $5.5^\\circ$ per minute on the hour hand."
+  ],
+  "solution": "**What we need:** the minutes until the hands overlap.\n\n**Key idea:** the minute hand moves $6^\\circ$ per minute and the hour hand $0.5^\\circ$, so the gap closes at $5.5^\\circ$ per minute.\n\n**Step 1.** At 3:00 the hour hand is $90^\\circ$ ahead.\n\n**Step 2.** Time to close the gap: $\\frac{90}{5.5} = \\frac{180}{11}$ minutes.\n\n**Answer:** $\\frac{180}{11}$. **(B)**\n\n**Common mistake:** answering 15 minutes, forgetting the hour hand keeps moving."
+ },
+ {
+  "id": "geo_angles_c10",
+  "skillId": "geo_angles",
+  "family": "geo_angles:anc_external_bisectors",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "In triangle $ABC$, $\\angle A = 44^\\circ$. The bisectors of the exterior angles at $B$ and $C$ meet at $P$. What is $\\angle BPC$?",
+  "choices": {
+   "A": "$22^\\circ$",
+   "B": "$68^\\circ$",
+   "C": "$78^\\circ$",
+   "D": "$112^\\circ$",
+   "E": "$136^\\circ$"
+  },
+  "answer": "B",
+  "hints": [
+   "Each exterior angle at $B$ is $180^\\circ - \\angle B$."
+  ],
+  "solution": "**What we need:** $\\angle BPC$.\n\n**Key idea:** in triangle $BPC$, the angles at $B$ and $C$ are half of the exterior angles.\n\n**Step 1.** $\\angle PBC = \\frac{180 - B}{2}$ and $\\angle PCB = \\frac{180 - C}{2}$.\n\n**Step 2.** They add to $\\frac{360 - (B + C)}{2} = \\frac{360 - 136}{2} = 112^\\circ$.\n\n**Step 3.** $\\angle BPC = 180 - 112 = 68^\\circ$.\n\n**Answer:** $68^\\circ$. **(B)**\n\n**Common mistake:** using the interior bisector formula, $90 + \\frac{A}{2}$."
+ },
+ {
+  "id": "geo_right_b01",
+  "skillId": "geo_right",
+  "family": "geo_right:rt1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A right triangle has hypotenuse $26$ and one leg $10$. What is the other leg?",
+  "choices": {
+   "A": "$12$",
+   "B": "$16$",
+   "C": "$23$",
+   "D": "$24$",
+   "E": "$25$"
+  },
+  "answer": "D",
+  "hints": [
+   "Use the Pythagorean Theorem."
+  ],
+  "solution": "**What we need:** the missing leg $b$.\n\n**Key idea:** Pythagorean Theorem: $a^2 + b^2 = c^2$, so $b^2 = c^2 - a^2$.\n\n**Step 1.** $b^2 = 26^2 - 10^2 = 676 - 100 = 576$.\n\n**Step 2.** $b = 24$.\n\n**Answer:** $24$. **(D)**\n\n**Common mistake:** subtracting the lengths, $26 - 10 = 16$."
+ },
+ {
+  "id": "geo_right_b02",
+  "skillId": "geo_right",
+  "family": "geo_right:rt2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "In a $30$-$60$-$90$ triangle, the side opposite the $30^\\circ$ angle has length $4$. What is the length of the side opposite the $60^\\circ$ angle?",
+  "choices": {
+   "A": "$4$",
+   "B": "$4\\sqrt{2}$",
+   "C": "$4\\sqrt{3}$",
+   "D": "$8$",
+   "E": "$8\\sqrt{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "The sides of a $30$-$60$-$90$ triangle are in the ratio $1 : \\sqrt{3} : 2$."
+  ],
+  "solution": "**What we need:** the longer leg.\n\n**Key idea:** a $30$-$60$-$90$ triangle has sides in the ratio $1 : \\sqrt{3} : 2$ (opposite $30^\\circ$, $60^\\circ$, $90^\\circ$).\n\n**Step 1.** The short leg is $4$, so the hypotenuse is $2 \\cdot 4 = 8$.\n\n**Step 2.** The long leg is $\\sqrt{3}$ times the short leg: $4\\sqrt{3}$. (Check: $4^2 + 3 \\cdot 4^2 = 64 = (8)^2$.)\n\n**Answer:** $4\\sqrt{3}$. **(C)**\n\n**Common mistake:** giving the hypotenuse $8$ instead of the leg."
+ },
+ {
+  "id": "geo_right_b03",
+  "skillId": "geo_right",
+  "family": "geo_right:rt3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A rectangle has a diagonal of length $25$ and one side of length $7$. What is its area?",
+  "choices": {
+   "A": "$62$",
+   "B": "$84$",
+   "C": "$168$",
+   "D": "$175$",
+   "E": "$312$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the other side with the Pythagorean Theorem."
+  ],
+  "solution": "**What we need:** the area, which needs both sides.\n\n**Key idea:** the diagonal splits the rectangle into two right triangles, with the diagonal as hypotenuse.\n\n**Step 1.** Other side: $\\sqrt{25^2 - 7^2} = \\sqrt{576} = 24$.\n\n**Step 2.** Area: $7 \\cdot 24 = 168$.\n\n**Answer:** $168$. **(C)**\n\n**Common mistake:** multiplying the side by the diagonal ($7 \\cdot 25$). The diagonal is not a side."
+ },
+ {
+  "id": "geo_right_b04",
+  "skillId": "geo_right",
+  "family": "geo_right:rt4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Starting from home, a hiker walks 1 miles north, 10 miles east, 6 miles north, and 14 miles east. How far is the hiker from home, in miles, in a straight line?",
+  "choices": {
+   "A": "$8$",
+   "B": "$23$",
+   "C": "$25$",
+   "D": "$26$",
+   "E": "$31$"
+  },
+  "answer": "C",
+  "hints": [
+   "Add up the total north and the total east distances."
+  ],
+  "solution": "**What we need:** the straight line distance from start to finish.\n\n**Key idea:** only the total north and total east movements matter; they are the legs of a right triangle.\n\n**Step 1.** Total north: $1 + 6 = 7$. Total east: $10 + 14 = 24$.\n\n**Step 2.** Distance: $\\sqrt{7^2 + 24^2} = \\sqrt{625} = 25$.\n\n**Answer:** $25$ miles. **(C)**\n\n**Common mistake:** adding all the walking ($31$ miles), which is the path length, not the straight line distance."
+ },
+ {
+  "id": "geo_right_b05",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_hyp",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A right triangle has legs $12$ and $16$. What is the hypotenuse?",
+  "choices": {
+   "A": "$14$",
+   "B": "$20$",
+   "C": "$21$",
+   "D": "$22$",
+   "E": "$28$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pythagorean Theorem."
+  ],
+  "solution": "**What we need:** the hypotenuse $c$.\n\n**Key idea:** $c^2 = a^2 + b^2$.\n\n**Step 1.** $c^2 = 12^2 + 16^2 = 144 + 256 = 400$.\n\n**Step 2.** $c = 20$.\n\n**Answer:** $20$. **(B)**\n\n**Common mistake:** adding the legs without squaring."
+ },
+ {
+  "id": "geo_right_b06",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_45_hyp",
+  "level": "basics",
+  "track": "both",
+  "prompt": "An isosceles right triangle has legs of length $6$. What is its hypotenuse?",
+  "choices": {
+   "A": "$6$",
+   "B": "$6\\sqrt{2}$",
+   "C": "$6\\sqrt{3}$",
+   "D": "$12$",
+   "E": "$12\\sqrt{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "In a $45$-$45$-$90$ triangle the hypotenuse is $\\sqrt{2}$ times a leg."
+  ],
+  "solution": "**What we need:** the hypotenuse.\n\n**Key idea:** the sides of a $45$-$45$-$90$ triangle are in the ratio $1 : 1 : \\sqrt{2}$.\n\n**Step 1.** $c = \\sqrt{6^2 + 6^2} = \\sqrt{72} = 6\\sqrt{2}$.\n\n**Answer:** $6\\sqrt{2}$. **(B)**\n\n**Common mistake:** doubling the leg."
+ },
+ {
+  "id": "geo_right_b07",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_45_leg",
+  "level": "basics",
+  "track": "both",
+  "prompt": "An isosceles right triangle has hypotenuse $15$. How long is each leg?",
+  "choices": {
+   "A": "$\\frac{15}{2}$",
+   "B": "$5\\sqrt{3}$",
+   "C": "$\\frac{15\\sqrt{2}}{2}$",
+   "D": "$14$",
+   "E": "$15\\sqrt{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Divide the hypotenuse by $\\sqrt{2}$."
+  ],
+  "solution": "**What we need:** a leg.\n\n**Key idea:** leg $= \\frac{\\text{hypotenuse}}{\\sqrt{2}}$.\n\n**Step 1.** $\\frac{15}{\\sqrt{2}} = \\frac{15\\sqrt{2}}{2} = \\frac{15\\sqrt{2}}{2}$.\n\n**Answer:** $\\frac{15\\sqrt{2}}{2}$. **(C)**\n\n**Common mistake:** multiplying by $\\sqrt{2}$ instead of dividing."
+ },
+ {
+  "id": "geo_right_b08",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_3060_hyp",
+  "level": "basics",
+  "track": "both",
+  "prompt": "In a $30$-$60$-$90$ triangle, the leg opposite the $60^\\circ$ angle is $5\\sqrt{3}$. What is the hypotenuse?",
+  "choices": {
+   "A": "$5$",
+   "B": "$5\\sqrt{2}$",
+   "C": "$10$",
+   "D": "$15$",
+   "E": "$10\\sqrt{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Sides are in the ratio $1 : \\sqrt{3} : 2$."
+  ],
+  "solution": "**What we need:** the hypotenuse.\n\n**Key idea:** short leg $: $ long leg $: $ hypotenuse $= 1 : \\sqrt{3} : 2$.\n\n**Step 1.** Long leg $= \\sqrt{3} \\times$ short leg, so the short leg is $5$.\n\n**Step 2.** Hypotenuse $= 2 \\times 5 = 10$.\n\n**Answer:** $10$. **(C)**\n\n**Common mistake:** doubling the long leg."
+ },
+ {
+  "id": "geo_right_b09",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_sq_diag",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the length of a diagonal of a square with side $13$?",
+  "choices": {
+   "A": "$13\\sqrt{2}$",
+   "B": "$13\\sqrt{3}$",
+   "C": "$26$",
+   "D": "$26\\sqrt{2}$",
+   "E": "$169$"
+  },
+  "answer": "A",
+  "hints": [
+   "The diagonal makes two isosceles right triangles."
+  ],
+  "solution": "**What we need:** the diagonal.\n\n**Key idea:** diagonal $= s\\sqrt{2}$.\n\n**Step 1.** $d^2 = 13^2 + 13^2 = 338$, so $d = 13\\sqrt{2}$.\n\n**Answer:** $13\\sqrt{2}$. **(A)**\n\n**Common mistake:** doubling the side."
+ },
+ {
+  "id": "geo_right_b10",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_sq_side",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A square has diagonal $4\\sqrt{2}$. What is its area?",
+  "choices": {
+   "A": "$4$",
+   "B": "$8$",
+   "C": "$16$",
+   "D": "$32$",
+   "E": "$36$"
+  },
+  "answer": "C",
+  "hints": [
+   "Area of a square is half the diagonal squared."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** the side is $\\frac{d}{\\sqrt{2}}$, so area $= \\frac{d^2}{2}$.\n\n**Step 1.** $d^2 = 32$.\n\n**Step 2.** Area $= \\frac{32}{2} = 16$.\n\n**Answer:** $16$. **(C)**\n\n**Common mistake:** squaring the diagonal without halving."
+ },
+ {
+  "id": "geo_right_b11",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_eq_height",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the height of an equilateral triangle with side $10$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$5\\sqrt{2}$",
+   "C": "$5\\sqrt{3}$",
+   "D": "$10$",
+   "E": "$10\\sqrt{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "The height splits it into two $30$-$60$-$90$ triangles."
+  ],
+  "solution": "**What we need:** the height.\n\n**Key idea:** the height is the long leg of a $30$-$60$-$90$ triangle whose hypotenuse is a side.\n\n**Step 1.** Short leg: $\\frac{10}{2} = 5$.\n\n**Step 2.** Height: $5\\sqrt{3} = 5\\sqrt{3}$.\n\n**Answer:** $5\\sqrt{3}$. **(C)**\n\n**Common mistake:** using $\\frac{s}{2}$ as the height."
+ },
+ {
+  "id": "geo_right_b12",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_shortcut",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A rectangular field is $200$ m by $210$ m. How many meters shorter is it to walk diagonally across than along two sides?",
+  "choices": {
+   "A": "$10$",
+   "B": "$120$",
+   "C": "$130$",
+   "D": "$290$",
+   "E": "$410$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the diagonal."
+  ],
+  "solution": "**What we need:** the distance saved.\n\n**Key idea:** walking along two sides is $a + b$; the diagonal is $\\sqrt{a^2 + b^2}$.\n\n**Step 1.** Two sides: $200 + 210 = 410$ m.\n\n**Step 2.** Diagonal: $\\sqrt{40000 + 44100} = 290$ m.\n\n**Step 3.** Saved: $120$ m.\n\n**Answer:** $120$. **(B)**\n\n**Common mistake:** answering the diagonal length."
+ },
+ {
+  "id": "geo_right_b13",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_iso_height",
+  "level": "basics",
+  "track": "both",
+  "prompt": "An isosceles triangle has two sides of length $82$ and a base of $36$. What is the height to the base?",
+  "choices": {
+   "A": "$18$",
+   "B": "$41$",
+   "C": "$80$",
+   "D": "$81$",
+   "E": "$82$"
+  },
+  "answer": "C",
+  "hints": [
+   "The height cuts the base in half."
+  ],
+  "solution": "**What we need:** the height.\n\n**Key idea:** the height from the top meets the base at its midpoint, making two right triangles.\n\n**Step 1.** Half the base: $18$.\n\n**Step 2.** Height: $\\sqrt{82^2 - 18^2} = 80$.\n\n**Answer:** $80$. **(C)**\n\n**Common mistake:** using the full base in the Pythagorean Theorem."
+ },
+ {
+  "id": "geo_right_b14",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_iso_area",
+  "level": "basics",
+  "track": "both",
+  "prompt": "An isosceles triangle has sides $20$, $20$, and $24$. What is its area?",
+  "choices": {
+   "A": "$96$",
+   "B": "$192$",
+   "C": "$204$",
+   "D": "$240$",
+   "E": "$384$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the height to the base first."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** the height to the base splits it into two right triangles.\n\n**Step 1.** Height: $\\sqrt{20^2 - 12^2} = 16$.\n\n**Step 2.** Area $= \\frac{1}{2} \\cdot 24 \\cdot 16 = 192$.\n\n**Answer:** $192$. **(B)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$."
+ },
+ {
+  "id": "geo_right_b15",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_rhombus_side",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A rhombus has diagonals of lengths $12$ and $16$. What is the length of each side?",
+  "choices": {
+   "A": "$7$",
+   "B": "$10$",
+   "C": "$11$",
+   "D": "$14$",
+   "E": "$20$"
+  },
+  "answer": "B",
+  "hints": [
+   "The diagonals of a rhombus bisect each other at right angles."
+  ],
+  "solution": "**What we need:** a side length.\n\n**Key idea:** the diagonals cut each other in half at $90^\\circ$, forming four right triangles.\n\n**Step 1.** Half-diagonals: $6$ and $8$.\n\n**Step 2.** Side: $\\sqrt{6^2 + 8^2} = 10$.\n\n**Answer:** $10$. **(B)**\n\n**Common mistake:** using the full diagonals as the legs."
+ },
+ {
+  "id": "geo_right_b16",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_3060_perim",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A right triangle has a $30^\\circ$ angle and hypotenuse $6$. What is its perimeter?",
+  "choices": {
+   "A": "$6 + 3\\sqrt{2}$",
+   "B": "$9 + 6\\sqrt{3}$",
+   "C": "$15$",
+   "D": "$9$",
+   "E": "$9 + 3\\sqrt{3}$"
+  },
+  "answer": "E",
+  "hints": [
+   "Find both legs from the $1 : \\sqrt{3} : 2$ ratio."
+  ],
+  "solution": "**What we need:** the perimeter.\n\n**Key idea:** a $30$-$60$-$90$ triangle has sides $s$, $s\\sqrt{3}$, $2s$.\n\n**Step 1.** Hypotenuse $6 = 2s$, so $s = 3$.\n\n**Step 2.** Legs: $3$ and $3\\sqrt{3}$.\n\n**Step 3.** Perimeter: $9 + 3\\sqrt{3}$.\n\n**Answer:** $9 + 3\\sqrt{3}$. **(E)**\n\n**Common mistake:** mixing up which leg goes with which angle."
+ },
+ {
+  "id": "geo_right_b17",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_area_leg",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A right triangle has area $180$ and one leg of length $9$. What is its hypotenuse?",
+  "choices": {
+   "A": "$20$",
+   "B": "$40$",
+   "C": "$41$",
+   "D": "$42$",
+   "E": "$49$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use the area to find the other leg."
+  ],
+  "solution": "**What we need:** the hypotenuse.\n\n**Key idea:** area $= \\frac{1}{2} \\cdot$ leg $\\cdot$ leg.\n\n**Step 1.** Other leg: $\\frac{2 \\cdot 180}{9} = 40$.\n\n**Step 2.** Hypotenuse: $\\sqrt{9^2 + 40^2} = 41$.\n\n**Answer:** $41$. **(C)**\n\n**Common mistake:** forgetting to double the area."
+ },
+ {
+  "id": "geo_right_b18",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_screen",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A screen has width and height in the ratio $4:3$ and a diagonal of $25$ inches. What is its area, in square inches?",
+  "choices": {
+   "A": "$35$",
+   "B": "$300$",
+   "C": "$\\frac{625}{2}$",
+   "D": "$600$",
+   "E": "$625$"
+  },
+  "answer": "B",
+  "hints": [
+   "Width, height, diagonal are $4k$, $3k$, $5k$."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** the $4:3$ sides with the diagonal make a $3$-$4$-$5$ right triangle.\n\n**Step 1.** $5k = 25$, so $k = 5$.\n\n**Step 2.** Width $20$, height $15$.\n\n**Step 3.** Area $= 20 \\cdot 15 = 300$.\n\n**Answer:** $300$. **(B)**\n\n**Common mistake:** squaring the diagonal."
+ },
+ {
+  "id": "geo_right_b19",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_ratio_leg",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The legs of a right triangle are in the ratio $3:4$, and its hypotenuse is $30$. What is the shorter leg?",
+  "choices": {
+   "A": "$18$",
+   "B": "$19$",
+   "C": "$\\frac{45}{2}$",
+   "D": "$24$",
+   "E": "$30$"
+  },
+  "answer": "A",
+  "hints": [
+   "The sides are $3k$, $4k$, $5k$."
+  ],
+  "solution": "**What we need:** the shorter leg.\n\n**Key idea:** a $3:4$ leg ratio means a $3$-$4$-$5$ triangle scaled by some $k$.\n\n**Step 1.** $5k = 30$, so $k = 6$.\n\n**Step 2.** Shorter leg: $3 \\cdot 6 = 18$.\n\n**Answer:** $18$. **(A)**\n\n**Common mistake:** answering the longer leg."
+ },
+ {
+  "id": "geo_right_b20",
+  "skillId": "geo_right",
+  "family": "geo_right:rt_median_hyp",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A right triangle has legs $12$ and $16$. How long is the median from the right angle to the hypotenuse?",
+  "choices": {
+   "A": "$\\frac{20}{3}$",
+   "B": "$\\frac{48}{5}$",
+   "C": "$10$",
+   "D": "$14$",
+   "E": "$20$"
+  },
+  "answer": "C",
+  "hints": [
+   "The midpoint of the hypotenuse is the center of the circumscribed circle."
+  ],
+  "solution": "**What we need:** the median length.\n\n**Key idea:** in a right triangle, the midpoint of the hypotenuse is equally far from all three vertices.\n\n**Step 1.** Hypotenuse: $20$.\n\n**Step 2.** Median $= \\frac{20}{2} = 10$.\n\n**Answer:** $10$. **(C)**\n\n**Common mistake:** confusing the median with the altitude."
+ },
+ {
+  "id": "geo_right_c01",
+  "skillId": "geo_right",
+  "family": "geo_right:rtc1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A right triangle has legs $16$ and $30$. What is the length of the altitude to the hypotenuse?",
+  "choices": {
+   "A": "$\\frac{240}{17}$",
+   "B": "$\\frac{257}{17}$",
+   "C": "$17$",
+   "D": "$23$",
+   "E": "$240$"
+  },
+  "answer": "A",
+  "hints": [
+   "Compute the area two ways: with the legs, and with the hypotenuse as the base."
+  ],
+  "solution": "**What we need:** the height $h$ drawn from the right angle to the hypotenuse.\n\n**Key idea:** compute the area two ways: legs as base and height, or hypotenuse as base and $h$ as height.\n\n**Step 1.** Hypotenuse: $\\sqrt{16^2 + 30^2} = 34$.\n\n**Step 2.** Area using the legs: $\\frac{16 \\cdot 30}{2} = 240$.\n\n**Step 3.** Area using the hypotenuse: $\\frac{34 \\cdot h}{2}$. Set them equal: $34h = 480$, so $h = \\frac{240}{17}$.\n\n**Answer:** $\\frac{240}{17}$. **(A)**\n\n**Common mistake:** taking the altitude to be half the hypotenuse, which is the distance to the hypotenuse's midpoint, not the perpendicular distance."
+ },
+ {
+  "id": "geo_right_c02",
+  "skillId": "geo_right",
+  "family": "geo_right:rtc2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the area of an equilateral triangle with side length $8$?",
+  "choices": {
+   "A": "$16\\sqrt{2}$",
+   "B": "$16\\sqrt{3}$",
+   "C": "$32\\sqrt{3}$",
+   "D": "$64$",
+   "E": "$64\\sqrt{3}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Drop an altitude: it splits the triangle into two $30$-$60$-$90$ triangles."
+  ],
+  "solution": "**What we need:** the area, which needs the height.\n\n**Key idea:** an altitude of an equilateral triangle cuts it into two $30$-$60$-$90$ triangles.\n\n**Step 1.** The altitude splits the base into halves of $4$. The altitude is the long leg: $4\\sqrt{3}$.\n\n**Step 2.** Area: $\\frac{1}{2} \\cdot 8 \\cdot \\frac{8\\sqrt{3}}{2} = \\frac{64\\sqrt{3}}{4} = 16\\sqrt{3}$.\n\n**Step 3.** (General formula: $\\frac{\\sqrt{3}}{4}s^2$.)\n\n**Answer:** $16\\sqrt{3}$. **(B)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$ in the triangle area formula."
+ },
+ {
+  "id": "geo_right_c03",
+  "skillId": "geo_right",
+  "family": "geo_right:rtc3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A rectangular box measures $4$ by $5$ by $20$. What is the length of the longest segment that fits inside the box (from one corner to the opposite corner)?",
+  "choices": {
+   "A": "$9$",
+   "B": "$20$",
+   "C": "$21$",
+   "D": "$22$",
+   "E": "$29$"
+  },
+  "answer": "C",
+  "hints": [
+   "The space diagonal is $\\sqrt{a^2 + b^2 + c^2}$."
+  ],
+  "solution": "**What we need:** the space diagonal of the box.\n\n**Key idea:** use the Pythagorean Theorem twice: first across the bottom face, then up to the far top corner.\n\n**Step 1.** Bottom diagonal: $\\sqrt{4^2 + 5^2} = \\sqrt{41}$.\n\n**Step 2.** That diagonal and the height $20$ form a right triangle: $\\sqrt{41 + 400} = \\sqrt{441} = 21$.\n\n**Step 3.** (In one formula: $\\sqrt{a^2 + b^2 + c^2}$.)\n\n**Answer:** $21$. **(C)**\n\n**Common mistake:** using only a face diagonal, which is shorter."
+ },
+ {
+  "id": "geo_right_c04",
+  "skillId": "geo_right",
+  "family": "geo_right:rtc_sum_hyp_area",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A right triangle has legs adding to $14$ and hypotenuse $10$. What is its area?",
+  "choices": {
+   "A": "$23$",
+   "B": "$24$",
+   "C": "$35$",
+   "D": "$38$",
+   "E": "$48$"
+  },
+  "answer": "B",
+  "hints": [
+   "Square $a + b$."
+  ],
+  "solution": "**What we need:** the area $\\frac{ab}{2}$.\n\n**Key idea:** $(a + b)^2 = a^2 + b^2 + 2ab = c^2 + 2ab$.\n\n**Step 1.** $14^2 = 10^2 + 2ab$, so $2ab = 196 - 100 = 96$.\n\n**Step 2.** Area $= \\frac{ab}{2} = \\frac{96}{4} = 24$.\n\n**Answer:** $24$. **(B)**\n\n**Common mistake:** stopping at $2ab$ or $ab$."
+ },
+ {
+  "id": "geo_right_c05",
+  "skillId": "geo_right",
+  "family": "geo_right:rtc_ladder",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A $17$ foot ladder leans against a wall with its foot $8$ feet from the wall. If the top slides down $7$ feet, how many feet does the foot slide out?",
+  "choices": {
+   "A": "$6$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$9$",
+   "E": "$15$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the new height, then the new base."
+  ],
+  "solution": "**What we need:** how far the foot moves.\n\n**Key idea:** the ladder's length never changes, so use the Pythagorean Theorem twice.\n\n**Step 1.** Starting height: $\\sqrt{17^2 - 8^2} = 15$.\n\n**Step 2.** New height: $15 - 7 = 8$.\n\n**Step 3.** New base: $\\sqrt{17^2 - 8^2} = 15$.\n\n**Step 4.** Moved: $15 - 8 = 7$.\n\n**Answer:** $7$. **(B)**\n\n**Common mistake:** assuming the foot moves the same distance the top drops."
+ },
+ {
+  "id": "geo_right_c06",
+  "skillId": "geo_right",
+  "family": "geo_right:rtc_alt_geo_mean",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "The altitude to the hypotenuse of a right triangle splits the hypotenuse into pieces of $4$ and $16$. How long is the altitude?",
+  "choices": {
+   "A": "$8$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$12$",
+   "E": "$64$"
+  },
+  "answer": "A",
+  "hints": [
+   "The two small triangles are similar."
+  ],
+  "solution": "**What we need:** the altitude $h$.\n\n**Key idea:** the altitude to the hypotenuse is the geometric mean of the two pieces: $h^2 = pq$.\n\n**Step 1.** Similar triangles give $\\frac{h}{4} = \\frac{16}{h}$.\n\n**Step 2.** $h^2 = 4 \\cdot 16 = 64$, so $h = 8$.\n\n**Answer:** $8$. **(A)**\n\n**Common mistake:** averaging the two pieces."
+ },
+ {
+  "id": "geo_right_c07",
+  "skillId": "geo_right",
+  "family": "geo_right:rtc_british_flag",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Point $P$ is inside rectangle $ABCD$ with $PA = 9$, $PB = 9$, and $PC = 9$. What is $PD$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$9$",
+   "C": "$\\sqrt{82}$",
+   "D": "$10$",
+   "E": "$11$"
+  },
+  "answer": "B",
+  "hints": [
+   "Opposite corners pair up."
+  ],
+  "solution": "**What we need:** $PD$.\n\n**Key idea:** British Flag Theorem: $PA^2 + PC^2 = PB^2 + PD^2$ for any point in a rectangle.\n\n**Step 1.** Drop perpendiculars from $P$ to the sides; each squared distance splits into two pieces, and opposite corners share the same pieces.\n\n**Step 2.** $PD^2 = PA^2 + PC^2 - PB^2 = 81 + 81 - 81 = 81$.\n\n**Step 3.** $PD = 9$.\n\n**Answer:** $9$. **(B)**\n\n**Common mistake:** pairing adjacent corners instead of opposite ones."
+ },
+ {
+  "id": "geo_right_c08",
+  "skillId": "geo_right",
+  "family": "geo_right:rtc_eq_from_height",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "An equilateral triangle has height $4$. What is its area?",
+  "choices": {
+   "A": "$4\\sqrt{3}$",
+   "B": "$\\frac{16\\sqrt{2}}{3}$",
+   "C": "$\\frac{16\\sqrt{3}}{3}$",
+   "D": "$8\\sqrt{3}$",
+   "E": "$16$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the side first."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** height $= \\frac{\\sqrt{3}}{2}s$, so $s = \\frac{2h}{\\sqrt{3}}$.\n\n**Step 1.** $s = \\frac{2 \\cdot 4}{\\sqrt{3}}$.\n\n**Step 2.** Area $= \\frac{1}{2} \\cdot s \\cdot h = \\frac{4^2}{\\sqrt{3}} = \\frac{16\\sqrt{3}}{3}$.\n\n**Answer:** $\\frac{16\\sqrt{3}}{3}$. **(C)**\n\n**Common mistake:** using the height as the side."
+ },
+ {
+  "id": "geo_right_c09",
+  "skillId": "geo_right",
+  "family": "geo_right:rtc_spiral",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Start with a right triangle with legs $1$ and $1$. On its hypotenuse, build a right triangle with the other leg $1$; repeat, each time using the newest hypotenuse as a leg and adding a leg of $1$. What is the hypotenuse of the $38$th triangle?",
+  "choices": {
+   "A": "$\\sqrt{38}$",
+   "B": "$\\sqrt{39}$",
+   "C": "$2\\sqrt{10}$",
+   "D": "$2\\sqrt{19}$",
+   "E": "$38$"
+  },
+  "answer": "B",
+  "hints": [
+   "Track the squares of the hypotenuses."
+  ],
+  "solution": "**What we need:** the 38th hypotenuse.\n\n**Key idea:** each new hypotenuse squared is the old one squared plus $1$.\n\n**Step 1.** Triangle 1: $1^2 + 1^2 = 2$. Triangle 2: $2 + 1 = 3$. Triangle 3: $3 + 1 = 4$.\n\n**Step 2.** Triangle $38$: hypotenuse squared $= 39$, so it is $\\sqrt{39}$.\n\n**Answer:** $\\sqrt{39}$. **(B)**\n\n**Common mistake:** an off by one: the first hypotenuse is already $\\sqrt{2}$."
+ },
+ {
+  "id": "geo_right_c10",
+  "skillId": "geo_right",
+  "family": "geo_right:rtc_iso_perim_area",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "An isosceles triangle has a base of $24$ and a perimeter of $64$. What is its area?",
+  "choices": {
+   "A": "$96$",
+   "B": "$192$",
+   "C": "$204$",
+   "D": "$240$",
+   "E": "$384$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the equal sides from the perimeter."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** the equal sides share the rest of the perimeter, and the height cuts the base in half.\n\n**Step 1.** Equal sides: $\\frac{64 - 24}{2} = 20$.\n\n**Step 2.** Height: $\\sqrt{20^2 - 12^2} = 16$.\n\n**Step 3.** Area: $\\frac{1}{2} \\cdot 24 \\cdot 16 = 192$.\n\n**Answer:** $192$. **(B)**\n\n**Common mistake:** using half the base as the full base in the area formula."
+ },
+ {
+  "id": "geo_similar_b01",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Triangle $ABC$ has sides $AB = 9$, $BC = 10$, $CA = 8$. Triangle $DEF$ is similar to it with $DE = 18$ ($DE$ corresponds to $AB$). What is the perimeter of $DEF$?",
+  "choices": {
+   "A": "$27$",
+   "B": "$46$",
+   "C": "$54$",
+   "D": "$63$",
+   "E": "$108$"
+  },
+  "answer": "C",
+  "hints": [
+   "All sides scale by the same factor."
+  ],
+  "solution": "**What we need:** the perimeter of the larger (or smaller) similar triangle.\n\n**Key idea:** in similar triangles every length is multiplied by the same scale factor, so the perimeter is too.\n\n**Step 1.** Scale factor: $\\frac{DE}{AB} = \\frac{18}{9} = 2$.\n\n**Step 2.** Perimeter of $ABC$: $9 + 10 + 8 = 27$.\n\n**Step 3.** Perimeter of $DEF$: $27 \\cdot 2 = 54$.\n\n**Answer:** $54$. **(C)**\n\n**Common mistake:** squaring the scale factor. That is for areas, not lengths."
+ },
+ {
+  "id": "geo_similar_b02",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A 6-foot post casts a shadow 9 feet long. At the same time, a tree casts a shadow 36 feet long. How tall is the tree, in feet?",
+  "choices": {
+   "A": "$24$",
+   "B": "$25$",
+   "C": "$33$",
+   "D": "$42$",
+   "E": "$54$"
+  },
+  "answer": "A",
+  "hints": [
+   "The post and its shadow form a triangle similar to the tree and its shadow."
+  ],
+  "solution": "**What we need:** the tree's height $t$.\n\n**Key idea:** at the same moment the sun's rays hit at the same angle, so object and shadow form similar right triangles.\n\n**Step 1.** Height to shadow is the same ratio for both: $\\frac{t}{36} = \\frac{6}{9}$.\n\n**Step 2.** Multiply: $t = 36 \\cdot \\frac{6}{9} = 24$.\n\n**Answer:** $24$ feet. **(A)**\n\n**Common mistake:** flipping the ratio (shadow over height on one side, height over shadow on the other)."
+ },
+ {
+  "id": "geo_similar_b03",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two similar triangles have corresponding sides in the ratio $1:6$. The larger triangle has area $720$. What is the area of the smaller triangle?",
+  "choices": {
+   "A": "$\\frac{10}{3}$",
+   "B": "$20$",
+   "C": "$40$",
+   "D": "$120$",
+   "E": "$700$"
+  },
+  "answer": "B",
+  "hints": [
+   "Areas scale by the square of the side ratio."
+  ],
+  "solution": "**What we need:** the smaller triangle's area.\n\n**Key idea:** if lengths scale by $k$, areas scale by $k^2$ (area uses two lengths multiplied together).\n\n**Step 1.** Length ratio $k = \\frac{1}{6}$.\n\n**Step 2.** Area ratio $k^2 = \\frac{1}{36}$.\n\n**Step 3.** Smaller area: $720 \\cdot \\frac{1}{36} = 20$.\n\n**Answer:** $20$. **(B)**\n\n**Common mistake:** using the side ratio directly, which gives $120$."
+ },
+ {
+  "id": "geo_similar_b04",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "In triangle $ABC$, point $D$ is on $AB$ and $E$ is on $AC$ with $DE \\parallel BC$. If $AD = 5$, $DB = 8$, and $BC = 39$, what is $DE$?",
+  "choices": {
+   "A": "$15$",
+   "B": "$16$",
+   "C": "$24$",
+   "D": "$\\frac{195}{8}$",
+   "E": "$34$"
+  },
+  "answer": "A",
+  "hints": [
+   "Triangle $ADE$ is similar to triangle $ABC$."
+  ],
+  "solution": "**What we need:** the length of $DE$.\n\n**Key idea:** a segment parallel to one side cuts off a smaller triangle similar to the whole triangle ($ADE \\sim ABC$).\n\n**Step 1.** Matching sides: $AD$ goes with $AB = 5 + 8 = 13$, and $DE$ goes with $BC$.\n\n**Step 2.** $\\frac{DE}{39} = \\frac{5}{13}$, so $DE = 39 \\cdot \\frac{5}{13} = 15$.\n\n**Answer:** $15$. **(A)**\n\n**Common mistake:** using $\\frac{AD}{DB} = \\frac{5}{8}$. The matching side for $AD$ is the whole side $AB$, not the piece $DB$."
+ },
+ {
+  "id": "geo_similar_b05",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_perimeter",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Triangle $ABC$ has sides $11$, $10$, and $4$. A similar triangle has a side of $11$ matching the side of length $11$. What is its perimeter?",
+  "choices": {
+   "A": "$\\frac{25}{2}$",
+   "B": "$24$",
+   "C": "$25$",
+   "D": "$26$",
+   "E": "$27$"
+  },
+  "answer": "C",
+  "hints": [
+   "Perimeters scale by the same factor as sides."
+  ],
+  "solution": "**What we need:** the perimeter of the similar triangle.\n\n**Key idea:** all lengths, including perimeter, scale by the same ratio.\n\n**Step 1.** Scale factor: $\\frac{11}{11} = 1$.\n\n**Step 2.** Perimeter: $25 \\cdot 1 = 25$.\n\n**Answer:** $25$. **(C)**\n\n**Common mistake:** adding the difference instead of multiplying."
+ },
+ {
+  "id": "geo_similar_b06",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_side_from_area",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two similar triangles have areas $25$ and $\\frac{625}{4}$. A side of the smaller one is $12$. How long is the matching side of the larger one?",
+  "choices": {
+   "A": "$\\frac{29}{2}$",
+   "B": "$24$",
+   "C": "$30$",
+   "D": "$31$",
+   "E": "$75$"
+  },
+  "answer": "C",
+  "hints": [
+   "Area ratio is the square of the side ratio."
+  ],
+  "solution": "**What we need:** the matching side.\n\n**Key idea:** if sides scale by $k$, areas scale by $k^2$.\n\n**Step 1.** Area ratio: $\\frac{\\frac{625}{4}}{25} = \\frac{25}{4}$.\n\n**Step 2.** Side ratio: $\\sqrt{\\frac{25}{4}} = \\frac{5}{2}$.\n\n**Step 3.** Side: $12 \\cdot \\frac{5}{2} = 30$.\n\n**Answer:** $30$. **(C)**\n\n**Common mistake:** scaling the side by the area ratio."
+ },
+ {
+  "id": "geo_similar_b07",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_volume_ratio",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two similar statues have heights in the ratio $2:4$. The first uses $27$ liters of clay. How many liters does the second use?",
+  "choices": {
+   "A": "$54$",
+   "B": "$108$",
+   "C": "$216$",
+   "D": "$243$",
+   "E": "$432$"
+  },
+  "answer": "C",
+  "hints": [
+   "Volume scales with the cube of length."
+  ],
+  "solution": "**What we need:** the second volume.\n\n**Key idea:** if lengths scale by $k$, volumes scale by $k^3$.\n\n**Step 1.** Length ratio: $2$.\n\n**Step 2.** Volume ratio: $\\left(2\\right)^3 = 8$.\n\n**Step 3.** Volume: $27 \\cdot 8 = 216$.\n\n**Answer:** $216$. **(C)**\n\n**Common mistake:** squaring the ratio (that's for area)."
+ },
+ {
+  "id": "geo_similar_b08",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_model",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A model car is built at a scale of $1:50$. The real car is $200$ inches long. How long is the model, in inches?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$8$",
+   "D": "$150$",
+   "E": "$10000$"
+  },
+  "answer": "A",
+  "hints": [
+   "Every real inch becomes $\\frac{1}{50}$ inch."
+  ],
+  "solution": "**What we need:** the model's length.\n\n**Key idea:** a $1:k$ scale divides every length by $k$.\n\n**Step 1.** $\\frac{200}{50} = 4$ inches.\n\n**Answer:** $4$. **(A)**\n\n**Common mistake:** multiplying by the scale."
+ },
+ {
+  "id": "geo_similar_b09",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_leg_segment",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A right triangle has legs $27$ and $120$. The altitude to the hypotenuse divides it into two pieces. How long is the piece next to the leg of length $27$?",
+  "choices": {
+   "A": "$\\frac{243}{41}$",
+   "B": "$\\frac{284}{41}$",
+   "C": "$\\frac{1080}{41}$",
+   "D": "$\\frac{123}{2}$",
+   "E": "$\\frac{4800}{41}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Each leg squared equals the hypotenuse times the adjacent piece."
+  ],
+  "solution": "**What we need:** the piece of the hypotenuse next to the leg 27.\n\n**Key idea:** the small triangle and the whole triangle are similar: $\\text{leg}^2 = \\text{hypotenuse} \\times \\text{adjacent piece}$.\n\n**Step 1.** Hypotenuse: $123$.\n\n**Step 2.** Piece: $\\frac{27^2}{123} = \\frac{243}{41}$.\n\n**Answer:** $\\frac{243}{41}$. **(A)**\n\n**Common mistake:** using the other leg."
+ },
+ {
+  "id": "geo_similar_b10",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_midsegment",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Triangle $ABC$ has $AB = 21$, $BC = 29$, and $CA = 26$. $M$ and $N$ are the midpoints of $AB$ and $AC$. What is $MN$?",
+  "choices": {
+   "A": "$\\frac{21}{2}$",
+   "B": "$13$",
+   "C": "$\\frac{29}{2}$",
+   "D": "$\\frac{47}{2}$",
+   "E": "$29$"
+  },
+  "answer": "C",
+  "hints": [
+   "The segment joining two midpoints is parallel to the third side."
+  ],
+  "solution": "**What we need:** $MN$.\n\n**Key idea:** the midsegment is parallel to the third side and half as long.\n\n**Step 1.** $MN \\parallel BC$ and $MN = \\frac{BC}{2} = \\frac{29}{2}$.\n\n**Answer:** $\\frac{29}{2}$. **(C)**\n\n**Common mistake:** halving the wrong side."
+ },
+ {
+  "id": "geo_similar_b11",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_rectangles",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A $3 \\times 8$ rectangle is similar to a rectangle whose long side is $12$. What is the short side of the second rectangle?",
+  "choices": {
+   "A": "$2$",
+   "B": "$\\frac{9}{2}$",
+   "C": "$\\frac{11}{2}$",
+   "D": "$7$",
+   "E": "$12$"
+  },
+  "answer": "B",
+  "hints": [
+   "Match long side to long side."
+  ],
+  "solution": "**What we need:** the short side.\n\n**Key idea:** similar rectangles have the same ratio of short side to long side.\n\n**Step 1.** Scale: $\\frac{12}{8} = \\frac{3}{2}$.\n\n**Step 2.** Short side: $3 \\cdot \\frac{3}{2} = \\frac{9}{2}$.\n\n**Answer:** $\\frac{9}{2}$. **(B)**\n\n**Common mistake:** adding instead of multiplying."
+ },
+ {
+  "id": "geo_similar_b12",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_mirror",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Yusuf's eyes are $5$ feet above the ground. Yusuf stands $2$ feet from a mirror lying on the ground and sees the top of a building that is $27$ feet from the mirror on the other side. How tall is the building, in feet?",
+  "choices": {
+   "A": "$\\frac{10}{27}$",
+   "B": "$27$",
+   "C": "$30$",
+   "D": "$\\frac{135}{4}$",
+   "E": "$\\frac{135}{2}$"
+  },
+  "answer": "E",
+  "hints": [
+   "Light reflects at equal angles, making similar triangles."
+  ],
+  "solution": "**What we need:** the building's height.\n\n**Key idea:** the angle of incidence equals the angle of reflection, so the two right triangles are similar.\n\n**Step 1.** $\\frac{\\text{height}}{27} = \\frac{5}{2}$.\n\n**Step 2.** Height $= 27 \\cdot \\frac{5}{2} = \\frac{135}{2}$ feet.\n\n**Answer:** $\\frac{135}{2}$. **(E)**\n\n**Common mistake:** flipping the ratio."
+ },
+ {
+  "id": "geo_similar_b13",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_photo",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A $8 \\times 10$ photo is enlarged so its short side becomes $20$ inches. How long is the long side?",
+  "choices": {
+   "A": "$22$",
+   "B": "$25$",
+   "C": "$26$",
+   "D": "$27$",
+   "E": "$\\frac{125}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Both sides scale by the same factor."
+  ],
+  "solution": "**What we need:** the new long side.\n\n**Key idea:** enlarging keeps the shape, so sides scale by the same factor.\n\n**Step 1.** Scale: $\\frac{20}{8} = \\frac{5}{2}$.\n\n**Step 2.** Long side: $10 \\cdot \\frac{5}{2} = 25$.\n\n**Answer:** $25$. **(B)**\n\n**Common mistake:** adding the same number of inches to each side."
+ },
+ {
+  "id": "geo_similar_b14",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_pentagon_area",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two similar pentagons have perimeters $30$ and $60$. The first has area $40$. What is the area of the second?",
+  "choices": {
+   "A": "$10$",
+   "B": "$80$",
+   "C": "$160$",
+   "D": "$161$",
+   "E": "$640$"
+  },
+  "answer": "C",
+  "hints": [
+   "Perimeter ratio is the side ratio."
+  ],
+  "solution": "**What we need:** the second area.\n\n**Key idea:** areas scale by the square of the length ratio.\n\n**Step 1.** Length ratio: $\\frac{60}{30} = 2$.\n\n**Step 2.** Area: $40 \\cdot \\left(2\\right)^2 = 160$.\n\n**Answer:** $160$. **(C)**\n\n**Common mistake:** scaling the area by the perimeter ratio without squaring."
+ },
+ {
+  "id": "geo_similar_b15",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_medial",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Triangle $ABC$ has area $64$. What is the area of the triangle whose vertices are the midpoints of the sides of $ABC$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$16$",
+   "C": "$\\frac{64}{3}$",
+   "D": "$32$",
+   "E": "$64$"
+  },
+  "answer": "B",
+  "hints": [
+   "The midpoint triangle is similar with half the side lengths."
+  ],
+  "solution": "**What we need:** the area of the midpoint triangle.\n\n**Key idea:** each side of the midpoint triangle is half of a side of $ABC$, so the area is $\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$ as much.\n\n**Step 1.** The three midsegments cut $ABC$ into $4$ congruent triangles.\n\n**Step 2.** Area: $\\frac{64}{4} = 16$.\n\n**Answer:** $16$. **(B)**\n\n**Common mistake:** halving the area."
+ },
+ {
+  "id": "geo_similar_b16",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_pyramid_section",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A pyramid has a base of area $72$. A plane parallel to the base cuts it $\\frac{1}{2}$ of the way down from the top. What is the area of the cross-section?",
+  "choices": {
+   "A": "$9$",
+   "B": "$18$",
+   "C": "$19$",
+   "D": "$36$",
+   "E": "$54$"
+  },
+  "answer": "B",
+  "hints": [
+   "The cut makes a smaller similar pyramid on top."
+  ],
+  "solution": "**What we need:** the cross-section's area.\n\n**Key idea:** the small pyramid on top is similar with ratio \\frac{1}{2}, so areas scale by \\frac{1}{4}.\n\n**Step 1.** Length ratio: $\\frac{1}{2}$. Area ratio: $\\frac{1}{4}$.\n\n**Step 2.** Area: $72 \\cdot \\frac{1}{4} = 18$.\n\n**Answer:** $18$. **(B)**\n\n**Common mistake:** scaling area by the length ratio."
+ },
+ {
+  "id": "geo_similar_b17",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_right_scale",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A right triangle has legs $5$ and $12$. A similar triangle has hypotenuse $26$. What is the sum of its legs?",
+  "choices": {
+   "A": "$26$",
+   "B": "$30$",
+   "C": "$34$",
+   "D": "$35$",
+   "E": "$120$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the hypotenuse of the first triangle."
+  ],
+  "solution": "**What we need:** the sum of the second triangle's legs.\n\n**Key idea:** find the scale factor from the hypotenuses.\n\n**Step 1.** First hypotenuse: $\\sqrt{5^2 + 12^2} = 13$.\n\n**Step 2.** Scale: $\\frac{26}{13} = 2$.\n\n**Step 3.** Legs: $10$ and $24$; sum $34$.\n\n**Answer:** $34$. **(C)**\n\n**Common mistake:** adding instead of scaling."
+ },
+ {
+  "id": "geo_similar_b18",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_transversals",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Three parallel lines cut two transversals. On the first transversal they cut segments of $2$ and $6$. On the second, the segment matching the $2$ is $3$. How long is the segment matching the $6$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$9$",
+   "E": "$10$"
+  },
+  "answer": "D",
+  "hints": [
+   "Parallel lines cut transversals proportionally."
+  ],
+  "solution": "**What we need:** the matching segment.\n\n**Key idea:** parallel lines divide any two transversals in the same ratio.\n\n**Step 1.** Ratio: $\\frac{3}{2} = \\frac{3}{2}$.\n\n**Step 2.** Segment: $6 \\cdot \\frac{3}{2} = 9$.\n\n**Answer:** $9$. **(D)**\n\n**Common mistake:** adding the difference instead of multiplying."
+ },
+ {
+  "id": "geo_similar_b19",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_cone_fill",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A cone-shaped cup (point down) holds $64$ mL when full. It is filled to $\\frac{1}{3}$ of its height. How many mL of water are in it?",
+  "choices": {
+   "A": "$\\frac{64}{27}$",
+   "B": "$\\frac{128}{27}$",
+   "C": "$\\frac{64}{9}$",
+   "D": "$\\frac{64}{3}$",
+   "E": "$\\frac{1664}{27}$"
+  },
+  "answer": "A",
+  "hints": [
+   "The water forms a smaller similar cone."
+  ],
+  "solution": "**What we need:** the water volume.\n\n**Key idea:** the water is a cone similar to the cup with ratio \\frac{1}{3}; volumes scale by the cube.\n\n**Step 1.** Volume ratio: $\\left(\\frac{1}{3}\\right)^3 = \\frac{1}{27}$.\n\n**Step 2.** Water: $64 \\cdot \\frac{1}{27} = \\frac{64}{27}$ mL.\n\n**Answer:** $\\frac{64}{27}$. **(A)**\n\n**Common mistake:** using the height fraction directly."
+ },
+ {
+  "id": "geo_similar_b20",
+  "skillId": "geo_similar",
+  "family": "geo_similar:si_perimeter_split",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The sides of a triangle are in the ratio $7:5:8$, and its perimeter is $40$. What is its longest side?",
+  "choices": {
+   "A": "$8$",
+   "B": "$10$",
+   "C": "$13$",
+   "D": "$16$",
+   "E": "$17$"
+  },
+  "answer": "D",
+  "hints": [
+   "Each ratio part is the same length."
+  ],
+  "solution": "**What we need:** the longest side.\n\n**Key idea:** split the perimeter into 20 equal parts.\n\n**Step 1.** One part: $\\frac{40}{20} = 2$.\n\n**Step 2.** Longest: $8 \\cdot 2 = 16$.\n\n**Answer:** $16$. **(D)**\n\n**Common mistake:** answering the shortest side."
+ },
+ {
+  "id": "geo_similar_c01",
+  "skillId": "geo_similar",
+  "family": "geo_similar:sic1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Triangle $ABC$ has area $100$. Point $D$ is on $AB$ with $AD : DB = 4 : 1$, and the line through $D$ parallel to $BC$ meets $AC$ at $E$. What is the area of quadrilateral $DBCE$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$20$",
+   "C": "$36$",
+   "D": "$37$",
+   "E": "$64$"
+  },
+  "answer": "C",
+  "hints": [
+   "Triangle $ADE$ is similar to $ABC$ with ratio $\\frac{AD}{AB}$. Subtract its area."
+  ],
+  "solution": "**What we need:** the area of the trapezoid $DBCE$.\n\n**Key idea:** area of $DBCE$ $=$ area of $ABC$ $-$ area of $ADE$, and $ADE$ is similar to $ABC$.\n\n**Step 1.** Scale factor: $\\frac{AD}{AB} = \\frac{4}{5}$.\n\n**Step 2.** Area of $ADE$: $100 \\cdot \\left(\\frac{4}{5}\\right)^2 = 100 \\cdot \\frac{16}{25} = 64$.\n\n**Step 3.** Area of $DBCE$: $100 - 64 = 36$.\n\n**Answer:** $36$. **(C)**\n\n**Common mistake:** using the ratio $\\frac{AD}{DB}$ instead of $\\frac{AD}{AB}$, or forgetting to square it."
+ },
+ {
+  "id": "geo_similar_c02",
+  "skillId": "geo_similar",
+  "family": "geo_similar:sic2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "In triangle $ABC$, $AB = 11$, $AC = 12$, and $BC = 19$. The bisector of angle $A$ meets $BC$ at $D$. What is $BD$?",
+  "choices": {
+   "A": "$\\frac{132}{19}$",
+   "B": "$\\frac{209}{23}$",
+   "C": "$\\frac{19}{2}$",
+   "D": "$\\frac{228}{23}$",
+   "E": "$\\frac{232}{23}$"
+  },
+  "answer": "B",
+  "hints": [
+   "The angle bisector splits the opposite side in the ratio of the adjacent sides: $\\frac{BD}{DC} = \\frac{AB}{AC}$."
+  ],
+  "solution": "**What we need:** the piece $BD$ of side $BC$.\n\n**Key idea:** Angle Bisector Theorem: $\\frac{BD}{DC} = \\frac{AB}{AC}$. The bisector splits the opposite side in the ratio of the two sides next to the angle.\n\n**Step 1.** $BD : DC = 11 : 12$, so $BC$ is split into $23$ equal parts, with $11$ of them in $BD$.\n\n**Step 2.** $BD = 19 \\cdot \\frac{11}{23} = \\frac{209}{23}$.\n\n**Answer:** $\\frac{209}{23}$. **(B)**\n\n**Common mistake:** pairing $BD$ with $AC$. $BD$ touches $B$, so it pairs with side $AB$."
+ },
+ {
+  "id": "geo_similar_c03",
+  "skillId": "geo_similar",
+  "family": "geo_similar:sic3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A right triangle has legs $15$ and $36$. A square is placed inside it with one corner at the right angle and the opposite corner on the hypotenuse. What is the side length of the square?",
+  "choices": {
+   "A": "$\\frac{15}{2}$",
+   "B": "$\\frac{180}{17}$",
+   "C": "$\\frac{197}{17}$",
+   "D": "$\\frac{180}{13}$",
+   "E": "$\\frac{51}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "The small triangle above the square is similar to the whole triangle."
+  ],
+  "solution": "**What we need:** the side $s$ of the square.\n\n**Key idea:** the small triangle above the square is similar to the whole triangle.\n\n**Step 1.** Put the right angle at the origin, legs along the axes: the hypotenuse runs from $(36, 0)$ to $(0, 15)$, with equation $\\frac{x}{36} + \\frac{y}{15} = 1$.\n\n**Step 2.** The square's far corner is $(s, s)$, and it lies on the hypotenuse: $\\frac{s}{36} + \\frac{s}{15} = 1$.\n\n**Step 3.** Combine: $s \\cdot \\frac{15 + 36}{540} = 1$, so $s = \\frac{540}{51} = \\frac{180}{17}$.\n\n**Answer:** $\\frac{180}{17}$. **(B)**\n\n**Common mistake:** assuming the square's corner is at the middle of the hypotenuse."
+ },
+ {
+  "id": "geo_similar_c04",
+  "skillId": "geo_similar",
+  "family": "geo_similar:sic_poles",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Two vertical poles of heights $4$ and $12$ stand $35$ feet apart. A wire runs from the top of each pole to the bottom of the other. How high above the ground do the wires cross?",
+  "choices": {
+   "A": "$\\frac{48}{35}$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "The distance between the poles doesn't matter."
+  ],
+  "solution": "**What we need:** the crossing height.\n\n**Key idea:** similar triangles give $\\frac{1}{h} = \\frac{1}{a} + \\frac{1}{b}$.\n\n**Step 1.** If the crossing is at height $h$, then $\\frac{h}{4} + \\frac{h}{12} = 1$ (the two fractions of the ground distance add to the whole).\n\n**Step 2.** $h\\left(\\frac{1}{4} + \\frac{1}{12}\\right) = 1$, so $h = \\frac{4 \\cdot 12}{4 + 12} = 3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** averaging the heights."
+ },
+ {
+  "id": "geo_similar_c05",
+  "skillId": "geo_similar",
+  "family": "geo_similar:sic_trap_diag",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Trapezoid $ABCD$ has bases $AB = 3$ and $CD = 10$, and its diagonals meet at $E$. The trapezoid's area is $169$. What is the area of triangle $ABE$?",
+  "choices": {
+   "A": "$9$",
+   "B": "$12$",
+   "C": "$30$",
+   "D": "$39$",
+   "E": "$100$"
+  },
+  "answer": "A",
+  "hints": [
+   "Triangles $ABE$ and $CDE$ are similar."
+  ],
+  "solution": "**What we need:** the area of triangle $ABE$.\n\n**Key idea:** triangles $ABE$ and $CDE$ are similar with ratio $a : b$; the two side triangles each have area proportional to $ab$.\n\n**Step 1.** The four triangles have areas in the ratio $a^2 : ab : ab : b^2 = 9 : 30 : 30 : 100$, adding to $(a + b)^2 = 169$ parts.\n\n**Step 2.** Triangle $ABE$ is $\\frac{9}{169}$ of the trapezoid: $\\frac{9}{169} \\cdot 169 = 9$.\n\n**Answer:** $9$. **(A)**\n\n**Common mistake:** splitting the area evenly among the four triangles."
+ },
+ {
+  "id": "geo_similar_c06",
+  "skillId": "geo_similar",
+  "family": "geo_similar:sic_equal_area",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "In triangle $ABC$, $AB = 10$. A line parallel to $BC$ meets $AB$ at $D$ and cuts the triangle into two pieces of equal area. What is $AD$?",
+  "choices": {
+   "A": "$\\frac{5\\sqrt{2}}{2}$",
+   "B": "$5$",
+   "C": "$\\frac{10\\sqrt{3}}{3}$",
+   "D": "$5\\sqrt{2}$",
+   "E": "$\\frac{15}{2}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Triangle $ADE$ has half the area of $ABC$."
+  ],
+  "solution": "**What we need:** $AD$.\n\n**Key idea:** the small triangle $ADE$ is similar to $ABC$; half the area means a length ratio of $\\frac{1}{\\sqrt{2}}$.\n\n**Step 1.** Area ratio $\\frac{1}{2}$, so length ratio $\\sqrt{\\frac{1}{2}} = \\frac{\\sqrt{2}}{2}$.\n\n**Step 2.** $AD = 10 \\cdot \\frac{\\sqrt{2}}{2} = 5\\sqrt{2}$.\n\n**Answer:** $5\\sqrt{2}$. **(D)**\n\n**Common mistake:** using half of $AB$."
+ },
+ {
+  "id": "geo_similar_c07",
+  "skillId": "geo_similar",
+  "family": "geo_similar:sic_square_in_triangle",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A square sits inside a triangle with one side on the triangle's base. The base is $15$ and the height to it is $10$. The square's top corners touch the other two sides. What is the square's side?",
+  "choices": {
+   "A": "$5$",
+   "B": "$6$",
+   "C": "$\\frac{25}{4}$",
+   "D": "$7$",
+   "E": "$\\frac{15}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "The triangle above the square is similar to the whole triangle."
+  ],
+  "solution": "**What we need:** the side $s$.\n\n**Key idea:** the small triangle above the square has base $s$ and height $h - s$, similar to the big one.\n\n**Step 1.** $\\frac{s}{15} = \\frac{10 - s}{10}$.\n\n**Step 2.** $10s = 15(10 - s)$, so $25s = 150$.\n\n**Step 3.** $s = 6$.\n\n**Answer:** $6$. **(B)**\n\n**Common mistake:** setting the square's side to half the base."
+ },
+ {
+  "id": "geo_similar_c08",
+  "skillId": "geo_similar",
+  "family": "geo_similar:sic_trap_harmonic",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A trapezoid has bases $3$ and $12$. A segment parallel to the bases passes through the point where the diagonals cross, with its ends on the legs. How long is it?",
+  "choices": {
+   "A": "$\\frac{12}{5}$",
+   "B": "$\\frac{24}{5}$",
+   "C": "$\\frac{29}{5}$",
+   "D": "$7$",
+   "E": "$\\frac{15}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Each half of the segment comes from similar triangles."
+  ],
+  "solution": "**What we need:** the segment's length.\n\n**Key idea:** the segment is the harmonic mean of the bases: $\\frac{2ab}{a + b}$.\n\n**Step 1.** The diagonals split each other in the ratio $3:12$.\n\n**Step 2.** Each half of the segment is $\\frac{ab}{a + b} = \\frac{12}{5}$ by similar triangles.\n\n**Step 3.** Total: $\\frac{24}{5}$.\n\n**Answer:** $\\frac{24}{5}$. **(B)**\n\n**Common mistake:** taking the average of the bases (that's the midsegment, which is different)."
+ },
+ {
+  "id": "geo_similar_c09",
+  "skillId": "geo_similar",
+  "family": "geo_similar:sic_antiparallel",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "In triangle $ABC$, points $D$ on $AB$ and $E$ on $AC$ satisfy $\\angle ADE = \\angle ACB$. If $AD = 4$, $AE = 2$, and $AB = 20$, what is $AC$?",
+  "choices": {
+   "A": "$\\frac{2}{5}$",
+   "B": "$10$",
+   "C": "$18$",
+   "D": "$40$",
+   "E": "$41$"
+  },
+  "answer": "D",
+  "hints": [
+   "Triangle $ADE$ is similar to triangle $ACB$, not $ABC$."
+  ],
+  "solution": "**What we need:** $AC$.\n\n**Key idea:** matching angles: $\\angle A$ is shared and $\\angle ADE = \\angle ACB$, so $ADE \\sim ACB$.\n\n**Step 1.** Corresponding sides: $AD \\leftrightarrow AC$ and $AE \\leftrightarrow AB$.\n\n**Step 2.** $\\frac{AD}{AC} = \\frac{AE}{AB}$, so $AD \\cdot AB = AE \\cdot AC$.\n\n**Step 3.** $AC = \\frac{4 \\cdot 20}{2} = 40$.\n\n**Answer:** $40$. **(D)**\n\n**Common mistake:** matching $D$ with $B$ as if $DE$ were parallel to $BC$."
+ },
+ {
+  "id": "geo_similar_c10",
+  "skillId": "geo_similar",
+  "family": "geo_similar:sic_alt_areas",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A right triangle has legs $5$ and $12$. The altitude to the hypotenuse splits it into two smaller triangles. What is the ratio of the smaller triangle's area to the larger one's?",
+  "choices": {
+   "A": "$\\frac{25}{169}$",
+   "B": "$\\frac{25}{144}$",
+   "C": "$\\frac{5}{13}$",
+   "D": "$\\frac{5}{12}$",
+   "E": "$\\frac{144}{25}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Both small triangles are similar to the original."
+  ],
+  "solution": "**What we need:** the area ratio.\n\n**Key idea:** the two pieces are similar to each other with ratio $a : b$ (their hypotenuses are the legs).\n\n**Step 1.** Hypotenuses of the small triangles: $5$ and $12$.\n\n**Step 2.** Area ratio $= \\left(\\frac{5}{12}\\right)^2 = \\frac{25}{144}$.\n\n**Answer:** $\\frac{25}{144}$. **(B)**\n\n**Common mistake:** using $\\frac{a}{b}$ without squaring."
+ },
+ {
+  "id": "geo_area_b01",
+  "skillId": "geo_area",
+  "family": "geo_area:ar1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A trapezoid has parallel sides of lengths $17$ and $4$ and height $13$. What is its area?",
+  "choices": {
+   "A": "$\\frac{273}{2}$",
+   "B": "$\\frac{299}{2}$",
+   "C": "$221$",
+   "D": "$273$",
+   "E": "$442$"
+  },
+  "answer": "A",
+  "hints": [
+   "Area of a trapezoid is the average of the bases times the height."
+  ],
+  "solution": "**What we need:** the trapezoid's area.\n\n**Key idea:** a trapezoid's area is the average of the two parallel sides times the height. (Two copies, one flipped, make a parallelogram.)\n\n**Step 1.** Average of the bases: $\\frac{17 + 4}{2} = \\frac{21}{2}$.\n\n**Step 2.** Area: $\\frac{21}{2} \\cdot 13 = \\frac{273}{2}$.\n\n**Answer:** $\\frac{273}{2}$. **(A)**\n\n**Common mistake:** forgetting to divide by $2$, which gives $273$."
+ },
+ {
+  "id": "geo_area_b02",
+  "skillId": "geo_area",
+  "family": "geo_area:ar2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the area of the triangle with vertices $(-4, 1)$, $(0, 6)$, and $(3, -4)$?",
+  "choices": {
+   "A": "$\\frac{55}{4}$",
+   "B": "$27$",
+   "C": "$\\frac{55}{2}$",
+   "D": "$\\frac{57}{2}$",
+   "E": "$55$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use the shoelace formula, or enclose the triangle in a rectangle and subtract the corner triangles."
+  ],
+  "solution": "**What we need:** the area from the three corners.\n\n**Key idea:** Shoelace Formula: area $= \\frac{1}{2}\\left|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)\\right|$.\n\n**Step 1.** $-4(6 - (-4)) = -40$, $0(-4 - (1)) = 0$, $3(1 - (6)) = -15$.\n\n**Step 2.** Sum: $-55$. Absolute value and half: $\\frac{55}{2} = \\frac{55}{2}$.\n\n**Answer:** $\\frac{55}{2}$. **(C)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$ or the absolute value."
+ },
+ {
+  "id": "geo_area_b03",
+  "skillId": "geo_area",
+  "family": "geo_area:ar3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the area of a triangle with side lengths $18$, $20$, and $34$?",
+  "choices": {
+   "A": "$124$",
+   "B": "$144$",
+   "C": "$162$",
+   "D": "$180$",
+   "E": "$288$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use Heron's formula, or drop an altitude and use the Pythagorean Theorem."
+  ],
+  "solution": "**What we need:** the area from the three side lengths.\n\n**Key idea:** Heron's Formula: with semiperimeter $s = \\frac{a + b + c}{2}$, area $= \\sqrt{s(s - a)(s - b)(s - c)}$.\n\n**Step 1.** $s = \\frac{18 + 20 + 34}{2} = 36$.\n\n**Step 2.** $s - a = 18$, $s - b = 16$, $s - c = 2$.\n\n**Step 3.** Area $= \\sqrt{36 \\cdot 18 \\cdot 16 \\cdot 2} = \\sqrt{20736} = 144$.\n\n**Answer:** $144$. **(B)**\n\n**Common mistake:** using the full perimeter instead of the semiperimeter in Heron's formula."
+ },
+ {
+  "id": "geo_area_b04",
+  "skillId": "geo_area",
+  "family": "geo_area:ar4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The side length of a square is multiplied by $3$. The original square had area $256$. What is the perimeter of the new square?",
+  "choices": {
+   "A": "$48$",
+   "B": "$64$",
+   "C": "$192$",
+   "D": "$576$",
+   "E": "$768$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the original side length first."
+  ],
+  "solution": "**What we need:** the new square's perimeter.\n\n**Key idea:** find the original side, scale it, then compute the perimeter.\n\n**Step 1.** Original side: $\\sqrt{256} = 16$.\n\n**Step 2.** New side: $16 \\cdot 3 = 48$.\n\n**Step 3.** Perimeter: $4 \\cdot 48 = 192$.\n\n**Answer:** $192$. **(C)**\n\n**Common mistake:** confusing the area with the perimeter, or squaring the scale factor (that is for area)."
+ },
+ {
+  "id": "geo_area_b05",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_parallelogram",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A parallelogram has a base of $12$, slanted sides of length $15$, and a height of $13$. What is its area?",
+  "choices": {
+   "A": "$54$",
+   "B": "$78$",
+   "C": "$156$",
+   "D": "$171$",
+   "E": "$180$"
+  },
+  "answer": "C",
+  "hints": [
+   "Area is base times height, not base times slanted side."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** a parallelogram can be cut and slid into a rectangle with the same base and height.\n\n**Step 1.** Area $= 12 \\cdot 13 = 156$.\n\n**Answer:** $156$. **(C)**\n\n**Common mistake:** multiplying by the slanted side."
+ },
+ {
+  "id": "geo_area_b06",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_height_from_area",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A triangle has area $70$ and a base of $14$. What is the height to that base?",
+  "choices": {
+   "A": "$5$",
+   "B": "$10$",
+   "C": "$11$",
+   "D": "$14$",
+   "E": "$20$"
+  },
+  "answer": "B",
+  "hints": [
+   "Area $= \\frac{1}{2}bh$."
+  ],
+  "solution": "**What we need:** the height.\n\n**Key idea:** solve $\\frac{1}{2} \\cdot b \\cdot h = $ area for $h$.\n\n**Step 1.** $\\frac{1}{2} \\cdot 14 \\cdot h = 70$.\n\n**Step 2.** $h = \\frac{2 \\cdot 70}{14} = 10$.\n\n**Answer:** $10$. **(B)**\n\n**Common mistake:** forgetting to double the area."
+ },
+ {
+  "id": "geo_area_b07",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_l_shape",
+  "level": "basics",
+  "track": "both",
+  "prompt": "An L-shaped room is a $14 \\times 20$ rectangle with a $10 \\times 15$ rectangle cut out of one corner. What is its area?",
+  "choices": {
+   "A": "$68$",
+   "B": "$130$",
+   "C": "$205$",
+   "D": "$255$",
+   "E": "$280$"
+  },
+  "answer": "B",
+  "hints": [
+   "Big rectangle minus the cut-out."
+  ],
+  "solution": "**What we need:** the area of the L shape.\n\n**Key idea:** subtract the missing corner from the full rectangle.\n\n**Step 1.** Full: $14 \\cdot 20 = 280$.\n\n**Step 2.** Cut-out: $10 \\cdot 15 = 150$.\n\n**Step 3.** L shape: $130$.\n\n**Answer:** $130$. **(B)**\n\n**Common mistake:** forgetting to subtract the corner."
+ },
+ {
+  "id": "geo_area_b08",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_frame",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A $19 \\times 9$ picture has a frame $2$ inches wide all around it. What is the area of the frame alone?",
+  "choices": {
+   "A": "$60$",
+   "B": "$112$",
+   "C": "$128$",
+   "D": "$144$",
+   "E": "$299$"
+  },
+  "answer": "C",
+  "hints": [
+   "The outer rectangle is 4 longer in each direction."
+  ],
+  "solution": "**What we need:** the frame's area.\n\n**Key idea:** outer rectangle minus the picture.\n\n**Step 1.** Outer: $23 \\times 13 = 299$.\n\n**Step 2.** Frame: $299 - 171 = 128$.\n\n**Answer:** $128$. **(C)**\n\n**Common mistake:** adding the width only once to each dimension."
+ },
+ {
+  "id": "geo_area_b09",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_rhombus_diag",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A rhombus has diagonals of lengths $15$ and $18$. What is its area?",
+  "choices": {
+   "A": "$33$",
+   "B": "$66$",
+   "C": "$\\frac{135}{2}$",
+   "D": "$135$",
+   "E": "$270$"
+  },
+  "answer": "D",
+  "hints": [
+   "Half the product of the diagonals."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** the diagonals split a rhombus into four right triangles; together they make half of the $d_1 \\times d_2$ rectangle.\n\n**Step 1.** Area $= \\frac{15 \\cdot 18}{2} = 135$.\n\n**Answer:** $135$. **(D)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$."
+ },
+ {
+  "id": "geo_area_b10",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_hexagon",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the area of a regular hexagon with side $3$?",
+  "choices": {
+   "A": "$\\frac{9\\sqrt{3}}{4}$",
+   "B": "$\\frac{27\\sqrt{3}}{4}$",
+   "C": "$\\frac{27\\sqrt{3}}{2}$",
+   "D": "$27\\sqrt{3}$",
+   "E": "$54$"
+  },
+  "answer": "C",
+  "hints": [
+   "Split it into equilateral triangles."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** a regular hexagon is six equilateral triangles, each with area $\\frac{\\sqrt{3}}{4}s^2$.\n\n**Step 1.** One triangle: $\\frac{\\sqrt{3}}{4} \\cdot 9 = \\frac{9\\sqrt{3}}{4}$.\n\n**Step 2.** Six: $6 \\cdot \\frac{9\\sqrt{3}}{4} = \\frac{27\\sqrt{3}}{2}$.\n\n**Answer:** $\\frac{27\\sqrt{3}}{2}$. **(C)**\n\n**Common mistake:** using only one triangle's area."
+ },
+ {
+  "id": "geo_area_b11",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_corner_triangle",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A square has side $12$. A triangle is cut off one corner by joining the midpoints of two adjacent sides. What is the area of the remaining piece?",
+  "choices": {
+   "A": "$18$",
+   "B": "$72$",
+   "C": "$108$",
+   "D": "$126$",
+   "E": "$144$"
+  },
+  "answer": "D",
+  "hints": [
+   "The cut triangle has legs of half the side."
+  ],
+  "solution": "**What we need:** the remaining area.\n\n**Key idea:** subtract the small corner triangle from the square.\n\n**Step 1.** Corner triangle legs: $6$ each, area $\\frac{1}{2} \\cdot 6^2 = 18$.\n\n**Step 2.** Remaining: $144 - 18 = 126$.\n\n**Answer:** $126$. **(D)**\n\n**Common mistake:** giving the triangle's area instead of the remaining area."
+ },
+ {
+  "id": "geo_area_b12",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_path",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A $8$ m by $19$ m garden has a path $2$ m wide running all the way around the outside. What is the area of the path?",
+  "choices": {
+   "A": "$58$",
+   "B": "$108$",
+   "C": "$124$",
+   "D": "$140$",
+   "E": "$152$"
+  },
+  "answer": "C",
+  "hints": [
+   "Outer rectangle minus garden."
+  ],
+  "solution": "**What we need:** the path's area.\n\n**Key idea:** the path's outer edge is a rectangle 4 m longer each way.\n\n**Step 1.** Outer rectangle: $12 \\times 23 = 276$.\n\n**Step 2.** Path: $276 - 152 = 124$.\n\n**Answer:** $124$. **(C)**\n\n**Common mistake:** forgetting the four corner squares of the path."
+ },
+ {
+  "id": "geo_area_b13",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_rect_from_perim",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A rectangle has perimeter $90$ and one side of length $19$. What is its area?",
+  "choices": {
+   "A": "$427$",
+   "B": "$494$",
+   "C": "$513$",
+   "D": "$855$",
+   "E": "$1349$"
+  },
+  "answer": "B",
+  "hints": [
+   "The two different sides add to half the perimeter."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** length $+$ width $= \\frac{P}{2}$.\n\n**Step 1.** Other side: $\\frac{90}{2} - 19 = 26$.\n\n**Step 2.** Area: $19 \\cdot 26 = 494$.\n\n**Answer:** $494$. **(B)**\n\n**Common mistake:** using $P - a$ for the other side."
+ },
+ {
+  "id": "geo_area_b14",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_shoelace_quad",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the area of the quadrilateral with vertices $(-4, -1)$, $(4, -2)$, $(1, 7)$, $(-3, 1)$, in that order?",
+  "choices": {
+   "A": "$\\frac{69}{2}$",
+   "B": "$\\frac{71}{2}$",
+   "C": "$\\frac{73}{2}$",
+   "D": "$71$",
+   "E": "$72$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use the shoelace formula, or a box minus corner triangles."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** Shoelace Formula: area $= \\frac{1}{2}|x_1y_2 - x_2y_1 + x_2y_3 - x_3y_2 + \\cdots|$.\n\n**Step 1.** Cross products: $-4 \\cdot \\left(-2\\right) - 4 \\cdot \\left(-1\\right) = 12$, $4 \\cdot 7 - 1 \\cdot \\left(-2\\right) = 30$, $1 \\cdot 1 - \\left(-3\\right) \\cdot 7 = 22$, $-3 \\cdot \\left(-1\\right) - \\left(-4\\right) \\cdot 1 = 7$.\n\n**Step 2.** Sum: $71$. Area: $\\frac{71}{2} = \\frac{71}{2}$.\n\n**Answer:** $\\frac{71}{2}$. **(B)**\n\n**Common mistake:** forgetting to halve the shoelace sum."
+ },
+ {
+  "id": "geo_area_b15",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_ratio_base",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Point $D$ is on side $BC$ of triangle $ABC$ with $BD : DC = 4 : 6$. Triangle $ABD$ has area $12$. What is the area of triangle $ABC$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$18$",
+   "C": "$30$",
+   "D": "$31$",
+   "E": "$120$"
+  },
+  "answer": "C",
+  "hints": [
+   "The triangles share the same height from $A$."
+  ],
+  "solution": "**What we need:** the area of $ABC$.\n\n**Key idea:** triangles with the same height have areas proportional to their bases.\n\n**Step 1.** $ABD$ is $\\frac{4}{10}$ of $ABC$.\n\n**Step 2.** Area of $ABC = 12 \\cdot \\frac{10}{4} = 30$.\n\n**Answer:** $30$. **(C)**\n\n**Common mistake:** using the ratio the wrong way."
+ },
+ {
+  "id": "geo_area_b16",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_trap_base",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A trapezoid has area $36$, height $3$, and one base of length $4$. How long is the other base?",
+  "choices": {
+   "A": "$8$",
+   "B": "$20$",
+   "C": "$21$",
+   "D": "$24$",
+   "E": "$28$"
+  },
+  "answer": "B",
+  "hints": [
+   "Area $= \\frac{(a + b)}{2}h$."
+  ],
+  "solution": "**What we need:** the other base.\n\n**Key idea:** solve the trapezoid area formula for the unknown base.\n\n**Step 1.** $\\frac{4 + b}{2} \\cdot 3 = 36$, so $4 + b = 24$.\n\n**Step 2.** $b = 20$.\n\n**Answer:** $20$. **(B)**\n\n**Common mistake:** forgetting the factor $\\frac{1}{2}$."
+ },
+ {
+  "id": "geo_area_b17",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_sq_from_diag",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A square has a diagonal of length $8$. What is its area?",
+  "choices": {
+   "A": "$4\\sqrt{2}$",
+   "B": "$16$",
+   "C": "$32$",
+   "D": "$64$",
+   "E": "$128$"
+  },
+  "answer": "C",
+  "hints": [
+   "Area of a square is half its diagonal squared."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** a square is a rhombus, so its area is half the product of its (equal) diagonals.\n\n**Step 1.** Area $= \\frac{8^2}{2} = 32$.\n\n**Answer:** $32$. **(C)**\n\n**Common mistake:** squaring the diagonal."
+ },
+ {
+  "id": "geo_area_b18",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_percent_increase",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Each side of a square is increased by $50\\%$. By what percent does its area increase?",
+  "choices": {
+   "A": "$25$",
+   "B": "$50$",
+   "C": "$100$",
+   "D": "$125$",
+   "E": "$135$"
+  },
+  "answer": "D",
+  "hints": [
+   "Square the scale factor."
+  ],
+  "solution": "**What we need:** the percent increase in area.\n\n**Key idea:** area scales by the square of the length factor.\n\n**Step 1.** Length factor: $\\frac{3}{2}$.\n\n**Step 2.** Area factor: $\\left(\\frac{3}{2}\\right)^2 = \\frac{9}{4}$.\n\n**Step 3.** Increase: $125\\%$.\n\n**Answer:** $125\\%$. **(D)**\n\n**Common mistake:** doubling the percent and forgetting the cross term."
+ },
+ {
+  "id": "geo_area_b19",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_vertex_midpoints",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Square $ABCD$ has side $6$. $M$ is the midpoint of $BC$ and $N$ is the midpoint of $CD$. What is the area of triangle $AMN$?",
+  "choices": {
+   "A": "$\\frac{9}{2}$",
+   "B": "$9$",
+   "C": "$\\frac{27}{2}$",
+   "D": "$18$",
+   "E": "$\\frac{45}{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Subtract the three corner triangles from the square."
+  ],
+  "solution": "**What we need:** the area of triangle $AMN$.\n\n**Key idea:** the square minus three right triangles leaves triangle $AMN$.\n\n**Step 1.** Triangles $ABM$ and $ADN$: each $\\frac{1}{2} \\cdot 6 \\cdot 3 = 9$.\n\n**Step 2.** Triangle $MCN$: $\\frac{1}{2} \\cdot 3 \\cdot 3 = \\frac{9}{2}$.\n\n**Step 3.** $AMN = 36 - 2 \\cdot 9 - \\frac{9}{2} = \\frac{27}{2}$.\n\n**Answer:** $\\frac{27}{2}$. **(C)**\n\n**Common mistake:** forgetting the small corner triangle at $C$."
+ },
+ {
+  "id": "geo_area_b20",
+  "skillId": "geo_area",
+  "family": "geo_area:ar_kite_area",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A kite's diagonals are perpendicular. One has length $40$; the other is split into pieces of $21$ and $12$ by the first. What is the kite's area?",
+  "choices": {
+   "A": "$73$",
+   "B": "$420$",
+   "C": "$660$",
+   "D": "$680$",
+   "E": "$1320$"
+  },
+  "answer": "C",
+  "hints": [
+   "A kite with perpendicular diagonals has area $\\frac{1}{2}d_1d_2$."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** split the kite along the long diagonal into two triangles.\n\n**Step 1.** Second diagonal: $21 + 12 = 33$.\n\n**Step 2.** Area: $\\frac{1}{2} \\cdot 40 \\cdot 33 = 660$.\n\n**Answer:** $660$. **(C)**\n\n**Common mistake:** using only one piece of the second diagonal."
+ },
+ {
+  "id": "geo_area_c01",
+  "skillId": "geo_area",
+  "family": "geo_area:arc1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A rhombus has side length $29$ and one diagonal of length $40$. What is its area?",
+  "choices": {
+   "A": "$580$",
+   "B": "$840$",
+   "C": "$841$",
+   "D": "$869$",
+   "E": "$1680$"
+  },
+  "answer": "B",
+  "hints": [
+   "The diagonals of a rhombus are perpendicular and bisect each other."
+  ],
+  "solution": "**What we need:** the rhombus's area.\n\n**Key idea:** the diagonals of a rhombus cut each other in half at right angles, making four right triangles with the side as hypotenuse.\n\n**Step 1.** Half the known diagonal: $20$.\n\n**Step 2.** Half the other diagonal: $\\sqrt{29^2 - 20^2} = 21$, so the full diagonal is $42$.\n\n**Step 3.** Area of a rhombus: $\\frac{d_1 d_2}{2} = \\frac{40 \\cdot 42}{2} = 840$.\n\n**Answer:** $840$. **(B)**\n\n**Common mistake:** using side times side ($841$). A rhombus is not a square unless its angles are right angles."
+ },
+ {
+  "id": "geo_area_c02",
+  "skillId": "geo_area",
+  "family": "geo_area:arc2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Rectangle $ABCD$ has $AB = 24$ and $BC = 8$. Point $M$ is the midpoint of $BC$ and $N$ is the midpoint of $CD$. What is the area of triangle $AMN$?",
+  "choices": {
+   "A": "$24$",
+   "B": "$48$",
+   "C": "$72$",
+   "D": "$74$",
+   "E": "$96$"
+  },
+  "answer": "C",
+  "hints": [
+   "Subtract the three right triangles in the corners from the rectangle."
+  ],
+  "solution": "**What we need:** the area of the slanted triangle $AMN$.\n\n**Key idea:** subtract the three right triangles in the corners from the rectangle.\n\n**Step 1.** Rectangle area: $24 \\cdot 8 = 192$.\n\n**Step 2.** Triangle $ABM$: legs $24$ and $4$, area $\\frac{24 \\cdot 4}{2} = 48$.\n\n**Step 3.** Triangle $ADN$: legs $8$ and $12$, area $48$.\n\n**Step 4.** Triangle $MCN$: legs $4$ and $12$, area $24$.\n\n**Step 5.** $[AMN] = 192 - 48 - 48 - 24 = 72$.\n\n**Answer:** $72$. **(C)**\n\n**Common mistake:** forgetting the small corner triangle $MCN$."
+ },
+ {
+  "id": "geo_area_c03",
+  "skillId": "geo_area",
+  "family": "geo_area:arc3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A farmer has 128 meters of fence to make a rectangular pen against a long wall, so only three sides need fence. What is the largest possible area of the pen, in square meters?",
+  "choices": {
+   "A": "$1024$",
+   "B": "$\\frac{4096}{3}$",
+   "C": "$2048$",
+   "D": "$2176$",
+   "E": "$4096$"
+  },
+  "answer": "C",
+  "hints": [
+   "If the two sides touching the wall are $y$, the side parallel to the wall is $L - 2y$."
+  ],
+  "solution": "**What we need:** the maximum area.\n\n**Key idea:** write the area in terms of one side; it becomes a downward parabola, whose maximum is at its vertex.\n\n**Step 1.** Let the two sides touching the wall be $y$. The side parallel to the wall is then $128 - 2y$.\n\n**Step 2.** Area: $A = y(128 - 2y) = 128y - 2y^2$.\n\n**Step 3.** The vertex is at $y = \\frac{128}{2 \\cdot 2} = 32$ (halfway between the zeros $y = 0$ and $y = 64$).\n\n**Step 4.** Then the long side is $128 - 64 = 64$, and $A = 32 \\cdot 64 = 2048$.\n\n**Answer:** $2048$. **(C)**\n\n**Common mistake:** making a square with sides $42$. With a wall on one side, the best shape is twice as long as it is wide."
+ },
+ {
+  "id": "geo_area_c04",
+  "skillId": "geo_area",
+  "family": "geo_area:arc_altitude_heron",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A triangle has sides $13$, $14$, and $15$. What is the length of the altitude to the side of length $14$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$12$",
+   "C": "$\\frac{168}{13}$",
+   "D": "$13$",
+   "E": "$84$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the area with Heron's formula."
+  ],
+  "solution": "**What we need:** the altitude.\n\n**Key idea:** area $= \\frac{1}{2} \\cdot$ base $\\cdot$ height, so height $= \\frac{2 \\cdot \\text{area}}{\\text{base}}$.\n\n**Step 1.** $s = 21$; area $= \\sqrt{21 \\cdot 8 \\cdot 7 \\cdot 6} = 84$.\n\n**Step 2.** Height: $\\frac{2 \\cdot 84}{14} = 12$.\n\n**Answer:** $12$. **(B)**\n\n**Common mistake:** forgetting to double the area."
+ },
+ {
+  "id": "geo_area_c05",
+  "skillId": "geo_area",
+  "family": "geo_area:arc_overlap_squares",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Two squares with side $10$ overlap so that a corner of one is at the center of the other. What is the area of the overlap?",
+  "choices": {
+   "A": "$\\frac{25}{2}$",
+   "B": "$25$",
+   "C": "$\\frac{100}{3}$",
+   "D": "$50$",
+   "E": "$100$"
+  },
+  "answer": "B",
+  "hints": [
+   "Rotate the second square: the overlap never changes."
+  ],
+  "solution": "**What we need:** the overlap area.\n\n**Key idea:** the overlap is always exactly a quarter of the square, however the corner square is turned.\n\n**Step 1.** Draw lines from the center to the midpoints of two sides; rotating the second square swaps a small triangle out and an equal one in.\n\n**Step 2.** So the overlap is always $\\frac{1}{4} \\cdot 100 = 25$.\n\n**Answer:** $25$. **(B)**\n\n**Common mistake:** thinking the overlap grows when the square is turned."
+ },
+ {
+  "id": "geo_area_c06",
+  "skillId": "geo_area",
+  "family": "geo_area:arc_centroid",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Triangle $ABC$ has area $45$, and $G$ is where its three medians meet. What is the area of triangle $GBC$?",
+  "choices": {
+   "A": "$\\frac{15}{2}$",
+   "B": "$\\frac{45}{4}$",
+   "C": "$15$",
+   "D": "$\\frac{45}{2}$",
+   "E": "$30$"
+  },
+  "answer": "C",
+  "hints": [
+   "$G$ is two thirds of the way down each median."
+  ],
+  "solution": "**What we need:** the area of $GBC$.\n\n**Key idea:** the distance from $G$ to $BC$ is $\\frac{1}{3}$ of the height from $A$.\n\n**Step 1.** Same base $BC$, one third the height.\n\n**Step 2.** Area: $\\frac{45}{3} = 15$.\n\n**Answer:** $15$. **(C)**\n\n**Common mistake:** using $\\frac{2}{3}$ of the height."
+ },
+ {
+  "id": "geo_area_c07",
+  "skillId": "geo_area",
+  "family": "geo_area:arc_octagon",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A regular octagon has side $4$. What is its area?",
+  "choices": {
+   "A": "$64$",
+   "B": "$32 + 64\\sqrt{2}$",
+   "C": "$64 + 16\\sqrt{2}$",
+   "D": "$32\\sqrt{2}$",
+   "E": "$32 + 32\\sqrt{2}$"
+  },
+  "answer": "E",
+  "hints": [
+   "Put the octagon inside a square and cut off the corners."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** a regular octagon is a square with four isosceles right triangles cut off its corners.\n\n**Step 1.** Each corner triangle has hypotenuse $4$, so legs $\\frac{4}{\\sqrt{2}}$.\n\n**Step 2.** The square's side: $4 + 2 \\cdot \\frac{4}{\\sqrt{2}} = 4(1 + \\sqrt{2})$, so its area is $16(3 + 2\\sqrt{2})$.\n\n**Step 3.** Corners: $4 \\cdot \\frac{1}{2} \\cdot \\frac{16}{2} = 16$.\n\n**Step 4.** Octagon: $16(3 + 2\\sqrt{2}) - 16 = 32 + 32\\sqrt{2}$.\n\n**Answer:** $32 + 32\\sqrt{2}$. **(E)**\n\n**Common mistake:** using $s$ as the leg of the corner triangles instead of the hypotenuse."
+ },
+ {
+  "id": "geo_area_c08",
+  "skillId": "geo_area",
+  "family": "geo_area:arc_picks",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A polygon drawn on graph paper has all its corners on grid points. $2$ grid points lie strictly inside it and $9$ lie on its boundary. What is its area?",
+  "choices": {
+   "A": "$5$",
+   "B": "$\\frac{11}{2}$",
+   "C": "$\\frac{13}{2}$",
+   "D": "$10$",
+   "E": "$11$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pick's Theorem."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** Pick's Theorem: area $= I + \\frac{B}{2} - 1$.\n\n**Step 1.** $2 + \\frac{9}{2} - 1 = \\frac{11}{2}$.\n\n**Answer:** $\\frac{11}{2}$. **(B)**\n\n**Common mistake:** forgetting the $-1$."
+ },
+ {
+  "id": "geo_area_c09",
+  "skillId": "geo_area",
+  "family": "geo_area:arc_point_in_rect",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Point $P$ is inside rectangle $ABCD$. The areas of triangles $PAB$, $PBC$, and $PCD$ are $23$, $11$, and $22$. What is the area of triangle $PDA$?",
+  "choices": {
+   "A": "$11$",
+   "B": "$\\frac{56}{3}$",
+   "C": "$34$",
+   "D": "$35$",
+   "E": "$56$"
+  },
+  "answer": "C",
+  "hints": [
+   "Opposite triangles together make half the rectangle."
+  ],
+  "solution": "**What we need:** the area of $PDA$.\n\n**Key idea:** $PAB + PCD$ is half the rectangle (bases are opposite sides, heights add to the full height); so is $PBC + PDA$.\n\n**Step 1.** $PAB + PCD = 45$ is half the rectangle.\n\n**Step 2.** $PBC + PDA = 45$ too, so $PDA = 45 - 11 = 34$.\n\n**Answer:** $34$. **(C)**\n\n**Common mistake:** averaging the given areas."
+ },
+ {
+  "id": "geo_area_c10",
+  "skillId": "geo_area",
+  "family": "geo_area:arc_routh",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Triangle $ABC$ has area $100$. Points $D$, $E$, $F$ lie on $AB$, $BC$, $CA$ with $AD = \\frac{1}{3}AB$, $BE = \\frac{1}{3}BC$, and $CF = \\frac{1}{3}CA$. What is the area of triangle $DEF$?",
+  "choices": {
+   "A": "$\\frac{50}{3}$",
+   "B": "$\\frac{200}{9}$",
+   "C": "$\\frac{100}{3}$",
+   "D": "$\\frac{115}{3}$",
+   "E": "$\\frac{200}{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Subtract the three corner triangles."
+  ],
+  "solution": "**What we need:** the area of $DEF$.\n\n**Key idea:** each corner triangle shares an angle with $ABC$, so its area is the product of the two side fractions times the whole.\n\n**Step 1.** Corner at $A$: $AD = \\frac{1}{3}AB$ and $AF = \\frac{2}{3}AC$, so its area is $\\frac{1}{3} \\cdot \\frac{2}{3} = \\frac{2}{9}$ of the whole. The same holds at $B$ and $C$.\n\n**Step 2.** $DEF = 1 - 3 \\cdot \\frac{2}{9} = \\frac{1}{3}$ of the whole.\n\n**Step 3.** Area: $100 \\cdot \\frac{1}{3} = \\frac{100}{3}$.\n\n**Answer:** $\\frac{100}{3}$. **(C)**\n\n**Common mistake:** using $t^2$ for each corner instead of $t(1 - t)$."
+ },
+ {
+  "id": "geo_circles_b01",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A circle has a diameter of $24$. What is its area?",
+  "choices": {
+   "A": "$12\\pi$",
+   "B": "$24\\pi$",
+   "C": "$144\\pi$",
+   "D": "$288\\pi$",
+   "E": "$576\\pi$"
+  },
+  "answer": "C",
+  "hints": [
+   "Area is $\\pi r^2$, and the radius is half the diameter."
+  ],
+  "solution": "**What we need:** the circle's area.\n\n**Key idea:** area $= \\pi r^2$, and the radius is half the diameter.\n\n**Step 1.** $r = \\frac{24}{2} = 12$.\n\n**Step 2.** Area $= \\pi \\cdot 12^2 = 144\\pi$.\n\n**Answer:** $144\\pi$. **(C)**\n\n**Common mistake:** using the diameter as the radius, which gives $576\\pi$."
+ },
+ {
+  "id": "geo_circles_b02",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A circle has radius $8$. What is the length of an arc with central angle $45^\\circ$?",
+  "choices": {
+   "A": "$\\pi$",
+   "B": "$2\\pi$",
+   "C": "$4\\pi$",
+   "D": "$8\\pi$",
+   "E": "$14\\pi$"
+  },
+  "answer": "B",
+  "hints": [
+   "Arc length is the fraction $\\frac{\\theta}{360}$ of the circumference."
+  ],
+  "solution": "**What we need:** the arc length.\n\n**Key idea:** an arc is a fraction of the whole circle: $\\frac{\\text{angle}}{360}$ of the circumference.\n\n**Step 1.** Fraction of the circle: $\\frac{45}{360} = \\frac{1}{8}$.\n\n**Step 2.** Circumference: $2\\pi \\cdot 8 = 16\\pi$.\n\n**Step 3.** Arc: $\\frac{1}{8} \\cdot 16\\pi = 2\\pi$.\n\n**Answer:** $2\\pi$. **(B)**\n\n**Common mistake:** using the area $\\pi r^2$ instead of the circumference."
+ },
+ {
+  "id": "geo_circles_b03",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Points $A$, $B$, $C$ lie on a circle, and arc $AB$ (not containing $C$) measures $172^\\circ$. What is $\\angle ACB$, in degrees?",
+  "choices": {
+   "A": "$43$",
+   "B": "$86$",
+   "C": "$94$",
+   "D": "$172$",
+   "E": "$188$"
+  },
+  "answer": "B",
+  "hints": [
+   "An inscribed angle is half of the arc it intercepts."
+  ],
+  "solution": "**What we need:** the inscribed angle $\\angle ACB$.\n\n**Key idea:** Inscribed Angle Theorem: an angle with its vertex on the circle is half the arc it cuts off.\n\n**Step 1.** $\\angle ACB$ cuts off arc $AB = 172^\\circ$.\n\n**Step 2.** $\\angle ACB = \\frac{172}{2} = 86^\\circ$.\n\n**Answer:** $86^\\circ$. **(B)**\n\n**Common mistake:** using the full arc. That is the central angle, with its vertex at the center."
+ },
+ {
+  "id": "geo_circles_b04",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A point $P$ is $26$ units from the center of a circle of radius $10$. A line through $P$ is tangent to the circle at $T$. What is $PT$?",
+  "choices": {
+   "A": "$16$",
+   "B": "$18$",
+   "C": "$24$",
+   "D": "$25$",
+   "E": "$36$"
+  },
+  "answer": "C",
+  "hints": [
+   "A tangent is perpendicular to the radius at the point of tangency."
+  ],
+  "solution": "**What we need:** the tangent length $PT$.\n\n**Key idea:** a radius drawn to the point of tangency is perpendicular to the tangent line, so $OTP$ is a right triangle with hypotenuse $OP$.\n\n**Step 1.** $OT = 10$ (radius) and $OP = 26$.\n\n**Step 2.** $PT = \\sqrt{26^2 - 10^2} = \\sqrt{576} = 24$.\n\n**Answer:** $24$. **(C)**\n\n**Common mistake:** subtracting lengths, $26 - 10 = 16$."
+ },
+ {
+  "id": "geo_circles_b05",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_circ_from_area",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A circle has area $49\\pi$. What is its circumference?",
+  "choices": {
+   "A": "$7\\pi$",
+   "B": "$14\\pi$",
+   "C": "$28\\pi$",
+   "D": "$49\\pi$",
+   "E": "$98\\pi$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the radius from the area."
+  ],
+  "solution": "**What we need:** the circumference.\n\n**Key idea:** area $= \\pi r^2$ gives $r$; circumference $= 2\\pi r$.\n\n**Step 1.** $\\pi r^2 = 49\\pi$, so $r = 7$.\n\n**Step 2.** Circumference $= 2\\pi \\cdot 7 = 14\\pi$.\n\n**Answer:** $14\\pi$. **(B)**\n\n**Common mistake:** using $\\pi r$ for the circumference."
+ },
+ {
+  "id": "geo_circles_b06",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_sector",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the area of a sector with radius $9$ and central angle $60^\\circ$?",
+  "choices": {
+   "A": "$\\frac{3\\pi}{2}$",
+   "B": "$3\\pi$",
+   "C": "$\\frac{27\\pi}{2}$",
+   "D": "$27\\pi$",
+   "E": "$81\\pi$"
+  },
+  "answer": "C",
+  "hints": [
+   "The sector is a fraction of the whole circle."
+  ],
+  "solution": "**What we need:** the sector's area.\n\n**Key idea:** a sector with angle $\\theta$ is $\\frac{\\theta}{360}$ of the circle's area.\n\n**Step 1.** Fraction: $\\frac{60}{360} = \\frac{1}{6}$.\n\n**Step 2.** Area: $\\frac{1}{6} \\cdot \\pi \\cdot 9^2 = \\frac{27\\pi}{2}$.\n\n**Answer:** $\\frac{27\\pi}{2}$. **(C)**\n\n**Common mistake:** using the circumference instead of the area."
+ },
+ {
+  "id": "geo_circles_b07",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_radius_from_circ",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A circle has circumference $20\\pi$. What is its radius?",
+  "choices": {
+   "A": "$5$",
+   "B": "$10$",
+   "C": "$11$",
+   "D": "$20$",
+   "E": "$100$"
+  },
+  "answer": "B",
+  "hints": [
+   "Circumference $= 2\\pi r$."
+  ],
+  "solution": "**What we need:** the radius.\n\n**Key idea:** divide the circumference by $2\\pi$.\n\n**Step 1.** $2\\pi r = 20\\pi$, so $r = 10$.\n\n**Answer:** $10$. **(B)**\n\n**Common mistake:** giving the diameter."
+ },
+ {
+  "id": "geo_circles_b08",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_angle_from_arc",
+  "level": "basics",
+  "track": "both",
+  "prompt": "An arc of a circle with radius $10$ has length $5\\pi$. What is its central angle, in degrees?",
+  "choices": {
+   "A": "$45$",
+   "B": "$90$",
+   "C": "$120$",
+   "D": "$180$",
+   "E": "$270$"
+  },
+  "answer": "B",
+  "hints": [
+   "Compare the arc to the whole circumference."
+  ],
+  "solution": "**What we need:** the central angle.\n\n**Key idea:** an arc's angle is the same fraction of $360^\\circ$ as its length is of the circumference.\n\n**Step 1.** Circumference: $20\\pi$.\n\n**Step 2.** Fraction: $\\frac{5\\pi}{20\\pi} = \\frac{1}{4}$.\n\n**Step 3.** Angle: $\\frac{1}{4} \\cdot 360 = 90^\\circ$.\n\n**Answer:** $90$. **(B)**\n\n**Common mistake:** comparing to the area instead of the circumference."
+ },
+ {
+  "id": "geo_circles_b09",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_semicircle_angle",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Triangle $ABC$ is drawn inside a circle with $AB$ as a diameter and $C$ on the circle. If $\\angle A = 17^\\circ$, what is $\\angle B$?",
+  "choices": {
+   "A": "$17$",
+   "B": "$73$",
+   "C": "$90$",
+   "D": "$146$",
+   "E": "$163$"
+  },
+  "answer": "B",
+  "hints": [
+   "An angle inscribed in a semicircle is a right angle."
+  ],
+  "solution": "**What we need:** $\\angle B$.\n\n**Key idea:** Thales' Theorem: $\\angle C = 90^\\circ$ because it subtends a diameter.\n\n**Step 1.** $\\angle C = 90^\\circ$.\n\n**Step 2.** $\\angle B = 180 - 90 - 17 = 73^\\circ$.\n\n**Answer:** $73$. **(B)**\n\n**Common mistake:** forgetting the right angle at $C$."
+ },
+ {
+  "id": "geo_circles_b10",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_cyclic",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Quadrilateral $ABCD$ is inscribed in a circle, and $\\angle A = 101^\\circ$. What is $\\angle C$?",
+  "choices": {
+   "A": "$79$",
+   "B": "$89$",
+   "C": "$90$",
+   "D": "$101$",
+   "E": "$259$"
+  },
+  "answer": "A",
+  "hints": [
+   "Opposite angles of a cyclic quadrilateral are supplementary."
+  ],
+  "solution": "**What we need:** $\\angle C$.\n\n**Key idea:** opposite angles of a cyclic quadrilateral add to $180^\\circ$ (their arcs make the whole circle).\n\n**Step 1.** $\\angle C = 180 - 101 = 79^\\circ$.\n\n**Answer:** $79$. **(A)**\n\n**Common mistake:** assuming opposite angles are equal."
+ },
+ {
+  "id": "geo_circles_b11",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_tangent_angle",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two tangent lines from point $P$ touch a circle at $A$ and $B$. The central angle $\\angle AOB = 86^\\circ$. What is $\\angle APB$?",
+  "choices": {
+   "A": "$43$",
+   "B": "$47$",
+   "C": "$86$",
+   "D": "$94$",
+   "E": "$274$"
+  },
+  "answer": "D",
+  "hints": [
+   "A radius is perpendicular to the tangent at the point of contact."
+  ],
+  "solution": "**What we need:** $\\angle APB$.\n\n**Key idea:** quadrilateral $OAPB$ has two right angles at $A$ and $B$.\n\n**Step 1.** $\\angle OAP = \\angle OBP = 90^\\circ$.\n\n**Step 2.** $\\angle APB = 360 - 90 - 90 - 86 = 94^\\circ$.\n\n**Answer:** $94$. **(D)**\n\n**Common mistake:** taking half the central angle."
+ },
+ {
+  "id": "geo_circles_b12",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_ring",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the area of the ring between two circles with the same center and radii $5$ and $3$?",
+  "choices": {
+   "A": "$4\\pi$",
+   "B": "$16\\pi$",
+   "C": "$17\\pi$",
+   "D": "$25\\pi$",
+   "E": "$34\\pi$"
+  },
+  "answer": "B",
+  "hints": [
+   "Big circle minus small circle."
+  ],
+  "solution": "**What we need:** the ring's area.\n\n**Key idea:** subtract the inner circle's area from the outer circle's.\n\n**Step 1.** $\\pi \\cdot 5^2 - \\pi \\cdot 3^2 = 16\\pi$.\n\n**Answer:** $16\\pi$. **(B)**\n\n**Common mistake:** squaring the difference of the radii."
+ },
+ {
+  "id": "geo_circles_b13",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_square_circum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A square with side $8$ is inscribed in a circle (all four corners on the circle). What is the circle's area?",
+  "choices": {
+   "A": "$8\\pi$",
+   "B": "$16\\pi$",
+   "C": "$32\\pi$",
+   "D": "$64\\pi$",
+   "E": "$128\\pi$"
+  },
+  "answer": "C",
+  "hints": [
+   "The diagonal of the square is a diameter."
+  ],
+  "solution": "**What we need:** the circle's area.\n\n**Key idea:** the square's diagonal $s\\sqrt{2}$ is the diameter.\n\n**Step 1.** Diameter: $8\\sqrt{2}$; radius squared: $\\frac{128}{4} = 32$.\n\n**Step 2.** Area: $32\\pi$.\n\n**Answer:** $32\\pi$. **(C)**\n\n**Common mistake:** using the side as the diameter."
+ },
+ {
+  "id": "geo_circles_b14",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_square_corners",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A circle is inscribed in a square with side $4$. What is the total area inside the square but outside the circle?",
+  "choices": {
+   "A": "$16 - 2\\pi$",
+   "B": "$16 - 8\\pi$",
+   "C": "$16 - 16\\pi$",
+   "D": "$4\\pi$",
+   "E": "$16 - 4\\pi$"
+  },
+  "answer": "E",
+  "hints": [
+   "The circle's diameter is the side."
+  ],
+  "solution": "**What we need:** the four corner regions' total area.\n\n**Key idea:** square area minus circle area; the circle's radius is half the side.\n\n**Step 1.** Square: $16$. Circle: radius $2$, area $4\\pi$.\n\n**Step 2.** Difference: $16 - 4\\pi$.\n\n**Answer:** $16 - 4\\pi$. **(E)**\n\n**Common mistake:** using the side as the radius."
+ },
+ {
+  "id": "geo_circles_b15",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_wheel",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A wheel has radius $21$ cm. Using $\\pi \\approx \\frac{22}{7}$, how many full turns does it make rolling $9240$ cm?",
+  "choices": {
+   "A": "$\\frac{20}{3}$",
+   "B": "$35$",
+   "C": "$70$",
+   "D": "$140$",
+   "E": "$440$"
+  },
+  "answer": "C",
+  "hints": [
+   "One turn covers one circumference."
+  ],
+  "solution": "**What we need:** the number of turns.\n\n**Key idea:** each turn rolls the wheel forward one circumference, $2\\pi r$.\n\n**Step 1.** Circumference: $2 \\cdot \\frac{22}{7} \\cdot 21 = 132$ cm.\n\n**Step 2.** Turns: $\\frac{9240}{132} = 70$.\n\n**Answer:** $70$. **(C)**\n\n**Common mistake:** dividing by the radius or diameter instead of the circumference."
+ },
+ {
+  "id": "geo_circles_b16",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_through_point",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A circle has center $(-5, 4)$ and passes through $(-2, -3)$. What is its area?",
+  "choices": {
+   "A": "$10\\pi$",
+   "B": "$58$",
+   "C": "$29\\pi$",
+   "D": "$58\\pi$",
+   "E": "$116\\pi$"
+  },
+  "answer": "D",
+  "hints": [
+   "The radius is the distance from the center to the point."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** radius squared is the squared distance from the center to the point.\n\n**Step 1.** $r^2 = (-2 - \\left(-5\\right))^2 + (-3 - 4)^2 = 9 + 49 = 58$.\n\n**Step 2.** Area $= 58\\pi$.\n\n**Answer:** $58\\pi$. **(D)**\n\n**Common mistake:** forgetting $\\pi$, or taking a square root you don't need."
+ },
+ {
+  "id": "geo_circles_b17",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_diameter_center",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A diameter of a circle has endpoints $(1, 10)$ and $(-6, -7)$. What is the sum of the coordinates of the center?",
+  "choices": {
+   "A": "$-12$",
+   "B": "$-4$",
+   "C": "$-2$",
+   "D": "$-1$",
+   "E": "$0$"
+  },
+  "answer": "D",
+  "hints": [
+   "The center is the midpoint of any diameter."
+  ],
+  "solution": "**What we need:** the coordinate sum of the center.\n\n**Key idea:** the center bisects every diameter.\n\n**Step 1.** Center: $\\left(\\frac{1 + \\left(-6\\right)}{2}, \\frac{10 + \\left(-7\\right)}{2}\\right) = (-\\frac{5}{2}, \\frac{3}{2})$.\n\n**Step 2.** Sum: $-1$.\n\n**Answer:** $-1$. **(D)**\n\n**Common mistake:** forgetting to divide by $2$."
+ },
+ {
+  "id": "geo_circles_b18",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_tangent_secant",
+  "level": "basics",
+  "track": "both",
+  "prompt": "From a point $P$ outside a circle, a tangent touches the circle at $T$, and a secant meets the circle at $A$ and $B$ with $PA = 1$ and $PB = 4$. What is $PT$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$\\frac{5}{2}$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$\\sqrt{17}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Power of a point."
+  ],
+  "solution": "**What we need:** $PT$.\n\n**Key idea:** Power of a Point: $PT^2 = PA \\cdot PB$.\n\n**Step 1.** $PT^2 = 1 \\cdot 4 = 4$.\n\n**Step 2.** $PT = 2$.\n\n**Answer:** $2$. **(A)**\n\n**Common mistake:** averaging the two lengths."
+ },
+ {
+  "id": "geo_circles_b19",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_chord_angle",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two chords cross inside a circle. The arcs cut off by one of the angles at the crossing and by its vertical angle measure $51^\\circ$ and $81^\\circ$. What is that angle?",
+  "choices": {
+   "A": "$15$",
+   "B": "$66$",
+   "C": "$76$",
+   "D": "$114$",
+   "E": "$132$"
+  },
+  "answer": "B",
+  "hints": [
+   "Average the two arcs."
+  ],
+  "solution": "**What we need:** the angle.\n\n**Key idea:** an angle formed by two chords inside a circle is half the sum of the intercepted arcs.\n\n**Step 1.** $\\frac{51 + 81}{2} = 66^\\circ$.\n\n**Answer:** $66$. **(B)**\n\n**Common mistake:** using half the difference (that's for angles outside the circle)."
+ },
+ {
+  "id": "geo_circles_b20",
+  "skillId": "geo_circles",
+  "family": "geo_circles:ci_right_circum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A right triangle has legs $6$ and $8$. What is the radius of the circle through all three of its corners?",
+  "choices": {
+   "A": "$\\frac{10}{3}$",
+   "B": "$\\frac{24}{5}$",
+   "C": "$5$",
+   "D": "$7$",
+   "E": "$10$"
+  },
+  "answer": "C",
+  "hints": [
+   "The hypotenuse is a diameter."
+  ],
+  "solution": "**What we need:** the circumradius.\n\n**Key idea:** in a right triangle, the hypotenuse is a diameter of the circumscribed circle.\n\n**Step 1.** Hypotenuse: $10$.\n\n**Step 2.** Radius: $5$.\n\n**Answer:** $5$. **(C)**\n\n**Common mistake:** using the hypotenuse as the radius."
+ },
+ {
+  "id": "geo_circles_c01",
+  "skillId": "geo_circles",
+  "family": "geo_circles:cic1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A chord of length $30$ is drawn in a circle of radius $39$. How far is the chord from the center of the circle?",
+  "choices": {
+   "A": "$3$",
+   "B": "$15$",
+   "C": "$24$",
+   "D": "$36$",
+   "E": "$37$"
+  },
+  "answer": "D",
+  "hints": [
+   "The perpendicular from the center bisects the chord."
+  ],
+  "solution": "**What we need:** the perpendicular distance from the center to the chord.\n\n**Key idea:** the perpendicular from the center to a chord bisects it, making a right triangle with the radius as hypotenuse.\n\n**Step 1.** Half the chord: $15$.\n\n**Step 2.** Distance: $\\sqrt{39^2 - 15^2} = \\sqrt{1296} = 36$.\n\n**Answer:** $36$. **(D)**\n\n**Common mistake:** using the whole chord $30$ in the Pythagorean Theorem."
+ },
+ {
+  "id": "geo_circles_c02",
+  "skillId": "geo_circles",
+  "family": "geo_circles:cic2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Chords $AB$ and $CD$ of a circle intersect at point $P$. If $AP = 9$, $PB = 6$, and $CP = 3$, what is $PD$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$\\frac{9}{2}$",
+   "C": "$12$",
+   "D": "$18$",
+   "E": "$19$"
+  },
+  "answer": "D",
+  "hints": [
+   "For intersecting chords, $AP \\cdot PB = CP \\cdot PD$."
+  ],
+  "solution": "**What we need:** the missing piece $PD$.\n\n**Key idea:** Intersecting Chords (Power of a Point): when two chords cross, the products of their pieces are equal: $AP \\cdot PB = CP \\cdot PD$.\n\n**Step 1.** $9 \\cdot 6 = 3 \\cdot PD$, so $54 = 3 \\cdot PD$.\n\n**Step 2.** $PD = \\frac{54}{3} = 18$.\n\n**Answer:** $18$. **(D)**\n\n**Common mistake:** adding the pieces instead of multiplying them."
+ },
+ {
+  "id": "geo_circles_c03",
+  "skillId": "geo_circles",
+  "family": "geo_circles:cic3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A circle is inscribed in a right triangle with legs $14$ and $48$. What is the radius of the circle?",
+  "choices": {
+   "A": "$6$",
+   "B": "$\\frac{168}{25}$",
+   "C": "$7$",
+   "D": "$12$",
+   "E": "$25$"
+  },
+  "answer": "A",
+  "hints": [
+   "For a right triangle, $r = \\frac{a + b - c}{2}$, or use area $= r \\cdot s$."
+  ],
+  "solution": "**What we need:** the inradius $r$.\n\n**Key idea:** tangent segments from the same point to a circle are equal. At the right angle, the two radii and the legs form a square of side $r$.\n\n**Step 1.** Hypotenuse: $\\sqrt{14^2 + 48^2} = 50$.\n\n**Step 2.** From the acute corners, the tangent lengths are $14 - r$ and $48 - r$; together they make the hypotenuse: $(14 - r) + (48 - r) = 50$.\n\n**Step 3.** So $2r = 14 + 48 - 50 = 12$ and $r = 6$.\n\n**Answer:** $6$. **(A)**\n\n**Common mistake:** using half the hypotenuse ($25$), which is the radius of the circle around the triangle, not inside it."
+ },
+ {
+  "id": "geo_circles_c04",
+  "skillId": "geo_circles",
+  "family": "geo_circles:cic_external_tangent",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Circles of radius $3$ and $12$ touch each other on the outside. A line is tangent to both circles at different points. How far apart are the two tangent points?",
+  "choices": {
+   "A": "$6$",
+   "B": "$9$",
+   "C": "$12$",
+   "D": "$13$",
+   "E": "$15$"
+  },
+  "answer": "C",
+  "hints": [
+   "Draw the radii to the tangent points and the segment joining the centers."
+  ],
+  "solution": "**What we need:** the distance between tangent points.\n\n**Key idea:** the radii are parallel (both perpendicular to the tangent), making a right trapezoid.\n\n**Step 1.** Centers are $15$ apart. The radii differ by $9$.\n\n**Step 2.** Tangent length: $\\sqrt{15^2 - 9^2} = \\sqrt{4 \\cdot 3 \\cdot 12} = 12$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** adding the radii."
+ },
+ {
+  "id": "geo_circles_c05",
+  "skillId": "geo_circles",
+  "family": "geo_circles:cic_inradius_equilateral",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the radius of the circle inscribed in an equilateral triangle with side $24$?",
+  "choices": {
+   "A": "$4\\sqrt{2}$",
+   "B": "$4\\sqrt{3}$",
+   "C": "$8$",
+   "D": "$8\\sqrt{3}$",
+   "E": "$12\\sqrt{3}$"
+  },
+  "answer": "B",
+  "hints": [
+   "The center is one third of the way up the height."
+  ],
+  "solution": "**What we need:** the inradius.\n\n**Key idea:** the incenter is also the centroid, which sits $\\frac{1}{3}$ of the way up each height.\n\n**Step 1.** Height: $\\frac{\\sqrt{3}}{2} \\cdot 24 = 12\\sqrt{3}$.\n\n**Step 2.** Inradius: $\\frac{1}{3} \\cdot 12\\sqrt{3} = 4\\sqrt{3}$.\n\n**Answer:** $4\\sqrt{3}$. **(B)**\n\n**Common mistake:** using $\\frac{2}{3}$ of the height (that's the circumradius)."
+ },
+ {
+  "id": "geo_circles_c06",
+  "skillId": "geo_circles",
+  "family": "geo_circles:cic_hexagon_gap",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A regular hexagon with side $2$ is inscribed in a circle. What is the area inside the circle but outside the hexagon?",
+  "choices": {
+   "A": "$4\\pi - 12\\sqrt{3}$",
+   "B": "$16\\pi - 6\\sqrt{3}$",
+   "C": "$4\\pi - 3\\sqrt{3}$",
+   "D": "$4\\pi - 24$",
+   "E": "$4\\pi - 6\\sqrt{3}$"
+  },
+  "answer": "E",
+  "hints": [
+   "The circle's radius equals the hexagon's side."
+  ],
+  "solution": "**What we need:** the area of the six circular slivers.\n\n**Key idea:** circle area minus hexagon area; the hexagon is six equilateral triangles.\n\n**Step 1.** Circle: radius $2$, area $4\\pi$.\n\n**Step 2.** Hexagon: $6 \\cdot \\frac{\\sqrt{3}}{4} \\cdot 4 = 6\\sqrt{3}$.\n\n**Step 3.** Difference: $4\\pi - 6\\sqrt{3}$.\n\n**Answer:** $4\\pi - 6\\sqrt{3}$. **(E)**\n\n**Common mistake:** using the hexagon's height as the radius."
+ },
+ {
+  "id": "geo_circles_c07",
+  "skillId": "geo_circles",
+  "family": "geo_circles:cic_three_tangent",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Three circles with radii $2$, $2$, and $7$ are each tangent to the other two from the outside. What is the area of the triangle formed by their centers?",
+  "choices": {
+   "A": "$\\sqrt{77}$",
+   "B": "$14$",
+   "C": "$2\\sqrt{77}$",
+   "D": "$\\sqrt{309}$",
+   "E": "$22$"
+  },
+  "answer": "C",
+  "hints": [
+   "The sides are sums of pairs of radii."
+  ],
+  "solution": "**What we need:** the area of the centers' triangle.\n\n**Key idea:** the sides are $a + b$, $b + c$, $c + a$; use Heron's formula.\n\n**Step 1.** Sides: $4$, $9$, $9$. Semiperimeter: $s = 11$.\n\n**Step 2.** $s - $ each side gives $7$, $2$, $2$.\n\n**Step 3.** Area $= \\sqrt{11 \\cdot 2 \\cdot 2 \\cdot 7} = 2\\sqrt{77}$.\n\n**Answer:** $2\\sqrt{77}$. **(C)**\n\n**Common mistake:** using the radii themselves as the sides."
+ },
+ {
+  "id": "geo_circles_c08",
+  "skillId": "geo_circles",
+  "family": "geo_circles:cic_outside_angle",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Two secants from a point $P$ outside a circle cut off a far arc of $128^\\circ$ and a near arc of $22^\\circ$. What is the angle at $P$?",
+  "choices": {
+   "A": "$53$",
+   "B": "$63$",
+   "C": "$64$",
+   "D": "$75$",
+   "E": "$106$"
+  },
+  "answer": "A",
+  "hints": [
+   "Half the difference of the arcs."
+  ],
+  "solution": "**What we need:** the angle at $P$.\n\n**Key idea:** an angle formed outside a circle by two secants is half the difference of the intercepted arcs.\n\n**Step 1.** $\\frac{128 - 22}{2} = 53^\\circ$.\n\n**Answer:** $53$. **(A)**\n\n**Common mistake:** using half the sum (that's for chords crossing inside)."
+ },
+ {
+  "id": "geo_circles_c09",
+  "skillId": "geo_circles",
+  "family": "geo_circles:cic_tangent_axes",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Two circles are each tangent to both coordinate axes and pass through $(6, 8)$. What is the sum of their radii?",
+  "choices": {
+   "A": "$14$",
+   "B": "$28$",
+   "C": "$30$",
+   "D": "$96$",
+   "E": "$100$"
+  },
+  "answer": "B",
+  "hints": [
+   "A circle tangent to both axes in the first quadrant has center $(r, r)$."
+  ],
+  "solution": "**What we need:** the sum of the radii.\n\n**Key idea:** the condition gives a quadratic in $r$; Vieta gives the sum of its roots.\n\n**Step 1.** $(x - r)^2 + (y - r)^2 = r^2$ through $(6, 8)$: $(6 - r)^2 + (8 - r)^2 = r^2$.\n\n**Step 2.** Expand: $r^2 - 28r + 100 = 0$ (discriminant $8 \\cdot 6 \\cdot 8 > 0$).\n\n**Step 3.** Sum of roots: $28$.\n\n**Answer:** $28$. **(B)**\n\n**Common mistake:** forgetting that there are two such circles."
+ },
+ {
+  "id": "geo_circles_c10",
+  "skillId": "geo_circles",
+  "family": "geo_circles:cic_parallel_chords",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Two parallel chords on the same side of a circle's center have lengths $48$ and $40$ and are $8$ units apart. What is the radius?",
+  "choices": {
+   "A": "$22$",
+   "B": "$24$",
+   "C": "$25$",
+   "D": "$26$",
+   "E": "$48$"
+  },
+  "answer": "C",
+  "hints": [
+   "Let the shorter chord be $x$ from the center; write $r^2$ two ways."
+  ],
+  "solution": "**What we need:** the radius.\n\n**Key idea:** each half-chord, its distance from the center, and the radius form a right triangle.\n\n**Step 1.** Half-chords: $24$ and $20$. The longer chord is closer to the center.\n\n**Step 2.** With distances $d$ and $d + 8$: $(20)^2 + (d + 8)^2 = (24)^2 + d^2$.\n\n**Step 3.** This gives $d = 7$, so $r^2 = 24^2 + 7^2 = 625$, and $r = 25$.\n\n**Answer:** $25$. **(C)**\n\n**Common mistake:** assuming one chord passes through the center."
+ },
+ {
+  "id": "geo_coordinate_b01",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the distance between $(1, 8)$ and $(15, 56)$?",
+  "choices": {
+   "A": "$15$",
+   "B": "$49$",
+   "C": "$50$",
+   "D": "$51$",
+   "E": "$62$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use the distance formula."
+  ],
+  "solution": "**What we need:** the straight line distance between the points.\n\n**Key idea:** the distance formula is the Pythagorean Theorem: the horizontal and vertical changes are the legs.\n\n**Step 1.** Horizontal change: $|15 - (1)| = 14$. Vertical change: $|56 - (8)| = 48$.\n\n**Step 2.** Distance: $\\sqrt{14^2 + 48^2} = \\sqrt{2500} = 50$.\n\n**Answer:** $50$. **(C)**\n\n**Common mistake:** adding the changes ($62$), which is the distance along the grid, not straight across."
+ },
+ {
+  "id": "geo_coordinate_b02",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the slope of the line through $(-1, 3)$ and $(7, 0)$?",
+  "choices": {
+   "A": "$-\\frac{8}{3}$",
+   "B": "$-\\frac{3}{8}$",
+   "C": "$\\frac{3}{8}$",
+   "D": "$\\frac{5}{8}$",
+   "E": "$\\frac{8}{3}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Slope is rise over run."
+  ],
+  "solution": "**What we need:** the slope.\n\n**Key idea:** slope is rise over run: change in $y$ divided by change in $x$, in the same order.\n\n**Step 1.** Slope: $m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{0 - (3)}{7 - (-1)} = \\frac{-3}{8} = -\\frac{3}{8}$.\n\n**Answer:** $-\\frac{3}{8}$. **(B)**\n\n**Common mistake:** dividing run by rise, or subtracting in different orders on top and bottom."
+ },
+ {
+  "id": "geo_coordinate_b03",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Line $\\ell$ has equation $y = -\\frac{7}{5}x + 5$. What is the slope of a line perpendicular to $\\ell$?",
+  "choices": {
+   "A": "$-\\frac{7}{5}$",
+   "B": "$-\\frac{5}{7}$",
+   "C": "$\\frac{5}{7}$",
+   "D": "$\\frac{7}{5}$",
+   "E": "$\\frac{12}{7}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Perpendicular slopes multiply to $-1$."
+  ],
+  "solution": "**What we need:** the perpendicular slope.\n\n**Key idea:** perpendicular slopes are negative reciprocals: flip the fraction and change the sign. They multiply to $-1$.\n\n**Step 1.** The slope of $\\ell$ is $-\\frac{7}{5}$.\n\n**Step 2.** Flip and change sign: $-\\frac{1}{-\\frac{7}{5}} = \\frac{5}{7}$.\n\n**Step 3.** Check: $-\\frac{7}{5} \\cdot \\frac{5}{7} = -1$.\n\n**Answer:** $\\frac{5}{7}$. **(C)**\n\n**Common mistake:** flipping without changing the sign, or changing the sign without flipping."
+ },
+ {
+  "id": "geo_coordinate_b04",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The midpoint of segment $AB$ is $(5, 0)$, and $A = (-4, 5)$. What is the sum of the coordinates of $B$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$3$",
+   "C": "$5$",
+   "D": "$9$",
+   "E": "$11$"
+  },
+  "answer": "D",
+  "hints": [
+   "The midpoint is the average of the endpoints."
+  ],
+  "solution": "**What we need:** the coordinates of $B$, then their sum.\n\n**Key idea:** the midpoint is the average of the endpoints, so $B = 2M - A$ (go from $A$ to $M$, then the same amount again).\n\n**Step 1.** $x$: $\\frac{-4 + x_B}{2} = 5$, so $x_B = 2 \\cdot 5 - (-4) = 14$.\n\n**Step 2.** $y$: $y_B = 2 \\cdot 0 - (5) = -5$.\n\n**Step 3.** $B = (14, -5)$; sum $= 9$.\n\n**Answer:** $9$. **(D)**\n\n**Common mistake:** averaging $A$ and $M$, which gives a point between them, not past $M$."
+ },
+ {
+  "id": "geo_coordinate_b05",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_midpoint_sum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of the coordinates of the midpoint of the segment from $(-5, 3)$ to $(11, 10)$?",
+  "choices": {
+   "A": "$-\\frac{7}{2}$",
+   "B": "$\\frac{19}{2}$",
+   "C": "$\\frac{21}{2}$",
+   "D": "$\\frac{23}{2}$",
+   "E": "$19$"
+  },
+  "answer": "B",
+  "hints": [
+   "Average the $x$'s and average the $y$'s."
+  ],
+  "solution": "**What we need:** the coordinate sum of the midpoint.\n\n**Key idea:** the midpoint is the average of the endpoints.\n\n**Step 1.** Midpoint: $(3, \\frac{13}{2})$.\n\n**Step 2.** Sum: $\\frac{19}{2}$.\n\n**Answer:** $\\frac{19}{2}$. **(B)**\n\n**Common mistake:** adding without dividing by $2$."
+ },
+ {
+  "id": "geo_coordinate_b06",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_y_intercept",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the $y$-intercept of the line through $(-1, -7)$ and $(7, -15)$?",
+  "choices": {
+   "A": "$-9$",
+   "B": "$-8$",
+   "C": "$-7$",
+   "D": "$-1$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the slope, then use one point."
+  ],
+  "solution": "**What we need:** the $y$-intercept $b$.\n\n**Key idea:** write $y = mx + b$, find $m$ from the points, then solve for $b$.\n\n**Step 1.** Slope: $\\frac{-15 - \\left(-7\\right)}{7 - \\left(-1\\right)} = -1$.\n\n**Step 2.** $b = -7 - \\left(-1\\right) \\cdot \\left(-1\\right) = -8$.\n\n**Answer:** $-8$. **(B)**\n\n**Common mistake:** answering the slope."
+ },
+ {
+  "id": "geo_coordinate_b07",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_point_on_line",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The point $(8, k)$ lies on the line $y = -x - 10$. What is $k$?",
+  "choices": {
+   "A": "$-18$",
+   "B": "$-8$",
+   "C": "$-3$",
+   "D": "$2$",
+   "E": "$18$"
+  },
+  "answer": "A",
+  "hints": [
+   "Substitute $x = 8$."
+  ],
+  "solution": "**What we need:** $k$.\n\n**Key idea:** a point is on a line exactly when its coordinates satisfy the equation.\n\n**Step 1.** $k = -1 \\cdot 8 - 10 = -18$.\n\n**Answer:** $-18$. **(A)**\n\n**Common mistake:** substituting into $x$ instead of solving for $y$."
+ },
+ {
+  "id": "geo_coordinate_b08",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_double_reflect",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The point $(-1, 4)$ is reflected over the $y$-axis then the line $y = x$. What is the sum of the coordinates of the final point?",
+  "choices": {
+   "A": "$-5$",
+   "B": "$3$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "C",
+  "hints": [
+   "Do one reflection at a time."
+  ],
+  "solution": "**What we need:** the coordinate sum after both reflections.\n\n**Key idea:** over the $x$-axis negate $y$; over the $y$-axis negate $x$; over $y = x$ swap the coordinates.\n\n**Step 1.** Over the $y$-axis: $(1, 4)$.\n\n**Step 2.** Over $y = x$ (swap): $(4, 1)$.\n\n**Step 3.** Sum: $5$.\n\n**Answer:** $5$. **(C)**\n\n**Common mistake:** doing the reflections in the wrong order."
+ },
+ {
+  "id": "geo_coordinate_b09",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_translate",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The point $(-7, 4)$ is moved $0$ units right and $2$ units up. How far is the new point from the origin?",
+  "choices": {
+   "A": "$\\sqrt{65}$",
+   "B": "$9$",
+   "C": "$\\sqrt{85}$",
+   "D": "$\\sqrt{87}$",
+   "E": "$13$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the new point first."
+  ],
+  "solution": "**What we need:** the distance from the origin.\n\n**Key idea:** translate, then use the distance formula.\n\n**Step 1.** New point: $(-7, 6)$.\n\n**Step 2.** Distance: $\\sqrt{\\left(-7\\right)^2 + 6^2} = \\sqrt{85}$.\n\n**Answer:** $\\sqrt{85}$. **(C)**\n\n**Common mistake:** measuring from the original point."
+ },
+ {
+  "id": "geo_coordinate_b10",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_rect_area",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A rectangle has corners at $(2, 4)$, $(8, 4)$, $(8, 7)$, and $(2, 7)$. What is its area?",
+  "choices": {
+   "A": "$9$",
+   "B": "$17$",
+   "C": "$18$",
+   "D": "$19$",
+   "E": "$110$"
+  },
+  "answer": "C",
+  "hints": [
+   "Width and height come from differences of coordinates."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** the side lengths are the differences in $x$ and in $y$.\n\n**Step 1.** Width: $8 - 2 = 6$. Height: $7 - 4 = 3$.\n\n**Step 2.** Area: $18$.\n\n**Answer:** $18$. **(C)**\n\n**Common mistake:** adding coordinates instead of subtracting."
+ },
+ {
+  "id": "geo_coordinate_b11",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_parallel_slope",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the slope of any line parallel to $5x + 5y = 8$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$\\frac{8}{5}$",
+   "E": "$2$"
+  },
+  "answer": "A",
+  "hints": [
+   "Solve for $y$."
+  ],
+  "solution": "**What we need:** the slope.\n\n**Key idea:** parallel lines have the same slope; rewrite in $y = mx + b$ form to read it off.\n\n**Step 1.** $5y = -5x + 8$, so $y = -x + \\ldots$\n\n**Step 2.** Slope: $-1$.\n\n**Answer:** $-1$. **(A)**\n\n**Common mistake:** forgetting the sign when moving $5x$."
+ },
+ {
+  "id": "geo_coordinate_b12",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_x_intercept",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Where does the line $y = 5x + 2$ cross the $x$-axis? Give the $x$-coordinate.",
+  "choices": {
+   "A": "$-\\frac{2}{5}$",
+   "B": "$\\frac{2}{5}$",
+   "C": "$\\frac{7}{5}$",
+   "D": "$2$",
+   "E": "$5$"
+  },
+  "answer": "A",
+  "hints": [
+   "On the $x$-axis, $y = 0$."
+  ],
+  "solution": "**What we need:** the $x$-intercept.\n\n**Key idea:** set $y = 0$ and solve.\n\n**Step 1.** $0 = 5x + 2$.\n\n**Step 2.** $x = -\\frac{2}{5}$.\n\n**Answer:** $-\\frac{2}{5}$. **(A)**\n\n**Common mistake:** giving the $y$-intercept."
+ },
+ {
+  "id": "geo_coordinate_b13",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_section",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Point $P$ is on segment $AB$ with $A = (-8, -3)$, $B = (1, -10)$, and $AP : PB = 2 : 1$. What is the sum of the coordinates of $P$?",
+  "choices": {
+   "A": "$-\\frac{31}{3}$",
+   "B": "$-10$",
+   "C": "$-\\frac{29}{3}$",
+   "D": "$-\\frac{26}{3}$",
+   "E": "$\\frac{17}{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$P$ is \\frac{2}{3} of the way from $A$ to $B$."
+  ],
+  "solution": "**What we need:** the coordinate sum of $P$.\n\n**Key idea:** move $\\frac{2}{3}$ of the way from $A$ toward $B$.\n\n**Step 1.** Change from $A$ to $B$: $(9, -7)$.\n\n**Step 2.** $P = (-8 + \\frac{2}{3} \\cdot 9, -3 + \\frac{2}{3} \\cdot \\left(-7\\right)) = (-2, -\\frac{23}{3})$.\n\n**Step 3.** Sum: $-\\frac{29}{3}$.\n\n**Answer:** $-\\frac{29}{3}$. **(C)**\n\n**Common mistake:** measuring from $B$ instead of $A$."
+ },
+ {
+  "id": "geo_coordinate_b14",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_triangle_perim",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the perimeter of the triangle with vertices $(5, 4)$, $(25, 4)$, and $(5, 25)$?",
+  "choices": {
+   "A": "$41$",
+   "B": "$70$",
+   "C": "$71$",
+   "D": "$82$",
+   "E": "$210$"
+  },
+  "answer": "B",
+  "hints": [
+   "It's a right triangle with legs along the grid."
+  ],
+  "solution": "**What we need:** the perimeter.\n\n**Key idea:** two sides are horizontal and vertical; the third is the hypotenuse.\n\n**Step 1.** Legs: $20$ and $21$.\n\n**Step 2.** Hypotenuse: $\\sqrt{20^2 + 21^2} = 29$.\n\n**Step 3.** Perimeter: $70$.\n\n**Answer:** $70$. **(B)**\n\n**Common mistake:** forgetting the slanted side."
+ },
+ {
+  "id": "geo_coordinate_b15",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_rotate90",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The point $(-6, -10)$ is rotated $90^\\circ$ counterclockwise around the origin. What is the sum of the coordinates of its image?",
+  "choices": {
+   "A": "$-16$",
+   "B": "$-4$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$16$"
+  },
+  "answer": "C",
+  "hints": [
+   "Swap the coordinates and change one sign."
+  ],
+  "solution": "**What we need:** the image's coordinate sum.\n\n**Key idea:** a $90^\\circ$ counterclockwise turn sends $(x, y)$ to $(-y, x)$.\n\n**Step 1.** Image: $(10, -6)$.\n\n**Step 2.** Sum: $4$.\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** turning the wrong direction."
+ },
+ {
+  "id": "geo_coordinate_b16",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_hit_level",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A line with slope $\\frac{1}{2}$ passes through $(-3, -1)$. At what $x$ does it reach $y = 9$?",
+  "choices": {
+   "A": "$-23$",
+   "B": "$2$",
+   "C": "$9$",
+   "D": "$17$",
+   "E": "$18$"
+  },
+  "answer": "D",
+  "hints": [
+   "Rise needed over slope gives the run."
+  ],
+  "solution": "**What we need:** the $x$-coordinate where $y = 9$.\n\n**Key idea:** the change in $y$ divided by the slope is the change in $x$.\n\n**Step 1.** Change in $y$: $9 - \\left(-1\\right) = 10$.\n\n**Step 2.** Change in $x$: $\\frac{10}{\\frac{1}{2}} = 20$.\n\n**Step 3.** $x = -3 + 20 = 17$.\n\n**Answer:** $17$. **(D)**\n\n**Common mistake:** multiplying by the slope instead of dividing."
+ },
+ {
+  "id": "geo_coordinate_b17",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_centroid",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of the coordinates of the centroid of the triangle with vertices $(9, 6)$, $(3, -9)$, $(-5, 7)$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$\\frac{11}{3}$",
+   "C": "$\\frac{14}{3}$",
+   "D": "$\\frac{11}{2}$",
+   "E": "$11$"
+  },
+  "answer": "B",
+  "hints": [
+   "The centroid averages the three vertices."
+  ],
+  "solution": "**What we need:** the centroid's coordinate sum.\n\n**Key idea:** the centroid is the average of the vertices.\n\n**Step 1.** Centroid: $(\\frac{7}{3}, \\frac{4}{3})$.\n\n**Step 2.** Sum: $\\frac{11}{3}$.\n\n**Answer:** $\\frac{11}{3}$. **(B)**\n\n**Common mistake:** dividing by $2$ instead of $3$."
+ },
+ {
+  "id": "geo_coordinate_b18",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_parallelogram_vertex",
+  "level": "basics",
+  "track": "both",
+  "prompt": "$ABCD$ is a parallelogram with $A = (-4, -7)$, $B = (8, -2)$, and $C = (7, -8)$. What is the sum of the coordinates of $D$?",
+  "choices": {
+   "A": "$-18$",
+   "B": "$-17$",
+   "C": "$-12$",
+   "D": "$-4$",
+   "E": "$16$"
+  },
+  "answer": "A",
+  "hints": [
+   "The diagonals bisect each other."
+  ],
+  "solution": "**What we need:** the coordinate sum of $D$.\n\n**Key idea:** in parallelogram $ABCD$, $D = A + C - B$ (the move from $B$ to $A$ equals the move from $C$ to $D$).\n\n**Step 1.** $D = (-4 + 7 - 8, -7 + \\left(-8\\right) - \\left(-2\\right)) = (-5, -13)$.\n\n**Step 2.** Sum: $-18$.\n\n**Answer:** $-18$. **(A)**\n\n**Common mistake:** using $B + C - A$, which gives a different parallelogram."
+ },
+ {
+  "id": "geo_coordinate_b19",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_square_perim",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two adjacent corners of a square are $(-8, -2)$ and $(-6, -1)$. What is the square's perimeter?",
+  "choices": {
+   "A": "$\\sqrt{5}$",
+   "B": "$2\\sqrt{5}$",
+   "C": "$5$",
+   "D": "$4\\sqrt{5}$",
+   "E": "$12$"
+  },
+  "answer": "D",
+  "hints": [
+   "Adjacent corners give one side."
+  ],
+  "solution": "**What we need:** the perimeter.\n\n**Key idea:** the distance between adjacent corners is the side length.\n\n**Step 1.** Side: $\\sqrt{2^2 + 1^2} = \\sqrt{5}$.\n\n**Step 2.** Perimeter: $4 \\cdot \\sqrt{5} = 4\\sqrt{5}$.\n\n**Answer:** $4\\sqrt{5}$. **(D)**\n\n**Common mistake:** giving the area or a single side."
+ },
+ {
+  "id": "geo_coordinate_b20",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:co_equidistant_axis",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Point $P$ is on the $y$-axis and is the same distance from $(8, 8)$ and $(7, -8)$. What is the $y$-coordinate of $P$?",
+  "choices": {
+   "A": "$-\\frac{15}{32}$",
+   "B": "$0$",
+   "C": "$\\frac{15}{32}$",
+   "D": "$\\frac{47}{32}$",
+   "E": "$\\frac{15}{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write $P = (0, y)$ and set the squared distances equal."
+  ],
+  "solution": "**What we need:** the $y$-coordinate of $P$.\n\n**Key idea:** equal distances means equal squared distances, and the $y^2$ terms cancel.\n\n**Step 1.** $8^2 + (y - 8)^2 = 7^2 + (y + 8)^2$.\n\n**Step 2.** Expanding, $y^2$ cancels: $128 - 16y = 113 + 16y$.\n\n**Step 3.** $-32y = -15$, so $y = \\frac{15}{32}$.\n\n**Answer:** $\\frac{15}{32}$. **(C)**\n\n**Common mistake:** taking the average of the $y$-coordinates, which only works if the $x$-coordinates match."
+ },
+ {
+  "id": "geo_coordinate_c01",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:coc1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the area of the triangle bounded by the line $5x + 5y = 100$ and the two coordinate axes?",
+  "choices": {
+   "A": "$40$",
+   "B": "$50$",
+   "C": "$200$",
+   "D": "$201$",
+   "E": "$400$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find where the line crosses each axis."
+  ],
+  "solution": "**What we need:** the area of the right triangle cut off by the line.\n\n**Key idea:** find the intercepts; they are the legs of the right triangle at the origin.\n\n**Step 1.** $x$-intercept (set $y = 0$): $5x = 100$, so $x = 20$.\n\n**Step 2.** $y$-intercept (set $x = 0$): $5y = 100$, so $y = 20$.\n\n**Step 3.** Area: $\\frac{1}{2} \\cdot 20 \\cdot 20 = 200$.\n\n**Answer:** $200$. **(C)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$."
+ },
+ {
+  "id": "geo_coordinate_c02",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:coc2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many points with integer coordinates lie on the segment from $(0, -4)$ to $(18, 8)$, including the endpoints?",
+  "choices": {
+   "A": "$6$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$13$",
+   "E": "$19$"
+  },
+  "answer": "B",
+  "hints": [
+   "Step along the segment by $\\left(\\frac{\\Delta x}{g}, \\frac{\\Delta y}{g}\\right)$ where $g = \\gcd(\\Delta x, \\Delta y)$."
+  ],
+  "solution": "**What we need:** the lattice points on the segment.\n\n**Key idea:** the smallest whole number step along the segment is $\\left(\\frac{\\Delta x}{g}, \\frac{\\Delta y}{g}\\right)$ where $g = \\gcd(\\Delta x, \\Delta y)$.\n\n**Step 1.** $\\Delta x = 18$, $\\Delta y = 12$, and $\\gcd(18, 12) = 6$.\n\n**Step 2.** Smallest step: $(3, 2)$. It takes $6$ steps to cross the segment.\n\n**Step 3.** $6$ steps give $6 + 1 = 7$ points, counting both ends.\n\n**Answer:** $7$. **(B)**\n\n**Common mistake:** forgetting one endpoint (answer $6$)."
+ },
+ {
+  "id": "geo_coordinate_c03",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:coc3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the distance from the point $(4, -5)$ to the line $5x + 12y - 12 = 0$?",
+  "choices": {
+   "A": "$\\frac{52}{17}$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$8$",
+   "E": "$52$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use $\\frac{|ax_0 + by_0 + c|}{\\sqrt{a^2 + b^2}}$."
+  ],
+  "solution": "**What we need:** the shortest (perpendicular) distance from the point to the line.\n\n**Key idea:** for $Ax + By + C = 0$, the distance from $(x_0, y_0)$ is $\\frac{|Ax_0 + By_0 + C|}{\\sqrt{A^2 + B^2}}$.\n\n**Step 1.** Top: $|5(4) + 12(-5) - 12| = |-52| = 52$.\n\n**Step 2.** Bottom: $\\sqrt{5^2 + 12^2} = 13$.\n\n**Step 3.** Distance: $\\frac{52}{13} = 4$.\n\n**Answer:** $4$. **(B)**\n\n**Common mistake:** forgetting to divide by $\\sqrt{A^2 + B^2}$."
+ },
+ {
+  "id": "geo_coordinate_c04",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:coc_perp_bisector",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the $y$-intercept of the perpendicular bisector of the segment from $(-4, 8)$ to $(3, 2)$?",
+  "choices": {
+   "A": "$-\\frac{67}{12}$",
+   "B": "$\\frac{32}{7}$",
+   "C": "$5$",
+   "D": "$\\frac{67}{12}$",
+   "E": "$\\frac{79}{12}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find the midpoint and the perpendicular slope."
+  ],
+  "solution": "**What we need:** the $y$-intercept.\n\n**Key idea:** the perpendicular bisector passes through the midpoint with slope $-\\frac{1}{m}$.\n\n**Step 1.** Midpoint: $(-\\frac{1}{2}, 5)$.\n\n**Step 2.** Segment slope: $-\\frac{6}{7}$, so the perpendicular slope is $\\frac{7}{6}$.\n\n**Step 3.** $b = 5 - \\frac{7}{6} \\cdot \\left(-\\frac{1}{2}\\right) = \\frac{67}{12}$.\n\n**Answer:** $\\frac{67}{12}$. **(D)**\n\n**Common mistake:** using the segment's own slope."
+ },
+ {
+  "id": "geo_coordinate_c05",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:coc_reflect_line",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "The point $(2, 1)$ is reflected over the line $y = x - 3$. What is the sum of the coordinates of its image?",
+  "choices": {
+   "A": "$-2$",
+   "B": "$-1$",
+   "C": "$0$",
+   "D": "$3$",
+   "E": "$5$"
+  },
+  "answer": "D",
+  "hints": [
+   "Shift so the line becomes $y = x$, swap, shift back."
+  ],
+  "solution": "**What we need:** the image's coordinate sum.\n\n**Key idea:** shift down by -3 so the line is $y = x$, swap the coordinates, then shift back up.\n\n**Step 1.** Shift down by $-3$: $(2, 4)$.\n\n**Step 2.** Swap: $(4, 2)$.\n\n**Step 3.** Shift back up: $(4, -1)$.\n\n**Step 4.** Sum: $3$.\n\n**Answer:** $3$. **(D)**\n\n**Common mistake:** just swapping the coordinates as if the line were $y = x$."
+ },
+ {
+  "id": "geo_coordinate_c06",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:coc_parallel_distance",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the distance between the parallel lines $3x + 4y = 18$ and $3x + 4y = 33$?",
+  "choices": {
+   "A": "$\\frac{15}{7}$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$15$"
+  },
+  "answer": "B",
+  "hints": [
+   "Divide the difference of constants by $\\sqrt{a^2 + b^2}$."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** for $ax + by = c_1$ and $ax + by = c_2$, the distance is $\\frac{|c_1 - c_2|}{\\sqrt{a^2 + b^2}}$.\n\n**Step 1.** $\\sqrt{3^2 + 4^2} = 5$.\n\n**Step 2.** Distance: $\\frac{15}{5} = 3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** forgetting to divide by $\\sqrt{a^2 + b^2}$."
+ },
+ {
+  "id": "geo_coordinate_c07",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:coc_tangent_line",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "For what positive $c$ is the line $y = 3x + c$ tangent to the circle $x^2 + y^2 = 1$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$\\sqrt{2}$",
+   "C": "$\\sqrt{10}$",
+   "D": "$\\sqrt{11}$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "The distance from the center to the line must equal the radius."
+  ],
+  "solution": "**What we need:** $c$.\n\n**Key idea:** a line is tangent when its distance from the center equals the radius.\n\n**Step 1.** Line: $3x - y + c = 0$. Distance from $(0, 0)$: $\\frac{c}{\\sqrt{9 + 1}}$.\n\n**Step 2.** Set it to $1$: $c = 1\\sqrt{10} = \\sqrt{10}$.\n\n**Answer:** $\\sqrt{10}$. **(C)**\n\n**Common mistake:** setting $c$ equal to the radius, which only works for a horizontal line."
+ },
+ {
+  "id": "geo_coordinate_c08",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:coc_foot",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the sum of the coordinates of the point on the line $x + 2y = 7$ closest to $(-4, 1)$?",
+  "choices": {
+   "A": "$-\\frac{34}{5}$",
+   "B": "$-3$",
+   "C": "$\\frac{12}{5}$",
+   "D": "$\\frac{17}{5}$",
+   "E": "$7$"
+  },
+  "answer": "C",
+  "hints": [
+   "Move from the point along the line's normal direction $(1, 2)$."
+  ],
+  "solution": "**What we need:** the foot of the perpendicular.\n\n**Key idea:** the closest point is where a perpendicular from the point meets the line; the perpendicular direction is $(a, b)$.\n\n**Step 1.** Points along the perpendicular: $(-4 + t, 1 + 2t)$.\n\n**Step 2.** Put into the line: $1(-4 + t) + 2(1 + 2t) = 7$, so $5t = 9$ and $t = \\frac{9}{5}$.\n\n**Step 3.** Foot: $(-\\frac{11}{5}, \\frac{23}{5})$; sum $\\frac{12}{5}$.\n\n**Answer:** $\\frac{12}{5}$. **(C)**\n\n**Common mistake:** moving in the line's own direction instead of perpendicular to it."
+ },
+ {
+  "id": "geo_coordinate_c09",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:coc_min_triangle",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A line through $(4, 8)$ crosses the positive $x$-axis and the positive $y$-axis, forming a triangle with them. What is the smallest possible area of that triangle?",
+  "choices": {
+   "A": "$16$",
+   "B": "$32$",
+   "C": "$64$",
+   "D": "$72$",
+   "E": "$128$"
+  },
+  "answer": "C",
+  "hints": [
+   "The point turns out to be the midpoint of the hypotenuse."
+  ],
+  "solution": "**What we need:** the minimum area.\n\n**Key idea:** the area is smallest when the point is the midpoint of the segment between the intercepts.\n\n**Step 1.** Intercepts $(p, 0)$ and $(0, q)$ with $\\frac{4}{p} + \\frac{8}{q} = 1$. Area $= \\frac{pq}{2}$.\n\n**Step 2.** By AM-GM, $1 = \\frac{4}{p} + \\frac{8}{q} \\ge 2\\sqrt{\\frac{32}{pq}}$, so $pq \\ge 128$.\n\n**Step 3.** Smallest area: $\\frac{128}{2} = 64$, when $p = 8$ and $q = 16$.\n\n**Answer:** $64$. **(C)**\n\n**Common mistake:** using the rectangle $4 \\times 8$ as the answer."
+ },
+ {
+  "id": "geo_coordinate_c10",
+  "skillId": "geo_coordinate",
+  "family": "geo_coordinate:coc_parabola_triangle",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Points on the parabola $y = x^2$ have $x$-coordinates $-3$, $2$, and $3$. What is the area of the triangle they form?",
+  "choices": {
+   "A": "$\\frac{5}{2}$",
+   "B": "$15$",
+   "C": "$16$",
+   "D": "$27$",
+   "E": "$30$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use the shoelace formula; it factors nicely."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** for points $(t, t^2)$, the shoelace formula simplifies to $\\frac{1}{2}|(a - b)(b - c)(c - a)|$.\n\n**Step 1.** Points: $(-3, 9)$, $(2, 4)$, $(3, 9)$.\n\n**Step 2.** Area $= \\frac{1}{2}|(-3 - 2)(2 - 3)(3 - \\left(-3\\right))| = \\frac{30}{2} = 15$.\n\n**Answer:** $15$. **(B)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$."
+ },
+ {
+  "id": "geo_solids_b01",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the surface area of a rectangular box that measures $9$ by $8$ by $9$?",
+  "choices": {
+   "A": "$104$",
+   "B": "$225$",
+   "C": "$450$",
+   "D": "$468$",
+   "E": "$648$"
+  },
+  "answer": "C",
+  "hints": [
+   "Add the areas of all six faces."
+  ],
+  "solution": "**What we need:** the total area of the six faces.\n\n**Key idea:** a box has three pairs of matching faces.\n\n**Step 1.** Face areas: $9 \\cdot 8 = 72$, $8 \\cdot 9 = 72$, $9 \\cdot 9 = 81$.\n\n**Step 2.** Each appears twice: $2(72 + 72 + 81) = 450$.\n\n**Answer:** $450$. **(C)**\n\n**Common mistake:** counting each face only once, which gives half the answer."
+ },
+ {
+  "id": "geo_solids_b02",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the volume of a cylinder with radius $2$ and height $4$?",
+  "choices": {
+   "A": "$\\frac{16\\pi}{3}$",
+   "B": "$8\\pi$",
+   "C": "$16\\pi$",
+   "D": "$51$",
+   "E": "$64\\pi$"
+  },
+  "answer": "C",
+  "hints": [
+   "$V = \\pi r^2 h$."
+  ],
+  "solution": "**What we need:** the cylinder's volume.\n\n**Key idea:** volume $=$ base area $\\times$ height, and the base is a circle: $V = \\pi r^2 h$.\n\n**Step 1.** Base area: $\\pi \\cdot 2^2 = 4\\pi$.\n\n**Step 2.** Volume: $4\\pi \\cdot 4 = 16\\pi$.\n\n**Answer:** $16\\pi$. **(C)**\n\n**Common mistake:** using $2\\pi r$ (the circumference) instead of the base area."
+ },
+ {
+  "id": "geo_solids_b03",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the volume of a sphere with radius $3$?",
+  "choices": {
+   "A": "$9\\pi$",
+   "B": "$27\\pi$",
+   "C": "$36\\pi$",
+   "D": "$114$",
+   "E": "$72\\pi$"
+  },
+  "answer": "C",
+  "hints": [
+   "$V = \\frac{4}{3}\\pi r^3$."
+  ],
+  "solution": "**What we need:** the sphere's volume.\n\n**Key idea:** $V = \\frac{4}{3}\\pi r^3$.\n\n**Step 1.** $r^3 = 3^3 = 27$.\n\n**Step 2.** $V = \\frac{4}{3} \\cdot 27\\pi = 36\\pi$.\n\n**Answer:** $36\\pi$. **(C)**\n\n**Common mistake:** using $4\\pi r^2$, which is the surface area."
+ },
+ {
+  "id": "geo_solids_b04",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A cube has surface area $600$. What is its volume?",
+  "choices": {
+   "A": "$100$",
+   "B": "$1000$",
+   "C": "$1010$",
+   "D": "$1331$",
+   "E": "$6000$"
+  },
+  "answer": "B",
+  "hints": [
+   "Each of the 6 faces is a square of area $s^2$."
+  ],
+  "solution": "**What we need:** the volume, which needs the edge length.\n\n**Key idea:** a cube has $6$ square faces, each with area $s^2$.\n\n**Step 1.** $6s^2 = 600$, so $s^2 = 100$ and $s = 10$.\n\n**Step 2.** Volume: $s^3 = 10^3 = 1000$.\n\n**Answer:** $1000$. **(B)**\n\n**Common mistake:** taking the square root of the whole surface area, forgetting there are six faces."
+ },
+ {
+  "id": "geo_solids_b05",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_box_volume",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the volume of a box measuring $4$ by $6$ by $11$?",
+  "choices": {
+   "A": "$21$",
+   "B": "$35$",
+   "C": "$84$",
+   "D": "$264$",
+   "E": "$268$"
+  },
+  "answer": "D",
+  "hints": [
+   "Multiply the three dimensions."
+  ],
+  "solution": "**What we need:** the volume.\n\n**Key idea:** volume of a rectangular box $=$ length $\\times$ width $\\times$ height.\n\n**Step 1.** $4 \\cdot 6 \\cdot 11 = 264$.\n\n**Answer:** $264$. **(D)**\n\n**Common mistake:** computing the surface area instead."
+ },
+ {
+  "id": "geo_solids_b06",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_cone_volume",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the volume of a cone with radius $8$ and height $5$?",
+  "choices": {
+   "A": "$\\frac{40\\pi}{3}$",
+   "B": "$\\frac{160\\pi}{3}$",
+   "C": "$\\frac{320\\pi}{3}$",
+   "D": "$160\\pi$",
+   "E": "$320\\pi$"
+  },
+  "answer": "C",
+  "hints": [
+   "A cone is one third of a cylinder."
+  ],
+  "solution": "**What we need:** the volume.\n\n**Key idea:** $V = \\frac{1}{3}\\pi r^2 h$.\n\n**Step 1.** $\\frac{1}{3} \\cdot \\pi \\cdot 8^2 \\cdot 5 = \\frac{320\\pi}{3}$.\n\n**Answer:** $\\frac{320\\pi}{3}$. **(C)**\n\n**Common mistake:** forgetting the $\\frac{1}{3}$."
+ },
+ {
+  "id": "geo_solids_b07",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_sphere_area",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the surface area of a sphere with radius $1$?",
+  "choices": {
+   "A": "$\\pi$",
+   "B": "$\\frac{4\\pi}{3}$",
+   "C": "$2\\pi$",
+   "D": "$4\\pi$",
+   "E": "$8\\pi$"
+  },
+  "answer": "D",
+  "hints": [
+   "$4\\pi r^2$."
+  ],
+  "solution": "**What we need:** the surface area.\n\n**Key idea:** a sphere's surface area is $4\\pi r^2$, four times the area of its flat cross-section through the center.\n\n**Step 1.** $4\\pi \\cdot 1^2 = 4\\pi$.\n\n**Answer:** $4\\pi$. **(D)**\n\n**Common mistake:** using the volume formula."
+ },
+ {
+  "id": "geo_solids_b08",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_cyl_total",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the total surface area (including both ends) of a cylinder with radius $3$ and height $14$?",
+  "choices": {
+   "A": "$60\\pi$",
+   "B": "$84\\pi$",
+   "C": "$93\\pi$",
+   "D": "$102\\pi$",
+   "E": "$126\\pi$"
+  },
+  "answer": "D",
+  "hints": [
+   "Two circles plus the curved side."
+  ],
+  "solution": "**What we need:** the total surface area.\n\n**Key idea:** the curved side unrolls into a rectangle $2\\pi r$ by $h$; add the two circular ends.\n\n**Step 1.** Ends: $2 \\cdot \\pi \\cdot 3^2 = 18\\pi$.\n\n**Step 2.** Side: $2\\pi \\cdot 3 \\cdot 14 = 84\\pi$.\n\n**Step 3.** Total: $102\\pi$.\n\n**Answer:** $102\\pi$. **(D)**\n\n**Common mistake:** forgetting one of the ends."
+ },
+ {
+  "id": "geo_solids_b09",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_cube_from_volume",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A cube has volume $1331$. What is its surface area?",
+  "choices": {
+   "A": "$121$",
+   "B": "$132$",
+   "C": "$484$",
+   "D": "$726$",
+   "E": "$1331$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find the edge first."
+  ],
+  "solution": "**What we need:** the surface area.\n\n**Key idea:** edge $= \\sqrt[3]{V}$; surface area $= 6s^2$.\n\n**Step 1.** Edge: $\\sqrt[3]{1331} = 11$.\n\n**Step 2.** Surface area: $6 \\cdot 11^2 = 726$.\n\n**Answer:** $726$. **(D)**\n\n**Common mistake:** counting only four faces."
+ },
+ {
+  "id": "geo_solids_b10",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_pyramid",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A pyramid has a square base with side $5$ and height $12$. What is its volume?",
+  "choices": {
+   "A": "$20$",
+   "B": "$80$",
+   "C": "$100$",
+   "D": "$150$",
+   "E": "$300$"
+  },
+  "answer": "C",
+  "hints": [
+   "One third of base times height."
+  ],
+  "solution": "**What we need:** the volume.\n\n**Key idea:** any pyramid has volume $\\frac{1}{3} \\cdot$ base area $\\cdot$ height.\n\n**Step 1.** Base area: $25$.\n\n**Step 2.** $V = \\frac{1}{3} \\cdot 25 \\cdot 12 = 100$.\n\n**Answer:** $100$. **(C)**\n\n**Common mistake:** forgetting the $\\frac{1}{3}$."
+ },
+ {
+  "id": "geo_solids_b11",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_double_edges",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A box has volume $24$. Every edge is multiplied by $2$. What is the new volume?",
+  "choices": {
+   "A": "$32$",
+   "B": "$48$",
+   "C": "$96$",
+   "D": "$144$",
+   "E": "$192$"
+  },
+  "answer": "E",
+  "hints": [
+   "Each of three dimensions scales."
+  ],
+  "solution": "**What we need:** the new volume.\n\n**Key idea:** multiplying each of the three dimensions by $k$ multiplies the volume by $k^3$.\n\n**Step 1.** $24 \\cdot 2^3 = 192$.\n\n**Answer:** $192$. **(E)**\n\n**Common mistake:** multiplying the volume by just 2."
+ },
+ {
+  "id": "geo_solids_b12",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_fit_cubes",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many $2 \\times 2 \\times 2$ cubes fit exactly inside a $4 \\times 4 \\times 6$ box?",
+  "choices": {
+   "A": "$12$",
+   "B": "$13$",
+   "C": "$24$",
+   "D": "$48$",
+   "E": "$96$"
+  },
+  "answer": "A",
+  "hints": [
+   "Count how many fit along each edge."
+  ],
+  "solution": "**What we need:** the number of cubes.\n\n**Key idea:** along each edge, 2 divides the length evenly.\n\n**Step 1.** Along each edge: $2$, $2$, $3$.\n\n**Step 2.** Total: $2 \\cdot 2 \\cdot 3 = 12$.\n\n**Answer:** $12$. **(A)**\n\n**Common mistake:** dividing the volume by 2 instead of 8."
+ },
+ {
+  "id": "geo_solids_b13",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_tri_prism",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A prism has a right triangle base with legs $11$ and $12$, and length $15$. What is its volume?",
+  "choices": {
+   "A": "$81$",
+   "B": "$660$",
+   "C": "$990$",
+   "D": "$1980$",
+   "E": "$3960$"
+  },
+  "answer": "C",
+  "hints": [
+   "Base area times length."
+  ],
+  "solution": "**What we need:** the volume.\n\n**Key idea:** any prism has volume $=$ base area $\\times$ length.\n\n**Step 1.** Base: $\\frac{1}{2} \\cdot 11 \\cdot 12 = 66$.\n\n**Step 2.** Volume: $66 \\cdot 15 = 990$.\n\n**Answer:** $990$. **(C)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$ in the triangle."
+ },
+ {
+  "id": "geo_solids_b14",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_hemisphere",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the volume of a solid hemisphere (half a ball) with radius $6$?",
+  "choices": {
+   "A": "$72\\pi$",
+   "B": "$108\\pi$",
+   "C": "$144\\pi$",
+   "D": "$216\\pi$",
+   "E": "$288\\pi$"
+  },
+  "answer": "C",
+  "hints": [
+   "Half of $\\frac{4}{3}\\pi r^3$."
+  ],
+  "solution": "**What we need:** the volume.\n\n**Key idea:** a hemisphere is half a sphere.\n\n**Step 1.** Sphere: $\\frac{4}{3}\\pi \\cdot 6^3 = 288\\pi$.\n\n**Step 2.** Half: $144\\pi$.\n\n**Answer:** $144\\pi$. **(C)**\n\n**Common mistake:** giving the full sphere's volume."
+ },
+ {
+  "id": "geo_solids_b15",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_tank_rise",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A rectangular tank has a base $50$ cm by $40$ cm. How many cm does the water rise when $60$ liters are poured in? (One liter is $1000$ cubic cm.)",
+  "choices": {
+   "A": "$3$",
+   "B": "$30$",
+   "C": "$31$",
+   "D": "$60$",
+   "E": "$\\frac{2000}{3}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Volume added equals base area times rise."
+  ],
+  "solution": "**What we need:** the rise in water level.\n\n**Key idea:** the poured water forms a thin box with the tank's base and height equal to the rise.\n\n**Step 1.** Volume: $60 \\cdot 1000 = 60000$ cm$^3$.\n\n**Step 2.** Rise: $\\frac{60000}{50 \\cdot 40} = 30$ cm.\n\n**Answer:** $30$. **(B)**\n\n**Common mistake:** forgetting to convert liters to cubic centimeters."
+ },
+ {
+  "id": "geo_solids_b16",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_prism_edges",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A prism has bases that are $18$-sided polygons. How many edges does it have?",
+  "choices": {
+   "A": "$20$",
+   "B": "$36$",
+   "C": "$54$",
+   "D": "$55$",
+   "E": "$72$"
+  },
+  "answer": "C",
+  "hints": [
+   "Count the two bases, then what connects them."
+  ],
+  "solution": "**What we need:** the number of edges.\n\n**Key idea:** a prism has two copies of the base polygon joined by rectangles.\n\n**Step 1.** Vertices: $18$ on each base, $36$ total. Edges: $18$ on each base plus $18$ connecting, $54$ total. Faces: $18$ sides plus $2$ bases, $20$ total.\n\n**Answer:** $54$. **(C)**\n\n**Common mistake:** forgetting the edges that connect the two bases."
+ },
+ {
+  "id": "geo_solids_b17",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_euler",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A convex polyhedron has $17$ vertices and $13$ faces. How many edges does it have?",
+  "choices": {
+   "A": "$6$",
+   "B": "$28$",
+   "C": "$29$",
+   "D": "$30$",
+   "E": "$32$"
+  },
+  "answer": "B",
+  "hints": [
+   "Euler's formula."
+  ],
+  "solution": "**What we need:** the number of edges.\n\n**Key idea:** Euler's formula: $V - E + F = 2$.\n\n**Step 1.** $17 - E + 13 = 2$, so $E = 17 + 13 - 2 = 28$.\n\n**Answer:** $28$. **(B)**\n\n**Common mistake:** using $+2$ instead of $-2$."
+ },
+ {
+  "id": "geo_solids_b18",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_cyl_radius",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A cylinder has volume $192\\pi$ and height $12$. What is its radius?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$8$",
+   "D": "$16$",
+   "E": "$48$"
+  },
+  "answer": "A",
+  "hints": [
+   "$V = \\pi r^2 h$."
+  ],
+  "solution": "**What we need:** the radius.\n\n**Key idea:** solve $\\pi r^2 h = V$ for $r$.\n\n**Step 1.** $\\pi r^2 \\cdot 12 = 192\\pi$, so $r^2 = 16$.\n\n**Step 2.** $r = 4$.\n\n**Answer:** $4$. **(A)**\n\n**Common mistake:** stopping at $r^2$."
+ },
+ {
+  "id": "geo_solids_b19",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_melt",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A metal ball of radius $3$ is melted down and recast as a solid cylinder of radius $3$. How tall is the cylinder?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$12$"
+  },
+  "answer": "C",
+  "hints": [
+   "The volume stays the same."
+  ],
+  "solution": "**What we need:** the cylinder's height.\n\n**Key idea:** set the sphere's volume equal to the cylinder's.\n\n**Step 1.** Sphere: $\\frac{4}{3}\\pi \\cdot 3^3 = 36\\pi$.\n\n**Step 2.** $\\pi \\cdot 3^2 \\cdot h = 36\\pi$, so $h = 4$.\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** forgetting the $\\frac{4}{3}$."
+ },
+ {
+  "id": "geo_solids_b20",
+  "skillId": "geo_solids",
+  "family": "geo_solids:so_cube_from_diag",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A cube's space diagonal (corner to opposite corner, through the inside) is $3\\sqrt{3}$. What is its surface area?",
+  "choices": {
+   "A": "$9$",
+   "B": "$18$",
+   "C": "$27$",
+   "D": "$36$",
+   "E": "$54$"
+  },
+  "answer": "E",
+  "hints": [
+   "Space diagonal $= s\\sqrt{3}$."
+  ],
+  "solution": "**What we need:** the surface area.\n\n**Key idea:** the space diagonal of a cube with edge $s$ is $s\\sqrt{3}$.\n\n**Step 1.** $s\\sqrt{3} = 3\\sqrt{3}$, so $s = 3$.\n\n**Step 2.** Surface area: $6 \\cdot 9 = 54$.\n\n**Answer:** $54$. **(E)**\n\n**Common mistake:** using $s\\sqrt{2}$ (the face diagonal)."
+ },
+ {
+  "id": "geo_solids_c01",
+  "skillId": "geo_solids",
+  "family": "geo_solids:soc1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A $9 \\times 9 \\times 9$ cube is painted on the outside and cut into $729$ unit cubes. How many unit cubes have exactly 1 painted face?",
+  "choices": {
+   "A": "$8$",
+   "B": "$84$",
+   "C": "$294$",
+   "D": "$302$",
+   "E": "$435$"
+  },
+  "answer": "C",
+  "hints": [
+   "Corners have 3 painted faces, edge pieces (not corners) have 2, face centers have 1, and interior cubes have 0."
+  ],
+  "solution": "**What we need:** the number of small cubes with exactly $1$ painted face.\n\n**Key idea:** a small cube's painted faces depend on where it sits: corners get $3$, edges get $2$, face middles get $1$, the inside gets $0$.\n\n**Step 1.** Cubes with $1$ painted face are the ones in the middle of a face (not on an edge).\n\n**Step 2.** Corners: $8$. Edges: each of the $12$ edges has $9 - 2 = 7$ non corner cubes, so $12 \\cdot 7 = 84$. Face middles: each of $6$ faces has a $(7) \\times (7)$ middle, so $6 \\cdot 49 = 294$. Inside: $(9 - 2)^3 = 343$.\n\n**Step 3.** Check: $8 + 84 + 294 + 343 = 729$.\n\n**Answer:** $294$. **(C)**\n\n**Common mistake:** using $9$ instead of $9 - 2$ for each edge or face, which counts the corners and edges again."
+ },
+ {
+  "id": "geo_solids_c02",
+  "skillId": "geo_solids",
+  "family": "geo_solids:soc2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A cylindrical tank with radius $4$ is partly filled with water. A solid cube with edge length $8$ is dropped in and sinks completely under water. By how much does the water level rise?",
+  "choices": {
+   "A": "$\\frac{16}{\\pi}$",
+   "B": "$\\frac{32}{\\pi}$",
+   "C": "$\\frac{64}{\\pi}$",
+   "D": "$32$",
+   "E": "$32\\pi$"
+  },
+  "answer": "B",
+  "hints": [
+   "The volume of the rise equals the volume of the cube."
+  ],
+  "solution": "**What we need:** the height $h$ the water rises.\n\n**Key idea:** the water pushed up has the same volume as the cube. That extra water is a cylinder of radius 4 and height $h$.\n\n**Step 1.** Cube volume: $8^3 = 512$.\n\n**Step 2.** Extra water: $\\pi \\cdot 4^2 \\cdot h = 16\\pi h$.\n\n**Step 3.** Set equal: $16\\pi h = 512$, so $h = \\frac{512}{16\\pi} = \\frac{32}{\\pi}$.\n\n**Answer:** $\\frac{32}{\\pi}$. **(B)**\n\n**Common mistake:** forgetting the $\\pi$ from the circular base."
+ },
+ {
+  "id": "geo_solids_c03",
+  "skillId": "geo_solids",
+  "family": "geo_solids:soc3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A cone has radius $5$ and height $12$. What is its total surface area, including the base?",
+  "choices": {
+   "A": "$65\\pi$",
+   "B": "$85\\pi$",
+   "C": "$90\\pi$",
+   "D": "$100\\pi$",
+   "E": "$130\\pi$"
+  },
+  "answer": "C",
+  "hints": [
+   "The slant height is $\\sqrt{r^2 + h^2}$, and the curved part has area $\\pi r \\ell$."
+  ],
+  "solution": "**What we need:** the curved surface plus the circular base.\n\n**Key idea:** the curved part of a cone has area $\\pi r \\ell$, where $\\ell$ is the slant height (from tip to the edge of the base).\n\n**Step 1.** Slant height: $\\ell = \\sqrt{5^2 + 12^2} = 13$.\n\n**Step 2.** Curved part: $\\pi \\cdot 5 \\cdot 13 = 65\\pi$. Base: $\\pi \\cdot 5^2 = 25\\pi$.\n\n**Step 3.** Total: $65\\pi + 25\\pi = 90\\pi$.\n\n**Answer:** $90\\pi$. **(C)**\n\n**Common mistake:** using the height instead of the slant height, or leaving out the base."
+ },
+ {
+  "id": "geo_solids_c04",
+  "skillId": "geo_solids",
+  "family": "geo_solids:soc_corner_cut",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A cube with edge $12$ is cut by a plane through the three corners next to one vertex, removing a small pyramid. What is the volume of the larger remaining piece?",
+  "choices": {
+   "A": "$288$",
+   "B": "$864$",
+   "C": "$1152$",
+   "D": "$1440$",
+   "E": "$1512$"
+  },
+  "answer": "D",
+  "hints": [
+   "The cut-off piece is a pyramid with a right triangle base."
+  ],
+  "solution": "**What we need:** the remaining volume.\n\n**Key idea:** the corner pyramid has three perpendicular edges of length 12.\n\n**Step 1.** Pyramid: base $\\frac{1}{2} \\cdot 12 \\cdot 12$, height $12$: volume $\\frac{1}{3} \\cdot \\frac{144}{2} \\cdot 12 = 288$.\n\n**Step 2.** Remaining: $1728 - 288 = 1440$.\n\n**Answer:** $1440$. **(D)**\n\n**Common mistake:** giving the volume of the cut-off piece."
+ },
+ {
+  "id": "geo_solids_c05",
+  "skillId": "geo_solids",
+  "family": "geo_solids:soc_ant",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "An ant walks on the outside of a $1 \\times 6 \\times 10$ box from one corner to the opposite corner. What is the length of the shortest path?",
+  "choices": {
+   "A": "$\\sqrt{137}$",
+   "B": "$\\sqrt{149}$",
+   "C": "$5\\sqrt{6}$",
+   "D": "$\\sqrt{257}$",
+   "E": "$17$"
+  },
+  "answer": "B",
+  "hints": [
+   "Unfold two faces into a flat rectangle."
+  ],
+  "solution": "**What we need:** the shortest surface path.\n\n**Key idea:** unfold the two faces the ant crosses into a flat rectangle; the path is its diagonal. Try each way of unfolding.\n\n**Step 1.** Options: $\\sqrt{(1 + 6)^2 + 10^2} = \\sqrt{149}$, $\\sqrt{(6 + 10)^2 + 1^2} = \\sqrt{257}$, $\\sqrt{(1 + 10)^2 + 6^2} = \\sqrt{157}$.\n\n**Step 2.** Smallest: $\\sqrt{149}$ (the two shorter edges are added).\n\n**Answer:** $\\sqrt{149}$. **(B)**\n\n**Common mistake:** using the space diagonal, which goes through the inside of the box."
+ },
+ {
+  "id": "geo_solids_c06",
+  "skillId": "geo_solids",
+  "family": "geo_solids:soc_frustum",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A cone has volume $120$. It is cut by a plane parallel to its base, $\\frac{2}{3}$ of the way down from the tip. What is the volume of the bottom piece?",
+  "choices": {
+   "A": "$\\frac{320}{9}$",
+   "B": "$40$",
+   "C": "$\\frac{200}{3}$",
+   "D": "$\\frac{760}{9}$",
+   "E": "$\\frac{769}{9}$"
+  },
+  "answer": "D",
+  "hints": [
+   "The top piece is a small similar cone."
+  ],
+  "solution": "**What we need:** the bottom piece's volume.\n\n**Key idea:** the top is a similar cone with length ratio \\frac{2}{3}, so volume ratio \\frac{8}{27}.\n\n**Step 1.** Top cone: $120 \\cdot \\frac{8}{27} = \\frac{320}{9}$.\n\n**Step 2.** Bottom: $120 - \\frac{320}{9} = \\frac{760}{9}$.\n\n**Answer:** $\\frac{760}{9}$. **(D)**\n\n**Common mistake:** using the length fraction as the volume fraction."
+ },
+ {
+  "id": "geo_solids_c07",
+  "skillId": "geo_solids",
+  "family": "geo_solids:soc_archimedes",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A ball of radius $6$ fits snugly in a cylinder (touching the top, bottom, and sides). What is the volume of the space inside the cylinder around the ball?",
+  "choices": {
+   "A": "$72\\pi$",
+   "B": "$144\\pi$",
+   "C": "$216\\pi$",
+   "D": "$288\\pi$",
+   "E": "$432\\pi$"
+  },
+  "answer": "B",
+  "hints": [
+   "The cylinder has radius 6 and height 12."
+  ],
+  "solution": "**What we need:** the empty volume.\n\n**Key idea:** cylinder volume minus ball volume.\n\n**Step 1.** Cylinder: $\\pi \\cdot 6^2 \\cdot 12 = 432\\pi$.\n\n**Step 2.** Ball: $\\frac{4}{3}\\pi \\cdot 6^3 = 288\\pi$.\n\n**Step 3.** Difference: $144\\pi$, exactly one third of the cylinder.\n\n**Answer:** $144\\pi$. **(B)**\n\n**Common mistake:** using the radius as the cylinder's height."
+ },
+ {
+  "id": "geo_solids_c08",
+  "skillId": "geo_solids",
+  "family": "geo_solids:soc_unpainted",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A $8 \\times 4 \\times 8$ block is painted on the outside and cut into unit cubes. How many unit cubes have no paint at all?",
+  "choices": {
+   "A": "$0$",
+   "B": "$72$",
+   "C": "$73$",
+   "D": "$96$",
+   "E": "$147$"
+  },
+  "answer": "B",
+  "hints": [
+   "Peel off one layer on every side."
+  ],
+  "solution": "**What we need:** the unpainted cubes.\n\n**Key idea:** the unpainted cubes form an inner block, one layer in from every face.\n\n**Step 1.** Inner block: $(8 - 2)(4 - 2)(8 - 2) = 6 \\cdot 2 \\cdot 6 = 72$.\n\n**Answer:** $72$. **(B)**\n\n**Common mistake:** removing only one layer per dimension instead of two."
+ },
+ {
+  "id": "geo_solids_c09",
+  "skillId": "geo_solids",
+  "family": "geo_solids:soc_tetra",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the volume of a regular tetrahedron (four equilateral triangle faces) with edge $6$?",
+  "choices": {
+   "A": "$18\\sqrt{2}$",
+   "B": "$18\\sqrt{3}$",
+   "C": "$36$",
+   "D": "$36\\sqrt{2}$",
+   "E": "$54\\sqrt{3}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Find its height: the top is above the base's center."
+  ],
+  "solution": "**What we need:** the volume.\n\n**Key idea:** height comes from the right triangle formed by the edge, the height, and the distance from a base corner to the base's center.\n\n**Step 1.** Base area: $\\frac{\\sqrt{3}}{4} \\cdot 36$.\n\n**Step 2.** A base corner is $\\frac{6}{\\sqrt{3}}$ from the center, so height $= \\sqrt{36 - \\frac{36}{3}} = 6\\sqrt{\\frac{2}{3}}$.\n\n**Step 3.** $V = \\frac{1}{3} \\cdot \\frac{\\sqrt{3}}{4}36 \\cdot 6\\sqrt{\\frac{2}{3}} = \\frac{216\\sqrt{2}}{12} = 18\\sqrt{2}$.\n\n**Answer:** $18\\sqrt{2}$. **(A)**\n\n**Common mistake:** using the slant height of a face as the height."
+ },
+ {
+  "id": "geo_solids_c10",
+  "skillId": "geo_solids",
+  "family": "geo_solids:soc_face_areas",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A rectangular box has faces with areas $24$, $12$, and $18$. What is its volume?",
+  "choices": {
+   "A": "$54$",
+   "B": "$72$",
+   "C": "$73$",
+   "D": "$144$",
+   "E": "$5184$"
+  },
+  "answer": "B",
+  "hints": [
+   "Multiply the three areas."
+  ],
+  "solution": "**What we need:** the volume $abc$.\n\n**Key idea:** the product of the three face areas is $(ab)(bc)(ca) = (abc)^2$.\n\n**Step 1.** $(abc)^2 = 24 \\cdot 12 \\cdot 18 = 5184$.\n\n**Step 2.** $abc = 72$.\n\n**Answer:** $72$. **(B)**\n\n**Common mistake:** multiplying the areas without taking the square root."
+ }
+]

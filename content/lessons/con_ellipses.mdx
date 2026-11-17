@@ -1,0 +1,130 @@
+---
+title: Ellipses and hyperbolas
+---
+
+Tie a loop of string around two pins, pull it tight with a pencil, and trace: you get an **ellipse**. Every point on it has the same **sum** of distances to the two pins (the **foci**). Swap "sum" for "difference" and you get a **hyperbola**. Those two sentences explain every formula in this lesson.
+
+By the end of this lesson you will be able to:
+
+- read the axes and foci from an ellipse's equation,
+- use the focal sum $2a$,
+- find a hyperbola's foci and asymptotes,
+- compute an ellipse's area.
+
+## The ellipse
+
+$$
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \qquad (a \ge b)
+$$
+
+- It reaches $x = \pm a$ (the **major axis**, length $2a$) and $y = \pm b$ (the **minor axis**, length $2b$).
+- The foci are at $(\pm c, 0)$ with $c^2 = a^2 - b^2$.
+- For every point $P$ on it, $PF_1 + PF_2 = 2a$.
+
+Press Animate and watch the sum stay put.
+
+<Figure
+  bounds={[-6, 6, -4, 4]}
+  ticks={1}
+  height={360}
+  params={[
+    { name: "a", min: 3, max: 5.5, step: 0.25, value: 5, label: "$a$" },
+    { name: "b", min: 1, max: 3, step: 0.25, value: 3, label: "$b$" },
+    { name: "t", min: 0, max: 6.28, step: 0.02, value: 1, label: "move $P$", play: true, speed: 0.8 },
+  ]}
+  elements={[
+    { type: "curve", x: "a*cos(s)", y: "b*sin(s)", from: 0, to: 6.2832, color: "accent", width: 3 },
+    { type: "point", id: "F1", x: "-sqrt(a^2 - b^2)", y: 0, color: "amber", label: "F₁", labelDir: "s" },
+    { type: "point", id: "F2", x: "sqrt(a^2 - b^2)", y: 0, color: "amber", label: "F₂", labelDir: "s" },
+    { type: "point", id: "P", x: "a*cos(t)", y: "b*sin(t)", color: "heading", label: "P", labelDir: "ne" },
+    { type: "segment", a: "P", b: "F1", color: "blue", width: 2.5 },
+    { type: "segment", a: "P", b: "F2", color: "pink", width: 2.5 },
+  ]}
+  readouts={[
+    "c = \\sqrt{a^2 - b^2} = [[sqrt(a^2 - b^2):3]]",
+    "\\color{#60a5fa}PF_1 = [[hypot(a*cos(t) + sqrt(a^2 - b^2), b*sin(t)):3]]",
+    "\\color{#f472b6}PF_2 = [[hypot(a*cos(t) - sqrt(a^2 - b^2), b*sin(t)):3]]",
+    "PF_1 + PF_2 = [[hypot(a*cos(t) + sqrt(a^2 - b^2), b*sin(t)) + hypot(a*cos(t) - sqrt(a^2 - b^2), b*sin(t)):3]] = 2a",
+  ]}
+  caption="Make $b = a$ by pulling $b$ up and $a$ down toward 3: the foci merge at the center and the ellipse becomes a circle."
+/>
+
+**Why $c^2 = a^2 - b^2$:** put $P$ at the top, $(0, b)$. Both distances to the foci are equal and add to $2a$, so each is $a$. That makes a right triangle with legs $b$ and $c$ and hypotenuse $a$.
+
+<Check choices={["$4$", "$6$", "$8$", "$10$", "$2\\sqrt{34}$"]} answer={2} explain="$a = 5$, $b = 3$, so $c = \sqrt{25 - 9} = 4$. The foci are $(\pm 4, 0)$, which are $8$ apart.">
+How far apart are the foci of $\dfrac{x^2}{25} + \dfrac{y^2}{9} = 1$?
+</Check>
+
+### Area
+
+An ellipse is a circle stretched by different amounts in each direction, so
+
+$$
+\text{Area} = \pi ab.
+$$
+
+<Check choices={["$6\\pi$", "$9\\pi$", "$12\\pi$", "$36\\pi$", "$13\\pi$"]} answer={0} explain="Divide by 36: $\tfrac{x^2}{9} + \tfrac{y^2}{4} = 1$, so $a = 3$, $b = 2$ and the area is $6\pi$.">
+What is the area enclosed by $4x^2 + 9y^2 = 36$?
+</Check>
+
+## The hyperbola
+
+$$
+\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+$$
+
+- Two branches, with vertices at $(\pm a, 0)$.
+- Foci at $(\pm c, 0)$ with $c^2 = a^2 + b^2$ (plus this time).
+- For every point, $|PF_1 - PF_2| = 2a$.
+- Far away, it hugs the **asymptotes** $y = \pm\tfrac{b}{a}x$.
+
+<Figure
+  bounds={[-8, 8, -6, 6]}
+  ticks={1}
+  height={380}
+  params={[
+    { name: "a", min: 1, max: 4, step: 0.25, value: 2, label: "$a$" },
+    { name: "b", min: 1, max: 4, step: 0.25, value: 1.5, label: "$b$" },
+  ]}
+  elements={[
+    { type: "func", f: "b/a*x", color: "muted", dashed: true, width: 1.2 },
+    { type: "func", f: "-b/a*x", color: "muted", dashed: true, width: 1.2 },
+    { type: "polygon", pts: [["-a", "-b"], ["a", "-b"], ["a", "b"], ["-a", "b"]], color: "muted", dashed: true, width: 1 },
+    { type: "curve", x: "a/cos(s)", y: "b*tan(s)", from: -1.45, to: 1.45, color: "accent", width: 3 },
+    { type: "curve", x: "-a/cos(s)", y: "b*tan(s)", from: -1.45, to: 1.45, color: "accent", width: 3 },
+    { type: "point", x: "sqrt(a^2 + b^2)", y: 0, color: "amber", label: "F₂", labelDir: "s" },
+    { type: "point", x: "-sqrt(a^2 + b^2)", y: 0, color: "amber", label: "F₁", labelDir: "s" },
+  ]}
+  readouts={["\\dfrac{x^2}{[[a^2]]} - \\dfrac{y^2}{[[b^2]]} = 1", "c = \\sqrt{a^2 + b^2} = [[sqrt(a^2 + b^2):3]]", "\\text{asymptotes } y = \\pm [[b/a:3]]\\,x"]}
+  caption="The dashed box has corners $(\pm a, \pm b)$. Its diagonals are the asymptotes, and its half diagonal is $c$."
+/>
+
+<Check choices={["$\\pm\\tfrac{3}{4}$", "$\\pm\\tfrac{4}{3}$", "$\\pm\\tfrac{9}{16}$", "$\\pm\\tfrac{16}{9}$", "$\\pm 5$"]} answer={0} explain="$a = 4$ and $b = 3$, so the asymptotes are $y = \pm\tfrac{3}{4}x$.">
+What are the slopes of the asymptotes of $\dfrac{x^2}{16} - \dfrac{y^2}{9} = 1$?
+</Check>
+
+<Trap>
+Ellipse: $c^2 = a^2 - b^2$. Hyperbola: $c^2 = a^2 + b^2$. Also check which denominator is bigger (ellipse) or which term is positive (hyperbola); if it's the $y$ term, the shape is turned on its side and the foci are on the $y$ axis.
+</Trap>
+
+<Tip>
+If an ellipse is shifted, like $\tfrac{(x - 2)^2}{9} + \tfrac{(y + 1)^2}{4} = 1$, everything moves with the center $(2, -1)$. Find $a$, $b$, $c$ as usual and add the center at the end.
+</Tip>
+
+<FlipCards cards={[
+  { front: "$PF_1 + PF_2$ on $\\tfrac{x^2}{25} + \\tfrac{y^2}{16} = 1$", back: "$2a = 10$" },
+  { front: "Foci of $\\tfrac{x^2}{9} - \\tfrac{y^2}{16} = 1$", back: "$c = 5$: $(\\pm 5, 0)$" },
+  { front: "Foci of $\\tfrac{x^2}{16} + \\tfrac{y^2}{25} = 1$", back: "Tall ellipse, $c = 3$: $(0, \\pm 3)$" },
+  { front: "Area of $\\tfrac{x^2}{4} + y^2 = 1$", back: "$\\pi \\cdot 2 \\cdot 1 = 2\\pi$" },
+]} />
+
+<Recap>
+- Ellipse: sum of focal distances $= 2a$; $c^2 = a^2 - b^2$; area $\pi ab$.
+- Hyperbola: difference of focal distances $= 2a$; $c^2 = a^2 + b^2$; asymptotes $y = \pm\tfrac{b}{a}x$.
+- Shifted conics: work from the center.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Ellipse" /> and <AoPS q="Hyperbola" /> on the AoPS Wiki.
+- Practice in <Archive test="12" />.
+</GoFurther>

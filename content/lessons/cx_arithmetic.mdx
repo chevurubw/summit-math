@@ -1,0 +1,178 @@
+---
+title: Complex number arithmetic
+---
+
+The equation $x^2 = -1$ has no real solution, so mathematicians invented one. Call it $i$, with
+
+$$
+i^2 = -1.
+$$
+
+A **complex number** is $a + bi$, where $a$ (the **real part**) and $b$ (the **imaginary part**) are ordinary real numbers. Every rule of algebra still works; you just replace $i^2$ by $-1$ whenever it appears.
+
+By the end of this lesson you will be able to:
+
+- add, subtract and multiply complex numbers,
+- simplify any power of $i$,
+- divide using the conjugate,
+- find the absolute value (the distance from 0),
+- solve problems by matching real and imaginary parts.
+
+## Complex numbers are points
+
+Picture $a + bi$ as the point $(a, b)$ in the **complex plane**: real part across, imaginary part up. Adding complex numbers is adding arrows, tip to tail. Drag the sliders.
+
+<Figure
+  bounds={[-6, 6, -6, 6]}
+  ticks={1}
+  height={420}
+  params={[
+    { name: "a", min: -4, max: 4, step: 1, value: 3, label: "$z = a + bi$: $a$" },
+    { name: "b", min: -4, max: 4, step: 1, value: 1, label: "$b$" },
+    { name: "c", min: -4, max: 4, step: 1, value: 1, label: "$w = c + di$: $c$" },
+    { name: "d", min: -4, max: 4, step: 1, value: 3, label: "$d$" },
+  ]}
+  elements={[
+    { type: "segment", a: ["a", "b"], b: ["a + c", "b + d"], color: "pink", dashed: true, width: 1.5 },
+    { type: "segment", a: ["c", "d"], b: ["a + c", "b + d"], color: "blue", dashed: true, width: 1.5 },
+    { type: "vector", a: [0, 0], b: ["a", "b"], color: "blue", width: 2.5 },
+    { type: "vector", a: [0, 0], b: ["c", "d"], color: "pink", width: 2.5 },
+    { type: "vector", a: [0, 0], b: ["a + c", "b + d"], color: "amber", width: 3.5 },
+    { type: "point", x: "a", y: "b", color: "blue", label: "z", labelDir: "se" },
+    { type: "point", x: "c", y: "d", color: "pink", label: "w", labelDir: "nw" },
+    { type: "point", x: "a + c", y: "b + d", color: "amber", label: "z + w", labelDir: "ne" },
+  ]}
+  readouts={["\\color{#60a5fa}z = [[a]] + [[b]]i", "\\color{#f472b6}w = [[c]] + [[d]]i", "\\color{#fbbf24}z + w = [[a + c]] + [[b + d]]i"]}
+  caption="Add real parts to real parts and imaginary parts to imaginary parts. In the picture that is a parallelogram."
+/>
+
+## Multiplying: FOIL, then $i^2 = -1$
+
+<Steps problem="Multiply $(2 + 3i)(4 - i)$.">
+<Step title="Expand">
+$8 - 2i + 12i - 3i^2$.
+</Step>
+<Step title="Replace $i^2$">
+$-3i^2 = +3$, so we get $8 + 3 + 10i = 11 + 10i$.
+</Step>
+</Steps>
+
+<Check choices={["$5 + i$", "$-1 + i$", "$5 - i$", "$2 - 3i$", "$-1 - 5i$"]} answer={0} explain="$(2 + 3i)(1 - i) = 2 - 2i + 3i - 3i^2 = 2 + i + 3 = 5 + i$.">
+What is $(2 + 3i)(1 - i)$?
+</Check>
+
+## Powers of $i$ repeat every 4
+
+$$
+i^1 = i,\quad i^2 = -1,\quad i^3 = -i,\quad i^4 = 1,\quad i^5 = i,\ \dots
+$$
+
+So to simplify $i^n$, only the remainder of $n$ divided by 4 matters. Each multiplication by $i$ turns a point a quarter turn counterclockwise, and four quarter turns bring it home.
+
+<Figure
+  bounds={[-1.6, 1.6, -1.6, 1.6]}
+  axes={true}
+  grid={false}
+  ticks={1}
+  height={300}
+  params={[{ name: "n", min: 0, max: 12, step: 1, value: 1, label: "$n$", play: true, speed: 1 }]}
+  elements={[
+    { type: "circle", c: [0, 0], r: 1, color: "muted", dashed: true, width: 1 },
+    { type: "point", x: 1, y: 0, color: "muted", label: "1", labelDir: "se", size: 4 },
+    { type: "point", x: 0, y: 1, color: "muted", label: "i", labelDir: "ne", size: 4 },
+    { type: "point", x: -1, y: 0, color: "muted", label: "−1", labelDir: "sw", size: 4 },
+    { type: "point", x: 0, y: -1, color: "muted", label: "−i", labelDir: "se", size: 4 },
+    { type: "vector", a: [0, 0], b: ["cosd(90*n)", "sind(90*n)"], color: "accent", width: 3.5 },
+  ]}
+  readouts={["i^{[[n]]} = [[mod(n,4) == 0 ? 1 : (mod(n,4) == 2 ? -1 : 0)]] + [[mod(n,4) == 1 ? 1 : (mod(n,4) == 3 ? -1 : 0)]]i", "[[n]] \\bmod 4 = [[mod(n,4)]]"]}
+  caption="Press Animate: each step is one more factor of $i$, one more quarter turn."
+/>
+
+<Check choices={["$1$", "$i$", "$-1$", "$-i$", "$0$"]} answer={2} explain="$2026 = 4 \cdot 506 + 2$, so $i^{2026} = i^2 = -1$.">
+What is $i^{2026}$?
+</Check>
+
+<Tip>
+Four consecutive powers always add to zero: $i^n + i^{n+1} + i^{n+2} + i^{n+3} = i^n(1 + i - 1 - i) = 0$. Long sums of powers of $i$ mostly cancel.
+</Tip>
+
+## The conjugate and division
+
+The **conjugate** of $z = a + bi$ is $\bar z = a - bi$, its mirror image across the real axis. The key fact:
+
+$$
+z\bar z = (a + bi)(a - bi) = a^2 + b^2,
+$$
+
+a positive real number. That is exactly how you clear $i$ out of a denominator: multiply top and bottom by the conjugate of the bottom.
+
+<Steps problem="Write $\dfrac{3 + 4i}{1 + 2i}$ in the form $a + bi$.">
+<Step title="Multiply by the conjugate">
+$\dfrac{(3 + 4i)(1 - 2i)}{(1 + 2i)(1 - 2i)}$.
+</Step>
+<Step title="Bottom">
+$1^2 + 2^2 = 5$.
+</Step>
+<Step title="Top">
+$3 - 6i + 4i - 8i^2 = 3 + 8 - 2i = 11 - 2i$.
+</Step>
+<Step title="Answer">
+$\dfrac{11}{5} - \dfrac{2}{5}i$.
+</Step>
+</Steps>
+
+## Absolute value: distance from 0
+
+$$
+|a + bi| = \sqrt{a^2 + b^2}, \qquad |z|^2 = z\bar z.
+$$
+
+It's the Pythagorean Theorem in the complex plane. Absolute values multiply nicely: $|zw| = |z|\,|w|$ and $\left|\tfrac{z}{w}\right| = \tfrac{|z|}{|w|}$.
+
+<Check choices={["$5$", "$7$", "$12$", "$13$", "$17$"]} answer={3} explain="$\sqrt{5^2 + 12^2} = \sqrt{169} = 13$.">
+What is $|5 - 12i|$?
+</Check>
+
+<Check choices={["$5$", "$25$", "$50$", "$125$", "$625$"]} answer={3} explain="$|3 + 4i| = 5$, and absolute values multiply, so $|(3 + 4i)^3| = 5^3 = 125$. No expanding needed.">
+What is $|(3 + 4i)^3|$?
+</Check>
+
+## Matching parts
+
+Two complex numbers are equal only when their real parts match **and** their imaginary parts match. One complex equation is really two real equations.
+
+<Steps problem="Find real $a, b$ with $(a + bi)^2 = 3 + 4i$.">
+<Step title="Expand">
+$a^2 - b^2 + 2abi = 3 + 4i$.
+</Step>
+<Step title="Match">
+$a^2 - b^2 = 3$ and $2ab = 4$, so $ab = 2$.
+</Step>
+<Step title="Solve">
+Try $a = 2, b = 1$: $4 - 1 = 3$ ✓. So $a + bi = 2 + i$ (or $-2 - i$).
+</Step>
+</Steps>
+
+<Trap>
+$\sqrt{-4}\cdot\sqrt{-9}$ is **not** $\sqrt{36} = 6$. It's $2i \cdot 3i = 6i^2 = -6$. The rule $\sqrt{x}\sqrt{y} = \sqrt{xy}$ only holds when $x, y \ge 0$. Convert to $i$ first.
+</Trap>
+
+<FlipCards cards={[
+  { front: "$i^{103}$", back: "$103 = 4 \\cdot 25 + 3$, so $-i$." },
+  { front: "$(1 + i)^2$", back: "$1 + 2i + i^2 = 2i$" },
+  { front: "$\\dfrac{1}{i}$", back: "$\\dfrac{1}{i}\\cdot\\dfrac{-i}{-i} = -i$" },
+  { front: "$z\\bar z$ for $z = 2 - 5i$", back: "$4 + 25 = 29$" },
+]} />
+
+<Recap>
+- $i^2 = -1$; complex numbers $a + bi$ are points $(a, b)$.
+- Add parts separately; multiply by FOIL and replace $i^2$.
+- Powers of $i$ cycle with period 4.
+- Divide by multiplying by the conjugate; $z\bar z = |z|^2$.
+- $|zw| = |z||w|$. Match real and imaginary parts to solve equations.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Complex number" /> on the AoPS Wiki.
+- See complex number problems in <Archive test="12" />.
+</GoFurther>

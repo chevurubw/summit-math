@@ -1,0 +1,49 @@
+{
+  "id": "counting_probability",
+  "title": "Counting and Probability",
+  "description": "Systematic counting, arrangements, choices, probability and expected value.",
+  "track": "both",
+  "order": 4,
+  "skills": [
+    {
+      "id": "cp_counting",
+      "title": "Counting principles",
+      "description": "Multiplication principle and counting lists."
+    },
+    {
+      "id": "cp_permutations",
+      "title": "Permutations",
+      "description": "Arrangements, including letters with repeats and restrictions."
+    },
+    {
+      "id": "cp_combinations",
+      "title": "Combinations",
+      "description": "Choosing groups, committees and paths on a grid."
+    },
+    {
+      "id": "cp_casework",
+      "title": "Casework and complements",
+      "description": "Split into cases or count what you don't want."
+    },
+    {
+      "id": "cp_inclusion",
+      "title": "Inclusion and exclusion",
+      "description": "Count overlapping sets without double counting."
+    },
+    {
+      "id": "cp_probability",
+      "title": "Probability",
+      "description": "Dice, coins, cards and drawing without replacement."
+    },
+    {
+      "id": "cp_expected",
+      "title": "Expected value",
+      "description": "Average outcomes of games and random processes."
+    },
+    {
+      "id": "cp_geometric",
+      "title": "Geometric probability",
+      "description": "Probability as a ratio of lengths or areas."
+    }
+  ]
+}

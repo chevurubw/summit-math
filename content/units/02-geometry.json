@@ -1,0 +1,44 @@
+{
+  "id": "geometry",
+  "title": "Geometry",
+  "description": "Angles, triangles, circles, area, coordinates and solids.",
+  "track": "both",
+  "order": 2,
+  "skills": [
+    {
+      "id": "geo_angles",
+      "title": "Angles and polygons",
+      "description": "Angle chasing, parallel lines and polygon angle sums."
+    },
+    {
+      "id": "geo_right",
+      "title": "Right triangles",
+      "description": "The Pythagorean theorem, triples and special right triangles."
+    },
+    {
+      "id": "geo_similar",
+      "title": "Similar triangles",
+      "description": "Similarity ratios and how they scale lengths and areas."
+    },
+    {
+      "id": "geo_area",
+      "title": "Area",
+      "description": "Areas of triangles, quadrilaterals and composite shapes."
+    },
+    {
+      "id": "geo_circles",
+      "title": "Circles",
+      "description": "Arcs, chords, tangents, inscribed angles and sectors."
+    },
+    {
+      "id": "geo_coordinate",
+      "title": "Coordinate geometry",
+      "description": "Distance, midpoint, slope, lines and areas on the grid."
+    },
+    {
+      "id": "geo_solids",
+      "title": "3D solids",
+      "description": "Volume and surface area of prisms, cylinders, cones and spheres."
+    }
+  ]
+}

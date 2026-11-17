@@ -1,0 +1,110 @@
+---
+title: Divisibility rules
+---
+
+A **divisibility rule** tells you whether a number divides another just by looking at its digits. On the AMC they power the classic "find the missing digit" problems. You will also learn **why** each rule works, so you can invent a rule when you need one.
+
+By the end of this lesson you will be able to:
+
+- test divisibility by 2, 3, 4, 5, 8, 9, 10 and 11 in seconds,
+- combine rules to test 6, 12, 15, 36, 72 and more,
+- solve missing digit problems,
+- explain why the rules work.
+
+## The rules
+
+| Divisible by | Test |
+| --- | --- |
+| 2 | last digit is even |
+| 3 | sum of digits divisible by 3 |
+| 4 | last **two** digits form a multiple of 4 |
+| 5 | last digit is 0 or 5 |
+| 8 | last **three** digits form a multiple of 8 |
+| 9 | sum of digits divisible by 9 |
+| 10 | last digit is 0 |
+| 11 | alternating sum of digits ($+ - + - \cdots$ from the right) divisible by 11 |
+
+## Why they work
+
+**2, 4, 8 and 5, 10:** $10$ is divisible by 2, $100$ by 4, and $1000$ by 8. So everything except the last one, two or three digits is automatically a multiple. Only the end matters.
+
+**3 and 9:** each power of 10 is one more than a multiple of 9 ($10 = 9 + 1$, $100 = 99 + 1$, ...). So
+
+$$
+4725 = 4 \cdot 1000 + 7 \cdot 100 + 2 \cdot 10 + 5 = (\text{multiple of } 9) + (4 + 7 + 2 + 5).
+$$
+
+A number and its digit sum leave the **same remainder** when divided by 9 (or 3).
+
+**11:** powers of 10 alternate between one more and one less than multiples of 11 ($10 = 11 - 1$, $100 = 99 + 1$, ...). That's where the alternating signs come from.
+
+<KeyIdea>
+The digit sum rule tells you more than yes or no: it gives the **remainder**. $4725$ has digit sum $18$, so it is divisible by 9. $4726$ would leave remainder 1.
+</KeyIdea>
+
+<Check choices={["$1$", "$4$", "$6$", "$8$", "$9$"]} answer={3} explain="Digit sum $3 + 5 + d + 2 = 10 + d$ must be a multiple of 9. With a single digit, $10 + d = 18$ gives $d = 8$.">
+What digit $d$ makes the number $35d2$ divisible by 9?
+</Check>
+
+<Check choices={["$0$", "$2$", "$5$", "$7$", "$9$"]} answer={4} explain="From the right: $2 - 4 + A - 7 = A - 9$. This must be a multiple of 11, and with $0 \le A \le 9$ that means $A - 9 = 0$, so $A = 9$. Check: $7942 = 11 \cdot 722$.">
+What digit $A$ makes $7A42$ divisible by 11?
+</Check>
+
+## Combining rules
+
+To test divisibility by a composite number, split it into factors that **share no common factor**, and test each.
+
+- 6: test 2 and 3.
+- 12: test 3 and 4 (not 2 and 6, since they overlap).
+- 72: test 8 and 9.
+
+<Trap>
+Divisible by 4 and by 6 does **not** mean divisible by 24. Take 12: divisible by 4 and 6, but not 24. The factors 4 and 6 share a 2. You only get $\text{lcm}(4, 6) = 12$.
+</Trap>
+
+<Steps problem="How many four digit numbers of the form $6A4B$ are divisible by 72?">
+<Step title="Split 72">
+$72 = 8 \cdot 9$, and 8 and 9 share no factor. So test 8 and 9.
+</Step>
+<Step title="Test 9">
+Digit sum $6 + A + 4 + B = 10 + A + B$ must be 18 or 27, so $A + B = 8$ or $A + B = 17$.
+</Step>
+<Step title="Test 8">
+The last three digits $A4B$ must be a multiple of 8. So $B$ is even. Check each pair: $A + B = 8$ gives $840$ ✓, $642$, $444$, $246$, $048$ ✓. And $A + B = 17$ with even $B$ gives only $948$, which fails.
+</Step>
+<Step title="Count">
+$6840$ and $6048$. That's 2 numbers. (Check: $6840 = 72 \cdot 95$ and $6048 = 72 \cdot 84$.)
+</Step>
+</Steps>
+
+<Check choices={["$6$", "$12$", "$18$", "$24$", "$36$"]} answer={1} explain="Being divisible by 4 and by 6 means divisible by $\text{lcm}(4, 6) = 12$. It need not be divisible by 24 (take 12 itself).">
+A number is divisible by both 4 and 6. Which of these must also divide it?
+</Check>
+
+## Remainders by 9 as a checking tool
+
+Because a number and its digit sum match modulo 9, you can check arithmetic: $38 \times 47 = 1786$? Digit sums: $38 \to 2$, $47 \to 2$, product $\to 4$; and $1786 \to 22 \to 4$ ✓. This is called **casting out nines**, and it catches most multiplication slips.
+
+<Tip>
+Missing digit problems almost always use 9 and 11 together, or 8 and 9 together. Write the digit sum condition and the alternating sum condition as small equations, then try the few digits that fit.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Is 123456 divisible by 8?", back: "Last three digits $456 = 8 \\cdot 57$. Yes." },
+  { front: "Remainder of 8642 when divided by 9", back: "Digit sum $20$, which leaves remainder 2." },
+  { front: "Is 918082 divisible by 11?", back: "$2 - 8 + 0 - 8 + 1 - 9 = -22$. Yes." },
+  { front: "Test for divisibility by 15", back: "Check 3 and 5." },
+]} />
+
+<Recap>
+- 2, 4, 8: look at the last 1, 2, 3 digits. 5 and 10: last digit.
+- 3 and 9: digit sum, which also gives the remainder.
+- 11: alternating digit sum.
+- For composites, test factors that share no common factor.
+- Missing digit problems become small equations in the unknown digits.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Divisibility rules" /> on the AoPS Wiki explains even more rules, including 7 and 13.
+- Missing digit problems appear regularly in <Archive test="10" />.
+</GoFurther>

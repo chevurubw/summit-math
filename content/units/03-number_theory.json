@@ -1,0 +1,44 @@
+{
+  "id": "number_theory",
+  "title": "Number Theory",
+  "description": "Divisors, primes, remainders, bases and factorials.",
+  "track": "both",
+  "order": 3,
+  "skills": [
+    {
+      "id": "nt_divisors",
+      "title": "Primes and divisors",
+      "description": "Prime factorization and counting and summing divisors."
+    },
+    {
+      "id": "nt_gcd",
+      "title": "GCD and LCM",
+      "description": "Greatest common divisors, least common multiples and their uses."
+    },
+    {
+      "id": "nt_divisibility",
+      "title": "Divisibility rules",
+      "description": "Test divisibility and find missing digits."
+    },
+    {
+      "id": "nt_modular",
+      "title": "Remainders and modular arithmetic",
+      "description": "Work with remainders and congruences."
+    },
+    {
+      "id": "nt_powers",
+      "title": "Units digits and cycles of powers",
+      "description": "Find last digits and remainders of large powers."
+    },
+    {
+      "id": "nt_bases",
+      "title": "Number bases",
+      "description": "Convert between bases and do arithmetic in other bases."
+    },
+    {
+      "id": "nt_factorials",
+      "title": "Factorials",
+      "description": "Trailing zeros, prime powers in factorials and factorial divisibility."
+    }
+  ]
+}

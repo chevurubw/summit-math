@@ -1,0 +1,140 @@
+---
+title: Mean, median and mode
+---
+
+Three numbers summarize a list of data. The **mean** is the average. The **median** is the middle value. The **mode** is the value that appears most often. AMC statistics problems rarely ask you to just compute these; instead they hide a missing number and ask you to find it. One idea cracks almost all of them: **work with the total**.
+
+By the end of this lesson you will be able to:
+
+- compute mean, median, mode and range correctly, even for even length lists,
+- use "mean times count equals total" to find missing values,
+- predict how adding or removing a value changes each statistic,
+- build lists that meet several conditions at once.
+
+## The three summaries
+
+For the list $2, 4, 4, 5, 10$:
+
+- **Mean**: $\dfrac{2 + 4 + 4 + 5 + 10}{5} = \dfrac{25}{5} = 5$.
+- **Median**: sort first, then take the middle: $4$.
+- **Mode**: the most frequent value: $4$.
+- **Range**: largest minus smallest: $10 - 2 = 8$.
+
+With an **even** number of values there are two middles, and the median is their average. For $1, 3, 4, 7, 8, 9$ the median is $\tfrac{4 + 7}{2} = 5.5$.
+
+## The mean is a balance point
+
+Picture the numbers as equal weights on a seesaw. The mean is exactly where the seesaw balances. Slide the last value and watch the mean chase it while the median barely moves.
+
+<Figure
+  bounds={[0, 22, -1.6, 1.8]}
+  axes="x"
+  grid={false}
+  ticks={2}
+  height={190}
+  params={[{ name: "v", min: 0, max: 21, step: 1, value: 10, label: "last value" }]}
+  elements={[
+    { type: "point", x: 2, y: 0.35, color: "accent", size: 8 },
+    { type: "point", x: 4, y: 0.35, color: "accent", size: 8 },
+    { type: "point", x: 5, y: 0.35, color: "accent", size: 8 },
+    { type: "point", x: 9, y: 0.35, color: "accent", size: 8 },
+    { type: "point", x: "v", y: 0.95, color: "pink", size: 8, label: "[[v]]", labelDir: "n" },
+    { type: "polygon", pts: [["(20+v)/5", -0.05], ["(20+v)/5 - 0.45", -0.75], ["(20+v)/5 + 0.45", -0.75]], fill: "amber", color: "amber" },
+    { type: "text", x: "(20+v)/5", y: -1.25, text: "mean [[(20+v)/5]]", color: "amber", size: 13 },
+    { type: "segment", a: ["min(max(v,4),5)", 1.55], b: ["min(max(v,4),5)", 0.6], color: "teal", dashed: true, width: 2 },
+    { type: "text", x: "min(max(v,4),5)", y: 1.6, text: "median [[min(max(v,4),5)]]", color: "teal", size: 13 },
+  ]}
+  readouts={["\\text{mean} = \\dfrac{2 + 4 + 5 + 9 + [[v]]}{5} = [[(20+v)/5]]"]}
+  caption="Data: $2, 4, 5, 9$ and one value you control. One extreme value drags the mean far but moves the median at most a little."
+/>
+
+## The total is your best friend
+
+<Formula>
+
+$$
+\text{mean} \times \text{count} = \text{total}
+$$
+
+</Formula>
+
+Whenever a problem gives an average, immediately turn it into a total. Totals can be added and subtracted; averages cannot.
+
+<Steps problem="Maya's average on 5 tests is 84. What must she score on the 6th test to raise her average to 85?">
+<Step title="Turn averages into totals">
+Now: $5 \times 84 = 420$ points. Goal: $6 \times 85 = 510$ points.
+</Step>
+<Step title="Subtract">
+She needs $510 - 420 = 90$.
+</Step>
+<Step title="Another way to see it">
+To lift the average from 84 to 85, the new test must score the new average, 85, plus 1 extra point for each of the 5 old tests: $85 + 5 = 90$.
+</Step>
+</Steps>
+
+<Check choices={["$12$", "$15$", "$21$", "$24$", "$27$"]} answer={3} explain="Total of four: $4 \times 15 = 60$. Total of the other three: $3 \times 12 = 36$. The removed number is $60 - 36 = 24$.">
+Four numbers have a mean of 15. When one number is removed, the other three have a mean of 12. What number was removed?
+</Check>
+
+<Check choices={["$4$", "$5$", "$5.5$", "$6$", "$7$"]} answer={2} explain="Sort: $1, 3, 4, 7, 8, 9$. Six values, so average the 3rd and 4th: $\tfrac{4 + 7}{2} = 5.5$.">
+What is the median of $3, 8, 1, 9, 4, 7$?
+</Check>
+
+<Trap>
+Always **sort** before finding a median. The middle of the list as written is meaningless.
+</Trap>
+
+## How changes affect each statistic
+
+| Change to the data | Mean | Median | Mode |
+| --- | --- | --- | --- |
+| add the same number $c$ to every value | goes up by $c$ | goes up by $c$ | goes up by $c$ |
+| multiply every value by $k$ | multiplied by $k$ | multiplied by $k$ | multiplied by $k$ |
+| make the largest value even larger | goes up | no change | no change (usually) |
+| add a new value equal to the mean | no change | can change | can change |
+
+## Building a list that fits the rules
+
+Some problems give several conditions and ask about a missing value. Write the list in order with blanks, fill in what you know, and use the total.
+
+<Steps problem="Five positive integers have mean 5, median 5, and a unique mode of 8. What is the smallest of the five numbers?">
+<Step title="Set up the sorted list">
+$a \le b \le 5 \le d \le e$, and the total is $5 \times 5 = 25$.
+</Step>
+<Step title="Place the mode">
+8 must appear at least twice and it is bigger than the median, so $d = e = 8$.
+</Step>
+<Step title="Use the total">
+$a + b + 5 + 8 + 8 = 25$, so $a + b = 25 - 21 = 4$.
+</Step>
+<Step title="Respect the unique mode">
+$a + b = 4$ with $a \le b$: either $(1, 3)$ or $(2, 2)$. The pair $(2, 2)$ would tie 2 with 8 as a mode, which breaks "unique mode". So the list is $1, 3, 5, 8, 8$ and the smallest number is $1$.
+</Step>
+</Steps>
+
+<Check choices={["$3$", "$4$", "$5$", "$6$", "$7$"]} answer={0} explain="Seven numbers with mean 4 have total $7 \times 4 = 28$. The six known values add to $1 + 2 + 2 + 5 + 6 + 9 = 25$, so $x = 28 - 25 = 3$.">
+The seven numbers $1, 2, 2, 5, 6, 9, x$ have a mean of 4. What is $x$?
+</Check>
+
+<Tip>
+When a problem says "the average of a, b, c is k", write $a + b + c = 3k$ right away and forget the word average.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Mean of $10$ numbers is $7$. Add the number $18$. New mean?", back: "Total $70 + 18 = 88$, count $11$, mean $8$." },
+  { front: "Median of $2, 9, 4, 4$", back: "Sorted $2, 4, 4, 9$, so $\\tfrac{4+4}{2} = 4$." },
+  { front: "Every score goes up 5 points. The median goes...", back: "Up by exactly 5." },
+  { front: "Range of $-3, 7, 2, 12$", back: "$12 - (-3) = 15$." },
+]} />
+
+<Recap>
+- Mean: total divided by count. Median: middle of the **sorted** list (average of two middles if even). Mode: most frequent. Range: max minus min.
+- Turn every mean into a total: $\text{mean} \times \text{count}$.
+- Extreme values move the mean a lot and the median very little.
+- For "find the missing number" problems, write the sorted list with blanks and use the total.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Arithmetic mean" />, <AoPS q="Median" /> and <AoPS q="Mode" /> on the AoPS Wiki.
+- Mean and median problems appear in nearly every year of <Archive test="10" />.
+</GoFurther>

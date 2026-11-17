@@ -1,0 +1,122 @@
+---
+title: Primes and divisors
+---
+
+A **prime** is a whole number greater than 1 whose only divisors are 1 and itself: $2, 3, 5, 7, 11, 13, \ldots$ Every other whole number greater than 1 breaks into primes in exactly one way. That single fact, the **prime factorization**, is the master key to number theory on the AMC.
+
+By the end of this lesson you will be able to:
+
+- factor any number into primes quickly,
+- test whether a number is prime,
+- count the divisors of a number without listing them,
+- add up all the divisors of a number.
+
+## Prime factorization
+
+Split a number into any two factors, then keep splitting until only primes remain. The result is the same no matter how you start.
+
+$$
+360 = 36 \cdot 10 = (4 \cdot 9)(2 \cdot 5) = 2^3 \cdot 3^2 \cdot 5.
+$$
+
+**Is it prime?** To test $n$, try dividing by primes up to $\sqrt{n}$. If none work, $n$ is prime. For $n = 221$: $\sqrt{221} < 15$, so try $2, 3, 5, 7, 11, 13$. And $221 = 13 \cdot 17$, so it is not prime.
+
+<Trap>
+1 is **not** prime, and 2 is the **only** even prime. Many problems hinge on the fact that every other prime is odd.
+</Trap>
+
+<Tip>
+Know the primes under 100 cold (there are 25 of them), and a few tricky composites: $91 = 7 \cdot 13$, $119 = 7 \cdot 17$, $133 = 7 \cdot 19$, $143 = 11 \cdot 13$, $221 = 13 \cdot 17$, $1001 = 7 \cdot 11 \cdot 13$.
+</Tip>
+
+## Counting divisors without listing them
+
+Every divisor of $72 = 2^3 \cdot 3^2$ looks like $2^a \cdot 3^b$, where $a$ is any of $0, 1, 2, 3$ (four choices) and $b$ is any of $0, 1, 2$ (three choices). Here they all are, laid out in a grid:
+
+| | $3^0$ | $3^1$ | $3^2$ |
+| --- | --- | --- | --- |
+| $2^0$ | 1 | 3 | 9 |
+| $2^1$ | 2 | 6 | 18 |
+| $2^2$ | 4 | 12 | 36 |
+| $2^3$ | 8 | 24 | 72 |
+
+Four rows times three columns: $4 \cdot 3 = 12$ divisors.
+
+<Formula title="Number of divisors">
+If $n = p^a \cdot q^b \cdot r^c \cdots$, then $n$ has
+
+$$
+(a + 1)(b + 1)(c + 1)\cdots
+$$
+
+divisors. Add one to each exponent and multiply.
+</Formula>
+
+<Check choices={["$12$", "$18$", "$20$", "$24$", "$36$"]} answer={3} explain="$360 = 2^3 \cdot 3^2 \cdot 5^1$, so the count is $(3+1)(2+1)(1+1) = 4 \cdot 3 \cdot 2 = 24$.">
+How many positive divisors does 360 have?
+</Check>
+
+<Steps problem="What is the smallest positive integer with exactly 6 divisors?">
+<Step title="How can 6 be a product of (exponent + 1) factors?">
+$6 = 6$, giving $n = p^5$; or $6 = 3 \cdot 2$, giving $n = p^2 q$.
+</Step>
+<Step title="Make each form as small as possible">
+$p^5$: smallest is $2^5 = 32$. $p^2 q$: put the bigger exponent on the smallest prime, $2^2 \cdot 3 = 12$.
+</Step>
+<Step title="Compare">
+$12 < 32$, so the answer is $12$. Its divisors: $1, 2, 3, 4, 6, 12$ ✓.
+</Step>
+</Steps>
+
+## Perfect squares have an odd number of divisors
+
+Divisors come in pairs $d$ and $\tfrac{n}{d}$: for 12, the pairs are $(1, 12)$, $(2, 6)$, $(3, 4)$. The only way a divisor has no partner is if $d = \tfrac{n}{d}$, meaning $n = d^2$. So **only perfect squares have an odd number of divisors**. (In the formula, every exponent of a square is even, so every $a + 1$ is odd.)
+
+<Check choices={["$9$", "$10$", "$11$", "$25$", "$50$"]} answer={1} explain="Only perfect squares have an odd number of divisors, and the squares from 1 to 100 are $1^2, 2^2, \ldots, 10^2$: ten of them.">
+How many integers from 1 to 100 have an odd number of positive divisors?
+</Check>
+
+This pairing also gives the **product** of all divisors: the $d$ divisors pair up into $\tfrac{d}{2}$ pairs that each multiply to $n$, so the product is $n^{d/2}$.
+
+## Adding up the divisors
+
+Expand $(1 + 2 + 4 + 8)(1 + 3 + 9)$. Each term of the result is one choice from each bracket multiplied together, which is exactly one divisor of $72$. So that product is the sum of all divisors of 72.
+
+<Formula title="Sum of divisors">
+For $n = p^a q^b \cdots$:
+
+$$
+\sigma(n) = (1 + p + \cdots + p^a)(1 + q + \cdots + q^b)\cdots
+$$
+
+</Formula>
+
+For $72$: $(1 + 2 + 4 + 8)(1 + 3 + 9) = 15 \cdot 13 = 195$.
+
+<Check choices={["$16$", "$24$", "$27$", "$28$", "$30$"]} answer={3} explain="$12 = 2^2 \cdot 3$, so the sum is $(1 + 2 + 4)(1 + 3) = 7 \cdot 4 = 28$. Check by listing: $1 + 2 + 3 + 4 + 6 + 12 = 28$.">
+What is the sum of all positive divisors of 12?
+</Check>
+
+<KeyIdea>
+Whenever a problem mentions divisors, factors, multiples or "how many integers", write the prime factorization first. Almost every counting question about divisors becomes a question about **exponents**.
+</KeyIdea>
+
+<FlipCards cards={[
+  { front: "Number of divisors of $2^4 \\cdot 7^2$", back: "$5 \\cdot 3 = 15$" },
+  { front: "Is 187 prime?", back: "No: $187 = 11 \\cdot 17$." },
+  { front: "Product of all divisors of 12", back: "12 has 6 divisors, so $12^3 = 1728$." },
+  { front: "Number of odd divisors of 360", back: "Ignore the 2s: $3^2 \\cdot 5$ has $3 \\cdot 2 = 6$." },
+]} />
+
+<Recap>
+- Every integer above 1 has one prime factorization. Find it first.
+- Test primality by dividing by primes up to $\sqrt{n}$.
+- Divisor count: $(a + 1)(b + 1)\cdots$. Divisor sum: multiply the sums $1 + p + \cdots + p^a$.
+- Only perfect squares have an odd number of divisors.
+- Product of the divisors of $n$ is $n^{d/2}$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Prime factorization" />, <AoPS q="Divisor function" /> and <AoPS q="Prime number" /> on the AoPS Wiki.
+- Divisor counting is one of the most common number theory topics in <Archive test="10" />.
+</GoFurther>

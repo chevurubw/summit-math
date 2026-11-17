@@ -1,0 +1,136 @@
+---
+title: Remainder and Factor Theorems
+---
+
+Dividing polynomials by long division is slow. Usually the AMC only wants the **remainder**, and there's a shortcut that turns a whole division into a single substitution.
+
+By the end of this lesson you will be able to:
+
+- find the remainder of $P(x) \div (x - a)$ instantly,
+- test whether $x - a$ is a factor,
+- divide quickly with synthetic division,
+- find remainders when dividing by a quadratic,
+- get the sum of the coefficients by plugging in 1.
+
+## The Remainder Theorem
+
+Dividing $P(x)$ by $x - a$ gives a quotient $Q(x)$ and a number $R$ left over:
+
+$$
+P(x) = (x - a)\,Q(x) + R.
+$$
+
+Now plug in $x = a$. The first term becomes $0 \cdot Q(a) = 0$, so
+
+$$
+P(a) = R.
+$$
+
+**The remainder when dividing by $x - a$ is just $P(a)$.** Slide $a$ along the graph of $P(x) = x^3 - 3x + 1$; the height of the point is the remainder.
+
+<Figure
+  bounds={[-3, 3, -6, 8]}
+  ticks={1}
+  height={360}
+  equal={false}
+  params={[{ name: "a", min: -2.5, max: 2.5, step: 0.5, value: 2, label: "$a$", play: true, speed: 1 }]}
+  elements={[
+    { type: "func", f: "x^3 - 3*x + 1", color: "accent", width: 3 },
+    { type: "segment", a: ["a", 0], b: ["a", "a^3 - 3*a + 1"], color: "amber", width: 2.5, dashed: true },
+    { type: "point", x: "a", y: "a^3 - 3*a + 1", color: "amber", label: "(a, P(a))", labelDir: "e" },
+  ]}
+  readouts={["P(x) = x^3 - 3x + 1", "\\text{remainder of } P(x) \\div (x - ([[a]])) = P([[a]]) = [[a^3 - 3*a + 1:3]]"]}
+  caption="Where the curve crosses the axis, the remainder is 0, so $x - a$ divides evenly."
+/>
+
+<Check choices={["$0$", "$1$", "$2$", "$3$", "$4$"]} answer={4} explain="Dividing by $x + 1 = x - (-1)$, plug in $-1$: $(-1)^{100} - 2(-1) + 1 = 1 + 2 + 1 = 4$.">
+What is the remainder when $x^{100} - 2x + 1$ is divided by $x + 1$?
+</Check>
+
+## The Factor Theorem
+
+Remainder 0 means it divides evenly:
+
+$$
+x - a \text{ is a factor of } P(x) \iff P(a) = 0.
+$$
+
+So roots and factors are the same information: $a$ is a root exactly when $x - a$ is a factor.
+
+<Check choices={["$-1$", "$0$", "$1$", "$2$", "$5$"]} answer={2} explain="We need $P(2) = 0$: $8 + 2k - 10 = 0$, so $k = 1$.">
+For what value of $k$ is $x - 2$ a factor of $x^3 + kx - 10$?
+</Check>
+
+## Synthetic division
+
+When you do need the quotient, synthetic division is long division with only the coefficients.
+
+<Steps problem="Divide $x^3 - 2x^2 - 5x + 6$ by $x - 3$.">
+<Step title="Write the coefficients">
+$1,\ -2,\ -5,\ 6$, with $3$ off to the side.
+</Step>
+<Step title="Bring down, multiply, add">
+Bring down $1$. Then $1 \cdot 3 = 3$ and $-2 + 3 = 1$. Then $1 \cdot 3 = 3$ and $-5 + 3 = -2$. Then $-2 \cdot 3 = -6$ and $6 - 6 = 0$.
+</Step>
+<Step title="Read the answer">
+The quotient is $x^2 + x - 2$ and the remainder is $0$. So $x^3 - 2x^2 - 5x + 6 = (x - 3)(x^2 + x - 2) = (x - 3)(x + 2)(x - 1)$.
+</Step>
+</Steps>
+
+## Dividing by a quadratic
+
+Dividing by a degree 2 polynomial leaves a remainder of degree at most 1, so write it as $cx + d$ and plug in the roots of the divisor.
+
+<Steps problem="$P(x)$ leaves remainder 3 when divided by $x - 1$ and remainder 7 when divided by $x + 1$. Find the remainder when $P(x)$ is divided by $x^2 - 1$.">
+<Step title="Set up">
+$P(x) = (x^2 - 1)Q(x) + cx + d$.
+</Step>
+<Step title="Plug in the roots of $x^2 - 1$">
+$x = 1$: $c + d = P(1) = 3$. $x = -1$: $-c + d = P(-1) = 7$.
+</Step>
+<Step title="Solve">
+$d = 5$, $c = -2$. The remainder is $-2x + 5$.
+</Step>
+</Steps>
+
+## Sums of coefficients
+
+Plugging in $x = 1$ makes every power of $x$ equal 1, leaving just the coefficients:
+
+$$
+P(1) = \text{sum of the coefficients}, \qquad P(0) = \text{constant term}.
+$$
+
+And $P(-1)$ gives the alternating sum. Adding, $\tfrac{P(1) + P(-1)}{2}$ is the sum of the even degree coefficients.
+
+<Check choices={["$1$", "$16$", "$81$", "$256$", "$-16$"]} answer={1} explain="Plug in $x = 1$: $(3 - 1)^4 = 2^4 = 16$. No expansion needed.">
+What is the sum of the coefficients of $(3x - 1)^4$ when expanded?
+</Check>
+
+<KeyIdea>
+Whenever a problem says "remainder", "factor" or "sum of coefficients", stop dividing or expanding and **plug in a clever value** instead: a root of the divisor, or 1, or 0, or $-1$.
+</KeyIdea>
+
+<Trap>
+For $x + 3$, plug in $x = -3$, not $3$. The divisor $x - a$ has root $a$.
+</Trap>
+
+<FlipCards cards={[
+  { front: "Remainder of $x^3 + 2x + 5$ divided by $x - 2$", back: "$8 + 4 + 5 = 17$" },
+  { front: "Is $x + 1$ a factor of $x^{51} + 1$?", back: "Yes: $(-1)^{51} + 1 = 0$" },
+  { front: "Remainder when dividing by $x^2 - 3x + 2$ has degree...", back: "at most 1: write it $cx + d$, plug in $x = 1, 2$" },
+  { front: "Sum of coefficients of $(x + 2)^{10}$", back: "$3^{10}$" },
+]} />
+
+<Recap>
+- Remainder of $P(x) \div (x - a)$ is $P(a)$.
+- $x - a$ is a factor exactly when $P(a) = 0$.
+- Synthetic division: bring down, multiply, add.
+- Dividing by a quadratic: remainder $cx + d$; plug in the divisor's roots.
+- $P(1)$ is the coefficient sum; $P(0)$ the constant.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Remainder Theorem" /> on the AoPS Wiki.
+- Practice in <Archive test="12" />.
+</GoFurther>

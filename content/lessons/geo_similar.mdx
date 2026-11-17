@@ -1,0 +1,148 @@
+---
+title: Similar triangles
+---
+
+Two triangles are **similar** when one is a scaled copy of the other: same shape, possibly different size, maybe turned or flipped. Similarity is how you find lengths you can't measure directly, and it is behind a huge number of AMC geometry problems.
+
+By the end of this lesson you will be able to:
+
+- prove two triangles are similar by spotting two equal angles,
+- set up matching side ratios correctly,
+- explain why areas scale by the **square** of the ratio,
+- find hidden similar triangles in common figures.
+
+## When are triangles similar?
+
+You only need **two pairs of equal angles** (the third pair is then automatic, since angles add to $180^\circ$). This is called **AA similarity**.
+
+If triangle $ABC$ is similar to triangle $DEF$ (written $\triangle ABC \sim \triangle DEF$), matching sides are in the same ratio:
+
+$$
+\frac{DE}{AB} = \frac{EF}{BC} = \frac{DF}{AC} = k.
+$$
+
+The number $k$ is the **scale factor**.
+
+<Trap>
+The order of letters matters. $\triangle ABC \sim \triangle DEF$ means $A$ matches $D$, $B$ matches $E$, $C$ matches $F$. Match sides by the **angles they sit across from**, not by where they appear on the page.
+</Trap>
+
+## The parallel line picture
+
+The most common way similar triangles appear: a line parallel to one side of a triangle cuts off a smaller triangle at the top. The angles match (corresponding angles), so the small triangle is similar to the big one. Slide the cut.
+
+<Figure
+  bounds={[-0.5, 10.5, -0.6, 7]}
+  axes={false}
+  grid={false}
+  height={340}
+  params={[{ name: "k", min: 0.15, max: 1, step: 0.05, value: 0.5, label: "scale factor $k$", play: true, speed: 6 }]}
+  elements={[
+    { type: "polygon", pts: [[0, 0], [10, 0], [3, 6]], color: "muted", width: 2 },
+    { type: "polygon", pts: [[3, 6], ["3 - 3*k", "6 - 6*k"], ["3 + 7*k", "6 - 6*k"]], fill: "accent", color: "accent", width: 3 },
+    { type: "point", x: 3, y: 6, label: "A", labelDir: "n", color: "heading" },
+    { type: "point", x: 0, y: 0, label: "B", labelDir: "sw", color: "heading" },
+    { type: "point", x: 10, y: 0, label: "C", labelDir: "se", color: "heading" },
+    { type: "point", x: "3 - 3*k", y: "6 - 6*k", label: "D", labelDir: "w", color: "accent" },
+    { type: "point", x: "3 + 7*k", y: "6 - 6*k", label: "E", labelDir: "e", color: "accent" },
+    { type: "text", x: 5, y: -0.45, text: "BC = 10", size: 14, color: "muted" },
+    { type: "text", x: "3 + 2*k", y: "6 - 6*k + 0.35", text: "DE = [[10*k]]", size: 14, color: "accent" },
+  ]}
+  readouts={["\\text{length ratio } k = [[k]]", "\\text{area ratio } k^2 = [[k^2:4]]", "\\text{small area} = [[30*k^2:3]] \\text{ of } 30"]}
+  caption="$DE \parallel BC$, so $\triangle ADE \sim \triangle ABC$. Halve every length and the area drops to a quarter."
+/>
+
+## Areas scale by $k^2$, volumes by $k^3$
+
+If lengths are multiplied by $k$, then:
+
+- **perimeters** (and all lengths: heights, medians, radii) multiply by $k$,
+- **areas** multiply by $k^2$,
+- **volumes** (for similar solids) multiply by $k^3$.
+
+Why $k^2$? Area is base times height, and **both** got multiplied by $k$.
+
+<Check choices={["$2$", "$4$", "$6$", "$9$", "$27$"]} answer={3} explain="Lengths scale by $3$, so areas scale by $3^2 = 9$.">
+Two similar triangles have corresponding sides 4 and 12. How many times larger is the area of the bigger one?
+</Check>
+
+<Steps problem="In triangle $ABC$, point $D$ is on $AB$ and $E$ is on $AC$ with $DE \parallel BC$. If $AD = 4$, $DB = 6$ and $DE = 5$, find $BC$.">
+<Step title="Find the scale factor">
+$\triangle ADE \sim \triangle ABC$ with $\dfrac{AB}{AD} = \dfrac{4 + 6}{4} = \dfrac{5}{2}$.
+</Step>
+<Step title="Scale the matching side">
+$BC = \dfrac{5}{2} \cdot DE = \dfrac{5}{2} \cdot 5 = 12.5$.
+</Step>
+</Steps>
+
+<Trap>
+A very common mistake is to compare $AD$ with $DB$ (4 to 6). The ratio must compare a side of the small triangle with the **matching whole side** of the big triangle: $AD$ with $AB = 10$.
+</Trap>
+
+<Check choices={["$\\tfrac{1}{4}$", "$\\tfrac{1}{3}$", "$\\tfrac{4}{9}$", "$\\tfrac{5}{9}$", "$\\tfrac{2}{3}$"]} answer={3} explain="The small triangle has ratio $\tfrac{2}{3}$ to the big one, so its area is $\tfrac{4}{9}$ of the whole. The trapezoid is what's left: $1 - \tfrac{4}{9} = \tfrac{5}{9}$.">
+A line parallel to the base of a triangle cuts each side two thirds of the way from the top vertex. What fraction of the triangle's area is the trapezoid below the line?
+</Check>
+
+## Hidden similar triangles
+
+Learn to see these three pictures instantly.
+
+**1. The altitude to the hypotenuse.** In a right triangle, the altitude from the right angle splits it into two smaller triangles, both similar to the original. This gives facts like $h^2 = pq$, where $p$ and $q$ are the two pieces of the hypotenuse.
+
+**2. The bowtie.** Two lines crossing between two parallel lines make two triangles that are similar (vertical angles plus alternate angles). In a trapezoid, the diagonals cut each other in the same ratio as the two parallel sides.
+
+**3. Shadows and heights.** A person and a tree in the sun at the same moment make similar right triangles with their shadows.
+
+<Figure
+  bounds={[-0.5, 10.5, -0.6, 4.8]}
+  axes={false}
+  grid={false}
+  height={260}
+  params={[{ name: "b", min: 1, max: 9, step: 0.5, value: 3, label: "short side length" }]}
+  elements={[
+    { type: "segment", a: [0, 0], b: [10, 0], color: "muted", width: 2 },
+    { type: "segment", a: ["5 - b/2", 4], b: ["5 + b/2", 4], color: "muted", width: 2 },
+    { type: "point", id: "P", x: 5, y: "4*10/(10 + b)", color: "amber", size: 4 },
+    { type: "polygon", pts: [[0, 0], [10, 0], "P"], fill: "accent", color: "accent" },
+    { type: "polygon", pts: [["5 - b/2", 4], ["5 + b/2", 4], "P"], fill: "blue", color: "blue" },
+    { type: "segment", a: [0, 0], b: ["5 + b/2", 4], color: "heading", width: 1.5 },
+    { type: "segment", a: [10, 0], b: ["5 - b/2", 4], color: "heading", width: 1.5 },
+    { type: "text", x: 5, y: -0.45, text: "10", size: 14 },
+    { type: "text", x: 5, y: 4.35, text: "[[b]]", size: 14 },
+  ]}
+  readouts={["\\text{ratio} = \\tfrac{[[b]]}{10} = [[b/10:3]]"]}
+  caption="The bowtie inside a trapezoid. The two shaded triangles are similar, with ratio equal to the ratio of the parallel sides."
+/>
+
+<Steps problem="A 6 foot person casts a 4 foot shadow. At the same moment a tree casts a 30 foot shadow. How tall is the tree?">
+<Step>
+The sun's rays hit both at the same angle, so the two (height, shadow) right triangles are similar.
+</Step>
+<Step>
+$\dfrac{\text{tree}}{30} = \dfrac{6}{4}$, so the tree is $45$ feet tall.
+</Step>
+</Steps>
+
+<Tip>
+When a problem has parallel lines, look for similar triangles. When it has a right angle with an altitude, look for **three** similar triangles. Write ratios as fractions with the small triangle on top and the big triangle on the bottom, consistently.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Similar triangles with area ratio 25 : 49. Length ratio?", back: "$5 : 7$" },
+  { front: "Two similar cubes with edges 2 and 6. Volume ratio?", back: "$1 : 27$" },
+  { front: "What do you need to prove two triangles similar?", back: "Two pairs of equal angles (AA)." },
+  { front: "Right triangle altitude splits the hypotenuse into 4 and 9. Altitude?", back: "$h^2 = 4 \\cdot 9$, so $h = 6$." },
+]} />
+
+<Recap>
+- Two equal angles make triangles similar.
+- Match sides by the angles across from them; all matching sides share one ratio $k$.
+- Lengths scale by $k$, areas by $k^2$, volumes by $k^3$.
+- A line parallel to a side cuts off a similar triangle; compare to the **whole** side.
+- Watch for the altitude in a right triangle, the bowtie, and shadows.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Similarity" /> and <AoPS q="Similar triangles" /> on the AoPS Wiki.
+- Similarity is a key step in many later geometry problems in <Archive test="10" /> and <Archive test="12" />.
+</GoFurther>

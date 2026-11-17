@@ -1,0 +1,158 @@
+---
+title: Factoring and special products
+---
+
+**Factoring** means rewriting a sum as a product: $x^2 + 5x + 6 = (x + 2)(x + 3)$. Products are powerful because a product is zero only when a factor is zero, and products of whole numbers can only be built a few ways. A handful of special patterns show up on the AMC again and again. Learn to recognize them on sight.
+
+By the end of this lesson you will be able to:
+
+- expand and recognize the special products,
+- do mental arithmetic like $49 \times 51$ instantly,
+- factor quadratics,
+- use Simon's Favorite Factoring Trick to find integer solutions.
+
+## Seeing $(a + b)^2$ as a picture
+
+A square with side $a + b$ splits into four pieces: an $a$ by $a$ square, a $b$ by $b$ square, and **two** $a$ by $b$ rectangles. That is why $(a + b)^2$ has the middle term $2ab$.
+
+<Figure
+  bounds={[-0.5, 8.5, -0.5, 8.5]}
+  axes={false}
+  grid={false}
+  height={380}
+  params={[
+    { name: "a", min: 1, max: 6, step: 0.5, value: 5, label: "$a$" },
+    { name: "b", min: 1, max: 3, step: 0.5, value: 2.5, label: "$b$" },
+  ]}
+  elements={[
+    { type: "polygon", pts: [[0, 0], ["a", 0], ["a", "a"], [0, "a"]], fill: "accent", color: "accent" },
+    { type: "polygon", pts: [["a", 0], ["a+b", 0], ["a+b", "a"], ["a", "a"]], fill: "teal", color: "teal" },
+    { type: "polygon", pts: [[0, "a"], ["a", "a"], ["a", "a+b"], [0, "a+b"]], fill: "teal", color: "teal" },
+    { type: "polygon", pts: [["a", "a"], ["a+b", "a"], ["a+b", "a+b"], ["a", "a+b"]], fill: "amber", color: "amber" },
+    { type: "text", x: "a/2", y: "a/2", text: "a² = [[a^2]]" },
+    { type: "text", x: "a + b/2", y: "a/2", text: "ab", size: 14 },
+    { type: "text", x: "a/2", y: "a + b/2 - 0.15", text: "ab = [[a*b]]", size: 14 },
+    { type: "text", x: "a + b/2", y: "a + b/2 - 0.15", text: "b²", size: 14 },
+  ]}
+  readouts={["(a+b)^2 = [[(a+b)^2]]", "a^2 + 2ab + b^2 = [[a^2]] + [[2*a*b]] + [[b^2]] = [[a^2+2*a*b+b^2]]"]}
+  caption="The big square is $(a+b)^2$. The pieces are $a^2$, two copies of $ab$, and $b^2$."
+/>
+
+<Formula title="Special products to know by heart">
+
+| Expanded | Factored |
+| --- | --- |
+| $a^2 + 2ab + b^2$ | $(a + b)^2$ |
+| $a^2 - 2ab + b^2$ | $(a - b)^2$ |
+| $a^2 - b^2$ | $(a - b)(a + b)$ |
+| $a^3 + b^3$ | $(a + b)(a^2 - ab + b^2)$ |
+| $a^3 - b^3$ | $(a - b)(a^2 + ab + b^2)$ |
+
+</Formula>
+
+## Difference of squares: the star of the show
+
+$a^2 - b^2 = (a - b)(a + b)$ turns big subtractions into easy multiplications, and easy multiplications into easy subtractions.
+
+- $49 \times 51 = (50 - 1)(50 + 1) = 2500 - 1 = 2499$.
+- $103^2 - 97^2 = (103 - 97)(103 + 97) = 6 \times 200 = 1200$.
+
+<Check choices={["$1$", "$2024$", "$4049$", "$4050$", "$4096$"]} answer={2} explain="$(2025 - 2024)(2025 + 2024) = 1 \times 4049 = 4049$. Notice that the difference of consecutive squares is always the sum of the two numbers.">
+What is $2025^2 - 2024^2$?
+</Check>
+
+## Factoring quadratics
+
+To factor $x^2 + bx + c$, find two numbers that **multiply to $c$** and **add to $b$**.
+
+<Steps problem="Factor $x^2 - 5x - 14$.">
+<Step title="List the pairs that multiply to $-14$">
+$1 \cdot (-14)$, $-1 \cdot 14$, $2 \cdot (-7)$, $-2 \cdot 7$.
+</Step>
+<Step title="Pick the pair that adds to $-5$">
+$2 + (-7) = -5$ ✓.
+</Step>
+<Step title="Write the factors">
+$x^2 - 5x - 14 = (x + 2)(x - 7)$. Expand to check: $x^2 - 7x + 2x - 14$ ✓.
+</Step>
+</Steps>
+
+When the leading coefficient is not 1, as in $6x^2 + 7x - 3$, multiply $a \cdot c = -18$ and look for two numbers that multiply to $-18$ and add to $7$: they are $9$ and $-2$. Split the middle term and group:
+
+$$
+6x^2 + 9x - 2x - 3 = 3x(2x + 3) - 1(2x + 3) = (3x - 1)(2x + 3).
+$$
+
+## Symmetric tricks: get $a^2 + b^2$ without $a$ and $b$
+
+The identity $(a + b)^2 = a^2 + 2ab + b^2$ rearranges to
+
+$$
+a^2 + b^2 = (a + b)^2 - 2ab.
+$$
+
+So if you know the sum and the product, you know the sum of squares, without ever finding $a$ or $b$.
+
+<Check choices={["$13$", "$16$", "$19$", "$22$", "$25$"]} answer={2} explain="$a^2 + b^2 = (a + b)^2 - 2ab = 25 - 6 = 19$.">
+If $a + b = 5$ and $ab = 3$, what is $a^2 + b^2$?
+</Check>
+
+<Steps problem="If $x + \dfrac{1}{x} = 3$, find $x^2 + \dfrac{1}{x^2}$.">
+<Step>
+Square both sides: $x^2 + 2 \cdot x \cdot \dfrac{1}{x} + \dfrac{1}{x^2} = 9$.
+</Step>
+<Step>
+The middle term is $2$, so $x^2 + \dfrac{1}{x^2} = 9 - 2 = 7$.
+</Step>
+</Steps>
+
+## Simon's Favorite Factoring Trick
+
+Equations like $xy + 3x + 2y = 18$ look stuck. The trick: **add a constant to both sides so the left side factors**.
+
+<Steps problem="How many pairs of positive integers $(x, y)$ satisfy $xy + 3x + 2y = 18$?">
+<Step title="Find the right constant">
+$(x + 2)(y + 3) = xy + 3x + 2y + 6$. So add 6 to both sides.
+</Step>
+<Step title="Factor">
+$(x + 2)(y + 3) = 24$.
+</Step>
+<Step title="List factor pairs with the right sizes">
+Since $x \ge 1$ and $y \ge 1$, we need $x + 2 \ge 3$ and $y + 3 \ge 4$. Factor pairs of 24: $(3, 8)$, $(4, 6)$, $(6, 4)$ work. $(8, 3)$, $(12, 2)$ and $(24, 1)$ make $y + 3$ too small.
+</Step>
+<Step title="Count">
+Three pairs: $(1, 5)$, $(2, 3)$, $(4, 1)$. Each checks in the original equation.
+</Step>
+</Steps>
+
+<KeyIdea>
+When you see $xy$ plus some $x$ and some $y$ and the variables must be integers, reach for $(x + \text{something})(y + \text{something})$. A product of integers equal to a fixed number has only a few possibilities.
+</KeyIdea>
+
+<Trap>
+Do not forget negative factor pairs when the problem allows negative integers. $(x + 2)(y + 3) = 24$ also has $(-1)(-24)$, $(-2)(-12)$ and so on.
+</Trap>
+
+<Tip>
+On the AMC, an expression that looks hopeless often becomes a difference of squares or a perfect square after one rearrangement. Before expanding anything big, look for $a^2 - b^2$.
+</Tip>
+
+<FlipCards cards={[
+  { front: "$51^2 - 49^2$", back: "$(2)(100) = 200$" },
+  { front: "Factor $x^3 - 8$", back: "$(x - 2)(x^2 + 2x + 4)$" },
+  { front: "$a - b = 4$, $ab = 5$. Find $a^2 + b^2$.", back: "$(a-b)^2 + 2ab = 16 + 10 = 26$." },
+  { front: "Make $xy - x - y = 5$ factor.", back: "Add 1: $(x - 1)(y - 1) = 6$." },
+]} />
+
+<Recap>
+- Know the five special products in both directions.
+- $a^2 - b^2 = (a - b)(a + b)$ is the most useful identity on the test.
+- Factor $x^2 + bx + c$ with two numbers that multiply to $c$ and add to $b$.
+- $a^2 + b^2 = (a + b)^2 - 2ab$ lets you skip solving for $a$ and $b$.
+- Simon's Favorite Factoring Trick: add a constant so $xy + px + qy$ becomes $(x + q)(y + p)$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Difference of squares" />, <AoPS q="Simon's Favorite Factoring Trick" /> and <AoPS q="Sum of cubes" /> on the AoPS Wiki.
+- Factoring tricks are behind many middle problems (roughly 10 to 20) in <Archive test="10" />.
+</GoFurther>

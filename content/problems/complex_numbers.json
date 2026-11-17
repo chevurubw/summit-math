@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "cx_arithmetic_b01",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $(-2 + 6i)(6 - 2i)$?",
+  "choices": {
+   "A": "$-40i$",
+   "B": "$-32i$",
+   "C": "$-12 - 12i$",
+   "D": "$-24 + 40i$",
+   "E": "$40i$"
+  },
+  "answer": "E",
+  "hints": [
+   "Expand and use $i^2 = -1$."
+  ],
+  "solution": "**What we need:** the product in the form $x + yi$.\n\n**Key idea:** multiply like two binomials (FOIL), then replace $i^2$ with $-1$.\n\n**Step 1.** Terms: $(-2) \\cdot 6 = -12$, $(-2) \\cdot (-2)i = 4i$, $6i \\cdot 6 = 36i$, $6i \\cdot (-2)i = -12i^2$.\n\n**Step 2.** $i^2 = -1$, so the last term is $12$.\n\n**Step 3.** Real part: $-12 + 12 = 0$. Imaginary part: $4 + 36 = 40$.\n\n**Step 4.** Product: $40i$.\n\n**Answer:** $40i$. **(E)**\n\n**Common mistake:** treating $i^2$ as $+1$, or multiplying only the real parts and the imaginary parts."
+ },
+ {
+  "id": "cx_arithmetic_b02",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $i^{1384}$?",
+  "choices": {
+   "A": "$-i$",
+   "B": "$0$",
+   "C": "$i$",
+   "D": "$1$",
+   "E": "$-1$"
+  },
+  "answer": "D",
+  "hints": [
+   "Powers of $i$ repeat every 4."
+  ],
+  "solution": "**What we need:** $i^{1384}$.\n\n**Key idea:** powers of $i$ cycle with period $4$: $i^1 = i$, $i^2 = -1$, $i^3 = -i$, $i^4 = 1$, then it repeats.\n\n**Step 1.** Divide $1384$ by $4$: $1384 = 4 \\cdot 346 + 0$.\n\n**Step 2.** $i^{1384} = (i^4)^{346} \\cdot i^{0} = 1 \\cdot i^{0}$.\n\n**Step 3.** $i^{0} = 1$.\n\n**Answer:** $1$. **(D)**\n\n**Common mistake:** using the remainder after dividing by $2$ instead of $4$."
+ },
+ {
+  "id": "cx_arithmetic_b03",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $|3 + 4i|$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$5$",
+   "C": "$6$",
+   "D": "$7$",
+   "E": "$25$"
+  },
+  "answer": "B",
+  "hints": [
+   "$|a + bi| = \\sqrt{a^2 + b^2}$."
+  ],
+  "solution": "**What we need:** the modulus (distance from $0$ in the complex plane).\n\n**Key idea:** $|x + yi| = \\sqrt{x^2 + y^2}$, the Pythagorean distance to the point $(x, y)$.\n\n**Step 1.** $x = 3$ and $y = 4$.\n\n**Step 2.** $\\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.\n\n**Answer:** $5$. **(B)**\n\n**Common mistake:** adding the parts, or keeping a minus sign; squaring removes signs."
+ },
+ {
+  "id": "cx_arithmetic_b04",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\dfrac{-20}{2 + 2i}$?",
+  "choices": {
+   "A": "$-4 + 5i$",
+   "B": "$5 - 5i$",
+   "C": "$-4994$",
+   "D": "$-5 - 5i$",
+   "E": "$-5 + 5i$"
+  },
+  "answer": "E",
+  "hints": [
+   "Multiply the top and bottom by the conjugate of the denominator."
+  ],
+  "solution": "**What we need:** the quotient in the form $x + yi$.\n\n**Key idea:** multiply the top and bottom by the conjugate of the bottom. That makes the bottom real: $(c + di)(c - di) = c^2 + d^2$.\n\n**Step 1.** Conjugate of $2 + 2i$ is $2 - 2i$.\n\n**Step 2.** Bottom: $2^2 + 2^2 = 8$.\n\n**Step 3.** Top: $(-20)(2 - 2i) = -40 + 40i$.\n\n**Step 4.** Divide each part by $8$: $\\frac{-40 + 40i}{8} = -5 + 5i$.\n\n**Answer:** $-5 + 5i$. **(E)**\n\n**Common mistake:** dividing real part by real part and imaginary by imaginary; division doesn't work part by part."
+ },
+ {
+  "id": "cx_arithmetic_b05",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_conj_product",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $(8 - 5i)(8 + 5i)$?",
+  "choices": {
+   "A": "$-89$",
+   "B": "$39$",
+   "C": "$89$",
+   "D": "$90$",
+   "E": "$39 - 80i$"
+  },
+  "answer": "C",
+  "hints": [
+   "A number times its conjugate."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $(a + bi)(a - bi) = a^2 + b^2$.\n\n**Step 1.** $8^2 + (-5)^2 = 89$.\n\n**Answer:** $89$. **(C)**\n\n**Common mistake:** getting $a^2 - b^2$."
+ },
+ {
+  "id": "cx_arithmetic_b06",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_square",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $(-5 + 6i)^2$?",
+  "choices": {
+   "A": "$-11 - 60i$",
+   "B": "$-11 - 30i$",
+   "C": "$-11 + 60i$",
+   "D": "$25 + 36i$",
+   "E": "$61 - 60i$"
+  },
+  "answer": "A",
+  "hints": [
+   "Expand; $i^2 = -1$."
+  ],
+  "solution": "**What we need:** the square.\n\n**Key idea:** $(a + bi)^2 = a^2 - b^2 + 2abi$.\n\n**Step 1.** $25 - 36 - 60i$ simplifies to $-11 - 60i$.\n\n**Answer:** $-11 - 60i$. **(A)**\n\n**Common mistake:** using $i^2 = 1$."
+ },
+ {
+  "id": "cx_arithmetic_b07",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_recip_real",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the imaginary part of $\\dfrac{1}{7 + i}$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$-\\frac{1}{50}$",
+   "C": "$\\frac{1}{50}$",
+   "D": "$\\frac{1}{48}$",
+   "E": "$\\frac{7}{50}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Multiply by the conjugate."
+  ],
+  "solution": "**What we need:** the imaginary part.\n\n**Key idea:** $\\frac{1}{a + bi} = \\frac{a - bi}{a^2 + b^2}$.\n\n**Step 1.** $\\frac{7 - i}{50}$.\n\n**Step 2.** Imaginary part: $-\\frac{1}{50}$.\n\n**Answer:** $-\\frac{1}{50}$. **(B)**\n\n**Common mistake:** forgetting the sign from the conjugate."
+ },
+ {
+  "id": "cx_arithmetic_b08",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_solve",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $(-1 - 2i)z = 4 - 12i$.",
+  "choices": {
+   "A": "$-4 + 4i$",
+   "B": "$4 - 4i$",
+   "C": "$4 + 4i$",
+   "D": "$5 + 4i$",
+   "E": "$20 + 20i$"
+  },
+  "answer": "C",
+  "hints": [
+   "Divide, using the conjugate."
+  ],
+  "solution": "**What we need:** $z$.\n\n**Key idea:** $z = \\frac{4 - 12i}{-1 - 2i}$; multiply top and bottom by $-1 + 2i$.\n\n**Step 1.** Numerator: $(4 - 12i)(-1 + 2i) = 20 + 20i$; denominator: $5$.\n\n**Step 2.** $z = 4 + 4i$.\n\n**Answer:** $4 + 4i$. **(C)**\n\n**Common mistake:** forgetting to divide by $|a|^2$."
+ },
+ {
+  "id": "cx_arithmetic_b09",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_quad_roots",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The roots of $x^2 - 2x + 65 = 0$ are $p \\pm qi$ with $q > 0$. What is $p + q$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$64$",
+   "E": "$65$"
+  },
+  "answer": "B",
+  "hints": [
+   "Complete the square."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $(x - 1)^2 = -64$.\n\n**Step 1.** $x = 1 \\pm 8i$.\n\n**Step 2.** Answer: $9$.\n\n**Answer:** $9$. **(B)**\n\n**Common mistake:** taking the square root of a negative incorrectly."
+ },
+ {
+  "id": "cx_arithmetic_b10",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_mod_quotient",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\left|\\dfrac{5 + 12i}{6 + 8i}\\right|$?",
+  "choices": {
+   "A": "$\\frac{10}{13}$",
+   "B": "$\\frac{13}{11}$",
+   "C": "$\\frac{13}{10}$",
+   "D": "$\\frac{169}{100}$",
+   "E": "$\\frac{23}{10}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$|z/w| = |z|/|w|$."
+  ],
+  "solution": "**What we need:** the modulus.\n\n**Key idea:** divide the moduli.\n\n**Step 1.** $|5 + 12i| = 13$, $|6 + 8i| = 10$.\n\n**Step 2.** $\\frac{13}{10}$.\n\n**Answer:** $\\frac{13}{10}$. **(C)**\n\n**Common mistake:** dividing then taking only the real part."
+ },
+ {
+  "id": "cx_arithmetic_b11",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_conj_info",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A complex number $z$ has $z + \\overline{z} = 12$ and $z\\overline{z} = 85$. What is $|\\text{Im}(z)|$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$49$",
+   "E": "$79$"
+  },
+  "answer": "B",
+  "hints": [
+   "$z + \\overline{z} = 2\\,\\text{Re}(z)$ and $z\\overline{z} = |z|^2$."
+  ],
+  "solution": "**What we need:** the imaginary part's size.\n\n**Key idea:** find the real part, then use $|z|^2 = a^2 + b^2$.\n\n**Step 1.** $\\text{Re}(z) = 6$.\n\n**Step 2.** $b^2 = 85 - 36 = 49$, so $|b| = 7$.\n\n**Answer:** $7$. **(B)**\n\n**Common mistake:** forgetting to halve $z + \\overline{z}$."
+ },
+ {
+  "id": "cx_arithmetic_b12",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_i_product",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $i \\cdot i^2 \\cdot i^3 \\cdots i^{17}$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$-i$",
+   "C": "$0$",
+   "D": "$i$",
+   "E": "$1$"
+  },
+  "answer": "D",
+  "hints": [
+   "Add the exponents."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** the exponent is $1 + 2 + \\cdots + 17 = 153$.\n\n**Step 1.** $153 \\equiv 1 \\pmod 4$, so $i^{153} = i$.\n\n**Answer:** $i$. **(D)**\n\n**Common mistake:** multiplying exponents."
+ },
+ {
+  "id": "cx_arithmetic_b13",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_make_real",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "For what real number $k$ is $(k + 4i)(5 - 2i)$ a real number?",
+  "choices": {
+   "A": "$-10$",
+   "B": "$-\\frac{8}{5}$",
+   "C": "$\\frac{8}{5}$",
+   "D": "$10$",
+   "E": "$11$"
+  },
+  "answer": "D",
+  "hints": [
+   "Set the imaginary part to zero."
+  ],
+  "solution": "**What we need:** $k$.\n\n**Key idea:** expand and collect the $i$ terms.\n\n**Step 1.** Imaginary part: $-2k + 20$.\n\n**Step 2.** $-2k + 20 = 0$ gives $k = 10$.\n\n**Answer:** $10$. **(D)**\n\n**Common mistake:** setting the real part to zero."
+ },
+ {
+  "id": "cx_arithmetic_b14",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_distance",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the distance between $9 - 3i$ and $3 + 5i$ in the complex plane?",
+  "choices": {
+   "A": "$10$",
+   "B": "$\\sqrt{101}$",
+   "C": "$2\\sqrt{37}$",
+   "D": "$14$",
+   "E": "$100$"
+  },
+  "answer": "A",
+  "hints": [
+   "$|z - w|$."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** subtract, then take the modulus.\n\n**Step 1.** $z - w = 6 - 8i$.\n\n**Step 2.** $|z - w| = \\sqrt{100} = 10$.\n\n**Answer:** $10$. **(A)**\n\n**Common mistake:** adding instead of subtracting."
+ },
+ {
+  "id": "cx_arithmetic_b15",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_rotate",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The point $-6 - 9i$ is rotated $180^\\circ$ counterclockwise about the origin. What complex number is its image?",
+  "choices": {
+   "A": "$-9 - 6i$",
+   "B": "$-9 + 6i$",
+   "C": "$-9 + 7i$",
+   "D": "$-6 + 9i$",
+   "E": "$6 + 9i$"
+  },
+  "answer": "E",
+  "hints": [
+   "Multiply by $i$ for each $90^\\circ$."
+  ],
+  "solution": "**What we need:** the image.\n\n**Key idea:** rotating by $180^\\circ$ multiplies by $i^{2}$.\n\n**Step 1.** $(-6 - 9i) \\cdot -1 = 6 + 9i$.\n\n**Answer:** $6 + 9i$. **(E)**\n\n**Common mistake:** rotating clockwise."
+ },
+ {
+  "id": "cx_arithmetic_b16",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_sqrt",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Which complex number $a + bi$ with $a > 0$ satisfies $(a + bi)^2 = 32 + 24i$?",
+  "choices": {
+   "A": "$2 + 6i$",
+   "B": "$6 - 2i$",
+   "C": "$6 + 2i$",
+   "D": "$7 + 2i$",
+   "E": "$32 + 12i$"
+  },
+  "answer": "C",
+  "hints": [
+   "Match real and imaginary parts."
+  ],
+  "solution": "**What we need:** $a + bi$.\n\n**Key idea:** $a^2 - b^2 = 32$ and $2ab = 24$.\n\n**Step 1.** Trying factor pairs of $12$: $a = 6$, $b = 2$ works.\n\n**Answer:** $6 + 2i$. **(C)**\n\n**Common mistake:** forgetting $2ab$."
+ },
+ {
+  "id": "cx_arithmetic_b17",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_sum_mod_sq",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $|1 + 2i|^2 + |2 + i|^2$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$6$",
+   "C": "$10$",
+   "D": "$12$",
+   "E": "$18$"
+  },
+  "answer": "C",
+  "hints": [
+   "$|a + bi|^2 = a^2 + b^2$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** square each modulus.\n\n**Step 1.** $5 + 5 = 10$.\n\n**Answer:** $10$. **(C)**\n\n**Common mistake:** adding the numbers first."
+ },
+ {
+  "id": "cx_arithmetic_b18",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_over_conj",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\dfrac{3 - 4i}{3 + 4i}$?",
+  "choices": {
+   "A": "$-7 - 24i$",
+   "B": "$-\\frac{7}{25} - \\frac{24}{25}i$",
+   "C": "$-\\frac{7}{25} + \\frac{24}{25}i$",
+   "D": "$\\frac{7}{25} - \\frac{24}{25}i$",
+   "E": "$1$"
+  },
+  "answer": "B",
+  "hints": [
+   "Multiply top and bottom by the top."
+  ],
+  "solution": "**What we need:** the quotient.\n\n**Key idea:** $\\frac{z}{\\overline{z}} = \\frac{z^2}{|z|^2}$.\n\n**Step 1.** $z^2 = -7 - 24i$; $|z|^2 = 25$.\n\n**Step 2.** Result: $-\\frac{7}{25} - \\frac{24}{25}i$.\n\n**Answer:** $-\\frac{7}{25} - \\frac{24}{25}i$. **(B)**\n\n**Common mistake:** answering 1."
+ },
+ {
+  "id": "cx_arithmetic_b19",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_real_part_product",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the imaginary part of $(-8 + 2i)(-3 + 7i)$?",
+  "choices": {
+   "A": "$-62$",
+   "B": "$-50$",
+   "C": "$10$",
+   "D": "$14$",
+   "E": "$62$"
+  },
+  "answer": "A",
+  "hints": [
+   "Expand with FOIL."
+  ],
+  "solution": "**What we need:** the imaginary part.\n\n**Key idea:** $(a + bi)(c + di) = (ac - bd) + (ad + bc)i$.\n\n**Step 1.** Product: $10 - 62i$.\n\n**Step 2.** Imaginary part: $-62$.\n\n**Answer:** $-62$. **(A)**\n\n**Common mistake:** using $+bd$ in the real part."
+ },
+ {
+  "id": "cx_arithmetic_b20",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxa_midpoint",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What complex number is the midpoint of $-4 + 5i$ and $-2 + 3i$?",
+  "choices": {
+   "A": "$-6 + 8i$",
+   "B": "$-3 - 4i$",
+   "C": "$-3 + 4i$",
+   "D": "$-1 + i$",
+   "E": "$4 - 3i$"
+  },
+  "answer": "C",
+  "hints": [
+   "Average the two numbers."
+  ],
+  "solution": "**What we need:** the midpoint.\n\n**Key idea:** $\\frac{z + w}{2}$.\n\n**Step 1.** $\\frac{-6 + 8i}{2} = -3 + 4i$.\n\n**Answer:** $-3 + 4i$. **(C)**\n\n**Common mistake:** not dividing by 2."
+ },
+ {
+  "id": "cx_arithmetic_c01",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxac1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A complex number $z$ satisfies $z + 2\\overline{z} = -18 - 3i$. What is $|z|^2$?",
+  "choices": {
+   "A": "$9$",
+   "B": "$27$",
+   "C": "$45$",
+   "D": "$46$",
+   "E": "$333$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write $z = x + yi$ and match real and imaginary parts."
+  ],
+  "solution": "**What we need:** $|z|^2$.\n\n**Key idea:** write $z = x + yi$, so $\\overline{z} = x - yi$. Then match real parts and imaginary parts separately.\n\n**Step 1.** $z + 2\\overline{z} = (x + yi) + 2(x - yi) = 3x + (-1)yi$.\n\n**Step 2.** Real parts: $3x = -18$, so $x = -6$.\n\n**Step 3.** Imaginary parts: $-1y = -3$, so $y = 3$.\n\n**Step 4.** $|z|^2 = x^2 + y^2 = 36 + 9 = 45$.\n\n**Answer:** $45$. **(C)**\n\n**Common mistake:** forgetting that the conjugate flips the sign of the imaginary part."
+ },
+ {
+  "id": "cx_arithmetic_c02",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxac2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $i + i^2 + i^3 + \\cdots + i^{240}$?",
+  "choices": {
+   "A": "$i$",
+   "B": "$0$",
+   "C": "$i - 1$",
+   "D": "$-1$",
+   "E": "$-i$"
+  },
+  "answer": "B",
+  "hints": [
+   "Every block of 4 consecutive powers of $i$ adds to $0$."
+  ],
+  "solution": "**What we need:** the sum of the first $240$ powers of $i$.\n\n**Key idea:** every four consecutive powers are $i, -1, -i, 1$ in some rotation, and those add to $0$.\n\n**Step 1.** $240 = 4 \\cdot 60 + 0$: that is $60$ full blocks of four, worth $0$ each.\n\n**Step 2.** There are no leftover terms.\n\n**Step 3.** So the whole sum is $0$.\n\n**Answer:** $0$. **(B)**\n\n**Common mistake:** forgetting that the sum starts at $i^1$, not $i^0$."
+ },
+ {
+  "id": "cx_arithmetic_c03",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxac3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $z = 5 + 5i$. What is the area of the square in the complex plane with vertices $z$, $iz$, $-z$, and $-iz$?",
+  "choices": {
+   "A": "$50$",
+   "B": "$100$",
+   "C": "$101$",
+   "D": "$102$",
+   "E": "$200$"
+  },
+  "answer": "B",
+  "hints": [
+   "Multiplying by $i$ rotates by $90^\\circ$, so the vertices form a square centered at $0$."
+  ],
+  "solution": "**What we need:** the area of the square.\n\n**Key idea:** multiplying by $i$ rotates a point $90^\\circ$ around $0$. So the four points are $z$ rotated by $0^\\circ, 90^\\circ, 180^\\circ, 270^\\circ$: a square centered at $0$.\n\n**Step 1.** Each vertex is $|z| = \\sqrt{5^2 + 5^2} = \\sqrt{50}$ from the center.\n\n**Step 2.** $z$ and $-z$ are opposite corners, so a diagonal is $2|z|$, and diagonal$^2 = 4 \\cdot 50 = 200$.\n\n**Step 3.** A square's area is $\\frac{\\text{diagonal}^2}{2} = \\frac{200}{2} = 100$.\n\n**Answer:** $100$. **(B)**\n\n**Common mistake:** treating $|z|$ as the side length; it is half the diagonal."
+ },
+ {
+  "id": "cx_arithmetic_c04",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxac_power_conj",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many complex numbers $z$ satisfy $z^{3} = \\overline{z}$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$6$"
+  },
+  "answer": "D",
+  "hints": [
+   "Take moduli first."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $|z|^{3} = |z|$, so $z = 0$ or $|z| = 1$. If $|z| = 1$, $\\overline{z} = \\frac{1}{z}$ and $z^{4} = 1$.\n\n**Step 1.** $z = 0$, plus the $4$ roots of $z^{4} = 1$: $5$.\n\n**Answer:** $5$. **(D)**\n\n**Common mistake:** forgetting $z = 0$."
+ },
+ {
+  "id": "cx_arithmetic_c05",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxac_weighted_powers",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $i + 2i^2 + 3i^3 + \\cdots + 17i^{17}$?",
+  "choices": {
+   "A": "$-8 - 9i$",
+   "B": "$8 - 9i$",
+   "C": "$8 + 9i$",
+   "D": "$9 + 8i$",
+   "E": "$10 + 7i$"
+  },
+  "answer": "C",
+  "hints": [
+   "Group the terms in blocks of 4."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** each block $ki^k + (k+1)i^{k+1} + (k+2)i^{k+2} + (k+3)i^{k+3}$ for $k \\equiv 1 \\pmod 4$ equals $(-(k+1) + (k+3)) + (k - (k+2))i = 2 - 2i$.\n\n**Step 1.** Full blocks: $4$, giving $8 - 8i$.\n\n**Step 2.** Adding the leftover terms: $8 + 9i$.\n\n**Answer:** $8 + 9i$. **(C)**\n\n**Common mistake:** assuming the sum is 0 like $i + i^2 + i^3 + i^4$."
+ },
+ {
+  "id": "cx_arithmetic_c06",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxac_mod_eq",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A complex number $z$ satisfies $|z|^2 + z = 7 - i$ and $\\text{Re}(z) > -\\frac{1}{2}$. What is $|z|^2$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$5$",
+   "C": "$6$",
+   "D": "$7$",
+   "E": "$10$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $z = x + yi$; $|z|^2$ is real."
+  ],
+  "solution": "**What we need:** $|z|^2$.\n\n**Key idea:** the imaginary part gives $y = -1$; the real part gives $x^2 + 1 + x = 7$.\n\n**Step 1.** $x^2 + x - 6 = 0$ has roots $2$ and $-3$; the condition picks $x = 2$.\n\n**Step 2.** $|z|^2 = 4 + 1 = 5$.\n\n**Answer:** $5$. **(B)**\n\n**Common mistake:** taking the wrong root."
+ },
+ {
+  "id": "cx_arithmetic_c07",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxac_triangle",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the area of the triangle with vertices $0$, $2 - i$, and $7 - 5i$ in the complex plane?",
+  "choices": {
+   "A": "$\\frac{3}{2}$",
+   "B": "$\\frac{5}{2}$",
+   "C": "$3$",
+   "D": "$\\frac{17}{2}$",
+   "E": "$\\frac{19}{2}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Shoelace formula."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** area $= \\frac{1}{2}|x_1 y_2 - x_2 y_1|$, which is $\\frac{1}{2}|\\text{Im}(\\overline{z}w)|$.\n\n**Step 1.** $\\frac{1}{2}|2 \\cdot (-5) - 7 \\cdot (-1)| = \\frac{3}{2}$.\n\n**Answer:** $\\frac{3}{2}$. **(A)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$."
+ },
+ {
+  "id": "cx_arithmetic_c08",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxac_count_reps",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many complex numbers $z = a + bi$ with $a$ and $b$ integers satisfy $z\\overline{z} = 45$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$12$",
+   "E": "$16$"
+  },
+  "answer": "B",
+  "hints": [
+   "Count lattice points on $a^2 + b^2 = 45$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** find all $(a, b)$ with $a^2 + b^2 = 45$, including signs and order.\n\n**Step 1.** Checking each $a$ from $0$ up to $\\sqrt{45}$ and counting sign and order choices: $8$.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** forgetting negative values."
+ },
+ {
+  "id": "cx_arithmetic_c09",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxac_sum_sq",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Complex numbers $z$ and $w$ satisfy $z + w = 4 + 4i$ and $zw = -24i$. What is $z^2 + w^2$?",
+  "choices": {
+   "A": "$-80i$",
+   "B": "$-16i$",
+   "C": "$32i$",
+   "D": "$56i$",
+   "E": "$80i$"
+  },
+  "answer": "E",
+  "hints": [
+   "$z^2 + w^2 = (z + w)^2 - 2zw$."
+  ],
+  "solution": "**What we need:** $z^2 + w^2$.\n\n**Key idea:** the same identity as for real numbers.\n\n**Step 1.** $(z + w)^2 = 32i$.\n\n**Step 2.** Subtract $2zw = -48i$: $80i$.\n\n**Answer:** $80i$. **(E)**\n\n**Common mistake:** forgetting the factor of 2."
+ },
+ {
+  "id": "cx_arithmetic_c10",
+  "skillId": "cx_arithmetic",
+  "family": "cx_arithmetic:cxac_min_mod",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Complex number $z$ satisfies $|z - (-6 + 8i)| = 1$. What is the largest possible value of $|z|$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$11$",
+   "E": "$12$"
+  },
+  "answer": "D",
+  "hints": [
+   "$z$ lies on a circle."
+  ],
+  "solution": "**What we need:** the extreme modulus.\n\n**Key idea:** the circle has center $-6 + 8i$ (distance $10$ from the origin) and radius $1$.\n\n**Step 1.** Along the line through the origin: $10 + 1 = 11$.\n\n**Answer:** $11$. **(D)**\n\n**Common mistake:** using the wrong direction."
+ },
+ {
+  "id": "cx_polar_b01",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $(1 + i)^{12}$?",
+  "choices": {
+   "A": "$4096$",
+   "B": "$-64i$",
+   "C": "$-64$",
+   "D": "$64$",
+   "E": "$64 + 64i$"
+  },
+  "answer": "C",
+  "hints": [
+   "$1 + i = \\sqrt{2}\\,(\\cos 45^\\circ + i\\sin 45^\\circ)$."
+  ],
+  "solution": "**What we need:** $(1 + i)^{12}$.\n\n**Key idea:** De Moivre's Theorem: in polar form, raising to the $n$th power raises the length to the $n$th power and multiplies the angle by $n$.\n\n**Step 1.** $1 + i$ has length $\\sqrt{1^2 + 1^2} = \\sqrt{2}$ and angle $45^\\circ$.\n\n**Step 2.** Length: $(\\sqrt{2})^{12} = 64$. Angle: $12 \\cdot 45^\\circ = 540^\\circ$, which is the same direction as $180^\\circ$.\n\n**Step 3.** A length of $64$ at $180^\\circ$ is the point $-64$.\n\n**Answer:** $-64$. **(C)**\n\n**Common mistake:** computing $1^{12} + i^{12}$; powers don't distribute over addition."
+ },
+ {
+  "id": "cx_polar_b02",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the argument (angle in degrees, from $0^\\circ$ to $360^\\circ$) of $1 - i$?",
+  "choices": {
+   "A": "$45$",
+   "B": "$135$",
+   "C": "$225$",
+   "D": "$315$",
+   "E": "$316$"
+  },
+  "answer": "D",
+  "hints": [
+   "Plot the point and measure the angle from the positive real axis."
+  ],
+  "solution": "**What we need:** the angle of the point, measured counterclockwise from the positive real axis.\n\n**Key idea:** plot the point $(\\text{real}, \\text{imaginary})$ and read off its direction.\n\n**Step 1.** $1 - i$ is the point $(1, -1)$, in the fourth quadrant.\n\n**Step 2.** Its real and imaginary parts have equal size, so it makes a $45^\\circ$ angle with the real axis.\n\n**Step 3.** In the fourth quadrant that direction is $315^\\circ$.\n\n**Answer:** $315^\\circ$. **(D)**\n\n**Common mistake:** using $\\tan^{-1}\\frac{y}{x}$ directly, which gives the wrong quadrant when $x < 0$."
+ },
+ {
+  "id": "cx_polar_b03",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $|(1 + i)^{5}|$?",
+  "choices": {
+   "A": "$4\\sqrt{2}$",
+   "B": "$10$",
+   "C": "$16$",
+   "D": "$32$",
+   "E": "$64$"
+  },
+  "answer": "A",
+  "hints": [
+   "$|z^n| = |z|^n$."
+  ],
+  "solution": "**What we need:** the length of a power.\n\n**Key idea:** lengths multiply when complex numbers multiply, so $|z^n| = |z|^n$. No need to expand.\n\n**Step 1.** $|1 + i| = \\sqrt{1^2 + 1^2} = \\sqrt{2}$.\n\n**Step 2.** $|z|^{5} = \\left(\\sqrt{2}\\right)^{5} = 4\\sqrt{2}$.\n\n**Answer:** $4\\sqrt{2}$. **(A)**\n\n**Common mistake:** expanding the power by hand, which is slow and easy to get wrong."
+ },
+ {
+  "id": "cx_polar_b04",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $z = 5(\\cos 45^\\circ + i\\sin 45^\\circ)$ and $w = 2(\\cos 120^\\circ + i\\sin 120^\\circ)$, then $zw = R(\\cos\\theta + i\\sin\\theta)$ with $R > 0$ and $0^\\circ \\le \\theta < 360^\\circ$. What is $R + \\theta$?",
+  "choices": {
+   "A": "$10$",
+   "B": "$85$",
+   "C": "$172$",
+   "D": "$175$",
+   "E": "$265$"
+  },
+  "answer": "D",
+  "hints": [
+   "Multiply the lengths and add the angles."
+  ],
+  "solution": "**What we need:** $R + \\theta$ for the product.\n\n**Key idea:** in polar form, multiplying complex numbers multiplies their lengths and adds their angles.\n\n**Step 1.** $R = 5 \\cdot 2 = 10$.\n\n**Step 2.** $\\theta = 45^\\circ + 120^\\circ = 165^\\circ$.\n\n**Step 3.** $R + \\theta = 10 + 165 = 175$.\n\n**Answer:** $175$. **(D)**\n\n**Common mistake:** adding the lengths or multiplying the angles; it's the other way around."
+ },
+ {
+  "id": "cx_polar_b05",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_to_rect",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Write $2(\\cos 30^\\circ + i\\sin 30^\\circ)$ in the form $a + bi$.",
+  "choices": {
+   "A": "$-\\sqrt{3} - i$",
+   "B": "$-1 + \\sqrt{3}i$",
+   "C": "$1 + \\sqrt{3}i$",
+   "D": "$\\sqrt{3} - i$",
+   "E": "$\\sqrt{3} + i$"
+  },
+  "answer": "E",
+  "hints": [
+   "$a = r\\cos\\theta$, $b = r\\sin\\theta$."
+  ],
+  "solution": "**What we need:** the rectangular form.\n\n**Key idea:** multiply out with exact values.\n\n**Step 1.** $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, $\\sin 30^\\circ = \\frac{1}{2}$.\n\n**Step 2.** Result: $\\sqrt{3} + i$.\n\n**Answer:** $\\sqrt{3} + i$. **(E)**\n\n**Common mistake:** swapping sine and cosine."
+ },
+ {
+  "id": "cx_polar_b06",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_mod_product",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $|(8 + 15i)(3 + 4i)|$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$\\sqrt{314}$",
+   "C": "$85$",
+   "D": "$\\sqrt{7226}$",
+   "E": "$7225$"
+  },
+  "answer": "C",
+  "hints": [
+   "$|zw| = |z||w|$."
+  ],
+  "solution": "**What we need:** the modulus.\n\n**Key idea:** multiply the moduli.\n\n**Step 1.** $|8 + 15i| = 17$, $|3 + 4i| = 5$.\n\n**Step 2.** Product: $85$.\n\n**Answer:** $85$. **(C)**\n\n**Common mistake:** adding the moduli."
+ },
+ {
+  "id": "cx_polar_b07",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_arg_product",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\arg z = 111^\\circ$ and $\\arg w = 305^\\circ$, what is $\\arg\\left(\\frac{z}{w}\\right)$, between $0^\\circ$ and $360^\\circ$?",
+  "choices": {
+   "A": "$15^\\circ$",
+   "B": "$56^\\circ$",
+   "C": "$166^\\circ$",
+   "D": "$194^\\circ$",
+   "E": "$346^\\circ$"
+  },
+  "answer": "C",
+  "hints": [
+   "Multiplying adds arguments; dividing subtracts."
+  ],
+  "solution": "**What we need:** the argument.\n\n**Key idea:** use the polar form.\n\n**Step 1.** $111 - 305 = -194$, which reduces to $166^\\circ$.\n\n**Answer:** $166^\\circ$. **(C)**\n\n**Common mistake:** multiplying the angles."
+ },
+ {
+  "id": "cx_polar_b08",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_power_arg",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $z = 2(\\cos 110^\\circ + i\\sin 110^\\circ)$, what is the argument of $z^{10}$, between $0^\\circ$ and $360^\\circ$?",
+  "choices": {
+   "A": "$20^\\circ$",
+   "B": "$120^\\circ$",
+   "C": "$200^\\circ$",
+   "D": "$340^\\circ$",
+   "E": "$1100^\\circ$"
+  },
+  "answer": "A",
+  "hints": [
+   "De Moivre's Theorem."
+  ],
+  "solution": "**What we need:** the argument.\n\n**Key idea:** $(r\\,\\text{cis}\\,\\theta)^n = r^n\\,\\text{cis}(n\\theta)$.\n\n**Step 1.** $10 \\cdot 110 = 1100$, which reduces to $20^\\circ$.\n\n**Answer:** $20^\\circ$. **(A)**\n\n**Common mistake:** adding instead of multiplying."
+ },
+ {
+  "id": "cx_polar_b09",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_mod_power_ratio",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\left|\\dfrac{(3 + 4i)^{6}}{(1 + 3i)^{4}}\\right|$?",
+  "choices": {
+   "A": "$\\frac{625}{8}$",
+   "B": "$\\frac{625}{4}$",
+   "C": "$\\frac{629}{4}$",
+   "D": "$\\frac{625}{2}$",
+   "E": "$\\frac{390625}{16}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Moduli multiply and divide."
+  ],
+  "solution": "**What we need:** the modulus.\n\n**Key idea:** $|z^m/w^n| = |z|^m/|w|^n$.\n\n**Step 1.** $|3 + 4i|^{6} / |1 + 3i|^{4} = \\frac{625}{4}$.\n\n**Answer:** $\\frac{625}{4}$. **(B)**\n\n**Common mistake:** squaring when you shouldn't."
+ },
+ {
+  "id": "cx_polar_b10",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_euler",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the imaginary part of $e^{i\\frac{7\\pi}{6}}$?",
+  "choices": {
+   "A": "$-\\frac{\\sqrt{2}}{2}$",
+   "B": "$-\\frac{1}{2}$",
+   "C": "$\\frac{1 - \\sqrt{3}}{2}$",
+   "D": "$\\sqrt{3} - 2$",
+   "E": "$-\\frac{\\sqrt{3}}{8}$"
+  },
+  "answer": "B",
+  "hints": [
+   "$e^{i\\theta} = \\cos\\theta + i\\sin\\theta$."
+  ],
+  "solution": "**What we need:** the imaginary part.\n\n**Key idea:** Euler's formula.\n\n**Step 1.** $\\sin\\left(\\frac{7\\pi}{6}\\right) = -\\frac{1}{2}$.\n\n**Answer:** $-\\frac{1}{2}$. **(B)**\n\n**Common mistake:** mixing up sine and cosine."
+ },
+ {
+  "id": "cx_polar_b11",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_conj_arg",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $\\arg z = 50^\\circ$, what is $\\arg\\left(\\frac{1}{z}\\right)$, between $0^\\circ$ and $360^\\circ$?",
+  "choices": {
+   "A": "$50^\\circ$",
+   "B": "$130^\\circ$",
+   "C": "$140^\\circ$",
+   "D": "$230^\\circ$",
+   "E": "$310^\\circ$"
+  },
+  "answer": "E",
+  "hints": [
+   "Picture the reflection."
+  ],
+  "solution": "**What we need:** the argument.\n\n**Key idea:** $\\frac{1}{z} = \\frac{\\overline{z}}{|z|^2}$ has the same argument as $\\overline{z}$.\n\n**Step 1.** Result: $310^\\circ$.\n\n**Answer:** $310^\\circ$. **(E)**\n\n**Common mistake:** confusing conjugation with negation."
+ },
+ {
+  "id": "cx_polar_b12",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_reciprocal_mod",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $z = 9(\\cos 39^\\circ + i\\sin 39^\\circ)$, what is $\\left|z^{-3}\\right|$?",
+  "choices": {
+   "A": "$-729$",
+   "B": "$\\frac{1}{729}$",
+   "C": "$\\frac{2}{729}$",
+   "D": "$\\frac{1}{27}$",
+   "E": "$729$"
+  },
+  "answer": "B",
+  "hints": [
+   "$|z^{-k}| = |z|^{-k}$."
+  ],
+  "solution": "**What we need:** the modulus.\n\n**Key idea:** negative powers invert the modulus.\n\n**Step 1.** $\\frac{1}{9^{3}} = \\frac{1}{729}$.\n\n**Answer:** $\\frac{1}{729}$. **(B)**\n\n**Common mistake:** making the modulus negative."
+ },
+ {
+  "id": "cx_polar_b13",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_sum_units",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $|\\text{cis}\\,0^\\circ + \\text{cis}\\,60^\\circ|$? (Here $\\text{cis}\\,\\theta = \\cos\\theta + i\\sin\\theta$.)",
+  "choices": {
+   "A": "$\\frac{\\sqrt{6} + \\sqrt{2}}{4}$",
+   "B": "$\\sqrt{6} - \\sqrt{2}$",
+   "C": "$\\frac{\\sqrt{6}}{2}$",
+   "D": "$\\sqrt{3}$",
+   "E": "$2$"
+  },
+  "answer": "D",
+  "hints": [
+   "Two unit vectors with an angle between them."
+  ],
+  "solution": "**What we need:** the modulus.\n\n**Key idea:** $|\\text{cis}\\,\\alpha + \\text{cis}\\,\\beta| = 2\\left|\\cos\\frac{\\beta - \\alpha}{2}\\right|$.\n\n**Step 1.** $2|\\cos 30^\\circ| = \\sqrt{3}$.\n\n**Answer:** $\\sqrt{3}$. **(D)**\n\n**Common mistake:** adding the moduli to get 2."
+ },
+ {
+  "id": "cx_polar_b14",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_cube_root_mod",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the modulus of each solution of $z^{5} = -32i$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$\\frac{32}{5}$",
+   "D": "$10$",
+   "E": "$32$"
+  },
+  "answer": "A",
+  "hints": [
+   "$|z|^{5} = |-32i|$."
+  ],
+  "solution": "**What we need:** the modulus.\n\n**Key idea:** all the roots lie on one circle.\n\n**Step 1.** $|z| = \\sqrt[5]{32} = 2$.\n\n**Answer:** $2$. **(A)**\n\n**Common mistake:** dividing by 5."
+ },
+ {
+  "id": "cx_polar_b15",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_arg_power_std",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the argument of $(1 + i\\sqrt{3})^{5}$, between $0^\\circ$ and $360^\\circ$?",
+  "choices": {
+   "A": "$60^\\circ$",
+   "B": "$65^\\circ$",
+   "C": "$120^\\circ$",
+   "D": "$300^\\circ$",
+   "E": "$330^\\circ$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find the argument of the base first."
+  ],
+  "solution": "**What we need:** the argument.\n\n**Key idea:** $\\arg(1 + i\\sqrt{3}) = 60^\\circ$; powers multiply the argument.\n\n**Step 1.** $5 \\cdot 60 = 300$, reducing to $300^\\circ$.\n\n**Answer:** $300^\\circ$. **(D)**\n\n**Common mistake:** forgetting to reduce mod $360^\\circ$."
+ },
+ {
+  "id": "cx_polar_b16",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_product_three",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the imaginary part of $\\text{cis}\\,94^\\circ \\cdot \\text{cis}\\,9^\\circ \\cdot \\text{cis}\\,77^\\circ$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$-\\frac{1}{2}$",
+   "C": "$0$",
+   "D": "$\\frac{1}{2}$",
+   "E": "$1$"
+  },
+  "answer": "C",
+  "hints": [
+   "Add the angles."
+  ],
+  "solution": "**What we need:** the imaginary part.\n\n**Key idea:** $\\text{cis}\\,\\alpha \\cdot \\text{cis}\\,\\beta = \\text{cis}(\\alpha + \\beta)$.\n\n**Step 1.** $94 + 9 + 77 = 180^\\circ$.\n\n**Step 2.** Answer: $0$.\n\n**Answer:** $0$. **(C)**\n\n**Common mistake:** multiplying the angles."
+ },
+ {
+  "id": "cx_polar_b17",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_imag_power",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the real part of $(\\cos 30^\\circ + i\\sin 30^\\circ)^{10}$?",
+  "choices": {
+   "A": "$2 - \\sqrt{3}$",
+   "B": "$\\frac{\\sqrt{3} - 1}{2}$",
+   "C": "$\\frac{1}{2}$",
+   "D": "$\\frac{\\sqrt{3}}{3}$",
+   "E": "$\\frac{3}{4}$"
+  },
+  "answer": "C",
+  "hints": [
+   "De Moivre's Theorem."
+  ],
+  "solution": "**What we need:** the real part.\n\n**Key idea:** the power is $\\cos 300^\\circ + i\\sin 300^\\circ$.\n\n**Step 1.** $300^\\circ \\equiv 300^\\circ$.\n\n**Step 2.** Answer: $\\frac{1}{2}$.\n\n**Answer:** $\\frac{1}{2}$. **(C)**\n\n**Common mistake:** raising sine and cosine separately to the power."
+ },
+ {
+  "id": "cx_polar_b18",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_mod_one",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $\\left|\\dfrac{-1 - 2i}{-1 + 2i}\\right|^{5}$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$2$",
+   "E": "$5$"
+  },
+  "answer": "C",
+  "hints": [
+   "A number and its conjugate have the same modulus."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $|z| = |\\overline{z}|$, so the ratio has modulus $1$.\n\n**Step 1.** $1$ to any power is $1$.\n\n**Answer:** $1$. **(C)**\n\n**Common mistake:** computing the quotient by hand and making an arithmetic slip."
+ },
+ {
+  "id": "cx_polar_b19",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_polar_angle",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The number $-1 - i$ equals $r(\\cos\\theta + i\\sin\\theta)$ with $r > 0$ and $0^\\circ \\le \\theta < 360^\\circ$. What is $\\theta$?",
+  "choices": {
+   "A": "$45^\\circ$",
+   "B": "$135^\\circ$",
+   "C": "$225^\\circ$",
+   "D": "$255^\\circ$",
+   "E": "$315^\\circ$"
+  },
+  "answer": "C",
+  "hints": [
+   "Check the quadrant."
+  ],
+  "solution": "**What we need:** $\\theta$.\n\n**Key idea:** find the reference angle from the ratio of the parts, then place it in the right quadrant.\n\n**Step 1.** $-1 - i$ is at angle $225^\\circ$ (check the signs of the real and imaginary parts).\n\n**Answer:** $225^\\circ$. **(C)**\n\n**Common mistake:** using the reference angle without adjusting for the quadrant."
+ },
+ {
+  "id": "cx_polar_b20",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cp_mult_polar",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is $(\\cos 66^\\circ + i\\sin 66^\\circ) \\cdot 3(\\cos 264^\\circ + i\\sin 264^\\circ)$ in the form $a + bi$?",
+  "choices": {
+   "A": "$-\\frac{3\\sqrt{3}}{2} + \\frac{3}{2}i$",
+   "B": "$\\frac{3}{2} + \\frac{3\\sqrt{3}}{2}i$",
+   "C": "$\\frac{3\\sqrt{3}}{2} - \\frac{3}{2}i$",
+   "D": "$\\frac{3\\sqrt{3}}{2} + \\frac{3}{2}i$",
+   "E": "$2\\sqrt{3} - 2i$"
+  },
+  "answer": "C",
+  "hints": [
+   "Multiply moduli, add angles."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $r_1\\,\\text{cis}\\,\\alpha \\cdot r_2\\,\\text{cis}\\,\\beta = r_1 r_2\\,\\text{cis}(\\alpha + \\beta)$.\n\n**Step 1.** Modulus $3$, angle $66 + 264 = 330^\\circ$.\n\n**Step 2.** $3(\\cos 330^\\circ + i\\sin 330^\\circ) = \\frac{3\\sqrt{3}}{2} - \\frac{3}{2}i$.\n\n**Answer:** $\\frac{3\\sqrt{3}}{2} - \\frac{3}{2}i$. **(C)**\n\n**Common mistake:** adding the moduli."
+ },
+ {
+  "id": "cx_polar_c01",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cpc1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the smallest positive integer $n$ such that $(\\cos 20^\\circ + i\\sin 20^\\circ)^n$ is a real number?",
+  "choices": {
+   "A": "$8$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$18$",
+   "E": "$20$"
+  },
+  "answer": "B",
+  "hints": [
+   "By De Moivre, the power multiplies the angle by $n$."
+  ],
+  "solution": "**What we need:** the smallest power that lands on the target.\n\n**Key idea:** a number of length $1$ at angle $\\theta$, raised to the $n$th power, sits at angle $n\\theta$.\n\n**Step 1.** By De Moivre, the power is $\\cos(20n)^\\circ + i\\sin(20n)^\\circ$.\n\n**Step 2.** It is real when $\\sin(20n)^\\circ = 0$, that is, when $20n$ is a multiple of $180$.\n\n**Step 3.** $\\gcd(20, 180) = 20$, so we need $1n$ to be a multiple of $9$. Since they share no factor, $n = 9$.\n\n**Answer:** $9$. **(B)**\n\n**Common mistake:** answering $\\frac{360}{20}$ even when it isn't a whole number."
+ },
+ {
+  "id": "cx_polar_c02",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cpc2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the real part of $(\\sqrt{3} + i)^{12}$?",
+  "choices": {
+   "A": "$-4096$",
+   "B": "$0$",
+   "C": "$2048$",
+   "D": "$2048\\sqrt{3}$",
+   "E": "$4096$"
+  },
+  "answer": "E",
+  "hints": [
+   "$\\sqrt{3} + i = 2(\\cos 30^\\circ + i\\sin 30^\\circ)$."
+  ],
+  "solution": "**What we need:** the real part of a large power.\n\n**Key idea:** switch to polar form and use De Moivre's Theorem; the real part is length times cosine.\n\n**Step 1.** $\\sqrt{3} + i$ has length $\\sqrt{3 + 1} = 2$ and angle $30^\\circ$ (since $\\tan\\theta = \\frac{1}{\\sqrt{3}}$).\n\n**Step 2.** Power: length $2^{12} = 4096$, angle $12 \\cdot 30^\\circ = 360^\\circ$, same direction as $0^\\circ$.\n\n**Step 3.** Real part: $4096 \\cos 0^\\circ = 4096 \\cdot 1 = 4096$.\n\n**Answer:** $4096$. **(E)**\n\n**Common mistake:** using the sine instead of the cosine for the real part."
+ },
+ {
+  "id": "cx_polar_c03",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cpc3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A complex number $z$ satisfies $z + \\dfrac{1}{z} = 2\\cos 30^\\circ$. What is $z^{5} + \\dfrac{1}{z^{5}}$?",
+  "choices": {
+   "A": "$-2$",
+   "B": "$-\\sqrt{3}$",
+   "C": "$-1$",
+   "D": "$1$",
+   "E": "$2$"
+  },
+  "answer": "B",
+  "hints": [
+   "Then $z = \\cos 30^\\circ \\pm i\\sin 30^\\circ$. Use De Moivre."
+  ],
+  "solution": "**What we need:** $z^{5} + z^{-5}$.\n\n**Key idea:** if $z = \\cos\\theta + i\\sin\\theta$, then $\\frac{1}{z} = \\cos\\theta - i\\sin\\theta$ and $z + \\frac{1}{z} = 2\\cos\\theta$. The same pattern holds for every power.\n\n**Step 1.** Solving the quadratic $z^2 - 2\\cos 30^\\circ \\, z + 1 = 0$ gives $z = \\cos 30^\\circ \\pm i\\sin 30^\\circ$.\n\n**Step 2.** De Moivre: $z^{5} = \\cos 150^\\circ \\pm i\\sin 150^\\circ$ and $z^{-5} = \\cos 150^\\circ \\mp i\\sin 150^\\circ$. The sines cancel.\n\n**Step 3.** So $z^{5} + z^{-5} = 2\\cos 150^\\circ = -\\sqrt{3}$.\n\n**Answer:** $-\\sqrt{3}$. **(B)**\n\n**Common mistake:** raising $2\\cos 30^\\circ$ to the $5$th power; the factor $2$ stays outside."
+ },
+ {
+  "id": "cx_polar_c04",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cpc_binomial_conj",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $(1 + i)^{6} + (1 - i)^{6}$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$2$",
+   "C": "$4$",
+   "D": "$8$",
+   "E": "$64$"
+  },
+  "answer": "A",
+  "hints": [
+   "The two terms are conjugates."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $(1 + i)^{6} = 2^{6/2}\\,\\text{cis}(270^\\circ)$; adding the conjugate doubles the real part.\n\n**Step 1.** $2 \\cdot 2^{6/2} \\cos 270^\\circ = 0$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** adding the imaginary parts too."
+ },
+ {
+  "id": "cx_polar_c05",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cpc_mixed_arg",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the argument of $(1 + i)^{8}(\\sqrt{3} + i)^{2}$, between $0^\\circ$ and $360^\\circ$?",
+  "choices": {
+   "A": "$30^\\circ$",
+   "B": "$60^\\circ$",
+   "C": "$240^\\circ$",
+   "D": "$300^\\circ$",
+   "E": "$330^\\circ$"
+  },
+  "answer": "B",
+  "hints": [
+   "Arguments add when multiplying."
+  ],
+  "solution": "**What we need:** the argument.\n\n**Key idea:** $\\arg(1 + i) = 45^\\circ$ and $\\arg(\\sqrt{3} + i) = 30^\\circ$.\n\n**Step 1.** $8 \\cdot 45 + 2 \\cdot 30 = 420$, which reduces to $60^\\circ$.\n\n**Answer:** $60^\\circ$. **(B)**\n\n**Common mistake:** mixing up the two arguments."
+ },
+ {
+  "id": "cx_polar_c06",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cpc_mod_sum",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Complex numbers $z$ and $w$ have $|z| = 9$, $|w| = 6$, and the angle between them (as vectors from $0$) is $90^\\circ$. What is $|z + w|$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$3\\sqrt{13}$",
+   "C": "$\\sqrt{118}$",
+   "D": "$15$",
+   "E": "$16$"
+  },
+  "answer": "B",
+  "hints": [
+   "Parallelogram rule."
+  ],
+  "solution": "**What we need:** $|z + w|$.\n\n**Key idea:** $|z + w|^2 = |z|^2 + |w|^2 + 2|z||w|\\cos\\theta$.\n\n**Step 1.** $81 + 36 + 2 \\cdot 9 \\cdot 6 \\cos 90^\\circ = 117$.\n\n**Step 2.** $|z + w| = 3\\sqrt{13}$.\n\n**Answer:** $3\\sqrt{13}$. **(B)**\n\n**Common mistake:** using the minus sign (that gives $|z - w|$)."
+ },
+ {
+  "id": "cx_polar_c07",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cpc_imag_1i",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the real part of $(1 + i)^{17}$?",
+  "choices": {
+   "A": "$-256$",
+   "B": "$256$",
+   "C": "$257$",
+   "D": "$512$",
+   "E": "$131072$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write $1 + i = \\sqrt{2}\\,\\text{cis}\\,45^\\circ$."
+  ],
+  "solution": "**What we need:** the real part.\n\n**Key idea:** $(1 + i)^{17} = 2^{17/2}\\,\\text{cis}(765^\\circ)$.\n\n**Step 1.** That equals $256 + 256i$.\n\n**Step 2.** Real part: $256$.\n\n**Answer:** $256$. **(B)**\n\n**Common mistake:** using $2^17$ for the modulus."
+ },
+ {
+  "id": "cx_polar_c08",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cpc_rotate_about",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "The point $5 - i$ is rotated $270^\\circ$ counterclockwise about $1 + 4i$. What is its image?",
+  "choices": {
+   "A": "$-5 - 4i$",
+   "B": "$-4 - 2i$",
+   "C": "$-4$",
+   "D": "$-1 - 5i$",
+   "E": "$6 + 8i$"
+  },
+  "answer": "C",
+  "hints": [
+   "Translate so the center is at 0, rotate, translate back."
+  ],
+  "solution": "**What we need:** the image.\n\n**Key idea:** $w = c + i^{3}(z - c)$.\n\n**Step 1.** $z - c = 4 - 5i$.\n\n**Step 2.** Rotate: $-5 - 4i$.\n\n**Step 3.** Add back $c$: $-4$.\n\n**Answer:** $-4$. **(C)**\n\n**Common mistake:** rotating about the origin."
+ },
+ {
+  "id": "cx_polar_c09",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cpc_unit_product",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the argument of $\\text{cis}\\,1^\\circ \\cdot \\text{cis}\\,2^\\circ \\cdots \\text{cis}\\,13^\\circ$, between $0^\\circ$ and $360^\\circ$?",
+  "choices": {
+   "A": "$0^\\circ$",
+   "B": "$13^\\circ$",
+   "C": "$91^\\circ$",
+   "D": "$269^\\circ$",
+   "E": "$271^\\circ$"
+  },
+  "answer": "C",
+  "hints": [
+   "Add the angles."
+  ],
+  "solution": "**What we need:** the argument.\n\n**Key idea:** $1 + 2 + \\cdots + 13 = 91$.\n\n**Step 1.** Reduced mod $360$: $91^\\circ$.\n\n**Answer:** $91^\\circ$. **(C)**\n\n**Common mistake:** multiplying the angles."
+ },
+ {
+  "id": "cx_polar_c10",
+  "skillId": "cx_polar",
+  "family": "cx_polar:cpc_root_args",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "The solutions of $z^{4} = \\text{cis}\\,120^\\circ$ are $\\text{cis}\\,\\theta_k$ with $0^\\circ \\le \\theta_k < 360^\\circ$. What is the sum of the $\\theta_k$?",
+  "choices": {
+   "A": "$30$",
+   "B": "$120$",
+   "C": "$540$",
+   "D": "$660$",
+   "E": "$1020$"
+  },
+  "answer": "D",
+  "hints": [
+   "The roots are equally spaced by $\\frac{360^\\circ}{4}$."
+  ],
+  "solution": "**What we need:** the sum of the angles.\n\n**Key idea:** $\\theta_k = \\frac{120 + 360k}{4}$ for $k = 0, \\ldots, 3$.\n\n**Step 1.** Angles: $30^\\circ$, $120^\\circ$, $210^\\circ$, $300^\\circ$.\n\n**Step 2.** Sum: $660^\\circ$.\n\n**Answer:** $660$. **(D)**\n\n**Common mistake:** only using one root."
+ },
+ {
+  "id": "cx_roots_unity_b01",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many complex numbers $z$ satisfy $z^{12} = 41$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$11$",
+   "D": "$12$",
+   "E": "$13$"
+  },
+  "answer": "D",
+  "hints": [
+   "Use Vieta's formulas on $z^n - 1 = 0$."
+  ],
+  "solution": "**What we need:** a fact about all the roots of $z^n = \\text{constant}$.\n\n**Key idea:** treat the equation as a polynomial and use the Fundamental Theorem of Algebra and Vieta's formulas.\n\n**Step 1.** $z^{12} - 41 = 0$ is a polynomial equation of degree $12$, so it has $12$ roots counted with multiplicity.\n\n**Step 2.** They are all different: they have the same length $\\sqrt[12]{41}$ and angles spaced $\\frac{360^\\circ}{12}$ apart.\n\n**Answer:** $12$. **(D)**\n\n**Common mistake:** counting only the real solutions."
+ },
+ {
+  "id": "cx_roots_unity_b02",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $\\omega$ be a complex number with $\\omega^3 = 1$ and $\\omega \\ne 1$. What is $\\omega^{118} + \\omega^{199}$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$2\\omega^2$",
+   "C": "$-\\omega$",
+   "D": "$2$",
+   "E": "$2\\omega$"
+  },
+  "answer": "E",
+  "hints": [
+   "Reduce the exponents mod 3, and use $1 + \\omega + \\omega^2 = 0$."
+  ],
+  "solution": "**What we need:** the sum of two big powers of $\\omega$.\n\n**Key idea:** since $\\omega^3 = 1$, only the exponent's remainder mod $3$ matters. Also $\\omega^3 - 1 = (\\omega - 1)(\\omega^2 + \\omega + 1) = 0$ with $\\omega \\ne 1$, so $1 + \\omega + \\omega^2 = 0$.\n\n**Step 1.** $118 = 3 \\cdot 39 + 1$, so $\\omega^{118} = \\omega$.\n\n**Step 2.** $199 = 3 \\cdot 66 + 1$, so $\\omega^{199} = \\omega$.\n\n**Step 3.** Add: $\\omega + \\omega = 2\\omega$.\n\n**Answer:** $2\\omega$. **(E)**\n\n**Common mistake:** reducing the exponents mod $2$ or mod $4$ instead of mod $3$."
+ },
+ {
+  "id": "cx_roots_unity_b03",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The solutions of $z^{12} = 1$ are the vertices of a regular polygon in the complex plane. What is its side length?",
+  "choices": {
+   "A": "$\\sqrt{2 - \\sqrt{3}}$",
+   "B": "$\\sqrt{2 - \\sqrt{2}}$",
+   "C": "$1$",
+   "D": "$\\sqrt{2}$",
+   "E": "$\\sqrt{3}$"
+  },
+  "answer": "A",
+  "hints": [
+   "The vertices lie on the unit circle, spaced $\\frac{360^\\circ}{n}$ apart."
+  ],
+  "solution": "**What we need:** the distance between two neighboring roots.\n\n**Key idea:** the roots lie on the unit circle, spaced $\\frac{360^\\circ}{12} = 30^\\circ$ apart. A side is a chord of the unit circle with a $30^\\circ$ central angle.\n\n**Step 1.** Take neighbors $1$ and $\\cos 30^\\circ + i\\sin 30^\\circ$. The triangle with the center has two sides of length $1$ and a $30^\\circ$ angle between them.\n\n**Step 2.** Law of Cosines: side$^2 = 1 + 1 - 2\\cos 30^\\circ = 2 - 2 \\cdot \\frac{\\sqrt{3}}{2}$.\n\n**Step 3.** Side $= \\sqrt{2 - \\sqrt{3}}$.\n\n**Answer:** $\\sqrt{2 - \\sqrt{3}}$. **(A)**\n\n**Common mistake:** using the radius ($1$) as the side; that only happens for the hexagon."
+ },
+ {
+  "id": "cx_roots_unity_b04",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many complex numbers $z$ satisfy both $z^{10} = 1$ and $z^{21} = 1$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$10$",
+   "D": "$11$",
+   "E": "$210$"
+  },
+  "answer": "A",
+  "hints": [
+   "The common roots are exactly the roots of $z^{\\gcd(n, m)} = 1$."
+  ],
+  "solution": "**What we need:** roots shared by both equations.\n\n**Key idea:** if $z^{10} = 1$ and $z^{21} = 1$, then $z^d = 1$ for any $d$ you can build as a combination of the exponents, including $\\gcd(10, 21)$.\n\n**Step 1.** $\\gcd(10, 21) = 1$, and by Bezout, $1 = 10u + 21v$ for some integers $u, v$. So $z^{1} = (z^{10})^u (z^{21})^v = 1$.\n\n**Step 2.** Conversely, every solution of $z^{1} = 1$ solves both, since $1$ divides $10$ and $21$.\n\n**Step 3.** So the common roots are the $1$ roots of $z^{1} = 1$.\n\n**Answer:** $1$. **(A)**\n\n**Common mistake:** using the least common multiple; that counts roots of either equation, not both."
+ },
+ {
+  "id": "cx_roots_unity_b05",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_product_all",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the product of all $8$ solutions of $z^{8} = 1$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$\\frac{1}{8}$",
+   "D": "$1$",
+   "E": "$8$"
+  },
+  "answer": "A",
+  "hints": [
+   "Vieta: the product of the roots of $z^n - 1$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** for $z^{8} - 1 = 0$, the product of roots is $(-1)^{8} \\cdot (-1) = (-1)^{9}$.\n\n**Step 1.** $(-1)^{9} = -1$.\n\n**Answer:** $-1$. **(A)**\n\n**Common mistake:** assuming the product is always 1."
+ },
+ {
+  "id": "cx_roots_unity_b06",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_omega_expr",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $\\omega \\ne 1$ satisfy $\\omega^3 = 1$. What is $\\omega + \\omega^2$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$2$",
+   "E": "$3$"
+  },
+  "answer": "A",
+  "hints": [
+   "Use $\\omega^2 + \\omega + 1 = 0$ and $\\omega^3 = 1$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** reduce powers mod 3 and replace $1 + \\omega$ with $-\\omega^2$ (and so on).\n\n**Step 1.** Simplifying gives $-1$.\n\n**Answer:** $-1$. **(A)**\n\n**Common mistake:** treating $\\omega$ as 1."
+ },
+ {
+  "id": "cx_roots_unity_b07",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_real_count",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many real solutions does $z^{16} = 1$ have?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$16$"
+  },
+  "answer": "C",
+  "hints": [
+   "Real solutions are $\\pm 1$ at most."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** check $z = 1$ and $z = -1$.\n\n**Step 1.** $1^{16} = 1$ and $(-1)^{16} = 1$.\n\n**Step 2.** Real solutions: $2$.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** counting all 16 roots."
+ },
+ {
+  "id": "cx_roots_unity_b08",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_primitive",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many solutions of $z^{15} = 1$ are not solutions of $z^m = 1$ for any positive $m < 15$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$14$",
+   "E": "$15$"
+  },
+  "answer": "B",
+  "hints": [
+   "These are the primitive roots."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $\\text{cis}\\frac{360^\\circ k}{15}$ is primitive exactly when $\\gcd(k, 15) = 1$.\n\n**Step 1.** $\\varphi(15) = 8$.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** counting all roots except 1."
+ },
+ {
+  "id": "cx_roots_unity_b09",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_filter_sum",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $\\omega \\ne 1$ with $\\omega^3 = 1$. What is $1 + \\omega^{27} + \\omega^{54}$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$2$",
+   "E": "$3$"
+  },
+  "answer": "E",
+  "hints": [
+   "Reduce $27$ mod 3."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** if $3 \\mid n$ every term is 1; otherwise the terms are $1, \\omega, \\omega^2$ in some order.\n\n**Step 1.** $27 \\equiv 0 \\pmod 3$, so the sum is $3$.\n\n**Answer:** $3$. **(E)**\n\n**Common mistake:** answering 0 every time."
+ },
+ {
+  "id": "cx_roots_unity_b10",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_half_plane",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many solutions of $z^{16} = 1$ have a positive real part?",
+  "choices": {
+   "A": "$6$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$14$",
+   "E": "$16$"
+  },
+  "answer": "B",
+  "hints": [
+   "Picture the regular 16-gon."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** the roots are at angles $\\frac{360^\\circ k}{16}$.\n\n**Step 1.** Counting angles in the right region (excluding boundary): $7$.\n\n**Answer:** $7$. **(B)**\n\n**Common mistake:** counting roots on the axes."
+ },
+ {
+  "id": "cx_roots_unity_b11",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_spacing",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the angle, in degrees, between two neighboring solutions of $z^{15} = 16$ (measured from the origin)?",
+  "choices": {
+   "A": "$12$",
+   "B": "$24$",
+   "C": "$\\frac{180}{7}$",
+   "D": "$48$",
+   "E": "$5400$"
+  },
+  "answer": "B",
+  "hints": [
+   "The roots are equally spaced."
+  ],
+  "solution": "**What we need:** the angle.\n\n**Key idea:** $15$ roots spread evenly around a circle.\n\n**Step 1.** $\\frac{360^\\circ}{15} = 24^\\circ$.\n\n**Answer:** $24$. **(B)**\n\n**Common mistake:** using $180^\\circ$."
+ },
+ {
+  "id": "cx_roots_unity_b12",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_dist_one",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{4} + i\\sin\\frac{2\\pi}{4}$. What is $|1 - \\omega|$?",
+  "choices": {
+   "A": "$\\frac{\\sqrt{6} + \\sqrt{2}}{4}$",
+   "B": "$\\frac{2\\sqrt{3}}{3}$",
+   "C": "$\\sqrt{2}$",
+   "D": "$\\frac{3}{2}$",
+   "E": "$2$"
+  },
+  "answer": "C",
+  "hints": [
+   "Chord length."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** $|1 - \\omega| = 2\\sin\\frac{180^\\circ}{4}$.\n\n**Step 1.** $2\\sin 45^\\circ = \\sqrt{2}$.\n\n**Answer:** $\\sqrt{2}$. **(C)**\n\n**Common mistake:** forgetting the factor of 2."
+ },
+ {
+  "id": "cx_roots_unity_b13",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_modulus",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "All solutions of $z^{6} = 4096$ lie on a circle centered at the origin. What is its radius?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$24$",
+   "D": "$\\frac{2048}{3}$",
+   "E": "$4096$"
+  },
+  "answer": "A",
+  "hints": [
+   "$|z|^6 = 4096$."
+  ],
+  "solution": "**What we need:** the radius.\n\n**Key idea:** take moduli of both sides.\n\n**Step 1.** $|z| = \\sqrt[6]{4096} = 4$.\n\n**Answer:** $4$. **(A)**\n\n**Common mistake:** dividing by 6."
+ },
+ {
+  "id": "cx_roots_unity_b14",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_conj_power",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{11} + i\\sin\\frac{2\\pi}{11}$. For what $k$ with $0 < k < 11$ is $\\overline{\\omega} = \\omega^k$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$5$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$12$"
+  },
+  "answer": "D",
+  "hints": [
+   "$\\overline{\\omega} = \\frac{1}{\\omega}$ for $|\\omega| = 1$."
+  ],
+  "solution": "**What we need:** $k$.\n\n**Key idea:** $\\frac{1}{\\omega} = \\omega^{11 - 1}$ since $\\omega^{11} = 1$.\n\n**Step 1.** $k = 10$.\n\n**Answer:** $10$. **(D)**\n\n**Common mistake:** answering $-1$, which is not in range."
+ },
+ {
+  "id": "cx_roots_unity_b15",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_reduce",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{13} + i\\sin\\frac{2\\pi}{13}$. If $\\omega^{22} \\cdot \\omega^{62} = \\omega^k$ with $0 \\le k < 13$, what is $k$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$12$",
+   "E": "$84$"
+  },
+  "answer": "B",
+  "hints": [
+   "Add exponents, then reduce mod 13."
+  ],
+  "solution": "**What we need:** $k$.\n\n**Key idea:** $\\omega^{13} = 1$.\n\n**Step 1.** $22 + 62 = 84 \\equiv 6 \\pmod{13}$.\n\n**Answer:** $6$. **(B)**\n\n**Common mistake:** multiplying the exponents."
+ },
+ {
+  "id": "cx_roots_unity_b16",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_common_neg",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many complex numbers satisfy both $z^{9} = 1$ and $z^{3} = -1$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "A",
+  "hints": [
+   "Write each root as a fraction of a full turn."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** roots of $z^{9} = 1$ are at $\\frac{k}{9}$ of a turn; roots of $z^{3} = -1$ are at $\\frac{2j + 1}{6}$ of a turn.\n\n**Step 1.** Common fractions: $0$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** using $\\gcd(9, 3)$ as if both equations were $= 1$."
+ },
+ {
+  "id": "cx_roots_unity_b17",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_eisenstein",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $\\omega = -\\frac{1}{2} + \\frac{\\sqrt{3}}{2}i$. What is $|4 + 6\\omega|^2$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$28$",
+   "C": "$29$",
+   "D": "$52$",
+   "E": "$76$"
+  },
+  "answer": "B",
+  "hints": [
+   "Expand with $\\omega + \\overline{\\omega} = -1$ and $\\omega\\overline{\\omega} = 1$."
+  ],
+  "solution": "**What we need:** the squared modulus.\n\n**Key idea:** $|a + b\\omega|^2 = (a + b\\omega)(a + b\\overline{\\omega}) = a^2 + ab(\\omega + \\overline{\\omega}) + b^2$.\n\n**Step 1.** $16 - 24 + 36 = 28$.\n\n**Answer:** $28$. **(B)**\n\n**Common mistake:** using $+ab$."
+ },
+ {
+  "id": "cx_roots_unity_b18",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_power_sum",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $z_1, z_2, \\ldots, z_{4}$ be the solutions of $z^{4} = 1$. What is $z_1^{21} + z_2^{21} + \\cdots + z_{4}^{21}$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$4$",
+   "E": "$21$"
+  },
+  "answer": "B",
+  "hints": [
+   "Is 21 a multiple of 4?"
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** if $4 \\nmid k$, the $k$th powers are again a full set of roots (with repeats) summing to $0$; if $4 \\mid k$, every term is $1$.\n\n**Step 1.** $21 \\bmod 4 = 1$, so the sum is $0$.\n\n**Answer:** $0$. **(B)**\n\n**Common mistake:** answering 0 regardless."
+ },
+ {
+  "id": "cx_roots_unity_b19",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_order",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the smallest positive integer $n$ such that $\\left(\\cos\\frac{38\\pi}{27} + i\\sin\\frac{38\\pi}{27}\\right)^n = 1$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$8$",
+   "C": "$19$",
+   "D": "$27$",
+   "E": "$54$"
+  },
+  "answer": "D",
+  "hints": [
+   "Reduce the fraction $\\frac{19}{27}$."
+  ],
+  "solution": "**What we need:** $n$.\n\n**Key idea:** we need $\\frac{19n}{27}$ to be an integer.\n\n**Step 1.** $\\frac{19}{27} = \\frac{19}{27}$ in lowest terms, so $n = 27$.\n\n**Answer:** $27$. **(D)**\n\n**Common mistake:** answering 27 without reducing."
+ },
+ {
+  "id": "cx_roots_unity_b20",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ru_sum_all",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of all solutions of $z^{7} = 2187$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$3$",
+   "D": "$7$",
+   "E": "$21$"
+  },
+  "answer": "A",
+  "hints": [
+   "Vieta, or symmetry."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $z^{7} - c = 0$ has no $z^{6}$ term, so the roots sum to $0$.\n\n**Step 1.** The roots are evenly spaced around a circle, and they cancel.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** adding the moduli."
+ },
+ {
+  "id": "cx_roots_unity_c01",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ruc1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{6} + i\\sin\\frac{2\\pi}{6}$. What is $1 + \\omega + \\omega^2 + \\cdots + \\omega^{35}$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$6$",
+   "E": "$36$"
+  },
+  "answer": "B",
+  "hints": [
+   "Every block of $6$ consecutive powers adds to $0$."
+  ],
+  "solution": "**What we need:** the sum of the powers of $\\omega$.\n\n**Key idea:** $\\omega$ is a primitive $6$th root of unity: $\\omega^{6} = 1$, and $1 + \\omega + \\cdots + \\omega^{5} = \\frac{\\omega^{6} - 1}{\\omega - 1} = 0$.\n\n**Step 1.** The sum has $36$ terms (from $\\omega^0$ to $\\omega^{35}$).\n\n**Step 2.** $36 = 6 \\cdot 6 + 0$: $6$ full blocks of $6$, each worth $0$.\n\n**Step 3.** There are no leftover terms.\n\n**Answer:** $0$. **(B)**\n\n**Common mistake:** forgetting the $1 = \\omega^0$ at the start, which changes the term count to $35$."
+ },
+ {
+  "id": "cx_roots_unity_c02",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ruc2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $\\omega_1, \\omega_2, \\ldots, \\omega_{5}$ be the solutions of $z^{6} = 1$ other than $z = 1$. What is $(2 - \\omega_1)(2 - \\omega_2)\\cdots(2 - \\omega_{5})$?",
+  "choices": {
+   "A": "$\\frac{65}{3}$",
+   "B": "$32$",
+   "C": "$62$",
+   "D": "$63$",
+   "E": "$64$"
+  },
+  "answer": "D",
+  "hints": [
+   "$z^n - 1 = (z - 1)(z - \\omega_1)\\cdots(z - \\omega_{n - 1})$, so the product of the other factors is $1 + z + \\cdots + z^{n-1}$."
+  ],
+  "solution": "**What we need:** the product of $(2 - \\omega_k)$ over every root except $1$.\n\n**Key idea:** a polynomial equals its leading coefficient times the product of $(z - \\text{root})$. Plug in a number to evaluate the product.\n\n**Step 1.** $z^{6} - 1 = (z - 1)(z - \\omega_1)\\cdots(z - \\omega_{5})$.\n\n**Step 2.** Also $z^{6} - 1 = (z - 1)(1 + z + z^2 + \\cdots + z^{5})$, so $(z - \\omega_1)\\cdots(z - \\omega_{5}) = 1 + z + \\cdots + z^{5}$.\n\n**Step 3.** At $z = 2$: $1 + 2 + \\cdots + 2^{5} = \\frac{2^{6} - 1}{2 - 1} = \\frac{63}{1} = 63$.\n\n**Answer:** $63$. **(D)**\n\n**Common mistake:** answering $2^{6} - 1$, which still includes the factor $(2 - 1)$ from the root $z = 1$."
+ },
+ {
+  "id": "cx_roots_unity_c03",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ruc3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $\\omega^2 + \\omega + 1 = 0$, what is $\\omega^{77} + \\dfrac{1}{\\omega^{77}}$?",
+  "choices": {
+   "A": "$-2$",
+   "B": "$-1$",
+   "C": "$0$",
+   "D": "$1$",
+   "E": "$2$"
+  },
+  "answer": "B",
+  "hints": [
+   "Multiply $\\omega^2 + \\omega + 1 = 0$ by $\\omega - 1$ to see $\\omega^3 = 1$."
+  ],
+  "solution": "**What we need:** $\\omega^{77} + \\omega^{-77}$.\n\n**Key idea:** multiply $\\omega^2 + \\omega + 1 = 0$ by $(\\omega - 1)$: $\\omega^3 - 1 = 0$, so $\\omega^3 = 1$. Then exponents only matter mod $3$.\n\n**Step 1.** $77 = 3 \\cdot 25 + 2$, so $\\omega^{77} = \\omega^{2}$.\n\n**Step 2.** $\\frac{1}{\\omega^{2}} = \\omega^{1}$ (because $\\omega^{2} \\cdot \\omega^{1} = \\omega^3 = 1$).\n\n**Step 3.** So the sum is $\\omega + \\omega^2 = -1$.\n\n**Answer:** $-1$. **(B)**\n\n**Common mistake:** forgetting that $\\frac{1}{\\omega} = \\omega^2$ when $\\omega^3 = 1$."
+ },
+ {
+  "id": "cx_roots_unity_c04",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ruc_one_minus",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $\\omega_1, \\ldots, \\omega_{5}$ be the solutions of $z^{6} = 1$ other than $1$. What is $(1 - \\omega_1)(1 - \\omega_2)\\cdots(1 - \\omega_{5})$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$63$"
+  },
+  "answer": "D",
+  "hints": [
+   "Factor $z^n - 1$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $\\frac{z^{6} - 1}{z - 1} = 1 + z + \\cdots + z^{5} = \\prod (z - \\omega_k)$.\n\n**Step 1.** At $z = 1$: $1 + 1 + \\cdots + 1 = 6$.\n\n**Answer:** $6$. **(D)**\n\n**Common mistake:** plugging in $z = 1$ before dividing (getting 0)."
+ },
+ {
+  "id": "cx_roots_unity_c05",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ruc_recip_sum",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $\\omega_1, \\ldots, \\omega_{11}$ be the solutions of $z^{12} = 1$ other than $1$. What is $\\displaystyle\\sum_{k=1}^{11} \\frac{1}{1 - \\omega_k}$?",
+  "choices": {
+   "A": "$\\frac{1}{2}$",
+   "B": "$\\frac{11}{2}$",
+   "C": "$6$",
+   "D": "$\\frac{13}{2}$",
+   "E": "$11$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair $\\omega$ with $\\overline{\\omega}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\frac{1}{1 - \\omega} + \\frac{1}{1 - \\overline{\\omega}} = 1$ when $|\\omega| = 1$, so each conjugate pair contributes $1$ (and $\\omega = -1$, if present, gives $\\frac{1}{2}$).\n\n**Step 1.** Total: $\\frac{11}{2} = \\frac{11}{2}$.\n\n**Answer:** $\\frac{11}{2}$. **(B)**\n\n**Common mistake:** assuming the sum is 0."
+ },
+ {
+  "id": "cx_roots_unity_c06",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ruc_one_plus_omega",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $\\omega \\ne 1$ satisfy $\\omega^3 = 1$. What is $(1 + \\omega)^{9}$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$3$",
+   "E": "$512$"
+  },
+  "answer": "A",
+  "hints": [
+   "$1 + \\omega = -\\omega^2$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $(1 + \\omega)^{9} = (-\\omega^2)^{9} = (-1)^{9}\\omega^{18}$.\n\n**Step 1.** $\\omega^{18} = 1$, so the value is $(-1)^{3} = -1$.\n\n**Answer:** $-1$. **(A)**\n\n**Common mistake:** treating $\\omega$ as 1."
+ },
+ {
+  "id": "cx_roots_unity_c07",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ruc_filter",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\binom{9}{1} + \\binom{9}{4} + \\binom{9}{7} + \\cdots$ (all $\\binom{9}{k}$ with $k \\equiv 1 \\pmod 3$)?",
+  "choices": {
+   "A": "$170$",
+   "B": "$171$",
+   "C": "$172$",
+   "D": "$173$",
+   "E": "$256$"
+  },
+  "answer": "B",
+  "hints": [
+   "Roots of unity filter."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** average $(1 + \\zeta)^{9}\\zeta^{-1}$ over all $3$th roots of unity $\\zeta$.\n\n**Step 1.** This gives $171$ (close to, but not exactly, $\\frac{2^{9}}{3}$).\n\n**Answer:** $171$. **(B)**\n\n**Common mistake:** assuming exactly $\\frac{1}{3}$ of $2^9$."
+ },
+ {
+  "id": "cx_roots_unity_c08",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ruc_cos_sum",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\displaystyle\\sum_{k=1}^{2} \\cos\\frac{2k\\pi}{5}$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$-\\frac{1}{2}$",
+   "C": "$0$",
+   "D": "$\\frac{2}{5}$",
+   "E": "$\\frac{1}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use the real parts of the 5th roots of unity."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the $5$th roots sum to $0$; the real parts give $1 + 2\\sum_{k=1}^{2} \\cos\\frac{2k\\pi}{5} = 0$.\n\n**Step 1.** So the sum is $-\\frac{1}{2}$.\n\n**Answer:** $-\\frac{1}{2}$. **(B)**\n\n**Common mistake:** forgetting the root $1$."
+ },
+ {
+  "id": "cx_roots_unity_c09",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ruc_partial",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $\\omega = \\cos\\frac{2\\pi}{6} + i\\sin\\frac{2\\pi}{6}$. What is $|1 + \\omega + \\cdots + \\omega^{4}|^2$?",
+  "choices": {
+   "A": "$\\frac{1}{2}$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$5$",
+   "E": "$25$"
+  },
+  "answer": "B",
+  "hints": [
+   "Geometric series: $\\frac{1 - \\omega^{5}}{1 - \\omega}$."
+  ],
+  "solution": "**What we need:** the squared modulus.\n\n**Key idea:** $|1 - \\omega^{k}| = 2\\sin\\frac{k\\pi}{6}$.\n\n**Step 1.** $\\frac{\\sin^2(5\\pi/6)}{\\sin^2(\\pi/6)} = 1$.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** adding the moduli of the terms."
+ },
+ {
+  "id": "cx_roots_unity_c10",
+  "skillId": "cx_roots_unity",
+  "family": "cx_roots_unity:ruc_quad_omega",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $\\omega \\ne 1$ satisfy $\\omega^3 = 1$. What is $(4 + \\omega)(4 + \\omega^2)$?",
+  "choices": {
+   "A": "$13$",
+   "B": "$14$",
+   "C": "$15$",
+   "D": "$17$",
+   "E": "$21$"
+  },
+  "answer": "A",
+  "hints": [
+   "Expand and use $\\omega + \\omega^2 = -1$, $\\omega^3 = 1$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $(4 + \\omega)(4 + \\omega^2) = 16 + 4(\\omega + \\omega^2) + \\omega^3$.\n\n**Step 1.** $= 16 - 4 + 1 = 13$.\n\n**Answer:** $13$. **(A)**\n\n**Common mistake:** using $\\omega + \\omega^2 = 1$."
+ }
+]

@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "con_parabolas_b01",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpar1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the radius of the circle $x^2 + y^2 + 4x - 8y - 61 = 0$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$81$"
+  },
+  "answer": "C",
+  "hints": [
+   "Complete the square in $x$ and in $y$."
+  ],
+  "solution": "**What we need:** the radius.\n\n**Key idea:** complete the square in $x$ and in $y$ to reach the form $(x - h)^2 + (y - k)^2 = r^2$.\n\n**Step 1.** $x^2 + 4x = (x + 2)^2 - 4$ (half of $4$ is $2$, squared is $4$).\n\n**Step 2.** $y^2 - 8y = (y - 4)^2 - 16$.\n\n**Step 3.** Substitute: $(x + 2)^2 + (y - 4)^2 = 4 + 16 - (-61) = 81$.\n\n**Step 4.** $r^2 = 81$, so $r = 9$.\n\n**Answer:** $9$. **(C)**\n\n**Common mistake:** answering $r^2 = 81$ instead of $r$."
+ },
+ {
+  "id": "con_parabolas_b02",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpar2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of the coordinates of the vertex of the parabola $y = -x^{2} - 4x - 9$?",
+  "choices": {
+   "A": "$-9$",
+   "B": "$-7$",
+   "C": "$-5$",
+   "D": "$-2$",
+   "E": "$3$"
+  },
+  "answer": "B",
+  "hints": [
+   "The vertex is at $x = -\\frac{b}{2a}$."
+  ],
+  "solution": "**What we need:** $h + k$ for the vertex $(h, k)$.\n\n**Key idea:** for $y = ax^2 + bx + c$, the vertex is on the axis of symmetry $x = -\\frac{b}{2a}$. Plug that $x$ back in to get $y$.\n\n**Step 1.** $a = -1$, $b = -4$: $x = -\\frac{-4}{2 \\cdot -1} = -2$.\n\n**Step 2.** $y = -1 \\cdot (-2)^2 + (-4)(-2) + (-9) = -5$.\n\n**Step 3.** Sum: $-2 + (-5) = -7$.\n\n**Answer:** $-7$. **(B)**\n\n**Common mistake:** forgetting the minus sign in $-\\frac{b}{2a}$."
+ },
+ {
+  "id": "con_parabolas_b03",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpar3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The parabola $y = \\frac{1}{12}x^2$ has its focus at $(0, f)$. What is $f$?",
+  "choices": {
+   "A": "$-3$",
+   "B": "$\\frac{1}{12}$",
+   "C": "$3$",
+   "D": "$6$",
+   "E": "$12$"
+  },
+  "answer": "C",
+  "hints": [
+   "The parabola $y = \\frac{1}{4p}x^2$ has focus $(0, p)$."
+  ],
+  "solution": "**What we need:** the focus height $f$.\n\n**Key idea:** the parabola $y = \\frac{1}{4p}x^2$ has vertex at the origin, focus at $(0, p)$, and directrix $y = -p$.\n\n**Step 1.** Match: $\\frac{1}{4p} = \\frac{1}{12}$.\n\n**Step 2.** $4p = 12$, so $p = 3$.\n\n**Step 3.** The focus is $(0, 3)$.\n\n**Answer:** $3$. **(C)**\n\n**Common mistake:** using the coefficient itself as $p$; it equals $\\frac{1}{4p}$."
+ },
+ {
+  "id": "con_parabolas_b04",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpar4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many points do the parabola $y = x^2$ and the line $y = x + 9$ have in common?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "Set the expressions equal and check the discriminant."
+  ],
+  "solution": "**What we need:** the number of intersection points.\n\n**Key idea:** every intersection gives a solution of the equation you get by setting the two $y$ values equal. The discriminant counts real solutions.\n\n**Step 1.** $x^2 = x + 9$, so $x^{2} - x - 9 = 0$.\n\n**Step 2.** Discriminant: $b^2 - 4ac = (-1)^2 - 4(1)(-9) = 37$.\n\n**Step 3.** It is positive, so two real solutions.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** sign errors when moving the line's terms to the left side."
+ },
+ {
+  "id": "con_parabolas_b05",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_center",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of the coordinates of the center of $x^2 + y^2 + 2x - 12y + 36 = 0$?",
+  "choices": {
+   "A": "$-10$",
+   "B": "$-7$",
+   "C": "$-5$",
+   "D": "$1$",
+   "E": "$5$"
+  },
+  "answer": "E",
+  "hints": [
+   "Complete the squares."
+  ],
+  "solution": "**What we need:** the coordinate sum.\n\n**Key idea:** the center is $\\left(-\\frac{D}{2}, -\\frac{E}{2}\\right)$.\n\n**Step 1.** Center $(-1, 6)$; sum $5$.\n\n**Answer:** $5$. **(E)**\n\n**Common mistake:** forgetting to halve and negate."
+ },
+ {
+  "id": "con_parabolas_b06",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_directrix",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the $y$-coordinate of the directrix of $y = 4x^2$?",
+  "choices": {
+   "A": "$-16$",
+   "B": "$-\\frac{1}{8}$",
+   "C": "$-\\frac{1}{16}$",
+   "D": "$\\frac{1}{16}$",
+   "E": "$16$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write it as $x^2 = 4py$."
+  ],
+  "solution": "**What we need:** the directrix.\n\n**Key idea:** for $x^2 = 4py$, the focus is $(0, p)$ and the directrix is $y = -p$.\n\n**Step 1.** $x^2 = \\frac{1}{4}y$, so $p = \\frac{1}{16}$.\n\n**Step 2.** Directrix: $y = -\\frac{1}{16}$.\n\n**Answer:** $-\\frac{1}{16}$. **(C)**\n\n**Common mistake:** giving the focus instead."
+ },
+ {
+  "id": "con_parabolas_b07",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_axis",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the axis of symmetry of $y = 3x^{2} - 11x - 3$? Give the $x$-value.",
+  "choices": {
+   "A": "$-3$",
+   "B": "$-\\frac{11}{6}$",
+   "C": "$\\frac{11}{6}$",
+   "D": "$\\frac{17}{6}$",
+   "E": "$\\frac{11}{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "$x = -\\frac{b}{2a}$."
+  ],
+  "solution": "**What we need:** the axis.\n\n**Key idea:** the vertex formula.\n\n**Step 1.** $-\\frac{-11}{2 \\cdot 3} = \\frac{11}{6}$.\n\n**Answer:** $\\frac{11}{6}$. **(C)**\n\n**Common mistake:** forgetting the 2."
+ },
+ {
+  "id": "con_parabolas_b08",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_min",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the minimum value of $y = 2x^{2} - 16x + 28$?",
+  "choices": {
+   "A": "$-4$",
+   "B": "$-2$",
+   "C": "$4$",
+   "D": "$28$",
+   "E": "$32$"
+  },
+  "answer": "A",
+  "hints": [
+   "Complete the square."
+  ],
+  "solution": "**What we need:** the minimum.\n\n**Key idea:** $y = 2(x - 4)^2 - 4$.\n\n**Step 1.** Minimum at $x = 4$: $y = -4$.\n\n**Answer:** $-4$. **(A)**\n\n**Common mistake:** giving the $x$-coordinate."
+ },
+ {
+  "id": "con_parabolas_b09",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_point_circle",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A circle centered at $(4, 3)$ passes through $(-7, 0)$. What is $r^2$?",
+  "choices": {
+   "A": "$14$",
+   "B": "$18$",
+   "C": "$49$",
+   "D": "$130$",
+   "E": "$131$"
+  },
+  "answer": "D",
+  "hints": [
+   "Distance squared."
+  ],
+  "solution": "**What we need:** $r^2$.\n\n**Key idea:** $r^2 = (x - h)^2 + (y - k)^2$.\n\n**Step 1.** $((-11))^2 + ((-3))^2 = 130$.\n\n**Answer:** $130$. **(D)**\n\n**Common mistake:** adding the coordinates instead of subtracting."
+ },
+ {
+  "id": "con_parabolas_b10",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_diameter",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A circle has a diameter with endpoints $(-4, -5)$ and $(1, 4)$. What is $r^2$?",
+  "choices": {
+   "A": "$\\frac{5}{2}$",
+   "B": "$\\frac{53}{2}$",
+   "C": "$\\frac{55}{2}$",
+   "D": "$53$",
+   "E": "$106$"
+  },
+  "answer": "B",
+  "hints": [
+   "The radius is half the diameter."
+  ],
+  "solution": "**What we need:** $r^2$.\n\n**Key idea:** $r^2 = \\frac{d^2}{4}$.\n\n**Step 1.** $d^2 = 106$.\n\n**Step 2.** $r^2 = \\frac{53}{2}$.\n\n**Answer:** $\\frac{53}{2}$. **(B)**\n\n**Common mistake:** using $d^2$ as $r^2$."
+ },
+ {
+  "id": "con_parabolas_b11",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_y_ints",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the distance between the $y$-intercepts of the circle $(x - 6)^2 + (y - 2)^2 = 100$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$10$",
+   "C": "$12$",
+   "D": "$16$",
+   "E": "$20$"
+  },
+  "answer": "D",
+  "hints": [
+   "Set $x = 0$."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** $x = 0$ gives $(y - 2)^2 = 100 - 36 = 64$.\n\n**Step 1.** $y = 2 \\pm 8$; distance $16$.\n\n**Answer:** $16$. **(D)**\n\n**Common mistake:** forgetting the factor of 2."
+ },
+ {
+  "id": "con_parabolas_b12",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_x_ints",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the distance between the $x$-intercepts of $y = -x^{2} + 10x - 21$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$6$",
+   "C": "$10$",
+   "D": "$16$",
+   "E": "$21$"
+  },
+  "answer": "A",
+  "hints": [
+   "Find the roots."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** factor to find the two roots.\n\n**Step 1.** Roots $7$ and $3$; distance $4$.\n\n**Answer:** $4$. **(A)**\n\n**Common mistake:** adding the roots."
+ },
+ {
+  "id": "con_parabolas_b13",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_focus",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The parabola $y = -(x - 4)^2 + 3$ has focus $(a, b)$. What is $a + b$?",
+  "choices": {
+   "A": "$-\\frac{27}{4}$",
+   "B": "$6$",
+   "C": "$\\frac{27}{4}$",
+   "D": "$7$",
+   "E": "$\\frac{29}{4}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write as $(x - h)^2 = 4p(y - k)$."
+  ],
+  "solution": "**What we need:** $a + b$.\n\n**Key idea:** $4p = -1$, so $p = -\\frac{1}{4}$; the focus is $(h, k + p)$.\n\n**Step 1.** Focus $(4, \\frac{11}{4})$; sum $\\frac{27}{4}$.\n\n**Answer:** $\\frac{27}{4}$. **(C)**\n\n**Common mistake:** subtracting $p$."
+ },
+ {
+  "id": "con_parabolas_b14",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_latus",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the length of the latus rectum of $x^2 = 28y$ (the chord through the focus perpendicular to the axis)?",
+  "choices": {
+   "A": "$7$",
+   "B": "$14$",
+   "C": "$28$",
+   "D": "$29$",
+   "E": "$56$"
+  },
+  "answer": "C",
+  "hints": [
+   "Latus rectum $= 4p$."
+  ],
+  "solution": "**What we need:** the length.\n\n**Key idea:** $4p = 28$.\n\n**Step 1.** At the focus, the half-width is $2p = 14$; full length $28$.\n\n**Answer:** $28$. **(C)**\n\n**Common mistake:** using $2p$."
+ },
+ {
+  "id": "con_parabolas_b15",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_area",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the area of the circle $x^2 + y^2 + 16x - 12y + 36 = 0$?",
+  "choices": {
+   "A": "$8\\pi$",
+   "B": "$16\\pi$",
+   "C": "$36\\pi$",
+   "D": "$64\\pi$",
+   "E": "$128\\pi$"
+  },
+  "answer": "D",
+  "hints": [
+   "Complete the squares to find $r^2$."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** $r^2 = \\left(\\frac{D}{2}\\right)^2 + \\left(\\frac{E}{2}\\right)^2 - F$.\n\n**Step 1.** $r^2 = 64 + 36 - 36 = 64$.\n\n**Step 2.** Area: $64\\pi$.\n\n**Answer:** $64\\pi$. **(D)**\n\n**Common mistake:** using $|F|$ as $r^2$."
+ },
+ {
+  "id": "con_parabolas_b16",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_tangent_k",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "For what $k$ is the line $y = 5x + k$ tangent to $y = \\frac{1}{2}x^2$?",
+  "choices": {
+   "A": "$-\\frac{25}{2}$",
+   "B": "$-\\frac{23}{2}$",
+   "C": "$-\\frac{5}{2}$",
+   "D": "$\\frac{25}{2}$",
+   "E": "$25$"
+  },
+  "answer": "A",
+  "hints": [
+   "Set equal; the discriminant must be 0."
+  ],
+  "solution": "**What we need:** $k$.\n\n**Key idea:** $\\frac{1}{2}x^2 - 5x - k = 0$ needs $(5)^2 + 4 \\cdot \\frac{1}{2} k = 0$.\n\n**Step 1.** $k = -\\frac{25}{2} = -\\frac{25}{2}$.\n\n**Answer:** $-\\frac{25}{2}$. **(A)**\n\n**Common mistake:** dropping the negative sign."
+ },
+ {
+  "id": "con_parabolas_b17",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_two_circles",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Circles of radius $5$ and $6$ have centers $7$ apart. How many points do they have in common?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "Compare the distance with $r_1 + r_2$ and $|r_1 - r_2|$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** two circles meet twice when $|r_1 - r_2| < d < r_1 + r_2$, once at equality, and not at all otherwise.\n\n**Step 1.** $r_1 + r_2 = 11$, $|r_1 - r_2| = 1$, $d = 7$.\n\n**Step 2.** So $2$ common points.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** ignoring internal tangency."
+ },
+ {
+  "id": "con_parabolas_b18",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_through",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The parabola $y = x^2 + bx + c$ passes through $(-3, 6)$ and $(0, -6)$. What is $c$?",
+  "choices": {
+   "A": "$-7$",
+   "B": "$-6$",
+   "C": "$-5$",
+   "D": "$-1$",
+   "E": "$6$"
+  },
+  "answer": "B",
+  "hints": [
+   "Two equations, two unknowns."
+  ],
+  "solution": "**What we need:** $c$.\n\n**Key idea:** substitute both points and subtract to find $b$.\n\n**Step 1.** $6 = 9 - 3b + c$ and $-6 = 0 + 0b + c$.\n\n**Step 2.** $b = -1$, $c = -6$.\n\n**Answer:** $-6$. **(B)**\n\n**Common mistake:** solving for $b$ and stopping."
+ },
+ {
+  "id": "con_parabolas_b19",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_focal_dist",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The point $P$ on the parabola $y^2 = 16x$ has $x$-coordinate $16$. How far is $P$ from the focus?",
+  "choices": {
+   "A": "$12$",
+   "B": "$16$",
+   "C": "$20$",
+   "D": "$21$",
+   "E": "$32$"
+  },
+  "answer": "C",
+  "hints": [
+   "Distance to the focus equals distance to the directrix."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** focus $(4, 0)$, directrix $x = -4$.\n\n**Step 1.** Distance to directrix: $16 + 4 = 20$.\n\n**Answer:** $20$. **(C)**\n\n**Common mistake:** forgetting to add $p$."
+ },
+ {
+  "id": "con_parabolas_b20",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpa_chord",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The line $y = -6$ cuts the circle $x^2 + y^2 = 100$. How long is the chord?",
+  "choices": {
+   "A": "$8$",
+   "B": "$10$",
+   "C": "$12$",
+   "D": "$16$",
+   "E": "$20$"
+  },
+  "answer": "D",
+  "hints": [
+   "Set $y = -6$."
+  ],
+  "solution": "**What we need:** the chord length.\n\n**Key idea:** $x^2 = 100 - 36 = 64$.\n\n**Step 1.** $x = \\pm 8$; chord $16$.\n\n**Answer:** $16$. **(D)**\n\n**Common mistake:** forgetting the factor of 2."
+ },
+ {
+  "id": "con_parabolas_c01",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cparc1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Circles of radius $8$ and $13$ have centers $16$ units apart. What is the length of their common chord?",
+  "choices": {
+   "A": "$5$",
+   "B": "$\\frac{\\sqrt{42735}}{32}$",
+   "C": "$8$",
+   "D": "$\\frac{\\sqrt{42735}}{16}$",
+   "E": "$2\\sqrt{65}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Put one center at the origin and the other at $(d, 0)$. Subtract the circle equations to find the chord's $x$-coordinate."
+  ],
+  "solution": "**What we need:** the chord through both intersection points.\n\n**Key idea:** put the centers at $(0, 0)$ and $(16, 0)$. The chord is vertical, and subtracting the two circle equations gives its $x$-coordinate.\n\n**Step 1.** Circles: $x^2 + y^2 = 64$ and $(x - 16)^2 + y^2 = 169$.\n\n**Step 2.** Subtract: $x^2 - (x - 16)^2 = 64 - 169$, so $32x - 256 = -105$ and $x = \\frac{151}{32}$.\n\n**Step 3.** Half the chord: $y^2 = 64 - \\left(\\frac{151}{32}\\right)^2 = \\frac{42735}{1024}$, so $y = \\frac{\\sqrt{42735}}{32}$.\n\n**Step 4.** The chord is $2y = \\frac{\\sqrt{42735}}{16}$.\n\n**Answer:** $\\frac{\\sqrt{42735}}{16}$. **(D)**\n\n**Common mistake:** forgetting to double the half chord."
+ },
+ {
+  "id": "con_parabolas_c02",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cparc2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the distance from the origin to the vertex of $y = x^2 - 4x + 7$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$\\sqrt{13}$",
+   "C": "$\\sqrt{14}$",
+   "D": "$5$",
+   "E": "$\\sqrt{53}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the vertex by completing the square."
+  ],
+  "solution": "**What we need:** the distance from $(0, 0)$ to the vertex.\n\n**Key idea:** complete the square to read off the vertex, then use the distance formula.\n\n**Step 1.** $x^2 - 4x + 7 = (x - 2)^2 - 4 + 7 = (x - 2)^2 + (3)$.\n\n**Step 2.** Vertex: $(2, 3)$.\n\n**Step 3.** Distance: $\\sqrt{2^2 + (3)^2} = \\sqrt{13} = \\sqrt{13}$.\n\n**Answer:** $\\sqrt{13}$. **(B)**\n\n**Common mistake:** using the $y$-intercept $(0, 7)$ instead of the vertex."
+ },
+ {
+  "id": "con_parabolas_c03",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cparc3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "From the point $(-15, 8)$, a tangent line is drawn to the circle $x^2 + y^2 = 64$. What is the length of the tangent segment?",
+  "choices": {
+   "A": "$9$",
+   "B": "$15$",
+   "C": "$16$",
+   "D": "$17$",
+   "E": "$25$"
+  },
+  "answer": "B",
+  "hints": [
+   "The radius to the point of tangency is perpendicular to the tangent."
+  ],
+  "solution": "**What we need:** the tangent length $t$.\n\n**Key idea:** the radius to the point of tangency is perpendicular to the tangent, so center, tangent point, and outside point form a right triangle.\n\n**Step 1.** Distance from the center to $(-15, 8)$: $\\sqrt{225 + 64} = 17$. This is the hypotenuse.\n\n**Step 2.** One leg is the radius, $8$.\n\n**Step 3.** $t = \\sqrt{17^2 - 8^2} = \\sqrt{225} = 15$.\n\n**Answer:** $15$. **(B)**\n\n**Common mistake:** subtracting lengths ($17 - 8$) instead of using the Pythagorean Theorem."
+ },
+ {
+  "id": "con_parabolas_c04",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpac_min_dist",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the square of the smallest distance from $(0, 3)$ to a point on $y = x^2$?",
+  "choices": {
+   "A": "$\\frac{5}{2}$",
+   "B": "$\\frac{11}{4}$",
+   "C": "$3$",
+   "D": "$\\frac{15}{4}$",
+   "E": "$9$"
+  },
+  "answer": "B",
+  "hints": [
+   "Minimize $x^2 + (x^2 - a)^2$."
+  ],
+  "solution": "**What we need:** the squared distance.\n\n**Key idea:** with $u = x^2 \\ge 0$: $u + (u - 3)^2$ is smallest at $u = \\frac{5}{2}$.\n\n**Step 1.** Value: $\\frac{5}{2} + \\frac{1}{4} = \\frac{11}{4}$.\n\n**Answer:** $\\frac{11}{4}$. **(B)**\n\n**Common mistake:** using the vertex $(0, 0)$."
+ },
+ {
+  "id": "con_parabolas_c05",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpac_tangent_axes",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Two circles are tangent to both coordinate axes and pass through $(4, 8)$. What is the sum of their radii?",
+  "choices": {
+   "A": "$12$",
+   "B": "$24$",
+   "C": "$48$",
+   "D": "$64$",
+   "E": "$80$"
+  },
+  "answer": "B",
+  "hints": [
+   "Center $(r, r)$."
+  ],
+  "solution": "**What we need:** the sum of the radii.\n\n**Key idea:** $(r - 4)^2 + (r - 8)^2 = r^2$.\n\n**Step 1.** $r^2 - 24r + 80 = 0$.\n\n**Step 2.** By Vieta, the radii sum to $24$.\n\n**Answer:** $24$. **(B)**\n\n**Common mistake:** forgetting it's a quadratic with two roots."
+ },
+ {
+  "id": "con_parabolas_c06",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpac_focal_chord",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A line of slope $1$ passes through the focus of $y^2 = 8x$. How long is the chord it cuts from the parabola?",
+  "choices": {
+   "A": "$4$",
+   "B": "$8$",
+   "C": "$16$",
+   "D": "$18$",
+   "E": "$32$"
+  },
+  "answer": "C",
+  "hints": [
+   "Substitute $x = y + 2$."
+  ],
+  "solution": "**What we need:** the chord length.\n\n**Key idea:** $y^2 = 8(y + 2)$; the two $y$-values differ by $\\sqrt{(4p)^2 + 16p^2}$.\n\n**Step 1.** $y^2 - 8y - 16 = 0$: $|y_1 - y_2| = \\sqrt{64 + 64} = 8\\sqrt{2}$.\n\n**Step 2.** Slope 1: chord $= \\sqrt{2} \\cdot 8\\sqrt{2} = 16$.\n\n**Answer:** $16$. **(C)**\n\n**Common mistake:** giving the latus rectum."
+ },
+ {
+  "id": "con_parabolas_c07",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpac_power",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "From $P = (5, 12)$, a line meets the circle $x^2 + y^2 = 81$ at $A$ and $B$. What is $PA \\cdot PB$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$81$",
+   "C": "$88$",
+   "D": "$89$",
+   "E": "$169$"
+  },
+  "answer": "C",
+  "hints": [
+   "Power of a point."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $PA \\cdot PB = OP^2 - r^2$ for every line through $P$.\n\n**Step 1.** $OP = 13$, so $169 - 81 = 88$.\n\n**Answer:** $88$. **(C)**\n\n**Common mistake:** using $OP - r$."
+ },
+ {
+  "id": "con_parabolas_c08",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpac_circum",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the square of the radius of the circle through $(0, 0)$, $(9, 0)$, and $(0, 6)$?",
+  "choices": {
+   "A": "$27$",
+   "B": "$\\frac{117}{4}$",
+   "C": "$\\frac{121}{4}$",
+   "D": "$\\frac{117}{2}$",
+   "E": "$117$"
+  },
+  "answer": "B",
+  "hints": [
+   "Right angle at the origin."
+  ],
+  "solution": "**What we need:** $r^2$.\n\n**Key idea:** the hypotenuse of a right triangle is a diameter of its circumcircle.\n\n**Step 1.** Hypotenuse$^2 = 117$.\n\n**Step 2.** $r^2 = \\frac{117}{4} = \\frac{117}{4}$.\n\n**Answer:** $\\frac{117}{4}$. **(B)**\n\n**Common mistake:** using the hypotenuse as the radius."
+ },
+ {
+  "id": "con_parabolas_c09",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpac_radical",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Circles $(x + 4)^2 + (y + 2)^2 = 25$ and $(x + 2)^2 + (y + 5)^2 = 49$ meet at two points. The line through them crosses the $y$-axis at $(0, b)$. What is $b$?",
+  "choices": {
+   "A": "$-\\frac{15}{4}$",
+   "B": "$-\\frac{7}{2}$",
+   "C": "$-\\frac{5}{2}$",
+   "D": "$\\frac{5}{2}$",
+   "E": "$\\frac{7}{2}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Subtract the two equations."
+  ],
+  "solution": "**What we need:** $b$.\n\n**Key idea:** subtracting the circle equations cancels $x^2$ and $y^2$, leaving the line through both intersection points.\n\n**Step 1.** Difference: $4x - 6y + 15 = 0$.\n\n**Step 2.** At $x = 0$: $y = \\frac{5}{2}$.\n\n**Answer:** $\\frac{5}{2}$. **(D)**\n\n**Common mistake:** averaging the centers."
+ },
+ {
+  "id": "con_parabolas_c10",
+  "skillId": "con_parabolas",
+  "family": "con_parabolas:cpac_equilateral",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "An equilateral triangle has one vertex at the origin and the other two on $y = x^2$. What is its side length?",
+  "choices": {
+   "A": "$\\sqrt{3}$",
+   "B": "$2$",
+   "C": "$2\\sqrt{2}$",
+   "D": "$2\\sqrt{3}$",
+   "E": "$4\\sqrt{3}$"
+  },
+  "answer": "D",
+  "hints": [
+   "By symmetry the other vertices are $(\\pm \\frac{s}{2}, h)$."
+  ],
+  "solution": "**What we need:** the side length.\n\n**Key idea:** the height $\\frac{\\sqrt{3}}{2}s$ equals $1\\left(\\frac{s}{2}\\right)^2$.\n\n**Step 1.** $\\frac{\\sqrt{3}}{2}s = \\frac{s^2}{4}$, so $s = 2\\sqrt{3}$.\n\n**Answer:** $2\\sqrt{3}$. **(D)**\n\n**Common mistake:** using the 45-degree case."
+ },
+ {
+  "id": "con_ellipses_b01",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:el1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the distance between the foci of the ellipse $\\dfrac{x^2}{100} + \\dfrac{y^2}{64} = 1$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$12$",
+   "C": "$16$",
+   "D": "$18$",
+   "E": "$20$"
+  },
+  "answer": "B",
+  "hints": [
+   "For an ellipse, $c^2 = a^2 - b^2$, and the foci are $2c$ apart."
+  ],
+  "solution": "**What we need:** the distance between the two foci.\n\n**Key idea:** for an ellipse with semi-major axis $a$ and semi-minor axis $b$, the foci sit $c$ from the center, where $c^2 = a^2 - b^2$.\n\n**Step 1.** $a^2 = 100$ (the larger denominator) and $b^2 = 64$.\n\n**Step 2.** $c^2 = 100 - 64 = 36$, so $c = 6$.\n\n**Step 3.** The foci are at $(\\pm 6, 0)$, which are $2c = 12$ apart.\n\n**Answer:** $12$. **(B)**\n\n**Common mistake:** answering $c$, the distance from the center to one focus."
+ },
+ {
+  "id": "con_ellipses_b02",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:el2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the area of the ellipse $\\dfrac{x^2}{25} + \\dfrac{y^2}{81} = 1$?",
+  "choices": {
+   "A": "$14\\pi$",
+   "B": "$45$",
+   "C": "$45\\pi$",
+   "D": "$90\\pi$",
+   "E": "$2025\\pi$"
+  },
+  "answer": "C",
+  "hints": [
+   "An ellipse with semi-axes $a$ and $b$ has area $\\pi ab$."
+  ],
+  "solution": "**What we need:** the area of the ellipse.\n\n**Key idea:** an ellipse is a circle stretched by different amounts in each direction, so its area is $\\pi ab$ (a circle has $a = b = r$, giving $\\pi r^2$).\n\n**Step 1.** Semi-axes: $\\sqrt{25} = 5$ and $\\sqrt{81} = 9$.\n\n**Step 2.** Area $= \\pi \\cdot 5 \\cdot 9 = 45\\pi$.\n\n**Answer:** $45\\pi$. **(C)**\n\n**Common mistake:** using the denominators directly instead of their square roots."
+ },
+ {
+  "id": "con_ellipses_b03",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:el3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the distance between the foci of the hyperbola $\\dfrac{x^2}{144} - \\dfrac{y^2}{25} = 1$?",
+  "choices": {
+   "A": "$10$",
+   "B": "$13$",
+   "C": "$14$",
+   "D": "$24$",
+   "E": "$26$"
+  },
+  "answer": "E",
+  "hints": [
+   "For a hyperbola, $c^2 = a^2 + b^2$."
+  ],
+  "solution": "**What we need:** the distance between the two foci.\n\n**Key idea:** for a hyperbola the foci are farther out than the vertices: $c^2 = a^2 + b^2$ (a plus sign, unlike the ellipse).\n\n**Step 1.** $a^2 = 144$ and $b^2 = 25$.\n\n**Step 2.** $c^2 = 144 + 25 = 169$, so $c = 13$.\n\n**Step 3.** Foci at $(\\pm 13, 0)$: $2c = 26$ apart.\n\n**Answer:** $26$. **(E)**\n\n**Common mistake:** using the ellipse formula $c^2 = a^2 - b^2$."
+ },
+ {
+  "id": "con_ellipses_b04",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:el4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The hyperbola $\\dfrac{x^2}{49} - \\dfrac{y^2}{4} = 1$ has asymptotes $y = \\pm mx$. What is $m$?",
+  "choices": {
+   "A": "$\\frac{4}{49}$",
+   "B": "$\\frac{2}{7}$",
+   "C": "$\\frac{1}{2}$",
+   "D": "$\\frac{9}{7}$",
+   "E": "$\\frac{7}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "The asymptotes of $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$ are $y = \\pm\\frac{b}{a}x$."
+  ],
+  "solution": "**What we need:** the slope of the asymptotes.\n\n**Key idea:** far from the center, the $1$ is tiny compared to the other terms, so the curve hugs $\\frac{x^2}{a^2} = \\frac{y^2}{b^2}$.\n\n**Step 1.** $\\frac{x^2}{49} = \\frac{y^2}{4}$ gives $y = \\pm\\frac{2}{7}x$.\n\n**Step 2.** $m = \\frac{2}{7}$.\n\n**Answer:** $\\frac{2}{7}$. **(B)**\n\n**Common mistake:** flipping the ratio to $\\frac{a}{b}$, or forgetting the square roots."
+ },
+ {
+  "id": "con_ellipses_b05",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_minor",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the length of the minor axis of $\\dfrac{x^2}{9} + \\dfrac{y^2}{4} = 1$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$6$"
+  },
+  "answer": "C",
+  "hints": [
+   "The shorter axis."
+  ],
+  "solution": "**What we need:** the minor axis.\n\n**Key idea:** semi-axes are the square roots of the denominators.\n\n**Step 1.** Semi-axes $3$ and $2$; minor axis $2 \\cdot 2 = 4$.\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** forgetting to double."
+ },
+ {
+  "id": "con_ellipses_b06",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_hyp_vertices",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the distance between the vertices of $\\dfrac{y^2}{16} - \\dfrac{x^2}{121} = 1$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$8$",
+   "C": "$15$",
+   "D": "$22$",
+   "E": "$32$"
+  },
+  "answer": "B",
+  "hints": [
+   "Vertices are at $\\pm a$ along the transverse axis."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** the positive term determines the axis.\n\n**Step 1.** $a = 4$; distance $8$.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** using $b$."
+ },
+ {
+  "id": "con_ellipses_b07",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_find_b",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "An ellipse has foci $(\\pm 8, 0)$ and vertices $(\\pm 17, 0)$. What is the length of its minor axis?",
+  "choices": {
+   "A": "$15$",
+   "B": "$16$",
+   "C": "$25$",
+   "D": "$30$",
+   "E": "$34$"
+  },
+  "answer": "D",
+  "hints": [
+   "$b^2 = a^2 - c^2$ for ellipses."
+  ],
+  "solution": "**What we need:** the minor axis.\n\n**Key idea:** for an ellipse, $a^2 = b^2 + c^2$.\n\n**Step 1.** Semi-minor: $\\sqrt{289 - 64} = 15$.\n\n**Step 2.** Minor axis: $30$.\n\n**Answer:** $30$. **(D)**\n\n**Common mistake:** adding the squares."
+ },
+ {
+  "id": "con_ellipses_b08",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_y_on",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The point $(1, y)$ lies on $\\dfrac{x^2}{4} + \\dfrac{y^2}{25} = 1$. What is $y^2$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$\\frac{75}{4}$",
+   "C": "$\\frac{79}{4}$",
+   "D": "$24$",
+   "E": "$25$"
+  },
+  "answer": "B",
+  "hints": [
+   "Substitute and solve."
+  ],
+  "solution": "**What we need:** $y^2$.\n\n**Key idea:** $\\frac{y^2}{25} = 1 - \\frac{1}{4}$.\n\n**Step 1.** $y^2 = 25 \\cdot \\frac{3}{4} = \\frac{75}{4}$.\n\n**Answer:** $\\frac{75}{4}$. **(B)**\n\n**Common mistake:** subtracting directly."
+ },
+ {
+  "id": "con_ellipses_b09",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_hyp_ecc",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the eccentricity of the hyperbola $\\dfrac{x^2}{144} - \\dfrac{y^2}{256} = 1$?",
+  "choices": {
+   "A": "$\\frac{3}{5}$",
+   "B": "$\\frac{5}{4}$",
+   "C": "$\\frac{4}{3}$",
+   "D": "$\\frac{5}{3}$",
+   "E": "$\\frac{8}{3}$"
+  },
+  "answer": "D",
+  "hints": [
+   "$c^2 = a^2 + b^2$, $e = \\frac{c}{a}$."
+  ],
+  "solution": "**What we need:** the eccentricity.\n\n**Key idea:** hyperbolas have $e > 1$.\n\n**Step 1.** $c = \\sqrt{144 + 256} = 20$.\n\n**Step 2.** $e = \\frac{5}{3}$.\n\n**Answer:** $\\frac{5}{3}$. **(D)**\n\n**Common mistake:** using the ellipse relation."
+ },
+ {
+  "id": "con_ellipses_b10",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_center",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of the coordinates of the center of $\\dfrac{(x + 4)^2}{9} + \\dfrac{(y + 2)^2}{16} = 1$?",
+  "choices": {
+   "A": "$-6$",
+   "B": "$-4$",
+   "C": "$-2$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "A",
+  "hints": [
+   "Read off $(h, k)$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $(x - h)^2$ means center at $x = h$.\n\n**Step 1.** Center $(-4, -2)$, sum $-6$.\n\n**Answer:** $-6$. **(A)**\n\n**Common mistake:** flipping the signs."
+ },
+ {
+  "id": "con_ellipses_b11",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_hyp_diff",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Point $P$ is on the hyperbola $\\dfrac{x^2}{144} - \\dfrac{y^2}{144} = 1$ with foci $F_1, F_2$. What is $|PF_1 - PF_2|$?",
+  "choices": {
+   "A": "$12$",
+   "B": "$24$",
+   "C": "$24\\sqrt{2}$",
+   "D": "$48$",
+   "E": "$144$"
+  },
+  "answer": "B",
+  "hints": [
+   "Definition of a hyperbola."
+  ],
+  "solution": "**What we need:** the difference.\n\n**Key idea:** $|PF_1 - PF_2| = 2a$.\n\n**Step 1.** $a = 12$, so $24$.\n\n**Answer:** $24$. **(B)**\n\n**Common mistake:** using $2c$."
+ },
+ {
+  "id": "con_ellipses_b12",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_eq_b2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "An ellipse centered at the origin has foci $(\\pm 8, 0)$ and passes through $(17, 0)$. Its equation is $\\dfrac{x^2}{289} + \\dfrac{y^2}{m} = 1$. What is $m$?",
+  "choices": {
+   "A": "$15$",
+   "B": "$64$",
+   "C": "$225$",
+   "D": "$289$",
+   "E": "$353$"
+  },
+  "answer": "C",
+  "hints": [
+   "$b^2 = a^2 - c^2$."
+  ],
+  "solution": "**What we need:** $m$.\n\n**Key idea:** $m$ is the square of the semi-minor axis.\n\n**Step 1.** $m = 289 - 64 = 225$.\n\n**Answer:** $225$. **(C)**\n\n**Common mistake:** adding instead of subtracting."
+ },
+ {
+  "id": "con_ellipses_b13",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_latus",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the length of a latus rectum of $\\dfrac{x^2}{49} + \\dfrac{y^2}{36} = 1$ (the chord through a focus perpendicular to the major axis)?",
+  "choices": {
+   "A": "$\\frac{12}{7}$",
+   "B": "$\\frac{36}{7}$",
+   "C": "$\\frac{72}{7}$",
+   "D": "$\\frac{79}{7}$",
+   "E": "$\\frac{49}{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Plug $x = c$ into the equation."
+  ],
+  "solution": "**What we need:** the length.\n\n**Key idea:** at $x = c$, $y^2 = b^2\\left(1 - \\frac{c^2}{a^2}\\right) = \\frac{b^4}{a^2}$.\n\n**Step 1.** $|y| = \\frac{b^2}{a} = \\frac{36}{7}$; length $\\frac{72}{7}$.\n\n**Answer:** $\\frac{72}{7}$. **(C)**\n\n**Common mistake:** forgetting to double."
+ },
+ {
+  "id": "con_ellipses_b14",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_x_int",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the distance between the $x$-intercepts of $8x^2 + 98y^2 = 392$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$7$",
+   "C": "$14$",
+   "D": "$49$",
+   "E": "$196$"
+  },
+  "answer": "C",
+  "hints": [
+   "Divide to get standard form."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** divide by $392$: $\\frac{x^2}{49} + \\frac{y^2}{4} = 1$.\n\n**Step 1.** $x$-intercepts $\\pm 7$; distance $14$.\n\n**Answer:** $14$. **(C)**\n\n**Common mistake:** reading the coefficient as $a^2$."
+ },
+ {
+  "id": "con_ellipses_b15",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_rect",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the largest area of a rectangle inscribed in $\\dfrac{x^2}{64} + \\dfrac{y^2}{9} = 1$ with sides parallel to the axes?",
+  "choices": {
+   "A": "$22$",
+   "B": "$24$",
+   "C": "$48$",
+   "D": "$49$",
+   "E": "$96$"
+  },
+  "answer": "C",
+  "hints": [
+   "Corners at $(a\\cos t, b\\sin t)$."
+  ],
+  "solution": "**What we need:** the maximum area.\n\n**Key idea:** area $= 4ab\\cos t\\sin t = 2ab\\sin 2t$.\n\n**Step 1.** Maximum when $\\sin 2t = 1$: $2 \\cdot 8 \\cdot 3 = 48$.\n\n**Answer:** $48$. **(C)**\n\n**Common mistake:** using $4ab$, the bounding box."
+ },
+ {
+  "id": "con_ellipses_b16",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_identify",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the graph of $8x^2 + 4y^2 = 23$?",
+  "choices": {
+   "A": "$\\text{a circle}$",
+   "B": "$\\text{an ellipse (not a circle)}$",
+   "C": "$\\text{a parabola}$",
+   "D": "$\\text{a hyperbola}$",
+   "E": "$\\text{no points}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Look at the signs of the squared terms."
+  ],
+  "solution": "**What we need:** the type of curve.\n\n**Key idea:** same signs (positive): ellipse or circle; opposite signs: hyperbola; both negative with a positive right side: nothing.\n\n**Step 1.** Here: an ellipse (not a circle).\n\n**Answer:** $\\text{an ellipse (not a circle)}$. **(B)**\n\n**Common mistake:** calling every second-degree curve an ellipse."
+ },
+ {
+  "id": "con_ellipses_b17",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_hyp_point",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The hyperbola $\\dfrac{x^2}{9} - \\dfrac{y^2}{m} = 1$ passes through $(6, 7)$. What is $m$?",
+  "choices": {
+   "A": "$\\frac{49}{3}$",
+   "B": "$\\frac{52}{3}$",
+   "C": "$27$",
+   "D": "$49$",
+   "E": "$147$"
+  },
+  "answer": "A",
+  "hints": [
+   "Substitute the point."
+  ],
+  "solution": "**What we need:** $m$.\n\n**Key idea:** $\\frac{36}{9} - \\frac{49}{m} = 1$.\n\n**Step 1.** $\\frac{49}{m} = 3$, so $m = \\frac{49}{3}$.\n\n**Answer:** $\\frac{49}{3}$. **(A)**\n\n**Common mistake:** forgetting to subtract 1."
+ },
+ {
+  "id": "con_ellipses_b18",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_area_general",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the area enclosed by $9x^2 + y^2 = 9$?",
+  "choices": {
+   "A": "$\\frac{3\\pi}{2}$",
+   "B": "$3\\pi$",
+   "C": "$6\\pi$",
+   "D": "$9\\pi$",
+   "E": "$10\\pi$"
+  },
+  "answer": "B",
+  "hints": [
+   "Put it in standard form."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** area $= \\pi ab$.\n\n**Step 1.** $\\frac{x^2}{1} + \\frac{y^2}{9} = 1$, $a = 1$, $b = 3$.\n\n**Step 2.** Area: $3\\pi$.\n\n**Answer:** $3\\pi$. **(B)**\n\n**Common mistake:** using $\\pi a^2 b^2$."
+ },
+ {
+  "id": "con_ellipses_b19",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_vertical",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the distance between the foci of $\\dfrac{x^2}{144} + \\dfrac{y^2}{169} = 1$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$10$",
+   "C": "$24$",
+   "D": "$26$",
+   "E": "$2\\sqrt{313}$"
+  },
+  "answer": "B",
+  "hints": [
+   "$c^2 = a^2 - b^2$ with the larger denominator."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** the major axis is vertical (larger denominator under $y^2$).\n\n**Step 1.** $\\sqrt{169 - 144} = 5$; foci $(0, \\pm 5)$; distance $10$.\n\n**Answer:** $10$. **(B)**\n\n**Common mistake:** using $a^2 + b^2$."
+ },
+ {
+  "id": "con_ellipses_b20",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ell_conj",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the length of the conjugate axis of $\\dfrac{x^2}{64} - \\dfrac{y^2}{144} = 1$?",
+  "choices": {
+   "A": "$12$",
+   "B": "$16$",
+   "C": "$20$",
+   "D": "$24$",
+   "E": "$144$"
+  },
+  "answer": "D",
+  "hints": [
+   "The conjugate axis has length $2b$."
+  ],
+  "solution": "**What we need:** the length.\n\n**Key idea:** the conjugate axis is perpendicular to the transverse axis.\n\n**Step 1.** $b = 12$; length $24$.\n\n**Answer:** $24$. **(D)**\n\n**Common mistake:** giving the transverse axis."
+ },
+ {
+  "id": "con_ellipses_c01",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:elc1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the length of the major axis of the ellipse $36x^2 + 16y^2 + 144x + 96y - 288 = 0$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$8$",
+   "C": "$10$",
+   "D": "$12$",
+   "E": "$24$"
+  },
+  "answer": "D",
+  "hints": [
+   "Complete the square, then divide to get the form $\\frac{(x - h)^2}{a^2} + \\frac{(y - k)^2}{b^2} = 1$."
+  ],
+  "solution": "**What we need:** the length of the longer axis.\n\n**Key idea:** complete the square in $x$ and $y$ (after factoring out the coefficients), then divide to get the standard form.\n\n**Step 1.** $36(x^2 + 4x) + 16(y^2 + 6y) = 288$.\n\n**Step 2.** Complete squares: $36(x + 2)^2 + 16(y + 3)^2 = 288 + 144 + 144 = 576$.\n\n**Step 3.** Divide by $576$: $\\frac{(x + 2)^2}{16} + \\frac{(y + 3)^2}{36} = 1$.\n\n**Step 4.** Semi-axes $4$ and $6$; the larger is $6$, so the major axis is $2 \\cdot 6 = 12$.\n\n**Answer:** $12$. **(D)**\n\n**Common mistake:** answering the semi-major axis instead of the full axis."
+ },
+ {
+  "id": "con_ellipses_c02",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:elc2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Point $P$ lies on the ellipse $\\dfrac{x^2}{25} + \\dfrac{y^2}{9} = 1$, and $F_1$ and $F_2$ are its foci. What is $PF_1 + PF_2$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$11$"
+  },
+  "answer": "D",
+  "hints": [
+   "The sum of distances from any point on an ellipse to its foci is the length of the major axis."
+  ],
+  "solution": "**What we need:** $PF_1 + PF_2$.\n\n**Key idea:** this is the definition of an ellipse: the sum of the distances to the two foci is the same for every point, and equals the major axis $2a$.\n\n**Step 1.** Check at the vertex $(5, 0)$: the foci are at $(\\pm 4, 0)$ since $c^2 = 25 - 9$. Distances: $1$ and $9$, which add to $10$.\n\n**Step 2.** So for every $P$ on the ellipse, $PF_1 + PF_2 = 2a = 10$.\n\n**Answer:** $10$. **(D)**\n\n**Common mistake:** using the minor axis $2b$."
+ },
+ {
+  "id": "con_ellipses_c03",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:elc3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the eccentricity of the ellipse $\\dfrac{x^2}{625} + \\dfrac{y^2}{49} = 1$?",
+  "choices": {
+   "A": "$\\frac{7}{25}$",
+   "B": "$\\frac{7}{24}$",
+   "C": "$\\frac{24}{25}$",
+   "D": "$\\frac{25}{24}$",
+   "E": "$\\frac{24}{7}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Eccentricity is $e = \\frac{c}{a}$, with $c^2 = a^2 - b^2$."
+  ],
+  "solution": "**What we need:** the eccentricity $e = \\frac{c}{a}$.\n\n**Key idea:** eccentricity measures how stretched the ellipse is: focus distance over semi-major axis. $0$ is a circle; close to $1$ is very flat.\n\n**Step 1.** $a = 25$, $b = 7$.\n\n**Step 2.** $c = \\sqrt{625 - 49} = 24$.\n\n**Step 3.** $e = \\frac{24}{25} = \\frac{24}{25}$.\n\n**Answer:** $\\frac{24}{25}$. **(C)**\n\n**Common mistake:** dividing by $b$ instead of $a$."
+ },
+ {
+  "id": "con_ellipses_c04",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ellc_perimeter",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "$P$ is a point on $\\dfrac{x^2}{400} + \\dfrac{y^2}{256} = 1$, not on the $x$-axis, and $F_1, F_2$ are the foci. What is the perimeter of triangle $PF_1F_2$?",
+  "choices": {
+   "A": "$32$",
+   "B": "$40$",
+   "C": "$64$",
+   "D": "$72$",
+   "E": "$80$"
+  },
+  "answer": "C",
+  "hints": [
+   "$PF_1 + PF_2 = 2a$."
+  ],
+  "solution": "**What we need:** the perimeter.\n\n**Key idea:** add the focal distance $2c$.\n\n**Step 1.** $c = \\sqrt{400 - 256} = 12$.\n\n**Step 2.** Perimeter: $40 + 24 = 64$.\n\n**Answer:** $64$. **(C)**\n\n**Common mistake:** forgetting $F_1F_2$."
+ },
+ {
+  "id": "con_ellipses_c05",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ellc_far",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the smallest distance from a focus of $\\dfrac{x^2}{289} + \\dfrac{y^2}{225} = 1$ to a point on the ellipse?",
+  "choices": {
+   "A": "$9$",
+   "B": "$15$",
+   "C": "$17$",
+   "D": "$25$",
+   "E": "$34$"
+  },
+  "answer": "A",
+  "hints": [
+   "Extremes occur at the vertices on the major axis."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** from focus $(c, 0)$, the nearest vertex is at distance $a - c$ and the farthest at $a + c$.\n\n**Step 1.** $c = 8$.\n\n**Step 2.** Answer: $9$.\n\n**Answer:** $9$. **(A)**\n\n**Common mistake:** using the minor axis endpoints."
+ },
+ {
+  "id": "con_ellipses_c06",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ellc_chord",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "The line $x = 5$ cuts the ellipse $\\dfrac{x^2}{36} + \\dfrac{y^2}{64} = 1$ in a chord. What is the square of the chord's length?",
+  "choices": {
+   "A": "$\\frac{176}{9}$",
+   "B": "$\\frac{352}{9}$",
+   "C": "$\\frac{704}{9}$",
+   "D": "$\\frac{713}{9}$",
+   "E": "$156$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find $y^2$ at $x = 5$."
+  ],
+  "solution": "**What we need:** the squared length.\n\n**Key idea:** the chord runs from $-y$ to $y$, so its length is $2|y|$.\n\n**Step 1.** $y^2 = \\frac{176}{9}$.\n\n**Step 2.** $(2y)^2 = \\frac{704}{9}$.\n\n**Answer:** $\\frac{704}{9}$. **(C)**\n\n**Common mistake:** forgetting to double $y$."
+ },
+ {
+  "id": "con_ellipses_c07",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ellc_perp",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "$P$ is a point on $\\dfrac{x^2}{36} + \\dfrac{y^2}{25} = 1$ with $\\angle F_1PF_2 = 90^\\circ$, where $F_1, F_2$ are the foci. What is the area of triangle $F_1PF_2$?",
+  "choices": {
+   "A": "$11$",
+   "B": "$\\frac{25}{2}$",
+   "C": "$25$",
+   "D": "$30$",
+   "E": "$36$"
+  },
+  "answer": "C",
+  "hints": [
+   "Let $m = PF_1$, $n = PF_2$."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** $m + n = 2a$ and $m^2 + n^2 = (2c)^2$.\n\n**Step 1.** $2mn = (m + n)^2 - (m^2 + n^2) = 4a^2 - 4c^2 = 4b^2$.\n\n**Step 2.** Area $= \\frac{mn}{2} = b^2 = 25$.\n\n**Answer:** $25$. **(C)**\n\n**Common mistake:** using $\\frac{1}{2} \\cdot 2c \\cdot b$."
+ },
+ {
+  "id": "con_ellipses_c08",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ellc_rect_hyp",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the distance between the foci of the hyperbola $xy = 81$?",
+  "choices": {
+   "A": "$18$",
+   "B": "$18\\sqrt{2}$",
+   "C": "$36$",
+   "D": "$36\\sqrt{2}$",
+   "E": "$72$"
+  },
+  "answer": "C",
+  "hints": [
+   "It's a rotated rectangular hyperbola."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** vertices $(\\pm 9, \\pm 9)$ give $a = 9\\sqrt{2}$; for a rectangular hyperbola $c = a\\sqrt{2}$.\n\n**Step 1.** $c = 9\\sqrt{2} \\cdot \\sqrt{2} = 18$.\n\n**Step 2.** Distance $2c = 36$.\n\n**Answer:** $36$. **(C)**\n\n**Common mistake:** using $a$ for $c$."
+ },
+ {
+  "id": "con_ellipses_c09",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ellc_general",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the sum of the coordinates of the center of $4x^2 - 4y^2 + 8y - 20 = 0$?",
+  "choices": {
+   "A": "$-8$",
+   "B": "$-1$",
+   "C": "$1$",
+   "D": "$2$",
+   "E": "$8$"
+  },
+  "answer": "C",
+  "hints": [
+   "Complete the square in $x$ and in $y$."
+  ],
+  "solution": "**What we need:** the center's coordinate sum.\n\n**Key idea:** group $x$ terms and $y$ terms, then factor out the leading coefficients.\n\n**Step 1.** Center $(0, 1)$, sum $1$.\n\n**Answer:** $1$. **(C)**\n\n**Common mistake:** forgetting to divide by the leading coefficient."
+ },
+ {
+  "id": "con_ellipses_c10",
+  "skillId": "con_ellipses",
+  "family": "con_ellipses:ellc_tangent",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "The line $y = x + k$ is tangent to $\\dfrac{x^2}{9} + \\dfrac{y^2}{25} = 1$. What is $k^2$?",
+  "choices": {
+   "A": "$33$",
+   "B": "$34$",
+   "C": "$35$",
+   "D": "$36$",
+   "E": "$64$"
+  },
+  "answer": "B",
+  "hints": [
+   "The tangency condition is $k^2 = a^2m^2 + b^2$."
+  ],
+  "solution": "**What we need:** $k^2$.\n\n**Key idea:** substitute and set the discriminant to zero.\n\n**Step 1.** $k^2 = 9 \\cdot 1 + 25 = 34$.\n\n**Answer:** $34$. **(B)**\n\n**Common mistake:** swapping $a$ and $b$."
+ },
+ {
+  "id": "con_analytic_b01",
+  "skillId": "con_analytic",
+  "family": "con_analytic:an1_",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the distance between $(-1, -4, -4)$ and $(7, -12, 10)$?",
+  "choices": {
+   "A": "$15$",
+   "B": "$17$",
+   "C": "$18$",
+   "D": "$19$",
+   "E": "$30$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\sqrt{(\\Delta x)^2 + (\\Delta y)^2 + (\\Delta z)^2}$."
+  ],
+  "solution": "**What we need:** the 3D distance.\n\n**Key idea:** the distance formula in three dimensions: $\\sqrt{(\\Delta x)^2 + (\\Delta y)^2 + (\\Delta z)^2}$. (It is the Pythagorean Theorem used twice.)\n\n**Step 1.** Differences: $\\Delta x = 8$, $\\Delta y = -8$, $\\Delta z = 14$.\n\n**Step 2.** Squares: $64 + 64 + 196 = 324$.\n\n**Step 3.** $\\sqrt{324} = 18$.\n\n**Answer:** $18$. **(C)**\n\n**Common mistake:** adding the differences without squaring them."
+ },
+ {
+  "id": "con_analytic_b02",
+  "skillId": "con_analytic",
+  "family": "con_analytic:an2_",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The point $(2, -3)$ is reflected over the line $y = -3$. What is the sum of the coordinates of its image?",
+  "choices": {
+   "A": "$-5$",
+   "B": "$-1$",
+   "C": "$0$",
+   "D": "$1$",
+   "E": "$5$"
+  },
+  "answer": "B",
+  "hints": [
+   "Picture the reflection, or use the rule for that line."
+  ],
+  "solution": "**What we need:** the coordinate sum of the reflected point.\n\n**Key idea:** a reflection puts the image the same distance from the line on the other side.\n\n**Step 1.** Reflecting over the horizontal line $y = -3$ keeps $x$. The new $y$ is $y' = 2 \\cdot -3 - y$.\n\n**Step 2.** Image: $(2, -3)$.\n\n**Step 3.** Sum: $2 + (-3) = -1$.\n\n**Answer:** $-1$. **(B)**\n\n**Common mistake:** mixing up the rules for $y = x$ and $y = -x$."
+ },
+ {
+  "id": "con_analytic_b03",
+  "skillId": "con_analytic",
+  "family": "con_analytic:an3_",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Where does the line through $(-2, -7)$ and $(6, 7)$ cross the $x$-axis? (Give the $x$-coordinate.)",
+  "choices": {
+   "A": "$-\\frac{7}{2}$",
+   "B": "$-2$",
+   "C": "$\\frac{7}{4}$",
+   "D": "$2$",
+   "E": "$3$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find the equation of the line, then set $y = 0$."
+  ],
+  "solution": "**What we need:** the $x$-intercept.\n\n**Key idea:** find the slope, write the line in point slope form, then set $y = 0$.\n\n**Step 1.** Slope: $m = \\frac{7 - (-7)}{6 - (-2)} = \\frac{7}{4}$.\n\n**Step 2.** Line: $y - (-7) = \\frac{7}{4}(x - (-2))$.\n\n**Step 3.** Set $y = 0$: $-(-7) = \\frac{7}{4}(x - (-2))$, so $x = -2 - \\frac{-7}{\\frac{7}{4}} = 2$.\n\n**Answer:** $2$. **(D)**\n\n**Common mistake:** finding the $y$-intercept (set $x = 0$) instead."
+ },
+ {
+  "id": "con_analytic_b04",
+  "skillId": "con_analytic",
+  "family": "con_analytic:an4_",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "At what point do the lines $2x - 3y = -9$ and $-2x + 4y = 10$ meet? Give the product of its coordinates.",
+  "choices": {
+   "A": "$-90$",
+   "B": "$-4$",
+   "C": "$-3$",
+   "D": "$-2$",
+   "E": "$3$"
+  },
+  "answer": "C",
+  "hints": [
+   "Solve the system."
+  ],
+  "solution": "**What we need:** the intersection point, then $xy$.\n\n**Key idea:** solve the system by elimination: scale the equations so one variable cancels.\n\n**Step 1.** Multiply the first by $4$ and the second by $-3$, then subtract: $(2 \\cdot 4 - (-2) \\cdot (-3))x = -9 \\cdot 4 - 10 \\cdot (-3)$.\n\n**Step 2.** $2x = -6$, so $x = -3$.\n\n**Step 3.** Substitute into the first equation: $2(-3) - 3y = -9$ gives $y = 1$.\n\n**Step 4.** Product: $(-3)(1) = -3$.\n\n**Answer:** $-3$. **(C)**\n\n**Common mistake:** adding the coordinates instead of multiplying."
+ },
+ {
+  "id": "con_analytic_b05",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_mid3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of the coordinates of the midpoint of $(-1, -5, -3)$ and $(-8, -2, 7)$?",
+  "choices": {
+   "A": "$-12$",
+   "B": "$-6$",
+   "C": "$-5$",
+   "D": "$-3$",
+   "E": "$6$"
+  },
+  "answer": "B",
+  "hints": [
+   "Average each coordinate."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** midpoint coordinates are averages.\n\n**Step 1.** Midpoint $(-\\frac{9}{2}, -\\frac{7}{2}, 2)$; sum $-6$.\n\n**Answer:** $-6$. **(B)**\n\n**Common mistake:** not dividing by 2."
+ },
+ {
+  "id": "con_analytic_b06",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_perp",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the slope of a line perpendicular to the line through $(-8, 3)$ and $(1, -9)$?",
+  "choices": {
+   "A": "$-\\frac{4}{3}$",
+   "B": "$-\\frac{3}{4}$",
+   "C": "$\\frac{3}{4}$",
+   "D": "$\\frac{4}{3}$",
+   "E": "$\\frac{7}{4}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Negative reciprocal."
+  ],
+  "solution": "**What we need:** the slope.\n\n**Key idea:** perpendicular slopes multiply to $-1$.\n\n**Step 1.** Slope: $-\\frac{4}{3}$.\n\n**Step 2.** Perpendicular: $\\frac{3}{4}$.\n\n**Answer:** $\\frac{3}{4}$. **(C)**\n\n**Common mistake:** forgetting the negative sign."
+ },
+ {
+  "id": "con_analytic_b07",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_pt_line",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the distance from $(5, -4)$ to the line $-6x + 8y - 9 = 0$?",
+  "choices": {
+   "A": "$\\frac{71}{100}$",
+   "B": "$\\frac{31}{5}$",
+   "C": "$\\frac{71}{10}$",
+   "D": "$\\frac{81}{10}$",
+   "E": "$71$"
+  },
+  "answer": "C",
+  "hints": [
+   "Point-to-line formula."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** $\\frac{|ax_0 + by_0 + c|}{\\sqrt{a^2 + b^2}}$.\n\n**Step 1.** Numerator: $|-71| = 71$; denominator: $10$.\n\n**Step 2.** $\\frac{71}{10}$.\n\n**Answer:** $\\frac{71}{10}$. **(C)**\n\n**Common mistake:** forgetting the square root."
+ },
+ {
+  "id": "con_analytic_b08",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_parallel",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the distance between the parallel lines $3x + 4y + 12 = 0$ and $3x + 4y + 4 = 0$?",
+  "choices": {
+   "A": "$\\frac{8}{25}$",
+   "B": "$\\frac{8}{7}$",
+   "C": "$\\frac{8}{5}$",
+   "D": "$\\frac{16}{5}$",
+   "E": "$8$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\frac{|c_1 - c_2|}{\\sqrt{a^2 + b^2}}$."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** the parallel-lines distance formula.\n\n**Step 1.** $\\frac{8}{5} = \\frac{8}{5}$.\n\n**Answer:** $\\frac{8}{5}$. **(C)**\n\n**Common mistake:** adding the constants."
+ },
+ {
+  "id": "con_analytic_b09",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_shoelace",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the area of the triangle with vertices $(0, -6)$, $(-5, 4)$, $(-1, 0)$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$10$",
+   "C": "$\\frac{21}{2}$",
+   "D": "$11$",
+   "E": "$20$"
+  },
+  "answer": "B",
+  "hints": [
+   "Shoelace formula."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** $\\frac{1}{2}|x_1y_2 - x_2y_1 + x_2y_3 - x_3y_2 + x_3y_1 - x_1y_3|$.\n\n**Step 1.** The sum inside is $\\pm 20$.\n\n**Step 2.** Area $= 10$.\n\n**Answer:** $10$. **(B)**\n\n**Common mistake:** forgetting the $\\frac{1}{2}$."
+ },
+ {
+  "id": "con_analytic_b10",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_reflect",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The point $(4, 4)$ is reflected over the $x$-axis. If the image is $(a, b)$, what is $a - b$?",
+  "choices": {
+   "A": "$-8$",
+   "B": "$0$",
+   "C": "$8$",
+   "D": "$10$",
+   "E": "$11$"
+  },
+  "answer": "C",
+  "hints": [
+   "Apply the reflection rule."
+  ],
+  "solution": "**What we need:** $a - b$.\n\n**Key idea:** negate $y$.\n\n**Step 1.** Image $(4, -4)$; $a - b = 8$.\n\n**Answer:** $8$. **(C)**\n\n**Common mistake:** using the wrong reflection."
+ },
+ {
+  "id": "con_analytic_b11",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_section",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Point $P$ is on segment $AB$ with $A = (5, -9)$, $B = (-5, 6)$, and $AP : PB = 3 : 4$. What is the sum of $P$'s coordinates?",
+  "choices": {
+   "A": "$-\\frac{13}{7}$",
+   "B": "$-\\frac{3}{2}$",
+   "C": "$-\\frac{8}{7}$",
+   "D": "$-\\frac{6}{7}$",
+   "E": "$\\frac{13}{7}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Weighted average: closer to $A$ when $m$ is small."
+  ],
+  "solution": "**What we need:** the coordinate sum.\n\n**Key idea:** $P = \\frac{4A + 3B}{7}$.\n\n**Step 1.** $P = (\\frac{5}{7}, -\\frac{18}{7})$; sum $-\\frac{13}{7}$.\n\n**Answer:** $-\\frac{13}{7}$. **(A)**\n\n**Common mistake:** swapping the weights."
+ },
+ {
+  "id": "con_analytic_b12",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_centroid",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of the coordinates of the centroid of the triangle with vertices $(-4, -4)$, $(-8, -5)$, $(4, -2)$?",
+  "choices": {
+   "A": "$-19$",
+   "B": "$-\\frac{19}{2}$",
+   "C": "$-\\frac{19}{3}$",
+   "D": "$-\\frac{16}{3}$",
+   "E": "$\\frac{19}{3}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Average the vertices."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the centroid is the average of the three vertices.\n\n**Step 1.** Centroid $(-\\frac{8}{3}, -\\frac{11}{3})$; sum $-\\frac{19}{3}$.\n\n**Answer:** $-\\frac{19}{3}$. **(C)**\n\n**Common mistake:** dividing by 2."
+ },
+ {
+  "id": "con_analytic_b13",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_yint",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the $y$-intercept of the line through $(-2, 7)$ and $(6, 8)$?",
+  "choices": {
+   "A": "$-\\frac{29}{4}$",
+   "B": "$\\frac{1}{8}$",
+   "C": "$\\frac{27}{4}$",
+   "D": "$\\frac{29}{4}$",
+   "E": "$\\frac{33}{4}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find the slope, then plug in a point."
+  ],
+  "solution": "**What we need:** the $y$-intercept.\n\n**Key idea:** $b = y_1 - mx_1$.\n\n**Step 1.** $m = \\frac{1}{8}$.\n\n**Step 2.** $b = 7 - \\frac{1}{8} \\cdot (-2) = \\frac{29}{4}$.\n\n**Answer:** $\\frac{29}{4}$. **(D)**\n\n**Common mistake:** giving the $x$-intercept."
+ },
+ {
+  "id": "con_analytic_b14",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_collinear",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The points $(-4, 4)$, $(-1, k)$, and $(0, -12)$ lie on one line. What is $k$?",
+  "choices": {
+   "A": "$-16$",
+   "B": "$-8$",
+   "C": "$-7$",
+   "D": "$0$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "Equal slopes."
+  ],
+  "solution": "**What we need:** $k$.\n\n**Key idea:** the slope from the first point to each other point is the same.\n\n**Step 1.** Slope: $\\frac{-16}{4} = -4$.\n\n**Step 2.** $k = 4 + \\left(-4\\right) \\cdot 3 = -8$.\n\n**Answer:** $-8$. **(B)**\n\n**Common mistake:** using the midpoint."
+ },
+ {
+  "id": "con_analytic_b15",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_angle",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Lines with slopes $2$ and $-2$ meet at an acute angle $\\theta$. What is $\\tan\\theta$?",
+  "choices": {
+   "A": "$\\frac{3}{4}$",
+   "B": "$\\frac{4}{5}$",
+   "C": "$\\frac{4}{3}$",
+   "D": "$\\frac{7}{3}$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\tan\\theta = \\left|\\frac{m_1 - m_2}{1 + m_1m_2}\\right|$."
+  ],
+  "solution": "**What we need:** $\\tan\\theta$.\n\n**Key idea:** tangent of the difference of the inclination angles.\n\n**Step 1.** $\\left|\\frac{2 - (-2)}{1 + 2(-2)}\\right| = \\frac{4}{3}$.\n\n**Answer:** $\\frac{4}{3}$. **(C)**\n\n**Common mistake:** using $1 - m_1m_2$."
+ },
+ {
+  "id": "con_analytic_b16",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_sphere",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the radius of the sphere $x^2 + y^2 + z^2 - 10x - 6z + 18 = 0$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$8$",
+   "D": "$16$",
+   "E": "$18$"
+  },
+  "answer": "A",
+  "hints": [
+   "Complete three squares."
+  ],
+  "solution": "**What we need:** the radius.\n\n**Key idea:** $r^2 = h^2 + k^2 + l^2 - G$ with center $(h, k, l)$.\n\n**Step 1.** Center $(5, 0, 3)$; $r^2 = 34 - 18 = 16$.\n\n**Step 2.** $r = 4$.\n\n**Answer:** $4$. **(A)**\n\n**Common mistake:** forgetting the constant term."
+ },
+ {
+  "id": "con_analytic_b17",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_rot",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The point $(-5, -7)$ is rotated $270^\\circ$ counterclockwise about the origin to $(a, b)$. What is $a + 2b$?",
+  "choices": {
+   "A": "$-19$",
+   "B": "$-9$",
+   "C": "$-3$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "D",
+  "hints": [
+   "Rotation rules."
+  ],
+  "solution": "**What we need:** $a + 2b$.\n\n**Key idea:** $90^\\circ$: $(x, y) \\to (-y, x)$; $180^\\circ$: $(-x, -y)$; $270^\\circ$: $(y, -x)$.\n\n**Step 1.** Image $(-7, 5)$; $a + 2b = 3$.\n\n**Answer:** $3$. **(D)**\n\n**Common mistake:** rotating clockwise."
+ },
+ {
+  "id": "con_analytic_b18",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_perp_bis",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the $y$-intercept of the perpendicular bisector of the segment from $(-2, -3)$ to $(-6, 8)$?",
+  "choices": {
+   "A": "$-\\frac{87}{22}$",
+   "B": "$\\frac{23}{22}$",
+   "C": "$\\frac{5}{2}$",
+   "D": "$\\frac{87}{22}$",
+   "E": "$\\frac{109}{22}$"
+  },
+  "answer": "D",
+  "hints": [
+   "It passes through the midpoint with the negative-reciprocal slope."
+  ],
+  "solution": "**What we need:** the $y$-intercept.\n\n**Key idea:** midpoint plus perpendicular slope.\n\n**Step 1.** Midpoint $(-4, \\frac{5}{2})$; slope $\\frac{4}{11}$.\n\n**Step 2.** $b = \\frac{5}{2} - \\frac{4}{11} \\cdot \\left(-4\\right) = \\frac{87}{22}$.\n\n**Answer:** $\\frac{87}{22}$. **(D)**\n\n**Common mistake:** using the original slope."
+ },
+ {
+  "id": "con_analytic_b19",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_square_diag",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Opposite vertices of a square are $(-8, 8)$ and $(8, 3)$. What is the area of the square?",
+  "choices": {
+   "A": "$\\frac{281}{4}$",
+   "B": "$80$",
+   "C": "$\\frac{281}{2}$",
+   "D": "$\\frac{283}{2}$",
+   "E": "$281$"
+  },
+  "answer": "C",
+  "hints": [
+   "Area $= \\frac{d^2}{2}$."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** a square's area is half the square of its diagonal.\n\n**Step 1.** $d^2 = 281$, area $\\frac{281}{2}$.\n\n**Answer:** $\\frac{281}{2}$. **(C)**\n\n**Common mistake:** using $d^2$."
+ },
+ {
+  "id": "con_analytic_b20",
+  "skillId": "con_analytic",
+  "family": "con_analytic:ana_equidistant",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What point $(x, 0)$ on the $x$-axis is equally far from $(-1, 0)$ and $(8, 2)$? Give $x$.",
+  "choices": {
+   "A": "$-\\frac{67}{18}$",
+   "B": "$1$",
+   "C": "$\\frac{7}{2}$",
+   "D": "$\\frac{67}{18}$",
+   "E": "$\\frac{85}{18}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Set the squared distances equal."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** $(x + 1)^2 + 0 = (x - 8)^2 + 4$.\n\n**Step 1.** Expanding: $18x = 67$.\n\n**Step 2.** $x = \\frac{67}{18}$.\n\n**Answer:** $\\frac{67}{18}$. **(D)**\n\n**Common mistake:** averaging the $x$-coordinates."
+ },
+ {
+  "id": "con_analytic_c01",
+  "skillId": "con_analytic",
+  "family": "con_analytic:anc1_",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the volume of the tetrahedron with vertices $(0, 0, 0)$, $(1, 0, 0)$, $(0, 3, 0)$, and $(0, 0, 6)$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$6$",
+   "D": "$9$",
+   "E": "$18$"
+  },
+  "answer": "A",
+  "hints": [
+   "Volume of a pyramid is $\\frac{1}{3} \\cdot$ base area $\\cdot$ height."
+  ],
+  "solution": "**What we need:** the volume of a corner tetrahedron.\n\n**Key idea:** a tetrahedron is a pyramid: $V = \\frac{1}{3} \\cdot \\text{base area} \\cdot \\text{height}$.\n\n**Step 1.** Base: the right triangle in the $xy$-plane with legs $1$ and $3$, area $\\frac{1 \\cdot 3}{2} = \\frac{3}{2}$.\n\n**Step 2.** Height: the distance up the $z$-axis, $6$.\n\n**Step 3.** $V = \\frac{1}{3} \\cdot \\frac{3}{2} \\cdot 6 = 3$.\n\n**Answer:** $3$. **(A)**\n\n**Common mistake:** forgetting the $\\frac{1}{3}$ for a pyramid (that gives a prism's volume)."
+ },
+ {
+  "id": "con_analytic_c02",
+  "skillId": "con_analytic",
+  "family": "con_analytic:anc2_",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the area of the triangle with vertices $(2, 0, 0)$, $(0, 2, 0)$, and $(0, 0, 1)$?",
+  "choices": {
+   "A": "$\\frac{3}{2}$",
+   "B": "$2$",
+   "C": "$\\sqrt{6}$",
+   "D": "$4$",
+   "E": "$2\\sqrt{6}$"
+  },
+  "answer": "C",
+  "hints": [
+   "The squared area of this triangle equals the sum of the squared areas of its three projections onto the coordinate planes."
+  ],
+  "solution": "**What we need:** the area of the slanted triangle.\n\n**Key idea:** 3D Pythagorean Theorem (de Gua's Theorem): for a corner tetrahedron, the square of the slanted face's area equals the sum of the squares of the three right triangle faces.\n\n**Step 1.** Right faces: $\\frac{2 \\cdot 2}{2}$, $\\frac{2 \\cdot 1}{2}$, $\\frac{1 \\cdot 2}{2}$.\n\n**Step 2.** Area$^2 = \\frac{16 + 4 + 4}{4} = \\frac{24}{4}$.\n\n**Step 3.** Area $= \\frac{\\sqrt{24}}{2} = \\sqrt{6}$.\n\n**Answer:** $\\sqrt{6}$. **(C)**\n\n**Common mistake:** adding the three face areas instead of their squares."
+ },
+ {
+  "id": "con_analytic_c03",
+  "skillId": "con_analytic",
+  "family": "con_analytic:anc3_",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many points with integer coordinates lie on the circle $x^2 + y^2 = 5$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$12$",
+   "E": "$16$"
+  },
+  "answer": "B",
+  "hints": [
+   "List the ways to write the number as a sum of two squares, then count signs and orders."
+  ],
+  "solution": "**What we need:** all integer pairs $(x, y)$ with $x^2 + y^2 = 5$.\n\n**Key idea:** list the ways to write the number as a sum of two squares, then count sign and order choices for each.\n\n**Step 1.** Check every $x$ with $x^2 \\le 5$ to find the sums of two squares: $1^2 + 2^2$.\n\n**Step 2.** $1^2 + 2^2$: $8$ points ($4$ sign choices times $2$ orders).\n\n**Step 3.** Total: $8$.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** forgetting the negative coordinates, or the swapped order $(y, x)$."
+ },
+ {
+  "id": "con_analytic_c04",
+  "skillId": "con_analytic",
+  "family": "con_analytic:anac_reflect_line",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "The point $(4, -5)$ is reflected over the line $y = x + 1$. What is the sum of the coordinates of its image?",
+  "choices": {
+   "A": "$-3$",
+   "B": "$-2$",
+   "C": "$-1$",
+   "D": "$0$",
+   "E": "$1$"
+  },
+  "answer": "C",
+  "hints": [
+   "Shift so the line passes through the origin."
+  ],
+  "solution": "**What we need:** the coordinate sum.\n\n**Key idea:** reflecting over $y = x + k$ sends $(x, y)$ to $(y - k, x + k)$.\n\n**Step 1.** Image: $(-6, 5)$; sum $-1$.\n\n**Answer:** $-1$. **(C)**\n\n**Common mistake:** swapping without shifting."
+ },
+ {
+  "id": "con_analytic_c05",
+  "skillId": "con_analytic",
+  "family": "con_analytic:anac_pick",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many lattice points lie strictly inside the triangle with vertices $(0, 0)$, $(3, 0)$, and $(10, 9)$?",
+  "choices": {
+   "A": "$11$",
+   "B": "$12$",
+   "C": "$13$",
+   "D": "$\\frac{27}{2}$",
+   "E": "$17$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pick's Theorem: $A = I + \\frac{B}{2} - 1$."
+  ],
+  "solution": "**What we need:** the interior count $I$.\n\n**Key idea:** find the area and the boundary lattice points ($\\gcd$ of each side's run and rise).\n\n**Step 1.** Area: $\\frac{27}{2}$. Boundary points: $5$.\n\n**Step 2.** $I = \\frac{27}{2} - \\frac{5}{2} + 1 = 12$.\n\n**Answer:** $12$. **(B)**\n\n**Common mistake:** forgetting the $-1$."
+ },
+ {
+  "id": "con_analytic_c06",
+  "skillId": "con_analytic",
+  "family": "con_analytic:anac_angle3d",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is $\\cos^2\\theta$, where $\\theta$ is the angle between the vectors $\\langle 3, 0, 4 \\rangle$ and $\\langle 0, 3, 4 \\rangle$?",
+  "choices": {
+   "A": "$\\frac{16}{625}$",
+   "B": "$\\frac{8}{25}$",
+   "C": "$\\frac{256}{625}$",
+   "D": "$\\frac{2929}{5625}$",
+   "E": "$\\frac{369}{625}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Dot product."
+  ],
+  "solution": "**What we need:** $\\cos^2\\theta$.\n\n**Key idea:** $\\cos\\theta = \\frac{u \\cdot w}{|u||w|}$.\n\n**Step 1.** $u \\cdot w = 16$, $|u|^2 = 25$, $|w|^2 = 25$.\n\n**Step 2.** $\\cos^2\\theta = \\frac{256}{625} = \\frac{256}{625}$.\n\n**Answer:** $\\frac{256}{625}$. **(C)**\n\n**Common mistake:** forgetting to square the magnitudes."
+ },
+ {
+  "id": "con_analytic_c07",
+  "skillId": "con_analytic",
+  "family": "con_analytic:anac_cube_diag",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A cube has edge $9$. What is the distance from the vertex $(9, 0, 0)$ to the space diagonal from $(0, 0, 0)$ to $(9, 9, 9)$?",
+  "choices": {
+   "A": "$3\\sqrt{3}$",
+   "B": "$\\frac{9\\sqrt{2}}{2}$",
+   "C": "$3\\sqrt{6}$",
+   "D": "$9$",
+   "E": "$\\frac{9\\sqrt{6}}{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use the right triangle with the diagonal."
+  ],
+  "solution": "**What we need:** the distance.\n\n**Key idea:** the distance from a point to a line through the origin is $\\frac{|P \\times d|}{|d|}$.\n\n**Step 1.** $P = (9, 0, 0)$, $d = (1, 1, 1)$: $|P \\times d| = 9\\sqrt{2}$, $|d| = \\sqrt{3}$.\n\n**Step 2.** Distance: $9\\sqrt{\\frac{2}{3}} = 3\\sqrt{6}$.\n\n**Answer:** $3\\sqrt{6}$. **(C)**\n\n**Common mistake:** using the face diagonal."
+ },
+ {
+  "id": "con_analytic_c08",
+  "skillId": "con_analytic",
+  "family": "con_analytic:anac_mirror_path",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A path goes from $(-5, 7)$ to a point on the $x$-axis, then to $(6, 2)$. What is the length of the shortest such path?",
+  "choices": {
+   "A": "$\\sqrt{146}$",
+   "B": "$\\sqrt{201}$",
+   "C": "$\\sqrt{202}$",
+   "D": "$\\sqrt{203}$",
+   "E": "$20$"
+  },
+  "answer": "C",
+  "hints": [
+   "Reflect one endpoint over the $x$-axis."
+  ],
+  "solution": "**What we need:** the length.\n\n**Key idea:** the path's length equals the distance from one point to the other's reflection.\n\n**Step 1.** Reflect $(6, 2)$ to $(6, -2)$.\n\n**Step 2.** Distance: $\\sqrt{121 + 81} = \\sqrt{202}$.\n\n**Answer:** $\\sqrt{202}$. **(C)**\n\n**Common mistake:** using the straight-line distance (which doesn't touch the axis)."
+ },
+ {
+  "id": "con_analytic_c09",
+  "skillId": "con_analytic",
+  "family": "con_analytic:anac_lattice_seg",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many lattice points (including the endpoints) lie on the segment from $(-19, 17)$ to $(-9, 25)$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$11$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\gcd$ of the run and rise."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** the lattice points are equally spaced; there are $\\gcd(|\\Delta x|, |\\Delta y|) + 1$ of them.\n\n**Step 1.** $\\gcd(10, 8) = 2$.\n\n**Step 2.** Count: $3$.\n\n**Answer:** $3$. **(C)**\n\n**Common mistake:** forgetting an endpoint."
+ },
+ {
+  "id": "con_analytic_c10",
+  "skillId": "con_analytic",
+  "family": "con_analytic:anac_quad_area",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the area of the quadrilateral with vertices $(-3, -6)$, $(3, -2)$, $(5, 3)$, $(-1, 7)$ (in order)?",
+  "choices": {
+   "A": "$27$",
+   "B": "$54$",
+   "C": "$55$",
+   "D": "$56$",
+   "E": "$108$"
+  },
+  "answer": "B",
+  "hints": [
+   "Shoelace formula."
+  ],
+  "solution": "**What we need:** the area.\n\n**Key idea:** sum $x_iy_{i+1} - x_{i+1}y_i$ around the polygon, halve the absolute value.\n\n**Step 1.** The shoelace sum is $\\pm 108$.\n\n**Step 2.** Area: $54$.\n\n**Answer:** $54$. **(B)**\n\n**Common mistake:** forgetting to halve."
+ }
+]

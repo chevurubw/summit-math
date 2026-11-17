@@ -1,0 +1,126 @@
+---
+title: Number bases
+---
+
+We write numbers in **base 10**: each place is worth ten times the place to its right. That choice is only because we have ten fingers. In **base $b$**, each place is worth $b$ times the place to its right, and the digits run from $0$ to $b - 1$. Computers use base 2. The AMC uses every base.
+
+By the end of this lesson you will be able to:
+
+- read a number written in any base,
+- convert from base 10 to any base,
+- add and multiply directly in another base,
+- find an unknown base from an equation.
+
+## Place value in base $b$
+
+In base 10, $347 = 3 \cdot 10^2 + 4 \cdot 10 + 7$. In base $b$, the places are $1, b, b^2, b^3, \ldots$ So
+
+$$
+1212_3 = 1 \cdot 27 + 2 \cdot 9 + 1 \cdot 3 + 2 \cdot 1 = 50.
+$$
+
+The little subscript names the base. Play with the explorer: pick a number and a base and see each place's value.
+
+<BasePlaces value={50} base={3} caption="Each box is one digit. Its value is the digit times the place value written underneath. Bases above 10 use letters: A is 10, B is 11, and so on." />
+
+<Check choices={["$9$", "$10$", "$11$", "$12$", "$13$"]} answer={2} explain="$1011_2 = 1 \cdot 8 + 0 \cdot 4 + 1 \cdot 2 + 1 = 11$.">
+What is $1011_2$ in base 10?
+</Check>
+
+## From base 10 to base $b$: divide and keep remainders
+
+Divide by $b$ again and again. The remainders, read **from the bottom up**, are the digits.
+
+<Steps problem="Write 50 in base 3.">
+<Step>
+$50 \div 3 = 16$ remainder $2$.
+</Step>
+<Step>
+$16 \div 3 = 5$ remainder $1$.
+</Step>
+<Step>
+$5 \div 3 = 1$ remainder $2$.
+</Step>
+<Step>
+$1 \div 3 = 0$ remainder $1$.
+</Step>
+<Step title="Read the remainders bottom to top">
+$50 = 1212_3$. That matches the example above.
+</Step>
+</Steps>
+
+Why does it work? The last remainder is the units digit (what's left after taking out every group of 3), and dividing by 3 shifts every other digit one place to the right.
+
+<Check choices={["$110_4$", "$201_4$", "$210_4$", "$1002_4$", "$300_4$"]} answer={2} explain="$36 \div 4 = 9$ remainder $0$; $9 \div 4 = 2$ remainder $1$; $2 \div 4 = 0$ remainder $2$. Bottom up: $210_4$. Check: $2 \cdot 16 + 1 \cdot 4 + 0 = 36$.">
+What is 36 written in base 4?
+</Check>
+
+## Arithmetic in another base
+
+Add column by column just like in base 10, but **carry when you reach $b$**, not 10.
+
+<Steps problem="Add $47_8 + 35_8$ in base 8.">
+<Step title="Units column">
+$7 + 5 = 12$. In base 8, $12 = 8 + 4$: write 4, carry 1.
+</Step>
+<Step title="Eights column">
+$4 + 3 + 1 = 8$: write 0, carry 1.
+</Step>
+<Step title="Answer">
+$104_8$. Check in base 10: $39 + 29 = 68 = 64 + 4 = 104_8$ ✓.
+</Step>
+</Steps>
+
+<Tip>
+When in doubt, convert everything to base 10, do the arithmetic there, and convert back. It's slower, but it never goes wrong.
+</Tip>
+
+## Finding an unknown base
+
+If an equation involves an unknown base $b$, write each number as a polynomial in $b$ and solve.
+
+<Steps problem="In some base $b$, the number $121_b$ equals 64. Find $b$.">
+<Step>
+$121_b = b^2 + 2b + 1 = (b + 1)^2$.
+</Step>
+<Step>
+$(b + 1)^2 = 64$, so $b + 1 = 8$ and $b = 7$.
+</Step>
+<Step title="Check the digits are legal">
+Digits 1, 2, 1 are all less than 7 ✓.
+</Step>
+</Steps>
+
+<Trap>
+Every digit must be **less than the base**. If you see the digit 5 in $b$, then $b \ge 6$. This often rules out answers immediately.
+</Trap>
+
+<Check choices={["$4$", "$5$", "$6$", "$7$", "$8$"]} answer={2} explain="$25_b = 2b + 5$ and $52_b = 5b + 2$. Their sum is $7b + 7 = 49$, so $b = 6$. The digit 5 requires $b \ge 6$ ✓.">
+In base $b$, $25_b + 52_b = 49$ (in base 10). What is $b$?
+</Check>
+
+## A few base facts worth knowing
+
+- Multiplying by $b$ in base $b$ appends a 0, exactly like multiplying by 10 in base 10.
+- The largest $k$ digit number in base $b$ is $b^k - 1$, written as $k$ copies of the digit $b - 1$.
+- A number in base $b$ is divisible by $b - 1$ exactly when its digit sum is. (It's the "divisible by 9" rule, moved to base $b$.)
+
+<FlipCards cards={[
+  { front: "$11111_2$ in base 10", back: "$31$" },
+  { front: "$\\text{FF}_{16}$ in base 10", back: "$15 \\cdot 16 + 15 = 255$" },
+  { front: "Number of digits of 100 in base 2", back: "$64 \\le 100 < 128$, so 7 digits." },
+  { front: "$10_b$ equals what?", back: "$b$" },
+]} />
+
+<Recap>
+- Base $b$ places are $1, b, b^2, \ldots$, and digits run from 0 to $b - 1$.
+- To convert to base 10, multiply each digit by its place value and add.
+- To convert from base 10, divide by $b$ repeatedly and read remainders bottom up.
+- Carry at $b$ when adding in base $b$.
+- Unknown base: write the number as a polynomial in $b$, and remember digits must be less than $b$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Base numbers" /> on the AoPS Wiki.
+- Base problems appear about once a year in <Archive test="10" />.
+</GoFurther>

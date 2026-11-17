@@ -1,0 +1,132 @@
+---
+title: Factorials
+---
+
+The **factorial** $n!$ is the product of every whole number from 1 to $n$: $5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120$. By agreement, $0! = 1$. Factorials grow astonishingly fast ($10! = 3{,}628{,}800$), so AMC problems never ask you to multiply them out. Instead they ask about their **prime factors**.
+
+By the end of this lesson you will be able to:
+
+- simplify ratios of factorials instantly,
+- count the zeros at the end of $n!$,
+- find the exact power of any prime that divides $n!$,
+- decide whether $n!$ is divisible by a given number.
+
+## Ratios of factorials cancel
+
+Since $n! = n \cdot (n - 1)!$, big factorials hold smaller ones inside them:
+
+$$
+\frac{12!}{10!} = \frac{12 \cdot 11 \cdot 10!}{10!} = 12 \cdot 11 = 132.
+$$
+
+<Check choices={["$56$", "$120$", "$336$", "$720$", "$6720$"]} answer={2} explain="$\tfrac{8!}{5!} = 8 \cdot 7 \cdot 6 = 336$.">
+What is $\dfrac{8!}{5!}$?
+</Check>
+
+## Trailing zeros
+
+Each zero at the end of a number comes from a factor of $10 = 2 \cdot 5$. In $n!$ there are far more 2s than 5s, so **the number of trailing zeros equals the number of factors of 5**.
+
+Count the 5s in $100!$:
+
+- multiples of 5 up to 100 each give one 5: $\left\lfloor \tfrac{100}{5} \right\rfloor = 20$,
+- multiples of 25 give a **second** 5: $\left\lfloor \tfrac{100}{25} \right\rfloor = 4$,
+- multiples of 125 would give a third: none.
+
+Total: $20 + 4 = 24$ trailing zeros.
+
+<Formula title="Legendre's formula">
+The exponent of the prime $p$ in $n!$ is
+
+$$
+\left\lfloor \frac{n}{p} \right\rfloor + \left\lfloor \frac{n}{p^2} \right\rfloor + \left\lfloor \frac{n}{p^3} \right\rfloor + \cdots
+$$
+
+where $\lfloor x \rfloor$ means "round down". Stop when $p^k > n$.
+</Formula>
+
+<Figure
+  bounds={[0, 101, -0.8, 3]}
+  axes="x"
+  grid={false}
+  ticks={10}
+  height={150}
+  equal={false}
+  params={[{ name: "n", min: 5, max: 100, step: 1, value: 50, label: "$n$" }]}
+  elements={[
+    { type: "region", test: "floor(x) >= 1 && floor(x) <= n && mod(floor(x), 5) == 0 && y > 0.1 && y < 1.4", fill: "accent", cells: 101, opacity: 0.85 },
+    { type: "region", test: "floor(x) >= 1 && floor(x) <= n && mod(floor(x), 25) == 0 && y > 1.6 && y < 2.9", fill: "amber", cells: 101, opacity: 0.9 },
+  ]}
+  readouts={["\\left\\lfloor \\tfrac{[[n]]}{5} \\right\\rfloor + \\left\\lfloor \\tfrac{[[n]]}{25} \\right\\rfloor = [[floor(n/5)]] + [[floor(n/25)]] = [[floor(n/5)+floor(n/25)]] \\text{ zeros}"]}
+  caption="Bottom row: multiples of 5 up to $n$, each worth one 5. Top row: multiples of 25, each worth an extra 5."
+/>
+
+<Check choices={["$20$", "$21$", "$22$", "$24$", "$25$"]} answer={3} explain="$\lfloor 100/5 \rfloor + \lfloor 100/25 \rfloor = 20 + 4 = 24$.">
+How many zeros are at the end of $100!$?
+</Check>
+
+<Check choices={["$10$", "$15$", "$16$", "$18$", "$19$"]} answer={3} explain="$\lfloor 20/2 \rfloor + \lfloor 20/4 \rfloor + \lfloor 20/8 \rfloor + \lfloor 20/16 \rfloor = 10 + 5 + 2 + 1 = 18$.">
+What is the largest power of 2 that divides $20!$? Give the exponent.
+</Check>
+
+<Trap>
+Don't stop after $\lfloor n/5 \rfloor$. Numbers like 25, 50, 75 contribute **two** 5s each, and 125 contributes three.
+</Trap>
+
+## Divisibility of factorials
+
+$n!$ is divisible by $k$ when every prime power in $k$ fits inside $n!$.
+
+<Steps problem="What is the smallest $n$ such that $n!$ is divisible by $1000$?">
+<Step title="Factor 1000">
+$1000 = 2^3 \cdot 5^3$.
+</Step>
+<Step title="The 5s are the bottleneck">
+We need three factors of 5. They come from 5, 10 and 15.
+</Step>
+<Step title="Answer">
+$15!$ has three 5s (and plenty of 2s), while $14!$ has only two. So $n = 15$.
+</Step>
+</Steps>
+
+<KeyIdea>
+For divisibility questions about $n!$, the **largest prime** in the divisor (or the prime with the highest exponent) is usually the bottleneck. Check that one first.
+</KeyIdea>
+
+<Check choices={["$5$", "$6$", "$7$", "$8$", "$9$"]} answer={2} explain="$7!$ contains the prime 7 and is divisible by 7, while no smaller factorial contains 7. Since $42 = 2 \cdot 3 \cdot 7$, the smallest $n$ is 7.">
+What is the smallest $n$ such that $n!$ is divisible by 42?
+</Check>
+
+## Simplifying expressions with factorials
+
+Factor out the smallest factorial:
+
+$$
+8! + 9! = 8!(1 + 9) = 10 \cdot 8!.
+$$
+
+This turns sums of factorials into products, which you can then factor or divide.
+
+<Tip>
+Know the small factorials by heart: $1, 1, 2, 6, 24, 120, 720, 5040, 40320$ for $0!$ through $8!$. They show up constantly in counting problems too.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Trailing zeros of $50!$", back: "$10 + 2 = 12$" },
+  { front: "Exponent of 3 in $30!$", back: "$10 + 3 + 1 = 14$" },
+  { front: "$\\dfrac{10!}{8!\\,2!}$", back: "$45$" },
+  { front: "$6! + 7!$ as a product", back: "$6!(1 + 7) = 8 \\cdot 720 = 5760$" },
+]} />
+
+<Recap>
+- $n! = n \cdot (n-1)!$, so ratios of factorials cancel.
+- Trailing zeros of $n!$ count the 5s: $\lfloor n/5 \rfloor + \lfloor n/25 \rfloor + \cdots$
+- Legendre's formula gives the exponent of any prime in $n!$.
+- For divisibility, the scarcest prime decides.
+- Factor out the smallest factorial from sums.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Factorial" /> and <AoPS q="Legendre's Formula" /> on the AoPS Wiki.
+- Factorial problems appear in <Archive test="10" /> and <Archive test="12" />.
+</GoFurther>

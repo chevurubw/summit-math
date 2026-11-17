@@ -1,0 +1,140 @@
+---
+title: Coordinate geometry
+---
+
+**Coordinate geometry** puts shapes on a grid so you can measure them with algebra. Every point is a pair $(x, y)$, and lengths, slopes and areas become arithmetic. When a geometry problem feels stuck, dropping it onto coordinates is often the reliable way through.
+
+By the end of this lesson you will be able to:
+
+- find distances and midpoints,
+- write the equation of a line from two facts about it,
+- find the distance from a point to a line,
+- reflect points and pick smart coordinates for a problem.
+
+## Distance is Pythagoras in disguise
+
+To get from $(x_1, y_1)$ to $(x_2, y_2)$, walk across $x_2 - x_1$ and up $y_2 - y_1$. Those are the legs of a right triangle, and the distance is the hypotenuse.
+
+<Figure
+  bounds={[-1, 11, -1, 11]}
+  ticks={1}
+  height={400}
+  params={[
+    { name: "x2", min: 2, max: 10, step: 1, value: 7, label: "$x_2$" },
+    { name: "y2", min: 3, max: 10, step: 1, value: 10, label: "$y_2$" },
+  ]}
+  elements={[
+    { type: "polygon", pts: [[1, 2], ["x2", 2], ["x2", "y2"]], fill: "accent", color: "muted", width: 1 },
+    { type: "segment", a: [1, 2], b: ["x2", "y2"], color: "accent", width: 3.5 },
+    { type: "angle", a: [1, 2], o: ["x2", 2], b: ["x2", "y2"], right: true, color: "heading", r: 14 },
+    { type: "point", x: 1, y: 2, label: "(1, 2)", labelDir: "sw", color: "heading" },
+    { type: "point", x: "x2", y: "y2", label: "([[x2]], [[y2]])", labelDir: "ne", color: "heading" },
+    { type: "point", x: "(1 + x2)/2", y: "(2 + y2)/2", label: "midpoint", labelDir: "nw", color: "amber" },
+    { type: "text", x: "(1 + x2)/2", y: 1.4, text: "[[x2 - 1]]", color: "teal" },
+    { type: "text", x: "x2 + 0.4", y: "(2 + y2)/2", text: "[[y2 - 2]]", color: "teal", anchor: "start" },
+  ]}
+  readouts={["d = \\sqrt{[[x2-1]]^2 + [[y2-2]]^2} = [[sqrt((x2-1)^2 + (y2-2)^2):3]]", "\\text{midpoint} = ([[(1+x2)/2]], [[(2+y2)/2]])"]}
+  caption="The distance is the hypotenuse of the right triangle with legs equal to the change in $x$ and the change in $y$."
+/>
+
+<Formula>
+
+$$
+d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}, \qquad \text{midpoint} = \left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right).
+$$
+
+</Formula>
+
+<Check choices={["$8$", "$9$", "$10$", "$12$", "$14$"]} answer={2} explain="Change in $x$ is 6 and change in $y$ is 8, so $d = \sqrt{36 + 64} = 10$. A $6, 8, 10$ triangle.">
+What is the distance between $(1, 2)$ and $(7, 10)$?
+</Check>
+
+## Lines
+
+Slope $m = \dfrac{\Delta y}{\Delta x}$. Two common forms of a line:
+
+- **slope intercept**: $y = mx + b$,
+- **point slope**: $y - y_1 = m(x - x_1)$, perfect when you know a point and the slope.
+
+Parallel lines have equal slopes. Perpendicular slopes multiply to $-1$.
+
+<Steps problem="Find the line through $(2, 3)$ perpendicular to $y = 2x + 1$. Where does it cross the $y$ axis?">
+<Step title="Perpendicular slope">
+The negative reciprocal of $2$ is $-\tfrac{1}{2}$.
+</Step>
+<Step title="Point slope form">
+$y - 3 = -\tfrac{1}{2}(x - 2)$, so $y = -\tfrac{1}{2}x + 4$.
+</Step>
+<Step title="The intercept">
+It crosses the $y$ axis at $(0, 4)$.
+</Step>
+</Steps>
+
+<Check choices={["$(2, 2)$", "$(2, 3)$", "$(4, 4)$", "$(5, 3)$", "$(1, 2)$"]} answer={0} explain="Average the coordinates: $\left(\tfrac{-3 + 7}{2}, \tfrac{5 + (-1)}{2}\right) = (2, 2)$.">
+What is the midpoint of $(-3, 5)$ and $(7, -1)$?
+</Check>
+
+## Distance from a point to a line
+
+<Formula>
+The distance from $(x_0, y_0)$ to the line $ax + by + c = 0$ is
+
+$$
+\frac{|ax_0 + by_0 + c|}{\sqrt{a^2 + b^2}}.
+$$
+
+</Formula>
+
+<Check choices={["$3$", "$4$", "$5$", "$\\tfrac{20}{7}$", "$20$"]} answer={1} explain="Write the line as $3x + 4y - 20 = 0$. From $(0, 0)$: $\tfrac{|0 + 0 - 20|}{\sqrt{9 + 16}} = \tfrac{20}{5} = 4$.">
+How far is the origin from the line $3x + 4y = 20$?
+</Check>
+
+## Reflections
+
+| Reflect $(x, y)$ across | Result |
+| --- | --- |
+| the $x$ axis | $(x, -y)$ |
+| the $y$ axis | $(-x, y)$ |
+| the line $y = x$ | $(y, x)$ |
+| the origin | $(-x, -y)$ |
+
+<KeyIdea title="The shortest path trick">
+To find the shortest path from $A$ to a line and then to $B$ (both on the same side), reflect $B$ across the line. The shortest path is the straight segment from $A$ to the reflected point. This turns a "bounce" problem into a single distance.
+</KeyIdea>
+
+<Steps problem="What is the shortest path from $(0, 3)$ to a point on the $x$ axis and then to $(8, 3)$?">
+<Step>
+Reflect $(8, 3)$ across the $x$ axis to $(8, -3)$.
+</Step>
+<Step>
+The straight line from $(0, 3)$ to $(8, -3)$ has length $\sqrt{8^2 + 6^2} = 10$.
+</Step>
+</Steps>
+
+## Choosing coordinates
+
+When a problem gives a shape but no coordinates, **place it yourself** to make the numbers easy: put a right angle at the origin, a side along an axis, or a center of symmetry at $(0, 0)$. A square of side 4 might get corners $(0, 0)$, $(4, 0)$, $(4, 4)$, $(0, 4)$.
+
+<Tip>
+On the AMC, coordinates are a reliable fallback. They may take a few more lines than a clever synthetic trick, but they almost never fail. If you don't see the trick in a minute, set up coordinates.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Slope of the line through $(1, 4)$ and $(5, -4)$", back: "$\\tfrac{-8}{4} = -2$" },
+  { front: "Reflect $(3, -7)$ across $y = x$", back: "$(-7, 3)$" },
+  { front: "Is the triangle $(0,0), (4,0), (4,3)$ right?", back: "Yes, the right angle is at $(4, 0)$." },
+  { front: "Distance from $(5, 1)$ to the line $x = 2$", back: "$3$ (horizontal distance)." },
+]} />
+
+<Recap>
+- Distance is Pythagoras on the changes in $x$ and $y$. Midpoint is the average.
+- Slope is rise over run; use point slope form to write a line quickly.
+- Point to line distance: $\frac{|ax_0 + by_0 + c|}{\sqrt{a^2 + b^2}}$.
+- Reflections swap or negate coordinates. Reflecting turns bounce paths into straight lines.
+- Place shapes on axes to make coordinates easy.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Cartesian plane" />, <AoPS q="Distance formula" /> and <AoPS q="Point-line distance formula" /> on the AoPS Wiki.
+- Coordinate methods help on many problems in <Archive test="10" />.
+</GoFurther>

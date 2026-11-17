@@ -1,0 +1,170 @@
+---
+title: Angles and polygons
+---
+
+**Angle chasing** means finding an unknown angle by moving step by step from angles you know, using a small set of facts. It is the first tool you reach for in almost every geometry problem. The facts are few, so learn them completely.
+
+By the end of this lesson you will be able to:
+
+- use straight angles, vertical angles and parallel lines to find angles,
+- explain why a triangle's angles add to $180^\circ$,
+- find interior and exterior angles of any polygon,
+- chase angles through isosceles triangles.
+
+## The basic facts
+
+- Angles on a straight line add to $180^\circ$.
+- Angles around a point add to $360^\circ$.
+- **Vertical angles** (opposite each other where two lines cross) are equal.
+- When a line crosses two **parallel** lines, it makes only two different angle sizes, and they add to $180^\circ$.
+
+<Figure
+  bounds={[-6, 6, -3.6, 3.6]}
+  axes={false}
+  grid={false}
+  height={330}
+  params={[{ name: "t", min: 25, max: 155, step: 1, value: 60, label: "crossing angle" }]}
+  elements={[
+    { type: "line", a: [-6, 1.6], b: [6, 1.6], color: "muted", width: 2 },
+    { type: "line", a: [-6, -1.6], b: [6, -1.6], color: "muted", width: 2 },
+    { type: "point", id: "P", x: "1.6/tand(t)", y: 1.6, size: 3, color: "heading" },
+    { type: "point", id: "Q", x: "-1.6/tand(t)", y: -1.6, size: 3, color: "heading" },
+    { type: "line", a: "Q", b: "P", color: "accent", width: 2.5 },
+    { type: "angle", a: [6, 1.6], o: "P", b: ["1.6/tand(t) + cosd(t)", "1.6 + sind(t)"], color: "amber", r: 30, label: "[[t]]°" },
+    { type: "angle", a: [6, -1.6], o: "Q", b: ["-1.6/tand(t) + cosd(t)", "-1.6 + sind(t)"], color: "amber", r: 30, label: "[[t]]°" },
+    { type: "angle", a: ["1.6/tand(t) + cosd(t)", "1.6 + sind(t)"], o: "P", b: [-6, 1.6], color: "teal", r: 22, label: "[[180-t]]°" },
+    { type: "angle", a: ["-1.6/tand(t) - cosd(t)", "-1.6 - sind(t)"], o: "Q", b: [-6, -1.6], color: "amber", r: 30, label: "[[t]]°" },
+  ]}
+  caption="Two parallel lines and a transversal. Every angle is either the yellow size or the green size, and yellow plus green is $180^\circ$."
+/>
+
+<KeyIdea>
+With parallel lines, ask only one question about each angle: is it the **small** one or the **large** one? Equal if both are small or both large; adding to $180^\circ$ otherwise.
+</KeyIdea>
+
+<Check choices={["$10$", "$15$", "$20$", "$25$", "$40$"]} answer={2} explain="Alternate interior angles are equal: $3x + 10 = 5x - 30$, so $2x = 40$ and $x = 20$. Each angle is $70^\circ$.">
+Two parallel lines are cut by a transversal. A pair of alternate interior angles measure $(3x + 10)^\circ$ and $(5x - 30)^\circ$. What is $x$?
+</Check>
+
+## Triangles add to 180°
+
+Draw a line through the top vertex parallel to the base. The two angles at the base reappear at the top as alternate angles, and together with the top angle they make a straight line. Drag the top vertex: the three angles change but their sum never does.
+
+<Figure
+  bounds={[-1, 9, -1, 6]}
+  axes={false}
+  grid={false}
+  height={330}
+  params={[
+    { name: "cx", min: 0.5, max: 7.5, step: 0.1, value: 2.5, label: "top vertex left, right", play: true, speed: 8 },
+    { name: "cy", min: 1.2, max: 5.5, step: 0.1, value: 4, label: "top vertex height" },
+  ]}
+  elements={[
+    { type: "point", id: "A", x: 0, y: 0, label: "A", labelDir: "sw", color: "heading" },
+    { type: "point", id: "B", x: 8, y: 0, label: "B", labelDir: "se", color: "heading" },
+    { type: "point", id: "C", x: "cx", y: "cy", label: "C", labelDir: "n", color: "heading" },
+    { type: "polygon", pts: ["A", "B", "C"], color: "accent", width: 2.5 },
+    { type: "line", a: ["cx", "cy"], b: ["cx + 1", "cy"], color: "muted", dashed: true, width: 1.2 },
+    { type: "angle", a: "B", o: "A", b: "C", color: "amber", r: 34 },
+    { type: "angle", a: "C", o: "B", b: "A", color: "teal", r: 34 },
+    { type: "angle", a: "A", o: "C", b: "B", color: "pink", r: 26 },
+    { type: "angle", a: ["cx - 1", "cy"], o: "C", b: "A", color: "amber", r: 44 },
+    { type: "angle", a: "B", o: "C", b: ["cx + 1", "cy"], color: "teal", r: 44 },
+  ]}
+  readouts={[
+    "\\color{#fbbf24} A = [[deg(atan2(cy, cx)):1]]^\\circ",
+    "\\color{#2dd4bf} B = [[deg(atan2(cy, 8 - cx)):1]]^\\circ",
+    "\\color{#f472b6} C = [[180 - deg(atan2(cy, cx)) - deg(atan2(cy, 8 - cx)):1]]^\\circ",
+    "\\text{sum} = 180^\\circ",
+  ]}
+  caption="The copies of angles $A$ and $B$ at the top, plus angle $C$, fill a straight line."
+/>
+
+An **exterior angle** of a triangle (made by extending one side) equals the sum of the two **far** interior angles. That saves a step all the time.
+
+### Isosceles triangles
+
+Two equal sides means the two angles opposite them are equal. If the top angle of an isosceles triangle is $40^\circ$, the base angles are $\tfrac{180 - 40}{2} = 70^\circ$ each.
+
+<Steps problem="In triangle $ABC$, $AB = AC$ and point $D$ on $BC$ has $AD = BD$. If $\angle BAD = 30^\circ$, find $\angle DAC$.">
+<Step title="Use the isosceles triangle $ABD$">
+$AD = BD$, so $\angle ABD = \angle BAD = 30^\circ$.
+</Step>
+<Step title="Use the isosceles triangle $ABC$">
+$AB = AC$, so $\angle ACB = \angle ABC = 30^\circ$.
+</Step>
+<Step title="Add up triangle $ABC$">
+$\angle BAC = 180 - 30 - 30 = 120^\circ$.
+</Step>
+<Step title="Subtract">
+$\angle DAC = 120 - 30 = 90^\circ$.
+</Step>
+</Steps>
+
+<Tip>
+Every time you see two equal segments meeting at a point, mark the two equal angles across from them **immediately**. Most AMC angle problems are a chain of isosceles triangles.
+</Tip>
+
+## Polygons
+
+Cut an $n$ sided polygon into triangles from one corner: you get $n - 2$ triangles. So:
+
+<Formula>
+
+$$
+\text{sum of interior angles} = (n - 2) \cdot 180^\circ
+$$
+
+The **exterior** angles of any convex polygon (one at each corner) always add to $360^\circ$: walking around the shape, you turn once completely.
+</Formula>
+
+Slide $n$ to see regular polygons.
+
+<Figure
+  bounds={[-1.6, 1.6, -1.25, 1.25]}
+  axes={false}
+  grid={false}
+  height={300}
+  params={[{ name: "n", min: 3, max: 12, step: 1, value: 6, label: "number of sides $n$" }]}
+  elements={[
+    { type: "curve", x: "cos(pi/n)/cos(mod(s - pi/2, 2*pi/n) - pi/n)*cos(s)", y: "cos(pi/n)/cos(mod(s - pi/2, 2*pi/n) - pi/n)*sin(s)", from: 0, to: 6.2832, color: "accent", width: 3 },
+  ]}
+  readouts={[
+    "\\text{interior sum} = ([[n]] - 2) \\cdot 180^\\circ = [[(n-2)*180]]^\\circ",
+    "\\text{each interior} = [[(n-2)*180/n:2]]^\\circ",
+    "\\text{each exterior} = \\tfrac{360^\\circ}{[[n]]} = [[360/n:2]]^\\circ",
+  ]}
+  caption="In a regular polygon every interior angle is the same: the total divided by $n$. Each exterior angle is $360^\circ / n$."
+/>
+
+<Check choices={["$120^\\circ$", "$128^\\circ$", "$135^\\circ$", "$140^\\circ$", "$144^\\circ$"]} answer={2} explain="Each exterior angle is $\tfrac{360}{8} = 45^\circ$, so each interior angle is $180 - 45 = 135^\circ$. Or: $\tfrac{6 \cdot 180}{8} = 135$.">
+What is each interior angle of a regular octagon?
+</Check>
+
+<Check choices={["$8$", "$9$", "$10$", "$12$", "$15$"]} answer={4} explain="Exterior angles total $360^\circ$, so $\tfrac{360}{24} = 15$ sides.">
+Each exterior angle of a regular polygon is $24^\circ$. How many sides does it have?
+</Check>
+
+<Trap>
+The exterior angle shortcut is usually faster than the interior formula. Going from an interior angle back to $n$? Subtract from 180 to get the exterior angle, then divide 360 by it.
+</Trap>
+
+<FlipCards cards={[
+  { front: "Interior angle sum of a pentagon", back: "$3 \\cdot 180 = 540^\\circ$" },
+  { front: "Interior angle sum is $1440^\\circ$. How many sides?", back: "$n - 2 = 8$, so $n = 10$." },
+  { front: "Exterior angle of a triangle equals...", back: "the sum of the two far interior angles." },
+  { front: "Base angle of an isosceles triangle with top angle $100^\\circ$", back: "$40^\\circ$" },
+]} />
+
+<Recap>
+- Straight line $180^\circ$, full turn $360^\circ$, vertical angles equal.
+- Parallel lines with a transversal make only two angle sizes, adding to $180^\circ$.
+- Triangle angles add to $180^\circ$; an exterior angle equals the two far interior angles.
+- Equal sides face equal angles.
+- Polygon interior sum $(n - 2) \cdot 180^\circ$; exterior angles add to $360^\circ$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Angle chasing" />, <AoPS q="Polygon" /> and <AoPS q="Isosceles triangle" /> on the AoPS Wiki.
+- Angle chasing appears in geometry problems throughout <Archive test="10" />.
+</GoFurther>

@@ -1,0 +1,143 @@
+---
+title: Trig identities
+---
+
+An **identity** is an equation that's true for every angle. Trig identities let you rewrite an expression into a form that's easier to compute, or connect a value you know to one you need. You only need a handful; everything else follows from them.
+
+By the end of this lesson you will be able to:
+
+- use $\sin^2\theta + \cos^2\theta = 1$ to find one function from another,
+- use the angle addition formulas to find values like $\sin 75^\circ$,
+- use the double angle formulas,
+- recognize the "square it" trick for $\sin x + \cos x$.
+
+## The Pythagorean identity
+
+The point $(\cos\theta, \sin\theta)$ lies on the unit circle, so by Pythagoras:
+
+$$
+\sin^2\theta + \cos^2\theta = 1.
+$$
+
+<Figure
+  bounds={[-1.3, 1.3, -1.3, 1.3]}
+  ticks={0.5}
+  height={340}
+  params={[{ name: "t", min: 0, max: 6.2832, step: 0.01, value: 0.9273, label: "angle $\\theta$", play: true, speed: 9 }]}
+  elements={[
+    { type: "circle", c: [0, 0], r: 1, color: "muted", width: 2 },
+    { type: "polygon", pts: [[0, 0], ["cos(t)", 0], ["cos(t)", "sin(t)"]], fill: "accent", color: "accent", width: 2.5 },
+    { type: "point", x: "cos(t)", y: "sin(t)", color: "accent" },
+    { type: "text", x: "cos(t)/2", y: "-0.12*sign(sin(t)) - 0.02", text: "cos θ", color: "blue", size: 14 },
+    { type: "text", x: "cos(t) + 0.2*sign(cos(t))", y: "sin(t)/2", text: "sin θ", color: "pink", size: 14 },
+    { type: "text", x: "cos(t)/2 - 0.12*sign(cos(t))", y: "sin(t)/2 + 0.12", text: "1", size: 15 },
+  ]}
+  readouts={["\\sin^2\\theta + \\cos^2\\theta = [[sin(t)^2:3]] + [[cos(t)^2:3]] = 1"]}
+  caption="The legs are $|\cos\theta|$ and $|\sin\theta|$ and the hypotenuse is 1, at every angle."
+/>
+
+Divide by $\cos^2\theta$ or $\sin^2\theta$ to get two cousins:
+
+$$
+1 + \tan^2\theta = \sec^2\theta, \qquad 1 + \cot^2\theta = \csc^2\theta.
+$$
+
+<Steps problem="If $\sin\theta = \tfrac{3}{5}$ and $\theta$ is acute, find $\cos\theta$ and $\tan\theta$.">
+<Step>
+$\cos^2\theta = 1 - \tfrac{9}{25} = \tfrac{16}{25}$, and $\theta$ is acute so $\cos\theta = \tfrac{4}{5}$.
+</Step>
+<Step>
+$\tan\theta = \dfrac{3/5}{4/5} = \tfrac{3}{4}$. (It's a $3, 4, 5$ triangle in disguise.)
+</Step>
+</Steps>
+
+<Trap>
+$\sin^2\theta + \cos^2\theta = 1$ gives $\cos\theta = \pm\sqrt{1 - \sin^2\theta}$. The quadrant decides the sign. Don't drop the $\pm$ until you've checked.
+</Trap>
+
+## Angle addition
+
+<Formula>
+
+$$
+\begin{aligned}
+\sin(a \pm b) &= \sin a \cos b \pm \cos a \sin b \\
+\cos(a \pm b) &= \cos a \cos b \mp \sin a \sin b \\
+\tan(a \pm b) &= \frac{\tan a \pm \tan b}{1 \mp \tan a \tan b}
+\end{aligned}
+$$
+
+Notice the sign **flips** in the cosine formula.
+</Formula>
+
+<Steps problem="Find the exact value of $\sin 75^\circ$.">
+<Step>
+$75^\circ = 45^\circ + 30^\circ$.
+</Step>
+<Step>
+$\sin 75^\circ = \sin 45^\circ\cos 30^\circ + \cos 45^\circ\sin 30^\circ = \tfrac{\sqrt{2}}{2}\cdot\tfrac{\sqrt{3}}{2} + \tfrac{\sqrt{2}}{2}\cdot\tfrac{1}{2}$.
+</Step>
+<Step>
+$= \dfrac{\sqrt{6} + \sqrt{2}}{4}$.
+</Step>
+</Steps>
+
+<Check choices={["$\\tfrac{\\sqrt{6} + \\sqrt{2}}{4}$", "$\\tfrac{\\sqrt{6} - \\sqrt{2}}{4}$", "$\\tfrac{\\sqrt{3} - 1}{2}$", "$\\tfrac{\\sqrt{2}}{4}$", "$\\tfrac{1}{4}$"]} answer={1} explain="$\cos 75^\circ = \cos 45^\circ\cos 30^\circ - \sin 45^\circ\sin 30^\circ = \tfrac{\sqrt{6}}{4} - \tfrac{\sqrt{2}}{4}$.">
+What is $\cos 75^\circ$?
+</Check>
+
+## Double angle
+
+Set $a = b$ in the addition formulas:
+
+<Formula>
+
+$$
+\begin{aligned}
+\sin 2\theta &= 2\sin\theta\cos\theta \\
+\cos 2\theta &= \cos^2\theta - \sin^2\theta = 2\cos^2\theta - 1 = 1 - 2\sin^2\theta
+\end{aligned}
+$$
+
+</Formula>
+
+The last two forms of $\cos 2\theta$, rearranged, are the **power reducing** formulas: $\cos^2\theta = \frac{1 + \cos 2\theta}{2}$ and $\sin^2\theta = \frac{1 - \cos 2\theta}{2}$.
+
+<Check choices={["$\\tfrac{6}{25}$", "$\\tfrac{12}{25}$", "$\\tfrac{7}{25}$", "$\\tfrac{24}{25}$", "$\\tfrac{6}{5}$"]} answer={3} explain="With $\sin\theta = \tfrac{3}{5}$ and $\cos\theta = \tfrac{4}{5}$: $\sin 2\theta = 2 \cdot \tfrac{3}{5} \cdot \tfrac{4}{5} = \tfrac{24}{25}$.">
+If $\sin\theta = \tfrac{3}{5}$ and $\theta$ is acute, what is $\sin 2\theta$?
+</Check>
+
+## The "square it" trick
+
+When you know $\sin x + \cos x$ (or $\sin x - \cos x$), square it:
+
+$$
+(\sin x + \cos x)^2 = \sin^2 x + \cos^2 x + 2\sin x\cos x = 1 + \sin 2x.
+$$
+
+<Check choices={["$\\tfrac{11}{25}$", "$\\tfrac{12}{25}$", "$\\tfrac{1}{5}$", "$\\tfrac{44}{25}$", "$\\tfrac{6}{5}$"]} answer={0} explain="$(\sin x + \cos x)^2 = 1 + \sin 2x$, so $\tfrac{36}{25} = 1 + \sin 2x$ and $\sin 2x = \tfrac{11}{25}$.">
+If $\sin x + \cos x = \tfrac{6}{5}$, what is $\sin 2x$?
+</Check>
+
+<KeyIdea>
+Most identity problems on the AMC are "find X given Y". Ask: which identity connects X to Y? Pythagorean for sin to cos, double angle for $\theta$ to $2\theta$, addition for sums of angles.
+</KeyIdea>
+
+<FlipCards cards={[
+  { front: "$\\sin 15^\\circ$", back: "$\\tfrac{\\sqrt{6} - \\sqrt{2}}{4}$" },
+  { front: "$\\cos^2 22.5^\\circ$", back: "$\\tfrac{1 + \\cos 45^\\circ}{2} = \\tfrac{2 + \\sqrt{2}}{4}$" },
+  { front: "$\\tan\\theta = 2$. Find $\\sec^2\\theta$.", back: "$1 + 4 = 5$" },
+  { front: "$2\\sin 15^\\circ \\cos 15^\\circ$", back: "$\\sin 30^\\circ = \\tfrac{1}{2}$" },
+]} />
+
+<Recap>
+- $\sin^2 + \cos^2 = 1$; also $1 + \tan^2 = \sec^2$. The quadrant fixes signs.
+- Addition: $\sin(a \pm b) = \sin a\cos b \pm \cos a\sin b$; $\cos(a \pm b) = \cos a\cos b \mp \sin a\sin b$.
+- Double angle: $\sin 2\theta = 2\sin\theta\cos\theta$; $\cos 2\theta = 2\cos^2\theta - 1 = 1 - 2\sin^2\theta$.
+- $(\sin x + \cos x)^2 = 1 + \sin 2x$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Trigonometric identities" /> on the AoPS Wiki.
+- Identity problems appear in <Archive test="12" />.
+</GoFurther>

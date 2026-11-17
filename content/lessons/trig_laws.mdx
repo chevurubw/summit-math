@@ -1,0 +1,137 @@
+---
+title: Law of Sines and Cosines
+---
+
+Right triangle trig only works when there's a right angle. The **Law of Cosines** and the **Law of Sines** work in **every** triangle. With them you can find any missing side or angle once you know three facts about a triangle (as long as one of them is a side).
+
+By the end of this lesson you will be able to:
+
+- use the Law of Cosines to find a side or an angle,
+- use the Law of Sines, and connect it to the circumradius,
+- find area with $\tfrac{1}{2}ab\sin C$ and with Heron's formula,
+- pick the right tool for the information you have.
+
+**Notation:** in triangle $ABC$, side $a$ is across from angle $A$, side $b$ across from $B$, side $c$ across from $C$.
+
+## Law of Cosines
+
+$$
+c^2 = a^2 + b^2 - 2ab\cos C
+$$
+
+It's the Pythagorean Theorem with a correction term. When $C = 90^\circ$, $\cos C = 0$ and it becomes $c^2 = a^2 + b^2$. Open the angle wider and $c$ grows; close it and $c$ shrinks.
+
+<Figure
+  bounds={[-6, 7, -0.8, 6.5]}
+  axes={false}
+  grid={false}
+  height={330}
+  params={[{ name: "C", min: 20, max: 170, step: 1, value: 60, label: "angle $C$ (degrees)", play: true, speed: 8 }]}
+  elements={[
+    { type: "point", id: "Cp", x: 0, y: 0, label: "C", labelDir: "s", color: "heading" },
+    { type: "point", id: "Bp", x: 6, y: 0, label: "B", labelDir: "se", color: "heading" },
+    { type: "point", id: "Ap", x: "5*cosd(C)", y: "5*sind(C)", label: "A", labelDir: "n", color: "heading" },
+    { type: "polygon", pts: ["Cp", "Bp", "Ap"], fill: "accent", color: "accent", width: 2.5 },
+    { type: "segment", a: "Ap", b: "Bp", color: "amber", width: 3.5 },
+    { type: "angle", a: "Bp", o: "Cp", b: "Ap", color: "teal", r: 24, label: "[[C]]°" },
+    { type: "text", x: 3, y: -0.5, text: "a = 6", size: 14 },
+    { type: "text", x: "2.5*cosd(C) - 0.45", y: "2.5*sind(C) + 0.1", text: "b = 5", size: 14, anchor: "end" },
+  ]}
+  readouts={["c^2 = 36 + 25 - 60\\cos [[C]]^\\circ = [[61 - 60*cosd(C):2]]", "\\color{#fbbf24} c = [[sqrt(61 - 60*cosd(C)):3]]", "\\text{area} = \\tfrac{1}{2}(6)(5)\\sin C = [[15*sind(C):2]]"]}
+  caption="Sides 6 and 5 stay fixed; the yellow side $c$ depends only on the angle between them."
+/>
+
+<Check choices={["$\\sqrt{39}$", "$6$", "$7$", "$\\sqrt{89}$", "$13$"]} answer={2} explain="$c^2 = 25 + 64 - 2(5)(8)\cos 60^\circ = 89 - 40 = 49$, so $c = 7$.">
+A triangle has sides 5 and 8 with a $60^\circ$ angle between them. How long is the third side?
+</Check>
+
+**Finding an angle:** rearrange to $\cos C = \dfrac{a^2 + b^2 - c^2}{2ab}$. For sides $5, 7, 8$, the angle across from 7 has $\cos = \tfrac{25 + 64 - 49}{80} = \tfrac{1}{2}$, so it's $60^\circ$.
+
+<Tip>
+The sign of $a^2 + b^2 - c^2$ tells you the type of angle $C$: positive means acute, zero means right, negative means obtuse. Quick way to classify a triangle.
+</Tip>
+
+## Law of Sines
+
+$$
+\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R
+$$
+
+where $R$ is the radius of the circle through all three vertices (the **circumradius**). Use it when you know an angle and the side across from it.
+
+<Steps problem="In triangle $ABC$, $A = 30^\circ$, $B = 45^\circ$, and $a = 6$. Find $b$.">
+<Step>
+$\dfrac{6}{\sin 30^\circ} = \dfrac{b}{\sin 45^\circ}$.
+</Step>
+<Step>
+$\dfrac{6}{1/2} = 12$, so $b = 12 \sin 45^\circ = 6\sqrt{2}$.
+</Step>
+<Step title="Bonus">
+$2R = 12$, so the circumradius is $6$.
+</Step>
+</Steps>
+
+<Check choices={["$\\tfrac{5}{2}$", "$5$", "$5\\sqrt{3}$", "$10$", "$\\tfrac{10}{\\sqrt{3}}$"]} answer={1} explain="$2R = \tfrac{a}{\sin A} = \tfrac{5}{1/2} = 10$, so $R = 5$.">
+A triangle has an angle of $30^\circ$ across from a side of length 5. What is its circumradius?
+</Check>
+
+## Area formulas
+
+<Formula>
+
+$$
+\text{Area} = \tfrac{1}{2}ab\sin C
+$$
+
+Two sides and the angle between them. And when you know all three sides, **Heron's formula**: with $s = \tfrac{a + b + c}{2}$,
+
+$$
+\text{Area} = \sqrt{s(s - a)(s - b)(s - c)}.
+$$
+
+</Formula>
+
+<Steps problem="Find the area of the triangle with sides 13, 14, 15.">
+<Step>
+$s = \tfrac{13 + 14 + 15}{2} = 21$.
+</Step>
+<Step>
+Area $= \sqrt{21 \cdot 8 \cdot 7 \cdot 6} = \sqrt{7056} = 84$.
+</Step>
+</Steps>
+
+<Check choices={["$15$", "$15\\sqrt{3}$", "$30$", "$30\\sqrt{3}$", "$60$"]} answer={0} explain="$\tfrac{1}{2} \cdot 6 \cdot 10 \cdot \sin 30^\circ = 30 \cdot \tfrac{1}{2} = 15$.">
+What is the area of a triangle with sides 6 and 10 and a $30^\circ$ angle between them?
+</Check>
+
+## Which tool when?
+
+| You know | Use |
+| --- | --- |
+| two sides and the angle between them | Law of Cosines (and $\tfrac{1}{2}ab\sin C$ for area) |
+| all three sides | Law of Cosines for angles, Heron for area |
+| two angles and any side | Law of Sines |
+| a side and the angle across from it | Law of Sines, and that gives $R$ too |
+
+<Trap>
+Knowing two sides and an angle **not** between them is the ambiguous case: there can be zero, one or two triangles. Draw it before trusting a single answer.
+</Trap>
+
+<FlipCards cards={[
+  { front: "Sides 3, 5, 7: the angle across from 7", back: "$\\cos = \\tfrac{9 + 25 - 49}{30} = -\\tfrac{1}{2}$, so $120^\\circ$." },
+  { front: "Area of a triangle with sides 5, 5, 6", back: "Heron: $s = 8$, $\\sqrt{8 \\cdot 3 \\cdot 3 \\cdot 2} = 12$." },
+  { front: "Equilateral triangle side 6: circumradius", back: "$\\tfrac{6}{2 \\sin 60^\\circ} = 2\\sqrt{3}$" },
+  { front: "Is a triangle with sides 4, 5, 7 acute or obtuse?", back: "$16 + 25 - 49 < 0$: obtuse." },
+]} />
+
+<Recap>
+- Law of Cosines: $c^2 = a^2 + b^2 - 2ab\cos C$.
+- Law of Sines: $\frac{a}{\sin A} = 2R$ for every side.
+- Area: $\frac{1}{2}ab\sin C$, or Heron with the semiperimeter.
+- Choose the law by what you know; beware the ambiguous case.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Law of Cosines" />, <AoPS q="Law of Sines" /> and <AoPS q="Heron's Formula" /> on the AoPS Wiki.
+- Practice with geometry problems in <Archive test="12" />.
+</GoFurther>

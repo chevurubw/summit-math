@@ -1,0 +1,143 @@
+---
+title: Unit circle values
+---
+
+Trigonometry starts with one picture: the **unit circle**, a circle of radius 1 centered at the origin. Walk around it by an angle $\theta$, starting from the positive $x$ axis. The point you land on has coordinates
+
+$$
+(\cos\theta, \sin\theta).
+$$
+
+That's the whole definition. Every fact in this lesson falls out of it.
+
+By the end of this lesson you will be able to:
+
+- convert between degrees and radians,
+- give exact sine, cosine and tangent values for the special angles,
+- find values in any quadrant with reference angles and signs,
+- connect the unit circle to the graph of sine.
+
+## Radians
+
+A **radian** measures an angle by the arc it cuts off on the unit circle. A full turn is the whole circumference, $2\pi$. So
+
+$$
+360^\circ = 2\pi, \qquad 180^\circ = \pi, \qquad 1^\circ = \frac{\pi}{180}.
+$$
+
+Common ones: $30^\circ = \tfrac{\pi}{6}$, $45^\circ = \tfrac{\pi}{4}$, $60^\circ = \tfrac{\pi}{3}$, $90^\circ = \tfrac{\pi}{2}$.
+
+<Check choices={["$120^\\circ$", "$135^\\circ$", "$140^\\circ$", "$150^\\circ$", "$300^\\circ$"]} answer={3} explain="$\tfrac{5\pi}{6} \cdot \tfrac{180^\circ}{\pi} = 150^\circ$.">
+What is $\tfrac{5\pi}{6}$ radians in degrees?
+</Check>
+
+## Walking around the circle
+
+Press Animate and watch the point travel. Its $x$ coordinate is the cosine and its $y$ coordinate is the sine. On the right, the sine values are unrolled into a wave.
+
+<Figure
+  bounds={[-1.4, 8, -1.35, 1.35]}
+  ticks={1}
+  height={300}
+  equal={true}
+  params={[{ name: "t", min: 0, max: 6.2832, step: 0.01, value: 0.5236, label: "angle $\\theta$ (radians)", play: true, speed: 9 }]}
+  elements={[
+    { type: "circle", c: [0, 0], r: 1, color: "muted", width: 2 },
+    { type: "point", id: "P", x: "cos(t)", y: "sin(t)", color: "accent", size: 6 },
+    { type: "segment", a: [0, 0], b: "P", color: "accent", width: 2 },
+    { type: "segment", a: ["cos(t)", 0], b: "P", color: "pink", width: 3 },
+    { type: "segment", a: [0, 0], b: ["cos(t)", 0], color: "blue", width: 3 },
+    { type: "angle", a: [1, 0], o: [0, 0], b: "P", color: "amber", r: 18 },
+    { type: "func", f: "sin(x - 1.6)", from: 1.6, to: "1.6 + 2*pi", color: "pink", width: 1.5, opacity: 0.35 },
+    { type: "func", f: "sin(x - 1.6)", from: 1.6, to: "1.6 + t", color: "pink", width: 3 },
+    { type: "segment", a: "P", b: ["1.6 + t", "sin(t)"], color: "muted", dashed: true, width: 1 },
+    { type: "point", x: "1.6 + t", y: "sin(t)", color: "pink", size: 5 },
+  ]}
+  readouts={[
+    "\\theta = [[deg(t):0]]^\\circ = [[t:3]]",
+    "\\color{#60a5fa}\\cos\\theta = [[cos(t):3]]",
+    "\\color{#f472b6}\\sin\\theta = [[sin(t):3]]",
+    "\\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta} = [[sin(t)/cos(t):3]]",
+  ]}
+  caption="Blue is the $x$ coordinate (cosine). Pink is the $y$ coordinate (sine). Sine repeats every $2\pi$ because the point comes back around."
+/>
+
+Two facts are immediate from the picture:
+
+- $\sin^2\theta + \cos^2\theta = 1$, because the point is on a circle of radius 1.
+- Sine and cosine are always between $-1$ and $1$.
+
+## The special angles
+
+The $30$-$60$-$90$ and $45$-$45$-$90$ triangles, scaled to hypotenuse 1, give exact values:
+
+| $\theta$ | $0$ | $30^\circ = \tfrac{\pi}{6}$ | $45^\circ = \tfrac{\pi}{4}$ | $60^\circ = \tfrac{\pi}{3}$ | $90^\circ = \tfrac{\pi}{2}$ |
+| --- | --- | --- | --- | --- | --- |
+| $\sin\theta$ | $0$ | $\tfrac{1}{2}$ | $\tfrac{\sqrt{2}}{2}$ | $\tfrac{\sqrt{3}}{2}$ | $1$ |
+| $\cos\theta$ | $1$ | $\tfrac{\sqrt{3}}{2}$ | $\tfrac{\sqrt{2}}{2}$ | $\tfrac{1}{2}$ | $0$ |
+| $\tan\theta$ | $0$ | $\tfrac{\sqrt{3}}{3}$ | $1$ | $\sqrt{3}$ | undefined |
+
+<Tip title="A memory trick">
+Sine from $0^\circ$ to $90^\circ$ reads $\tfrac{\sqrt{0}}{2}, \tfrac{\sqrt{1}}{2}, \tfrac{\sqrt{2}}{2}, \tfrac{\sqrt{3}}{2}, \tfrac{\sqrt{4}}{2}$. Cosine is the same list backwards.
+</Tip>
+
+## Any angle: reference angle plus sign
+
+For an angle in another quadrant, find its **reference angle** (the acute angle to the $x$ axis), take the special value, then attach the sign from the quadrant.
+
+| Quadrant | $\cos$ ($x$) | $\sin$ ($y$) | $\tan$ |
+| --- | --- | --- | --- |
+| I | $+$ | $+$ | $+$ |
+| II | $-$ | $+$ | $-$ |
+| III | $-$ | $-$ | $+$ |
+| IV | $+$ | $-$ | $-$ |
+
+<Steps problem="Find $\sin 225^\circ$.">
+<Step title="Quadrant">
+$225^\circ$ is in quadrant III, where $y$ is negative.
+</Step>
+<Step title="Reference angle">
+$225^\circ - 180^\circ = 45^\circ$.
+</Step>
+<Step title="Combine">
+$\sin 225^\circ = -\sin 45^\circ = -\tfrac{\sqrt{2}}{2}$.
+</Step>
+</Steps>
+
+<Check choices={["$-\\tfrac{\\sqrt{3}}{2}$", "$-\\tfrac{1}{2}$", "$\\tfrac{1}{2}$", "$\\tfrac{\\sqrt{3}}{2}$", "$-\\sqrt{3}$"]} answer={1} explain="$120^\circ$ is in quadrant II with reference angle $60^\circ$. Cosine is negative there: $-\cos 60^\circ = -\tfrac{1}{2}$.">
+What is $\cos 120^\circ$?
+</Check>
+
+<Check choices={["$-\\sqrt{3}$", "$-\\tfrac{\\sqrt{3}}{3}$", "$\\tfrac{\\sqrt{3}}{3}$", "$\\sqrt{3}$", "$-1$"]} answer={1} explain="$330^\circ$ is in quadrant IV with reference angle $30^\circ$. Tangent is negative there: $-\tan 30^\circ = -\tfrac{\sqrt{3}}{3}$.">
+What is $\tan 330^\circ$?
+</Check>
+
+## The other three functions
+
+$$
+\sec\theta = \frac{1}{\cos\theta}, \qquad \csc\theta = \frac{1}{\sin\theta}, \qquad \cot\theta = \frac{1}{\tan\theta} = \frac{\cos\theta}{\sin\theta}.
+$$
+
+<Trap>
+$\sin^{-1} x$ means the **inverse** sine (arcsin), not $\frac{1}{\sin x}$. The reciprocal is $\csc x$. But $\sin^2 x$ does mean $(\sin x)^2$.
+</Trap>
+
+<FlipCards cards={[
+  { front: "$\\sin 150^\\circ$", back: "$\\tfrac{1}{2}$ (quadrant II, sine positive)." },
+  { front: "$\\cos \\pi$", back: "$-1$" },
+  { front: "$\\tan \\tfrac{3\\pi}{4}$", back: "$-1$" },
+  { front: "$\\sec 60^\\circ$", back: "$2$" },
+]} />
+
+<Recap>
+- On the unit circle, the point at angle $\theta$ is $(\cos\theta, \sin\theta)$.
+- $180^\circ = \pi$ radians.
+- Memorize sine and cosine of $0, 30, 45, 60, 90$ degrees.
+- Any angle: reference angle, then the quadrant's sign.
+- $\tan = \frac{\sin}{\cos}$; sec, csc, cot are reciprocals.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Unit circle" /> and <AoPS q="Trigonometric functions" /> on the AoPS Wiki.
+- Trigonometry appears only on the AMC 12. See <Archive test="12" />.
+</GoFurther>

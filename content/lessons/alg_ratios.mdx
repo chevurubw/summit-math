@@ -1,0 +1,157 @@
+---
+title: Ratios and percents
+---
+
+Ratios and percents are two ways of saying **how big one thing is compared to another**. They look like separate topics, but on the AMC they are the same idea: multiply by the right fraction.
+
+By the end of this lesson you will be able to:
+
+- split a total into parts using a ratio,
+- combine two ratios that share a quantity,
+- treat every percent change as multiplication,
+- solve mixture problems with weighted averages.
+
+## Ratios are parts
+
+"Boys to girls is $4 : 5$" means: for every 4 boys there are 5 girls. Think of it as **9 equal boxes**, 4 for boys and 5 for girls.
+
+<Figure
+  bounds={[0, 9.4, -0.6, 2.6]}
+  axes={false}
+  grid={false}
+  height={190}
+  params={[{ name: "T", min: 9, max: 90, step: 9, value: 36, label: "class size" }]}
+  elements={[
+    { type: "polygon", pts: [[0.2, 1.4], [1.2, 1.4], [1.2, 2.2], [0.2, 2.2]], fill: "accent", color: "accent" },
+    { type: "polygon", pts: [[1.3, 1.4], [2.3, 1.4], [2.3, 2.2], [1.3, 2.2]], fill: "accent", color: "accent" },
+    { type: "polygon", pts: [[2.4, 1.4], [3.4, 1.4], [3.4, 2.2], [2.4, 2.2]], fill: "accent", color: "accent" },
+    { type: "polygon", pts: [[3.5, 1.4], [4.5, 1.4], [4.5, 2.2], [3.5, 2.2]], fill: "accent", color: "accent" },
+    { type: "polygon", pts: [[0.2, 0.2], [1.2, 0.2], [1.2, 1.0], [0.2, 1.0]], fill: "blue", color: "blue" },
+    { type: "polygon", pts: [[1.3, 0.2], [2.3, 0.2], [2.3, 1.0], [1.3, 1.0]], fill: "blue", color: "blue" },
+    { type: "polygon", pts: [[2.4, 0.2], [3.4, 0.2], [3.4, 1.0], [2.4, 1.0]], fill: "blue", color: "blue" },
+    { type: "polygon", pts: [[3.5, 0.2], [4.5, 0.2], [4.5, 1.0], [3.5, 1.0]], fill: "blue", color: "blue" },
+    { type: "polygon", pts: [[4.6, 0.2], [5.6, 0.2], [5.6, 1.0], [4.6, 1.0]], fill: "blue", color: "blue" },
+    { type: "text", x: 0.7, y: 1.68, text: "[[T/9]]" },
+    { type: "text", x: 1.8, y: 1.68, text: "[[T/9]]" },
+    { type: "text", x: 2.9, y: 1.68, text: "[[T/9]]" },
+    { type: "text", x: 4.0, y: 1.68, text: "[[T/9]]" },
+    { type: "text", x: 0.7, y: 0.48, text: "[[T/9]]" },
+    { type: "text", x: 1.8, y: 0.48, text: "[[T/9]]" },
+    { type: "text", x: 2.9, y: 0.48, text: "[[T/9]]" },
+    { type: "text", x: 4.0, y: 0.48, text: "[[T/9]]" },
+    { type: "text", x: 5.1, y: 0.48, text: "[[T/9]]" },
+    { type: "text", x: 6.0, y: 1.7, text: "boys = [[4*T/9]]", color: "accent", anchor: "start" },
+    { type: "text", x: 6.0, y: 0.5, text: "girls = [[5*T/9]]", color: "blue", anchor: "start" },
+  ]}
+  caption="Slide the class size. Each box always holds $\tfrac{1}{9}$ of the class, so boys $= 4$ boxes and girls $= 5$ boxes."
+/>
+
+<KeyIdea>
+A ratio $a : b$ splits a total into $a + b$ equal parts. Find the size of one part, then multiply.
+</KeyIdea>
+
+<Check choices={["$12$", "$16$", "$20$", "$24$", "$28$"]} answer={2} explain="$3 + 4 = 7$ parts and $35 \div 7 = 5$ per part. Blue marbles: $4 \times 5 = 20$.">
+A jar has red and blue marbles in the ratio $3 : 4$. There are 35 marbles. How many are blue?
+</Check>
+
+### Combining two ratios
+
+If $a : b = 2 : 3$ and $b : c = 4 : 5$, the two ratios use different sized boxes for $b$. Rescale them so $b$ is the same number in both. The least common multiple of 3 and 4 is 12:
+
+$$
+a : b = 8 : 12, \qquad b : c = 12 : 15 \quad\Longrightarrow\quad a : b : c = 8 : 12 : 15.
+$$
+
+<Check choices={["$\\tfrac{2}{5}$", "$\\tfrac{8}{15}$", "$\\tfrac{3}{5}$", "$\\tfrac{5}{6}$", "$\\tfrac{15}{8}$"]} answer={1} explain="From the combined ratio $8 : 12 : 15$, $\tfrac{a}{c} = \tfrac{8}{15}$. Another way: $\tfrac{a}{c} = \tfrac{a}{b} \cdot \tfrac{b}{c} = \tfrac{2}{3} \cdot \tfrac{4}{5} = \tfrac{8}{15}$.">
+If $a : b = 2 : 3$ and $b : c = 4 : 5$, what is $\dfrac{a}{c}$?
+</Check>
+
+## Percent means "out of 100"
+
+$p\%$ is just the fraction $\dfrac{p}{100}$. So "30% of 50" is $0.3 \times 50 = 15$, and "what percent of 80 is 20?" is $\tfrac{20}{80} = 0.25 = 25\%$.
+
+### Every percent change is a multiplication
+
+- Increase by $p\%$: multiply by $1 + \tfrac{p}{100}$. Up 20% means $\times 1.2$.
+- Decrease by $p\%$: multiply by $1 - \tfrac{p}{100}$. Down 20% means $\times 0.8$.
+
+Two changes in a row means **two multiplications**. Going up 20% then down 20% is $1.2 \times 0.8 = 0.96$: a 4% loss, not a return to the start. Slide $p$ and watch.
+
+<Figure
+  bounds={[0, 3.3, 0, 160]}
+  axes={false}
+  grid={false}
+  height={260}
+  params={[{ name: "p", min: 0, max: 50, step: 5, value: 20, label: "change $p$ (%)" }]}
+  elements={[
+    { type: "polygon", pts: [[0.25, 0], [0.95, 0], [0.95, 100], [0.25, 100]], fill: "muted", color: "muted" },
+    { type: "polygon", pts: [[1.3, 0], [2.0, 0], [2.0, "100*(1+p/100)"], [1.3, "100*(1+p/100)"]], fill: "correct", color: "correct" },
+    { type: "polygon", pts: [[2.35, 0], [3.05, 0], [3.05, "100*(1+p/100)*(1-p/100)"], [2.35, "100*(1+p/100)*(1-p/100)"]], fill: "wrong", color: "wrong" },
+    { type: "text", x: 0.6, y: 108, text: "start 100" },
+    { type: "text", x: 1.65, y: "108 + p", text: "up: [[100*(1+p/100)]]" },
+    { type: "text", x: 2.7, y: "108 + 100*(1+p/100)*(1-p/100) - 100", text: "down: [[100*(1+p/100)*(1-p/100)]]" },
+  ]}
+  readouts={["100 \\times [[1+p/100]] \\times [[1-p/100]] = [[100*(1-(p/100)^2)]]"]}
+  caption="Up $p\%$ then down $p\%$ always loses, because the second change is taken from a bigger number."
+/>
+
+<Formula title="Percent change">
+
+$$
+\text{percent change} = \frac{\text{new} - \text{old}}{\text{old}} \times 100\%.
+$$
+
+Always divide by the **old** value.
+</Formula>
+
+<Steps problem="A jacket's price is raised 25%, and later the new price is cut 20%. How does the final price compare to the original?">
+<Step>
+Turn each change into a multiplier: up 25% is $\times 1.25 = \times \tfrac{5}{4}$, down 20% is $\times 0.8 = \times \tfrac{4}{5}$.
+</Step>
+<Step>
+Multiply: $\tfrac{5}{4} \times \tfrac{4}{5} = 1$. The final price equals the original price exactly.
+</Step>
+</Steps>
+
+<Check choices={["$15$", "$20$", "$25$", "$30$", "$35$"]} answer={3} explain="$0.3 \times 50 = 15$, and $15 = 0.5 \times x$ gives $x = 30$. A neat shortcut: $a\%$ of $b$ always equals $b\%$ of $a$, so 30% of 50 is 50% of 30.">
+30% of 50 is the same as 50% of what number?
+</Check>
+
+<Trap>
+"$A$ is 25% more than $B$" does **not** mean "$B$ is 25% less than $A$". If $B = 100$ then $A = 125$, and $B$ is $\tfrac{25}{125} = 20\%$ less than $A$. Always ask: percent **of what**?
+</Trap>
+
+## Mixtures are weighted averages
+
+Mix 10 liters of a 20% juice drink with 30 liters of a 60% juice drink. The result is not 40%, because there is more of the 60% drink.
+
+Count the actual juice: $0.2 \times 10 + 0.6 \times 30 = 2 + 18 = 20$ liters of juice in $40$ liters total, so the mix is $\tfrac{20}{40} = 50\%$.
+
+<KeyIdea title="The seesaw picture">
+The mix lands closer to the ingredient you used more of. The distances from the mix to each ingredient are in the **opposite** ratio of the amounts. Here the amounts are $10 : 30 = 1 : 3$, and the distances are $30 : 10 = 3 : 1$ (from 20% up to 50%, and from 50% up to 60%).
+</KeyIdea>
+
+<Check choices={["$5$", "$10$", "$15$", "$20$", "$25$"]} answer={1} explain="Adding water does not change the salt: $0.3 \times 20 = 6$ liters of salt. We want those 6 liters to be 20% of the new total, so the total is $6 \div 0.2 = 30$ liters. Add $30 - 20 = 10$ liters of water.">
+How many liters of water must be added to 20 liters of a 30% salt solution to make it a 20% salt solution?
+</Check>
+
+<FlipCards cards={[
+  { front: "Up 50% then down 50%: net change?", back: "$1.5 \\times 0.5 = 0.75$, a 25% loss." },
+  { front: "Ratio $2 : 5$, total $63$. Larger part?", back: "$7$ parts of $9$ each, so $5 \\times 9 = 45$." },
+  { front: "What percent of 40 is 6?", back: "$\\tfrac{6}{40} = 15\\%$." },
+  { front: "In a mixture problem, what quantity stays the same when you add water?", back: "The amount of the dissolved stuff (salt, juice, acid)." },
+]} />
+
+<Recap>
+- A ratio $a : b$ means $a + b$ equal parts. Find one part, then scale.
+- To combine $a : b$ and $b : c$, rescale so the $b$ values match.
+- $p\%$ is $\tfrac{p}{100}$. Increase by $p\%$ means $\times (1 + \tfrac{p}{100})$; decrease means $\times (1 - \tfrac{p}{100})$.
+- Successive changes multiply. Up and then down by the same percent is always a net loss.
+- Percent change divides by the **old** value.
+- Mixtures: track the amount of the ingredient, not the percents.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Ratio" /> and <AoPS q="Percent" /> on the AoPS Wiki.
+- Percent and ratio problems appear in almost every early section of <Archive test="10" />.
+</GoFurther>

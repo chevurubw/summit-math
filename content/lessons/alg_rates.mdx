@@ -1,0 +1,180 @@
+---
+title: Rates, work and motion
+---
+
+A **rate** tells you how much of something happens per unit of something else: miles per hour, pages per minute, jobs per day. AMC word problems about trains, painters, pipes and runners all come down to one tiny formula used carefully.
+
+By the end of this lesson you will be able to:
+
+- set up any distance, speed and time problem,
+- find average speed without falling for the classic trap,
+- combine work rates when people or machines work together,
+- handle meeting and catching up problems with relative speed.
+
+## One formula, three forms
+
+$$
+\text{distance} = \text{rate} \times \text{time} \qquad d = rt
+$$
+
+Cover the one you want and the other two tell you how to get it: $r = \dfrac{d}{t}$ and $t = \dfrac{d}{r}$.
+
+<KeyIdea>
+Always check that your units match. If the speed is in miles per **hour** and the time is in **minutes**, convert first. Twenty minutes is $\tfrac{1}{3}$ of an hour, not $20$.
+</KeyIdea>
+
+<Check choices={["$15$", "$20$", "$25$", "$30$", "$45$"]} answer={0} explain="Forty five minutes is $\tfrac{3}{4}$ of an hour. Distance $= 20 \cdot \tfrac{3}{4} = 15$ miles.">
+A cyclist rides at 20 miles per hour for 45 minutes. How many miles does she ride?
+</Check>
+
+## Average speed is not the average of the speeds
+
+Average speed always means **total distance divided by total time**. That sounds obvious, but it beats a lot of students.
+
+<Steps problem="A car drives 120 miles to a city at 60 mph and returns the same 120 miles at 40 mph. What is its average speed for the whole trip?">
+<Step title="Find each time">
+Going: $\tfrac{120}{60} = 2$ hours. Returning: $\tfrac{120}{40} = 3$ hours.
+</Step>
+<Step title="Total distance over total time">
+$\dfrac{240 \text{ miles}}{5 \text{ hours}} = 48$ mph.
+</Step>
+<Step title="Why not 50?">
+The car spends **more time** at the slow speed (3 hours versus 2), so the slow speed counts more. The answer is pulled below the simple average of 50.
+</Step>
+</Steps>
+
+<Formula title="Same distance both ways">
+If you go a fixed distance at speed $a$ and return at speed $b$, the average speed is
+
+$$
+\frac{2ab}{a + b}.
+$$
+
+This is called the harmonic mean. With $60$ and $40$: $\dfrac{2 \cdot 60 \cdot 40}{100} = 48$.
+</Formula>
+
+<Check choices={["$40$", "$42$", "$45$", "$48$", "$50$"]} answer={0} explain="Use $\dfrac{2ab}{a+b} = \dfrac{2 \cdot 30 \cdot 60}{90} = 40$. Or pick a distance, say 60 miles: up takes 2 hours, down takes 1 hour, so $120 \div 3 = 40$.">
+A hiker climbs a hill at 30 meters per minute and comes back down the same path at 60 meters per minute. What is her average speed in meters per minute?
+</Check>
+
+<Tip title="Pick a convenient number">
+When a problem never tells you the distance, make one up that divides nicely by every speed. The answer cannot depend on your choice, so choose a number that keeps the arithmetic easy.
+</Tip>
+
+## Meeting and catching up
+
+When two things move toward each other, the gap between them shrinks by the **sum** of their speeds every hour. When one chases the other in the same direction, the gap shrinks by the **difference**.
+
+Drag the sliders. The purple line is walker A leaving from mile 0. The blue line is walker B leaving from mile 12 and walking back toward A. They meet where the lines cross.
+
+<Figure
+  bounds={[0, 4, 0, 12]}
+  axes={true}
+  ticks={1}
+  height={340}
+  params={[
+    { name: "a", min: 1, max: 8, step: 0.5, value: 4, label: "A's speed" },
+    { name: "b", min: 1, max: 8, step: 0.5, value: 2, label: "B's speed" },
+  ]}
+  elements={[
+    { type: "func", f: "a*x", color: "accent", width: 3 },
+    { type: "func", f: "12 - b*x", color: "blue", width: 3 },
+    { type: "point", x: "12/(a+b)", y: "12*a/(a+b)", color: "amber", label: "meet at [[12/(a+b)]] h", labelDir: "e" },
+    { type: "segment", a: ["12/(a+b)", 0], b: ["12/(a+b)", "12*a/(a+b)"], color: "amber", dashed: true, width: 1.5 },
+  ]}
+  readouts={["\\text{time} = \\dfrac{12}{[[a]] + [[b]]} = [[12/(a+b)]] \\text{ hours}"]}
+  caption="Horizontal axis: hours. Vertical axis: position in miles. The gap of 12 miles closes at $a + b$ miles per hour."
+/>
+
+<Steps problem="A truck leaves a depot at 40 mph. One hour later a car leaves the same depot along the same road at 60 mph. How long after the car leaves does it catch the truck?">
+<Step title="Find the head start">
+In its first hour alone the truck goes 40 miles. That is the gap when the car starts.
+</Step>
+<Step title="Find the closing speed">
+They move in the same direction, so the gap closes at $60 - 40 = 20$ mph.
+</Step>
+<Step title="Divide">
+$\dfrac{40}{20} = 2$ hours after the car leaves.
+</Step>
+</Steps>
+
+## Work problems: add the rates, not the times
+
+If Pat paints a room in 3 hours, Pat's rate is $\tfrac{1}{3}$ of a room per hour. Rates add when people work together. Times do **not** add.
+
+<Steps problem="Pat paints a room in 3 hours. Quinn paints the same room in 6 hours. How long do they take working together?">
+<Step title="Write each rate">
+Pat: $\tfrac{1}{3}$ room per hour. Quinn: $\tfrac{1}{6}$ room per hour.
+</Step>
+<Step title="Add the rates">
+Together: $\tfrac{1}{3} + \tfrac{1}{6} = \tfrac{1}{2}$ room per hour.
+</Step>
+<Step title="Flip to get the time">
+One room at half a room per hour takes $2$ hours. Sanity check: it must be faster than Pat alone (3 hours), and it is.
+</Step>
+</Steps>
+
+<Formula title="Two workers together">
+If one worker takes $a$ hours and another takes $b$ hours, together they take
+
+$$
+\frac{ab}{a + b} \text{ hours}.
+$$
+</Formula>
+
+<Check choices={["$2$", "$3$", "$4$", "$6$", "$8$"]} answer={1} explain="Rates: $\tfrac{1}{4} + \tfrac{1}{12} = \tfrac{4}{12} = \tfrac{1}{3}$ tank per hour, so together they take 3 hours. The formula gives $\tfrac{4 \cdot 12}{16} = 3$ as well.">
+One pipe fills a tank in 4 hours and a second pipe fills it in 12 hours. With both open, how many hours does it take?
+</Check>
+
+<Trap>
+If a drain is **emptying** the tank while a pipe fills it, its rate counts as negative. A pipe that fills in 3 hours and a drain that empties in 5 hours give $\tfrac{1}{3} - \tfrac{1}{5} = \tfrac{2}{15}$ tank per hour, so $7.5$ hours.
+</Trap>
+
+## Mixed problems: make a table
+
+For harder problems, make one row per person or trip and three columns: rate, time and amount. Fill in what you know, put a variable in one empty box, and use $\text{amount} = \text{rate} \times \text{time}$ in every row.
+
+<Steps problem="A cyclist rides 30 km out and 30 km back. On the way back she is 5 km/h faster, and the return trip takes 1 hour less. How fast did she ride on the way out?">
+<Step title="Build the table">
+
+| | rate | time | amount |
+| --- | --- | --- | --- |
+| out | $r$ | $\tfrac{30}{r}$ | $30$ |
+| back | $r + 5$ | $\tfrac{30}{r+5}$ | $30$ |
+
+</Step>
+<Step title="Use the extra fact">
+The trip back takes 1 hour less: $\dfrac{30}{r} - \dfrac{30}{r + 5} = 1$.
+</Step>
+<Step title="Solve, or test choices">
+Multiply by $r(r + 5)$: $30(r + 5) - 30r = r(r + 5)$, so $r^2 + 5r - 150 = 0$, which factors as $(r + 15)(r - 10) = 0$. Speed is positive, so $r = 10$.
+</Step>
+<Step title="Check">
+Out: $30 \div 10 = 3$ hours. Back: $30 \div 15 = 2$ hours. One hour less ✓.
+</Step>
+</Steps>
+
+<Check choices={["$3$", "$4$", "$5$", "$6$", "$8$"]} answer={1} explain="Let the rowing speed in still water be $r$. Downstream speed $r + 2$, upstream $r - 2$. Total time $\tfrac{12}{r+2} + \tfrac{12}{r-2} = 8$. Testing $r = 4$: $\tfrac{12}{6} + \tfrac{12}{2} = 2 + 6 = 8$ ✓.">
+A boat goes 12 miles downstream and 12 miles back upstream in a total of 8 hours. The current flows at 2 mph. What is the boat's speed in still water, in mph?
+</Check>
+
+<FlipCards cards={[
+  { front: "Average speed for a round trip at $a$ and $b$?", back: "$\\dfrac{2ab}{a+b}$, never the plain average $\\tfrac{a+b}{2}$ (unless $a = b$)." },
+  { front: "Two people walk toward each other at $3$ and $5$ mph from 24 miles apart. When do they meet?", back: "Closing speed $8$ mph, so $24 \\div 8 = 3$ hours." },
+  { front: "Workers who take 2 and 3 hours alone, together?", back: "$\\tfrac{2 \\cdot 3}{5} = 1.2$ hours." },
+  { front: "Speed is in mph, time is 15 minutes. What time do you use?", back: "$\\tfrac{1}{4}$ of an hour." },
+]} />
+
+<Recap>
+- $d = rt$. Match the units before you multiply.
+- Average speed is total distance over total time. Same distance at $a$ and $b$ gives $\tfrac{2ab}{a+b}$.
+- Moving toward each other: add speeds. Same direction: subtract speeds.
+- Work: add the **rates** ($\tfrac{1}{\text{time}}$), then flip.
+- For messy problems, build a rate, time, amount table.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Distance-rate-time" /> and <AoPS q="Work rate problems">work rate problems</AoPS> on the AoPS Wiki.
+- <AoPS q="Harmonic mean" /> explains why round trip speeds average the way they do.
+- Rate problems show up all over <Archive test="10" />, usually in the first 15 questions.
+</GoFurther>

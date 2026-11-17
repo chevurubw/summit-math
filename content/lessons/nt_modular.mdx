@@ -1,0 +1,108 @@
+---
+title: Remainders and modular arithmetic
+---
+
+**Modular arithmetic** is arithmetic with remainders, like time on a clock. If it is 10 o'clock now, 5 hours later it is 3 o'clock, because $10 + 5 = 15$ leaves remainder 3 when you take away 12. Big scary numbers become tiny ones, and problems about "the remainder when..." become a few lines of work.
+
+By the end of this lesson you will be able to:
+
+- write and read congruences like $17 \equiv 2 \pmod 5$,
+- find remainders of huge sums and products quickly,
+- solve simple congruences,
+- solve "a number leaves remainder 2 when divided by 3 and 3 when divided by 5" problems.
+
+## Clock arithmetic
+
+We write $a \equiv b \pmod n$ ("$a$ is congruent to $b$ mod $n$") when $a$ and $b$ leave the **same remainder** when divided by $n$. Equivalently, $n$ divides $a - b$. So $17 \equiv 2 \pmod 5$ and $-1 \equiv 11 \pmod{12}$.
+
+Hop around the clock. Change the clock size and the hop size and see where you land.
+
+<ModClock n={12} start={10} step={5} hops={6} caption="Adding on a clock of $n$ hours. Every number lands on its remainder when divided by $n$." />
+
+## You can reduce at any time
+
+<KeyIdea>
+For adding, subtracting and multiplying, you may replace any number by its remainder **before** doing the operation. The final remainder comes out the same.
+</KeyIdea>
+
+<Steps problem="Find the remainder when $2023 \times 2027$ is divided by 7.">
+<Step title="Reduce each factor">
+$2023 = 7 \cdot 289$, so $2023 \equiv 0 \pmod 7$.
+</Step>
+<Step title="Multiply the remainders">
+$0 \times (\text{anything}) = 0$. The remainder is $0$.
+</Step>
+</Steps>
+
+<Steps problem="Find the remainder when $17 \cdot 23 + 41$ is divided by 5.">
+<Step>
+$17 \equiv 2$, $23 \equiv 3$, $41 \equiv 1 \pmod 5$.
+</Step>
+<Step>
+$2 \cdot 3 + 1 = 7 \equiv 2 \pmod 5$. The remainder is 2.
+</Step>
+</Steps>
+
+<Check choices={["$0$", "$1$", "$2$", "$4$", "$8$"]} answer={1} explain="$1 + 2 + \cdots + 100 = 5050$. Its digit sum is 10, and $10 \equiv 1 \pmod 9$. So the remainder is 1.">
+What is the remainder when $1 + 2 + 3 + \cdots + 100$ is divided by 9?
+</Check>
+
+<Trap>
+You **cannot** freely divide in modular arithmetic. For example $2 \cdot 3 \equiv 2 \cdot 0 \pmod 6$, since both sides are multiples of 6. Canceling the 2 would give $3 \equiv 0 \pmod 6$, which is false. You may only cancel a factor that shares no common factor with the modulus.
+</Trap>
+
+## Negative remainders are a shortcut
+
+Since $99 \equiv -1 \pmod{100}$, powers become easy: $99^{25} \equiv (-1)^{25} = -1 \equiv 99 \pmod{100}$. Look for numbers that are $\pm 1$ away from the modulus.
+
+<Check choices={["$0$", "$1$", "$2$", "$5$", "$6$"]} answer={4} explain="$13 \equiv -1 \pmod 7$, so $13^{51} \equiv (-1)^{51} = -1 \equiv 6 \pmod 7$.">
+What is the remainder when $13^{51}$ is divided by 7?
+</Check>
+
+## Solving congruences
+
+To solve $3x \equiv 2 \pmod 7$, try $x = 0, 1, \ldots, 6$ (only 7 possibilities): $3 \cdot 3 = 9 \equiv 2$. So $x \equiv 3 \pmod 7$.
+
+### Two conditions at once
+
+<Steps problem="Find the smallest positive integer that leaves remainder 2 when divided by 3 and remainder 3 when divided by 5.">
+<Step title="List numbers that fit the bigger modulus">
+Remainder 3 mod 5: $3, 8, 13, 18, \ldots$
+</Step>
+<Step title="Test them against the other condition">
+$3 \equiv 0$, $8 \equiv 2 \pmod 3$ ✓.
+</Step>
+<Step title="All solutions">
+The answer is 8, and every solution is $8 + 15k$, since $15 = \text{lcm}(3, 5)$.
+</Step>
+</Steps>
+
+This always works when the moduli share no common factor (that fact is the **Chinese Remainder Theorem**): there is exactly one solution in each block of $\text{lcm}$ consecutive numbers.
+
+<Check choices={["$11$", "$17$", "$23$", "$29$", "$35$"]} answer={2} explain="Remainder 3 when divided by both 4 and 5 means 3 more than a multiple of 20: $3, 23, 43, \ldots$ Test these against 6: $3$ leaves remainder 3, but $23 = 18 + 5$ leaves remainder 5 ✓. The answer is 23.">
+What is the smallest positive integer that leaves remainder 3 when divided by 4, remainder 3 when divided by 5, and remainder 5 when divided by 6?
+</Check>
+
+<Tip>
+On the AMC, "what is the remainder when this huge expression is divided by $n$?" is always a modular arithmetic question. Reduce every number first, look for $\pm 1$, then multiply small numbers.
+</Tip>
+
+<FlipCards cards={[
+  { front: "$-7 \\bmod 5$", back: "$3$ (since $-7 = 5 \\cdot (-2) + 3$)." },
+  { front: "Remainder of $2^{10}$ divided by 3", back: "$2 \\equiv -1$, so $(-1)^{10} = 1$." },
+  { front: "Solve $2x \\equiv 1 \\pmod 9$", back: "$x \\equiv 5$, since $10 \\equiv 1$." },
+  { front: "Day of the week 100 days after a Monday", back: "$100 \\equiv 2 \\pmod 7$, so Wednesday." },
+]} />
+
+<Recap>
+- $a \equiv b \pmod n$ means $n$ divides $a - b$: same remainder.
+- Reduce before adding, subtracting or multiplying.
+- Use $-1$: a number one less than the modulus makes powers trivial.
+- Small congruences: just test every remainder.
+- Multiple conditions: list one, test the others; solutions repeat every lcm.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Modular arithmetic/Introduction" />, <AoPS q="Chinese Remainder Theorem" /> on the AoPS Wiki.
+- Remainder problems appear every year in <Archive test="10" />.
+</GoFurther>

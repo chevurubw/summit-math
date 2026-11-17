@@ -1,0 +1,24 @@
+{
+  "id": "polynomials",
+  "title": "Polynomials",
+  "description": "Vieta's formulas, the Remainder Theorem and finding roots.",
+  "track": "amc12",
+  "order": 8,
+  "skills": [
+    {
+      "id": "poly_vieta",
+      "title": "Vieta's formulas",
+      "description": "Relate roots to coefficients for higher degree polynomials."
+    },
+    {
+      "id": "poly_remainder",
+      "title": "Remainder and Factor Theorems",
+      "description": "Find remainders and missing coefficients."
+    },
+    {
+      "id": "poly_roots",
+      "title": "Finding roots",
+      "description": "Rational roots, double roots and conjugate roots."
+    }
+  ]
+}

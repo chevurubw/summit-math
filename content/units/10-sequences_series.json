@@ -1,0 +1,24 @@
+{
+  "id": "sequences_series",
+  "title": "Sequences and Series",
+  "description": "Recursion, telescoping sums and infinite geometric series.",
+  "track": "amc12",
+  "order": 10,
+  "skills": [
+    {
+      "id": "ser_recursion",
+      "title": "Recursive sequences",
+      "description": "Compute terms, find cycles and closed forms."
+    },
+    {
+      "id": "ser_telescoping",
+      "title": "Telescoping sums and products",
+      "description": "Sums and products that collapse."
+    },
+    {
+      "id": "ser_geometric",
+      "title": "Infinite geometric series",
+      "description": "Sums of infinite series and repeating decimals."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "conics",
+  "title": "Conics and Analytic Geometry",
+  "description": "Circles, parabolas, ellipses, hyperbolas and 3D coordinates.",
+  "track": "amc12",
+  "order": 9,
+  "skills": [
+    {
+      "id": "con_parabolas",
+      "title": "Circles and parabolas",
+      "description": "Complete the square; vertices, foci, tangents and chords."
+    },
+    {
+      "id": "con_ellipses",
+      "title": "Ellipses and hyperbolas",
+      "description": "Axes, foci, asymptotes and eccentricity."
+    },
+    {
+      "id": "con_analytic",
+      "title": "Analytic geometry in 2D and 3D",
+      "description": "Distances, reflections, intersections and 3D shapes."
+    }
+  ]
+}

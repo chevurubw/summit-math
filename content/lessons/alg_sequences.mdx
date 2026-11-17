@@ -1,0 +1,150 @@
+---
+title: Arithmetic and geometric sequences
+---
+
+A **sequence** is a list of numbers in order. Two kinds dominate the AMC. In an **arithmetic** sequence you add the same number each time: $3, 7, 11, 15, \ldots$ In a **geometric** sequence you multiply by the same number each time: $2, 6, 18, 54, \ldots$
+
+By the end of this lesson you will be able to:
+
+- find any term of either kind of sequence,
+- count how many terms are in a list,
+- add up an arithmetic sequence with Gauss's pairing trick,
+- add up a geometric sequence with one formula.
+
+## Arithmetic sequences: add the same amount
+
+The amount you add is the **common difference** $d$. To reach term $n$ you start at $a_1$ and take $n - 1$ steps of size $d$:
+
+$$
+a_n = a_1 + (n - 1)d.
+$$
+
+<SequenceBars kind="arithmetic" a={3} d={4} terms={8} caption="Bars grow by the same amount each step. Switch to running sums to see the totals climb faster and faster." />
+
+<Trap title="The fence post problem">
+It's $n - 1$ steps, not $n$, because the first term needs no step. The 10th term of $3, 7, 11, \ldots$ is $3 + 9 \cdot 4 = 39$, not $3 + 10 \cdot 4$.
+</Trap>
+
+<Check choices={["$75$", "$79$", "$80$", "$83$", "$87$"]} answer={1} explain="$a_{20} = 3 + 19 \cdot 4 = 79$.">
+What is the 20th term of $3, 7, 11, 15, \ldots$?
+</Check>
+
+### How many terms?
+
+For a list that runs from $\text{first}$ to $\text{last}$ by steps of $d$:
+
+$$
+\text{number of terms} = \frac{\text{last} - \text{first}}{d} + 1.
+$$
+
+For $5, 9, 13, \ldots, 101$: $\dfrac{101 - 5}{4} + 1 = 25$ terms.
+
+### Two terms given? Find $d$ from the gap
+
+<Steps problem="An arithmetic sequence has $a_5 = 17$ and $a_9 = 29$. Find $a_{20}$.">
+<Step>
+From term 5 to term 9 is 4 steps, and the value rises by $29 - 17 = 12$. So $d = 3$.
+</Step>
+<Step>
+From term 9 to term 20 is 11 more steps: $a_{20} = 29 + 11 \cdot 3 = 62$.
+</Step>
+</Steps>
+
+## Adding an arithmetic sequence: Gauss's trick
+
+To add $1 + 2 + \cdots + 100$, write the sum forwards and backwards and add them up:
+
+$$
+\begin{aligned}
+S &= 1 + 2 + \cdots + 100 \\
+S &= 100 + 99 + \cdots + 1 \\
+2S &= 101 + 101 + \cdots + 101 = 100 \cdot 101
+\end{aligned}
+$$
+
+So $S = 5050$. Every arithmetic sum works the same way:
+
+<Formula>
+
+$$
+\text{sum} = \frac{\text{number of terms} \times (\text{first} + \text{last})}{2}
+$$
+
+It's just the count times the average of the first and last term.
+</Formula>
+
+<Check choices={["$590$", "$600$", "$610$", "$620$", "$1220$"]} answer={2} explain="Number of terms: $\tfrac{59 - 2}{3} + 1 = 20$. Sum: $\tfrac{20 \cdot (2 + 59)}{2} = 610$.">
+What is $2 + 5 + 8 + \cdots + 59$?
+</Check>
+
+## Geometric sequences: multiply by the same amount
+
+The number you multiply by is the **common ratio** $r$. Term $n$ takes $n - 1$ multiplications:
+
+$$
+a_n = a_1 \cdot r^{\,n - 1}.
+$$
+
+<SequenceBars kind="geometric" a={1} d={2} terms={8} caption="Geometric growth explodes. Try a ratio between 0 and 1 to watch it shrink, or a negative ratio to watch the signs alternate." />
+
+<Check choices={["$162$", "$324$", "$486$", "$972$", "$1458$"]} answer={2} explain="$r = 3$, so $a_6 = 2 \cdot 3^5 = 2 \cdot 243 = 486$.">
+What is the 6th term of $2, 6, 18, 54, \ldots$?
+</Check>
+
+### Adding a geometric sequence
+
+Multiply the sum by $r$ and subtract. Almost everything cancels:
+
+$$
+\begin{aligned}
+S &= a + ar + ar^2 + \cdots + ar^{n-1} \\
+rS &= \phantom{a + {}} ar + ar^2 + \cdots + ar^{n-1} + ar^n \\
+S - rS &= a - ar^n
+\end{aligned}
+$$
+
+<Formula>
+
+$$
+a + ar + \cdots + ar^{n-1} = a \cdot \frac{r^n - 1}{r - 1} \qquad (r \ne 1)
+$$
+
+</Formula>
+
+For example $1 + 2 + 4 + \cdots + 2^9 = \dfrac{2^{10} - 1}{2 - 1} = 1023$.
+
+## Means in the middle
+
+If three numbers $a, b, c$ form a sequence:
+
+- **arithmetic**: the middle is the average, $b = \dfrac{a + c}{2}$, or $2b = a + c$;
+- **geometric**: the middle squared is the product of the ends, $b^2 = ac$.
+
+<Check choices={["$-6$", "$-3$", "$3$", "$6$", "$9$"]} answer={3} explain="Geometric means $(x)^2 = 4 \cdot 9 = 36$, so $x = \pm 6$. The positive value is 6.">
+The numbers $4, x, 9$ form a geometric sequence with $x > 0$. What is $x$?
+</Check>
+
+<Tip>
+If a problem says three numbers are "in arithmetic progression", name them $a - d$, $a$, $a + d$. The symmetry makes sums very clean: they add to $3a$.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Terms in $10, 13, 16, \\ldots, 100$", back: "$\\tfrac{100 - 10}{3} + 1 = 31$" },
+  { front: "$1 + 3 + 5 + \\cdots + 99$", back: "50 odd numbers, average 50: $2500$. (The first $n$ odd numbers add to $n^2$.)" },
+  { front: "$3 + 6 + 12 + \\cdots + 192$", back: "$r = 2$, 7 terms: $3(2^7 - 1) = 381$." },
+  { front: "Arithmetic: $a, 10, b$ with $a + b$?", back: "$2 \\cdot 10 = 20$" },
+]} />
+
+<Recap>
+- Arithmetic: $a_n = a_1 + (n - 1)d$. Geometric: $a_n = a_1 r^{n - 1}$.
+- Count terms with $\frac{\text{last} - \text{first}}{d} + 1$.
+- Arithmetic sum: count times the average of first and last.
+- Geometric sum: $a \cdot \frac{r^n - 1}{r - 1}$.
+- Middle terms: $2b = a + c$ (arithmetic), $b^2 = ac$ (geometric).
+</Recap>
+
+<GoFurther>
+- <AoPS q="Arithmetic sequence" /> and <AoPS q="Geometric sequence" /> on the AoPS Wiki.
+- AMC 12 students: the series unit later in the course builds on this with infinite sums and telescoping.
+- Practice with <Archive test="10" />.
+</GoFurther>

@@ -1,0 +1,59 @@
+{
+  "id": "algebra",
+  "title": "Algebra",
+  "description": "Equations, word problems, exponents, quadratics, statistics, sequences and functions.",
+  "track": "both",
+  "order": 1,
+  "skills": [
+    {
+      "id": "alg_linear",
+      "title": "Linear equations and systems",
+      "description": "Solve one and two variable linear equations and systems."
+    },
+    {
+      "id": "alg_rates",
+      "title": "Rates, work and motion",
+      "description": "Distance, speed, time and combined work problems."
+    },
+    {
+      "id": "alg_ratios",
+      "title": "Ratios and percents",
+      "description": "Ratios, proportions, mixtures and percent change."
+    },
+    {
+      "id": "alg_exponents",
+      "title": "Exponents and radicals",
+      "description": "Exponent rules, simplifying radicals and rationalizing."
+    },
+    {
+      "id": "alg_factoring",
+      "title": "Factoring and special products",
+      "description": "Difference of squares, perfect squares and clever factoring."
+    },
+    {
+      "id": "alg_quadratics",
+      "title": "Quadratics",
+      "description": "Roots, the discriminant, vertex form and Vieta for quadratics."
+    },
+    {
+      "id": "alg_absolute",
+      "title": "Absolute value and inequalities",
+      "description": "Absolute value equations and solving inequalities."
+    },
+    {
+      "id": "alg_stats",
+      "title": "Mean, median and mode",
+      "description": "Averages, medians, modes and how changes affect them."
+    },
+    {
+      "id": "alg_sequences",
+      "title": "Arithmetic and geometric sequences",
+      "description": "Find terms and sums of arithmetic and geometric sequences."
+    },
+    {
+      "id": "alg_functions",
+      "title": "Functions",
+      "description": "Evaluate, compose and invert functions; solve functional equations."
+    }
+  ]
+}

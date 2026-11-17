@@ -1,0 +1,116 @@
+---
+title: Telescoping sums and products
+---
+
+Some sums look like they need a hundred additions, yet almost everything cancels and only a couple of terms survive. They're called **telescoping** because the sum collapses like a pocket telescope. The skill is rewriting each term as a **difference** of two pieces so that neighbors cancel.
+
+By the end of this lesson you will be able to:
+
+- split fractions like $\tfrac{1}{k(k+1)}$ into differences,
+- collapse sums and find what survives,
+- telescope products by writing each factor as a fraction,
+- recognize the square root and factorial versions.
+
+## The classic: $\dfrac{1}{k(k+1)}$
+
+Check this by combining the right side:
+
+$$
+\frac{1}{k(k+1)} = \frac{1}{k} - \frac{1}{k+1}.
+$$
+
+So the sum $\tfrac{1}{1 \cdot 2} + \tfrac{1}{2 \cdot 3} + \cdots + \tfrac{1}{5 \cdot 6}$ becomes a chain of differences. Press the button.
+
+<Telescope
+  terms={[["1", "\\tfrac{1}{2}"], ["\\tfrac{1}{2}", "\\tfrac{1}{3}"], ["\\tfrac{1}{3}", "\\tfrac{1}{4}"], ["\\tfrac{1}{4}", "\\tfrac{1}{5}"], ["\\tfrac{1}{5}", "\\tfrac{1}{6}"]]}
+  result="1 - \tfrac{1}{6} = \tfrac{5}{6}"
+  caption="Each minus piece cancels the plus piece of the next term. Only the very first and very last survive."
+/>
+
+In general $\displaystyle\sum_{k=1}^{n}\frac{1}{k(k+1)} = 1 - \frac{1}{n+1} = \frac{n}{n+1}$.
+
+<Check choices={["$\\tfrac{98}{99}$", "$\\tfrac{99}{100}$", "$1$", "$\\tfrac{100}{101}$", "$\\tfrac{1}{100}$"]} answer={1} explain="It telescopes to $1 - \tfrac{1}{100} = \tfrac{99}{100}$.">
+What is $\dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \cdots + \dfrac{1}{99 \cdot 100}$?
+</Check>
+
+## Gaps bigger than 1
+
+When the two factors differ by $d$, there's a factor of $\tfrac{1}{d}$ in front:
+
+$$
+\frac{1}{k(k + d)} = \frac{1}{d}\left(\frac{1}{k} - \frac{1}{k + d}\right).
+$$
+
+Now the cancellation skips: each piece cancels with the term $d$ steps later, so $d$ pieces survive at each end.
+
+<Steps problem="Evaluate $\dfrac{1}{1 \cdot 3} + \dfrac{1}{3 \cdot 5} + \dfrac{1}{5 \cdot 7} + \cdots + \dfrac{1}{19 \cdot 21}$.">
+<Step title="Split">
+Here consecutive factors differ by 2: $\dfrac{1}{k(k+2)} = \dfrac12\left(\dfrac1k - \dfrac{1}{k+2}\right)$ with $k = 1, 3, 5, \dots, 19$.
+</Step>
+<Step title="Telescope">
+The odd reciprocals cancel in a chain: $\dfrac12\left(1 - \dfrac{1}{21}\right)$.
+</Step>
+<Step title="Answer">
+$\dfrac12 \cdot \dfrac{20}{21} = \dfrac{10}{21}$.
+</Step>
+</Steps>
+
+## Square roots
+
+Rationalizing turns a nasty fraction into a difference:
+
+$$
+\frac{1}{\sqrt{k} + \sqrt{k+1}} = \frac{\sqrt{k+1} - \sqrt{k}}{(k + 1) - k} = \sqrt{k+1} - \sqrt{k}.
+$$
+
+<Check choices={["$9$", "$10$", "$\\sqrt{99}$", "$11$", "$99$"]} answer={0} explain="Each term is $\sqrt{k+1} - \sqrt{k}$, so the sum from $k = 1$ to $99$ telescopes to $\sqrt{100} - \sqrt{1} = 9$.">
+What is $\displaystyle\sum_{k=1}^{99}\frac{1}{\sqrt{k} + \sqrt{k+1}}$?
+</Check>
+
+## Telescoping products
+
+In a product, write each factor as a fraction. Then **numerators cancel denominators**.
+
+<Steps problem="Compute $\left(1 + \tfrac11\right)\left(1 + \tfrac12\right)\left(1 + \tfrac13\right)\cdots\left(1 + \tfrac{1}{99}\right)$.">
+<Step title="Rewrite each factor">
+$\dfrac21 \cdot \dfrac32 \cdot \dfrac43 \cdots \dfrac{100}{99}$.
+</Step>
+<Step title="Cancel">
+Every numerator cancels the next denominator, leaving $\dfrac{100}{1} = 100$.
+</Step>
+</Steps>
+
+<Check choices={["$\\tfrac{1}{10}$", "$\\tfrac{1}{9}$", "$\\tfrac{9}{10}$", "$\\tfrac{1}{2}$", "$\\tfrac{1}{11}$"]} answer={0} explain="$\tfrac12 \cdot \tfrac23 \cdot \tfrac34 \cdots \tfrac{9}{10} = \tfrac{1}{10}$.">
+What is $\left(1 - \tfrac12\right)\left(1 - \tfrac13\right)\cdots\left(1 - \tfrac{1}{10}\right)$?
+</Check>
+
+<Check choices={["$\\tfrac{1}{2}$", "$\\tfrac{5}{9}$", "$\\tfrac{4}{9}$", "$\\tfrac{10}{9}$", "$\\tfrac{2}{3}$"]} answer={1} explain="$1 - \tfrac{1}{k^2} = \tfrac{(k-1)(k+1)}{k \cdot k}$. Split the product into $\prod \tfrac{k-1}{k} = \tfrac{1}{9}$ and $\prod\tfrac{k+1}{k} = \tfrac{10}{2} = 5$, for $k = 2$ to $9$. The answer is $\tfrac{5}{9}$.">
+What is $\left(1 - \tfrac{1}{2^2}\right)\left(1 - \tfrac{1}{3^2}\right)\cdots\left(1 - \tfrac{1}{9^2}\right)$?
+</Check>
+
+<KeyIdea>
+When a sum or product has many terms with a regular pattern, try writing the general term as $f(k) - f(k+1)$ (for sums) or $\tfrac{g(k+1)}{g(k)}$ (for products). Then write out the first few and last few terms to see exactly what survives.
+</KeyIdea>
+
+<Trap>
+Don't guess which terms survive. Write the first two and the last two terms explicitly. Off by one errors are the most common mistake here.
+</Trap>
+
+<FlipCards cards={[
+  { front: "$\\dfrac{1}{k(k+1)}$", back: "$\\dfrac1k - \\dfrac{1}{k+1}$" },
+  { front: "$\\displaystyle\\sum_{k=1}^{n}\\big(k^2 - (k-1)^2\\big)$", back: "$n^2$" },
+  { front: "$k \\cdot k! = $", back: "$(k + 1)! - k!$, so $\\sum_{k=1}^{n} k \\cdot k! = (n+1)! - 1$" },
+  { front: "$\\log\\tfrac21 + \\log\\tfrac32 + \\cdots + \\log\\tfrac{10}{9}$", back: "$\\log 10 = 1$" },
+]} />
+
+<Recap>
+- Rewrite terms as differences so neighbors cancel; partial fractions help.
+- Gap $d$: factor $\tfrac1d$ out, and $d$ pieces survive at each end.
+- Square root sums: rationalize to get $\sqrt{k+1} - \sqrt{k}$.
+- Products: write factors as fractions; numerators cancel denominators.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Telescoping series" /> on the AoPS Wiki.
+- Practice in <Archive test="12" /> and <Archive test="10" />.
+</GoFurther>

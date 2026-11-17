@@ -1,0 +1,145 @@
+---
+title: Infinite geometric series
+---
+
+Walk halfway to a wall, then half the remaining distance, then half again, forever. You take infinitely many steps, but you never travel more than the distance to the wall. Adding infinitely many numbers can give a finite answer, and for geometric series there's a clean formula for it.
+
+By the end of this lesson you will be able to:
+
+- sum an infinite geometric series,
+- know when the sum exists,
+- turn repeating decimals into fractions,
+- handle bouncing balls and turn taking games,
+- sum series like $\sum \tfrac{n}{2^n}$ with the shifting trick.
+
+## The formula
+
+For $a + ar + ar^2 + ar^3 + \cdots$ with $|r| < 1$:
+
+$$
+S = \frac{a}{1 - r}.
+$$
+
+**Why:** $S - rS = a$, because every other term cancels when you subtract the shifted copy. So $S(1 - r) = a$.
+
+The partial sums climb toward that value. Change $a$ and $r$.
+
+<Figure
+  bounds={[-1, 16, -3, 12]}
+  ticks={1}
+  height={360}
+  equal={false}
+  params={[
+    { name: "a", min: 1, max: 6, step: 0.5, value: 3, label: "first term $a$" },
+    { name: "r", min: -0.9, max: 0.9, step: 0.05, value: 0.5, label: "ratio $r$" },
+  ]}
+  elements={[
+    { type: "segment", a: [0, "a/(1 - r)"], b: [16, "a/(1 - r)"], color: "amber", dashed: true, width: 1.5 },
+    { type: "point", x: 1, y: "a*(1 - r^1)/(1 - r)", color: "accent" },
+    { type: "point", x: 2, y: "a*(1 - r^2)/(1 - r)", color: "accent" },
+    { type: "point", x: 3, y: "a*(1 - r^3)/(1 - r)", color: "accent" },
+    { type: "point", x: 4, y: "a*(1 - r^4)/(1 - r)", color: "accent" },
+    { type: "point", x: 5, y: "a*(1 - r^5)/(1 - r)", color: "accent" },
+    { type: "point", x: 6, y: "a*(1 - r^6)/(1 - r)", color: "accent" },
+    { type: "point", x: 7, y: "a*(1 - r^7)/(1 - r)", color: "accent" },
+    { type: "point", x: 8, y: "a*(1 - r^8)/(1 - r)", color: "accent" },
+    { type: "point", x: 9, y: "a*(1 - r^9)/(1 - r)", color: "accent" },
+    { type: "point", x: 10, y: "a*(1 - r^10)/(1 - r)", color: "accent" },
+    { type: "point", x: 11, y: "a*(1 - r^11)/(1 - r)", color: "accent" },
+    { type: "point", x: 12, y: "a*(1 - r^12)/(1 - r)", color: "accent" },
+    { type: "point", x: 13, y: "a*(1 - r^13)/(1 - r)", color: "accent" },
+    { type: "point", x: 14, y: "a*(1 - r^14)/(1 - r)", color: "accent" },
+    { type: "point", x: 15, y: "a*(1 - r^15)/(1 - r)", color: "accent" },
+  ]}
+  readouts={["S_n = a + ar + \\cdots + ar^{n-1}", "\\color{#fbbf24}S = \\dfrac{[[a]]}{1 - ([[r]])} = [[a/(1 - r):3]]"]}
+  caption="Dots are the partial sums $S_1, S_2, \dots, S_{15}$. A negative ratio makes them bounce above and below the limit."
+/>
+
+If $|r| \ge 1$ the terms don't shrink, and the sum has no finite value.
+
+<Check choices={["$8$", "$9$", "$10$", "$12$", "$18$"]} answer={1} explain="$a = 6$ and $r = \tfrac13$, so $S = \tfrac{6}{2/3} = 9$.">
+What is $6 + 2 + \tfrac23 + \tfrac29 + \cdots$?
+</Check>
+
+<Check choices={["$\\tfrac13$", "$\\tfrac12$", "$\\tfrac23$", "$\\tfrac34$", "$2$"]} answer={2} explain="$\tfrac{4}{1 - r} = 12$ gives $1 - r = \tfrac13$, so $r = \tfrac23$.">
+An infinite geometric series has first term 4 and sum 12. What is its ratio?
+</Check>
+
+## Repeating decimals
+
+$0.\overline{36} = 0.36 + 0.0036 + 0.000036 + \cdots$ is geometric with $a = 0.36$ and $r = 0.01$:
+
+$$
+\frac{0.36}{0.99} = \frac{36}{99} = \frac{4}{11}.
+$$
+
+Shortcut: a block of $k$ repeating digits is that block over $k$ nines. So $0.\overline{142857} = \tfrac{142857}{999999} = \tfrac17$.
+
+<Check choices={["$\\tfrac{3}{11}$", "$\\tfrac{4}{11}$", "$\\tfrac{5}{11}$", "$\\tfrac{7}{22}$", "$\\tfrac{9}{25}$"]} answer={0} explain="$0.\overline{27} = \tfrac{27}{99} = \tfrac{3}{11}$.">
+Which fraction equals $0.\overline{27}$?
+</Check>
+
+## Bouncing balls and games
+
+<Steps problem="A ball is dropped from 10 feet. Each bounce reaches half the previous height. What total distance does it travel?">
+<Step title="Down once">
+The first fall is 10 feet.
+</Step>
+<Step title="Each bounce goes up and down">
+Then $2(5 + 2.5 + 1.25 + \cdots) = 2 \cdot \dfrac{5}{1 - 1/2} = 20$.
+</Step>
+<Step title="Total">
+$10 + 20 = 30$ feet.
+</Step>
+</Steps>
+
+<Steps problem="Amy and Ben take turns flipping a fair coin, Amy first. The first to get heads wins. What is the probability Amy wins?">
+<Step title="Amy wins on her 1st, 2nd, 3rd turn...">
+$\tfrac12 + \left(\tfrac12\right)^3 + \left(\tfrac12\right)^5 + \cdots$ (each round where both miss multiplies by $\tfrac14$).
+</Step>
+<Step title="Sum">
+$\dfrac{1/2}{1 - 1/4} = \dfrac23$.
+</Step>
+</Steps>
+
+## The shifting trick for $\sum n r^n$
+
+<Steps problem="Find $S = \dfrac12 + \dfrac{2}{4} + \dfrac{3}{8} + \dfrac{4}{16} + \cdots$.">
+<Step title="Halve it">
+$\tfrac12 S = \tfrac14 + \tfrac28 + \tfrac{3}{16} + \cdots$.
+</Step>
+<Step title="Subtract, lining up equal denominators">
+$S - \tfrac12 S = \tfrac12 + \tfrac14 + \tfrac18 + \cdots = 1$.
+</Step>
+<Step title="Solve">
+$\tfrac12 S = 1$, so $S = 2$.
+</Step>
+</Steps>
+
+<KeyIdea>
+Every infinite geometric problem is "find $a$, find $r$, compute $\tfrac{a}{1 - r}$". The work is in spotting the first term and the ratio, especially in probability problems where the ratio is "the chance nothing happens in one full round".
+</KeyIdea>
+
+<Trap>
+The formula needs $|r| < 1$. And $a$ is the **first** term of the series you're actually adding, which might not be the first term listed in the problem.
+</Trap>
+
+<FlipCards cards={[
+  { front: "$1 - \\tfrac12 + \\tfrac14 - \\tfrac18 + \\cdots$", back: "$\\dfrac{1}{1 + 1/2} = \\tfrac23$" },
+  { front: "$0.\\overline{9}$", back: "$\\tfrac{9}{9} = 1$ exactly" },
+  { front: "$\\sum_{n=1}^{\\infty} \\left(\\tfrac13\\right)^n$", back: "$\\dfrac{1/3}{2/3} = \\tfrac12$" },
+  { front: "$0.1\\overline{6}$", back: "$\\tfrac{1}{10} + \\tfrac{6}{90} = \\tfrac16$" },
+]} />
+
+<Recap>
+- $a + ar + ar^2 + \cdots = \tfrac{a}{1 - r}$ when $|r| < 1$.
+- Repeating block of $k$ digits: the block over $k$ nines.
+- Bouncing balls: count each bounce twice (up and down).
+- Turn based games: ratio is the chance of a full round with no winner.
+- $\sum nr^n$: subtract $r$ times the series from itself.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Geometric series" /> on the AoPS Wiki.
+- Practice in <Archive test="12" /> and <Archive test="10" />.
+</GoFurther>

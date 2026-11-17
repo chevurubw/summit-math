@@ -1,0 +1,163 @@
+---
+title: Quadratics
+---
+
+A **quadratic** is an expression like $ax^2 + bx + c$ with $a \ne 0$. Its graph is a **parabola**, a U shape that opens up when $a > 0$ and down when $a < 0$. Quadratics show up everywhere: areas, projectiles, maximum profit, and as the hidden step inside harder problems.
+
+By the end of this lesson you will be able to:
+
+- read a parabola's shape, vertex and roots from its equation,
+- solve any quadratic three ways,
+- predict how many real roots there are without solving,
+- use Vieta's formulas to get the sum and product of the roots instantly.
+
+## The parabola, live
+
+In **vertex form**, $y = a(x - h)^2 + k$, the vertex is $(h, k)$. Play with all three numbers.
+
+<Figure
+  bounds={[-6, 6, -6, 8]}
+  height={400}
+  equal={false}
+  params={[
+    { name: "a", min: -2, max: 2, step: 0.25, value: 1, label: "$a$ (stretch)" },
+    { name: "h", min: -4, max: 4, step: 0.5, value: 1, label: "$h$ (left, right)" },
+    { name: "k", min: -5, max: 5, step: 0.5, value: -4, label: "$k$ (down, up)" },
+  ]}
+  elements={[
+    { type: "func", f: "a*(x-h)^2 + k", color: "accent", width: 3 },
+    { type: "line", a: ["h", 0], b: ["h", 1], color: "muted", dashed: true, width: 1.2 },
+    { type: "point", x: "h", y: "k", color: "amber", label: "vertex ([[h]], [[k]])", labelDir: "e" },
+    { type: "point", x: "h + sqrt(-k/a)", y: 0, color: "correct", show: "-k/a >= 0" },
+    { type: "point", x: "h - sqrt(-k/a)", y: 0, color: "correct", show: "-k/a >= 0" },
+  ]}
+  readouts={[
+    "y = [[a]](x - [[h]])^2 + [[k]]",
+    "b^2 - 4ac = [[-4*a*k]]",
+    "\\text{real roots: } [[when(-4*a*k > 0)*2 + when(abs(-4*a*k) < 0.0001)]]",
+  ]}
+  caption="Green dots are the roots, where the parabola crosses the $x$ axis. The dashed line is the axis of symmetry $x = h$."
+/>
+
+Notice that when the vertex is below the $x$ axis and the parabola opens up, there are two roots. Lift the vertex above the axis and the roots vanish. Exactly touching gives one root.
+
+## Three ways to solve $ax^2 + bx + c = 0$
+
+**1. Factor** (fastest when it works). $x^2 - 6x + 8 = (x - 2)(x - 4) = 0$, so $x = 2$ or $x = 4$.
+
+**2. Complete the square** (always works, and it's where the formula comes from).
+
+<Steps problem="Solve $x^2 + 6x - 7 = 0$ by completing the square.">
+<Step>
+Move the constant: $x^2 + 6x = 7$.
+</Step>
+<Step>
+Take half of the $x$ coefficient, square it ($3^2 = 9$), and add to both sides: $x^2 + 6x + 9 = 16$.
+</Step>
+<Step>
+The left side is a perfect square: $(x + 3)^2 = 16$, so $x + 3 = \pm 4$.
+</Step>
+<Step>
+$x = 1$ or $x = -7$.
+</Step>
+</Steps>
+
+**3. The quadratic formula** (always works).
+
+<Formula title="Quadratic formula">
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+</Formula>
+
+For $x^2 - 4x + 1 = 0$: $x = \dfrac{4 \pm \sqrt{16 - 4}}{2} = \dfrac{4 \pm 2\sqrt{3}}{2} = 2 \pm \sqrt{3}$.
+
+<Check choices={["$-4$", "$-2$", "$2$", "$4$", "$8$"]} answer={3} explain="$x^2 - 6x + 8 = (x - 2)(x - 4)$, so the roots are 2 and 4. The larger is 4.">
+What is the larger root of $x^2 - 6x + 8 = 0$?
+</Check>
+
+## The discriminant counts the roots
+
+The part under the square root, $\Delta = b^2 - 4ac$, is called the **discriminant**.
+
+| $b^2 - 4ac$ | Real roots | Picture |
+| --- | --- | --- |
+| positive | two | parabola crosses the axis twice |
+| zero | one (a double root) | vertex sits on the axis |
+| negative | none | parabola misses the axis |
+
+<Check choices={["$3$", "$6$", "$9$", "$12$", "$18$"]} answer={1} explain="Exactly one root means $b^2 - 4ac = 0$: $k^2 - 36 = 0$, so $k = 6$ (we want the positive value). Then $x^2 + 6x + 9 = (x + 3)^2$.">
+For what positive value of $k$ does $x^2 + kx + 9 = 0$ have exactly one real solution?
+</Check>
+
+## Maximum and minimum: the vertex
+
+The vertex is the highest or lowest point. For $y = ax^2 + bx + c$ it sits at
+
+$$
+x = -\frac{b}{2a}.
+$$
+
+Plug that $x$ back in to get the extreme value. This answers every "largest area" or "highest point" question.
+
+<Steps problem="A farmer has 40 m of fence to make a rectangle. What is the largest possible area?">
+<Step title="Write the area as a quadratic">
+If one side is $x$, the other is $20 - x$ (half the perimeter is 20). Area $A = x(20 - x) = -x^2 + 20x$.
+</Step>
+<Step title="Find the vertex">
+$x = -\dfrac{20}{2(-1)} = 10$. The rectangle is a $10 \times 10$ square.
+</Step>
+<Step title="Evaluate">
+$A = 10 \cdot 10 = 100$ square meters.
+</Step>
+</Steps>
+
+<Check choices={["$6$", "$8$", "$9$", "$10$", "$12$"]} answer={3} explain="The vertex is at $x = -\dfrac{6}{2(-1)} = 3$. Then $y = -9 + 18 + 1 = 10$.">
+What is the maximum value of $y = -x^2 + 6x + 1$?
+</Check>
+
+## Vieta's formulas: sum and product for free
+
+If $r$ and $s$ are the roots of $ax^2 + bx + c = 0$, then
+
+$$
+r + s = -\frac{b}{a}, \qquad rs = \frac{c}{a}.
+$$
+
+**Why:** $a(x - r)(x - s) = ax^2 - a(r + s)x + ars$. Match coefficients with $ax^2 + bx + c$.
+
+Vieta is a huge time saver: many problems ask about $r + s$, $rs$, $r^2 + s^2$, or $\tfrac{1}{r} + \tfrac{1}{s}$, and you never need the roots themselves.
+
+<Check choices={["$\\tfrac{3}{7}$", "$\\tfrac{3}{2}$", "$\\tfrac{7}{3}$", "$\\tfrac{7}{2}$", "$7$"]} answer={2} explain="$r + s = \tfrac{7}{2}$ and $rs = \tfrac{3}{2}$. Then $\tfrac{1}{r} + \tfrac{1}{s} = \tfrac{r + s}{rs} = \tfrac{7/2}{3/2} = \tfrac{7}{3}$.">
+If $r$ and $s$ are the roots of $2x^2 - 7x + 3 = 0$, what is $\dfrac{1}{r} + \dfrac{1}{s}$?
+</Check>
+
+<Trap>
+Sum of roots is $-\tfrac{b}{a}$, with a minus sign. The product $\tfrac{c}{a}$ has no minus sign. Mixing these up is the most common Vieta mistake.
+</Trap>
+
+<Tip>
+If the problem gives a quadratic and asks about its roots, ask yourself: "Can I write what they want in terms of $r + s$ and $rs$?" If yes, Vieta answers it in two lines.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Vertex of $y = 2x^2 - 8x + 3$", back: "$x = \\tfrac{8}{4} = 2$, $y = 8 - 16 + 3 = -5$. Vertex $(2, -5)$." },
+  { front: "Roots of $x^2 + 2x + 5$: how many real?", back: "$\\Delta = 4 - 20 < 0$, so none." },
+  { front: "Roots sum to 5 and multiply to 6. The monic quadratic?", back: "$x^2 - 5x + 6$" },
+  { front: "Complete the square: $x^2 - 10x$", back: "$(x - 5)^2 - 25$" },
+]} />
+
+<Recap>
+- Vertex form $a(x - h)^2 + k$ shows the vertex $(h, k)$; $a$ sets the direction and width.
+- Solve by factoring, completing the square, or $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+- $b^2 - 4ac$: positive two roots, zero one root, negative none.
+- Extreme value at $x = -\frac{b}{2a}$.
+- Vieta: $r + s = -\frac{b}{a}$, $rs = \frac{c}{a}$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Quadratic formula" />, <AoPS q="Discriminant" /> and <AoPS q="Vieta's formulas" /> on the AoPS Wiki.
+- Quadratics hide inside many problems across <Archive test="10" /> and <Archive test="12" />.
+</GoFurther>

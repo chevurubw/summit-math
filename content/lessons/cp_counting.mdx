@@ -1,0 +1,138 @@
+---
+title: Counting principles
+---
+
+Counting problems ask "how many?" The answer is often too big to list, so you need principles that count **without listing**. Just two rules, multiplication and addition, power everything else in this unit.
+
+By the end of this lesson you will be able to:
+
+- use the multiplication principle for choices made one after another,
+- use the addition principle for separate cases,
+- count the numbers in a list without error,
+- handle restrictions by filling the pickiest slot first.
+
+## The multiplication principle
+
+If one choice can be made in $a$ ways, and then a second choice can be made in $b$ ways **no matter what the first choice was**, the two choices together can be made in $a \times b$ ways.
+
+A tree diagram shows why. Two shirts and three pairs of pants: each shirt branches into 3 outfits, so $2 \times 3 = 6$ outfits.
+
+<Figure
+  bounds={[-0.5, 7.5, -0.3, 6.3]}
+  axes={false}
+  grid={false}
+  height={330}
+  elements={[
+    { type: "point", id: "R", x: 0, y: 3, color: "heading", label: "start", labelDir: "s" },
+    { type: "point", id: "S1", x: 3, y: 4.5, color: "accent", label: "red shirt", labelDir: "n" },
+    { type: "point", id: "S2", x: 3, y: 1.5, color: "blue", label: "blue shirt", labelDir: "s" },
+    { type: "segment", a: "R", b: "S1", color: "accent" },
+    { type: "segment", a: "R", b: "S2", color: "blue" },
+    { type: "segment", a: "S1", b: [6, 5.8], color: "accent", width: 1.5 },
+    { type: "segment", a: "S1", b: [6, 4.8], color: "accent", width: 1.5 },
+    { type: "segment", a: "S1", b: [6, 3.8], color: "accent", width: 1.5 },
+    { type: "segment", a: "S2", b: [6, 2.2], color: "blue", width: 1.5 },
+    { type: "segment", a: "S2", b: [6, 1.2], color: "blue", width: 1.5 },
+    { type: "segment", a: "S2", b: [6, 0.2], color: "blue", width: 1.5 },
+    { type: "text", x: 6.15, y: 5.7, text: "jeans", anchor: "start", size: 13 },
+    { type: "text", x: 6.15, y: 4.7, text: "khakis", anchor: "start", size: 13 },
+    { type: "text", x: 6.15, y: 3.7, text: "shorts", anchor: "start", size: 13 },
+    { type: "text", x: 6.15, y: 2.1, text: "jeans", anchor: "start", size: 13 },
+    { type: "text", x: 6.15, y: 1.1, text: "khakis", anchor: "start", size: 13 },
+    { type: "text", x: 6.15, y: 0.1, text: "shorts", anchor: "start", size: 13 },
+  ]}
+  caption="Every path from start to a leaf is one outfit. 2 branches, each splitting into 3: $2 \times 3 = 6$ leaves."
+/>
+
+<Check choices={["$9$", "$12$", "$18$", "$24$", "$36$"]} answer={3} explain="Shirt, then pants, then shoes: $4 \times 3 \times 2 = 24$.">
+Sam has 4 shirts, 3 pairs of pants and 2 pairs of shoes. How many outfits of one of each can Sam make?
+</Check>
+
+<Steps problem="A license plate has 2 letters followed by 3 digits. Letters and digits may repeat. How many plates are possible?">
+<Step>
+Five slots: 26 choices for each letter and 10 for each digit.
+</Step>
+<Step>
+$26 \cdot 26 \cdot 10 \cdot 10 \cdot 10 = 676{,}000$.
+</Step>
+</Steps>
+
+## Restrictions: fill the pickiest slot first
+
+When some positions have rules, make the most restricted choice first. Then the later choices are easy to count.
+
+<Steps problem="How many three digit numbers have all odd digits?">
+<Step>
+Each of the three digits must be one of $1, 3, 5, 7, 9$: 5 choices each. (No zero issue, since 0 is even.)
+</Step>
+<Step>
+$5 \cdot 5 \cdot 5 = 125$.
+</Step>
+</Steps>
+
+<Steps problem="How many three digit even numbers have all different digits?">
+<Step title="Why order matters here">
+The last digit must be even, the first digit can't be 0, and the digits can't repeat. The 0 creates a conflict between the first and last slots, so split into cases.
+</Step>
+<Step title="Case 1: last digit is 0">
+Last: 1 way. First: any of the 9 other digits. Middle: 8 left. Total $9 \cdot 8 = 72$.
+</Step>
+<Step title="Case 2: last digit is 2, 4, 6 or 8">
+Last: 4 ways. First: not 0 and not the last digit, so 8 ways. Middle: 8 ways (0 is now allowed). Total $4 \cdot 8 \cdot 8 = 256$.
+</Step>
+<Step title="Add the cases">
+$72 + 256 = 328$.
+</Step>
+</Steps>
+
+## The addition principle
+
+If you can do something in one of several **separate** ways (cases that can't happen together), add the counts. The example above used it: case 1 **or** case 2.
+
+<KeyIdea>
+"And" (choices made in sequence) means multiply. "Or" (separate cases) means add. Most counting problems are a mix.
+</KeyIdea>
+
+## Counting lists
+
+How many numbers are in $14, 17, 20, \ldots, 98$? Shift and scale it into $1, 2, 3, \ldots$:
+
+- subtract 11: $3, 6, 9, \ldots, 87$,
+- divide by 3: $1, 2, 3, \ldots, 29$.
+
+So there are 29 numbers. The shortcut: $\dfrac{\text{last} - \text{first}}{\text{step}} + 1 = \dfrac{98 - 14}{3} + 1 = 29$.
+
+<Trap title="Fence posts">
+The numbers from 5 to 12 are $12 - 5 + 1 = 8$ numbers, not 7. A fence 10 meters long with posts every meter has 11 posts. Always ask: do I include both ends?
+</Trap>
+
+<Check choices={["$27$", "$28$", "$29$", "$30$", "$85$"]} answer={2} explain="$\tfrac{98 - 14}{3} + 1 = 28 + 1 = 29$.">
+How many numbers are in the list $14, 17, 20, \ldots, 98$?
+</Check>
+
+<Check choices={["$648$", "$720$", "$729$", "$810$", "$900$"]} answer={0} explain="First digit: 1 to 9 (9 ways). Second: any digit except the first (9 ways, since 0 is now allowed). Third: 8 ways. $9 \cdot 9 \cdot 8 = 648$.">
+How many three digit numbers have three different digits?
+</Check>
+
+<Tip>
+Before multiplying, ask: "Does the number of choices for this slot depend on earlier choices?" If yes, either reorder the slots or split into cases.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Ways to answer a 5 question true or false quiz", back: "$2^5 = 32$" },
+  { front: "Numbers from 100 to 999 inclusive", back: "$900$" },
+  { front: "Pick a president and a different vice president from 10 people", back: "$10 \\cdot 9 = 90$" },
+  { front: "Subsets of a 6 element set", back: "Each element in or out: $2^6 = 64$." },
+]} />
+
+<Recap>
+- Sequential choices: multiply. Separate cases: add.
+- Fill the most restricted slot first; split into cases when slots conflict.
+- Count lists with $\frac{\text{last} - \text{first}}{\text{step}} + 1$.
+- Watch for fence post errors: include both ends?
+</Recap>
+
+<GoFurther>
+- <AoPS q="Counting" /> and <AoPS q="Multiplication principle" /> on the AoPS Wiki.
+- Counting questions appear throughout <Archive test="10" />.
+</GoFurther>

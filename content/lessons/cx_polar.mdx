@@ -1,0 +1,121 @@
+---
+title: Polar form and De Moivre
+---
+
+Multiplying complex numbers with FOIL works, but it hides something beautiful. Every complex number has a **length** and a **direction**, and multiplication turns out to be simple in those terms: **multiply the lengths, add the angles.** This is the most powerful idea on AMC 12 complex number problems.
+
+By the end of this lesson you will be able to:
+
+- write a complex number in polar form $r(\cos\theta + i\sin\theta)$,
+- multiply and divide by working with lengths and angles,
+- raise complex numbers to high powers with De Moivre's Theorem,
+- see multiplication by $i$ as a rotation.
+
+## Length and angle
+
+For $z = a + bi$:
+
+- $r = |z| = \sqrt{a^2 + b^2}$ is the distance from 0,
+- $\theta$ is the angle from the positive real axis (the **argument**).
+
+Then $a = r\cos\theta$ and $b = r\sin\theta$, so
+
+$$
+z = r(\cos\theta + i\sin\theta) = r\operatorname{cis}\theta.
+$$
+
+Examples: $1 + i = \sqrt{2}\operatorname{cis}45^\circ$, $\ i = 1\operatorname{cis}90^\circ$, $\ -2 = 2\operatorname{cis}180^\circ$, $\ 1 + i\sqrt{3} = 2\operatorname{cis}60^\circ$.
+
+## Multiply lengths, add angles
+
+Set two complex numbers and watch their product. Try making $w$ have length 1: then multiplying by $w$ just **rotates** $z$.
+
+<Figure
+  bounds={[-6, 6, -6, 6]}
+  ticks={1}
+  height={440}
+  params={[
+    { name: "r1", min: 0.5, max: 2.5, step: 0.1, value: 2, label: "$|z|$" },
+    { name: "t1", min: 0, max: 360, step: 5, value: 30, label: "angle of $z$" },
+    { name: "r2", min: 0.5, max: 2.5, step: 0.1, value: 1.5, label: "$|w|$" },
+    { name: "t2", min: 0, max: 360, step: 5, value: 60, label: "angle of $w$", play: true, speed: 30 },
+  ]}
+  elements={[
+    { type: "circle", c: [0, 0], r: 1, color: "muted", dashed: true, width: 1 },
+    { type: "vector", a: [0, 0], b: ["r1*cosd(t1)", "r1*sind(t1)"], color: "blue", width: 2.5 },
+    { type: "vector", a: [0, 0], b: ["r2*cosd(t2)", "r2*sind(t2)"], color: "pink", width: 2.5 },
+    { type: "vector", a: [0, 0], b: ["r1*r2*cosd(t1 + t2)", "r1*r2*sind(t1 + t2)"], color: "amber", width: 3.5 },
+    { type: "point", x: "r1*cosd(t1)", y: "r1*sind(t1)", color: "blue", label: "z", labelDir: "ne" },
+    { type: "point", x: "r2*cosd(t2)", y: "r2*sind(t2)", color: "pink", label: "w", labelDir: "ne" },
+    { type: "point", x: "r1*r2*cosd(t1 + t2)", y: "r1*r2*sind(t1 + t2)", color: "amber", label: "zw", labelDir: "ne" },
+  ]}
+  readouts={["\\color{#60a5fa}|z| = [[r1]],\\ \\theta = [[t1]]^\\circ", "\\color{#f472b6}|w| = [[r2]],\\ \\theta = [[t2]]^\\circ", "\\color{#fbbf24}|zw| = [[r1*r2]],\\ \\theta = [[mod(t1 + t2, 360)]]^\\circ"]}
+  caption="The yellow product's length is the product of the lengths, and its angle is the sum of the angles."
+/>
+
+**Why it works:** expand $\operatorname{cis}\alpha \cdot \operatorname{cis}\beta$. The real part is $\cos\alpha\cos\beta - \sin\alpha\sin\beta = \cos(\alpha + \beta)$, and the imaginary part is $\sin\alpha\cos\beta + \cos\alpha\sin\beta = \sin(\alpha + \beta)$. These are the angle addition formulas from trig.
+
+Division works backwards: **divide the lengths, subtract the angles.**
+
+<KeyIdea>
+Multiplying by $i = \operatorname{cis}90^\circ$ rotates a point $90^\circ$ counterclockwise. Multiplying by $\operatorname{cis}\theta$ rotates by $\theta$. Rotation problems in the plane often become one multiplication.
+</KeyIdea>
+
+<Check choices={["$(-2, 5)$", "$(2, -5)$", "$(-5, 2)$", "$(5, -2)$", "$(-5, -2)$"]} answer={2} explain="Rotating $90^\circ$ counterclockwise is multiplying by $i$: $i(2 + 5i) = 2i + 5i^2 = -5 + 2i$, the point $(-5, 2)$.">
+The point $(2, 5)$ is rotated $90^\circ$ counterclockwise about the origin. Where does it land?
+</Check>
+
+## De Moivre's Theorem
+
+Multiplying $z$ by itself $n$ times multiplies the length $n$ times and adds the angle $n$ times:
+
+$$
+\big(r\operatorname{cis}\theta\big)^n = r^n\operatorname{cis}(n\theta).
+$$
+
+<Steps problem="Compute $(1 + i)^{8}$.">
+<Step title="Polar form">
+$1 + i = \sqrt{2}\operatorname{cis}45^\circ$.
+</Step>
+<Step title="De Moivre">
+$(\sqrt{2})^8\operatorname{cis}(8 \cdot 45^\circ) = 16\operatorname{cis}360^\circ$.
+</Step>
+<Step title="Back to a + bi">
+$\operatorname{cis}360^\circ = 1$, so the answer is $16$.
+</Step>
+</Steps>
+
+<Check choices={["$-64$", "$-32$", "$32$", "$64$", "$64i$"]} answer={3} explain="$1 + i\sqrt{3} = 2\operatorname{cis}60^\circ$, so its 6th power is $2^6\operatorname{cis}360^\circ = 64$.">
+What is $(1 + i\sqrt{3})^6$?
+</Check>
+
+<Check choices={["$3$", "$4$", "$6$", "$8$", "$12$"]} answer={0} explain="$(1 + i)^n$ has angle $45n^\circ$. The first time that equals $135^\circ$ is $n = 3$. Check: $(1 + i)^3 = (2i)(1 + i) = -2 + 2i$, which is on the line $y = -x$ in the 2nd quadrant.">
+What is the smallest positive integer $n$ for which $(1 + i)^n$ points into the 2nd quadrant along the line $y = -x$ (angle $135^\circ$)?
+</Check>
+
+<Tip>
+Before grinding through $(a + bi)^n$, check whether $a + bi$ has a nice angle: $30^\circ$, $45^\circ$, $60^\circ$ and their relatives come from numbers like $\sqrt{3} + i$, $1 + i$, $1 + i\sqrt{3}$.
+</Tip>
+
+<Trap>
+Angles are only defined up to full turns: $\operatorname{cis}390^\circ = \operatorname{cis}30^\circ$. Reduce mod $360^\circ$ at the end, and remember $\operatorname{cis}180^\circ = -1$.
+</Trap>
+
+<FlipCards cards={[
+  { front: "Polar form of $-1 - i$", back: "$\\sqrt{2}\\operatorname{cis}225^\\circ$" },
+  { front: "$(\\operatorname{cis}20^\\circ)^9$", back: "$\\operatorname{cis}180^\\circ = -1$" },
+  { front: "$\\dfrac{4\\operatorname{cis}100^\\circ}{2\\operatorname{cis}40^\\circ}$", back: "$2\\operatorname{cis}60^\\circ = 1 + i\\sqrt{3}$" },
+  { front: "$i^{n}$ in polar form", back: "$\\operatorname{cis}(90n^\\circ)$" },
+]} />
+
+<Recap>
+- $z = r\operatorname{cis}\theta$ with $r = |z|$ and $\theta$ the angle.
+- Multiply: lengths multiply, angles add. Divide: lengths divide, angles subtract.
+- Multiplying by $\operatorname{cis}\theta$ is rotation by $\theta$.
+- De Moivre: $(r\operatorname{cis}\theta)^n = r^n\operatorname{cis}(n\theta)$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="De Moivre's Theorem" /> on the AoPS Wiki.
+- Practice in <Archive test="12" />.
+</GoFurther>

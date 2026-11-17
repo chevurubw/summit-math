@@ -1,0 +1,24 @@
+{
+  "id": "complex_numbers",
+  "title": "Complex Numbers",
+  "description": "Complex arithmetic, polar form, De Moivre's theorem and roots of unity.",
+  "track": "amc12",
+  "order": 7,
+  "skills": [
+    {
+      "id": "cx_arithmetic",
+      "title": "Complex arithmetic",
+      "description": "Add, multiply and divide complex numbers; modulus and conjugates."
+    },
+    {
+      "id": "cx_polar",
+      "title": "Polar form and De Moivre",
+      "description": "Write complex numbers with angles and raise them to powers."
+    },
+    {
+      "id": "cx_roots_unity",
+      "title": "Roots of unity",
+      "description": "Solutions of z^n = 1 and how they add and multiply."
+    }
+  ]
+}

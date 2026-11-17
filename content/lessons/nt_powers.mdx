@@ -1,0 +1,109 @@
+---
+title: Units digits and cycles of powers
+---
+
+What is the last digit of $7^{2025}$? You can't compute the number, it has over 1700 digits. But last digits (and remainders in general) of powers **repeat in cycles**, so you only need a few terms. This lesson is modular arithmetic in action.
+
+By the end of this lesson you will be able to:
+
+- find the units digit of any power,
+- find remainders of huge powers by spotting a cycle,
+- use $\pm 1$ tricks to shortcut the cycle,
+- find the last two digits of some powers.
+
+## Last digits repeat
+
+The units digit of a product depends only on the units digits of the factors. So to track $7, 7^2, 7^3, \ldots$ you only multiply last digits: $7, 9, 3, 1, 7, 9, 3, 1, \ldots$ It repeats every 4.
+
+<PowerCycle base={7} mod={10} terms={12} caption="Each box is the remainder of a power. Matching colors repeat. Try base 2 (cycle 2, 4, 8, 6) or base 9 (cycle 9, 1). Change the divisor to find remainders mod other numbers." />
+
+<Formula title="Units digit cycles">
+
+| Last digit of base | Cycle of last digits | Length |
+| --- | --- | --- |
+| 0, 1, 5, 6 | stays the same | 1 |
+| 4 | 4, 6 | 2 |
+| 9 | 9, 1 | 2 |
+| 2 | 2, 4, 8, 6 | 4 |
+| 3 | 3, 9, 7, 1 | 4 |
+| 7 | 7, 9, 3, 1 | 4 |
+| 8 | 8, 4, 2, 6 | 4 |
+
+Every cycle length divides 4, so the exponent **mod 4** decides the last digit (use 4 instead of a remainder of 0).
+</Formula>
+
+<Steps problem="What is the units digit of $7^{2025}$?">
+<Step>
+The cycle is $7, 9, 3, 1$, length 4.
+</Step>
+<Step>
+$2025 = 4 \cdot 506 + 1$, so $2025$ leaves remainder 1.
+</Step>
+<Step>
+Remainder 1 means the first entry of the cycle: $7$.
+</Step>
+</Steps>
+
+<Trap>
+If the exponent is a multiple of 4, the remainder is 0, which means the **last** entry of the cycle, not the first. $2^{100}$ ends in 6, not 2.
+</Trap>
+
+<Check choices={["$3$", "$5$", "$7$", "$8$", "$9$"]} answer={2} explain="$100$ is a multiple of 4, so take the last entry of each cycle: $2^{100}$ ends in 6 and $3^{100}$ ends in 1. The sum ends in 7.">
+What is the units digit of $2^{100} + 3^{100}$?
+</Check>
+
+## Remainders by other numbers
+
+The same idea works for any divisor. Compute powers, reduce each time, and wait for a $1$ to appear: once $a^k \equiv 1$, the pattern restarts every $k$ steps.
+
+<Steps problem="What is the remainder when $2^{50}$ is divided by 7?">
+<Step title="Find a power that's 1">
+$2^1 = 2$, $2^2 = 4$, $2^3 = 8 \equiv 1 \pmod 7$.
+</Step>
+<Step title="Pull out that power">
+$2^{50} = (2^3)^{16} \cdot 2^2 \equiv 1^{16} \cdot 4 = 4$.
+</Step>
+</Steps>
+
+<KeyIdea title="Hunt for 1 or −1">
+If $a^k \equiv 1$, then $a^{kq + r} \equiv a^r$. If $a^k \equiv -1$, the powers flip sign every $k$ steps. Both turn a giant exponent into a small one.
+</KeyIdea>
+
+<Check choices={["$1$", "$2$", "$3$", "$4$", "$6$"]} answer={4} explain="$3^3 = 27 \equiv -1 \pmod 7$. Since $99 = 3 \cdot 33$, we get $3^{99} = (3^3)^{33} \equiv (-1)^{33} = -1 \equiv 6 \pmod 7$.">
+What is the remainder when $3^{99}$ is divided by 7?
+</Check>
+
+## A theorem that predicts the cycle
+
+**Fermat's Little Theorem:** if $p$ is prime and $p$ doesn't divide $a$, then $a^{p-1} \equiv 1 \pmod p$. So mod 7, every cycle length divides 6; mod 11, it divides 10. You don't need to find the cycle by hand; you know $a^6 \equiv 1 \pmod 7$ immediately.
+
+## Last two digits
+
+Last two digits means remainder mod 100. Some bases hit 1 fast: $7^4 = 2401 \equiv 1 \pmod{100}$. So $7^{100} = (7^4)^{25}$ ends in $01$.
+
+<Check choices={["$01$", "$07$", "$43$", "$49$", "$57$"]} answer={1} explain="$7^4 \equiv 1 \pmod{100}$ and $2025 = 4 \cdot 506 + 1$, so $7^{2025} \equiv 7^1 = 07 \pmod{100}$.">
+What are the last two digits of $7^{2025}$?
+</Check>
+
+<Tip>
+Units digit questions are free points. Write the cycle, reduce the exponent mod the cycle length, read the answer. Spend your saved time on harder problems.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Units digit of $8^{43}$", back: "$43 \\equiv 3 \\pmod 4$; cycle 8, 4, 2, 6, so 2." },
+  { front: "Units digit of $9^{2024}$", back: "Even exponent: 1." },
+  { front: "Remainder of $5^{30}$ divided by 6", back: "$5 \\equiv -1$, so $(-1)^{30} = 1$." },
+  { front: "Remainder of $4^{20}$ divided by 5", back: "$4 \\equiv -1$, so 1." },
+]} />
+
+<Recap>
+- Last digits of powers cycle with length 1, 2 or 4. Reduce the exponent mod 4.
+- Remainder 0 means the last entry of the cycle.
+- For any divisor, find a power congruent to $1$ or $-1$ and pull it out.
+- Fermat: $a^{p-1} \equiv 1 \pmod p$ for prime $p$ not dividing $a$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Units digit" /> and <AoPS q="Fermat's Little Theorem" /> on the AoPS Wiki.
+- These questions often appear early in <Archive test="10" />.
+</GoFurther>

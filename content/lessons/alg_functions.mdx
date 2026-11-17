@@ -1,0 +1,141 @@
+---
+title: Functions
+---
+
+A **function** is a machine: you put a number in, it follows a rule, and one number comes out. The notation $f(x) = 2x + 1$ says "the machine named $f$ doubles its input and adds 1", so $f(3) = 7$. AMC function problems test whether you can follow the machine exactly, chain machines together, run them backwards, and find a mystery rule from clues.
+
+By the end of this lesson you will be able to:
+
+- evaluate a function at numbers and at expressions,
+- compose functions in the right order,
+- find and graph an inverse function,
+- crack functional equations by plugging in clever values.
+
+## Plugging in carefully
+
+Whatever goes inside the parentheses replaces **every** $x$ in the rule. If $f(x) = x^2 - 3x$:
+
+- $f(4) = 16 - 12 = 4$,
+- $f(a + 1) = (a + 1)^2 - 3(a + 1) = a^2 - a - 2$.
+
+<Trap>
+Use parentheses when you substitute. With $f(x) = x^2$, $f(-3) = (-3)^2 = 9$, not $-3^2 = -9$.
+</Trap>
+
+<Steps problem="If $f(2x + 1) = 4x + 5$, what is $f(7)$?">
+<Step title="Make the input match">
+We need $2x + 1 = 7$, so $x = 3$.
+</Step>
+<Step title="Use that $x$ on the right side">
+$f(7) = 4(3) + 5 = 17$.
+</Step>
+</Steps>
+
+## Composition: one machine feeding another
+
+$f(g(x))$ means: **first** run $g$, **then** feed the result into $f$. Work from the inside out.
+
+With $f(x) = 2x + 1$ and $g(x) = x^2$:
+
+- $f(g(3)) = f(9) = 19$,
+- $g(f(3)) = g(7) = 49$.
+
+Order matters. Usually $f(g(x)) \ne g(f(x))$.
+
+<Check choices={["$4$", "$7$", "$10$", "$12$", "$16$"]} answer={2} explain="Inside first: $f(2) = 3(2) - 2 = 4$. Then $f(4) = 3(4) - 2 = 10$.">
+If $f(x) = 3x - 2$, what is $f(f(2))$?
+</Check>
+
+## Inverse functions: running the machine backwards
+
+The inverse $f^{-1}$ undoes $f$. If $f(3) = 7$, then $f^{-1}(7) = 3$.
+
+**To find it:** write $y = f(x)$, swap $x$ and $y$, and solve for $y$.
+
+For $f(x) = 2x + 1$: swap to get $x = 2y + 1$, so $y = \dfrac{x - 1}{2}$. That is $f^{-1}(x)$.
+
+Swapping $x$ and $y$ reflects the graph across the line $y = x$. Drag the point along $f$ and watch its mirror image trace out $f^{-1}$.
+
+<Figure
+  bounds={[-6, 6, -6, 6]}
+  params={[
+    { name: "m", min: 0.5, max: 3, step: 0.25, value: 2, label: "slope of $f$" },
+    { name: "t", min: -3, max: 2.5, step: 0.05, value: 1, label: "point on $f$", play: true, speed: 5 },
+  ]}
+  elements={[
+    { type: "line", a: [0, 0], b: [1, 1], color: "muted", dashed: true, width: 1.5 },
+    { type: "func", f: "m*x + 1", color: "accent", width: 3 },
+    { type: "func", f: "(x - 1)/m", color: "blue", width: 3 },
+    { type: "point", id: "P", x: "t", y: "m*t + 1", color: "accent", label: "([[t]], [[m*t+1]])", labelDir: "nw" },
+    { type: "point", id: "Q", x: "m*t + 1", y: "t", color: "blue", label: "([[m*t+1]], [[t]])", labelDir: "se" },
+    { type: "segment", a: "P", b: "Q", color: "amber", dashed: true, width: 1.5 },
+  ]}
+  readouts={["\\color{#a78bfa} f(x) = [[m]]x + 1", "\\color{#60a5fa} f^{-1}(x) = \\dfrac{x - 1}{[[m]]}"]}
+  caption="Each point $(a, b)$ on $f$ matches the point $(b, a)$ on $f^{-1}$. The dashed diagonal is $y = x$."
+/>
+
+<Check choices={["$-1$", "$1$", "$3$", "$4$", "$11$"]} answer={1} explain="Solve $f(x) = 3$: $\tfrac{x + 5}{2} = 3$ gives $x = 1$. So $f^{-1}(3) = 1$. (Or find $f^{-1}(x) = 2x - 5$ and plug in 3.)">
+If $f(x) = \dfrac{x + 5}{2}$, what is $f^{-1}(3)$?
+</Check>
+
+<Tip>
+You rarely need the whole inverse formula. To find $f^{-1}(k)$, just solve $f(x) = k$.
+</Tip>
+
+## Functional equations: plug in smart values
+
+Sometimes you are not told the rule, only a relationship it satisfies. The strategy: **substitute values that make terms cancel or repeat**, then solve the little system you get.
+
+<Steps problem="A function satisfies $f(x) + 2f(1 - x) = 3x$ for all $x$. Find $f(0)$.">
+<Step title="Plug in $x = 0$">
+$f(0) + 2f(1) = 0$.
+</Step>
+<Step title="Plug in $x = 1$ (it swaps the roles)">
+$f(1) + 2f(0) = 3$.
+</Step>
+<Step title="Solve the system">
+From the first, $f(0) = -2f(1)$. Substitute into the second: $f(1) - 4f(1) = 3$, so $f(1) = -1$ and $f(0) = 2$.
+</Step>
+</Steps>
+
+<KeyIdea>
+Look for a substitution that turns the equation into itself with the parts swapped (like $x \to 1 - x$ or $x \to \tfrac{1}{x}$). Two equations in two unknowns always beat one.
+</KeyIdea>
+
+## Repeating machines
+
+Some functions cycle when applied again and again. Try $f(x) = \dfrac{1}{1 - x}$ starting at 2:
+
+$$
+2 \;\to\; -1 \;\to\; \tfrac{1}{2} \;\to\; 2 \;\to\; -1 \;\to\; \cdots
+$$
+
+It repeats every 3 steps. So applying $f$ 100 times to 2 lands on the same value as applying it once, because $100 = 3 \cdot 33 + 1$: the answer is $-1$.
+
+<Check choices={["$-1$", "$\\tfrac{1}{2}$", "$2$", "$3$", "$-\\tfrac{1}{2}$"]} answer={1} explain="The cycle has length 3: $2 \to -1 \to \tfrac{1}{2} \to 2$. Since $50 = 3 \cdot 16 + 2$, fifty applications match two applications: $\tfrac{1}{2}$.">
+With $f(x) = \dfrac{1}{1 - x}$, what do you get after applying $f$ fifty times, starting from 2?
+</Check>
+
+<Tip>
+When a problem asks for something after a huge number of steps, compute the first few steps by hand. A cycle almost always appears, and then the remainder does the rest.
+</Tip>
+
+<FlipCards cards={[
+  { front: "$f(x) = x^2 + 1$, $g(x) = x - 3$. Find $g(f(2))$.", back: "$f(2) = 5$, then $g(5) = 2$." },
+  { front: "Inverse of $f(x) = 3x - 4$", back: "$f^{-1}(x) = \\dfrac{x + 4}{3}$" },
+  { front: "If $f(x + 2) = 3x$, find $f(10)$.", back: "$x = 8$, so $24$." },
+  { front: "Graph of $f^{-1}$ compared to $f$", back: "Its reflection across $y = x$." },
+]} />
+
+<Recap>
+- Replace **every** $x$ with the input, using parentheses.
+- $f(g(x))$: do $g$ first. Order matters.
+- Inverse: swap $x$ and $y$, solve for $y$. Or just solve $f(x) = k$ to get $f^{-1}(k)$.
+- Functional equations: plug in values that make the equation talk about itself, then solve the system.
+- For repeated application, find the cycle.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Function" />, <AoPS q="Inverse of a function" /> and <AoPS q="Functional equation" /> on the AoPS Wiki.
+- Functional equations get harder toward the end of <Archive test="12" />.
+</GoFurther>

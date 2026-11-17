@@ -1,0 +1,143 @@
+---
+title: Absolute value and inequalities
+---
+
+The **absolute value** $|x|$ is how far $x$ is from 0 on the number line. Distance is never negative, so $|5| = 5$ and $|-5| = 5$. Once you read absolute value as **distance**, most problems solve themselves.
+
+By the end of this lesson you will be able to:
+
+- solve absolute value equations by splitting into cases,
+- solve inequalities, including the rule about flipping the sign,
+- read $|x - a| < r$ as an interval on the number line,
+- find the minimum of sums like $|x - 1| + |x - 7|$.
+
+## Absolute value is distance
+
+$|x - a|$ is the distance between $x$ and $a$. So $|x - 3| = 2$ asks: which numbers are exactly 2 away from 3? Answer: 1 and 5.
+
+The picture below shows every $x$ with $|x - c| \le r$. Slide $c$ and $r$.
+
+<Figure
+  bounds={[-8, 8, -1, 1.3]}
+  axes="x"
+  grid={false}
+  ticks={1}
+  height={150}
+  params={[
+    { name: "c", min: -4, max: 4, step: 0.5, value: 3, label: "center $c$" },
+    { name: "r", min: 0.5, max: 4, step: 0.5, value: 2, label: "distance $r$" },
+  ]}
+  elements={[
+    { type: "segment", a: ["c - r", 0], b: ["c + r", 0], color: "accent", width: 8 },
+    { type: "point", x: "c - r", y: 0, color: "amber", label: "[[c - r]]", labelDir: "n" },
+    { type: "point", x: "c + r", y: 0, color: "amber", label: "[[c + r]]", labelDir: "n" },
+    { type: "point", x: "c", y: 0, color: "heading", size: 4 },
+    { type: "text", x: "c", y: 0.75, text: "center [[c]]", size: 13, color: "muted" },
+  ]}
+  readouts={["|x - [[c]]| \\le [[r]] \\iff [[c-r]] \\le x \\le [[c+r]]"]}
+  caption="Everything within $r$ of the center. The two endpoints are the solutions of $|x - c| = r$."
+/>
+
+## Solving equations: split into two cases
+
+If $|\text{stuff}| = k$ with $k \ge 0$, then $\text{stuff} = k$ or $\text{stuff} = -k$.
+
+<Steps problem="Solve $|2x - 3| = 7$.">
+<Step title="Case 1">
+$2x - 3 = 7$, so $x = 5$.
+</Step>
+<Step title="Case 2">
+$2x - 3 = -7$, so $x = -2$.
+</Step>
+<Step title="Check both">
+$|10 - 3| = 7$ ✓ and $|-4 - 3| = 7$ ✓. The solutions are $5$ and $-2$.
+</Step>
+</Steps>
+
+<Trap>
+$|\text{stuff}| = -4$ has **no** solutions, because a distance can't be negative. And when a variable appears on both sides, like $|x - 1| = 2x$, always check each answer in the original equation: one case can give a fake solution.
+</Trap>
+
+<Check choices={["$-2$", "$2$", "$3$", "$5$", "$7$"]} answer={2} explain="The solutions are $5$ and $-2$, which add to $3$.">
+What is the sum of all solutions of $|2x - 3| = 7$?
+</Check>
+
+## Inequalities
+
+Inequalities follow the same rules as equations, with **one** exception:
+
+<KeyIdea title="The flipping rule">
+When you multiply or divide both sides by a **negative** number, flip the inequality sign. $-2x < 6$ becomes $x > -3$.
+</KeyIdea>
+
+Why? Multiplying by $-1$ reflects the number line: $2 < 5$ but $-2 > -5$.
+
+<Check choices={["$x > -2$", "$x < -2$", "$x > 2$", "$x < 2$", "$x < -\\tfrac{14}{3}$"]} answer={1} explain="Subtract 4: $-3x > 6$. Divide by $-3$ and flip: $x < -2$.">
+Solve $-3x + 4 > 10$.
+</Check>
+
+### Absolute value inequalities
+
+Think distance again:
+
+- $|x - c| < r$: within $r$ of $c$, one interval: $c - r < x < c + r$.
+- $|x - c| > r$: farther than $r$ from $c$, two pieces: $x < c - r$ or $x > c + r$.
+
+<Check choices={["$9$", "$10$", "$11$", "$12$", "$13$"]} answer={2} explain="$|x - 3| \le 5$ means $-2 \le x \le 8$. The integers from $-2$ to $8$ number $8 - (-2) + 1 = 11$. Don't forget the $+1$ when counting both ends.">
+How many integers $x$ satisfy $|x - 3| \le 5$?
+</Check>
+
+## Graphs of absolute value: the V and the valley
+
+The graph of $y = |x - a|$ is a V with its point at $x = a$. Add two of them and you get a flat bottomed valley:
+
+<Figure
+  bounds={[-4, 10, -1, 12]}
+  height={340}
+  ticks={2}
+  params={[
+    { name: "a", min: -3, max: 4, step: 1, value: 1, label: "$a$" },
+    { name: "b", min: 4, max: 9, step: 1, value: 7, label: "$b$" },
+  ]}
+  elements={[
+    { type: "func", f: "abs(x - a)", color: "muted", dashed: true, width: 1.5 },
+    { type: "func", f: "abs(x - b)", color: "muted", dashed: true, width: 1.5 },
+    { type: "func", f: "abs(x - a) + abs(x - b)", color: "accent", width: 3 },
+    { type: "segment", a: ["a", "b - a"], b: ["b", "b - a"], color: "amber", width: 5 },
+    { type: "text", x: "(a+b)/2", y: "b - a + 0.8", text: "minimum = [[b - a]]", color: "amber" },
+  ]}
+  readouts={["y = |x - [[a]]| + |x - [[b]]|"]}
+  caption="Anywhere between $a$ and $b$, the total distance to $a$ and $b$ is just the distance from $a$ to $b$."
+/>
+
+<KeyIdea>
+$|x - a| + |x - b|$ is the total distance from $x$ to two points. It is smallest, equal to $|a - b|$, for every $x$ between them. With more points, the minimum of $|x - a_1| + \cdots + |x - a_n|$ happens at the **median** of the points.
+</KeyIdea>
+
+<Check choices={["$0$", "$4$", "$6$", "$7$", "$8$"]} answer={2} explain="For any $x$ between 1 and 7 the sum is $7 - 1 = 6$, and outside that range it is larger.">
+What is the smallest value of $|x - 1| + |x - 7|$?
+</Check>
+
+<Tip>
+When an absolute value problem feels messy, find the points where the inside equals zero. They cut the number line into pieces, and on each piece every absolute value is just $+(\ldots)$ or $-(\ldots)$. Work piece by piece.
+</Tip>
+
+<FlipCards cards={[
+  { front: "$|x + 4| < 1$ as an interval", back: "$-5 < x < -3$ (within 1 of $-4$)." },
+  { front: "Solve $\\tfrac{x}{-2} \\ge 3$", back: "Multiply by $-2$ and flip: $x \\le -6$." },
+  { front: "Minimum of $|x| + |x - 2| + |x - 10|$", back: "At the median $x = 2$: $2 + 0 + 8 = 10$." },
+  { front: "Number of solutions of $|x - 2| = -1$", back: "None. A distance can't be negative." },
+]} />
+
+<Recap>
+- $|x - a|$ is the distance from $x$ to $a$.
+- $|\text{stuff}| = k$ splits into $\text{stuff} = \pm k$. Check answers when variables appear outside the bars.
+- Flip the inequality when multiplying or dividing by a negative.
+- $|x - c| < r$ is one interval; $|x - c| > r$ is two rays.
+- Sums of absolute values are minimized at the median point.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Absolute value" /> and <AoPS q="Inequality" /> on the AoPS Wiki.
+- Practice with early and middle problems in <Archive test="10" />.
+</GoFurther>

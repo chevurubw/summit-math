@@ -1,0 +1,158 @@
+---
+title: Right triangles
+---
+
+A **right triangle** has one $90^\circ$ angle. The two sides that form the right angle are the **legs**, and the long side across from it is the **hypotenuse**. Right triangles are the single most useful shape on the AMC: whenever you need a length, your first thought should be "can I make a right triangle?"
+
+By the end of this lesson you will be able to:
+
+- use the Pythagorean Theorem in both directions,
+- recognize the common Pythagorean triples on sight,
+- use the $45$-$45$-$90$ and $30$-$60$-$90$ triangles without computing,
+- find the altitude to the hypotenuse.
+
+## The Pythagorean Theorem
+
+$$
+a^2 + b^2 = c^2
+$$
+
+where $a$ and $b$ are the legs and $c$ is the hypotenuse. Here is what it **means**: the square built on the hypotenuse has exactly the same area as the two squares on the legs put together. Change the legs and compare the areas.
+
+<Figure
+  bounds={[-6.5, 10.5, -6.5, 10.5]}
+  axes={false}
+  grid={false}
+  height={430}
+  params={[
+    { name: "a", min: 1, max: 6, step: 0.5, value: 4, label: "leg $a$" },
+    { name: "b", min: 1, max: 6, step: 0.5, value: 3, label: "leg $b$" },
+  ]}
+  elements={[
+    { type: "polygon", pts: [[0, 0], ["a", 0], ["a", "-a"], [0, "-a"]], fill: "accent", color: "accent" },
+    { type: "polygon", pts: [[0, 0], [0, "b"], ["-b", "b"], ["-b", 0]], fill: "blue", color: "blue" },
+    { type: "polygon", pts: [["a", 0], [0, "b"], ["b", "a + b"], ["a + b", "a"]], fill: "amber", color: "amber" },
+    { type: "polygon", pts: [[0, 0], ["a", 0], [0, "b"]], fill: "heading", color: "heading", width: 3 },
+    { type: "angle", a: ["a", 0], o: [0, 0], b: [0, "b"], right: true, color: "heading", r: 18 },
+    { type: "text", x: "a/2", y: "-a/2", text: "a² = [[a^2]]" },
+    { type: "text", x: "-b/2", y: "b/2", text: "b² = [[b^2]]" },
+    { type: "text", x: "(a+b)/2", y: "(a+b)/2", text: "c² = [[a^2+b^2]]" },
+  ]}
+  readouts={["c = \\sqrt{[[a^2]] + [[b^2]]} = [[sqrt(a^2+b^2):3]]"]}
+  caption="Purple area plus blue area always equals the yellow area. Try $a = 4$, $b = 3$: $16 + 9 = 25$."
+/>
+
+<Trap>
+$c$ is always the side **across from the right angle**, the longest side. If you are given the hypotenuse and one leg, subtract: $b = \sqrt{c^2 - a^2}$.
+</Trap>
+
+<Check choices={["$\\sqrt{39}$", "$6$", "$7$", "$8$", "$\\sqrt{89}$"]} answer={3} explain="The 17 is the hypotenuse, so the other leg is $\sqrt{17^2 - 15^2} = \sqrt{289 - 225} = \sqrt{64} = 8$. (It's the 8, 15, 17 triple.)">
+A right triangle has hypotenuse 17 and one leg 15. How long is the other leg?
+</Check>
+
+## Pythagorean triples: memorize these
+
+Whole number solutions come up constantly. Know these, and know that **any multiple** of a triple is also a triple ($6, 8, 10$ and $9, 12, 15$ come from $3, 4, 5$).
+
+| Triple | Multiples you'll see |
+| --- | --- |
+| $3, 4, 5$ | $6, 8, 10$ and $9, 12, 15$ and $15, 20, 25$ |
+| $5, 12, 13$ | $10, 24, 26$ |
+| $8, 15, 17$ | |
+| $7, 24, 25$ | |
+| $20, 21, 29$ | |
+
+<Tip>
+Before squaring big numbers, divide out a common factor. For legs $45$ and $60$, notice $45 : 60 = 3 : 4$ with factor 15, so the hypotenuse is $5 \cdot 15 = 75$. No squaring needed.
+</Tip>
+
+## The two special right triangles
+
+**45-45-90** (half a square). The legs are equal and the hypotenuse is $\sqrt{2}$ times a leg:
+
+$$
+x : x : x\sqrt{2}.
+$$
+
+**30-60-90** (half an equilateral triangle). The short leg is across from $30^\circ$:
+
+$$
+x : x\sqrt{3} : 2x.
+$$
+
+<Figure
+  bounds={[-0.5, 9.5, -0.8, 4.6]}
+  axes={false}
+  grid={false}
+  height={260}
+  elements={[
+    { type: "polygon", pts: [[0, 0], [3.4, 0], [0, 3.4]], fill: "accent", color: "accent" },
+    { type: "angle", a: [3.4, 0], o: [0, 0], b: [0, 3.4], right: true, color: "heading", r: 16 },
+    { type: "text", x: 1.7, y: -0.5, text: "x" },
+    { type: "text", x: -0.3, y: 1.7, text: "x" },
+    { type: "text", x: 2.2, y: 2.1, text: "x√2", color: "accent" },
+    { type: "text", x: 2.55, y: 0.3, text: "45°", size: 12, color: "muted" },
+    { type: "polygon", pts: [[5, 0], [9, 0], [5, 2.31]], fill: "blue", color: "blue" },
+    { type: "angle", a: [9, 0], o: [5, 0], b: [5, 2.31], right: true, color: "heading", r: 16 },
+    { type: "text", x: 7, y: -0.5, text: "x√3" },
+    { type: "text", x: 4.6, y: 1.15, text: "x" },
+    { type: "text", x: 7.3, y: 1.6, text: "2x", color: "blue" },
+    { type: "text", x: 8.1, y: 0.25, text: "30°", size: 12, color: "muted" },
+    { type: "text", x: 5.45, y: 1.75, text: "60°", size: 12, color: "muted" },
+  ]}
+  caption="Left: half a square. Right: half an equilateral triangle. The shortest side is always across from the smallest angle."
+/>
+
+<Check choices={["$4$", "$4\\sqrt{2}$", "$4\\sqrt{3}$", "$8$", "$8\\sqrt{3}$"]} answer={2} explain="In a $30$-$60$-$90$ triangle the hypotenuse is $2x = 8$, so $x = 4$ is the short leg and the long leg is $x\sqrt{3} = 4\sqrt{3}$.">
+A $30$-$60$-$90$ triangle has hypotenuse 8. How long is the leg across from the $60^\circ$ angle?
+</Check>
+
+### Two quick consequences
+
+- A square with side $s$ has diagonal $s\sqrt{2}$.
+- An equilateral triangle with side $s$ has height $\dfrac{s\sqrt{3}}{2}$ and area $\dfrac{s^2\sqrt{3}}{4}$.
+
+## The altitude to the hypotenuse
+
+Drop a perpendicular from the right angle to the hypotenuse. Computing the area two ways gives its length:
+
+$$
+\frac{1}{2}ab = \frac{1}{2}c\,h \quad\Longrightarrow\quad h = \frac{ab}{c}.
+$$
+
+<Steps problem="A right triangle has legs 6 and 8. How long is the altitude to the hypotenuse?">
+<Step>
+The hypotenuse is 10 (a $3, 4, 5$ triple times 2).
+</Step>
+<Step>
+$h = \dfrac{6 \cdot 8}{10} = 4.8$.
+</Step>
+</Steps>
+
+<Check choices={["$\\tfrac{60}{13}$", "$5$", "$\\tfrac{65}{12}$", "$6$", "$\\tfrac{13}{2}$"]} answer={0} explain="Hypotenuse $= 13$. Altitude $= \tfrac{5 \cdot 12}{13} = \tfrac{60}{13}$.">
+A right triangle has legs 5 and 12. What is the altitude to the hypotenuse?
+</Check>
+
+<KeyIdea title="Make your own right triangle">
+Distances between points, heights of isosceles triangles, chords in circles, diagonals of boxes: almost all are found by drawing one helpful perpendicular and using $a^2 + b^2 = c^2$.
+</KeyIdea>
+
+<FlipCards cards={[
+  { front: "Diagonal of a $5 \\times 12$ rectangle", back: "$13$" },
+  { front: "Height of an equilateral triangle with side 6", back: "$3\\sqrt{3}$" },
+  { front: "Is $8, 9, 12$ a right triangle?", back: "$64 + 81 = 145 \\ne 144$, so no (it's slightly acute)." },
+  { front: "Legs of a 45-45-90 triangle with hypotenuse 10", back: "$\\tfrac{10}{\\sqrt{2}} = 5\\sqrt{2}$ each." },
+]} />
+
+<Recap>
+- $a^2 + b^2 = c^2$ with $c$ the hypotenuse across from the right angle.
+- Triples: $3, 4, 5$; $5, 12, 13$; $8, 15, 17$; $7, 24, 25$; $20, 21, 29$; and their multiples.
+- $45$-$45$-$90$: $x : x : x\sqrt{2}$. $30$-$60$-$90$: $x : x\sqrt{3} : 2x$.
+- Altitude to the hypotenuse: $\frac{ab}{c}$.
+- Need a length? Build a right triangle.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Pythagorean Theorem" />, <AoPS q="Pythagorean triple" /> and <AoPS q="Right triangle" /> on the AoPS Wiki.
+- Right triangles appear in a large share of geometry problems in <Archive test="10" />.
+</GoFurther>

@@ -1,0 +1,142 @@
+---
+title: "Vieta's formulas"
+---
+
+Here's a surprising fact: you can know the **sum** and **product** of a polynomial's roots without ever finding the roots. The coefficients tell you directly. These relationships are **Vieta's formulas**, and they let you answer questions like "what is $r^2 + s^2$?" in two lines, even when $r$ and $s$ are ugly.
+
+By the end of this lesson you will be able to:
+
+- read the sum and product of roots straight off a quadratic,
+- do the same for cubics,
+- compute expressions like $r^2 + s^2$, $\tfrac{1}{r} + \tfrac{1}{s}$ and $r^3 + s^3$ from the coefficients,
+- build a polynomial from facts about its roots.
+
+## Why it works
+
+If a quadratic has roots $r$ and $s$, it factors:
+
+$$
+x^2 + bx + c = (x - r)(x - s) = x^2 - (r + s)x + rs.
+$$
+
+Match the coefficients: $r + s = -b$ and $rs = c$. That's the whole idea.
+
+<Formula>
+
+For $ax^2 + bx + c$ with roots $r, s$:
+
+$$
+r + s = -\frac{b}{a}, \qquad rs = \frac{c}{a}.
+$$
+
+</Formula>
+
+Drag the sliders to choose a sum and a product. The parabola $y = x^2 - Sx + P$ always has roots with exactly that sum and product (when it crosses the axis at all).
+
+<Figure
+  bounds={[-4, 7, -5, 7]}
+  ticks={1}
+  height={380}
+  equal={false}
+  params={[
+    { name: "S", min: -2, max: 6, step: 0.5, value: 4, label: "sum $S$" },
+    { name: "P", min: -4, max: 6, step: 0.5, value: 3, label: "product $P$" },
+  ]}
+  elements={[
+    { type: "func", f: "x^2 - S*x + P", color: "accent", width: 3 },
+    { type: "point", x: "(S - sqrt(S^2 - 4*P))/2", y: 0, color: "amber", label: "r", labelDir: "sw", show: "S^2 >= 4*P" },
+    { type: "point", x: "(S + sqrt(S^2 - 4*P))/2", y: 0, color: "amber", label: "s", labelDir: "se", show: "S^2 >= 4*P" },
+  ]}
+  readouts={["y = x^2 - [[S]]x + [[P]]", "r = [[S^2 >= 4*P ? (S - sqrt(S^2 - 4*P))/2 : 0/0:3]],\\ s = [[S^2 >= 4*P ? (S + sqrt(S^2 - 4*P))/2 : 0/0:3]]", "r + s = [[S]],\\ rs = [[P]]"]}
+  caption="When $S^2 < 4P$ the parabola misses the axis. The roots are then complex, but Vieta still holds."
+/>
+
+## Expressions in the roots
+
+Most Vieta problems ask for something symmetric in the roots. Rewrite it using only $r + s$ and $rs$.
+
+<Formula>
+
+$$
+\begin{aligned}
+r^2 + s^2 &= (r + s)^2 - 2rs\\
+\frac{1}{r} + \frac{1}{s} &= \frac{r + s}{rs}\\
+(r - s)^2 &= (r + s)^2 - 4rs\\
+r^3 + s^3 &= (r + s)^3 - 3rs(r + s)
+\end{aligned}
+$$
+
+</Formula>
+
+<Steps problem="The roots of $2x^2 - 6x + 5 = 0$ are $r$ and $s$. Find $r^2 + s^2$.">
+<Step title="Vieta">
+$r + s = \tfrac{6}{2} = 3$ and $rs = \tfrac{5}{2}$.
+</Step>
+<Step title="Rewrite">
+$r^2 + s^2 = 3^2 - 2 \cdot \tfrac{5}{2} = 9 - 5 = 4$.
+</Step>
+</Steps>
+
+Notice the roots here are complex (the discriminant is $36 - 40 < 0$), yet the answer is a nice real number. Vieta never cares.
+
+<Check choices={["$13$", "$16$", "$19$", "$22$", "$25$"]} answer={2} explain="$r + s = 5$ and $rs = 3$, so $r^2 + s^2 = 25 - 6 = 19$.">
+If $r$ and $s$ are the roots of $x^2 - 5x + 3 = 0$, what is $r^2 + s^2$?
+</Check>
+
+<Check choices={["$9$", "$12$", "$15$", "$18$", "$20$"]} answer={3} explain="Call the roots $r$ and $2r$. Their sum is $3r = 9$, so $r = 3$ and the roots are 3 and 6. Then $k = 3 \cdot 6 = 18$.">
+One root of $x^2 - 9x + k = 0$ is twice the other. What is $k$?
+</Check>
+
+## Cubics
+
+For $x^3 + bx^2 + cx + d$ with roots $r, s, t$, expanding $(x - r)(x - s)(x - t)$ gives
+
+<Formula>
+
+$$
+r + s + t = -b, \qquad rs + st + tr = c, \qquad rst = -d.
+$$
+
+With a leading coefficient $a$, divide each by $a$. The signs alternate: minus, plus, minus.
+
+</Formula>
+
+<Steps problem="The roots of $x^3 - 6x^2 + 11x - 6$ are $r, s, t$. Find $\tfrac{1}{r} + \tfrac{1}{s} + \tfrac{1}{t}$.">
+<Step title="Common denominator">
+$\dfrac{1}{r} + \dfrac{1}{s} + \dfrac{1}{t} = \dfrac{st + rt + rs}{rst}$.
+</Step>
+<Step title="Vieta">
+$rs + st + tr = 11$ and $rst = 6$, so the answer is $\tfrac{11}{6}$.
+</Step>
+</Steps>
+
+<Check choices={["$4$", "$10$", "$14$", "$16$", "$22$"]} answer={2} explain="$r + s + t = 4$ and $rs + st + tr = 1$. Then $r^2 + s^2 + t^2 = (r + s + t)^2 - 2(rs + st + tr) = 16 - 2 = 14$.">
+The roots of $x^3 - 4x^2 + x + 7 = 0$ are $r, s, t$. What is $r^2 + s^2 + t^2$?
+</Check>
+
+<Trap>
+Watch the signs. The sum of the roots is the **negative** of the second coefficient (divided by the leading one). For a cubic the product is $-d/a$, but for a quartic it is $+e/a$.
+</Trap>
+
+<Tip>
+Going backwards is just as useful: the monic quadratic with roots $r$ and $s$ is $x^2 - (r + s)x + rs$. To find the quadratic whose roots are $r^2$ and $s^2$, compute $r^2 + s^2$ and $r^2s^2$.
+</Tip>
+
+<FlipCards cards={[
+  { front: "Sum and product of roots of $3x^2 + 12x - 7$", back: "Sum $-4$, product $-\\tfrac{7}{3}$" },
+  { front: "Monic quadratic with roots $2 \\pm \\sqrt{5}$", back: "Sum 4, product $-1$: $x^2 - 4x - 1$" },
+  { front: "$(r - s)^2$ for $x^2 - 7x + 10$", back: "$49 - 40 = 9$ (roots 2 and 5)" },
+  { front: "Product of the roots of $2x^3 - x + 8$", back: "$-\\tfrac{8}{2} = -4$" },
+]} />
+
+<Recap>
+- Quadratic $ax^2 + bx + c$: sum $-b/a$, product $c/a$.
+- Cubic: sum $-b/a$, pair sum $c/a$, product $-d/a$.
+- Rewrite symmetric expressions using the sum and product.
+- Vieta works even when the roots are complex.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Vieta's formulas" /> on the AoPS Wiki.
+- Vieta appears often in <Archive test="12" /> and <Archive test="10" />.
+</GoFurther>

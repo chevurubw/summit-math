@@ -1,0 +1,29 @@
+{
+  "id": "trigonometry",
+  "title": "Trigonometry",
+  "description": "The unit circle, identities, the Laws of Sines and Cosines, and trig equations.",
+  "track": "amc12",
+  "order": 5,
+  "skills": [
+    {
+      "id": "trig_values",
+      "title": "Unit circle values",
+      "description": "Exact sine, cosine and tangent values and radian measure."
+    },
+    {
+      "id": "trig_identities",
+      "title": "Trig identities",
+      "description": "Pythagorean, double angle and sum identities."
+    },
+    {
+      "id": "trig_laws",
+      "title": "Law of Sines and Cosines",
+      "description": "Solve triangles and find areas and circumradii."
+    },
+    {
+      "id": "trig_equations",
+      "title": "Trig equations and graphs",
+      "description": "Count and find solutions; periods of trig graphs."
+    }
+  ]
+}

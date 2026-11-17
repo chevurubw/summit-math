@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "poly_vieta_b01",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv1",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the product of the roots of $x^{3} - 9x^{2} + 18x = 0$?",
+  "choices": {
+   "A": "$-9$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$2$",
+   "E": "$18$"
+  },
+  "answer": "B",
+  "hints": [
+   "For $x^3 + bx^2 + cx + d$: sum $= -b$, pair sum $= c$, product $= -d$."
+  ],
+  "solution": "**What we need:** the product of the roots.\n\n**Key idea:** Vieta's formulas read these symmetric expressions straight off the coefficients, with no need to find the roots.\n\n**Step 1.** For $x^3 + bx^2 + cx + d$ with roots $r, s, t$: $r + s + t = -b$, $rs + st + tr = c$, $rst = -d$. Here $b = -9$, $c = 18$, $d = 0$.\n\n**Step 2.** $rst = -(0) = 0$.\n\n**Answer:** $0$. **(B)**\n\n**Common mistake:** dropping the minus sign in $-b$ or $-d$; the signs alternate."
+ },
+ {
+  "id": "poly_vieta_b02",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv2",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $r$, $s$, $t$ be the roots of $x^{3} + 2x^{2} - 5x - 6 = 0$. What is $r^2 + s^2 + t^2$?",
+  "choices": {
+   "A": "$-6$",
+   "B": "$4$",
+   "C": "$10$",
+   "D": "$14$",
+   "E": "$16$"
+  },
+  "answer": "D",
+  "hints": [
+   "$r^2 + s^2 + t^2 = (r + s + t)^2 - 2(rs + st + tr)$."
+  ],
+  "solution": "**What we need:** $r^2 + s^2 + t^2$.\n\n**Key idea:** square the sum: $(r + s + t)^2 = r^2 + s^2 + t^2 + 2(rs + st + tr)$. Both pieces on the right side except the squares come from Vieta.\n\n**Step 1.** For $x^3 + bx^2 + cx + d$ with roots $r, s, t$: $r + s + t = -b$, $rs + st + tr = c$, $rst = -d$. Here $b = 2$, $c = -5$, $d = -6$.\n\n**Step 2.** So $r + s + t = -2$ and $rs + st + tr = -5$.\n\n**Step 3.** $r^2 + s^2 + t^2 = (r + s + t)^2 - 2(rs + st + tr) = 4 - 2(-5) = 14$.\n\n**Answer:** $14$. **(D)**\n\n**Common mistake:** squaring the sum and forgetting to subtract the cross terms."
+ },
+ {
+  "id": "poly_vieta_b03",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv3",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $r$, $s$, $t$ be the roots of $x^{3} + x^{2} - 25x - 25 = 0$. What is $\\dfrac{1}{r} + \\dfrac{1}{s} + \\dfrac{1}{t}$?",
+  "choices": {
+   "A": "$-2$",
+   "B": "$-1$",
+   "C": "$-\\frac{1}{25}$",
+   "D": "$0$",
+   "E": "$1$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine: $\\frac{rs + st + tr}{rst}$."
+  ],
+  "solution": "**What we need:** the sum of the reciprocals of the roots.\n\n**Key idea:** use a common denominator: $\\frac{1}{r} + \\frac{1}{s} + \\frac{1}{t} = \\frac{st + rt + rs}{rst}$. Both top and bottom come from Vieta.\n\n**Step 1.** For $x^3 + bx^2 + cx + d$ with roots $r, s, t$: $r + s + t = -b$, $rs + st + tr = c$, $rst = -d$. Here $b = 1$, $c = -25$, $d = -25$.\n\n**Step 2.** Top: $rs + st + tr = -25$. Bottom: $rst = 25$.\n\n**Step 3.** $\\frac{-25}{25} = -1$.\n\n**Answer:** $-1$. **(B)**\n\n**Common mistake:** using $\\frac{1}{r + s + t}$, which is not the sum of reciprocals."
+ },
+ {
+  "id": "poly_vieta_b04",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of all roots (real and complex, counted with multiplicity) of $5x^{5} - 10x^{4} + 7x - 3 = 0$?",
+  "choices": {
+   "A": "$-10$",
+   "B": "$-2$",
+   "C": "$\\frac{3}{5}$",
+   "D": "$2$",
+   "E": "$3$"
+  },
+  "answer": "D",
+  "hints": [
+   "The sum of the roots is $-\\frac{\\text{second coefficient}}{\\text{leading coefficient}}$."
+  ],
+  "solution": "**What we need:** the sum of all the roots.\n\n**Key idea:** Vieta: for any polynomial, the sum of the roots is $-\\frac{\\text{coefficient of } x^{n-1}}{\\text{coefficient of } x^n}$. The other coefficients don't matter.\n\n**Step 1.** Leading coefficient: $5$. Coefficient of $x^{4}$: $-10$.\n\n**Step 2.** Sum $= -\\frac{-10}{5} = 2$.\n\n**Answer:** $2$. **(D)**\n\n**Common mistake:** forgetting to divide by the leading coefficient when it isn't $1$."
+ },
+ {
+  "id": "poly_vieta_b05",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_q_sum",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the product of the roots of $2x^{2} - 6x - 9 = 0$?",
+  "choices": {
+   "A": "$-\\frac{9}{2}$",
+   "B": "$-\\frac{7}{2}$",
+   "C": "$\\frac{3}{2}$",
+   "D": "$3$",
+   "E": "$\\frac{9}{2}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Vieta's formulas."
+  ],
+  "solution": "**What we need:** the product of the roots.\n\n**Key idea:** for $ax^2 + bx + c$: sum $= -\\frac{b}{a}$, product $= \\frac{c}{a}$.\n\n**Step 1.** Product: $-\\frac{9}{2}$.\n\n**Answer:** $-\\frac{9}{2}$. **(A)**\n\n**Common mistake:** using $-\\frac{c}{a}$."
+ },
+ {
+  "id": "poly_vieta_b06",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_q_recip",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $r$ and $s$ are the roots of $2x^{2} + 8x + 15 = 0$, what is $\\frac{1}{r} + \\frac{1}{s}$?",
+  "choices": {
+   "A": "$-\\frac{15}{8}$",
+   "B": "$-\\frac{8}{15}$",
+   "C": "$\\frac{2}{15}$",
+   "D": "$\\frac{7}{15}$",
+   "E": "$\\frac{8}{15}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Combine over a common denominator."
+  ],
+  "solution": "**What we need:** the sum of reciprocals.\n\n**Key idea:** $\\frac{1}{r} + \\frac{1}{s} = \\frac{r + s}{rs}$.\n\n**Step 1.** $r + s = -4$, $rs = \\frac{15}{2}$.\n\n**Step 2.** Ratio: $-\\frac{8}{15}$.\n\n**Answer:** $-\\frac{8}{15}$. **(B)**\n\n**Common mistake:** flipping the ratio."
+ },
+ {
+  "id": "poly_vieta_b07",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_q_diff",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the positive difference between the roots of $x^{2} - 12x + 32 = 0$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$12$",
+   "D": "$16$",
+   "E": "$32$"
+  },
+  "answer": "A",
+  "hints": [
+   "$(r - s)^2 = (r + s)^2 - 4rs$."
+  ],
+  "solution": "**What we need:** $|r - s|$.\n\n**Key idea:** use the sum and product, or the quadratic formula.\n\n**Step 1.** $(r - s)^2 = 144 - 128 = 16$.\n\n**Step 2.** $|r - s| = 4$.\n\n**Answer:** $4$. **(A)**\n\n**Common mistake:** forgetting the factor of 4."
+ },
+ {
+  "id": "poly_vieta_b08",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_q_shift",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $r$ and $s$ are the roots of $x^{2} + 6x + 4 = 0$, what is $(r + 3)(s + 3)$?",
+  "choices": {
+   "A": "$-14$",
+   "B": "$-5$",
+   "C": "$-4$",
+   "D": "$13$",
+   "E": "$31$"
+  },
+  "answer": "B",
+  "hints": [
+   "Expand: $rs + k(r + s) + k^2$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $(r + k)(s + k) = rs + k(r + s) + k^2$ with $k = 3$.\n\n**Step 1.** $rs = 4$, $r + s = -6$.\n\n**Step 2.** $4 + 3 \\cdot (-6) + 9 = -5$.\n\n**Answer:** $-5$. **(B)**\n\n**Common mistake:** using $+b$ for the sum."
+ },
+ {
+  "id": "poly_vieta_b09",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_build",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $r$ and $s$ are the roots of $x^{2} - 9x - 8 = 0$, the monic quadratic with roots $4r$ and $4s$ is $x^2 + bx + c$. What is $c$?",
+  "choices": {
+   "A": "$-128$",
+   "B": "$-36$",
+   "C": "$-32$",
+   "D": "$-8$",
+   "E": "$144$"
+  },
+  "answer": "A",
+  "hints": [
+   "The new product is $16rs$."
+  ],
+  "solution": "**What we need:** $c$.\n\n**Key idea:** $c = (4r)(4s) = 16rs$.\n\n**Step 1.** $rs = -8$, so $c = -128$.\n\n**Answer:** $-128$. **(A)**\n\n**Common mistake:** multiplying the product by 4 only once."
+ },
+ {
+  "id": "poly_vieta_b10",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_cubic_pairs",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $r$, $s$, $t$ be the roots of $x^{3} + 5x^{2} - 18x - 72 = 0$. What is $rs + st + tr$?",
+  "choices": {
+   "A": "$-18$",
+   "B": "$-5$",
+   "C": "$5$",
+   "D": "$18$",
+   "E": "$72$"
+  },
+  "answer": "A",
+  "hints": [
+   "Vieta: the coefficient of $x$."
+  ],
+  "solution": "**What we need:** $rs + st + tr$.\n\n**Key idea:** for monic $x^3 + ax^2 + bx + c$: $rs + st + tr = b$.\n\n**Step 1.** It's the coefficient of $x$: $-18$.\n\n**Answer:** $-18$. **(A)**\n\n**Common mistake:** flipping the sign."
+ },
+ {
+  "id": "poly_vieta_b11",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_other_sum",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "One root of $x^{3} - 3x^{2} - 22x + 24 = 0$ is $1$. What is the sum of the other two roots?",
+  "choices": {
+   "A": "$-24$",
+   "B": "$-2$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "Total sum minus the known root."
+  ],
+  "solution": "**What we need:** the sum of the other two.\n\n**Key idea:** Vieta: all three roots sum to $-a$ for $x^3 + ax^2 + \\ldots$.\n\n**Step 1.** Sum of all: $3$.\n\n**Step 2.** Minus $1$: $2$.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** forgetting to subtract the known root."
+ },
+ {
+  "id": "poly_vieta_b12",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_missing",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "One root of $x^2 + kx + 32 = 0$ is $8$. What is $k$?",
+  "choices": {
+   "A": "$-12$",
+   "B": "$-10$",
+   "C": "$4$",
+   "D": "$12$",
+   "E": "$32$"
+  },
+  "answer": "A",
+  "hints": [
+   "Find the other root from the product."
+  ],
+  "solution": "**What we need:** $k$.\n\n**Key idea:** product of roots $= 32$, so the other root is $4$; then $k = -(\\text{sum})$.\n\n**Step 1.** Other root: $\\frac{32}{8} = 4$.\n\n**Step 2.** $k = -(8+ 4) = -12$.\n\n**Answer:** $-12$. **(A)**\n\n**Common mistake:** forgetting $k$ is minus the sum."
+ },
+ {
+  "id": "poly_vieta_b13",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_ratio_sum",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $r$ and $s$ are the roots of $x^{2} - 9x - 3 = 0$, what is $\\frac{r}{s} + \\frac{s}{r}$?",
+  "choices": {
+   "A": "$-29$",
+   "B": "$-28$",
+   "C": "$-27$",
+   "D": "$-25$",
+   "E": "$87$"
+  },
+  "answer": "A",
+  "hints": [
+   "Common denominator: $\\frac{r^2 + s^2}{rs}$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $r^2 + s^2 = (r + s)^2 - 2rs$.\n\n**Step 1.** $r^2 + s^2 = 81 - (-6) = 87$.\n\n**Step 2.** Divide by $rs = -3$: $-29$.\n\n**Answer:** $-29$. **(A)**\n\n**Common mistake:** forgetting the $-2rs$."
+ },
+ {
+  "id": "poly_vieta_b14",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_quartic_prod",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the product of the four roots of $2x^{4} + 6x + 6 = 0$?",
+  "choices": {
+   "A": "$-3$",
+   "B": "$0$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$6$"
+  },
+  "answer": "D",
+  "hints": [
+   "Vieta for degree 4."
+  ],
+  "solution": "**What we need:** the product of the roots.\n\n**Key idea:** for degree $n$, the product is $(-1)^n \\frac{\\text{constant}}{\\text{leading}}$; here $n = 4$, so no sign change.\n\n**Step 1.** $\\frac{6}{2} = 3$.\n\n**Answer:** $3$. **(D)**\n\n**Common mistake:** adding a minus sign (that's for odd degree)."
+ },
+ {
+  "id": "poly_vieta_b15",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_double",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "For what value of $c$ does $x^2 - 24x + c = 0$ have exactly one (repeated) root?",
+  "choices": {
+   "A": "$-144$",
+   "B": "$-12$",
+   "C": "$144$",
+   "D": "$145$",
+   "E": "$576$"
+  },
+  "answer": "C",
+  "hints": [
+   "Discriminant equals zero."
+  ],
+  "solution": "**What we need:** $c$.\n\n**Key idea:** $b^2 - 4c = 0$.\n\n**Step 1.** $576 - 4c = 0$, $c = 144$.\n\n**Answer:** $144$. **(C)**\n\n**Common mistake:** forgetting the 4."
+ },
+ {
+  "id": "poly_vieta_b16",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_squares_poly",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $r$ and $s$ are the roots of $x^{2} - 4x + 3 = 0$, the monic quadratic with roots $r^2$ and $s^2$ is $x^2 + bx + c$. What is $b$?",
+  "choices": {
+   "A": "$-22$",
+   "B": "$-10$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$16$"
+  },
+  "answer": "B",
+  "hints": [
+   "$b = -(r^2 + s^2)$."
+  ],
+  "solution": "**What we need:** $b$.\n\n**Key idea:** $r^2 + s^2 = (r + s)^2 - 2rs$.\n\n**Step 1.** $r^2 + s^2 = 16 - 6 = 10$.\n\n**Step 2.** $b = -10$.\n\n**Answer:** $-10$. **(B)**\n\n**Common mistake:** forgetting the minus sign in $b$."
+ },
+ {
+  "id": "poly_vieta_b17",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_eval_one",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $r$, $s$, $t$ be the roots of $x^{3} - 3x^{2} - 18x + 40 = 0$. What is $(1 - r)(1 - s)(1 - t)$?",
+  "choices": {
+   "A": "$-20$",
+   "B": "$20$",
+   "C": "$21$",
+   "D": "$22$",
+   "E": "$40$"
+  },
+  "answer": "B",
+  "hints": [
+   "Plug in $x = 1$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** for monic $P(x) = (x - r)(x - s)(x - t)$, $P(1) = (1 - r)(1 - s)(1 - t)$.\n\n**Step 1.** $P(1) = 1 - 3 - 18 + 40 = 20$.\n\n**Answer:** $20$. **(B)**\n\n**Common mistake:** using $P(-1)$."
+ },
+ {
+  "id": "poly_vieta_b18",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_factored_sum",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of all roots (real and complex) of $(x + 6)(x^{2} - 6x + 3) = 0$?",
+  "choices": {
+   "A": "$-12$",
+   "B": "$-6$",
+   "C": "$0$",
+   "D": "$1$",
+   "E": "$6$"
+  },
+  "answer": "C",
+  "hints": [
+   "Add the roots of each factor."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the linear factor gives one root; the quadratic gives two whose sum is $-b$.\n\n**Step 1.** $-6 + 6 = 0$.\n\n**Answer:** $0$. **(C)**\n\n**Common mistake:** including only real roots."
+ },
+ {
+  "id": "poly_vieta_b19",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_other_root",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "One root of $x^{2} + 3x - 40 = 0$ is $5$. What is the other root?",
+  "choices": {
+   "A": "$-40$",
+   "B": "$-8$",
+   "C": "$-3$",
+   "D": "$5$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use the product (or sum) of the roots."
+  ],
+  "solution": "**What we need:** the other root.\n\n**Key idea:** sum of roots $= -b$.\n\n**Step 1.** Other root: $-3 - 5 = -8$.\n\n**Answer:** $-8$. **(B)**\n\n**Common mistake:** taking the negative."
+ },
+ {
+  "id": "poly_vieta_b20",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pv_q_cubes",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $r$ and $s$ are the roots of $x^{2} + 2x + 4 = 0$, what is $r^3 + s^3$?",
+  "choices": {
+   "A": "$-32$",
+   "B": "$-8$",
+   "C": "$0$",
+   "D": "$16$",
+   "E": "$17$"
+  },
+  "answer": "D",
+  "hints": [
+   "$r^3 + s^3 = (r + s)^3 - 3rs(r + s)$."
+  ],
+  "solution": "**What we need:** $r^3 + s^3$.\n\n**Key idea:** express in terms of the sum and product.\n\n**Step 1.** $(-2)^3 - 3 \\cdot 4 \\cdot (-2) = 16$.\n\n**Answer:** $16$. **(D)**\n\n**Common mistake:** forgetting the $-3rs(r + s)$ term."
+ },
+ {
+  "id": "poly_vieta_c01",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pvc1",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $r$, $s$, $t$ be the roots of $x^{3} + x^{2} - 21x - 45 = 0$. What is $r^3 + s^3 + t^3$?",
+  "choices": {
+   "A": "$-64$",
+   "B": "$-1$",
+   "C": "$70$",
+   "D": "$71$",
+   "E": "$206$"
+  },
+  "answer": "D",
+  "hints": [
+   "$r^3 + s^3 + t^3 = e_1^3 - 3e_1e_2 + 3e_3$, where $e_1, e_2, e_3$ come from Vieta."
+  ],
+  "solution": "**What we need:** $r^3 + s^3 + t^3$.\n\n**Key idea:** write it in terms of $e_1 = r + s + t$, $e_2 = rs + st + tr$, $e_3 = rst$: $r^3 + s^3 + t^3 = e_1^3 - 3e_1e_2 + 3e_3$.\n\n**Step 1.** For $x^3 + bx^2 + cx + d$ with roots $r, s, t$: $r + s + t = -b$, $rs + st + tr = c$, $rst = -d$. Here $b = 1$, $c = -21$, $d = -45$.\n\n**Step 2.** $e_1 = -1$, $e_2 = -21$, $e_3 = 45$.\n\n**Step 3.** $e_1^3 = -1$, $3e_1e_2 = 63$, $3e_3 = 135$.\n\n**Step 4.** $r^3 + s^3 + t^3 = -1 - (63) + (135) = 71$.\n\n**Answer:** $71$. **(D)**\n\n**Common mistake:** cubing the sum, $e_1^3$, and forgetting the correction terms."
+ },
+ {
+  "id": "poly_vieta_c02",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pvc2",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "The three roots of $x^3 - 9x^2 + 26x + k = 0$ form an arithmetic sequence. What is the largest root?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$9$"
+  },
+  "answer": "C",
+  "hints": [
+   "If the roots are $m - d$, $m$, $m + d$, their sum is $3m$."
+  ],
+  "solution": "**What we need:** the largest root.\n\n**Key idea:** name the roots $m - d$, $m$, $m + d$. Vieta's sum gives $m$, and Vieta's pair sum gives $d$. The unknown $k$ is not needed.\n\n**Step 1.** Sum of roots: $3m = 9$, so $m = 3$.\n\n**Step 2.** Pair sum: $(m - d)m + m(m + d) + (m - d)(m + d) = 3m^2 - d^2 = 26$.\n\n**Step 3.** $3 \\cdot 9 - d^2 = 26$, so $d^2 = 1$ and $d = 1$.\n\n**Step 4.** Roots: $2, 3, 4$. The largest is $4$.\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** answering the middle root $m$."
+ },
+ {
+  "id": "poly_vieta_c03",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pvc3",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the sum of the squares of the roots of $x^4 - 2x^3 + 5x^2 + 2x + 1 = 0$?",
+  "choices": {
+   "A": "$-10$",
+   "B": "$-6$",
+   "C": "$-4$",
+   "D": "$4$",
+   "E": "$14$"
+  },
+  "answer": "B",
+  "hints": [
+   "Sum of squares $= e_1^2 - 2e_2$."
+  ],
+  "solution": "**What we need:** the sum of the squares of the four roots.\n\n**Key idea:** $(\\text{sum of roots})^2 = \\text{sum of squares} + 2(\\text{sum of products two at a time})$, so sum of squares $= e_1^2 - 2e_2$.\n\n**Step 1.** Vieta for a monic quartic: $e_1 = -(-2) = 2$ and $e_2 = 5$ (the $x^2$ coefficient).\n\n**Step 2.** Sum of squares $= 2^2 - 2(5) = 4 - (10) = -6$.\n\n**Step 3.** (The answer can be negative: some roots are complex, and their squares can be negative.)\n\n**Answer:** $-6$. **(B)**\n\n**Common mistake:** forgetting that $e_1 = -(\\text{coefficient of } x^3)$."
+ },
+ {
+  "id": "poly_vieta_c04",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pvc_k_count",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "For how many integers $k$ does $x^2 - kx + 30 = 0$ have two integer roots?",
+  "choices": {
+   "A": "$4$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$9$",
+   "E": "$10$"
+  },
+  "answer": "C",
+  "hints": [
+   "Factor 30 as a product of two integers."
+  ],
+  "solution": "**What we need:** the number of $k$ values.\n\n**Key idea:** the roots $p, q$ satisfy $pq = 30$ and $k = p + q$.\n\n**Step 1.** Pairs $(p, q)$ with $pq = 30$ (including negatives) give the sums $k$: -31, -17, -13, -11, 11, 13, 17, 31.\n\n**Step 2.** Distinct $k$: $8$.\n\n**Answer:** $8$. **(C)**\n\n**Common mistake:** forgetting negative factor pairs."
+ },
+ {
+  "id": "poly_vieta_c05",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pvc_recip_sq",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $r$, $s$, $t$ be the roots of $x^{3} + 4x^{2} - 25x - 100 = 0$. What is $\\frac{1}{r^2} + \\frac{1}{s^2} + \\frac{1}{t^2}$?",
+  "choices": {
+   "A": "$-\\frac{7}{400}$",
+   "B": "$\\frac{33}{5000}$",
+   "C": "$\\frac{1}{16}$",
+   "D": "$\\frac{57}{400}$",
+   "E": "$\\frac{457}{400}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Square $\\frac{1}{r} + \\frac{1}{s} + \\frac{1}{t}$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\sum \\frac{1}{r^2} = \\left(\\sum \\frac{1}{r}\\right)^2 - 2\\sum \\frac{1}{rs} = \\frac{(rs + st + tr)^2 - 2rst(r + s + t)}{(rst)^2}$.\n\n**Step 1.** $r + s + t = -4$, $rs + st + tr = -25$, $rst = 100$.\n\n**Step 2.** $\\frac{-25^2 - 2 \\cdot 100 \\cdot (-4)}{10000} = \\frac{57}{400}$.\n\n**Answer:** $\\frac{57}{400}$. **(D)**\n\n**Common mistake:** forgetting the cross terms."
+ },
+ {
+  "id": "poly_vieta_c06",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pvc_pair_product",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $r$, $s$, $t$ be the roots of $x^{3} + 4x^{2} - 7x - 10 = 0$. What is $(r + s)(s + t)(t + r)$?",
+  "choices": {
+   "A": "$-74$",
+   "B": "$-18$",
+   "C": "$18$",
+   "D": "$28$",
+   "E": "$38$"
+  },
+  "answer": "C",
+  "hints": [
+   "$r + s = e_1 - t$."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $(r + s)(s + t)(t + r) = (r + s + t)(rs + st + tr) - rst$.\n\n**Step 1.** $e_1 = -4$, $e_2 = -7$, $e_3 = 10$.\n\n**Step 2.** $-4 \\cdot (-7) - 10 = 18$.\n\n**Answer:** $18$. **(C)**\n\n**Common mistake:** forgetting to subtract $rst$."
+ },
+ {
+  "id": "poly_vieta_c07",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pvc_gp_roots",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "The roots of $x^{3} - 13x^{2} + 39x - 27 = 0$ form a geometric sequence. What is the middle root (the geometric mean of the other two)?",
+  "choices": {
+   "A": "$-3$",
+   "B": "$3$",
+   "C": "$6$",
+   "D": "$9$",
+   "E": "$13$"
+  },
+  "answer": "B",
+  "hints": [
+   "In a geometric sequence $\\frac{g}{q}, g, gq$, the product of the roots is $g^3$."
+  ],
+  "solution": "**What we need:** the middle root.\n\n**Key idea:** product of roots $= 27 = g^3$.\n\n**Step 1.** $g = \\sqrt[3]{27} = 3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** using the sum of the roots."
+ },
+ {
+  "id": "poly_vieta_c08",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pvc_fourth",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "If $r$ and $s$ are the roots of $x^{2} + 5x - 2 = 0$, what is $r^4 + s^4$?",
+  "choices": {
+   "A": "$629$",
+   "B": "$833$",
+   "C": "$839$",
+   "D": "$841$",
+   "E": "$849$"
+  },
+  "answer": "B",
+  "hints": [
+   "Square $r^2 + s^2$."
+  ],
+  "solution": "**What we need:** $r^4 + s^4$.\n\n**Key idea:** $r^4 + s^4 = (r^2 + s^2)^2 - 2(rs)^2$.\n\n**Step 1.** $r^2 + s^2 = 25 - (-4) = 29$.\n\n**Step 2.** $29^2 - 2 \\cdot 4 = 833$.\n\n**Answer:** $833$. **(B)**\n\n**Common mistake:** forgetting $-2(rs)^2$."
+ },
+ {
+  "id": "poly_vieta_c09",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pvc_shared",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "The equations $x^{2} + 3x = 0$ and $x^{2} + x - 6 = 0$ share exactly one root. What is it?",
+  "choices": {
+   "A": "$-3$",
+   "B": "$-2$",
+   "C": "$0$",
+   "D": "$2$",
+   "E": "$3$"
+  },
+  "answer": "A",
+  "hints": [
+   "Subtract the equations."
+  ],
+  "solution": "**What we need:** the shared root.\n\n**Key idea:** a common root satisfies both, so it satisfies their difference (a linear equation).\n\n**Step 1.** Difference: $(2)x + (6) = 0$.\n\n**Step 2.** $x = -3$.\n\n**Answer:** $-3$. **(A)**\n\n**Common mistake:** solving just one equation."
+ },
+ {
+  "id": "poly_vieta_c10",
+  "skillId": "poly_vieta",
+  "family": "poly_vieta:pvc_shift_poly",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $r$, $s$, $t$ be the roots of $x^{3} - 10x^{2} + 32x - 32 = 0$. The monic cubic $Q(x)$ has roots $r + 1$, $s + 1$, $t + 1$. What is $Q(0)$?",
+  "choices": {
+   "A": "$-75$",
+   "B": "$-74$",
+   "C": "$-9$",
+   "D": "$32$",
+   "E": "$75$"
+  },
+  "answer": "A",
+  "hints": [
+   "$Q(x) = P(x - 1)$."
+  ],
+  "solution": "**What we need:** $Q(0)$.\n\n**Key idea:** shifting every root by 1 replaces $x$ with $x - 1$.\n\n**Step 1.** $Q(0) = P(-1) = -75$.\n\n**Answer:** $-75$. **(A)**\n\n**Common mistake:** using $P(1)$."
+ },
+ {
+  "id": "poly_remainder_b01",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:pr1_",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the remainder when $P(x) = 4x^{3} + 2x^{2} + 5$ is divided by $x - 3$?",
+  "choices": {
+   "A": "$-85$",
+   "B": "$5$",
+   "C": "$11$",
+   "D": "$131$",
+   "E": "$132$"
+  },
+  "answer": "D",
+  "hints": [
+   "Remainder Theorem: the remainder on division by $x - a$ is $P(a)$."
+  ],
+  "solution": "**What we need:** the remainder of $P(x) \\div (x - 3)$.\n\n**Key idea:** Remainder Theorem: $P(x) = (x - a)Q(x) + R$. Plug in $x = a$ and the first part vanishes, so $R = P(a)$. Here $a = 3$.\n\n**Step 1.** $P(3) = 4 \\cdot 3^{3} + 2 \\cdot 3^{2} + 5$.\n\n**Step 2.** Evaluate: $P(3) = 131$.\n\n**Answer:** $131$. **(D)**\n\n**Common mistake:** plugging in $x = -3$; the root of $x - 3$ is $x = 3$."
+ },
+ {
+  "id": "poly_remainder_b02",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:pr2_",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "For what value of $k$ is $x - 1$ a factor of $x^{3} + 5x^{2} - 2x + k$?",
+  "choices": {
+   "A": "$-4$",
+   "B": "$-3$",
+   "C": "$1$",
+   "D": "$4$",
+   "E": "$6$"
+  },
+  "answer": "A",
+  "hints": [
+   "Factor Theorem: $x - a$ is a factor exactly when $P(a) = 0$."
+  ],
+  "solution": "**What we need:** the $k$ that makes the division exact.\n\n**Key idea:** Factor Theorem: $x - 1$ is a factor exactly when $P(1) = 0$.\n\n**Step 1.** $P(1) = 1 \\cdot 1^{3} + 5 \\cdot 1^{2} - 2 \\cdot 1 + k = 4 + k$.\n\n**Step 2.** Set it to $0$: $k = -4$.\n\n**Answer:** $-4$. **(A)**\n\n**Common mistake:** plugging in $x = -1$ instead of $x = 1$."
+ },
+ {
+  "id": "poly_remainder_b03",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:pr3_",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of the coefficients of $(3x + 3)^{4}$ when it is expanded?",
+  "choices": {
+   "A": "$0$",
+   "B": "$24$",
+   "C": "$162$",
+   "D": "$1296$",
+   "E": "$1297$"
+  },
+  "answer": "D",
+  "hints": [
+   "Plug in $x = 1$."
+  ],
+  "solution": "**What we need:** the sum of all coefficients after expanding.\n\n**Key idea:** plugging in $x = 1$ turns every term $c x^k$ into just $c$, so $P(1)$ is the sum of the coefficients. No expanding needed.\n\n**Step 1.** $P(1) = (3 \\cdot 1 + 3)^{4} = 6^{4}$.\n\n**Step 2.** $= 1296$.\n\n**Answer:** $1296$. **(D)**\n\n**Common mistake:** adding only the first and last coefficients."
+ },
+ {
+  "id": "poly_remainder_b04",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:pr4_",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "When $P(x)$ is divided by $x + 4$ the remainder is $2$, and when divided by $x + 1$ the remainder is $-10$. The remainder when $P(x)$ is divided by $(x + 4)(x + 1)$ is $R(x)$. What is $R(0)$?",
+  "choices": {
+   "A": "$-14$",
+   "B": "$-13$",
+   "C": "$-8$",
+   "D": "$-4$",
+   "E": "$14$"
+  },
+  "answer": "A",
+  "hints": [
+   "The remainder is linear: $R(x) = mx + c$ with $R(-4) = 2$ and $R(-1) = -10$."
+  ],
+  "solution": "**What we need:** $R(0)$.\n\n**Key idea:** dividing by a quadratic leaves a remainder of degree at most $1$: $P(x) = (x - a)(x - b)Q(x) + mx + c$. Plugging in the two roots kills the first part.\n\n**Step 1.** Remainder Theorem: $P(-4) = 2$ and $P(-1) = -10$, so $R(-4) = 2$ and $R(-1) = -10$.\n\n**Step 2.** $R$ is a line through $(-4, 2)$ and $(-1, -10)$: slope $m = \\frac{2 - (-10)}{-4 - (-1)} = -4$.\n\n**Step 3.** $c = 2 - \\left(-4\\right) \\cdot (-4) = -14$, so $R(x) = -4x + (-14)$.\n\n**Step 4.** $R(0) = -4 \\cdot (0) + (-14) = -14$.\n\n**Answer:** $-14$. **(A)**\n\n**Common mistake:** assuming the remainder is a constant; dividing by a quadratic can leave a linear remainder."
+ },
+ {
+  "id": "poly_remainder_b05",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_neg",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the remainder when $4x^{3} + 3x^{2} + 3x - 2$ is divided by $x + 3$?",
+  "choices": {
+   "A": "$-92$",
+   "B": "$-91$",
+   "C": "$-2$",
+   "D": "$92$",
+   "E": "$142$"
+  },
+  "answer": "A",
+  "hints": [
+   "Remainder Theorem."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** dividing by $x + 3$ leaves remainder $P(-3)$.\n\n**Step 1.** $P(-3) = -92$.\n\n**Answer:** $-92$. **(A)**\n\n**Common mistake:** using $P(3)$."
+ },
+ {
+  "id": "poly_remainder_b06",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_const",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the constant term of $(x + 1)^{2}(x - 5)$?",
+  "choices": {
+   "A": "$-10$",
+   "B": "$-5$",
+   "C": "$1$",
+   "D": "$5$",
+   "E": "$6$"
+  },
+  "answer": "B",
+  "hints": [
+   "Set $x = 0$."
+  ],
+  "solution": "**What we need:** the constant term.\n\n**Key idea:** the constant term is the value at $x = 0$.\n\n**Step 1.** $1^{2} \\cdot (-5) = -5$.\n\n**Answer:** $-5$. **(B)**\n\n**Common mistake:** dropping the sign."
+ },
+ {
+  "id": "poly_remainder_b07",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_alt",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "For $P(x) = 4x^{4} - 5x^{3} + 2x^{2} - 4x + 5$, what is $P(-1)$?",
+  "choices": {
+   "A": "$-20$",
+   "B": "$2$",
+   "C": "$5$",
+   "D": "$20$",
+   "E": "$22$"
+  },
+  "answer": "D",
+  "hints": [
+   "Substitute $x = -1$."
+  ],
+  "solution": "**What we need:** $P(-1)$.\n\n**Key idea:** odd powers flip sign; even powers don't.\n\n**Step 1.** $P(-1) = 20$.\n\n**Answer:** $20$. **(D)**\n\n**Common mistake:** computing $P(1)$."
+ },
+ {
+  "id": "poly_remainder_b08",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_even_sum",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "When $(x + 1)^{4}$ is expanded, what is the sum of the coefficients of the odd powers of $x$ (counting the constant as $x^0$)?",
+  "choices": {
+   "A": "$0$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$9$",
+   "E": "$16$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $P(1)$ and $P(-1)$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $\\frac{P(1) + P(-1)}{2}$ gives even powers; $\\frac{P(1) - P(-1)}{2}$ gives odd powers.\n\n**Step 1.** $P(1) = 16$, $P(-1) = 0$.\n\n**Step 2.** Answer: $8$.\n\n**Answer:** $8$. **(C)**\n\n**Common mistake:** assuming half the total."
+ },
+ {
+  "id": "poly_remainder_b09",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_two_factors",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The polynomial $x^3 + ax^2 + bx + 12$ has factors $(x - 3)$ and $(x - 2)$. What is $a + b$?",
+  "choices": {
+   "A": "$-7$",
+   "B": "$-6$",
+   "C": "$-4$",
+   "D": "$-3$",
+   "E": "$7$"
+  },
+  "answer": "A",
+  "hints": [
+   "Find the third root from the constant term."
+  ],
+  "solution": "**What we need:** $a + b$.\n\n**Key idea:** the roots are $3$, $2$, and a third root $t$ with $-3 \\cdot 2 \\cdot t = 12$.\n\n**Step 1.** Third root: $-2$.\n\n**Step 2.** Expanding gives $a = -3$, $b = -4$; $a + b = -7$.\n\n**Answer:** $-7$. **(A)**\n\n**Common mistake:** solving for $a$ and $b$ with a sign error."
+ },
+ {
+  "id": "poly_remainder_b10",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_quotient",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "When $x^{3} + 3x^{2} - 4x + 6$ is divided by $x + 3$, what is the sum of the coefficients of the quotient?",
+  "choices": {
+   "A": "$-4$",
+   "B": "$-3$",
+   "C": "$-2$",
+   "D": "$6$",
+   "E": "$18$"
+  },
+  "answer": "B",
+  "hints": [
+   "Synthetic division."
+  ],
+  "solution": "**What we need:** the sum of the quotient's coefficients.\n\n**Key idea:** the quotient's coefficients come from the synthetic division row.\n\n**Step 1.** Synthetic division by $-3$: quotient coefficients 1, 0, -4.\n\n**Step 2.** Sum: $-3$.\n\n**Answer:** $-3$. **(B)**\n\n**Common mistake:** including the remainder."
+ },
+ {
+  "id": "poly_remainder_b11",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_linear_div",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the remainder when $2x^{3} + 2x^{2} + 2x + 2$ is divided by $2x - 1$?",
+  "choices": {
+   "A": "$\\frac{5}{4}$",
+   "B": "$\\frac{15}{4}$",
+   "C": "$\\frac{15}{2}$",
+   "D": "$8$",
+   "E": "$30$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find where the divisor is zero."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** $2x - 1 = 0$ at $x = \\frac{1}{2}$.\n\n**Step 1.** $P\\left(\\frac{1}{2}\\right) = \\frac{15}{4}$.\n\n**Answer:** $\\frac{15}{4}$. **(B)**\n\n**Common mistake:** using $x = 1$."
+ },
+ {
+  "id": "poly_remainder_b12",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_factored_plus",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $P(x) = (x - 5)(x - 3) + 8$, what is $P(5)$?",
+  "choices": {
+   "A": "$-8$",
+   "B": "$0$",
+   "C": "$8$",
+   "D": "$9$",
+   "E": "$88$"
+  },
+  "answer": "C",
+  "hints": [
+   "Just substitute."
+  ],
+  "solution": "**What we need:** $P(5)$.\n\n**Key idea:** multiply the factors at the given $x$.\n\n**Step 1.** Factors: $0 \\cdot 2$ $= 0$.\n\n**Step 2.** Plus $8$: $8$.\n\n**Answer:** $8$. **(C)**\n\n**Common mistake:** forgetting the constant."
+ },
+ {
+  "id": "poly_remainder_b13",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_degree",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "$P$ has degree $6$. What is the degree of $(P(x))^{6}$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$12$",
+   "C": "$36$",
+   "D": "$37$",
+   "E": "$38$"
+  },
+  "answer": "C",
+  "hints": [
+   "Track the leading term."
+  ],
+  "solution": "**What we need:** the degree.\n\n**Key idea:** raising to a power multiplies the degree.\n\n**Step 1.** Degree: $36$.\n\n**Answer:** $36$. **(C)**\n\n**Common mistake:** adding instead of multiplying (or vice versa)."
+ },
+ {
+  "id": "poly_remainder_b14",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_leading",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the leading coefficient of $(2x + 1)^{3}(-4x - 5)^{1}$?",
+  "choices": {
+   "A": "$-32$",
+   "B": "$8$",
+   "C": "$12$",
+   "D": "$24$",
+   "E": "$32$"
+  },
+  "answer": "A",
+  "hints": [
+   "Multiply the leading terms."
+  ],
+  "solution": "**What we need:** the leading coefficient.\n\n**Key idea:** the leading term of a product is the product of leading terms.\n\n**Step 1.** $2^{3} \\cdot (-4)^{1} = -32$.\n\n**Answer:** $-32$. **(A)**\n\n**Common mistake:** multiplying exponents and bases incorrectly."
+ },
+ {
+  "id": "poly_remainder_b15",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_find_k",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "When $kx^3 - 2x + 3$ is divided by $x - 3$, the remainder is $51$. What is $k$?",
+  "choices": {
+   "A": "$-2$",
+   "B": "$\\frac{16}{9}$",
+   "C": "$\\frac{17}{9}$",
+   "D": "$2$",
+   "E": "$3$"
+  },
+  "answer": "D",
+  "hints": [
+   "Remainder Theorem: $P(3) = 51$."
+  ],
+  "solution": "**What we need:** $k$.\n\n**Key idea:** substitute and solve.\n\n**Step 1.** $27k - 6 + 3 = 51$.\n\n**Step 2.** $k = 2$.\n\n**Answer:** $2$. **(D)**\n\n**Common mistake:** forgetting to cube 3."
+ },
+ {
+  "id": "poly_remainder_b16",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_coeff",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the coefficient of $x^{1}$ in the expansion of $(x + 3)^{3}$?",
+  "choices": {
+   "A": "$-27$",
+   "B": "$3$",
+   "C": "$9$",
+   "D": "$27$",
+   "E": "$54$"
+  },
+  "answer": "D",
+  "hints": [
+   "Binomial Theorem."
+  ],
+  "solution": "**What we need:** the coefficient.\n\n**Key idea:** the $x^{1}$ term is $\\binom{3}{1} x^{1} \\cdot (3)^{2}$.\n\n**Step 1.** $\\binom{3}{1} = 3$; $(3)^{2} = 9$.\n\n**Step 2.** Coefficient: $27$.\n\n**Answer:** $27$. **(D)**\n\n**Common mistake:** raising the constant to the wrong power."
+ },
+ {
+  "id": "poly_remainder_b17",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_two_point",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Let $R(x)$ be the remainder when $x^{4}$ is divided by $(x - 1)(x - 2)$. What is $R(0)$?",
+  "choices": {
+   "A": "$-14$",
+   "B": "$-13$",
+   "C": "$14$",
+   "D": "$15$",
+   "E": "$16$"
+  },
+  "answer": "A",
+  "hints": [
+   "$R(x) = ax + b$ with $R(1) = 1$ and $R(2) = 2^4$."
+  ],
+  "solution": "**What we need:** $R(0)$.\n\n**Key idea:** the remainder agrees with $x^n$ at the roots of the divisor.\n\n**Step 1.** $a + b = 1$ and $2a + b = 16$, so $a = 15$, $b = -14$.\n\n**Step 2.** $R(0) = -14$.\n\n**Answer:** $-14$. **(A)**\n\n**Common mistake:** dividing directly."
+ },
+ {
+  "id": "poly_remainder_b18",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_substitute",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "If $P(x + 1) = x^{2} + 5x$, what is $P(5)$?",
+  "choices": {
+   "A": "$-36$",
+   "B": "$36$",
+   "C": "$37$",
+   "D": "$50$",
+   "E": "$66$"
+  },
+  "answer": "B",
+  "hints": [
+   "What $x$ makes $x + 1 = 5$?"
+  ],
+  "solution": "**What we need:** $P(5)$.\n\n**Key idea:** set $x = 4$.\n\n**Step 1.** $P(5) = 4^2 + 5 \\cdot 4 + 0 = 36$.\n\n**Answer:** $36$. **(B)**\n\n**Common mistake:** plugging in 5 directly."
+ },
+ {
+  "id": "poly_remainder_b19",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_rational_count",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "By the Rational Root Theorem, how many distinct possible rational roots does $6x^3 + bx^2 + dx + 3 = 0$ have (for integers $b$, $d$)?",
+  "choices": {
+   "A": "$4$",
+   "B": "$6$",
+   "C": "$12$",
+   "D": "$14$",
+   "E": "$16$"
+  },
+  "answer": "C",
+  "hints": [
+   "Candidates are $\\pm\\frac{p}{q}$ with $p \\mid 3$, $q \\mid 6$."
+  ],
+  "solution": "**What we need:** the number of candidates.\n\n**Key idea:** list them and remove duplicates.\n\n**Step 1.** Divisors of $3$: 1, 3; divisors of $6$: 1, 2, 3, 6.\n\n**Step 2.** Distinct $\\pm\\frac{p}{q}$: $12$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** counting duplicates like $\\frac{2}{2} = 1$ twice."
+ },
+ {
+  "id": "poly_remainder_b20",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prm_nonconst",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "When $(x + 1)^{6}$ is expanded, what is the sum of all the coefficients except the constant term?",
+  "choices": {
+   "A": "$1$",
+   "B": "$62$",
+   "C": "$63$",
+   "D": "$64$",
+   "E": "$65$"
+  },
+  "answer": "C",
+  "hints": [
+   "Sum of all coefficients minus the constant."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** all coefficients sum to $P(1)$; the constant is $P(0)$.\n\n**Step 1.** $P(1) = 64$, $P(0) = 1$.\n\n**Step 2.** Difference: $63$.\n\n**Answer:** $63$. **(C)**\n\n**Common mistake:** subtracting 1 instead of the constant."
+ },
+ {
+  "id": "poly_remainder_c01",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prc1_",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $R(x)$ be the remainder when $x^{49} + 5x$ is divided by $x^2 - 1$. What is $R(2)$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$11$",
+   "C": "$12$",
+   "D": "$13$",
+   "E": "$15$"
+  },
+  "answer": "C",
+  "hints": [
+   "$x^2 \\equiv 1$, so $x^n$ reduces to $1$ or $x$ depending on whether $n$ is even or odd."
+  ],
+  "solution": "**What we need:** the remainder, evaluated at $2$.\n\n**Key idea:** working modulo $x^2 - 1$ means we may replace $x^2$ with $1$ anywhere. That shrinks any power of $x$ to $1$ or $x$.\n\n**Step 1.** $x^{49} = (x^2)^{24} \\cdot x \\equiv 1^{24} \\cdot x = x$.\n\n**Step 2.** So $x^{49} + 5x \\equiv x + 5x$, and $R(x) = 6x$.\n\n**Step 3.** $R(2) = 12$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** plugging $x = 2$ into $x^{49} + 5x$ directly; the remainder is a different polynomial."
+ },
+ {
+  "id": "poly_remainder_c02",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prc2_",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A cubic polynomial $P(x)$ with leading coefficient $1$ has $P(1) = -8$, $P(2) = -11$, and $P(3) = -14$. What is $P(5)$?",
+  "choices": {
+   "A": "$-20$",
+   "B": "$-2$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$10$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write $P(x) = (x - 1)(x - 2)(x - 3) + Q(x)$ where $Q$ has degree at most 2 and matches the given values."
+  ],
+  "solution": "**What we need:** $P(5)$.\n\n**Key idea:** split $P$ into a piece that is $0$ at $1, 2, 3$ and a piece that matches the given values: $P(x) = (x - 1)(x - 2)(x - 3) + Q(x)$, where $Q$ has degree at most $2$. This keeps the leading coefficient $1$.\n\n**Step 1.** At $x = 1, 2, 3$ the product is $0$, so $Q(1) = -8$, $Q(2) = -11$, $Q(3) = -14$.\n\n**Step 2.** Solve for $Q(x) = ax^2 + bx + c$ from these three equations: $Q(x) = -3x - 5$.\n\n**Step 3.** $Q(5) = -20$ and $(5 - 1)(5 - 2)(5 - 3) = 24$.\n\n**Step 4.** $P(5) = 24 + (-20) = 4$.\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** fitting a quadratic through the three points and forgetting the cubic part."
+ },
+ {
+  "id": "poly_remainder_c03",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prc3_",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $R(x)$ be the remainder when $x^{41}$ is divided by $x^2 + 1$. What is $R(3)$?",
+  "choices": {
+   "A": "$-3$",
+   "B": "$-1$",
+   "C": "$1$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "D",
+  "hints": [
+   "$x^2 \\equiv -1$, so the powers cycle $1, x, -1, -x$."
+  ],
+  "solution": "**What we need:** the remainder, evaluated at $3$.\n\n**Key idea:** modulo $x^2 + 1$ we may replace $x^2$ with $-1$. Then powers of $x$ cycle like powers of $i$: $1, x, -1, -x$.\n\n**Step 1.** $41 = 4 \\cdot 10 + 1$, and $x^4 = (x^2)^2 \\equiv 1$.\n\n**Step 2.** So $x^{41} \\equiv x^{1} \\equiv x$, and $R(x) = x$.\n\n**Step 3.** $R(3) = 3$.\n\n**Answer:** $3$. **(D)**\n\n**Common mistake:** computing $3^{41}$; the remainder is a small polynomial, not the original one."
+ },
+ {
+  "id": "poly_remainder_c04",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prmc_cube_div",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $R(x)$ be the remainder when $x^{38}$ is divided by $x^3 - 1$. What is $R(-2)$?",
+  "choices": {
+   "A": "$-2$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$4$",
+   "E": "$5$"
+  },
+  "answer": "D",
+  "hints": [
+   "$x^3 \\equiv 1$."
+  ],
+  "solution": "**What we need:** $R(-2)$.\n\n**Key idea:** reduce the exponent mod 3.\n\n**Step 1.** $38 = 3 \\cdot 12 + 2$, so $x^{38} \\equiv x^{2}$.\n\n**Step 2.** $R(x) = x^{2}$, $R(-2) = 4$.\n\n**Answer:** $4$. **(D)**\n\n**Common mistake:** plugging into $x^38$."
+ },
+ {
+  "id": "poly_remainder_c05",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prmc_interp",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A monic polynomial $P(x)$ of degree $2$ satisfies $P(k) = k$ for $k = 1, 2$. What is $P(4)$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$6$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$11$"
+  },
+  "answer": "D",
+  "hints": [
+   "Consider $P(x) - x$."
+  ],
+  "solution": "**What we need:** $P(4)$.\n\n**Key idea:** $P(x) - x$ is monic of degree $2$ with roots $1, \\ldots, 2$.\n\n**Step 1.** $P(x) = (x - 1)(x - 2) + x$.\n\n**Step 2.** $P(4) = 6 + 4 = 10$.\n\n**Answer:** $10$. **(D)**\n\n**Common mistake:** answering 4."
+ },
+ {
+  "id": "poly_remainder_c06",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prmc_omega",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $R(x)$ be the remainder when $x^{27}$ is divided by $x^2 + x + 1$. What is $R(2)$?",
+  "choices": {
+   "A": "$-1$",
+   "B": "$0$",
+   "C": "$1$",
+   "D": "$2$",
+   "E": "$3$"
+  },
+  "answer": "C",
+  "hints": [
+   "$x^3 - 1 = (x - 1)(x^2 + x + 1)$, so $x^3 \\equiv 1$."
+  ],
+  "solution": "**What we need:** $R(2)$.\n\n**Key idea:** reduce the exponent mod 3; then $x^2 \\equiv -x - 1$.\n\n**Step 1.** $x^{27} \\equiv x^{0}$.\n\n**Step 2.** $R(x) = 1$, so $R(2) = 1$.\n\n**Answer:** $1$. **(C)**\n\n**Common mistake:** stopping at $x^0$."
+ },
+ {
+  "id": "poly_remainder_c07",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prmc_comp_sum",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $P(x) = 3x^{2} + 4x + 2$. What is the sum of the coefficients of $P(P(x))$?",
+  "choices": {
+   "A": "$9$",
+   "B": "$29$",
+   "C": "$81$",
+   "D": "$281$",
+   "E": "$282$"
+  },
+  "answer": "D",
+  "hints": [
+   "Sum of coefficients $=$ value at 1."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the sum of coefficients of $P(P(x))$ is $P(P(1))$.\n\n**Step 1.** $P(1) = 9$.\n\n**Step 2.** $P(9) = 281$.\n\n**Answer:** $281$. **(D)**\n\n**Common mistake:** squaring $P(1)$."
+ },
+ {
+  "id": "poly_remainder_c08",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prmc_double_factor",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "The polynomial $x^{10} + ax + b$ is divisible by $(x - 1)^2$. What is $a$?",
+  "choices": {
+   "A": "$-10$",
+   "B": "$-9$",
+   "C": "$1$",
+   "D": "$9$",
+   "E": "$10$"
+  },
+  "answer": "A",
+  "hints": [
+   "Both $P(1)$ and $P'(1)$ vanish."
+  ],
+  "solution": "**What we need:** $a$.\n\n**Key idea:** a double root at 1 means $P(1) = 0$ and $P'(1) = 0$.\n\n**Step 1.** $P'(1) = 10 + a = 0$, so $a = -10$.\n\n**Step 2.** $P(1) = 1 + a + b = 0$, so $b = 9$.\n\n**Answer:** $-10$. **(A)**\n\n**Common mistake:** only using $P(1) = 0$."
+ },
+ {
+  "id": "poly_remainder_c09",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prmc_i_rem",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Let $R(x)$ be the remainder when $(x + 1)^{9}$ is divided by $x^2 + 1$. What is $R(1)$?",
+  "choices": {
+   "A": "$-32$",
+   "B": "$16$",
+   "C": "$32$",
+   "D": "$33$",
+   "E": "$512$"
+  },
+  "answer": "C",
+  "hints": [
+   "Evaluate at $x = i$."
+  ],
+  "solution": "**What we need:** $R(1)$.\n\n**Key idea:** $R(x) = Bx + A$ where $(1 + i)^{9} = A + Bi$.\n\n**Step 1.** $(1 + i)^{9} = 16 + 16i$.\n\n**Step 2.** $R(x) = 16x + 16$, $R(1) = 32$.\n\n**Answer:** $32$. **(C)**\n\n**Common mistake:** computing $2^9$."
+ },
+ {
+  "id": "poly_remainder_c10",
+  "skillId": "poly_remainder",
+  "family": "poly_remainder:prmc_differences",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "A polynomial $P$ of degree at most $2$ has $P(0) = 6$, $P(1) = 6$, and $P(2) = 8$. What is $P(3)$?",
+  "choices": {
+   "A": "$10$",
+   "B": "$11$",
+   "C": "$12$",
+   "D": "$14$",
+   "E": "$20$"
+  },
+  "answer": "C",
+  "hints": [
+   "Finite differences."
+  ],
+  "solution": "**What we need:** $P(3)$.\n\n**Key idea:** for a quadratic, second differences are constant.\n\n**Step 1.** First differences: $0$, $2$; second difference: $2$.\n\n**Step 2.** Next first difference: $4$, so $P(3) = 8 + 4 = 12$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** assuming the first difference is constant."
+ },
+ {
+  "id": "poly_roots_b01",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rt1_",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the smallest root of $x^{3} - 3x^{2} - 18x + 40 = 0$?",
+  "choices": {
+   "A": "$-4$",
+   "B": "$2$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$40$"
+  },
+  "answer": "A",
+  "hints": [
+   "Test divisors of the constant term (Rational Root Theorem), then factor."
+  ],
+  "solution": "**What we need:** the smallest root.\n\n**Key idea:** Rational Root Theorem: with leading coefficient $1$, any rational root is an integer dividing the constant term. Test those, then factor.\n\n**Step 1.** Constant term: $40$. Test its divisors: $x = -4$ works.\n\n**Step 2.** Factor out $(x + 4)$ and solve the quadratic left over, or keep testing: the roots are $-4$, $2$, $5$.\n\n**Step 3.** So $P(x) = (x + 4)(x - 2)(x - 5)$, and the smallest root is $-4$.\n\n**Answer:** $-4$. **(A)**\n\n**Common mistake:** reading roots off the factors with the wrong sign: $(x - 3)$ gives the root $+3$."
+ },
+ {
+  "id": "poly_roots_b02",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rt2_",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many real solutions does $x^{4} + 41x^{2} + 400 = 0$ have?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "A",
+  "hints": [
+   "Treat it as a quadratic in $x^2$."
+  ],
+  "solution": "**What we need:** the number of real solutions.\n\n**Key idea:** only even powers appear, so substitute $y = x^2$ to get a quadratic.\n\n**Step 1.** With $y = x^2$: $y^2 + 41y + 400 = (y + 16)(y + 25) = 0$.\n\n**Step 2.** $x^2 = -16$ and $x^2 = -25$: a real square can't be negative.\n\n**Step 3.** So there are $0$ real solutions (all four roots are imaginary).\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** counting the $y$ solutions instead of the $x$ solutions, or forgetting $\\pm$ square roots."
+ },
+ {
+  "id": "poly_roots_b03",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rt3_",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Which number is a root of $2x^{3} + 5x^{2} - 14x - 8 = 0$ and is not an integer?",
+  "choices": {
+   "A": "$-2$",
+   "B": "$-\\frac{1}{2}$",
+   "C": "$-\\frac{1}{3}$",
+   "D": "$\\frac{1}{3}$",
+   "E": "$\\frac{1}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Rational roots have the form $\\frac{p}{q}$ with $p$ dividing the constant and $q$ dividing the leading coefficient."
+  ],
+  "solution": "**What we need:** a fractional root.\n\n**Key idea:** Rational Root Theorem: a rational root $\\frac{p}{q}$ in lowest terms has $p$ dividing the constant term and $q$ dividing the leading coefficient.\n\n**Step 1.** Leading coefficient $2$, so a fractional root has denominator $2$.\n\n**Step 2.** Factor: $2x^{3} + 5x^{2} - 14x - 8 = (2x + 1)(x^{2} + 2x - 8)$.\n\n**Step 3.** $(2x + 1) = 0$ gives $x = -\\frac{1}{2}$. The other factor gives the integer roots $-4$ and $2$.\n\n**Answer:** $-\\frac{1}{2}$. **(B)**\n\n**Common mistake:** getting the sign of the fraction backwards when solving the linear factor."
+ },
+ {
+  "id": "poly_roots_b04",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rt4_",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The polynomial $x^{3} - 16x^{2} + 85x - 150$ has a double root. What is its other root?",
+  "choices": {
+   "A": "$-150$",
+   "B": "$-6$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "D",
+  "hints": [
+   "A double root of $P$ is also a root of $P'$. Or factor by testing small integers."
+  ],
+  "solution": "**What we need:** the root that isn't repeated.\n\n**Key idea:** call the roots $a$, $a$, $b$. A double root is a root of both $P$ and $P'$; then Vieta's sum finishes the job.\n\n**Step 1.** $P'(x) = 3x^{2} - 32x + 85$. Testing small integers, $x = 5$ makes both $P$ and $P'$ zero, so $5$ is the double root.\n\n**Step 2.** Vieta: $a + a + b = -(-16) = 16$.\n\n**Step 3.** $b = 16 - 2(5) = 6$.\n\n**Answer:** $6$. **(D)**\n\n**Common mistake:** answering the double root itself."
+ },
+ {
+  "id": "poly_roots_b05",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_quad",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the larger root of $x^{2} + 4x - 5 = 0$?",
+  "choices": {
+   "A": "$-5$",
+   "B": "$-4$",
+   "C": "$-1$",
+   "D": "$0$",
+   "E": "$1$"
+  },
+  "answer": "E",
+  "hints": [
+   "Factor."
+  ],
+  "solution": "**What we need:** the root.\n\n**Key idea:** find two numbers with the right sum and product.\n\n**Step 1.** $(x + 5)(x - 1) = 0$, roots $-5$ and $1$.\n\n**Answer:** $1$. **(E)**\n\n**Common mistake:** flipping the signs of the roots."
+ },
+ {
+  "id": "poly_roots_b06",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_grouping",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the largest root of $x^{3} + x^{2} - 36x - 36 = 0$?",
+  "choices": {
+   "A": "$-6$",
+   "B": "$1$",
+   "C": "$6$",
+   "D": "$7$",
+   "E": "$36$"
+  },
+  "answer": "C",
+  "hints": [
+   "Factor by grouping."
+  ],
+  "solution": "**What we need:** the largest root.\n\n**Key idea:** group as $x^2(x + 1) - 36(x + 1)$.\n\n**Step 1.** $(x + 1)(x^2 - 36) = 0$: roots $-1$, $\\pm 6$.\n\n**Step 2.** Largest: $6$.\n\n**Answer:** $6$. **(C)**\n\n**Common mistake:** picking 1."
+ },
+ {
+  "id": "poly_roots_b07",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_real_prod",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the product of the real roots of $(x^2 - 9)(x^2 + 81) = 0$?",
+  "choices": {
+   "A": "$-729$",
+   "B": "$-9$",
+   "C": "$0$",
+   "D": "$9$",
+   "E": "$729$"
+  },
+  "answer": "B",
+  "hints": [
+   "Only one factor has real roots."
+  ],
+  "solution": "**What we need:** the product of real roots.\n\n**Key idea:** $x^2 + 81 > 0$ always.\n\n**Step 1.** Real roots: $\\pm 3$; product $-9$.\n\n**Answer:** $-9$. **(B)**\n\n**Common mistake:** including the complex roots."
+ },
+ {
+  "id": "poly_roots_b08",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_rational",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the larger root of $4x^{2} - 4x - 15 = 0$?",
+  "choices": {
+   "A": "$-\\frac{5}{2}$",
+   "B": "$-\\frac{3}{2}$",
+   "C": "$\\frac{2}{5}$",
+   "D": "$\\frac{5}{2}$",
+   "E": "$\\frac{7}{2}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Factor or use the quadratic formula."
+  ],
+  "solution": "**What we need:** the root.\n\n**Key idea:** factor into two linear terms.\n\n**Step 1.** Roots: $\\frac{5}{2}$ and $-\\frac{3}{2}$.\n\n**Answer:** $\\frac{5}{2}$. **(D)**\n\n**Common mistake:** flipping the fraction."
+ },
+ {
+  "id": "poly_roots_b09",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_conj",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A polynomial with real coefficients has $-6 + 6i$ as a root. What is the product of this root and its conjugate?",
+  "choices": {
+   "A": "$-12$",
+   "B": "$0$",
+   "C": "$36$",
+   "D": "$72$",
+   "E": "$73$"
+  },
+  "answer": "D",
+  "hints": [
+   "Complex roots come in conjugate pairs."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $(a + bi)(a - bi) = a^2 + b^2$.\n\n**Step 1.** $36 + 36 = 72$.\n\n**Answer:** $72$. **(D)**\n\n**Common mistake:** computing $a^2 - b^2$."
+ },
+ {
+  "id": "poly_roots_b10",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_multiplicity",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "For $(x - 6)^{3}(x + 3)^{4}(x - 1) = 0$, what is the number of distinct roots?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "Read the roots from the factors."
+  ],
+  "solution": "**What we need:** the answer.\n\n**Key idea:** each factor $(x - a)^m$ gives root $a$ with multiplicity $m$.\n\n**Step 1.** Roots: $6$ (×3), $-3$ (×4), $1$ (×1).\n\n**Step 2.** Answer: $3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** counting with multiplicity."
+ },
+ {
+  "id": "poly_roots_b11",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_x4",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "For $x^4 = 256$, what is the sum of the squares of the real solutions?",
+  "choices": {
+   "A": "$0$",
+   "B": "$16$",
+   "C": "$32$",
+   "D": "$64$",
+   "E": "$256$"
+  },
+  "answer": "C",
+  "hints": [
+   "Factor as a difference of squares."
+  ],
+  "solution": "**What we need:** the answer.\n\n**Key idea:** $x^4 - 256 = (x^2 - 16)(x^2 + 16)$.\n\n**Step 1.** Real solutions: $\\pm 4$.\n\n**Step 2.** Answer: $32$.\n\n**Answer:** $32$. **(C)**\n\n**Common mistake:** counting complex solutions."
+ },
+ {
+  "id": "poly_roots_b12",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_cubic_mid",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The equation $x^{3} - 8x^{2} - 23x + 210 = 0$ has three integer roots. What is the middle one?",
+  "choices": {
+   "A": "$-6$",
+   "B": "$-5$",
+   "C": "$2$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "D",
+  "hints": [
+   "Test divisors of the constant term."
+  ],
+  "solution": "**What we need:** the middle root.\n\n**Key idea:** find one root by the Rational Root Theorem, then factor the quadratic.\n\n**Step 1.** Roots: $-5$, $6$, $7$.\n\n**Step 2.** Middle: $6$.\n\n**Answer:** $6$. **(D)**\n\n**Common mistake:** taking the sign of a root wrong."
+ },
+ {
+  "id": "poly_roots_b13",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_biquad",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "What is the sum of the positive roots of $x^4 - 41x^2 + 400 = 0$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$9$",
+   "C": "$18$",
+   "D": "$20$",
+   "E": "$41$"
+  },
+  "answer": "B",
+  "hints": [
+   "Substitute $u = x^2$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $u^2 - 41u + 400 = 0$ gives $u = 25$ or $16$.\n\n**Step 1.** $x = \\pm 5$ or $\\pm 4$; positive ones sum to $9$.\n\n**Answer:** $9$. **(B)**\n\n**Common mistake:** adding all four roots (getting 0)."
+ },
+ {
+  "id": "poly_roots_b14",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_shift",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The roots of $P(x) = x^{3} + x^{2} - 2x$ have sum $-1$. What is the sum of the roots of $P(x - 4)$?",
+  "choices": {
+   "A": "$-13$",
+   "B": "$-1$",
+   "C": "$3$",
+   "D": "$11$",
+   "E": "$12$"
+  },
+  "answer": "D",
+  "hints": [
+   "If $P(r) = 0$, what makes $P(x - k)$ zero?"
+  ],
+  "solution": "**What we need:** the new sum.\n\n**Key idea:** $P(x - 4) = 0$ when $x - 4$ is a root, so each root shifts by $4$.\n\n**Step 1.** $-1 + 3 \\cdot 4 = 11$.\n\n**Answer:** $11$. **(D)**\n\n**Common mistake:** shifting the sum by only one 4."
+ },
+ {
+  "id": "poly_roots_b15",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_irr_conj",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "A polynomial with rational coefficients has $-6 + 2\\sqrt{5}$ as a root. What is the product of this root and its conjugate?",
+  "choices": {
+   "A": "$-16$",
+   "B": "$-6$",
+   "C": "$16$",
+   "D": "$17$",
+   "E": "$56$"
+  },
+  "answer": "C",
+  "hints": [
+   "The conjugate flips the sign of the radical."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** the conjugate is $-6 - 2\\sqrt{5}$.\n\n**Step 1.** Product: $16$.\n\n**Answer:** $16$. **(C)**\n\n**Common mistake:** using a plus sign in the product."
+ },
+ {
+  "id": "poly_roots_b16",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_monic_coef",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The monic cubic with roots $-2$, $6$, $-2$ is $x^3 + ax^2 + bx + c$. What is $b$?",
+  "choices": {
+   "A": "$-24$",
+   "B": "$-20$",
+   "C": "$-2$",
+   "D": "$2$",
+   "E": "$20$"
+  },
+  "answer": "B",
+  "hints": [
+   "Expand or use Vieta."
+  ],
+  "solution": "**What we need:** $b$.\n\n**Key idea:** $b = rs + st + tr$.\n\n**Step 1.** $-2 \\cdot 6 + 6 \\cdot (-2) + (-2) \\cdot (-2) = -20$.\n\n**Answer:** $-20$. **(B)**\n\n**Common mistake:** using the sum of the roots."
+ },
+ {
+  "id": "poly_roots_b17",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_intersect",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "The line $y = -10x - 21$ meets the parabola $y = x^2$ at two points. What is the sum of their $x$-coordinates?",
+  "choices": {
+   "A": "$-21$",
+   "B": "$-10$",
+   "C": "$-9$",
+   "D": "$10$",
+   "E": "$21$"
+  },
+  "answer": "B",
+  "hints": [
+   "Set the equations equal."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $x^2 + 10x - 21 = 0$; Vieta gives the sum.\n\n**Step 1.** $x^2 + 10x + 21 = 0$, sum of roots $= -10$.\n\n**Answer:** $-10$. **(B)**\n\n**Common mistake:** flipping the sign."
+ },
+ {
+  "id": "poly_roots_b18",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_disc_count",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many real roots does $x^{2} + 9x + 9 = 0$ have?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "Discriminant."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $b^2 - 4c$ positive, zero, or negative.\n\n**Step 1.** $81 - 36 = 45$.\n\n**Step 2.** So $2$ real roots.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** forgetting the 4."
+ },
+ {
+  "id": "poly_roots_b19",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_abs",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "How many real solutions does $x^2 - 11|x| + 30 = 0$ have?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "E",
+  "hints": [
+   "Let $u = |x| \\ge 0$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $u^2 - 11u + 30 = 0$ gives $u = 6$ or $5$.\n\n**Step 1.** Each positive $u$ gives $x = \\pm u$: $4$ solutions.\n\n**Answer:** $4$. **(E)**\n\n**Common mistake:** forgetting the negative values of $x$."
+ },
+ {
+  "id": "poly_roots_b20",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rts_rational_eq",
+  "level": "basics",
+  "track": "amc12",
+  "prompt": "Solve $\\dfrac{x + 2}{x - 5} = -1$.",
+  "choices": {
+   "A": "$-\\frac{3}{2}$",
+   "B": "$\\frac{3}{2}$",
+   "C": "$\\frac{5}{2}$",
+   "D": "$\\frac{7}{2}$",
+   "E": "$5$"
+  },
+  "answer": "B",
+  "hints": [
+   "Cross-multiply."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** $x + 2 = -1(x - 5)$.\n\n**Step 1.** $x + 2 = -x + 5$.\n\n**Step 2.** $x = \\frac{3}{2}$.\n\n**Answer:** $\\frac{3}{2}$. **(B)**\n\n**Common mistake:** forgetting to distribute."
+ },
+ {
+  "id": "poly_roots_c01",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rtc1_",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "The quadratic $x^2 + px + q$ with integer coefficients has $\\,5 + \\sqrt{7}\\,$ as a root. What is $q$?",
+  "choices": {
+   "A": "$-18$",
+   "B": "$7$",
+   "C": "$18$",
+   "D": "$25$",
+   "E": "$32$"
+  },
+  "answer": "C",
+  "hints": [
+   "The other root must be the conjugate $5 - \\sqrt{7}$."
+  ],
+  "solution": "**What we need:** the constant term $q$.\n\n**Key idea:** with rational coefficients, irrational roots come in conjugate pairs: $a + \\sqrt{b}$ forces $a - \\sqrt{b}$.\n\n**Step 1.** The roots are $5 + \\sqrt{7}$ and $5 - \\sqrt{7}$.\n\n**Step 2.** Vieta: $q$ is the product of the roots.\n\n**Step 3.** $q = (5 + \\sqrt{7})(5 - \\sqrt{7}) = 5^2 - (7) = 18$.\n\n**Answer:** $18$. **(C)**\n\n**Common mistake:** adding $\\sqrt{7}^2$ instead of subtracting it in the difference of squares."
+ },
+ {
+  "id": "poly_roots_c02",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rtc2_",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the sum of all real roots of $x^{4} - 8x^{3} + 14x^{2} - 8x + 1 = 0$?",
+  "choices": {
+   "A": "$-8$",
+   "B": "$0$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$12$"
+  },
+  "answer": "C",
+  "hints": [
+   "Divide by $x^2$ and let $y = x + \\frac{1}{x}$."
+  ],
+  "solution": "**What we need:** the sum of the distinct real roots.\n\n**Key idea:** the coefficients read the same forwards and backwards, so divide by $x^2$ and substitute $y = x + \\frac{1}{x}$, using $x^2 + \\frac{1}{x^2} = y^2 - 2$.\n\n**Step 1.** Divide by $x^2$: $\\left(x^2 + \\frac{1}{x^2}\\right) - 8\\left(x + \\frac{1}{x}\\right) + 14 = 0$.\n\n**Step 2.** Substitute: $y^2 - 2 - 8y + 14 = 0$, i.e. $y^2 - 8y + 12 = 0$, so $y = 2$ or $y = 6$.\n\n**Step 3.** Back to $x$: $x + \\frac{1}{x} = 2$ means $(x - 1)^2 = 0$: just the real root $x = 1$; $x + \\frac{1}{x} = 6$ means $x^2 - 6x + 1 = 0$: discriminant $32 > 0$, two real roots adding to $6$.\n\n**Step 4.** Sum of the real roots: $7$.\n\n**Answer:** $7$. **(C)**\n\n**Common mistake:** counting roots from a $y$ with $|y| < 2$; $x + \\frac{1}{x}$ can never be between $-2$ and $2$ for real $x$."
+ },
+ {
+  "id": "poly_roots_c03",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rtc3_",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many integers $x$ satisfy $x^3 - 18x = -28$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "B",
+  "hints": [
+   "Try the integer that makes it easy to see one root, then factor out that root."
+  ],
+  "solution": "**What we need:** the number of integer solutions.\n\n**Key idea:** find one integer root by testing, factor it out, and study the quadratic that is left.\n\n**Step 1.** Rewrite as $x^3 - 18x - (-28) = 0$. Testing small integers, $x = 2$ works.\n\n**Step 2.** Divide by $(x - (2))$: $x^3 - 18x - (-28) = (x - (2))(x^2 + 2x + (-14))$.\n\n**Step 3.** The quadratic has discriminant $(2)^2 - 4(-14) = 60$, so its roots are $\\frac{-2 \\pm \\sqrt{60}}{2}$; check which are integers.\n\n**Step 4.** Integer solutions: $x = 2$. That is $1$.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** assuming a cubic always has three integer roots."
+ },
+ {
+  "id": "poly_roots_c04",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rtsc_cube_nonreal",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the product of the two nonreal solutions of $x^3 + 27 = 0$?",
+  "choices": {
+   "A": "$-9$",
+   "B": "$3$",
+   "C": "$6$",
+   "D": "$9$",
+   "E": "$27$"
+  },
+  "answer": "D",
+  "hints": [
+   "Factor a sum or difference of cubes."
+  ],
+  "solution": "**What we need:** the product.\n\n**Key idea:** $x^3 + 27 = (x + 3)(x^2 - 3x + 9)$.\n\n**Step 1.** The quadratic factor has the nonreal roots; their product is $9$.\n\n**Answer:** $9$. **(D)**\n\n**Common mistake:** including the real root."
+ },
+ {
+  "id": "poly_roots_c05",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rtsc_quartic_sub",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "What is the sum of all real solutions of $(x^2 - x)^2 - 14(x^2 - x) + 24 = 0$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$14$"
+  },
+  "answer": "B",
+  "hints": [
+   "Let $u = x^2 - x$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** $u^2 - 14u + 24 = 0$ gives $u = 2$ or $12$.\n\n**Step 1.** Each of $x^2 - x = 2$ and $x^2 - x = 12$ has two real roots summing to $1$.\n\n**Step 2.** Solutions: -3, -1, 2, 4; sum $2$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** only solving one of the quadratics."
+ },
+ {
+  "id": "poly_roots_c06",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rtsc_common",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "The polynomials $x^{3} + x^{2} - 32x - 60$ and $x^{3} + 9x^{2} + 23x + 15$ have exactly one common root. What is it?",
+  "choices": {
+   "A": "$-5$",
+   "B": "$-3$",
+   "C": "$-2$",
+   "D": "$5$",
+   "E": "$6$"
+  },
+  "answer": "A",
+  "hints": [
+   "Test small integer candidates in both."
+  ],
+  "solution": "**What we need:** the common root.\n\n**Key idea:** integer roots divide the constant term; check which candidate works for both.\n\n**Step 1.** Roots of the first: $-5, 6, -2$; of the second: $-5, -3, -1$.\n\n**Step 2.** Common: $-5$.\n\n**Answer:** $-5$. **(A)**\n\n**Common mistake:** picking a root of only one polynomial."
+ },
+ {
+  "id": "poly_roots_c07",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rtsc_double_k",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "For which positive $k$ does $x^3 - 27x + k = 0$ have a repeated root?",
+  "choices": {
+   "A": "$9$",
+   "B": "$27$",
+   "C": "$54$",
+   "D": "$55$",
+   "E": "$108$"
+  },
+  "answer": "C",
+  "hints": [
+   "A repeated root is also a root of the derivative."
+  ],
+  "solution": "**What we need:** $k$.\n\n**Key idea:** the derivative $3x^2 - 27$ vanishes at $x = \\pm 3$.\n\n**Step 1.** At $x = 3$: $27 - 81 + k = 0$, so $k = 54$ (positive).\n\n**Step 2.** At $x = -3$ we'd get $k = -54$.\n\n**Answer:** $54$. **(C)**\n\n**Common mistake:** using $x = 0$."
+ },
+ {
+  "id": "poly_roots_c08",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rtsc_noninteger",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "The equation $9x^{3} + 9x^{2} - 28x - 20 = 0$ has one integer root and two non-integer rational roots. What is the sum of the non-integer roots?",
+  "choices": {
+   "A": "$-\\frac{10}{9}$",
+   "B": "$-1$",
+   "C": "$0$",
+   "D": "$1$",
+   "E": "$2$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find the integer root, then use Vieta."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** sum of all roots $= -\\frac{b}{a}$; subtract the integer root.\n\n**Step 1.** Integer root: $-2$.\n\n**Step 2.** All roots sum to $-1$; the other two sum to $1$.\n\n**Answer:** $1$. **(D)**\n\n**Common mistake:** forgetting to remove the integer root."
+ },
+ {
+  "id": "poly_roots_c09",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rtsc_count_quartic",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "How many real solutions does $x^4 + 15x^2 + 54 = 0$ have?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "A",
+  "hints": [
+   "Let $u = x^2$; only $u \\ge 0$ gives real $x$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $u^2 + 15u + 54 = 0$ gives $u = -6$ and $u = -9$.\n\n**Step 1.** Positive $u$ gives two solutions; $u = 0$ gives one; negative $u$ gives none.\n\n**Step 2.** Total: $0$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** counting four solutions automatically."
+ },
+ {
+  "id": "poly_roots_c10",
+  "skillId": "poly_roots",
+  "family": "poly_roots:rtsc_sqrt_eq",
+  "level": "challenge",
+  "track": "amc12",
+  "prompt": "Solve $\\sqrt{x + 56} = x$.",
+  "choices": {
+   "A": "$-7$",
+   "B": "$0$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$9$"
+  },
+  "answer": "D",
+  "hints": [
+   "Square, then check for extraneous roots."
+  ],
+  "solution": "**What we need:** the solution.\n\n**Key idea:** squaring: $x + 56 = (x)^2$; we need $x \\ge 0$.\n\n**Step 1.** The quadratic has roots $8$ and $-7$.\n\n**Step 2.** Only $x = 8$ makes $x \\ge 0$ (and checks).\n\n**Answer:** $8$. **(D)**\n\n**Common mistake:** keeping the extraneous root."
+ }
+]

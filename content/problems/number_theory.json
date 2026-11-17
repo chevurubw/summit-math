@@ -1,0 +1,4204 @@
+[
+ {
+  "id": "nt_divisors_b01",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many positive divisors does $76$ have?",
+  "choices": {
+   "A": "$3$",
+   "B": "$5$",
+   "C": "$6$",
+   "D": "$7$",
+   "E": "$8$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write the prime factorization, then multiply one more than each exponent."
+  ],
+  "solution": "**What we need:** the number of positive divisors of $76$.\n\n**Key idea:** every divisor is built from the same primes, each raised to a power from $0$ up to its power in the factorization. Multiply the number of choices.\n\n**Step 1.** Prime factorization: $76 = 2^{2} \\cdot 19$.\n\n**Step 2.** Choices for each prime's exponent: $2$ can use $0$ to $2$ ($3$ choices), $19$ can use $0$ to $1$ ($2$ choices).\n\n**Step 3.** Multiply: $3 \\cdot 2 = 6$.\n\n**Answer:** $6$. **(C)**\n\n**Common mistake:** multiplying the exponents themselves, or forgetting that exponent $0$ is allowed (that is where the $+1$ comes from)."
+ },
+ {
+  "id": "nt_divisors_b02",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of all positive divisors of $171$?",
+  "choices": {
+   "A": "$89$",
+   "B": "$259$",
+   "C": "$260$",
+   "D": "$261$",
+   "E": "$342$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use $(1 + p + p^2 + \\cdots)(1 + q + \\cdots)\\cdots$ over the prime factorization."
+  ],
+  "solution": "**What we need:** the sum of every positive divisor of $171$, including $1$ and $171$.\n\n**Key idea:** if $n = p^a q^b$, every divisor appears exactly once when you expand $(1 + p + \\cdots + p^a)(1 + q + \\cdots + q^b)$.\n\n**Step 1.** Factor: $171 = 3^{2} \\cdot 19$.\n\n**Step 2.** Prime power sums: $(1 + 3 + 9) = 13$, $(1 + 19) = 20$.\n\n**Step 3.** Multiply: $13 \\cdot 20 = 260$.\n\n**Step 4.** Check by listing: 1, 3, 9, 19, 57, 171 add to $260$.\n\n**Answer:** $260$. **(C)**\n\n**Common mistake:** leaving out $171$ itself or $1$."
+ },
+ {
+  "id": "nt_divisors_b03",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the largest prime factor of $1326$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$17$",
+   "C": "$19$",
+   "D": "$34$",
+   "E": "$35$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the prime factorization."
+  ],
+  "solution": "**What we need:** the largest prime factor of $1326$.\n\n**Key idea:** divide out the smallest primes one at a time until you reach $1$.\n\n**Step 1.** Repeated division: $1326 \\div 2 = 663$, $663 \\div 3 = 221$, $221 \\div 13 = 17$, $17 \\div 17 = 1$.\n\n**Step 2.** So $1326 = 2 \\cdot 3 \\cdot 13 \\cdot 17$, and the distinct primes are $2$, $3$, $13$, $17$.\n\n**Step 3.** The largest is $17$.\n\n**Answer:** $17$. **(B)**\n\n**Common mistake:** stopping before the last factor is prime."
+ },
+ {
+  "id": "nt_divisors_b04",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many prime numbers are between $26$ and $59$, inclusive?",
+  "choices": {
+   "A": "$7$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$11$"
+  },
+  "answer": "B",
+  "hints": [
+   "Check each odd number for small prime factors: 3, 5, 7, and 11 are enough below 169."
+  ],
+  "solution": "**What we need:** how many primes lie in the range $26$ to $59$.\n\n**Key idea:** a number up to $59$ is prime if no prime up to $\\sqrt{59} \\approx 7$ divides it. Check odd numbers against $3$, $5$, $7$ (and $11$ if needed).\n\n**Step 1.** Skip even numbers and multiples of $5$ right away.\n\n**Step 2.** Test the rest for divisibility by $3$, $7$.\n\n**Step 3.** The primes left are 29, 31, 37, 41, 43, 47, 53, 59.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** counting numbers like $91 = 7 \\cdot 13$ or $119 = 7 \\cdot 17$ that look prime but are not."
+ },
+ {
+  "id": "nt_divisors_b05",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_odd_count",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many odd positive divisors does $1750$ have?",
+  "choices": {
+   "A": "$3$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$9$",
+   "E": "$16$"
+  },
+  "answer": "C",
+  "hints": [
+   "Odd divisors can't use any factor of $2$."
+  ],
+  "solution": "**What we need:** the count of odd divisors.\n\n**Key idea:** an odd divisor uses only the odd primes, so ignore the power of $2$.\n\n**Step 1.** $1750 = 2 \\cdot 5^{3} \\cdot 7$.\n\n**Step 2.** Odd part: $875 = 5^{3} \\cdot 7$.\n\n**Step 3.** Divisors of the odd part: (3 + 1) \\cdot (1 + 1) $= 8$.\n\n**Answer:** $8$. **(C)**\n\n**Common mistake:** counting all divisors."
+ },
+ {
+  "id": "nt_divisors_b06",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_square_divisors",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many positive divisors of $250$ are perfect squares?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "A square divisor uses only even exponents."
+  ],
+  "solution": "**What we need:** the number of square divisors.\n\n**Key idea:** a divisor is a square exactly when every prime appears to an even power.\n\n**Step 1.** $250 = 2 \\cdot 5^{3}$.\n\n**Step 2.** Even exponent choices: for $2$: $1$ (0), for $5$: $2$ (0, 2).\n\n**Step 3.** Product: $2$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** counting all divisors."
+ },
+ {
+  "id": "nt_divisors_b07",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_smallest_prime",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest prime factor of $629$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$17$",
+   "C": "$19$",
+   "D": "$37$",
+   "E": "$629$"
+  },
+  "answer": "B",
+  "hints": [
+   "Test small primes in order."
+  ],
+  "solution": "**What we need:** the smallest prime divisor.\n\n**Key idea:** check divisibility by $2, 3, 5, 7, \\ldots$ until one works.\n\n**Step 1.** $629$ is odd, not divisible by $3$ (digit sum $17$), and doesn't end in $0$ or $5$.\n\n**Step 2.** $629 = 17 \\cdot 37$.\n\n**Answer:** $17$. **(B)**\n\n**Common mistake:** answering the larger factor."
+ },
+ {
+  "id": "nt_divisors_b08",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_exponent_sum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "When $8820$ is written as a product of primes, how many primes are used, counting repeats?",
+  "choices": {
+   "A": "$4$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$54$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write the prime factorization."
+  ],
+  "solution": "**What we need:** the total number of prime factors with repetition.\n\n**Key idea:** factor completely, then add the exponents.\n\n**Step 1.** $8820 = 2^{2} \\cdot 3^{2} \\cdot 5 \\cdot 7^{2}$.\n\n**Step 2.** Exponent sum: $2 + 2 + 1 + 2 = 7$.\n\n**Answer:** $7$. **(C)**\n\n**Common mistake:** counting only the distinct primes."
+ },
+ {
+  "id": "nt_divisors_b09",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_divisible_by_k",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many positive divisors of $4500$ are multiples of $4$?",
+  "choices": {
+   "A": "$12$",
+   "B": "$13$",
+   "C": "$24$",
+   "D": "$36$",
+   "E": "$1125$"
+  },
+  "answer": "A",
+  "hints": [
+   "Divisors that are multiples of $k$ look like $k$ times a divisor of $\\frac{n}{k}$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $d$ is a multiple of $4$ dividing $4500$ exactly when $\\frac{d}{4}$ divides $\\frac{4500}{4} = 1125$.\n\n**Step 1.** $\\frac{4500}{4} = 1125 = 3^{2} \\cdot 5^{3}$.\n\n**Step 2.** Its divisors: $12$.\n\n**Answer:** $12$. **(A)**\n\n**Common mistake:** counting all divisors of 4500."
+ },
+ {
+  "id": "nt_divisors_b10",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_prime_sum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of the different prime factors of $1029$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$8$",
+   "C": "$10$",
+   "D": "$12$",
+   "E": "$24$"
+  },
+  "answer": "C",
+  "hints": [
+   "Factor completely."
+  ],
+  "solution": "**What we need:** the sum of the distinct primes.\n\n**Key idea:** list each prime once, no matter its exponent.\n\n**Step 1.** $1029 = 3 \\cdot 7^{3}$.\n\n**Step 2.** Distinct primes: $3 + 7 = 10$.\n\n**Answer:** $10$. **(C)**\n\n**Common mistake:** adding a prime once for each time it appears."
+ },
+ {
+  "id": "nt_divisors_b11",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_square_count",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many positive divisors does $63^2 = 3969$ have?",
+  "choices": {
+   "A": "$6$",
+   "B": "$12$",
+   "C": "$15$",
+   "D": "$16$",
+   "E": "$36$"
+  },
+  "answer": "C",
+  "hints": [
+   "Square the factorization."
+  ],
+  "solution": "**What we need:** the divisor count of $n^2$.\n\n**Key idea:** squaring doubles every exponent; then multiply (exponent $+ 1$).\n\n**Step 1.** $63 = 3^{2} \\cdot 7$, so $63^2 = 3^{4} \\cdot 7^{2}$.\n\n**Step 2.** Divisors: $(4 + 1) \\cdot (2 + 1) = 15$.\n\n**Answer:** $15$. **(C)**\n\n**Common mistake:** squaring the divisor count of 63."
+ },
+ {
+  "id": "nt_divisors_b12",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_proper_sum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of the proper divisors of $36$ (all positive divisors except $36$ itself)?",
+  "choices": {
+   "A": "$9$",
+   "B": "$36$",
+   "C": "$54$",
+   "D": "$55$",
+   "E": "$91$"
+  },
+  "answer": "D",
+  "hints": [
+   "List the divisors in pairs."
+  ],
+  "solution": "**What we need:** the sum of the proper divisors.\n\n**Key idea:** pair each divisor $d$ with $\\frac{n}{d}$ to list them all quickly.\n\n**Step 1.** Divisors: $1, 2, 3, 4, 6, 9, 12, 18, 36$.\n\n**Step 2.** Sum without $36$: $55$.\n\n**Answer:** $55$. **(D)**\n\n**Common mistake:** including 36 itself."
+ },
+ {
+  "id": "nt_divisors_b13",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_three_divisors",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many positive integers at most $174$ have exactly three positive divisors?",
+  "choices": {
+   "A": "$5$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$13$"
+  },
+  "answer": "B",
+  "hints": [
+   "What does a number with exactly 3 divisors look like?"
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** a number has exactly three divisors exactly when it is the square of a prime: $1$, $p$, $p^2$.\n\n**Step 1.** Need $p^2 \\le 174$, so $p \\le 13$.\n\n**Step 2.** Primes up to $13$: $2, 3, 5, 7, 11, 13$. That's $6$.\n\n**Answer:** $6$. **(B)**\n\n**Common mistake:** counting all perfect squares."
+ },
+ {
+  "id": "nt_divisors_b14",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_below_root",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many positive divisors of $2205$ are less than $\\sqrt{2205}$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$18$",
+   "E": "$46$"
+  },
+  "answer": "B",
+  "hints": [
+   "Divisors come in pairs $d$ and $\\frac{n}{d}$."
+  ],
+  "solution": "**What we need:** the count of small divisors.\n\n**Key idea:** each pair $(d, \\frac{n}{d})$ has exactly one member below $\\sqrt{n}$ (since $n$ isn't a square).\n\n**Step 1.** $2205 = 3^{2} \\cdot 5 \\cdot 7^{2}$ has $18$ divisors.\n\n**Step 2.** Half are below $\\sqrt{2205}$: $9$.\n\n**Answer:** $9$. **(B)**\n\n**Common mistake:** counting the square root itself, which isn't a whole number here."
+ },
+ {
+  "id": "nt_divisors_b15",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_product_pairs",
+  "level": "basics",
+  "track": "both",
+  "prompt": "In how many ways can $45$ be written as $a \\times b$ with positive integers $a \\le b$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$6$"
+  },
+  "answer": "B",
+  "hints": [
+   "Each divisor $a \\le \\sqrt{n}$ gives one way."
+  ],
+  "solution": "**What we need:** the number of factor pairs.\n\n**Key idea:** pairs $(a, b)$ correspond to divisors $a$ at most $\\sqrt{n}$.\n\n**Step 1.** $45$ has $6$ divisors.\n\n**Step 2.** It's not a square, so the number of pairs is $\\lceil \\frac{6}{2} \\rceil = 3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** counting ordered pairs."
+ },
+ {
+  "id": "nt_divisors_b16",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_largest_proper",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the largest divisor of $203$ that is less than $203$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$28$",
+   "C": "$29$",
+   "D": "$\\frac{203}{2}$",
+   "E": "$202$"
+  },
+  "answer": "C",
+  "hints": [
+   "Divide by the smallest prime factor."
+  ],
+  "solution": "**What we need:** the largest proper divisor.\n\n**Key idea:** the largest proper divisor is $n$ divided by its smallest prime factor.\n\n**Step 1.** Smallest prime factor of $203$: $7$.\n\n**Step 2.** $203 \\div 7 = 29$.\n\n**Answer:** $29$. **(C)**\n\n**Common mistake:** answering $n - 1$."
+ },
+ {
+  "id": "nt_divisors_b17",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_radical",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the product of the different prime factors of $6480$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$10$",
+   "C": "$30$",
+   "D": "$60$",
+   "E": "$6480$"
+  },
+  "answer": "C",
+  "hints": [
+   "List each prime once."
+  ],
+  "solution": "**What we need:** the product of distinct primes.\n\n**Key idea:** factor, then multiply each prime once.\n\n**Step 1.** $6480 = 2^{4} \\cdot 3^{4} \\cdot 5$.\n\n**Step 2.** Product: $2 \\cdot 3 \\cdot 5 = 30$.\n\n**Answer:** $30$. **(C)**\n\n**Common mistake:** keeping the exponents."
+ },
+ {
+  "id": "nt_divisors_b18",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_odd_number_divisors",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many integers from $1$ to $55$ have an odd number of positive divisors?",
+  "choices": {
+   "A": "$6$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$27$",
+   "E": "$48$"
+  },
+  "answer": "B",
+  "hints": [
+   "Divisors pair up unless one is paired with itself."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** divisors come in pairs $d, \\frac{n}{d}$; the count is odd only when $d = \\frac{n}{d}$, meaning $n$ is a perfect square.\n\n**Step 1.** Perfect squares up to $55$: $1^2$ through $7^2$.\n\n**Step 2.** That's $7$.\n\n**Answer:** $7$. **(B)**\n\n**Common mistake:** counting odd numbers."
+ },
+ {
+  "id": "nt_divisors_b19",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_twin",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Twin primes are pairs of primes that differ by $2$, like $11$ and $13$. How many twin prime pairs have both primes between $27$ and $77$, inclusive?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$8$",
+   "E": "$12$"
+  },
+  "answer": "B",
+  "hints": [
+   "List the primes in the range first."
+  ],
+  "solution": "**What we need:** the number of twin prime pairs.\n\n**Key idea:** list the primes, then check which ones are $2$ apart.\n\n**Step 1.** Primes: $29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73$.\n\n**Step 2.** Twin pairs: $(29, 31)$, $(41, 43)$, $(59, 61)$, $(71, 73)$.\n\n**Answer:** $4$. **(B)**\n\n**Common mistake:** counting a prime in two pairs twice, or missing a pair at the edge."
+ },
+ {
+  "id": "nt_divisors_b20",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dv_power_sigma",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of all positive divisors of $8$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$8$",
+   "C": "$14$",
+   "D": "$15$",
+   "E": "$16$"
+  },
+  "answer": "D",
+  "hints": [
+   "The divisors are powers of 2."
+  ],
+  "solution": "**What we need:** the divisor sum.\n\n**Key idea:** the divisors of $2^{3}$ are $1, 2, 2^2, \\ldots, 2^{3}$, a geometric series.\n\n**Step 1.** $1 + 2 + \\cdots + 2^{3} = \\frac{2^{4} - 1}{1} = 15$.\n\n**Answer:** $15$. **(D)**\n\n**Common mistake:** forgetting the divisor $1$."
+ },
+ {
+  "id": "nt_divisors_c01",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dvc1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the smallest positive integer with exactly $12$ positive divisors?",
+  "choices": {
+   "A": "$56$",
+   "B": "$60$",
+   "C": "$66$",
+   "D": "$120$",
+   "E": "$2048$"
+  },
+  "answer": "B",
+  "hints": [
+   "If $n = p^a q^b \\cdots$, then $(a + 1)(b + 1)\\cdots = $ the divisor count. Put the larger exponents on the smaller primes."
+  ],
+  "solution": "**What we need:** the smallest $n$ with exactly $12$ divisors.\n\n**Key idea:** if $n = p^a q^b \\cdots$, then $n$ has $(a + 1)(b + 1)\\cdots$ divisors. So write $12$ as a product of factors, then give the biggest exponents to the smallest primes.\n\n**Step 1.** Ways to write $12$ as a product (each factor is an exponent plus one): try each one, like $12$ alone ($p^{11}$), or two or three factors.\n\n**Step 2.** For each pattern, put the largest exponent on $2$, the next on $3$, and so on, and compare the results.\n\n**Step 3.** The smallest is $60 = 2^{2} \\cdot 3 \\cdot 5$, which has $(2 + 1) \\cdot (1 + 1) \\cdot (1 + 1)$ $= 12$ divisors.\n\n**Answer:** $60$. **(B)**\n\n**Common mistake:** using a single prime power like $2^{11} = 2048$, which is usually much bigger."
+ },
+ {
+  "id": "nt_divisors_c02",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dvc2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many positive divisors of $2880$ are even?",
+  "choices": {
+   "A": "$6$",
+   "B": "$36$",
+   "C": "$37$",
+   "D": "$42$",
+   "E": "$72$"
+  },
+  "answer": "B",
+  "hints": [
+   "An even divisor must use at least one factor of 2."
+  ],
+  "solution": "**What we need:** how many divisors of $2880$ are even.\n\n**Key idea:** count exponent choices prime by prime, keeping only the ones that satisfy the condition.\n\n**Step 1.** $2880 = 2^{6} \\cdot 3^{2} \\cdot 5$, which has $42$ divisors in all.\n\n**Step 2.** Odd divisors leave out $2$ entirely: $3 \\cdot 2$ $= 6$ of them.\n\n**Step 3.** Even divisors: $42 - 6 = 36$. (Or count directly: the exponent of $2$ is $1$ to $6$, so $6$ choices, times the rest.)\n\n**Answer:** $36$. **(B)**\n\n**Common mistake:** counting all divisors, including the odd ones."
+ },
+ {
+  "id": "nt_divisors_c03",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dvc3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "The product of all positive divisors of $30625$ is written as $5^{x} \\cdot 7^{y}$. What is $x$?",
+  "choices": {
+   "A": "$10$",
+   "B": "$15$",
+   "C": "$30$",
+   "D": "$31$",
+   "E": "$60$"
+  },
+  "answer": "C",
+  "hints": [
+   "Pair each divisor $d$ with $\\frac{n}{d}$. The product of all divisors is $n^{\\tau(n)/2}$."
+  ],
+  "solution": "**What we need:** the power of $5$ in the product of all divisors of $30625$.\n\n**Key idea:** pair each divisor $d$ with $\\frac{n}{d}$: each pair multiplies to $n$. With $\\tau$ divisors there are $\\frac{\\tau}{2}$ pairs, so the product is $n^{\\tau/2}$.\n\n**Step 1.** $30625 = 5^{4} \\cdot 7^{2}$ has $(4 + 1)(2 + 1) = 15$ divisors.\n\n**Step 2.** Product of all divisors: $30625^{15/2} = 30625^{\\frac{15}{2}}$.\n\n**Step 3.** The power of $5$: $4 \\cdot \\frac{15}{2} = 30$.\n\n**Answer:** $x = 30$. **(C)**\n\n**Common mistake:** forgetting to halve, which gives $60$."
+ },
+ {
+  "id": "nt_divisors_c04",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dvc_cube_divisors",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many positive divisors of $6750$ are perfect cubes?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$8$",
+   "E": "$32$"
+  },
+  "answer": "B",
+  "hints": [
+   "Each exponent must be a multiple of $3$."
+  ],
+  "solution": "**What we need:** the number of cube divisors.\n\n**Key idea:** a divisor is a cube when every exponent is a multiple of $3$.\n\n**Step 1.** $6750 = 2 \\cdot 3^{3} \\cdot 5^{3}$.\n\n**Step 2.** Choices: $2$: $1$, $3$: $2$, $5$: $2$. Product: $4$.\n\n**Answer:** $4$. **(B)**\n\n**Common mistake:** using even exponents (that's squares)."
+ },
+ {
+  "id": "nt_divisors_c05",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dvc_odd_sigma",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the sum of all odd positive divisors of $120$?",
+  "choices": {
+   "A": "$15$",
+   "B": "$24$",
+   "C": "$25$",
+   "D": "$336$",
+   "E": "$360$"
+  },
+  "answer": "B",
+  "hints": [
+   "The odd divisors are the divisors of the odd part."
+  ],
+  "solution": "**What we need:** the sum of odd divisors.\n\n**Key idea:** drop the power of $2$, then use the divisor sum formula $\\prod (1 + p + \\cdots + p^e)$.\n\n**Step 1.** Odd part: $15 = 3 \\cdot 5$.\n\n**Step 2.** Sum: $(1 + 3) \\cdot (1 + 5) = 24$.\n\n**Answer:** $24$. **(B)**\n\n**Common mistake:** adding all divisors."
+ },
+ {
+  "id": "nt_divisors_c06",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dvc_smallest_odd_k",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the smallest odd positive integer with exactly $9$ positive divisors?",
+  "choices": {
+   "A": "$36$",
+   "B": "$225$",
+   "C": "$227$",
+   "D": "$675$",
+   "E": "$6561$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use the smallest odd primes with large exponents on smaller primes."
+  ],
+  "solution": "**What we need:** the smallest odd number with 9 divisors.\n\n**Key idea:** write 9 as a product of (exponent $+ 1$) factors and assign the biggest exponents to the smallest odd primes.\n\n**Step 1.** $225 = 3^{2} \\cdot 5^{2}$ has $(2 + 1) \\cdot (2 + 1) = 9$ divisors.\n\n**Step 2.** Other ways to make 9 divisors with odd primes give larger numbers.\n\n**Answer:** $225$. **(B)**\n\n**Common mistake:** using the prime $2$, which makes the number even."
+ },
+ {
+  "id": "nt_divisors_c07",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dvc_four_divisors",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many integers from $1$ to $114$ have exactly four positive divisors?",
+  "choices": {
+   "A": "$33$",
+   "B": "$34$",
+   "C": "$35$",
+   "D": "$37$",
+   "E": "$38$"
+  },
+  "answer": "B",
+  "hints": [
+   "Four divisors means $p^3$ or $pq$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $n$ has exactly 4 divisors when $n = p^3$ or $n = pq$ for different primes $p, q$.\n\n**Step 1.** Cubes of primes up to $114$: 8, 27.\n\n**Step 2.** Products of two different primes up to $114$, listed and counted with the cubes: $34$ in total.\n\n**Answer:** $34$. **(B)**\n\n**Common mistake:** forgetting the prime cubes like $8$ and $27$."
+ },
+ {
+  "id": "nt_divisors_c08",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dvc_double_divisors",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A positive integer $n$ has $9$ positive divisors and $2n$ has $12$. How many positive divisors does $4n$ have?",
+  "choices": {
+   "A": "$12$",
+   "B": "$15$",
+   "C": "$16$",
+   "D": "$18$",
+   "E": "$24$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write $n = 2^a \\cdot m$ with $m$ odd."
+  ],
+  "solution": "**What we need:** the divisor count of $4n$.\n\n**Key idea:** doubling raises the exponent of $2$ by one; the odd part's divisor count stays the same.\n\n**Step 1.** $(a + 1)d(m) = 9$ and $(a + 2)d(m) = 12$.\n\n**Step 2.** Subtracting: $d(m) = 3$, so $a + 1 = 3$.\n\n**Step 3.** $4n$ has $(a + 3)d(m) = 5 \\cdot 3 = 15$ divisors.\n\n**Answer:** $15$. **(B)**\n\n**Common mistake:** assuming the divisor count goes up by the same amount every time without finding $d(m)$."
+ },
+ {
+  "id": "nt_divisors_c09",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dvc_reciprocal_sum",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the sum of the reciprocals of all positive divisors of $40$?",
+  "choices": {
+   "A": "$\\frac{1}{5}$",
+   "B": "$\\frac{4}{9}$",
+   "C": "$\\frac{9}{4}$",
+   "D": "$\\frac{13}{4}$",
+   "E": "$\\frac{45}{4}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Pair $\\frac{1}{d}$ with $\\frac{d'}{n}$ where $d' = \\frac{n}{d}$."
+  ],
+  "solution": "**What we need:** $\\sum \\frac{1}{d}$.\n\n**Key idea:** $\\frac{1}{d} = \\frac{n/d}{n}$, and as $d$ runs over divisors so does $\\frac{n}{d}$; so the sum is $\\frac{\\sigma(n)}{n}$.\n\n**Step 1.** Sum of divisors: $\\sigma(40) = 90$.\n\n**Step 2.** $\\frac{90}{40} = \\frac{9}{4}$.\n\n**Answer:** $\\frac{9}{4}$. **(C)**\n\n**Common mistake:** dividing the number of divisors by $n$."
+ },
+ {
+  "id": "nt_divisors_c10",
+  "skillId": "nt_divisors",
+  "family": "nt_divisors:dvc_most_divisors",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Among the integers from $1$ to $100$, what is the largest number of positive divisors any one of them has?",
+  "choices": {
+   "A": "$9$",
+   "B": "$10$",
+   "C": "$11$",
+   "D": "$12$",
+   "E": "$14$"
+  },
+  "answer": "D",
+  "hints": [
+   "Look at numbers built from small primes."
+  ],
+  "solution": "**What we need:** the maximum divisor count.\n\n**Key idea:** highly divisible numbers use small primes with decreasing exponents.\n\n**Step 1.** Candidates like $60, 72, 84, 90, 96$ have $12$ divisors: for example $60 = 2^{2} \\cdot 3 \\cdot 5$.\n\n**Step 2.** Checking other numbers built from $2, 3, 5, 7$ shows none in range has more.\n\n**Answer:** $12$. **(D)**\n\n**Common mistake:** picking the largest number in range, which isn't usually the most divisible."
+ },
+ {
+  "id": "nt_gcd_b01",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the greatest common divisor of $95$ and $227$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$4$",
+   "D": "$132$",
+   "E": "$21565$"
+  },
+  "answer": "A",
+  "hints": [
+   "Use prime factorizations, or the Euclidean algorithm."
+  ],
+  "solution": "**What we need:** the largest number dividing both $95$ and $227$.\n\n**Key idea:** use prime factorizations: the GCD takes each shared prime to the smaller power.\n\n**Step 1.** $95 = 5 \\cdot 19$ and $227 = 227$.\n\n**Step 2.** They share no prime, so the GCD is $1$.\n\n**Step 3.** Check with the Euclidean algorithm: $227 = 95 \\cdot 2 + 37$; $95 = 37 \\cdot 2 + 21$; $37 = 21 \\cdot 1 + 16$; $21 = 16 \\cdot 1 + 5$; $16 = 5 \\cdot 3 + 1$; $5 = 1 \\cdot 5 + 0$. The last nonzero remainder is $1$.\n\n**Answer:** $1$. **(A)**\n\n**Common mistake:** taking the larger power of each prime, which gives the LCM instead."
+ },
+ {
+  "id": "nt_gcd_b02",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Three lights blink every 8, 15, and 4 seconds. They all blink together at noon. After how many seconds will they next blink together?",
+  "choices": {
+   "A": "$27$",
+   "B": "$30$",
+   "C": "$120$",
+   "D": "$240$",
+   "E": "$480$"
+  },
+  "answer": "C",
+  "hints": [
+   "They blink together at common multiples of the three times."
+  ],
+  "solution": "**What we need:** the next time all three blink at once.\n\n**Key idea:** each light blinks at multiples of its period, so all three blink together at common multiples. The first one is the LCM.\n\n**Step 1.** $8 = 2^{3}$, $15 = 3 \\cdot 5$, $4 = 2^{2}$.\n\n**Step 2.** Take each prime at its highest power: $\\operatorname{lcm}(8, 15, 4) = 2^{3} \\cdot 3 \\cdot 5 = 120$.\n\n**Answer:** $120$ seconds. **(C)**\n\n**Common mistake:** multiplying the three periods ($480$), which is a common multiple but not the smallest."
+ },
+ {
+  "id": "nt_gcd_b03",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A 55 by 105 rectangle is covered exactly by identical square tiles with whole number side lengths, as large as possible. How many tiles are used?",
+  "choices": {
+   "A": "$5$",
+   "B": "$231$",
+   "C": "$242$",
+   "D": "$462$",
+   "E": "$1443$"
+  },
+  "answer": "B",
+  "hints": [
+   "The largest tile has side length $\\gcd(w, h)$."
+  ],
+  "solution": "**What we need:** the number of tiles when the tiles are as big as possible.\n\n**Key idea:** the tile side must divide both the width and the height, so the largest possible tile has side $\\gcd(w, h)$.\n\n**Step 1.** $\\gcd(55, 105) = 5$, so each tile is $5 \\times 5$.\n\n**Step 2.** Along the width: $\\frac{55}{5} = 11$ tiles. Along the height: $\\frac{105}{5} = 21$ tiles.\n\n**Step 3.** Total: $11 \\cdot 21 = 231$.\n\n**Answer:** $231$ tiles. **(B)**\n\n**Common mistake:** answering with the tile size $5$ instead of the number of tiles."
+ },
+ {
+  "id": "nt_gcd_b04",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two positive integers have greatest common divisor $8$ and least common multiple $1560$. One of them is $104$. What is the other?",
+  "choices": {
+   "A": "$104$",
+   "B": "$120$",
+   "C": "$128$",
+   "D": "$195$",
+   "E": "$1560$"
+  },
+  "answer": "B",
+  "hints": [
+   "For any two positive integers, $\\gcd \\cdot \\text{lcm}$ equals their product."
+  ],
+  "solution": "**What we need:** the second number $n$.\n\n**Key idea:** for any two positive integers, $\\gcd \\times \\operatorname{lcm} = $ the product of the numbers.\n\n**Step 1.** $8 \\cdot 1560 = 104 \\cdot n$, so $12480 = 104n$.\n\n**Step 2.** $n = \\frac{12480}{104} = 120$.\n\n**Step 3.** Check: $\\gcd(104, 120) = 8$ and $\\operatorname{lcm}(104, 120) = 1560$.\n\n**Answer:** $120$. **(B)**\n\n**Common mistake:** dividing the LCM by the given number without the GCD: $\\frac{1560}{104} = 15$."
+ },
+ {
+  "id": "nt_gcd_b05",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_lcm_two",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the least common multiple of $36$ and $30$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$90$",
+   "C": "$180$",
+   "D": "$186$",
+   "E": "$1080$"
+  },
+  "answer": "C",
+  "hints": [
+   "Take the highest power of each prime."
+  ],
+  "solution": "**What we need:** the LCM.\n\n**Key idea:** LCM uses each prime to its highest power in either number.\n\n**Step 1.** $36 = 2^{2} \\cdot 3^{2}$ and $30 = 2 \\cdot 3 \\cdot 5$.\n\n**Step 2.** LCM $= 2^{2} \\cdot 3^{2} \\cdot 5 = 180$.\n\n**Answer:** $180$. **(C)**\n\n**Common mistake:** multiplying the numbers when they share a factor."
+ },
+ {
+  "id": "nt_gcd_b06",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_gcd_three",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the greatest common divisor of $45$, $27$, and $63$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$18$",
+   "E": "$27$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor each number."
+  ],
+  "solution": "**What we need:** the GCD.\n\n**Key idea:** the GCD uses each prime to its lowest power among all the numbers.\n\n**Step 1.** $45 = 3^{2} \\cdot 5$, $27 = 3^{3}$, $63 = 3^{2} \\cdot 7$.\n\n**Step 2.** Common part: $9$.\n\n**Answer:** $9$. **(B)**\n\n**Common mistake:** finding the GCD of only two of them."
+ },
+ {
+  "id": "nt_gcd_b07",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_product_rule",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two positive integers have product $1625$ and greatest common divisor $5$. What is their least common multiple?",
+  "choices": {
+   "A": "$25$",
+   "B": "$65$",
+   "C": "$325$",
+   "D": "$330$",
+   "E": "$1625$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\gcd \\times \\text{lcm} = $ product."
+  ],
+  "solution": "**What we need:** the LCM.\n\n**Key idea:** for any two positive integers, $\\gcd(a, b) \\cdot \\text{lcm}(a, b) = ab$.\n\n**Step 1.** $\\text{lcm} = \\frac{1625}{5} = 325$.\n\n**Answer:** $325$. **(C)**\n\n**Common mistake:** dividing by the GCD twice."
+ },
+ {
+  "id": "nt_gcd_b08",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_reduce",
+  "level": "basics",
+  "track": "both",
+  "prompt": "When $\\dfrac{6}{20}$ is written in lowest terms $\\dfrac{m}{n}$, what is $m + n$?",
+  "choices": {
+   "A": "$13$",
+   "B": "$14$",
+   "C": "$15$",
+   "D": "$26$",
+   "E": "$30$"
+  },
+  "answer": "A",
+  "hints": [
+   "Divide top and bottom by their GCD."
+  ],
+  "solution": "**What we need:** $m + n$.\n\n**Key idea:** lowest terms means dividing out the GCD.\n\n**Step 1.** $\\gcd(6, 20) = 2$.\n\n**Step 2.** $\\frac{3}{10}$, so $m + n = 13$.\n\n**Answer:** $13$. **(A)**\n\n**Common mistake:** dividing by a common factor that isn't the greatest one."
+ },
+ {
+  "id": "nt_gcd_b09",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_euclid",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $\\gcd(1680, 870)$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$30$",
+   "C": "$31$",
+   "D": "$60$",
+   "E": "$810$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use the Euclidean algorithm."
+  ],
+  "solution": "**What we need:** the GCD.\n\n**Key idea:** Euclidean algorithm: $\\gcd(a, b) = \\gcd(b, a \\bmod b)$; repeat until the remainder is $0$.\n\n**Step 1.** $1680 = 1 \\cdot 870 + 810$; $870 = 1 \\cdot 810 + 60$; $810 = 13 \\cdot 60 + 30$; $60 = 2 \\cdot 30 + 0$.\n\n**Step 2.** The last nonzero remainder is $30$.\n\n**Answer:** $30$. **(B)**\n\n**Common mistake:** stopping at the first remainder."
+ },
+ {
+  "id": "nt_gcd_b10",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_gift_bags",
+  "level": "basics",
+  "track": "both",
+  "prompt": "A teacher has $70$ pens and $120$ pencils. She makes identical gift bags using all of them, with no leftovers. What is the greatest number of bags she can make?",
+  "choices": {
+   "A": "$10$",
+   "B": "$19$",
+   "C": "$20$",
+   "D": "$190$",
+   "E": "$840$"
+  },
+  "answer": "A",
+  "hints": [
+   "Each bag gets the same number of pens and the same number of pencils."
+  ],
+  "solution": "**What we need:** the most bags.\n\n**Key idea:** the number of bags must divide both counts; the largest such is the GCD.\n\n**Step 1.** $\\gcd(70, 120) = 10$.\n\n**Step 2.** Each bag gets $7$ pens and $12$ pencils.\n\n**Answer:** $10$. **(A)**\n\n**Common mistake:** answering the contents of one bag."
+ },
+ {
+  "id": "nt_gcd_b11",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_buses",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Bus A leaves the station every $40$ minutes and bus B every $18$ minutes. Both leave at 8:00 a.m. How many minutes later do they next leave together?",
+  "choices": {
+   "A": "$2$",
+   "B": "$58$",
+   "C": "$180$",
+   "D": "$360$",
+   "E": "$720$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find the least common multiple."
+  ],
+  "solution": "**What we need:** the minutes until they coincide.\n\n**Key idea:** they leave together at common multiples of both intervals; the first is the LCM.\n\n**Step 1.** $40 = 2^{3} \\cdot 5$, $18 = 2 \\cdot 3^{2}$.\n\n**Step 2.** $\\text{lcm} = 360$ minutes.\n\n**Answer:** $360$. **(D)**\n\n**Common mistake:** multiplying the intervals."
+ },
+ {
+  "id": "nt_gcd_b12",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_phi",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many integers from $1$ to $36$ share no common factor with $36$ other than $1$?",
+  "choices": {
+   "A": "$12$",
+   "B": "$13$",
+   "C": "$18$",
+   "D": "$24$",
+   "E": "$34$"
+  },
+  "answer": "A",
+  "hints": [
+   "Remove multiples of each prime factor of 36."
+  ],
+  "solution": "**What we need:** the count of numbers relatively prime to 36.\n\n**Key idea:** Euler's totient: $\\varphi(n) = n\\prod\\left(1 - \\frac{1}{p}\\right)$ over the primes dividing $n$.\n\n**Step 1.** $36 = 2^{2} \\cdot 3^{2}$.\n\n**Step 2.** $\\varphi(36) = 36 \\cdot \\left(1 - \\frac{1}{2}\\right) \\cdot \\left(1 - \\frac{1}{3}\\right) = 12$.\n\n**Answer:** $12$. **(A)**\n\n**Common mistake:** subtracting only the multiples of one prime."
+ },
+ {
+  "id": "nt_gcd_b13",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_lcm_range",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest positive integer divisible by every integer from $1$ to $12$?",
+  "choices": {
+   "A": "$13860$",
+   "B": "$27720$",
+   "C": "$55440$",
+   "D": "$83160$",
+   "E": "$479001600$"
+  },
+  "answer": "B",
+  "hints": [
+   "Use the highest prime power at most 12."
+  ],
+  "solution": "**What we need:** the LCM of $1$ through 12.\n\n**Key idea:** the LCM needs the largest power of each prime that is at most 12.\n\n**Step 1.** Prime powers: $2^{3}$, $3^{2}$, $5^{1}$, $7^{1}$, $11^{1}$.\n\n**Step 2.** Product: $27720$.\n\n**Answer:** $27720$. **(B)**\n\n**Common mistake:** multiplying all the numbers ($12!$)."
+ },
+ {
+  "id": "nt_gcd_b14",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_ratio_gcd",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two numbers are in the ratio $5:7$, and their greatest common divisor is $9$. What is their least common multiple?",
+  "choices": {
+   "A": "$35$",
+   "B": "$108$",
+   "C": "$315$",
+   "D": "$324$",
+   "E": "$2835$"
+  },
+  "answer": "C",
+  "hints": [
+   "The numbers are 5g and 7g."
+  ],
+  "solution": "**What we need:** the LCM.\n\n**Key idea:** with a reduced ratio $a:b$, the numbers are $ag$ and $bg$ where $g$ is the GCD.\n\n**Step 1.** Numbers: $45$ and $63$.\n\n**Step 2.** LCM $= 5 \\cdot 7 \\cdot 9 = 315$.\n\n**Answer:** $315$. **(C)**\n\n**Common mistake:** multiplying the two numbers."
+ },
+ {
+  "id": "nt_gcd_b15",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_gears",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Two meshing gears have $20$ and $12$ teeth. A tooth on each is marked, and the marks start touching. How many full turns does the $20$-tooth gear make before the marks touch again?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$12$",
+   "E": "$60$"
+  },
+  "answer": "A",
+  "hints": [
+   "The same number of teeth pass for both gears."
+  ],
+  "solution": "**What we need:** turns of the 20-tooth gear.\n\n**Key idea:** the marks meet again after a number of teeth that is a multiple of both tooth counts: the LCM.\n\n**Step 1.** Teeth passed: $\\text{lcm}(20, 12) = 60$.\n\n**Step 2.** Turns of the $20$-tooth gear: $\\frac{60}{20} = 3$.\n\n**Answer:** $3$. **(A)**\n\n**Common mistake:** answering the turns of the other gear."
+ },
+ {
+  "id": "nt_gcd_b16",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_remainder_one",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest integer greater than $1$ that leaves a remainder of $1$ when divided by each of $5$, $6$, and $7$?",
+  "choices": {
+   "A": "$209$",
+   "B": "$210$",
+   "C": "$211$",
+   "D": "$421$",
+   "E": "$422$"
+  },
+  "answer": "C",
+  "hints": [
+   "Subtract the remainder."
+  ],
+  "solution": "**What we need:** the number.\n\n**Key idea:** $n - 1$ must be a multiple of all three, so $n - 1$ is a common multiple.\n\n**Step 1.** $\\text{lcm}(5, 6, 7) = 210$.\n\n**Step 2.** $n = 210 + 1 = 211$.\n\n**Answer:** $211$. **(C)**\n\n**Common mistake:** multiplying the divisors instead of using the LCM."
+ },
+ {
+  "id": "nt_gcd_b17",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_exponent_lcm",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The least common multiple of $2^{7} \\cdot 3^{5}$ and $2^{5} \\cdot 3^{8}$ is $2^x \\cdot 3^y$. What is $x + y$?",
+  "choices": {
+   "A": "$10$",
+   "B": "$12$",
+   "C": "$15$",
+   "D": "$16$",
+   "E": "$25$"
+  },
+  "answer": "C",
+  "hints": [
+   "Take the larger exponent of each prime."
+  ],
+  "solution": "**What we need:** $x + y$.\n\n**Key idea:** the LCM uses the larger exponent for each prime; the GCD uses the smaller.\n\n**Step 1.** $x = \\max(7, 5) = 7$ and $y = \\max(5, 8) = 8$.\n\n**Step 2.** $x + y = 15$.\n\n**Answer:** $15$. **(C)**\n\n**Common mistake:** using the smaller exponents (that's the GCD)."
+ },
+ {
+  "id": "nt_gcd_b18",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_gcd_factored",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $\\gcd(2^{1} \\cdot 3^{3} \\cdot 5^{0},\\ 2^{5} \\cdot 3^{0} \\cdot 7)$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$864$"
+  },
+  "answer": "B",
+  "hints": [
+   "Take the smaller exponent of each shared prime."
+  ],
+  "solution": "**What we need:** the GCD.\n\n**Key idea:** only primes in both numbers count, each to its smaller exponent.\n\n**Step 1.** $2^{\\min(1, 5)} = 2^{1}$, $3^{\\min(3, 0)} = 3^{0}$; $5$ and $7$ are not shared.\n\n**Step 2.** GCD $= 2$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** including $5$ or $7$."
+ },
+ {
+  "id": "nt_gcd_b19",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_ropes",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Three ropes are $50$, $100$, and $80$ meters long. They are cut into pieces that are all the same whole number of meters long, as long as possible, with nothing left over. How many pieces are there?",
+  "choices": {
+   "A": "$10$",
+   "B": "$23$",
+   "C": "$24$",
+   "D": "$46$",
+   "E": "$230$"
+  },
+  "answer": "B",
+  "hints": [
+   "The piece length is the GCD."
+  ],
+  "solution": "**What we need:** the total number of pieces.\n\n**Key idea:** the longest piece length that divides all three lengths is their GCD.\n\n**Step 1.** $\\gcd(50, 100, 80) = 10$.\n\n**Step 2.** Pieces: $5 + 10 + 8 = 23$.\n\n**Answer:** $23$. **(B)**\n\n**Common mistake:** answering the piece length instead of the count."
+ },
+ {
+  "id": "nt_gcd_b20",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:g_common_divisors",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many positive integers divide both $18$ and $234$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$12$",
+   "E": "$18$"
+  },
+  "answer": "B",
+  "hints": [
+   "Common divisors are the divisors of the GCD."
+  ],
+  "solution": "**What we need:** the number of common divisors.\n\n**Key idea:** $d$ divides both numbers exactly when $d$ divides their GCD.\n\n**Step 1.** $\\gcd(18, 234) = 18 = 2 \\cdot 3^{2}$.\n\n**Step 2.** Its divisor count: $6$.\n\n**Answer:** $6$. **(B)**\n\n**Common mistake:** answering the GCD itself."
+ },
+ {
+  "id": "nt_gcd_c01",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:gc1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many pairs of positive integers $a \\le b$ have $\\gcd(a, b) = 1$ and $\\text{lcm}(a, b) = 6$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$5$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write $a = 1x$ and $b = 1y$ with $\\gcd(x, y) = 1$ and $xy = 6$.",
+   "Each prime power of $xy$ goes entirely to $x$ or entirely to $y$."
+  ],
+  "solution": "**What we need:** the number of pairs with this exact GCD and LCM.\n\n**Key idea:** factor out the GCD: $a = 1x$ and $b = 1y$ with $\\gcd(x, y) = 1$. Then $\\operatorname{lcm}(a, b) = 1xy$, so $xy = \\frac{6}{1} = 6$.\n\n**Step 1.** $6 = 2 \\cdot 3$ has $2$ distinct primes.\n\n**Step 2.** Since $x$ and $y$ share no prime, each prime power must go entirely into $x$ or entirely into $y$: $2$ choices for each.\n\n**Step 3.** Ordered pairs $(x, y)$: $2^{2} = 4$. Requiring $a \\le b$ cuts this in half: $2$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** splitting a prime power between $x$ and $y$, which would make their GCD bigger than $1$."
+ },
+ {
+  "id": "nt_gcd_c02",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:gc2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "As $n$ ranges over the positive integers, what is the largest possible value of $\\gcd(6n + 7, 4n + 8)$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$10$",
+   "C": "$15$",
+   "D": "$20$",
+   "E": "$24$"
+  },
+  "answer": "A",
+  "hints": [
+   "Any common divisor also divides combinations like $c(an + b) - a(cn + d)$."
+  ],
+  "solution": "**What we need:** the largest value this GCD ever takes.\n\n**Key idea:** anything that divides two numbers also divides any combination of them. Choose a combination that cancels $n$.\n\n**Step 1.** If $g$ divides both $6n + 7$ and $4n + 8$, it divides $4(6n + 7) - 6(4n + 8) = -20$.\n\n**Step 2.** So $g$ must divide $20$, and the GCD is at most $20$.\n\n**Step 3.** Check which divisors of $20$ are actually reached: at $n = 3$ the numbers are $25$ and $20$, with GCD $5$. The value $20$ is never reached, because no $n$ makes both expressions multiples of it.\n\n**Answer:** $5$. **(A)**\n\n**Common mistake:** stopping at the bound $20$ without checking that some $n$ actually reaches it."
+ },
+ {
+  "id": "nt_gcd_c03",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:gc3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many positive integers $n$ satisfy $\\text{lcm}(n, 18) = 90$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$12$"
+  },
+  "answer": "B",
+  "hints": [
+   "$n$ must divide $90$. Compare prime powers of $n$, $18$, and $90$."
+  ],
+  "solution": "**What we need:** all $n$ whose LCM with $18$ is exactly $90$.\n\n**Key idea:** the LCM takes, for each prime, the larger exponent. Compare prime by prime.\n\n**Step 1.** $90 = 2 \\cdot 3^{2} \\cdot 5$ and $18 = 2 \\cdot 3^{2}$. $n$ must divide $90$.\n\n**Step 2.** Prime by prime: for $2$, $18$ already has $2^{1}$, so $n$ can have $2^0$ to $2^{1}$ ($2$ choices); for $3$, $18$ already has $3^{2}$, so $n$ can have $3^0$ to $3^{2}$ ($3$ choices); for $5$, $18$ has only $5^{0}$, so $n$ must have exactly $5^{1}$ (1 choice).\n\n**Step 3.** Multiply the choices: $2 \\cdot 3 \\cdot 1 = 6$.\n\n**Answer:** $6$. **(B)**\n\n**Common mistake:** counting all divisors of $90$. Some of them have an LCM with $18$ smaller than $90$."
+ },
+ {
+  "id": "nt_gcd_c04",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:gc_pairs_gcd_lcm",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many ordered pairs of positive integers $(a, b)$ have $\\gcd(a, b) = 1$ and $\\text{lcm}(a, b) = 54$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$8$"
+  },
+  "answer": "C",
+  "hints": [
+   "Divide everything by the GCD."
+  ],
+  "solution": "**What we need:** the count of ordered pairs.\n\n**Key idea:** write $a = x$, $b = y$ with $\\gcd(x, y) = 1$ and $xy = 54$. Each prime power of $54$ goes entirely to $x$ or to $y$.\n\n**Step 1.** $54 = 2 \\cdot 3^{3}$ has $2$ different primes.\n\n**Step 2.** Each goes to $x$ or $y$: $2^{2} = 4$ ordered pairs.\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** counting unordered pairs, or splitting prime powers between $x$ and $y$."
+ },
+ {
+  "id": "nt_gcd_c05",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:gc_mersenne",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is $\\gcd(2^{19} - 1,\\ 2^{26} - 1)$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$127$"
+  },
+  "answer": "B",
+  "hints": [
+   "The Euclidean algorithm on the exponents."
+  ],
+  "solution": "**What we need:** the GCD.\n\n**Key idea:** $\\gcd(2^a - 1, 2^b - 1) = 2^{\\gcd(a, b)} - 1$, because $2^a - 1 \\equiv 2^{a - b} - 1 \\pmod{2^b - 1}$, which mirrors the Euclidean algorithm on exponents.\n\n**Step 1.** $\\gcd(19, 26) = 1$.\n\n**Step 2.** So the GCD is $2^{1} - 1 = 1$.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** computing $\\gcd(a, b)$ and stopping."
+ },
+ {
+  "id": "nt_gcd_c06",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:gc_phi_composite",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many integers from $1$ to $363$ are relatively prime to $363$?",
+  "choices": {
+   "A": "$181$",
+   "B": "$209$",
+   "C": "$220$",
+   "D": "$221$",
+   "E": "$440$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use Euler's totient function."
+  ],
+  "solution": "**What we need:** $\\varphi(363)$.\n\n**Key idea:** $\\varphi(n) = n\\prod_{p \\mid n}\\left(1 - \\frac{1}{p}\\right)$, from inclusion and exclusion on the prime factors.\n\n**Step 1.** $363 = 3 \\cdot 11^{2}$.\n\n**Step 2.** $\\varphi = 363 \\cdot \\frac{2}{3} \\cdot \\frac{10}{11} = 220$.\n\n**Answer:** $220$. **(C)**\n\n**Common mistake:** subtracting the multiples of each prime without adding back the overlaps."
+ },
+ {
+  "id": "nt_gcd_c07",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:gc_max_gcd_sum",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Two different positive integers add to $94$. What is the largest their greatest common divisor can be?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$47$",
+   "E": "$93$"
+  },
+  "answer": "B",
+  "hints": [
+   "The GCD divides the sum."
+  ],
+  "solution": "**What we need:** the maximum GCD.\n\n**Key idea:** write the numbers as $gx$ and $gy$ with $x \\ne y$. Then $g(x + y) = 94$, and $x + y \\ge 3$.\n\n**Step 1.** To make $g$ large, make $x + y$ the smallest divisor of $94$ that is at least $3$: that's $47$.\n\n**Step 2.** $g = \\frac{94}{47} = 2$, for example with $2$ and $92$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** allowing the two numbers to be equal, which would give $47$."
+ },
+ {
+  "id": "nt_gcd_c08",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:gc_not_lowest",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "For how many integers $n$ from $1$ to $31$ is the fraction $\\dfrac{n}{n + 15}$ not in lowest terms?",
+  "choices": {
+   "A": "$2$",
+   "B": "$13$",
+   "C": "$14$",
+   "D": "$15$",
+   "E": "$17$"
+  },
+  "answer": "C",
+  "hints": [
+   "$\\gcd(n, n + k) = \\gcd(n, k)$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $\\gcd(n, n + 15) = \\gcd(n, 15)$, so the fraction reduces exactly when $n$ shares a prime with $15$.\n\n**Step 1.** $15 = 3 \\cdot 5$.\n\n**Step 2.** Count $n \\le 31$ divisible by any of $3, 5$ (inclusion and exclusion): $14$.\n\n**Answer:** $14$. **(C)**\n\n**Common mistake:** counting the fractions that ARE in lowest terms."
+ },
+ {
+  "id": "nt_gcd_c09",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:gc_always_divides",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the largest integer that divides $n(n + 1)(n + 2)(n + 3)$ for every integer $n$?",
+  "choices": {
+   "A": "$12$",
+   "B": "$24$",
+   "C": "$30$",
+   "D": "$48$",
+   "E": "$120$"
+  },
+  "answer": "B",
+  "hints": [
+   "Try $n = 2$ and $n = 3$; the answer must divide both."
+  ],
+  "solution": "**What we need:** the largest guaranteed divisor.\n\n**Key idea:** test small values to find a candidate, then explain why it always works (Fermat's little theorem or consecutive factors).\n\n**Step 1.** $n = 2$ gives $120$; $n = 3$ gives $360$. Their GCD is $120$; checking more values brings it to $24$.\n\n**Step 2.** $24 = 2^{3} \\cdot 3$, and each prime power always divides the expression (by factoring into consecutive numbers or by Fermat's little theorem).\n\n**Answer:** $24$. **(B)**\n\n**Common mistake:** trusting just one value of $n$."
+ },
+ {
+  "id": "nt_gcd_c10",
+  "skillId": "nt_gcd",
+  "family": "nt_gcd:gc_diagonal_squares",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A $7 \\times 4$ rectangle is drawn on graph paper. How many unit squares does one of its diagonals pass through (going through the inside of the square, not just touching a corner)?",
+  "choices": {
+   "A": "$7$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$11$",
+   "E": "$28$"
+  },
+  "answer": "C",
+  "hints": [
+   "Count grid lines crossed; subtract the times it crosses two at once."
+  ],
+  "solution": "**What we need:** the number of squares crossed.\n\n**Key idea:** each time the diagonal crosses a grid line it enters a new square, except when it passes exactly through a lattice point (crossing two lines at once).\n\n**Step 1.** Crossings: $6$ vertical and $3$ horizontal lines.\n\n**Step 2.** Lattice points inside: $\\gcd(7, 4) - 1 = 0$.\n\n**Step 3.** Squares: $1 + (6 + 3) - (0) = 10$.\n\n**Answer:** $10$. **(C)**\n\n**Common mistake:** forgetting to subtract the lattice points where it crosses two lines at once."
+ },
+ {
+  "id": "nt_divisibility_b01",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The four-digit number $473A$ is divisible by $9$, where $A$ is a single digit. What is $A$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "E",
+  "hints": [
+   "Use the divisibility rule for $9$."
+  ],
+  "solution": "**What we need:** the missing digit $A$.\n\n**Key idea:** use the divisibility rule for $9$ instead of dividing.\n\n**Step 1.** Rule: a number is divisible by $9$ exactly when its digit sum is.\n\n**Step 2.** Known digits add to $4 + 7 + 3 = 14$, so we need $14 + A$ to be a multiple of $9$.\n\n**Step 3.** The only digit that works is $A = 4$ (sum $18$).\n\n**Step 4.** Check: $4734 = 9 \\cdot 526$.\n\n**Answer:** $A = 4$. **(E)**\n\n**Common mistake:** forgetting that the digit sum only needs to be a multiple, not exactly equal to it."
+ },
+ {
+  "id": "nt_divisibility_b02",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many integers from $33$ to $633$, inclusive, are divisible by $7$ or $6$ (or both)?",
+  "choices": {
+   "A": "$86$",
+   "B": "$170$",
+   "C": "$171$",
+   "D": "$172$",
+   "E": "$186$"
+  },
+  "answer": "C",
+  "hints": [
+   "Count the multiples of each, then subtract the numbers counted twice."
+  ],
+  "solution": "**What we need:** numbers in the range divisible by at least one of $7$ and $6$.\n\n**Key idea:** Inclusion and Exclusion: add the two counts, then subtract the numbers counted twice (those divisible by both, which means by the LCM).\n\n**Step 1.** Multiples of $7$ from $33$ to $633$: $\\lfloor 633/7 \\rfloor - \\lfloor 32/7 \\rfloor = 86$.\n\n**Step 2.** Multiples of $6$: $100$.\n\n**Step 3.** Multiples of both, that is of $\\operatorname{lcm}(7, 6) = 42$: $15$.\n\n**Step 4.** Total: $86 + 100 - 15 = 171$.\n\n**Answer:** $171$. **(C)**\n\n**Common mistake:** forgetting to subtract the overlap (giving $186$), or using $7 \\cdot 6$ instead of the LCM when they share a factor."
+ },
+ {
+  "id": "nt_divisibility_b03",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of the digits of $14937 \\times 2$?",
+  "choices": {
+   "A": "$29$",
+   "B": "$30$",
+   "C": "$31$",
+   "D": "$39$",
+   "E": "$48$"
+  },
+  "answer": "B",
+  "hints": [
+   "Multiply first, then add the digits."
+  ],
+  "solution": "**What we need:** the digit sum of the product.\n\n**Key idea:** multiply first; digit sums do not simply scale, because carrying changes the digits.\n\n**Step 1.** $14937 \\times 2 = 29874$.\n\n**Step 2.** Digits: $2 + 9 + 8 + 7 + 4 = 30$.\n\n**Answer:** $30$. **(B)**\n\n**Common mistake:** multiplying the digit sum of $14937$ by $2$ ($48$), which ignores carrying."
+ },
+ {
+  "id": "nt_divisibility_b04",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest positive multiple of $45$ whose digits add up to $18$?",
+  "choices": {
+   "A": "$450$",
+   "B": "$495$",
+   "C": "$540$",
+   "D": "$585$",
+   "E": "$810$"
+  },
+  "answer": "B",
+  "hints": [
+   "Check multiples in order, and use divisibility rules to skip impossible ones."
+  ],
+  "solution": "**What we need:** the first multiple of $45$ with digit sum $18$.\n\n**Key idea:** list multiples in order and check digit sums; divisibility rules tell you which digit sums are even possible.\n\n**Step 1.** Multiples of $45$ have digit sums that are multiples of $3$ (even $9$), so $18$ is possible.\n\n**Step 2.** Check multiples in increasing order: $360$ (sum $9$), $405$ (sum $9$), $450$ (sum $9$), $495$ (sum $18$).\n\n**Step 3.** The first one with digit sum $18$ is $495$.\n\n**Answer:** $495$. **(B)**\n\n**Common mistake:** skipping a smaller multiple. Check every multiple in order."
+ },
+ {
+  "id": "nt_divisibility_b05",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_eleven",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The four-digit number $4A75$ is divisible by $11$. What digit is $A$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$3$",
+   "C": "$6$",
+   "D": "$7$",
+   "E": "$9$"
+  },
+  "answer": "C",
+  "hints": [
+   "Alternating digit sum."
+  ],
+  "solution": "**What we need:** the digit $A$.\n\n**Key idea:** a number is divisible by $11$ exactly when its alternating digit sum (add, subtract, add, ...) is divisible by $11$.\n\n**Step 1.** With $A = 6$, the number is $4675$ and its alternating sum is $0$, a multiple of $11$.\n\n**Step 2.** No other digit works.\n\n**Answer:** $6$. **(C)**\n\n**Common mistake:** using the digit sum, which is the test for $3$ and $9$."
+ },
+ {
+  "id": "nt_divisibility_b06",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_four",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The number $51A8$ has a missing tens digit $A$. For how many digits $A$ is the number divisible by $4$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "C",
+  "hints": [
+   "Only the last two digits matter."
+  ],
+  "solution": "**What we need:** how many digits work.\n\n**Key idea:** divisibility by $4$ depends only on the number formed by the last two digits.\n\n**Step 1.** Need $A8$ divisible by $4$: $08$, $28$, $48$, $68$, $88$ work.\n\n**Step 2.** That's $5$.\n\n**Answer:** $5$. **(C)**\n\n**Common mistake:** checking the whole number's digit sum."
+ },
+ {
+  "id": "nt_divisibility_b07",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_six",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest digit $A$ that makes $920A4$ divisible by $6$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$5$",
+   "E": "$9$"
+  },
+  "answer": "A",
+  "hints": [
+   "Divisible by $6$ means divisible by $2$ and by $3$."
+  ],
+  "solution": "**What we need:** the smallest digit.\n\n**Key idea:** it already ends in an even digit, so only the digit sum (test for $3$) matters.\n\n**Step 1.** Digit sum without $A$: $15$.\n\n**Step 2.** Smallest $A$ making the sum a multiple of $3$: $A = 0$ (sum $15$).\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** forgetting the evenness condition is already met and testing for $6$ by digit sum alone."
+ },
+ {
+  "id": "nt_divisibility_b08",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_mod9",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $3315089$ is divided by $9$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$6$",
+   "D": "$9$",
+   "E": "$29$"
+  },
+  "answer": "A",
+  "hints": [
+   "Add the digits."
+  ],
+  "solution": "**What we need:** the remainder mod $9$.\n\n**Key idea:** a number and its digit sum leave the same remainder when divided by $9$.\n\n**Step 1.** Digit sum: $3 + 3 + 1 + 5 + 0 + 8 + 9 = 29$.\n\n**Step 2.** $29 \\div 9$ leaves remainder $2$.\n\n**Answer:** $2$. **(A)**\n\n**Common mistake:** answering the digit sum itself."
+ },
+ {
+  "id": "nt_divisibility_b09",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_count_range",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many multiples of $8$ are between $83$ and $283$, inclusive?",
+  "choices": {
+   "A": "$24$",
+   "B": "$25$",
+   "C": "$26$",
+   "D": "$27$",
+   "E": "$35$"
+  },
+  "answer": "B",
+  "hints": [
+   "Count multiples up to 283 minus those below 83."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** multiples of $k$ up to $N$: $\\left\\lfloor \\frac{N}{k} \\right\\rfloor$.\n\n**Step 1.** Up to $283$: $\\left\\lfloor \\frac{283}{8} \\right\\rfloor = 35$.\n\n**Step 2.** Up to $82$: $10$.\n\n**Step 3.** Between: $35 - 10 = 25$.\n\n**Answer:** $25$. **(B)**\n\n**Common mistake:** subtracting the multiples up to 83 instead of 82."
+ },
+ {
+  "id": "nt_divisibility_b10",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_eight",
+  "level": "basics",
+  "track": "both",
+  "prompt": "For how many digits $A$ is the number $5A92$ divisible by $8$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "C",
+  "hints": [
+   "Only the last three digits matter."
+  ],
+  "solution": "**What we need:** how many digits work.\n\n**Key idea:** a number is divisible by $8$ exactly when its last three digits form a multiple of $8$.\n\n**Step 1.** Check $A92$ for $A = 0, \\ldots, 9$: $192$, $392$, $592$, $792$, $992$ work.\n\n**Step 2.** Count: $5$.\n\n**Answer:** $5$. **(C)**\n\n**Common mistake:** checking only the last two digits (that's the test for 4)."
+ },
+ {
+  "id": "nt_divisibility_b11",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_largest_3digit",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the largest three-digit multiple of $62$?",
+  "choices": {
+   "A": "$868$",
+   "B": "$930$",
+   "C": "$937$",
+   "D": "$992$",
+   "E": "$993$"
+  },
+  "answer": "D",
+  "hints": [
+   "Divide $999$ by 62."
+  ],
+  "solution": "**What we need:** the largest multiple.\n\n**Key idea:** $999 = 62q + r$; the answer is $999 - r$.\n\n**Step 1.** $999 = 62 \\cdot 16 + 7$.\n\n**Step 2.** $999 - 7 = 992$.\n\n**Answer:** $992$. **(D)**\n\n**Common mistake:** rounding up past $999$."
+ },
+ {
+  "id": "nt_divisibility_b12",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_nines",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of the digits of $10^{8} - 3$?",
+  "choices": {
+   "A": "$15$",
+   "B": "$61$",
+   "C": "$70$",
+   "D": "$72$",
+   "E": "$79$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write out what $10^n - 3$ looks like."
+  ],
+  "solution": "**What we need:** the digit sum.\n\n**Key idea:** $10^n - 3$ is a string of $9$s ending in $7$.\n\n**Step 1.** $10^{8} - 3 = 99999997$ ($7$ nines then $7$).\n\n**Step 2.** Digit sum: $9 \\cdot 7 + 7 = 70$.\n\n**Answer:** $70$. **(C)**\n\n**Common mistake:** counting $n$ nines."
+ },
+ {
+  "id": "nt_divisibility_b13",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_both",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many integers from $1$ to $586$ are divisible by both $12$ and $6$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$47$",
+   "C": "$48$",
+   "D": "$49$",
+   "E": "$97$"
+  },
+  "answer": "C",
+  "hints": [
+   "Divisible by both means divisible by the LCM."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** a number divisible by both is a multiple of their LCM.\n\n**Step 1.** $\\text{lcm}(12, 6) = 12$.\n\n**Step 2.** $\\left\\lfloor \\frac{586}{12} \\right\\rfloor = 48$.\n\n**Answer:** $48$. **(C)**\n\n**Common mistake:** dividing by $72$ (the product) when the numbers share a factor."
+ },
+ {
+  "id": "nt_divisibility_b14",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_fifteen_digit",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The three-digit number $27A$ is divisible by $15$. What digit is $A$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$3$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$9$"
+  },
+  "answer": "A",
+  "hints": [
+   "$15 = 3 \\cdot 5$."
+  ],
+  "solution": "**What we need:** the digit $A$.\n\n**Key idea:** divisible by $15$ means divisible by both $5$ (last digit $0$ or $5$) and $3$ (digit sum).\n\n**Step 1.** $A$ must be $0$ or $5$.\n\n**Step 2.** Digit sums: $9 + 0 = 9$ and $9 + 5 = 14$. Only $A = 0$ gives a multiple of $3$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** checking only one of the two conditions."
+ },
+ {
+  "id": "nt_divisibility_b15",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_smallest_multiplier",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest positive integer $n$ such that $21n$ is a multiple of $84$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$8$",
+   "D": "$21$",
+   "E": "$84$"
+  },
+  "answer": "A",
+  "hints": [
+   "Cancel the common factor of 21 and 84."
+  ],
+  "solution": "**What we need:** the smallest $n$.\n\n**Key idea:** $21n$ is a multiple of $84$ exactly when $n$ is a multiple of $\\frac{84}{\\gcd(21, 84)}$.\n\n**Step 1.** $\\gcd(21, 84) = 21$.\n\n**Step 2.** $n = \\frac{84}{21} = 4$.\n\n**Answer:** $4$. **(A)**\n\n**Common mistake:** answering 84 without canceling."
+ },
+ {
+  "id": "nt_divisibility_b16",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_reverse_99",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $\\dfrac{428 - 824}{99}$?",
+  "choices": {
+   "A": "$-396$",
+   "B": "$-4$",
+   "C": "$-3$",
+   "D": "$12$",
+   "E": "$32$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write each number as $100a + 10b + c$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $\\overline{abc} - \\overline{cba} = 99(a - c)$: the middle digit cancels.\n\n**Step 1.** $a = 4$, $c = 8$.\n\n**Step 2.** $\\frac{99(4 - 8)}{99} = -4$.\n\n**Answer:** $-4$. **(B)**\n\n**Common mistake:** doing the long subtraction and then dividing incorrectly."
+ },
+ {
+  "id": "nt_divisibility_b17",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_mod11",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $756402$ is divided by $11$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$2$",
+   "C": "$6$",
+   "D": "$9$",
+   "E": "$10$"
+  },
+  "answer": "D",
+  "hints": [
+   "Alternate signs on the digits, starting from the right."
+  ],
+  "solution": "**What we need:** the remainder mod $11$.\n\n**Key idea:** $10 \\equiv -1 \\pmod{11}$, so digits alternate between $+$ and $-$ starting from the units digit.\n\n**Step 1.** From the right: 2 - 0 + 4 - 6 + 5 - 7 $= -2$.\n\n**Step 2.** $-2$ leaves remainder $9$ mod $11$.\n\n**Answer:** $9$. **(D)**\n\n**Common mistake:** using the plain digit sum."
+ },
+ {
+  "id": "nt_divisibility_b18",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_three_not_nine",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many integers from $1$ to $178$ are divisible by $3$ but not by $9$?",
+  "choices": {
+   "A": "$19$",
+   "B": "$40$",
+   "C": "$41$",
+   "D": "$59$",
+   "E": "$78$"
+  },
+  "answer": "B",
+  "hints": [
+   "Multiples of $3$ minus multiples of $9$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** every multiple of $9$ is also a multiple of $3$, so subtract.\n\n**Step 1.** Multiples of $3$: $59$. Multiples of $9$: $19$.\n\n**Step 2.** $59 - 19 = 40$.\n\n**Answer:** $40$. **(B)**\n\n**Common mistake:** adding instead of subtracting."
+ },
+ {
+  "id": "nt_divisibility_b19",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_digit_perms",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many three-digit numbers with three different digits, all chosen from $4, 6, 7, 8$, are divisible by $3$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$6$",
+   "C": "$12$",
+   "D": "$18$",
+   "E": "$24$"
+  },
+  "answer": "C",
+  "hints": [
+   "Divisibility by $3$ only depends on which digits are used."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** pick the set of three digits (their sum must be a multiple of $3$), then arrange it in $3! = 6$ ways.\n\n**Step 1.** Digit sets with sum divisible by $3$: $\\{4, 6, 8\\}$, $\\{6, 7, 8\\}$.\n\n**Step 2.** Each gives $6$ numbers: $6 \\cdot 2 = 12$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** counting digit sets without arranging them."
+ },
+ {
+  "id": "nt_divisibility_b20",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:di_sum_parity",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Is the sum $12 + 13 + \\cdots + 27$ even or odd? Answer with its remainder when divided by $2$.",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "A",
+  "hints": [
+   "Count the odd numbers in the sum."
+  ],
+  "solution": "**What we need:** the remainder mod 2.\n\n**Key idea:** a sum is odd exactly when it has an odd number of odd terms.\n\n**Step 1.** Odd numbers from $12$ to $27$: $8$.\n\n**Step 2.** $8$ is even, so the sum is even: remainder $0$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** counting all terms instead of only the odd ones."
+ },
+ {
+  "id": "nt_divisibility_c01",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:dic1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "For how many positive integers $n$ is $\\dfrac{n^2 + 28}{n + 1}$ an integer?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "B",
+  "hints": [
+   "Divide: $n^2 + 28 = (n + 1)(n - 1) + 29$.",
+   "So $n + 1$ must divide $29$."
+  ],
+  "solution": "**What we need:** the positive $n$ that make the fraction a whole number.\n\n**Key idea:** divide the polynomials so the remainder is a plain number; then the denominator must divide that number.\n\n**Step 1.** $n^2 + 28 = (n + 1)(n - 1) + 29$, so $\\frac{n^2 + 28}{n + 1} = n - 1 + \\frac{29}{n + 1}$.\n\n**Step 2.** This is an integer exactly when $n + 1$ divides $29$.\n\n**Step 3.** Divisors of $29$ bigger than $1$ (so $n \\ge 1$): 29.\n\n**Step 4.** Each gives $n = d - 1$: 28.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** counting all divisors of $29$, including ones that give $n \\le 0$."
+ },
+ {
+  "id": "nt_divisibility_c02",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:dic2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many 4-digit positive integers are multiples of $7$?",
+  "choices": {
+   "A": "$1285$",
+   "B": "$1286$",
+   "C": "$1287$",
+   "D": "$1288$",
+   "E": "$1428$"
+  },
+  "answer": "B",
+  "hints": [
+   "Count multiples up to the largest, minus those below the smallest."
+  ],
+  "solution": "**What we need:** how many multiples of $7$ lie from $1000$ to $9999$.\n\n**Key idea:** count multiples up to the top, then subtract those below the bottom.\n\n**Step 1.** Multiples of $7$ up to $9999$: $\\lfloor 9999/7 \\rfloor = 1428$.\n\n**Step 2.** Multiples below $1000$ (up to $999$): $\\lfloor 999/7 \\rfloor = 142$.\n\n**Step 3.** Difference: $1428 - 142 = 1286$.\n\n**Answer:** $1286$. **(B)**\n\n**Common mistake:** forgetting the small multiples below $1000$ and answering $1428$."
+ },
+ {
+  "id": "nt_divisibility_c03",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:dic3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A two-digit number is $36$ more than the number formed by reversing its digits. Its digits add to $10$. What is the number?",
+  "choices": {
+   "A": "$36$",
+   "B": "$37$",
+   "C": "$64$",
+   "D": "$73$",
+   "E": "$82$"
+  },
+  "answer": "D",
+  "hints": [
+   "Write the number as $10a + b$. Reversing gives $10b + a$, and the difference is $9(a - b)$."
+  ],
+  "solution": "**What we need:** the two digit number. Call its tens digit $a$ and ones digit $b$.\n\n**Key idea:** a two digit number $\\overline{ab}$ is worth $10a + b$; reversed it is $10b + a$.\n\n**Step 1.** Difference: $(10a + b) - (10b + a) = 9a - 9b = 9(a - b) = 36$, so $a - b = 4$.\n\n**Step 2.** Digit sum: $a + b = 10$.\n\n**Step 3.** Add the equations: $2a = 14$, so $a = 7$ and $b = 3$.\n\n**Step 4.** The number is $73$. Check: $73 - 37 = 36$.\n\n**Answer:** $73$. **(D)**\n\n**Common mistake:** answering with the reversed number $37$."
+ },
+ {
+  "id": "nt_divisibility_c04",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:dic_cubic_divides",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the largest positive integer $n$ for which $n + 3$ divides $n^3 + 296$?",
+  "choices": {
+   "A": "$27$",
+   "B": "$265$",
+   "C": "$266$",
+   "D": "$269$",
+   "E": "$272$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the remainder when $n^3 + 296$ is divided by $n + 3$."
+  ],
+  "solution": "**What we need:** the largest $n$.\n\n**Key idea:** $n \\equiv -3 \\pmod{n + 3}$, so $n^3 + 296 \\equiv (-3)^3 + 296 = 269$. So $n + 3$ must divide $269$.\n\n**Step 1.** Remainder Theorem: $n + 3$ divides $n^3 + 296$ exactly when it divides $269$.\n\n**Step 2.** The largest is $n + 3 = 269$, so $n = 266$.\n\n**Answer:** $266$. **(C)**\n\n**Common mistake:** setting $n = 269$ and forgetting to subtract 3."
+ },
+ {
+  "id": "nt_divisibility_c05",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:dic_repunit",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the smallest number of $1$s in a number $11\\ldots1$ (all digits $1$) that is divisible by $11$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$10$"
+  },
+  "answer": "B",
+  "hints": [
+   "Track remainders of $1, 11, 111, \\ldots$ mod 11."
+  ],
+  "solution": "**What we need:** the smallest length.\n\n**Key idea:** each repunit is $10 \\times$ the previous $+ 1$, so remainders follow $r \\to 10r + 1 \\pmod{11}$.\n\n**Step 1.** Remainders: 1, 0.\n\n**Step 2.** The first zero is at length $2$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** guessing $p - 1$, which is a multiple of the answer but not always the smallest."
+ },
+ {
+  "id": "nt_divisibility_c06",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:dic_concat",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "The number $N = 123456789101112\\ldots21$ is formed by writing the integers $1$ to $21$ in order. What is the remainder when $N$ is divided by $9$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$3$",
+   "C": "$6$",
+   "D": "$7$",
+   "E": "$8$"
+  },
+  "answer": "C",
+  "hints": [
+   "Digit sums of the pieces add up."
+  ],
+  "solution": "**What we need:** the remainder mod 9.\n\n**Key idea:** mod $9$ (and mod $3$), a number is congruent to its digit sum, and each piece $k$ is congruent to $k$ itself.\n\n**Step 1.** $N \\equiv 1 + 2 + \\cdots + 21 = 231 \\pmod{9}$.\n\n**Step 2.** $231 \\bmod 9 = 6$.\n\n**Answer:** $6$. **(C)**\n\n**Common mistake:** adding only the single-digit pieces."
+ },
+ {
+  "id": "nt_divisibility_c07",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:dic_zero_one",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the smallest positive multiple of $45$ whose digits are all $0$s and $1$s?",
+  "choices": {
+   "A": "$111111111$",
+   "B": "$1111111110$",
+   "C": "$1111111111$",
+   "D": "$11111111100$",
+   "E": "$11111111111$"
+  },
+  "answer": "B",
+  "hints": [
+   "Split 45 into factors that force the last digits and the digit sum."
+  ],
+  "solution": "**What we need:** the smallest such number.\n\n**Key idea:** $45 = 3^{2} \\cdot 5$: factors of $2$ and $5$ force trailing zeros; factors of $3$ or $9$ force the number of $1$s.\n\n**Step 1.** $1111111110$ has digit sum $9$ and ends in $1$ zero(s), which meets every requirement.\n\n**Step 2.** Any shorter string of $0$s and $1$s fails one of them.\n\n**Answer:** $1111111110$. **(B)**\n\n**Common mistake:** forgetting the trailing zeros needed for factors of $2$ or $5$."
+ },
+ {
+  "id": "nt_divisibility_c08",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:dic_all_integers",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "For how many integers $n$ (positive, negative, or zero) is $\\dfrac{n + 12}{n - 1}$ an integer?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$13$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write it as $1 + \\frac{13}{n - 1}$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** $\\frac{n + 12}{n - 1} = 1 + \\frac{13}{n - 1}$, so $n - 1$ must divide $13$ (positive or negative divisor).\n\n**Step 1.** $13$ has $2$ positive divisors, so $4$ divisors counting negatives.\n\n**Step 2.** Each gives one $n$: $4$.\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** counting only positive divisors."
+ },
+ {
+  "id": "nt_divisibility_c09",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:dic_consecutive_product",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the largest integer that divides $n(n + 1)(n + 2)(n + 3)(n + 4)$ for every positive integer $n$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$60$",
+   "C": "$120$",
+   "D": "$240$",
+   "E": "$720$"
+  },
+  "answer": "C",
+  "hints": [
+   "Try $n = 1$."
+  ],
+  "solution": "**What we need:** the largest guaranteed divisor.\n\n**Key idea:** the product of $5$ consecutive integers is $5!$ times a binomial coefficient, so it's always a multiple of $5!$.\n\n**Step 1.** $n = 1$ gives $5! = 120$, so the answer is at most $120$.\n\n**Step 2.** And $\\frac{n(n + 1)\\cdots(n + 4)}{5!} = \\binom{n + 4}{5}$ is always an integer.\n\n**Answer:** $120$. **(C)**\n\n**Common mistake:** guessing $5$ or the product of the first few primes."
+ },
+ {
+  "id": "nt_divisibility_c10",
+  "skillId": "nt_divisibility",
+  "family": "nt_divisibility:dic_digit_sum_mult5",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many three-digit multiples of $5$ have digits adding to $9$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$9$",
+   "C": "$13$",
+   "D": "$14$",
+   "E": "$15$"
+  },
+  "answer": "C",
+  "hints": [
+   "The last digit is $0$ or $5$; count each case."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** split by the last digit, then count first two digits with the right sum.\n\n**Step 1.** Last digit $0$: first two digits sum to $9$, $9$ ways.\n\n**Step 2.** Last digit $5$: first two digits sum to $4$, $4$ ways.\n\n**Step 3.** Total: $13$.\n\n**Answer:** $13$. **(C)**\n\n**Common mistake:** letting the first digit be $0$."
+ },
+ {
+  "id": "nt_modular_b01",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $924 \\times 3428$ is divided by $6$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$5$"
+  },
+  "answer": "A",
+  "hints": [
+   "Reduce each number mod 6 first."
+  ],
+  "solution": "**What we need:** $(924 \\times 3428) \\bmod 6$ without computing the full product.\n\n**Key idea:** remainders can be added or multiplied first: replace each number by its remainder, then reduce again.\n\n**Step 1.** $924 = 6 \\cdot 154 + 0$, so $924 \\equiv 0$.\n\n**Step 2.** $3428 = 6 \\cdot 571 + 2$, so $3428 \\equiv 2$.\n\n**Step 3.** Multiply: $0 \\times 2 = 0$, which leaves remainder $0$ when divided by $6$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** forgetting to reduce the final result, which can be bigger than 6."
+ },
+ {
+  "id": "nt_modular_b02",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "When $n$ is divided by $12$, the remainder is $9$. What is the remainder when $5n$ is divided by $12$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$45$"
+  },
+  "answer": "C",
+  "hints": [
+   "If $n \\equiv 9$, then $5n \\equiv 5 \\cdot 9 \\pmod{12}$."
+  ],
+  "solution": "**What we need:** the remainder of $5n$.\n\n**Key idea:** write $n = 12q + 9$; multiplying by $5$ multiplies the remainder by $5$ too (then reduce).\n\n**Step 1.** $5n = 5(12q + 9) = 12(5q) + 45$.\n\n**Step 2.** The part $12(5q)$ is a multiple of $12$, so only $45$ matters.\n\n**Step 3.** $45 = 12 \\cdot 3 + 9$.\n\n**Answer:** $9$. **(C)**\n\n**Common mistake:** answering $45$ without reducing it below $12$."
+ },
+ {
+  "id": "nt_modular_b03",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Today is Saturday. What day of the week will it be $327$ days from today?",
+  "choices": {
+   "A": "Thursday",
+   "B": "Friday",
+   "C": "Tuesday",
+   "D": "Saturday",
+   "E": "Sunday"
+  },
+  "answer": "A",
+  "hints": [
+   "Days repeat every 7. Find the remainder when dividing by 7."
+  ],
+  "solution": "**What we need:** the weekday $327$ days from now.\n\n**Key idea:** weekdays repeat every $7$ days, so only the remainder of 327 divided by $7$ matters.\n\n**Step 1.** $327 = 7 \\cdot 46 + 5$.\n\n**Step 2.** After $46$ full weeks it is Saturday again; then go $5$ more days.\n\n**Answer:** Thursday. **(A)**\n\n**Common mistake:** counting today as the first day."
+ },
+ {
+  "id": "nt_modular_b04",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest positive integer $x$ such that $6x \\equiv 4 \\pmod{11}$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$8$",
+   "D": "$9$",
+   "E": "$10$"
+  },
+  "answer": "C",
+  "hints": [
+   "Try $x = 1, 2, 3, \\ldots$, or multiply by the inverse of $6$ mod $11$."
+  ],
+  "solution": "**What we need:** the smallest $x > 0$ with $6x$ leaving remainder $4$ when divided by $11$.\n\n**Key idea:** since $6$ and $11$ share no factor, exactly one $x$ from $1$ to $10$ works. Try them in order (or use an inverse).\n\n**Step 1.** Try $x = 1, 2, \\ldots$: $6 \\cdot 4 = 24 \\equiv 2$; $6 \\cdot 5 = 30 \\equiv 8$; $6 \\cdot 6 = 36 \\equiv 3$; $6 \\cdot 7 = 42 \\equiv 9$; $6 \\cdot 8 = 48 \\equiv 4$ (earlier values do not work).\n\n**Step 2.** The first match is $x = 8$.\n\n**Answer:** $x = 8$. **(C)**\n\n**Common mistake:** answering $4$, the right side, instead of solving for $x$."
+ },
+ {
+  "id": "nt_modular_b05",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_sum_mod",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $967 + 607 + 911$ is divided by $12$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$25$"
+  },
+  "answer": "B",
+  "hints": [
+   "Reduce each number first."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** remainders add: reduce each number mod 12, add, and reduce again.\n\n**Step 1.** Remainders: $967 \\equiv 7$, $607 \\equiv 7$, $911 \\equiv 11$.\n\n**Step 2.** Sum: $25 \\equiv 1 \\pmod{12}$.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** forgetting to reduce the sum of remainders."
+ },
+ {
+  "id": "nt_modular_b06",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_negative",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $-15$ is divided by $12$? (Remainders are between $0$ and $11$.)",
+  "choices": {
+   "A": "$-3$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$9$",
+   "E": "$11$"
+  },
+  "answer": "D",
+  "hints": [
+   "Add multiples of 12 until you reach a number in range."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** a remainder must be between $0$ and $m - 1$, even for negative numbers.\n\n**Step 1.** $-15 = 12 \\cdot (-2) + 9$.\n\n**Step 2.** Remainder: $9$.\n\n**Answer:** $9$. **(D)**\n\n**Common mistake:** giving the remainder of $15$ instead."
+ },
+ {
+  "id": "nt_modular_b07",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_clock",
+  "level": "basics",
+  "track": "both",
+  "prompt": "It is 1 o'clock now. What hour will a 12-hour clock show $205$ hours from now?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$8$",
+   "E": "$14$"
+  },
+  "answer": "B",
+  "hints": [
+   "Only the remainder of 205 mod 12 matters."
+  ],
+  "solution": "**What we need:** the hour shown.\n\n**Key idea:** every $12$ hours the clock comes back to the same hour.\n\n**Step 1.** $205 = 12 \\cdot 17 + 1$.\n\n**Step 2.** 1 o'clock plus $1$ hours is 2 o'clock.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** writing $0$ instead of $12$ for a remainder of zero."
+ },
+ {
+  "id": "nt_modular_b08",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_square",
+  "level": "basics",
+  "track": "both",
+  "prompt": "When $n$ is divided by $11$, the remainder is $9$. What is the remainder when $n^2$ is divided by $11$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$7$",
+   "D": "$9$",
+   "E": "$81$"
+  },
+  "answer": "A",
+  "hints": [
+   "Remainders multiply."
+  ],
+  "solution": "**What we need:** the remainder of $n^2$.\n\n**Key idea:** if $n \\equiv a$, then $n^2 \\equiv a^2 \\pmod{m}$.\n\n**Step 1.** $n^2 \\equiv 9^2 = 81 \\pmod{11}$.\n\n**Step 2.** $81 \\equiv 4$.\n\n**Answer:** $4$. **(A)**\n\n**Common mistake:** forgetting to reduce $81$."
+ },
+ {
+  "id": "nt_modular_b09",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_cube",
+  "level": "basics",
+  "track": "both",
+  "prompt": "When $n$ is divided by $8$, the remainder is $7$. What is the remainder when $n^3 + 16$ is divided by $8$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$5$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$359$"
+  },
+  "answer": "C",
+  "hints": [
+   "Replace $n$ with 7."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** substitute the remainder for $n$ and reduce.\n\n**Step 1.** $n^3 + 16 \\equiv 7^3 + 16 = 359 \\pmod{8}$.\n\n**Step 2.** $359 \\equiv 7$.\n\n**Answer:** $7$. **(C)**\n\n**Common mistake:** cubing without reducing."
+ },
+ {
+  "id": "nt_modular_b10",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_count_class",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many integers from $1$ to $293$ leave a remainder of $4$ when divided by $9$?",
+  "choices": {
+   "A": "$32$",
+   "B": "$33$",
+   "C": "$34$",
+   "D": "$35$",
+   "E": "$260$"
+  },
+  "answer": "B",
+  "hints": [
+   "List them: they form an arithmetic sequence."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** the numbers are $4, 13, \\ldots$, stepping by $9$.\n\n**Step 1.** First: $4$. Last at most $293$: $292$.\n\n**Step 2.** Count: $\\frac{292 - 4}{9} + 1 = 33$.\n\n**Answer:** $33$. **(B)**\n\n**Common mistake:** including $0$, which isn't in the range."
+ },
+ {
+  "id": "nt_modular_b11",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_shifted",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest integer $x > 100$ with $x + 46 \\equiv 1 \\pmod{5}$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$104$",
+   "C": "$105$",
+   "D": "$106$",
+   "E": "$110$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find which remainder $x$ needs."
+  ],
+  "solution": "**What we need:** the smallest $x$ above $100$.\n\n**Key idea:** subtract $46$: $x \\equiv 1 - 46 \\equiv 0 \\pmod{5}$.\n\n**Step 1.** $x \\equiv 0 \\pmod{5}$.\n\n**Step 2.** $100 \\equiv 0$, so step up to the next number $\\equiv 0$: $105$.\n\n**Answer:** $105$. **(C)**\n\n**Common mistake:** solving for $x$ but forgetting the $x > 100$ condition."
+ },
+ {
+  "id": "nt_modular_b12",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_mod4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $287248225$ is divided by $4$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "B",
+  "hints": [
+   "Only the last few digits matter."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** $100$ is a multiple of $4$, so only the last two digits matter.\n\n**Step 1.** Last digits: $25$.\n\n**Step 2.** $25 \\bmod 4 = 1$.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** using the digit sum, which works for $3$ and $9$ only."
+ },
+ {
+  "id": "nt_modular_b13",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_consecutive_product",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $543 \\times 544$ is divided by $10$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$7$",
+   "E": "$9$"
+  },
+  "answer": "B",
+  "hints": [
+   "Reduce each factor first."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** remainders multiply: reduce each factor, multiply, reduce again.\n\n**Step 1.** Factors mod 10: $543 \\equiv 3$, $544 \\equiv 4$.\n\n**Step 2.** Product: $3 \\cdot 4 = 12 \\equiv 2$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** adding the remainders instead of multiplying."
+ },
+ {
+  "id": "nt_modular_b14",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_sum_squares",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $1^2 + 2^2 + \\cdots + 38^2$ is divided by $11$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$4$",
+   "E": "$10$"
+  },
+  "answer": "A",
+  "hints": [
+   "Use $\\frac{n(n + 1)(2n + 1)}{6}$."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** the sum of the first $n$ squares is $\\frac{n(n + 1)(2n + 1)}{6}$.\n\n**Step 1.** Sum: $\\frac{38 \\cdot 39 \\cdot 77}{6} = 19019$.\n\n**Step 2.** $19019 \\bmod 11 = 0$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** using the sum of the first $n$ numbers instead of squares."
+ },
+ {
+  "id": "nt_modular_b15",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_combo",
+  "level": "basics",
+  "track": "both",
+  "prompt": "If $x \\equiv 7 \\pmod{11}$ and $y \\equiv 6 \\pmod{11}$, what is the remainder when $3x + 5y$ is divided by $11$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$7$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$51$"
+  },
+  "answer": "B",
+  "hints": [
+   "Substitute the remainders."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** linear combinations respect remainders.\n\n**Step 1.** $3 \\cdot 7 + 5 \\cdot 6 = 51$.\n\n**Step 2.** $51 \\equiv 7 \\pmod{11}$.\n\n**Answer:** $7$. **(B)**\n\n**Common mistake:** swapping the coefficients."
+ },
+ {
+  "id": "nt_modular_b16",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_repeated_digits",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when the $36$-digit number formed by writing $8909$ $9$ times in a row is divided by $9$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$4$",
+   "E": "$8$"
+  },
+  "answer": "A",
+  "hints": [
+   "A number and its digit sum agree mod 9."
+  ],
+  "solution": "**What we need:** the remainder mod 9.\n\n**Key idea:** add the digits: each copy of the block adds the same amount.\n\n**Step 1.** Block digit sum: $26$.\n\n**Step 2.** Total: $9 \\cdot 26 = 234$.\n\n**Step 3.** $234 \\bmod 9 = 0$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** using only one copy of the block."
+ },
+ {
+  "id": "nt_modular_b17",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_repeating_decimal",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the $117$th digit after the decimal point in $\\dfrac{24}{41}$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$5$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$9$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find the repeating block."
+  ],
+  "solution": "**What we need:** the digit in position 117.\n\n**Key idea:** the decimal repeats with a fixed block; reduce the position mod the block length.\n\n**Step 1.** $\\frac{24}{41} = 0.\\overline{58536}$, block length $5$.\n\n**Step 2.** $117 = 5 \\cdot 23 + 2$, so it's digit $2$ of the block: $8$.\n\n**Answer:** $8$. **(D)**\n\n**Common mistake:** an off by one when matching the remainder to a position in the block."
+ },
+ {
+  "id": "nt_modular_b18",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_triangular_units",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the units digit of $1 + 2 + 3 + \\cdots + 50$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "C",
+  "hints": [
+   "Use the formula, then keep only the last digit."
+  ],
+  "solution": "**What we need:** the units digit.\n\n**Key idea:** $1 + \\cdots + n = \\frac{n(n + 1)}{2}$.\n\n**Step 1.** $\\frac{50 \\cdot 51}{2} = 1275$.\n\n**Step 2.** Units digit: $5$.\n\n**Answer:** $5$. **(C)**\n\n**Common mistake:** adding only the units digits of the terms without carrying correctly."
+ },
+ {
+  "id": "nt_modular_b19",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_sum_class",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of all integers from $1$ to $40$ that leave a remainder of $2$ when divided by $6$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$102$",
+   "C": "$140$",
+   "D": "$142$",
+   "E": "$184$"
+  },
+  "answer": "C",
+  "hints": [
+   "They form an arithmetic sequence."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** the numbers $2, 8, \\ldots$ form an arithmetic sequence: sum $=$ count $\\times$ average.\n\n**Step 1.** From $2$ to $38$ in steps of $6$: $7$ terms.\n\n**Step 2.** Sum: $7 \\cdot \\frac{2 + 38}{2} = 140$.\n\n**Answer:** $140$. **(C)**\n\n**Common mistake:** including one term past 40."
+ },
+ {
+  "id": "nt_modular_b20",
+  "skillId": "nt_modular",
+  "family": "nt_modular:mo_mod_product_big",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $1043 \\times 2189 - 1043$ is divided by $7$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$4$",
+   "E": "$6$"
+  },
+  "answer": "A",
+  "hints": [
+   "Factor: $a(b - 1)$."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** factor first, then reduce each factor.\n\n**Step 1.** $1043 \\times 2189 - 1043 = 1043(2189 - 1) = 1043 \\cdot 2188$.\n\n**Step 2.** $1043 \\equiv 0$ and $2188 \\equiv 4$; product $\\equiv 0 \\equiv 0$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** forgetting to subtract 1043."
+ },
+ {
+  "id": "nt_modular_c01",
+  "skillId": "nt_modular",
+  "family": "nt_modular:moc1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the smallest positive integer that leaves remainder $2$ when divided by $3$, remainder $2$ when divided by $4$, and remainder $4$ when divided by $5$?",
+  "choices": {
+   "A": "$14$",
+   "B": "$19$",
+   "C": "$26$",
+   "D": "$46$",
+   "E": "$74$"
+  },
+  "answer": "A",
+  "hints": [
+   "List numbers that fit the first condition, and check them against the others."
+  ],
+  "solution": "**What we need:** the smallest number meeting all three remainder conditions.\n\n**Key idea:** list the numbers that satisfy the condition with the largest divisor (fewest candidates), and test them against the others.\n\n**Step 1.** Numbers with remainder $4$ when divided by $5$: 4, 9, 14, ...\n\n**Step 2.** Test each against the other two conditions; the first that passes is $14$.\n\n**Step 3.** Check: $14 = 3 \\cdot 4 + 2$, $14 = 4 \\cdot 3 + 2$, $14 = 5 \\cdot 2 + 4$.\n\n**Step 4.** (All solutions differ by $\\operatorname{lcm}(3, 4, 5) = 60$, so $14$ is the smallest positive one.)\n\n**Answer:** $14$. **(A)**\n\n**Common mistake:** adding the next multiple of $60$; the question asks for the smallest."
+ },
+ {
+  "id": "nt_modular_c02",
+  "skillId": "nt_modular",
+  "family": "nt_modular:moc2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many integers $n$ with $1 \\le n \\le 200$ satisfy $n^2 \\equiv 4 \\pmod{10}$?",
+  "choices": {
+   "A": "$20$",
+   "B": "$39$",
+   "C": "$40$",
+   "D": "$41$",
+   "E": "$42$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find which remainders mod $10$ work, then count how often each appears up to $200$."
+  ],
+  "solution": "**What we need:** how many $n$ up to $200$ have $n^2$ leaving remainder $4$ when divided by $10$.\n\n**Key idea:** $n^2 \\bmod 10$ depends only on $n \\bmod 10$, so test the $10$ remainders once, then count.\n\n**Step 1.** Squares of $0, 1, \\ldots, 9$ mod $10$: 0, 1, 4, 9, 6, 5, 6, 9, 4, 1.\n\n**Step 2.** The remainders that work: 2, 8 ($2$ of them).\n\n**Step 3.** $200 = 10 \\cdot 20 + 0$: $20$ full blocks give $40$; the last partial block (remainders $1$ to $0$) adds $0$.\n\n**Step 4.** Total: $40$.\n\n**Answer:** $40$. **(C)**\n\n**Common mistake:** forgetting the partial block at the end, or counting the remainder $0$ as if $n = 0$ were allowed."
+ },
+ {
+  "id": "nt_modular_c03",
+  "skillId": "nt_modular",
+  "family": "nt_modular:moc3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the remainder when $1 + 2 + 3 + \\cdots + 105$ is divided by $11$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$2$",
+   "C": "$6$",
+   "D": "$9$",
+   "E": "$10$"
+  },
+  "answer": "E",
+  "hints": [
+   "Use $\\frac{n(n + 1)}{2}$."
+  ],
+  "solution": "**What we need:** the remainder of a long sum.\n\n**Key idea:** use the closed formula for the sum, then divide.\n\n**Step 1.** The sum equals $\\frac{105 \\cdot 106}{2} = 5565$.\n\n**Step 2.** $5565 = 11 \\cdot 505 + 10$.\n\n**Answer:** $10$. **(E)**\n\n**Common mistake:** trying to reduce each term and losing track; the formula is faster."
+ },
+ {
+  "id": "nt_modular_c04",
+  "skillId": "nt_modular",
+  "family": "nt_modular:moc_crt2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the smallest positive integer that leaves remainder $0$ when divided by $5$ and remainder $1$ when divided by $4$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$5$",
+   "C": "$10$",
+   "D": "$15$",
+   "E": "$25$"
+  },
+  "answer": "B",
+  "hints": [
+   "List numbers with the first remainder and test the second."
+  ],
+  "solution": "**What we need:** the smallest such number.\n\n**Key idea:** Chinese Remainder Theorem: there's exactly one answer between $1$ and 20.\n\n**Step 1.** Numbers $\\equiv 0 \\pmod{5}$: 5, 10, 15, 20, ...\n\n**Step 2.** The first that is $\\equiv 1 \\pmod{4}$: $5$.\n\n**Answer:** $5$. **(B)**\n\n**Common mistake:** adding the remainders."
+ },
+ {
+  "id": "nt_modular_c05",
+  "skillId": "nt_modular",
+  "family": "nt_modular:moc_sqrt_one",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many integers $x$ with $0 \\le x < 12$ satisfy $x^2 \\equiv 1 \\pmod{12}$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$8$"
+  },
+  "answer": "C",
+  "hints": [
+   "$1$ and $11$ always work. Are there more?"
+  ],
+  "solution": "**What we need:** the number of solutions.\n\n**Key idea:** $x^2 \\equiv 1$ means $12$ divides $(x - 1)(x + 1)$; when $12$ has several prime factors there can be extra solutions.\n\n**Step 1.** Checking $x = 0, 1, \\ldots, 11$: solutions are $1, 5, 7, 11$.\n\n**Step 2.** That's $4$.\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** assuming only $\\pm 1$ work, as for prime moduli."
+ },
+ {
+  "id": "nt_modular_c06",
+  "skillId": "nt_modular",
+  "family": "nt_modular:moc_linear",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the smallest positive integer $x$ with $17x \\equiv 13 \\pmod{19}$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$9$",
+   "D": "$13$",
+   "E": "$16$"
+  },
+  "answer": "A",
+  "hints": [
+   "Find the inverse of 17 mod 19."
+  ],
+  "solution": "**What we need:** $x$.\n\n**Key idea:** multiply both sides by the inverse of $17$ (the number $u$ with $17u \\equiv 1$).\n\n**Step 1.** $17 \\cdot 9 = 153 \\equiv 1 \\pmod{19}$, so the inverse is $9$.\n\n**Step 2.** $x \\equiv 13 \\cdot 9 = 117 \\equiv 3 \\pmod{19}$.\n\n**Answer:** $3$. **(A)**\n\n**Common mistake:** dividing 13 by 17 as ordinary numbers."
+ },
+ {
+  "id": "nt_modular_c07",
+  "skillId": "nt_modular",
+  "family": "nt_modular:moc_products_sum",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the remainder when $1 \\cdot 2 + 2 \\cdot 3 + 3 \\cdot 4 + \\cdots + 46 \\cdot 47$ is divided by $11$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$7$",
+   "C": "$8$",
+   "D": "$9$",
+   "E": "$10$"
+  },
+  "answer": "C",
+  "hints": [
+   "$k(k + 1)$ sums to $\\frac{n(n + 1)(n + 2)}{3}$."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** $\\sum_{k=1}^n k(k + 1) = \\frac{n(n + 1)(n + 2)}{3}$ (it telescopes).\n\n**Step 1.** Sum: $\\frac{46 \\cdot 47 \\cdot 48}{3} = 34592$.\n\n**Step 2.** $34592 \\bmod 11 = 8$.\n\n**Answer:** $8$. **(C)**\n\n**Common mistake:** using only the last term."
+ },
+ {
+  "id": "nt_modular_c08",
+  "skillId": "nt_modular",
+  "family": "nt_modular:moc_wilson",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the remainder when $11!$ is divided by $13$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$11$",
+   "E": "$12$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair each number with its inverse mod 13."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** Wilson's Theorem: $(p - 1)! \\equiv -1 \\pmod{p}$ for prime $p$.\n\n**Step 1.** $(13 - 1)! = (13 - 1) \\cdot (13 - 2)! \\equiv -1$.\n\n**Step 2.** Since $13 - 1 \\equiv -1$, we get $-(13 - 2)! \\equiv -1$, so $(13 - 2)! \\equiv 1$.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** thinking a factorial is always divisible by 13; it isn't until the factorial reaches 13."
+ },
+ {
+  "id": "nt_modular_c09",
+  "skillId": "nt_modular",
+  "family": "nt_modular:moc_n3_minus_n",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "For how many integers $n$ from $1$ to $150$ is $n^3 - n$ divisible by $16$?",
+  "choices": {
+   "A": "$45$",
+   "B": "$46$",
+   "C": "$47$",
+   "D": "$75$",
+   "E": "$150$"
+  },
+  "answer": "B",
+  "hints": [
+   "$n^3 - n = (n - 1)n(n + 1)$; check one full cycle of 16 values."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** divisibility by $16$ depends only on $n \\bmod 16$, so count good residues in one cycle and repeat.\n\n**Step 1.** In each block of $16$, the good residues are $1, 7, 9, 15, 0$: $5$ of them.\n\n**Step 2.** Over $1$ to $150$: $46$.\n\n**Answer:** $46$. **(B)**\n\n**Common mistake:** assuming the product of three consecutive numbers is always divisible by 16."
+ },
+ {
+  "id": "nt_modular_c10",
+  "skillId": "nt_modular",
+  "family": "nt_modular:moc_rem_one_all",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the smallest integer greater than $1$ that leaves remainder $1$ when divided by every integer from $2$ to $4$?",
+  "choices": {
+   "A": "$11$",
+   "B": "$12$",
+   "C": "$13$",
+   "D": "$16$",
+   "E": "$25$"
+  },
+  "answer": "C",
+  "hints": [
+   "Subtract $1$."
+  ],
+  "solution": "**What we need:** the number.\n\n**Key idea:** $n - 1$ is divisible by $2, 3, \\ldots, 4$, so it's a multiple of their LCM.\n\n**Step 1.** $\\text{lcm}(2, \\ldots, 4) = 12$.\n\n**Step 2.** $n = 12 + 1 = 13$.\n\n**Answer:** $13$. **(C)**\n\n**Common mistake:** using $4! + 1$."
+ },
+ {
+  "id": "nt_powers_b01",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the units digit of $24^{653}$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "E",
+  "hints": [
+   "Units digits of powers repeat in a cycle of length at most 4."
+  ],
+  "solution": "**What we need:** the last digit of $24^{653}$.\n\n**Key idea:** the last digit of a power depends only on the last digit of the base, $4$, and it repeats in a short cycle.\n\n**Step 1.** Last digits of $4^1, 4^2, \\ldots$: 4, 6, then it repeats (cycle length $2$).\n\n**Step 2.** $653 = 2 \\cdot 326 + 1$, so $24^{653}$ is in position $1$ of the cycle.\n\n**Step 3.** Position $1$ is $4$.\n\n**Answer:** $4$. **(E)**\n\n**Common mistake:** treating remainder $0$ as the first position. A remainder of $0$ means the last position in the cycle."
+ },
+ {
+  "id": "nt_powers_b02",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the units digit of $5^{10} + 22^{183}$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find each units digit separately, then add."
+  ],
+  "solution": "**What we need:** the last digit of the sum.\n\n**Key idea:** find each last digit from its cycle, then add the last digits.\n\n**Step 1.** $5$: last digits cycle 5; $10$ lands on $5$.\n\n**Step 2.** $22$: last digits cycle 2, 4, 8, 6; $183$ lands on $8$.\n\n**Step 3.** $5 + 8 = 13$, which ends in $3$.\n\n**Answer:** $3$. **(D)**\n\n**Common mistake:** adding the bases or the exponents first. Only the last digits of the two powers matter."
+ },
+ {
+  "id": "nt_powers_b03",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $2^{133}$ is divided by $3$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the smallest $k$ with $2^k \\equiv 1 \\pmod{3}$."
+  ],
+  "solution": "**What we need:** $2^{133} \\bmod 3$.\n\n**Key idea:** find the first power of $2$ that leaves remainder $1$; after it the remainders repeat.\n\n**Step 1.** Remainders of $2^1, \\ldots, 2^{2}$ mod $3$: 2, 1. So $2^{2} \\equiv 1$.\n\n**Step 2.** $133 = 2 \\cdot 66 + 1$, so $2^{133} \\equiv (1)^{66} \\cdot 2^{1}$.\n\n**Step 3.** $2^{1} \\equiv 2 \\pmod{3}$.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** using the exponent's remainder as the answer instead of the power's remainder."
+ },
+ {
+  "id": "nt_powers_b04",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What are the last two digits of $7^{120}$? (Give the two-digit number they form.)",
+  "choices": {
+   "A": "$1$",
+   "B": "$11$",
+   "C": "$21$",
+   "D": "$41$",
+   "E": "$51$"
+  },
+  "answer": "A",
+  "hints": [
+   "Work mod 100. Powers of 7 repeat mod 100; find the cycle."
+  ],
+  "solution": "**What we need:** $7^{120} \\bmod 100$.\n\n**Key idea:** the last two digits of powers of $7$ repeat with some period; find it, then reduce the exponent.\n\n**Step 1.** Multiply by $7$ repeatedly, keeping only the last two digits: 07, 49, 43, 01. The first time we get $01$ is at $7^{4}$.\n\n**Step 2.** $120 = 4 \\cdot 30 + 0$, so $7^{120} \\equiv 7^{0} \\pmod{100}$.\n\n**Step 3.** $7^{0} \\bmod 100 = 1$.\n\n**Answer:** $01$. **(A)**\n\n**Common mistake:** using a cycle of length $4$, which only works for the last digit, not the last two."
+ },
+ {
+  "id": "nt_powers_b05",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_units_product",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the units digit of $13^{263} \\cdot 12^{225}$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$7$",
+   "E": "$9$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find each units digit separately, then multiply."
+  ],
+  "solution": "**What we need:** the units digit.\n\n**Key idea:** units digits of powers repeat in cycles of length at most $4$.\n\n**Step 1.** Units digit of $13^{263}$: $7$ (cycle 3, 9, 7, 1; $263 \\bmod 4 = 3$).\n\n**Step 2.** Units digit of $12^{225}$: $2$ (cycle 2, 4, 8, 6; $225 \\bmod 4 = 1$).\n\n**Step 3.** Product: $7 \\cdot 2 = 14$, units digit $4$.\n\n**Answer:** $4$. **(B)**\n\n**Common mistake:** adding the units digits instead of multiplying."
+ },
+ {
+  "id": "nt_powers_b06",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_units_minus",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the units digit of $9^{235} - 8$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$5$",
+   "D": "$7$",
+   "E": "$9$"
+  },
+  "answer": "A",
+  "hints": [
+   "Find the units digit of the power first."
+  ],
+  "solution": "**What we need:** the units digit.\n\n**Key idea:** subtracting can borrow; work mod $10$.\n\n**Step 1.** Units digits of $9^k$ cycle: 9, 1, 9, 1.\n\n**Step 2.** $235 \\bmod 4 = 3$, so $9^{235}$ ends in $9$.\n\n**Step 3.** $9 - 8 \\equiv 1 \\pmod{10}$.\n\n**Answer:** $1$. **(A)**\n\n**Common mistake:** taking the absolute difference instead of borrowing."
+ },
+ {
+  "id": "nt_powers_b07",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_mod7",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $3^{207}$ is divided by $9$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$8$"
+  },
+  "answer": "A",
+  "hints": [
+   "List the first few remainders and find the cycle."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** powers repeat their remainders in a cycle.\n\n**Step 1.** Remainders of $3^1, 3^2, \\ldots$ mod $9$: 3, 0; cycle length $1$.\n\n**Step 2.** $207 \\bmod 1 = 0$, so $3^{207} \\equiv 3^{1} \\equiv 0$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** an off by one when matching the exponent to the cycle."
+ },
+ {
+  "id": "nt_powers_b08",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_self_power",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the units digit of $37^{37}$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$9$"
+  },
+  "answer": "C",
+  "hints": [
+   "Only the units digit of the base matters."
+  ],
+  "solution": "**What we need:** the units digit.\n\n**Key idea:** $37^{37}$ has the same units digit as $7^{37}$.\n\n**Step 1.** Units digits of $7^k$: 7, 9, 3, 1.\n\n**Step 2.** $37 \\bmod 4 = 1$, so the units digit is $7$.\n\n**Answer:** $7$. **(C)**\n\n**Common mistake:** using the exponent's last digit instead of its remainder mod $4$."
+ },
+ {
+  "id": "nt_powers_b09",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_two_bases",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the units digit of $7^{52} + 9^{52}$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$5$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find each units digit separately."
+  ],
+  "solution": "**What we need:** the units digit.\n\n**Key idea:** add the two units digits and keep the last digit.\n\n**Step 1.** $7^{52}$ ends in $1$; $9^{52}$ ends in $1$ (using $52 \\bmod 4 = 0$).\n\n**Step 2.** Sum: $2$, units digit $2$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** multiplying the units digits."
+ },
+ {
+  "id": "nt_powers_b10",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_ten_mod",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $10^{99}$ is divided by $9$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "What is $10$ mod 9?"
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** $10 \\equiv 1 \\pmod{9}$, so powers of $10$ are easy.\n\n**Step 1.** $10 \\equiv 1 \\pmod{9}$.\n\n**Step 2.** $10^{99} \\equiv 1^{99} \\equiv 1$.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** thinking any power of $10$ is divisible by 9."
+ },
+ {
+  "id": "nt_powers_b11",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_digits_2_5",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many digits does $2^{29} \\cdot 5^{14}$ have?",
+  "choices": {
+   "A": "$18$",
+   "B": "$19$",
+   "C": "$20$",
+   "D": "$29$",
+   "E": "$43$"
+  },
+  "answer": "B",
+  "hints": [
+   "Pair 2s with 5s to make tens."
+  ],
+  "solution": "**What we need:** the digit count.\n\n**Key idea:** each $2 \\cdot 5$ pair makes a factor of $10$, which just adds a zero.\n\n**Step 1.** $2^{29} \\cdot 5^{14} = 10^{14} \\cdot 2^{15}$.\n\n**Step 2.** $32768$ has $5$ digits, plus $14$ zeros: $19$ digits.\n\n**Answer:** $19$. **(B)**\n\n**Common mistake:** adding the exponents."
+ },
+ {
+  "id": "nt_powers_b12",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_cycle_length",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The units digits of $7^1, 7^2, 7^3, \\ldots$ repeat in a cycle. How long is the cycle?",
+  "choices": {
+   "A": "$2$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$7$",
+   "E": "$10$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write out the units digits until one repeats."
+  ],
+  "solution": "**What we need:** the cycle length.\n\n**Key idea:** only the units digit of the base matters, and each step multiplies the units digit by it.\n\n**Step 1.** Units digits: 7, 9, 3, 1, then $7$ again.\n\n**Step 2.** Cycle length: $4$.\n\n**Answer:** $4$. **(B)**\n\n**Common mistake:** assuming every cycle has length $4$."
+ },
+ {
+  "id": "nt_powers_b13",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_mod6",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $10^{130}$ is divided by $6$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$4$",
+   "E": "$5$"
+  },
+  "answer": "D",
+  "hints": [
+   "Compute the first few powers mod 6."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** the remainders settle into a pattern quickly.\n\n**Step 1.** Remainders: $10^{1} \\equiv 4$, $10^{2} \\equiv 4$, $10^{3} \\equiv 4$, $10^{4} \\equiv 4$.\n\n**Step 2.** Following the pattern, $10^{130} \\equiv 4$.\n\n**Answer:** $4$. **(D)**\n\n**Common mistake:** assuming the pattern starts repeating from the first term when it doesn't."
+ },
+ {
+  "id": "nt_powers_b14",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_exceed",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest positive integer $n$ such that $2^n > 10^{12}$?",
+  "choices": {
+   "A": "$36$",
+   "B": "$39$",
+   "C": "$40$",
+   "D": "$41$",
+   "E": "$48$"
+  },
+  "answer": "C",
+  "hints": [
+   "$2^{10} = 1024$ is a little more than $10^3$."
+  ],
+  "solution": "**What we need:** the smallest $n$.\n\n**Key idea:** $2^{10} \\approx 10^3$; use it to estimate, then check nearby values.\n\n**Step 1.** $2^{39} = 549755813888 \\le 10^{12}$.\n\n**Step 2.** $2^{40} = 1099511627776 > 10^{12}$.\n\n**Answer:** $40$. **(C)**\n\n**Common mistake:** using $n = 3k$ exactly, which is slightly too small or too big."
+ },
+ {
+  "id": "nt_powers_b15",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_nines_digit_sum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of the digits of $10^{53} - 1$?",
+  "choices": {
+   "A": "$53$",
+   "B": "$468$",
+   "C": "$477$",
+   "D": "$486$",
+   "E": "$530$"
+  },
+  "answer": "C",
+  "hints": [
+   "Write it out."
+  ],
+  "solution": "**What we need:** the digit sum.\n\n**Key idea:** $10^n - 1$ is a string of $n$ nines.\n\n**Step 1.** $10^{53} - 1 = \\underbrace{99\\ldots9}_{53}$.\n\n**Step 2.** Digit sum: $9 \\cdot 53 = 477$.\n\n**Answer:** $477$. **(C)**\n\n**Common mistake:** counting $n + 1$ digits."
+ },
+ {
+  "id": "nt_powers_b16",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_perfect_powers",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many integers from $1$ to $1000$ are perfect squares or perfect cubes (or both)?",
+  "choices": {
+   "A": "$31$",
+   "B": "$38$",
+   "C": "$39$",
+   "D": "$40$",
+   "E": "$41$"
+  },
+  "answer": "B",
+  "hints": [
+   "Inclusion and exclusion: numbers that are both are sixth powers."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** squares plus cubes minus the overlap (sixth powers).\n\n**Step 1.** Squares: $31$. Cubes: $10$. Sixth powers: $3$.\n\n**Step 2.** $31 + 10 - 3 = 38$.\n\n**Answer:** $38$. **(B)**\n\n**Common mistake:** forgetting to subtract numbers counted twice."
+ },
+ {
+  "id": "nt_powers_b17",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_plus_one_mod",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $11^{927}$ is divided by $10$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$7$",
+   "E": "$9$"
+  },
+  "answer": "B",
+  "hints": [
+   "What is 11 mod 10?"
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** $11 \\equiv 1 \\pmod{10}$, and $1$ to any power is $1$.\n\n**Step 1.** $11^{927} \\equiv 1^{927} = 1 \\pmod{10}$.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** trying to compute the power."
+ },
+ {
+  "id": "nt_powers_b18",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_mod7_two",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the remainder when $2^{48}$ is divided by $7$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$4$",
+   "E": "$6$"
+  },
+  "answer": "B",
+  "hints": [
+   "$2^3 = 8 \\equiv 1 \\pmod{7}$."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** $2^3 \\equiv 1$, so powers of $2$ mod $7$ repeat every $3$: $2, 4, 1$.\n\n**Step 1.** $48 = 3 \\cdot 16 + 0$.\n\n**Step 2.** $2^{48} = (2^3)^{16} \\cdot 2^{0} \\equiv 2^{0} = 1 \\equiv 1$.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** using a cycle of length $4$ like units digits."
+ },
+ {
+  "id": "nt_powers_b19",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_trailing_zeros",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many zeros are at the end of $20^{6} \\cdot 15^{8}$?",
+  "choices": {
+   "A": "$6$",
+   "B": "$11$",
+   "C": "$12$",
+   "D": "$13$",
+   "E": "$14$"
+  },
+  "answer": "C",
+  "hints": [
+   "Count factors of $2$ and of $5$."
+  ],
+  "solution": "**What we need:** the number of trailing zeros.\n\n**Key idea:** each trailing zero needs one $2$ and one $5$.\n\n**Step 1.** $20^{6} = 2^{12} \\cdot 5^{6}$ and $15^{8} = 3^{8} \\cdot 5^{8}$.\n\n**Step 2.** Twos: $12$. Fives: $14$.\n\n**Step 3.** Zeros: $\\min(12, 14) = 12$.\n\n**Answer:** $12$. **(C)**\n\n**Common mistake:** counting only the fives."
+ },
+ {
+  "id": "nt_powers_b20",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pw_four_sum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the units digit of $1^{23} + 2^{23} + 3^{23} + 4^{23}$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$4$",
+   "E": "$5$"
+  },
+  "answer": "A",
+  "hints": [
+   "Use the cycles for $2$, $3$, $4$."
+  ],
+  "solution": "**What we need:** the units digit.\n\n**Key idea:** add the units digits of each power.\n\n**Step 1.** $23 \\bmod 4 = 3$.\n\n**Step 2.** Units digits: $1, 8, 7, 4$.\n\n**Step 3.** Sum: $20$, units digit $0$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** using the cycle for $4$ wrongly (it has length $2$)."
+ },
+ {
+  "id": "nt_powers_c01",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pwc1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the remainder when $6^{742} + 2^{742}$ is divided by $5$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "A",
+  "hints": [
+   "Use cycles of powers mod $5$ for each term."
+  ],
+  "solution": "**What we need:** the remainder of the sum.\n\n**Key idea:** handle each power separately with its repeating cycle, then add.\n\n**Step 1.** $6^{1} \\equiv 1 \\pmod{5}$, and $742 \\equiv 0 \\pmod{1}$, so $6^{742} \\equiv 6^{0} \\equiv 1$.\n\n**Step 2.** $2^{4} \\equiv 1 \\pmod{5}$, and $742 \\equiv 2 \\pmod{4}$, so $2^{742} \\equiv 2^{2} \\equiv 4$.\n\n**Step 3.** Sum: $1 + 4 = 5 \\equiv 0 \\pmod{5}$.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** using the same cycle length for both bases. Each base has its own period."
+ },
+ {
+  "id": "nt_powers_c02",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pwc2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the tens digit of $23^{151}$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the last two digits by working mod 100."
+  ],
+  "solution": "**What we need:** the second to last digit of $23^{151}$.\n\n**Key idea:** the tens digit comes from the last two digits, so work mod $100$.\n\n**Step 1.** Powers of $23$ mod $100$ repeat every $20$ (since $23^{20} \\equiv 01$).\n\n**Step 2.** $151 \\equiv 11 \\pmod{20}$, so $23^{151} \\equiv 23^{11} \\equiv 27 \\pmod{100}$.\n\n**Step 3.** The last two digits are $27$, so the tens digit is $2$.\n\n**Answer:** $2$. **(C)**\n\n**Common mistake:** giving the units digit instead of the tens digit."
+ },
+ {
+  "id": "nt_powers_c03",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pwc3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Which of these numbers is the largest?",
+  "choices": {
+   "A": "$2^{60}$",
+   "B": "$6^{24}$",
+   "C": "$3^{40}$",
+   "D": "$7^{30}$",
+   "E": "$7^{24}$"
+  },
+  "answer": "D",
+  "hints": [
+   "Rewrite each number with the same exponent by taking a common root."
+  ],
+  "solution": "**What we need:** the largest of several huge powers.\n\n**Key idea:** write every number with the same outer exponent $2$ (the GCD of the exponents). Then just compare the insides.\n\n**Step 1.** Rewrite: $2^{60} = (2^{30})^{2} = 1073741824^{2}$; $3^{40} = (3^{20})^{2} = 3486784401^{2}$; $7^{24} = (7^{12})^{2} = 13841287201^{2}$; $6^{24} = (6^{12})^{2} = 2176782336^{2}$; $7^{30} = (7^{15})^{2} = 4747561509943^{2}$.\n\n**Step 2.** With the same exponent $2$, the biggest base wins: $4747561509943$ is the largest inside value.\n\n**Answer:** $7^{30}$. **(D)**\n\n**Common mistake:** picking the one with the biggest exponent or the biggest base alone. Both matter together."
+ },
+ {
+  "id": "nt_powers_c04",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pwc_tower",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the units digit of $2^{7^{3}}$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$8$",
+   "E": "$9$"
+  },
+  "answer": "D",
+  "hints": [
+   "Find the exponent mod $4$."
+  ],
+  "solution": "**What we need:** the units digit.\n\n**Key idea:** units digits of $2^k$ repeat every $4$, so only $7^{3} \\bmod 4$ matters.\n\n**Step 1.** $7^{3} = 343$, and $343 \\bmod 4 = 3$.\n\n**Step 2.** $2^{3}$ ends in $8$.\n\n**Answer:** $8$. **(D)**\n\n**Common mistake:** multiplying the exponents ($7 \\cdot 3$) instead of raising."
+ },
+ {
+  "id": "nt_powers_c05",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pwc_euler",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the remainder when $4^{1404}$ is divided by $13$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$12$"
+  },
+  "answer": "B",
+  "hints": [
+   "Fermat's Little Theorem."
+  ],
+  "solution": "**What we need:** the remainder.\n\n**Key idea:** Fermat's Little Theorem: $4^{12} \\equiv 1 \\pmod{13}$, so reduce the exponent mod $12$.\n\n**Step 1.** $1404 = 12 \\cdot 117 + 0$.\n\n**Step 2.** $4^{1404} \\equiv 4^{0} = 1 \\equiv 1 \\pmod{13}$.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** reducing the exponent mod 13 instead of 12."
+ },
+ {
+  "id": "nt_powers_c06",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pwc_last_two_2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What are the last two digits of $2^{264}$? (Give the two-digit number they form.)",
+  "choices": {
+   "A": "$16$",
+   "B": "$20$",
+   "C": "$32$",
+   "D": "$36$",
+   "E": "$66$"
+  },
+  "answer": "A",
+  "hints": [
+   "From $2^2$ on, the last two digits repeat every $20$."
+  ],
+  "solution": "**What we need:** the last two digits.\n\n**Key idea:** mod $100$, powers of $2$ (from $2^2$) repeat with period $20$, because $2^{22} \\equiv 2^2$.\n\n**Step 1.** Reduce the exponent: $264 \\equiv 4 \\pmod{20}$ (keeping it at least $2$).\n\n**Step 2.** $2^{4} = 16$, ending in $16$.\n\n**Answer:** $16$. **(A)**\n\n**Common mistake:** using a period of $4$ (that's only for the last digit)."
+ },
+ {
+  "id": "nt_powers_c07",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pwc_count_units",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "For how many $n$ from $1$ to $204$ does $8^n$ end in the digit $4$?",
+  "choices": {
+   "A": "$50$",
+   "B": "$51$",
+   "C": "$52$",
+   "D": "$53$",
+   "E": "$102$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the cycle and where 4 sits in it."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** the units digit cycles; count how many $n$ land on the right spot.\n\n**Step 1.** Units digits of $8^n$: 8, 4, 2, 6, repeating.\n\n**Step 2.** Positions with $4$: every $4$ terms, starting at $n = 2$.\n\n**Step 3.** Up to $204$: $51$.\n\n**Answer:** $51$. **(B)**\n\n**Common mistake:** dividing by $4$ regardless of where the digit sits in the cycle."
+ },
+ {
+  "id": "nt_powers_c08",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pwc_digit_sum_25",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the sum of the digits of $2^{3} \\cdot 5^{8}$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$11$",
+   "C": "$12$",
+   "D": "$33$",
+   "E": "$46$"
+  },
+  "answer": "B",
+  "hints": [
+   "Make tens."
+  ],
+  "solution": "**What we need:** the digit sum.\n\n**Key idea:** the factors of $10$ only add zeros, which don't change the digit sum.\n\n**Step 1.** $2^{3} \\cdot 5^{8} = 3125 \\cdot 10^{3}$.\n\n**Step 2.** Digit sum of $3125$: $11$.\n\n**Answer:** $11$. **(B)**\n\n**Common mistake:** adding the digit sums of the two powers separately."
+ },
+ {
+  "id": "nt_powers_c09",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pwc_lte",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the largest integer $k$ such that $2^k$ divides $3^{24} - 1$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$5$",
+   "C": "$6$",
+   "D": "$24$",
+   "E": "$25$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor using difference of squares repeatedly."
+  ],
+  "solution": "**What we need:** the exponent of $2$.\n\n**Key idea:** for even $n$, the power of $2$ in $3^n - 1$ is (power of $2$ in $n$) $+ 2$.\n\n**Step 1.** Example: $3^2 - 1 = 8 = 2^3$. Each time the exponent doubles, $3^{2m} - 1 = (3^m - 1)(3^m + 1)$ and $3^m + 1$ adds exactly one factor of $2$.\n\n**Step 2.** For $n = 24$: $k = 5$.\n\n**Answer:** $5$. **(B)**\n\n**Common mistake:** assuming the power of $2$ equals $n$."
+ },
+ {
+  "id": "nt_powers_c10",
+  "skillId": "nt_powers",
+  "family": "nt_powers:pwc_squares_end6",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many perfect squares less than $720$ end in the digit $6$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$5$",
+   "C": "$6$",
+   "D": "$7$",
+   "E": "$13$"
+  },
+  "answer": "C",
+  "hints": [
+   "A square ends in $6$ exactly when its root ends in $4$ or $6$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** the units digit of $k^2$ depends only on the units digit of $k$: $4^2 = 16$ and $6^2 = 36$.\n\n**Step 1.** Roots go up to $\\lfloor \\sqrt{719} \\rfloor = 26$.\n\n**Step 2.** Roots ending in $4$ or $6$: $6$.\n\n**Answer:** $6$. **(C)**\n\n**Common mistake:** counting only roots ending in $4$."
+ },
+ {
+  "id": "nt_bases_b01",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the base-ten value of $110001001_{2}$?",
+  "choices": {
+   "A": "$392$",
+   "B": "$393$",
+   "C": "$394$",
+   "D": "$395$",
+   "E": "$110001001$"
+  },
+  "answer": "B",
+  "hints": [
+   "Each place is a power of the base."
+  ],
+  "solution": "**What we need:** the ordinary value of $110001001_{2}$.\n\n**Key idea:** in base $2$ the places from right to left are worth $1, 2, 2^2, \\ldots$\n\n**Step 1.** Expand: $1 \\cdot 2^{8} + 1 \\cdot 2^{7} + 0 \\cdot 2^{6} + 0 \\cdot 2^{5} + 0 \\cdot 2^{4} + 1 \\cdot 2^{3} + 0 \\cdot 2^{2} + 0 \\cdot 2^{1} + 1 \\cdot 2^{0}$.\n\n**Step 2.** Evaluate: $256 + 128 + 0 + 0 + 0 + 8 + 0 + 0 + 1 = 393$.\n\n**Answer:** $393$. **(B)**\n\n**Common mistake:** reading it as the base ten number $110001001$."
+ },
+ {
+  "id": "nt_bases_b02",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $499$ written in base $7$?",
+  "choices": {
+   "A": "$763_{7}$",
+   "B": "$1311_{7}$",
+   "C": "$1312_{7}$",
+   "D": "$1313_{7}$",
+   "E": "$2131_{7}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Repeatedly divide by the base and read the remainders from the bottom up."
+  ],
+  "solution": "**What we need:** the base $7$ digits of $499$.\n\n**Key idea:** divide by $7$ again and again; the remainders are the digits, read from last to first.\n\n**Step 1.** Divisions: $499 \\div 7 = 71$ R $2$; $71 \\div 7 = 10$ R $1$; $10 \\div 7 = 1$ R $3$; $1 \\div 7 = 0$ R $1$.\n\n**Step 2.** Read the remainders from the bottom up: $1312_{7}$.\n\n**Step 3.** Check: $1 \\cdot 7^{3} + 3 \\cdot 7^{2} + 1 \\cdot 7^{1} + 2 \\cdot 7^{0}$ $= 499$.\n\n**Answer:** $1312_{7}$. **(C)**\n\n**Common mistake:** reading the remainders top to bottom, which reverses the digits."
+ },
+ {
+  "id": "nt_bases_b03",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest 4-digit number in base $8$, written in base ten?",
+  "choices": {
+   "A": "$512$",
+   "B": "$520$",
+   "C": "$1000$",
+   "D": "$4095$",
+   "E": "$4096$"
+  },
+  "answer": "A",
+  "hints": [
+   "A 4-digit base-8 number is at least $8^{3}$ and less than $8^{4}$."
+  ],
+  "solution": "**What we need:** the smallest base $8$ number with exactly $4$ digits.\n\n**Key idea:** base $8$ digits go from $0$ to $7$, and the first digit can't be $0$.\n\n**Step 1.** The smallest is $1000_{8}$.\n\n**Step 2.** That is $8^{3} = 512$.\n\n**Answer:** $512$. **(A)**\n\n**Common mistake:** thinking in base ten (like $999$ or $100$)."
+ },
+ {
+  "id": "nt_bases_b04",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "In base $9$, what is $56_{9} + 206_{9}$?",
+  "choices": {
+   "A": "$263_{9}$",
+   "B": "$220$",
+   "C": "$262_{9}$",
+   "D": "$264_{9}$",
+   "E": "$273_{9}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Add column by column, carrying whenever a column reaches $9$."
+  ],
+  "solution": "**What we need:** the sum, written in base $9$.\n\n**Key idea:** the safest way: convert to base ten, add, convert back. (Or add column by column, carrying a $1$ whenever a column reaches 9.)\n\n**Step 1.** $56_{9} = 51$ and $206_{9} = 168$.\n\n**Step 2.** Sum in base ten: $219$.\n\n**Step 3.** Convert back: $219 = 263_{9}$.\n\n**Answer:** $263_{9}$. **(A)**\n\n**Common mistake:** adding as if in base ten and carrying at $10$ instead of at 9."
+ },
+ {
+  "id": "nt_bases_b05",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_to_dec",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $2031_{6}$ in base ten?",
+  "choices": {
+   "A": "$450$",
+   "B": "$451$",
+   "C": "$457$",
+   "D": "$708$",
+   "E": "$2031$"
+  },
+  "answer": "B",
+  "hints": [
+   "Multiply each digit by its place value."
+  ],
+  "solution": "**What we need:** the base-ten value.\n\n**Key idea:** place values in base $6$ are $1, 6, 36, \\ldots$\n\n**Step 1.** $2 \\cdot 6^{3} + 0 \\cdot 6^{2} + 3 \\cdot 6^{1} + 1 \\cdot 6^{0} = 451$.\n\n**Answer:** $451$. **(B)**\n\n**Common mistake:** reading the digits as a base-ten number."
+ },
+ {
+  "id": "nt_bases_b06",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_binary_ones",
+  "level": "basics",
+  "track": "both",
+  "prompt": "When $390$ is written in base $2$, how many of its digits are $1$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$9$",
+   "E": "$12$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write 390 as a sum of powers of $2$."
+  ],
+  "solution": "**What we need:** the number of s.\n\n**Key idea:** each $1$ in binary is one power of $2$ in the sum.\n\n**Step 1.** $390 = 2^{8} + 2^{7} + 2^{2} + 2^{1}$.\n\n**Step 2.** Binary: $110000110_2$, with $4$ ones.\n\n**Answer:** $4$. **(B)**\n\n**Common mistake:** counting all the digits."
+ },
+ {
+  "id": "nt_bases_b07",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_subtract",
+  "level": "basics",
+  "track": "both",
+  "prompt": "In base $4$, what is $300_{4} - 130_{4}$?",
+  "choices": {
+   "A": "$110_{4}$",
+   "B": "$111_{4}$",
+   "C": "$120_{4}$",
+   "D": "$170_{4}$",
+   "E": "$103_{4}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Convert to base ten, subtract, convert back; or borrow 4 instead of 10."
+  ],
+  "solution": "**What we need:** the difference in base 4.\n\n**Key idea:** in base $4$, borrowing gives $4$, not $10$.\n\n**Step 1.** $300_{4} = 48$ and $130_{4} = 28$.\n\n**Step 2.** $48 - 28 = 20 = 110_{4}$.\n\n**Answer:** $110_{4}$. **(A)**\n\n**Common mistake:** borrowing $10$ as if in base ten."
+ },
+ {
+  "id": "nt_bases_b08",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_multiply",
+  "level": "basics",
+  "track": "both",
+  "prompt": "In base $4$, what is $13_{4} \\times 3$?",
+  "choices": {
+   "A": "$111_{4}$",
+   "B": "$121_{4}$",
+   "C": "$112_{4}$",
+   "D": "$39_{4}$",
+   "E": "$110_{4}$"
+  },
+  "answer": "A",
+  "hints": [
+   "Work in base ten, then convert."
+  ],
+  "solution": "**What we need:** the product in base 4.\n\n**Key idea:** convert, multiply, and convert back.\n\n**Step 1.** $13_{4} = 7$.\n\n**Step 2.** $7 \\cdot 3 = 21 = 111_{4}$.\n\n**Answer:** $111_{4}$. **(A)**\n\n**Common mistake:** multiplying the digits as if in base ten."
+ },
+ {
+  "id": "nt_bases_b09",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_largest_3digit",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the largest $2$-digit number in base $4$, written in base ten?",
+  "choices": {
+   "A": "$4$",
+   "B": "$14$",
+   "C": "$15$",
+   "D": "$16$",
+   "E": "$33$"
+  },
+  "answer": "C",
+  "hints": [
+   "It's all digits 3."
+  ],
+  "solution": "**What we need:** the largest 2-digit base-4 number.\n\n**Key idea:** the largest digit is $3$; and $33_{4}$ is one less than $100_{4} = 4^{2}$.\n\n**Step 1.** $33_{4} = 4^{2} - 1 = 15$.\n\n**Answer:** $15$. **(C)**\n\n**Common mistake:** reading the $3$s as a base-ten number."
+ },
+ {
+  "id": "nt_bases_b10",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_bin_to_oct",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $101111100000_2$ written in base $8$?",
+  "choices": {
+   "A": "$5730_{8}$",
+   "B": "$5750_{8}$",
+   "C": "$5740_{8}$",
+   "D": "$5741_{8}$",
+   "E": "$233200_{8}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Group binary digits in threes from the right."
+  ],
+  "solution": "**What we need:** the base-8 form.\n\n**Key idea:** $8 = 2^3$, so each group of three binary digits becomes one base-8 digit.\n\n**Step 1.** Groups: 101 | 111 | 100 | 000.\n\n**Step 2.** Each group: 5, 7, 4, 0. So $5740_8$.\n\n**Answer:** $5740_{8}$. **(C)**\n\n**Common mistake:** grouping from the left."
+ },
+ {
+  "id": "nt_bases_b11",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_hex",
+  "level": "basics",
+  "track": "both",
+  "prompt": "In base $16$ the digits $A$ through $F$ stand for $10$ through $15$. What is $114F_{16}$ in base ten?",
+  "choices": {
+   "A": "$21$",
+   "B": "$4415$",
+   "C": "$4431$",
+   "D": "$4432$",
+   "E": "$4447$"
+  },
+  "answer": "C",
+  "hints": [
+   "Place values are $1, 16, 256, \\ldots$"
+  ],
+  "solution": "**What we need:** the base-ten value.\n\n**Key idea:** multiply each digit by its power of $16$.\n\n**Step 1.** $1 \\cdot 16^{3} + 1 \\cdot 16^{2} + 4 \\cdot 16^{1} + 15 \\cdot 16^{0} = 4431$.\n\n**Answer:** $4431$. **(C)**\n\n**Common mistake:** treating a letter digit as $1$."
+ },
+ {
+  "id": "nt_bases_b12",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_count_kdigit",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many positive integers have exactly $2$ digits when written in base $3$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$4$",
+   "C": "$6$",
+   "D": "$8$",
+   "E": "$9$"
+  },
+  "answer": "C",
+  "hints": [
+   "The first digit can't be $0$."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** first digit: $2$ choices; each other digit: $3$ choices.\n\n**Step 1.** $2 \\cdot 3^{1} = 6$.\n\n**Answer:** $6$. **(C)**\n\n**Common mistake:** letting the first digit be $0$."
+ },
+ {
+  "id": "nt_bases_b13",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_last_digit",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the last digit of $813$ when it is written in base $6$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$2$",
+   "C": "$3$",
+   "D": "$4$",
+   "E": "$5$"
+  },
+  "answer": "C",
+  "hints": [
+   "The last digit is the remainder."
+  ],
+  "solution": "**What we need:** the last base-6 digit.\n\n**Key idea:** the last digit in base $6$ is the remainder when dividing by $6$.\n\n**Step 1.** $813 = 6 \\cdot 135 + 3$.\n\n**Step 2.** Last digit: $3$. (Full form: $3433_{6}$.)\n\n**Answer:** $3$. **(C)**\n\n**Common mistake:** giving the first digit."
+ },
+ {
+  "id": "nt_bases_b14",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_base3_digit_sum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of the digits of $215$ when written in base $3$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$11$"
+  },
+  "answer": "C",
+  "hints": [
+   "Convert to base 3 first."
+  ],
+  "solution": "**What we need:** the digit sum.\n\n**Key idea:** find the base-3 digits by repeated division by $3$.\n\n**Step 1.** $215 = 21222_3$.\n\n**Step 2.** Digit sum: $2 + 1 + 2 + 2 + 2 = 9$.\n\n**Answer:** $9$. **(C)**\n\n**Common mistake:** adding the base-ten digits."
+ },
+ {
+  "id": "nt_bases_b15",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_four_to_two",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $20032_4$ written in base $2$?",
+  "choices": {
+   "A": "$1000001111_{2}$",
+   "B": "$100000111_{2}$",
+   "C": "$1000001110_{2}$",
+   "D": "$10000011100_{2}$",
+   "E": "$1000001101_{2}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Each base-4 digit becomes two binary digits."
+  ],
+  "solution": "**What we need:** the binary form.\n\n**Key idea:** $4 = 2^2$, so replace each base-4 digit with its 2-digit binary form.\n\n**Step 1.** Digits: 2, 0, 0, 3, 2 $\\to$ 10, 00, 00, 11, 10.\n\n**Step 2.** Result: $1000001110_2$ (dropping a leading zero).\n\n**Answer:** $1000001110_{2}$. **(C)**\n\n**Common mistake:** converting each digit to one binary digit."
+ },
+ {
+  "id": "nt_bases_b16",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_smallest_base",
+  "level": "basics",
+  "track": "both",
+  "prompt": "The number $602$ is written in some base $b$. What is the smallest possible value of $b$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$10$"
+  },
+  "answer": "C",
+  "hints": [
+   "Every digit must be less than the base."
+  ],
+  "solution": "**What we need:** the smallest base.\n\n**Key idea:** in base $b$, digits run from $0$ to $b - 1$.\n\n**Step 1.** Largest digit: $6$.\n\n**Step 2.** So $b \\ge 7$.\n\n**Answer:** $7$. **(C)**\n\n**Common mistake:** using the largest digit itself as the base."
+ },
+ {
+  "id": "nt_bases_b17",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_base5_digit_sum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "When $128$ is written in base $5$, what is its leading (leftmost) digit?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$3$",
+   "E": "$4$"
+  },
+  "answer": "B",
+  "hints": [
+   "Find the largest power of $5$ that fits."
+  ],
+  "solution": "**What we need:** the leading digit.\n\n**Key idea:** the leading digit is how many times the largest power of $5$ (at most the number) fits.\n\n**Step 1.** Powers of $5$: $1, 5, 25, 125, 625, 3125$. The largest at most $128$ is $125$.\n\n**Step 2.** $128 \\div 125 = 1$ (rounded down). Full form: $1003_5$.\n\n**Answer:** $1$. **(B)**\n\n**Common mistake:** giving the last digit."
+ },
+ {
+  "id": "nt_bases_b18",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_ones_binary",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many $1$s are in the base-$2$ form of $2^{10} + 2^{9} - 1$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$11$",
+   "E": "$19$"
+  },
+  "answer": "C",
+  "hints": [
+   "What does $2^b - 1$ look like in binary?"
+  ],
+  "solution": "**What we need:** the number of s.\n\n**Key idea:** $2^b - 1$ is $b$ ones in binary; adding $2^a$ puts one more $1$ higher up.\n\n**Step 1.** $2^{9} - 1 = \\underbrace{11\\ldots1}_{9}{}_2$.\n\n**Step 2.** Adding $2^{10}$ (a single $1$ in position $10$) gives $10$ ones.\n\n**Answer:** $10$. **(C)**\n\n**Common mistake:** counting $2$ (one for each power)."
+ },
+ {
+  "id": "nt_bases_b19",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_fraction",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $0.35_{7}$ as a fraction in base ten?",
+  "choices": {
+   "A": "$\\frac{7}{20}$",
+   "B": "$\\frac{26}{49}$",
+   "C": "$\\frac{27}{49}$",
+   "D": "$\\frac{38}{49}$",
+   "E": "$\\frac{26}{7}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Places after the point are $\\frac{1}{b}, \\frac{1}{b^2}, \\ldots$"
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** in base $7$ the first place after the point is $\\frac{1}{7}$ and the second is $\\frac{1}{49}$.\n\n**Step 1.** $\\frac{3}{7} + \\frac{5}{49} = \\frac{26}{49}$.\n\n**Answer:** $\\frac{26}{49}$. **(B)**\n\n**Common mistake:** treating it as a base-ten decimal."
+ },
+ {
+  "id": "nt_bases_b20",
+  "skillId": "nt_bases",
+  "family": "nt_bases:ba_compare",
+  "level": "basics",
+  "track": "both",
+  "prompt": "Which of these is largest?",
+  "choices": {
+   "A": "$240_{8}$",
+   "B": "$20120_{3}$",
+   "C": "$315_{7}$",
+   "D": "$1103_{5}$",
+   "E": "$2231_{4}$"
+  },
+  "answer": "B",
+  "hints": [
+   "Convert each to base ten."
+  ],
+  "solution": "**What we need:** the largest value.\n\n**Key idea:** compare values only after converting to base ten.\n\n**Step 1.** Values: $240_{8} = 160$, $315_{7} = 159$, $2231_{4} = 173$, $1103_{5} = 153$, $20120_{3} = 177$.\n\n**Step 2.** Largest: $20120_{3}$.\n\n**Answer:** $20120_{3}$. **(B)**\n\n**Common mistake:** comparing the digit strings directly."
+ },
+ {
+  "id": "nt_bases_c01",
+  "skillId": "nt_bases",
+  "family": "nt_bases:bac1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "In some base $b$, the number $34_b$ equals $22$ in base ten. What is $b$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$10$"
+  },
+  "answer": "B",
+  "hints": [
+   "$34_b = 3b + 4$."
+  ],
+  "solution": "**What we need:** the base $b$.\n\n**Key idea:** a two digit number $\\overline{xy}_b$ is worth $xb + y$.\n\n**Step 1.** $34_b = 3b + 4$.\n\n**Step 2.** Set equal: $3b + 4 = 22$, so $3b = 18$ and $b = 6$.\n\n**Step 3.** Check: the digits $3$ and $4$ are less than $6$, so this is a valid base.\n\n**Answer:** $b = 6$. **(B)**\n\n**Common mistake:** forgetting to subtract the ones digit first."
+ },
+ {
+  "id": "nt_bases_c02",
+  "skillId": "nt_bases",
+  "family": "nt_bases:bac2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many digits does $71$ have when written in base $3$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$7$"
+  },
+  "answer": "C",
+  "hints": [
+   "Find the largest power of $3$ that is at most $71$."
+  ],
+  "solution": "**What we need:** the number of base $3$ digits of $71$.\n\n**Key idea:** a number has $d$ digits in base $3$ when $3^{d - 1} \\le N < 3^d$.\n\n**Step 1.** Powers of $3$: $3^{0} = 1$, $3^{1} = 3$, $3^{2} = 9$, $3^{3} = 27$, $3^{4} = 81$.\n\n**Step 2.** $3^{3} = 27 \\le 71 < 81$, so there are $4$ digits. ($(71 = 2122_{3})$.)\n\n**Answer:** $4$. **(C)**\n\n**Common mistake:** counting the base ten digits."
+ },
+ {
+  "id": "nt_bases_c03",
+  "skillId": "nt_bases",
+  "family": "nt_bases:bac3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A number $N$ is written as $21$ in base $5$ and as $12$ in base $9$. What is $N$ in base ten?",
+  "choices": {
+   "A": "$6$",
+   "B": "$11$",
+   "C": "$12$",
+   "D": "$19$",
+   "E": "$21$"
+  },
+  "answer": "B",
+  "hints": [
+   "Set the two base expansions equal."
+  ],
+  "solution": "**What we need:** the value of $N$.\n\n**Key idea:** write each base expansion as a formula and evaluate.\n\n**Step 1.** $21_{5} = 2 \\cdot 5 + 1 = 11$.\n\n**Step 2.** Check the other form: $12_{9} = 1 \\cdot 9 + 2 = 11$. They agree.\n\n**Answer:** $11$. **(B)**\n\n**Common mistake:** reading $21$ as a base ten number."
+ },
+ {
+  "id": "nt_bases_c04",
+  "skillId": "nt_bases",
+  "family": "nt_bases:bac_121",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "In some base $b$, the number written $121_b$ equals $400$ in base ten. What is $b$?",
+  "choices": {
+   "A": "$18$",
+   "B": "$19$",
+   "C": "$20$",
+   "D": "$21$",
+   "E": "$\\frac{399}{2}$"
+  },
+  "answer": "B",
+  "hints": [
+   "$121_b = b^2 + 2b + 1$."
+  ],
+  "solution": "**What we need:** $b$.\n\n**Key idea:** $121_b = b^2 + 2b + 1 = (b + 1)^2$.\n\n**Step 1.** $(b + 1)^2 = 400$, so $b + 1 = 20$.\n\n**Step 2.** $b = 19$.\n\n**Answer:** $19$. **(B)**\n\n**Common mistake:** answering $b + 1$."
+ },
+ {
+  "id": "nt_bases_c05",
+  "skillId": "nt_bases",
+  "family": "nt_bases:bac_mult_base",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "In some base $b$, the multiplication $4 \\times 6 = 30_b$ is correct. What is $b$?",
+  "choices": {
+   "A": "$7$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$10$",
+   "E": "$24$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write $30_b$ in base ten."
+  ],
+  "solution": "**What we need:** $b$.\n\n**Key idea:** $30_b = 3b + 0$.\n\n**Step 1.** $4 \\cdot 6 = 24$.\n\n**Step 2.** $3b + 0 = 24$, so $b = \\frac{24}{3} = 8$.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** assuming the base is $10$."
+ },
+ {
+  "id": "nt_bases_c06",
+  "skillId": "nt_bases",
+  "family": "nt_bases:bac_bit_sum",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "Each integer from $1$ to $2^{12} - 1$ is written in base $2$. How many $1$s are written in all?",
+  "choices": {
+   "A": "$2048$",
+   "B": "$4095$",
+   "C": "$24576$",
+   "D": "$24577$",
+   "E": "$49152$"
+  },
+  "answer": "C",
+  "hints": [
+   "Count by position."
+  ],
+  "solution": "**What we need:** the total number of s.\n\n**Key idea:** include $0$ (which has no s): the numbers $0$ to $2^{12} - 1$ are every $12$-bit string. In each position, exactly half have a $1$.\n\n**Step 1.** There are $2^{12}$ strings; each of the $12$ positions has $2^{11}$ ones.\n\n**Step 2.** Total: $12 \\cdot 2048 = 24576$.\n\n**Answer:** $24576$. **(C)**\n\n**Common mistake:** counting the numbers instead of the s."
+ },
+ {
+  "id": "nt_bases_c07",
+  "skillId": "nt_bases",
+  "family": "nt_bases:bac_palindromes",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many integers from $1$ to $295$ are palindromes when written in base $2$?",
+  "choices": {
+   "A": "$16$",
+   "B": "$31$",
+   "C": "$32$",
+   "D": "$33$",
+   "E": "$38$"
+  },
+  "answer": "C",
+  "hints": [
+   "Count palindromes by length."
+  ],
+  "solution": "**What we need:** the count.\n\n**Key idea:** a binary palindrome of length $L$ starts and ends with $1$ and is fixed by its first half.\n\n**Step 1.** Lengths $1$ to $9$: a palindrome of length $L$ has $2^{\\lceil L/2 \\rceil - 1}$ choices.\n\n**Step 2.** Count the full lengths, then check the longest length against 295: total $32$.\n\n**Answer:** $32$. **(C)**\n\n**Common mistake:** allowing a leading zero."
+ },
+ {
+  "id": "nt_bases_c08",
+  "skillId": "nt_bases",
+  "family": "nt_bases:bac_repeating",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is $0.\\overline{41}_{5}$ (the block $41$ repeating forever in base $5$) as a fraction in base ten?",
+  "choices": {
+   "A": "$\\frac{41}{99}$",
+   "B": "$\\frac{21}{25}$",
+   "C": "$\\frac{7}{8}$",
+   "D": "$\\frac{11}{12}$",
+   "E": "$\\frac{5}{4}$"
+  },
+  "answer": "C",
+  "hints": [
+   "Multiply by $b^2$ and subtract."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** the repeating block is $41_{5} = 21$; dividing by $b^2 - 1$ gives the value (like $\\frac{\\text{block}}{99}$ in base ten).\n\n**Step 1.** Let $x = 0.\\overline{41}_{5}$. Then $25x = 41_{5} + x = 21 + x$.\n\n**Step 2.** $24x = 21$, so $x = \\frac{7}{8}$.\n\n**Answer:** $\\frac{7}{8}$. **(C)**\n\n**Common mistake:** dividing by $99$ as in base ten."
+ },
+ {
+  "id": "nt_bases_c09",
+  "skillId": "nt_bases",
+  "family": "nt_bases:bac_ends_in_one",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "For how many bases $b \\ge 2$ does $135$, written in base $b$, end in the digit $1$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$8$",
+   "E": "$133$"
+  },
+  "answer": "B",
+  "hints": [
+   "Ending in $1$ means remainder $1$."
+  ],
+  "solution": "**What we need:** the count of bases.\n\n**Key idea:** $135$ ends in $1$ in base $b$ exactly when $b$ divides $134$ (and $b \\ge 2$).\n\n**Step 1.** $134 = 2 \\cdot 67$ has $4$ divisors.\n\n**Step 2.** Excluding $1$: $3$ bases.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** including $b = 1$."
+ },
+ {
+  "id": "nt_bases_c10",
+  "skillId": "nt_bases",
+  "family": "nt_bases:bac_reversed",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "A number is written $\\overline{AB}$ in base $4$ and $\\overline{BA}$ in base $7$, where $A$ and $B$ are digits. What is the number in base ten?",
+  "choices": {
+   "A": "$8$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$13$",
+   "E": "$21$"
+  },
+  "answer": "B",
+  "hints": [
+   "Write both forms as equations."
+  ],
+  "solution": "**What we need:** the number.\n\n**Key idea:** $\\overline{AB}_{4} = 4A + B$ and $\\overline{BA}_{7} = 7B + A$.\n\n**Step 1.** $4A + B = 7B + A$, so $3A = 6B$.\n\n**Step 2.** With digits valid in both bases: $A = 2$, $B = 1$.\n\n**Step 3.** Number: $4 \\cdot 2 + 1 = 9$.\n\n**Answer:** $9$. **(B)**\n\n**Common mistake:** mixing up which digit is in which place."
+ },
+ {
+  "id": "nt_factorials_b01",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc1",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many zeros are at the end of $139!$?",
+  "choices": {
+   "A": "$27$",
+   "B": "$32$",
+   "C": "$33$",
+   "D": "$34$",
+   "E": "$135$"
+  },
+  "answer": "C",
+  "hints": [
+   "Each zero needs a factor of 10 = 2 × 5, and factors of 5 are scarcer. Count them, including extra 5s from 25, 125, and so on."
+  ],
+  "solution": "**What we need:** the number of trailing zeros of $139!$.\n\n**Key idea:** each trailing zero is a factor of $10 = 2 \\cdot 5$. There are always more $2$s than $5$s, so count the factors of $5$.\n\n**Step 1.** Multiples of $5$ up to $139$: $\\lfloor 139/5 \\rfloor = 27$.\n\n**Step 2.** Multiples of $25$ up to $139$: $\\lfloor 139/25 \\rfloor = 5$.\n\n**Step 3.** Multiples of $125$ up to $139$: $\\lfloor 139/125 \\rfloor = 1$.\n\n**Step 4.** Add: $27 + 5 + 1 = 33$. (Multiples of $25$ give an extra $5$, which is why we count them again.)\n\n**Answer:** $33$. **(C)**\n\n**Common mistake:** counting only multiples of $5$ ($27$) and missing the extra factors from $25$, $125$, ..."
+ },
+ {
+  "id": "nt_factorials_b02",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $\\dfrac{10!}{8!}$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$9$",
+   "C": "$80$",
+   "D": "$90$",
+   "E": "$990$"
+  },
+  "answer": "D",
+  "hints": [
+   "Cancel the common factors of the factorials."
+  ],
+  "solution": "**What we need:** the value of the fraction of factorials.\n\n**Key idea:** $10! = 10 \\cdot 9 \\cdots 1$ contains $8!$ as its tail, so most factors cancel.\n\n**Step 1.** $10! = 10 \\cdot 9 \\cdot 8!$.\n\n**Step 2.** Cancel $8!$: 9 \\cdot 10$ $= 90$.\n\n**Answer:** $90$. **(D)**\n\n**Common mistake:** computing $(10 - 8)! = 2$. Factorials don't subtract like that."
+ },
+ {
+  "id": "nt_factorials_b03",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the largest power of $7$ that divides $50!$? (Give the exponent.)",
+  "choices": {
+   "A": "$7$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$12$",
+   "E": "$16$"
+  },
+  "answer": "B",
+  "hints": [
+   "Count multiples of $p$, then $p^2$, then $p^3$, and so on."
+  ],
+  "solution": "**What we need:** how many factors of $7$ are in $1 \\cdot 2 \\cdots 50$.\n\n**Key idea:** Legendre's formula: count multiples of $7$, then add one more for each multiple of $7^2$, and so on.\n\n**Step 1.** Multiples of $7$: $\\lfloor 50/7 \\rfloor = 7$.\n\n**Step 2.** Multiples of $49$: $\\lfloor 50/49 \\rfloor = 1$.\n\n**Step 3.** Total: $7 + 1 = 8$.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** counting only the multiples of $7$, which misses the extra factors in $49$ and beyond."
+ },
+ {
+  "id": "nt_factorials_b04",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc4",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest positive integer $n$ such that $n!$ is a multiple of $250$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$14$",
+   "C": "$15$",
+   "D": "$16$",
+   "E": "$17$"
+  },
+  "answer": "C",
+  "hints": [
+   "Factor $250 = 2 \\cdot 5^{3}$ and find when $n!$ has enough of each prime."
+  ],
+  "solution": "**What we need:** the first $n$ with $250 \\mid n!$.\n\n**Key idea:** factor the target; $n!$ must contain enough of each prime. The answer is the most demanding prime's requirement.\n\n**Step 1.** $250 = 2 \\cdot 5^{3}$.\n\n**Step 2.** For each prime power: $2^{1}$ needs $n \\ge 2$; $5^{3}$ needs $n \\ge 15$.\n\n**Step 3.** The largest requirement is $n = 15$.\n\n**Answer:** $15$. **(C)**\n\n**Common mistake:** stopping at the largest prime factor; a squared prime like $5^2$ needs two multiples of it."
+ },
+ {
+  "id": "nt_factorials_b05",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_units_sum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the units digit of $1! + 2! + 3! + \\cdots + 87!$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$8$",
+   "E": "$9$"
+  },
+  "answer": "B",
+  "hints": [
+   "From $5!$ on, every factorial ends in $0$."
+  ],
+  "solution": "**What we need:** the units digit.\n\n**Key idea:** $5!$ and beyond contain $2 \\cdot 5 = 10$, so they end in $0$.\n\n**Step 1.** $1! + 2! + 3! + 4! = 1 + 2 + 6 + 24 = 33$.\n\n**Step 2.** Units digit: $3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** trying to add all the factorials."
+ },
+ {
+  "id": "nt_factorials_b06",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_power2",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the largest power of $2$ that divides $95!$? (Give the exponent.)",
+  "choices": {
+   "A": "$22$",
+   "B": "$47$",
+   "C": "$88$",
+   "D": "$89$",
+   "E": "$90$"
+  },
+  "answer": "D",
+  "hints": [
+   "Count multiples of $2$, $4$, $8$, ..."
+  ],
+  "solution": "**What we need:** the exponent of $2$.\n\n**Key idea:** Legendre's formula: add $\\lfloor n/2 \\rfloor + \\lfloor n/4 \\rfloor + \\lfloor n/8 \\rfloor + \\cdots$\n\n**Step 1.** $\\left\\lfloor \\frac{95}{2} \\right\\rfloor + \\left\\lfloor \\frac{95}{4} \\right\\rfloor + \\left\\lfloor \\frac{95}{8} \\right\\rfloor + \\left\\lfloor \\frac{95}{16} \\right\\rfloor + \\left\\lfloor \\frac{95}{32} \\right\\rfloor + \\left\\lfloor \\frac{95}{64} \\right\\rfloor$.\n\n**Step 2.** $47 + 23 + 11 + 5 + 2 + 1 = 89$.\n\n**Answer:** $89$. **(D)**\n\n**Common mistake:** counting only the multiples of $2$."
+ },
+ {
+  "id": "nt_factorials_b07",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_diff_ratio",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $\\dfrac{(21 + 1)! - 21!}{21!}$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$20$",
+   "C": "$21$",
+   "D": "$22$",
+   "E": "$42$"
+  },
+  "answer": "C",
+  "hints": [
+   "Factor out $21!$."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $(n + 1)! = (n + 1) \\cdot n!$.\n\n**Step 1.** $(22)! - 21! = 21!(22 - 1) = 21 \\cdot 21!$.\n\n**Step 2.** Divide by $21!$: $21$.\n\n**Answer:** $21$. **(C)**\n\n**Common mistake:** answering $n + 1$."
+ },
+ {
+  "id": "nt_factorials_b08",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_digits",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many digits does $6!$ have?",
+  "choices": {
+   "A": "$2$",
+   "B": "$3$",
+   "C": "$4$",
+   "D": "$5$",
+   "E": "$6$"
+  },
+  "answer": "B",
+  "hints": [
+   "Compute it, or estimate step by step."
+  ],
+  "solution": "**What we need:** the digit count.\n\n**Key idea:** multiply it out carefully.\n\n**Step 1.** $6! = 720$.\n\n**Step 2.** Digits: $3$.\n\n**Answer:** $3$. **(B)**\n\n**Common mistake:** counting trailing zeros only."
+ },
+ {
+  "id": "nt_factorials_b09",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_smallest_prime_power",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest positive integer $n$ such that $n!$ is divisible by $7^{5}$?",
+  "choices": {
+   "A": "$28$",
+   "B": "$35$",
+   "C": "$36$",
+   "D": "$42$",
+   "E": "$16807$"
+  },
+  "answer": "B",
+  "hints": [
+   "Each multiple of 7 adds at least one factor; multiples of 49 add two."
+  ],
+  "solution": "**What we need:** the smallest $n$.\n\n**Key idea:** count factors of 7 in $n!$ with Legendre's formula as $n$ grows.\n\n**Step 1.** $35!$ has $\\left\\lfloor \\frac{35}{7} \\right\\rfloor + \\left\\lfloor \\frac{35}{49} \\right\\rfloor = 5$ factors of $7$, which is at least $5$.\n\n**Step 2.** $34!$ has only $4$.\n\n**Answer:** $35$. **(B)**\n\n**Common mistake:** answering $7 \\cdot 5$, which ignores extra factors from 49."
+ },
+ {
+  "id": "nt_factorials_b10",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_falling",
+  "level": "basics",
+  "track": "both",
+  "prompt": "For what positive integer $n$ is $\\dfrac{n!}{(n - 3)!} = 336$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$9$"
+  },
+  "answer": "D",
+  "hints": [
+   "The fraction is a product of three consecutive integers."
+  ],
+  "solution": "**What we need:** $n$.\n\n**Key idea:** $\\frac{n!}{(n - 3)!} = n(n - 1)(n - 2)$.\n\n**Step 1.** $n(n - 1)(n - 2) = 336$.\n\n**Step 2.** $\\sqrt[3]{336} \\approx 7.0$, so try around there: $8 \\cdot 7 \\cdot 6 = 336$.\n\n**Step 3.** $n = 8$.\n\n**Answer:** $8$. **(D)**\n\n**Common mistake:** taking the cube root and stopping, which gives the middle factor."
+ },
+ {
+  "id": "nt_factorials_b11",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_prime_count",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many different primes divide $54!$?",
+  "choices": {
+   "A": "$15$",
+   "B": "$16$",
+   "C": "$17$",
+   "D": "$27$",
+   "E": "$50$"
+  },
+  "answer": "B",
+  "hints": [
+   "Which primes appear as factors in $1 \\cdot 2 \\cdots n$?"
+  ],
+  "solution": "**What we need:** the number of prime divisors.\n\n**Key idea:** a prime divides $n!$ exactly when it is at most $n$.\n\n**Step 1.** Primes up to $54$: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53.\n\n**Step 2.** Count: $16$.\n\n**Answer:** $16$. **(B)**\n\n**Common mistake:** counting primes with multiplicity."
+ },
+ {
+  "id": "nt_factorials_b12",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_zeros_product",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many zeros are at the end of $22! \\cdot 31!$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$7$",
+   "C": "$11$",
+   "D": "$12$",
+   "E": "$169$"
+  },
+  "answer": "C",
+  "hints": [
+   "Count factors of $5$ in each factorial and add."
+  ],
+  "solution": "**What we need:** the number of trailing zeros.\n\n**Key idea:** zeros come from pairs of $2$ and $5$; there are always more $2$s, so count the $5$s.\n\n**Step 1.** Fives in $22!$: $4$. Fives in $31!$: $7$.\n\n**Step 2.** Total: $11$ (and there are plenty of $2$s).\n\n**Answer:** $11$. **(C)**\n\n**Common mistake:** using $(22 + 31)!$ instead."
+ },
+ {
+  "id": "nt_factorials_b13",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_digit_sum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the sum of the digits of $11!$?",
+  "choices": {
+   "A": "$27$",
+   "B": "$36$",
+   "C": "$37$",
+   "D": "$45$",
+   "E": "$66$"
+  },
+  "answer": "B",
+  "hints": [
+   "Compute it."
+  ],
+  "solution": "**What we need:** the digit sum.\n\n**Key idea:** for $n \\ge 6$, $n!$ is divisible by $9$, so the digit sum is a multiple of $9$ (a good check).\n\n**Step 1.** $11! = 39916800$.\n\n**Step 2.** Digit sum: $36$.\n\n**Answer:** $36$. **(B)**\n\n**Common mistake:** adding $1 + 2 + \\cdots + 11$."
+ },
+ {
+  "id": "nt_factorials_b14",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_square_zeros",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many zeros are at the end of $(88!)^2$?",
+  "choices": {
+   "A": "$20$",
+   "B": "$40$",
+   "C": "$41$",
+   "D": "$43$",
+   "E": "$1932$"
+  },
+  "answer": "B",
+  "hints": [
+   "Squaring doubles every exponent."
+  ],
+  "solution": "**What we need:** the number of trailing zeros.\n\n**Key idea:** count the $5$s in $88!$, then double.\n\n**Step 1.** Fives in $88!$: $20$.\n\n**Step 2.** In the square: $40$.\n\n**Answer:** $40$. **(B)**\n\n**Common mistake:** using $(7744)!$."
+ },
+ {
+  "id": "nt_factorials_b15",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_divisor_count",
+  "level": "basics",
+  "track": "both",
+  "prompt": "How many positive divisors does $6!$ have?",
+  "choices": {
+   "A": "$28$",
+   "B": "$30$",
+   "C": "$32$",
+   "D": "$36$",
+   "E": "$72$"
+  },
+  "answer": "B",
+  "hints": [
+   "Factor $6!$ into primes."
+  ],
+  "solution": "**What we need:** the divisor count.\n\n**Key idea:** use the prime factorization and multiply (exponent $+ 1$).\n\n**Step 1.** $6! = 2^{4} \\cdot 3^{2} \\cdot 5$.\n\n**Step 2.** Divisors: $(4 + 1) \\cdot (2 + 1) \\cdot (1 + 1) = 30$.\n\n**Answer:** $30$. **(B)**\n\n**Common mistake:** multiplying the exponents instead of the exponents plus one."
+ },
+ {
+  "id": "nt_factorials_b16",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_gcd",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $\\gcd(3!, 6!)$?",
+  "choices": {
+   "A": "$3$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$12$",
+   "E": "$720$"
+  },
+  "answer": "B",
+  "hints": [
+   "The smaller factorial divides the larger."
+  ],
+  "solution": "**What we need:** the GCD.\n\n**Key idea:** $3!$ divides $6!$, so it is the GCD.\n\n**Step 1.** $6! = 6 \\cdots 4 \\cdot 3!$.\n\n**Step 2.** GCD $= 3! = 6$.\n\n**Answer:** $6$. **(B)**\n\n**Common mistake:** giving the larger factorial."
+ },
+ {
+  "id": "nt_factorials_b17",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_small_sum",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $0! + 1! + 2! + \\cdots + 3!$?",
+  "choices": {
+   "A": "$4$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$11$",
+   "E": "$24$"
+  },
+  "answer": "C",
+  "hints": [
+   "Remember that $0! = 1$."
+  ],
+  "solution": "**What we need:** the sum.\n\n**Key idea:** list each factorial; $0! = 1$ by definition.\n\n**Step 1.** $0! = 1$, $1! = 1$, $2! = 2$, $3! = 6$.\n\n**Step 2.** Sum: $10$.\n\n**Answer:** $10$. **(C)**\n\n**Common mistake:** taking $0! = 0$."
+ },
+ {
+  "id": "nt_factorials_b18",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_exceed",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the smallest $n$ such that $n! > 10^{10}$?",
+  "choices": {
+   "A": "$10$",
+   "B": "$13$",
+   "C": "$14$",
+   "D": "$15$",
+   "E": "$16$"
+  },
+  "answer": "C",
+  "hints": [
+   "List factorials until they pass the target."
+  ],
+  "solution": "**What we need:** the smallest $n$.\n\n**Key idea:** factorials grow quickly; compute them in order.\n\n**Step 1.** $13! = 6227020800 \\le 10^{10}$.\n\n**Step 2.** $14! = 87178291200 > 10^{10}$.\n\n**Answer:** $14$. **(C)**\n\n**Common mistake:** stopping one step early."
+ },
+ {
+  "id": "nt_factorials_b19",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_ratio_simplify",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is $\\dfrac{18!}{16!}$?",
+  "choices": {
+   "A": "$2$",
+   "B": "$17$",
+   "C": "$36$",
+   "D": "$306$",
+   "E": "$322$"
+  },
+  "answer": "D",
+  "hints": [
+   "Cancel the common part."
+  ],
+  "solution": "**What we need:** the value.\n\n**Key idea:** $18! = 18 \\cdot \\cdots \\cdot 17 \\cdot 16!$.\n\n**Step 1.** $\\frac{18!}{16!} = 18 \\cdot 17 = 306$.\n\n**Answer:** $306$. **(D)**\n\n**Common mistake:** computing $2!$ (dividing the numbers instead of cancelling)."
+ },
+ {
+  "id": "nt_factorials_b20",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fc_power3",
+  "level": "basics",
+  "track": "both",
+  "prompt": "What is the largest power of $3$ that divides $82!$? (Give the exponent.)",
+  "choices": {
+   "A": "$27$",
+   "B": "$39$",
+   "C": "$40$",
+   "D": "$41$",
+   "E": "$79$"
+  },
+  "answer": "C",
+  "hints": [
+   "Count multiples of $3$, $9$, $27$, ..."
+  ],
+  "solution": "**What we need:** the exponent of $3$.\n\n**Key idea:** Legendre: $\\lfloor n/3 \\rfloor + \\lfloor n/9 \\rfloor + \\lfloor n/27 \\rfloor + \\cdots$\n\n**Step 1.** $27 + 9 + 3 + 1 = 40$.\n\n**Answer:** $40$. **(C)**\n\n**Common mistake:** counting only multiples of $3$."
+ },
+ {
+  "id": "nt_factorials_c01",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fcc1",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the remainder when $1! + 2! + 3! + \\cdots + 53!$ is divided by $13$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$9$",
+   "C": "$10$",
+   "D": "$11$",
+   "E": "$12$"
+  },
+  "answer": "B",
+  "hints": [
+   "From some point on, $k!$ is a multiple of $13$, so only the first few terms matter."
+  ],
+  "solution": "**What we need:** the remainder of a huge sum of factorials.\n\n**Key idea:** from $13!$ on, every factorial is a multiple of $13$, so those terms add $0$ to the remainder.\n\n**Step 1.** $13! $ is the first factorial divisible by $13$, and all later ones contain it.\n\n**Step 2.** Remainders of $1!, 2!, \\ldots, 12!$ mod $13$: 1, 2, 6, 11, 3, 5, 9, 7, 11, 6, 1, 12.\n\n**Step 3.** Add them: $74 \\equiv 9 \\pmod{13}$.\n\n**Answer:** $9$. **(B)**\n\n**Common mistake:** including terms that are already multiples of 13."
+ },
+ {
+  "id": "nt_factorials_c02",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fcc2",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many zeros are at the end of $39!$ when it is written in base $8$?",
+  "choices": {
+   "A": "$8$",
+   "B": "$10$",
+   "C": "$11$",
+   "D": "$12$",
+   "E": "$35$"
+  },
+  "answer": "C",
+  "hints": [
+   "Count how many times $8 = 2^{3}$ divides $39!$."
+  ],
+  "solution": "**What we need:** how many times $8$ divides $39!$.\n\n**Key idea:** a trailing zero in base $8$ is a factor of $8$. Count each prime in $39!$ and see how many copies of $8 = 2^{3}$ you can build.\n\n**Step 1.** Prime $2$ appears $35$ times in $39!$; each copy of $8$ uses $3$, allowing $\\lfloor 35/3 \\rfloor = 11$ copies.\n\n**Step 2.** The scarcest prime limits us: $11$.\n\n**Answer:** $11$. **(C)**\n\n**Common mistake:** counting factors of $5$ out of habit; trailing zeros depend on the base."
+ },
+ {
+  "id": "nt_factorials_c03",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fcc3",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "For how many positive integers $n$ does $n!$ end in exactly $36$ zeros?",
+  "choices": {
+   "A": "$0$",
+   "B": "$1$",
+   "C": "$2$",
+   "D": "$4$",
+   "E": "$5$"
+  },
+  "answer": "A",
+  "hints": [
+   "The number of trailing zeros jumps by more than 1 at multiples of 25."
+  ],
+  "solution": "**What we need:** how many $n$ give exactly $36$ trailing zeros.\n\n**Key idea:** at a multiple of $25$, the zero count jumps by $2$ or more, skipping some values.\n\n**Step 1.** $n = 149$ gives $35$ zeros, and $n = 150$ gives $37$ zeros.\n\n**Step 2.** $36$ is skipped, so no $n$ works.\n\n**Answer:** $0$. **(A)**\n\n**Common mistake:** assuming every number of zeros happens for exactly five values of $n$."
+ },
+ {
+  "id": "nt_factorials_c04",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fcc_largest_square",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the largest perfect square that divides $12!$? Give its square root.",
+  "choices": {
+   "A": "$720$",
+   "B": "$1440$",
+   "C": "$2880$",
+   "D": "$4320$",
+   "E": "$21886$"
+  },
+  "answer": "B",
+  "hints": [
+   "Round each exponent down to an even number."
+  ],
+  "solution": "**What we need:** the square root of the largest square divisor.\n\n**Key idea:** a square divisor uses even exponents; take each exponent down to the nearest even number.\n\n**Step 1.** $12! = 2^{10} \\cdot 3^{5} \\cdot 5^{2} \\cdot 7 \\cdot 11$.\n\n**Step 2.** Largest square: $2^{10} \\cdot 3^{4} \\cdot 5^{2}$, whose square root is $2^{5} \\cdot 3^{2} \\cdot 5 = 1440$.\n\n**Answer:** $1440$. **(B)**\n\n**Common mistake:** using $\\lfloor \\sqrt{n!} \\rfloor$."
+ },
+ {
+  "id": "nt_factorials_c05",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fcc_base12",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many zeros are at the end of $16!$ when written in base $12$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$3$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "D",
+  "hints": [
+   "$12 = 2^2 \\cdot 3$."
+  ],
+  "solution": "**What we need:** the number of trailing zeros in base 12.\n\n**Key idea:** each zero needs one factor of $12 = 2^2 \\cdot 3$: two $2$s and one $3$.\n\n**Step 1.** Twos in $16!$: $15$, enough for $7$ factors of $4$.\n\n**Step 2.** Threes: $6$.\n\n**Step 3.** Zeros: $\\min(7, 6) = 6$.\n\n**Answer:** $6$. **(D)**\n\n**Common mistake:** counting factors of $12$ in the numbers $1$ to $n$."
+ },
+ {
+  "id": "nt_factorials_c06",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fcc_smallest_zeros",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the smallest $n$ for which $n!$ ends in exactly $43$ zeros?",
+  "choices": {
+   "A": "$170$",
+   "B": "$175$",
+   "C": "$176$",
+   "D": "$180$",
+   "E": "$215$"
+  },
+  "answer": "B",
+  "hints": [
+   "Each multiple of $5$ adds a zero; multiples of $25$ add two."
+  ],
+  "solution": "**What we need:** the smallest $n$.\n\n**Key idea:** the zero count of $n!$ is $\\lfloor n/5 \\rfloor + \\lfloor n/25 \\rfloor + \\cdots$, and only increases at multiples of $5$.\n\n**Step 1.** $175!$: $\\left\\lfloor \\frac{175}{5} \\right\\rfloor + \\left\\lfloor \\frac{175}{25} \\right\\rfloor + \\left\\lfloor \\frac{175}{125} \\right\\rfloor = 43$.\n\n**Step 2.** $170!$ has only $41$.\n\n**Answer:** $175$. **(B)**\n\n**Common mistake:** answering $5k$, which overshoots when multiples of $25$ are involved."
+ },
+ {
+  "id": "nt_factorials_c07",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fcc_last_nonzero",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the last nonzero digit of $6!$?",
+  "choices": {
+   "A": "$0$",
+   "B": "$2$",
+   "C": "$4$",
+   "D": "$6$",
+   "E": "$8$"
+  },
+  "answer": "B",
+  "hints": [
+   "Remove the factors that make tens, then track the last digit."
+  ],
+  "solution": "**What we need:** the last nonzero digit.\n\n**Key idea:** strip out pairs of $2$ and $5$ (they make the zeros), then multiply what's left mod $10$.\n\n**Step 1.** $6! = 720$.\n\n**Step 2.** After removing trailing zeros: $72$, whose last digit is $2$.\n\n**Answer:** $2$. **(B)**\n\n**Common mistake:** forgetting to remove the zeros first."
+ },
+ {
+  "id": "nt_factorials_c08",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fcc_square_divisors",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "How many positive divisors of $8!$ are perfect squares?",
+  "choices": {
+   "A": "$3$",
+   "B": "$8$",
+   "C": "$9$",
+   "D": "$16$",
+   "E": "$96$"
+  },
+  "answer": "B",
+  "hints": [
+   "Choose even exponents for each prime."
+  ],
+  "solution": "**What we need:** the number of square divisors.\n\n**Key idea:** a square divisor uses an even exponent of each prime, from $0$ up to the exponent in $8!$.\n\n**Step 1.** $8! = 2^{7} \\cdot 3^{2} \\cdot 5 \\cdot 7$.\n\n**Step 2.** Even choices: $2$: $4$, $3$: $2$, $5$: $1$, $7$: $1$. Product: $8$.\n\n**Answer:** $8$. **(B)**\n\n**Common mistake:** counting all divisors."
+ },
+ {
+  "id": "nt_factorials_c09",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fcc_superfactorial",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the exponent of $5$ in the product $1! \\cdot 2! \\cdot 3! \\cdots 9!$?",
+  "choices": {
+   "A": "$1$",
+   "B": "$4$",
+   "C": "$5$",
+   "D": "$6$",
+   "E": "$7$"
+  },
+  "answer": "C",
+  "hints": [
+   "Add the exponent of 5 in each factorial."
+  ],
+  "solution": "**What we need:** the total exponent.\n\n**Key idea:** the exponent of $5$ in a product is the sum over its factors.\n\n**Step 1.** Exponents in $k!$ for $k = 1, \\ldots, 9$: 0, 0, 0, 0, 1, 1, 1, 1, 1.\n\n**Step 2.** Sum: $5$.\n\n**Answer:** $5$. **(C)**\n\n**Common mistake:** counting only the exponent in $9!$."
+ },
+ {
+  "id": "nt_factorials_c10",
+  "skillId": "nt_factorials",
+  "family": "nt_factorials:fcc_sum_factor",
+  "level": "challenge",
+  "track": "both",
+  "prompt": "What is the largest prime factor of $7! + 8!$?",
+  "choices": {
+   "A": "$5$",
+   "B": "$6$",
+   "C": "$7$",
+   "D": "$8$",
+   "E": "$9$"
+  },
+  "answer": "C",
+  "hints": [
+   "Factor out $7!$."
+  ],
+  "solution": "**What we need:** the largest prime factor.\n\n**Key idea:** $n! + (n + 1)! = n!(1 + (n + 1)) = n!(n + 2)$.\n\n**Step 1.** $7! + 8! = 7! \\cdot 9$.\n\n**Step 2.** Primes in $7!$ go up to $7$; $9 = 3^{2}$.\n\n**Step 3.** Largest prime: $7$.\n\n**Answer:** $7$. **(C)**\n\n**Common mistake:** assuming the largest prime is 8."
+ }
+]

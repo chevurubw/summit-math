@@ -1,0 +1,125 @@
+---
+title: Logarithm rules
+---
+
+A **logarithm** answers the question "what power?" The expression $\log_2 8$ asks: 2 to what power gives 8? The answer is 3. Logs undo exponents, the way subtraction undoes addition.
+
+$$
+\log_b x = y \quad\text{means exactly}\quad b^y = x.
+$$
+
+By the end of this lesson you will be able to:
+
+- evaluate logs by rewriting them as exponent questions,
+- see the log graph as the exponential graph reflected,
+- use the product, quotient and power rules,
+- simplify expressions like $b^{\log_b x}$.
+
+## Evaluating: ask "what power?"
+
+- $\log_3 81 = 4$ because $3^4 = 81$.
+- $\log_5 1 = 0$ because $5^0 = 1$.
+- $\log_2 \tfrac{1}{8} = -3$ because $2^{-3} = \tfrac{1}{8}$.
+- $\log_4 2 = \tfrac{1}{2}$ because $4^{1/2} = 2$.
+
+When no base is written, $\log x$ means base 10 on the AMC, and $\ln x$ means base $e$.
+
+<Check choices={["$\\tfrac{1}{2}$", "$\\tfrac{2}{3}$", "$\\tfrac{3}{2}$", "$2$", "$3$"]} answer={1} explain="Write both as powers of 2: $8 = 2^3$ and $4 = 2^2$. We need $(2^3)^y = 2^2$, so $3y = 2$ and $y = \tfrac{2}{3}$.">
+What is $\log_8 4$?
+</Check>
+
+## The graph: exponentials reflected
+
+Since $\log_b$ undoes $b^x$, the graph of $y = \log_b x$ is the graph of $y = b^x$ reflected across the line $y = x$. Change the base.
+
+<Figure
+  bounds={[-4, 8, -4, 8]}
+  ticks={1}
+  height={420}
+  params={[{ name: "b", min: 1.2, max: 5, step: 0.1, value: 2, label: "base $b$" }]}
+  elements={[
+    { type: "line", a: [0, 0], b: [1, 1], color: "muted", dashed: true, width: 1.2 },
+    { type: "func", f: "b^x", color: "blue", width: 2.5 },
+    { type: "func", f: "logb(b, x)", from: 0.001, to: 8, color: "accent", width: 3 },
+    { type: "point", x: 1, y: 0, color: "accent", label: "(1, 0)", labelDir: "se" },
+    { type: "point", x: "b", y: 1, color: "accent", label: "(b, 1)", labelDir: "se" },
+    { type: "point", x: 0, y: 1, color: "blue", label: "(0, 1)", labelDir: "nw" },
+  ]}
+  readouts={["\\color{#60a5fa} y = [[b]]^x", "\\color{#a78bfa} y = \\log_{[[b]]} x"]}
+  caption="Every log graph passes through $(1, 0)$ and $(b, 1)$, because $b^0 = 1$ and $b^1 = b$. Logs are only defined for $x > 0$."
+/>
+
+<Trap>
+You can't take the log of zero or a negative number. Whenever you solve a log equation, check that every log's input is positive at your answer.
+</Trap>
+
+## The three rules
+
+Each comes straight from an exponent rule.
+
+<Formula>
+
+$$
+\begin{aligned}
+\log_b(xy) &= \log_b x + \log_b y && \text{(multiplying powers adds exponents)}\\
+\log_b\!\left(\tfrac{x}{y}\right) &= \log_b x - \log_b y && \text{(dividing subtracts)}\\
+\log_b(x^n) &= n\log_b x && \text{(a power of a power multiplies)}
+\end{aligned}
+$$
+
+</Formula>
+
+<Steps problem="Evaluate $\log 4 + \log 25$ (base 10).">
+<Step>
+Product rule: $\log 4 + \log 25 = \log(4 \cdot 25) = \log 100$.
+</Step>
+<Step>
+$10^2 = 100$, so the answer is $2$.
+</Step>
+</Steps>
+
+<Check choices={["$1$", "$2$", "$3$", "$4$", "$5$"]} answer={1} explain="$\log_3 54 - \log_3 6 = \log_3 \tfrac{54}{6} = \log_3 9 = 2$.">
+What is $\log_3 54 - \log_3 6$?
+</Check>
+
+<Trap title="Rules that don't exist">
+$\log(x + y)$ is **not** $\log x + \log y$. And $\dfrac{\log x}{\log y}$ is **not** $\log x - \log y$ (it's actually $\log_y x$; see the change of base lesson).
+</Trap>
+
+## Logs and exponents cancel
+
+Since they undo each other:
+
+$$
+b^{\log_b x} = x, \qquad \log_b(b^x) = x.
+$$
+
+So $5^{\log_5 7} = 7$, and $9^{\log_3 2} = (3^2)^{\log_3 2} = 3^{2\log_3 2} = 3^{\log_3 4} = 4$.
+
+<Check choices={["$2$", "$4$", "$6$", "$8$", "$16$"]} answer={3} explain="$4^{\log_2 \sqrt{8}}$: write $4 = 2^2$, so it's $2^{2\log_2 \sqrt 8} = 2^{\log_2 8} = 8$.">
+What is $4^{\log_2 \sqrt{8}}$?
+</Check>
+
+<KeyIdea>
+When a log problem looks hard, rewrite it as an exponent statement: $\log_b x = y \iff b^y = x$. Then use the exponent tools you already know, especially "write everything with the same base".
+</KeyIdea>
+
+<FlipCards cards={[
+  { front: "$\\log_2 64$", back: "$6$" },
+  { front: "$\\log_{10} 0.001$", back: "$-3$" },
+  { front: "$3\\log 2 + \\log 125$", back: "$\\log 8 + \\log 125 = \\log 1000 = 3$" },
+  { front: "$\\log_b 1$ for any base", back: "$0$" },
+]} />
+
+<Recap>
+- $\log_b x = y$ means $b^y = x$.
+- The log graph is the exponential graph reflected over $y = x$; inputs must be positive.
+- Product adds, quotient subtracts, a power comes out front.
+- $b^{\log_b x} = x$.
+- No rule exists for $\log(x + y)$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Logarithm" /> on the AoPS Wiki.
+- Log problems appear in <Archive test="12" />.
+</GoFurther>

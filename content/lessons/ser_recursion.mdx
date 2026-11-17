@@ -1,0 +1,121 @@
+---
+title: Recursive sequences
+---
+
+A **recursive** sequence tells you how to get each term from the ones before it, like $a_{n+1} = 2a_n + 1$. To find term number 2026 you can't compute two thousand terms by hand, so the AMC is really asking: **can you spot the pattern?** Usually the sequence either repeats in a cycle, or follows a formula you can guess and check.
+
+By the end of this lesson you will be able to:
+
+- compute the first terms carefully and organize them,
+- detect cycles and use remainders to jump ahead,
+- guess a closed form and verify it,
+- understand where linear recurrences settle down.
+
+## Step 1 always: write out terms
+
+<Steps problem="Let $a_1 = 2$ and $a_{n+1} = \dfrac{1}{1 - a_n}$. Find $a_{2026}$.">
+<Step title="Compute">
+$a_2 = \tfrac{1}{1 - 2} = -1$, $\ a_3 = \tfrac{1}{1 - (-1)} = \tfrac12$, $\ a_4 = \tfrac{1}{1 - 1/2} = 2$.
+</Step>
+<Step title="Spot the cycle">
+$a_4 = a_1$, and each term depends only on the one before, so the sequence repeats every 3 terms: $2, -1, \tfrac12, 2, -1, \tfrac12, \dots$
+</Step>
+<Step title="Use a remainder">
+$2026 = 3 \cdot 675 + 1$, so $a_{2026} = a_1 = 2$.
+</Step>
+</Steps>
+
+<KeyIdea>
+Once a term repeats an earlier term (and the rule only uses the previous term), the sequence cycles forever. If the rule uses the previous **two** terms, you need two consecutive terms to repeat.
+</KeyIdea>
+
+<Check choices={["$-3$", "$-2$", "$-1$", "$1$", "$3$"]} answer={2} explain="The terms are $1, 3, 2, -1, -3, -2, 1, 3, \dots$, a cycle of length 6. $100 = 6 \cdot 16 + 4$, so $a_{100} = a_4 = -1$.">
+Let $a_1 = 1$, $a_2 = 3$ and $a_n = a_{n-1} - a_{n-2}$ for $n \ge 3$. What is $a_{100}$?
+</Check>
+
+<Check choices={["$-\\tfrac12$", "$\\tfrac23$", "$1$", "$2$", "$3$"]} answer={4} explain="$a_2 = \tfrac{1}{1 - 3} = -\tfrac12$, $a_3 = \tfrac{1}{3/2} = \tfrac23$, $a_4 = \tfrac{1}{1/3} = 3$. Period 3, and $100 = 3 \cdot 33 + 1$, so $a_{100} = a_1 = 3$.">
+Let $a_1 = 3$ and $a_{n+1} = \dfrac{1}{1 - a_n}$. What is $a_{100}$?
+</Check>
+
+## Guess a closed form, then check it
+
+<Steps problem="Let $a_1 = 1$ and $a_{n} = 2a_{n-1} + 1$. Find $a_{10}$.">
+<Step title="Compute">
+$1, 3, 7, 15, 31, \dots$
+</Step>
+<Step title="Guess">
+Each is one less than a power of 2: $a_n = 2^n - 1$.
+</Step>
+<Step title="Verify">
+If $a_{n-1} = 2^{n-1} - 1$, then $2a_{n-1} + 1 = 2^n - 2 + 1 = 2^n - 1$ ✓.
+</Step>
+<Step title="Answer">
+$a_{10} = 2^{10} - 1 = 1023$.
+</Step>
+</Steps>
+
+## Where linear recurrences go
+
+For $a_{n+1} = r\,a_n + c$, the special value $L = \dfrac{c}{1 - r}$ stays fixed (plug it in and you get it back). The distance from $L$ gets multiplied by $r$ every step:
+
+$$
+a_n = L + (a_1 - L)\,r^{n-1}.
+$$
+
+So if $|r| < 1$ the terms close in on $L$; if $|r| > 1$ they run away. A negative $r$ makes them zigzag. Try it.
+
+<Figure
+  bounds={[-0.8, 13, -6, 12]}
+  ticks={1}
+  height={360}
+  equal={false}
+  params={[
+    { name: "r", min: -1.15, max: 1.35, step: 0.1, value: 0.45, label: "multiplier $r$" },
+    { name: "c", min: -3, max: 5, step: 0.5, value: 3, label: "add $c$" },
+    { name: "a1", min: -4, max: 10, step: 0.5, value: 0, label: "$a_1$" },
+  ]}
+  elements={[
+    { type: "segment", a: [0, "c/(1 - r)"], b: [13, "c/(1 - r)"], color: "amber", dashed: true, width: 1.5, show: "abs(1 - r) > 0.01" },
+    { type: "point", x: 1, y: "c/(1-r) + (a1 - c/(1-r))*r^0", color: "accent" },
+    { type: "point", x: 2, y: "c/(1-r) + (a1 - c/(1-r))*r^1", color: "accent" },
+    { type: "point", x: 3, y: "c/(1-r) + (a1 - c/(1-r))*r^2", color: "accent" },
+    { type: "point", x: 4, y: "c/(1-r) + (a1 - c/(1-r))*r^3", color: "accent" },
+    { type: "point", x: 5, y: "c/(1-r) + (a1 - c/(1-r))*r^4", color: "accent" },
+    { type: "point", x: 6, y: "c/(1-r) + (a1 - c/(1-r))*r^5", color: "accent" },
+    { type: "point", x: 7, y: "c/(1-r) + (a1 - c/(1-r))*r^6", color: "accent" },
+    { type: "point", x: 8, y: "c/(1-r) + (a1 - c/(1-r))*r^7", color: "accent" },
+    { type: "point", x: 9, y: "c/(1-r) + (a1 - c/(1-r))*r^8", color: "accent" },
+    { type: "point", x: 10, y: "c/(1-r) + (a1 - c/(1-r))*r^9", color: "accent" },
+    { type: "point", x: 11, y: "c/(1-r) + (a1 - c/(1-r))*r^10", color: "accent" },
+    { type: "point", x: 12, y: "c/(1-r) + (a1 - c/(1-r))*r^11", color: "accent" },
+  ]}
+  readouts={["a_{n+1} = [[r]]\\,a_n + [[c]]", "\\color{#fbbf24}L = \\dfrac{c}{1 - r} = [[c/(1 - r):3]]"]}
+  caption="Dots are $a_1$ through $a_{12}$. The dashed line is the fixed value $L$."
+/>
+
+<Tip>
+For two term rules like $a_n = a_{n-1} + a_{n-2}$ (Fibonacci), there's rarely a nice formula to use on the AMC. Instead, compute terms **mod** something when the question asks about remainders or last digits: remainders cycle too.
+</Tip>
+
+<Trap>
+Be careful with indexing. If the cycle is $a_1, a_2, a_3$, then a remainder of 0 when dividing by 3 means $a_3$, not $a_0$.
+</Trap>
+
+<FlipCards cards={[
+  { front: "Period of $a_{n+1} = -\\tfrac{1}{a_n}$, $a_1 = 2$", back: "$2, -\\tfrac12, 2, \\dots$: period 2" },
+  { front: "Closed form: $a_1 = 3$, $a_{n+1} = a_n + 2n$", back: "$a_n = n^2 - n + 3$" },
+  { front: "Last digit of the 100th Fibonacci number", back: "Last digits cycle with period 60; $F_{100}$ ends in 5." },
+  { front: "Fixed value of $a_{n+1} = \\tfrac13 a_n + 4$", back: "$L = \\tfrac{4}{2/3} = 6$" },
+]} />
+
+<Recap>
+- Always write out the first several terms.
+- If terms repeat, find the period and use a remainder.
+- Otherwise guess a formula and verify it in the recurrence.
+- $a_{n+1} = ra_n + c$ settles at $\tfrac{c}{1 - r}$ when $|r| < 1$.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Recursion" /> on the AoPS Wiki.
+- Practice in <Archive test="12" />.
+</GoFurther>

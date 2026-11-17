@@ -1,0 +1,131 @@
+---
+title: Circles and parabolas
+---
+
+Circles and parabolas are the shapes you get from simple distance rules. A **circle** is every point at a fixed distance from a center. A **parabola** is every point equally far from a point (the **focus**) and a line (the **directrix**). On the AMC, the main skill is turning a messy equation into a clean form you can read.
+
+By the end of this lesson you will be able to:
+
+- complete the square to find a circle's center and radius,
+- find a parabola's vertex, focus and directrix,
+- decide when a line is tangent to a curve using the discriminant,
+- find where lines and curves meet.
+
+## Circles: complete the square
+
+A circle with center $(h, k)$ and radius $r$ is
+
+$$
+(x - h)^2 + (y - k)^2 = r^2.
+$$
+
+That's just the distance formula saying "distance from $(h, k)$ equals $r$". When an equation arrives expanded, complete the square in $x$ and in $y$.
+
+<Steps problem="Find the center and radius of $x^2 + y^2 - 6x + 4y - 12 = 0$.">
+<Step title="Group">
+$(x^2 - 6x) + (y^2 + 4y) = 12$.
+</Step>
+<Step title="Complete each square">
+Add $9$ and $4$ to both sides: $(x - 3)^2 + (y + 2)^2 = 25$.
+</Step>
+<Step title="Read it off">
+Center $(3, -2)$, radius $5$.
+</Step>
+</Steps>
+
+<Check choices={["$2$", "$3$", "$4$", "$5$", "$9$"]} answer={1} explain="Move the constant: $x^2 + 8x + y^2 - 2y = -8$. Add $16$ and $1$ to both sides: $(x + 4)^2 + (y - 1)^2 = 9$, so $r = 3$.">
+What is the radius of the circle $x^2 + y^2 + 8x - 2y + 8 = 0$?
+</Check>
+
+## Parabolas: focus and directrix
+
+The parabola $y = \dfrac{x^2}{4p}$ has its vertex at the origin, focus $(0, p)$ and directrix $y = -p$. Drag the point along the curve and watch the two distances stay equal.
+
+<Figure
+  bounds={[-6, 6, -3, 7]}
+  ticks={1}
+  height={380}
+  params={[
+    { name: "p", min: 0.5, max: 2.5, step: 0.25, value: 1, label: "$p$" },
+    { name: "t", min: -5, max: 5, step: 0.1, value: 3, label: "point's $x$", play: true, speed: 2 },
+  ]}
+  elements={[
+    { type: "func", f: "x^2/(4*p)", color: "accent", width: 3 },
+    { type: "segment", a: [-6, "-p"], b: [6, "-p"], color: "muted", dashed: true, width: 1.5 },
+    { type: "point", id: "F", x: 0, y: "p", color: "amber", label: "focus", labelDir: "w" },
+    { type: "point", id: "P", x: "t", y: "t^2/(4*p)", color: "heading", label: "P", labelDir: "ne" },
+    { type: "point", id: "D", x: "t", y: "-p", color: "muted", size: 4 },
+    { type: "segment", a: "P", b: "F", color: "amber", width: 2.5 },
+    { type: "segment", a: "P", b: "D", color: "teal", width: 2.5 },
+  ]}
+  readouts={["y = \\dfrac{x^2}{[[4*p]]}", "\\color{#fbbf24}PF = [[sqrt(t^2 + (t^2/(4*p) - p)^2):3]]", "\\color{#2dd4bf}\\text{to directrix} = [[t^2/(4*p) + p:3]]"]}
+  caption="The dashed line is the directrix $y = -p$. Every point on the parabola is equally far from it and from the focus."
+/>
+
+For a general parabola, complete the square to get **vertex form** $y = a(x - h)^2 + k$, with vertex $(h, k)$. Then $a = \tfrac{1}{4p}$, so the focus is $\tfrac{1}{4a}$ above the vertex (below it if $a < 0$).
+
+<Check choices={["$(0, 1)$", "$(0, 2)$", "$(0, 4)$", "$(0, 8)$", "$(2, 0)$"]} answer={1} explain="$y = \tfrac{x^2}{8}$ means $4p = 8$, so $p = 2$ and the focus is $(0, 2)$.">
+What is the focus of $y = \tfrac{1}{8}x^2$?
+</Check>
+
+<Check choices={["$(3, -11)$", "$(3, 7)$", "$(-3, 61)$", "$(6, 7)$", "$(3, -2)$"]} answer={0} explain="The vertex is at $x = -\tfrac{b}{2a} = \tfrac{12}{4} = 3$, and $y = 2(9) - 36 + 7 = -11$.">
+What is the vertex of $y = 2x^2 - 12x + 7$?
+</Check>
+
+## Tangent lines and the discriminant
+
+To find where a line meets a curve, substitute and solve. If the result is a quadratic, its **discriminant** tells you how many meeting points there are: 2 if positive, 1 (tangent) if zero, 0 if negative.
+
+<Steps problem="For what $k$ is the line $y = 2x + k$ tangent to $y = x^2$?">
+<Step title="Substitute">
+$x^2 = 2x + k$, so $x^2 - 2x - k = 0$.
+</Step>
+<Step title="Tangent means one solution">
+Discriminant $4 + 4k = 0$, so $k = -1$.
+</Step>
+<Step title="Check">
+$x^2 - 2x + 1 = (x - 1)^2$: they touch only at $(1, 1)$ ✓.
+</Step>
+</Steps>
+
+<Figure
+  bounds={[-3, 4, -3, 6]}
+  ticks={1}
+  height={320}
+  params={[{ name: "k", min: -3, max: 2, step: 0.25, value: -1, label: "$k$" }]}
+  elements={[
+    { type: "func", f: "x^2", color: "accent", width: 3 },
+    { type: "func", f: "2*x + k", color: "amber", width: 2.5 },
+    { type: "point", x: "1 - sqrt(1 + k)", y: "(1 - sqrt(1 + k))^2", color: "heading", show: "k >= -1" },
+    { type: "point", x: "1 + sqrt(1 + k)", y: "(1 + sqrt(1 + k))^2", color: "heading", show: "k > -1" },
+  ]}
+  readouts={["\\Delta = 4 + 4k = [[4 + 4*k]]", "\\text{meeting points: } [[k > -1 ? 2 : (k == -1 ? 1 : 0)]]"]}
+  caption="Slide $k$: the line moves up and down. At $k = -1$ it just kisses the parabola."
+/>
+
+<KeyIdea>
+"Tangent" on the AMC almost always means "set the discriminant to zero" for a line and a parabola, or "distance from center equals radius" for a line and a circle.
+</KeyIdea>
+
+<Trap>
+When completing the square, whatever you add on the left you must also add on the right. Forgetting this is the number one source of wrong radii.
+</Trap>
+
+<FlipCards cards={[
+  { front: "Center and radius of $x^2 + y^2 = 10y$", back: "$x^2 + (y - 5)^2 = 25$: center $(0, 5)$, radius 5" },
+  { front: "Directrix of $x^2 = 12y$", back: "$4p = 12$, $p = 3$: $y = -3$" },
+  { front: "Vertex of $y = -(x + 2)^2 + 5$", back: "$(-2, 5)$, opening down" },
+  { front: "Line $y = mx$ tangent to $y = x^2 + 1$", back: "$x^2 - mx + 1 = 0$, $m^2 = 4$, $m = \\pm 2$" },
+]} />
+
+<Recap>
+- Circle: $(x - h)^2 + (y - k)^2 = r^2$; complete the square to get there.
+- Parabola $y = \tfrac{x^2}{4p}$: focus $(0, p)$, directrix $y = -p$.
+- Vertex at $x = -\tfrac{b}{2a}$.
+- Line meets curve: substitute; discriminant 0 means tangent.
+</Recap>
+
+<GoFurther>
+- <AoPS q="Parabola" /> and <AoPS q="Circle" /> on the AoPS Wiki.
+- Practice in <Archive test="12" />.
+</GoFurther>
